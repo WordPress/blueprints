@@ -1,0 +1,10 @@
+{
+  "v1-examples/latest-gutenberg/blueprint.json": {
+    "title": "Latest Gutenberg plugin",
+    "description": "A preview of the latest version of the Gutenberg plugin.",
+    "author": "zieladam",
+    "categories": [
+      "plugins"
+    ]
+  }
+}

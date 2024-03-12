@@ -61,6 +61,10 @@ Here's an example:
 }
 ```
 
+## Important – Version 2 of Blueprints
+
+It's important to note that [Version 2 of Blueprints](https://github.com/WordPress/blueprints/issues/6) is currently under discussion. While we're excited to launch this v1 community space to gather feedback, this feedback will directly inform the development of v2. Rest assured, all v1 Blueprints will continue to function even after the v2 rollout.
+
 ### Developer Tools
 
 If you use an IDE like VSCode or PHPStorm, use the Blueprint JSON Schema for an autocompleted Blueprint development experience. Simply add the following line at the top of your blueprint.json file:

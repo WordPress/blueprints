@@ -70,6 +70,10 @@ If you use an IDE like VSCode or PHPStorm, use the Blueprint JSON Schema for an 
 }
 ```
 
+## Important – Version 2 of Blueprints
+
+It's important to note that [Version 2 of Blueprints](https://github.com/WordPress/blueprints/issues/6) is currently under discussion. While we're excited to launch this v1 community space to gather feedback, this feedback will directly inform the development of v2. Rest assured, all v1 Blueprints will continue to function even after the v2 rollout.
+
 ## Needing Help?
 
 If you have questions or need assistance, feel free to start a new issue in this repository: @TODO.

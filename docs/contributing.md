@@ -4,7 +4,7 @@ We encourage you to contribute your own Blueprints to this repository! To make t
 
 To add a Blueprint to this repository, submit it as a Pull Request to this repository.
 
-Your Pull Request must contain a single, new directory created in the `v1-examples` with a `blueprint.json` file in it.
+Your Pull Request must contain a single `blueprint.json` file under a path `blueprints/your-blueprint-name/blueprint.json`.
 
 All static files (WXR, ZIP, JPG etc.) referenced by the Blueprint must be included in the submitted directory in your Pull Request and referenced via the `raw.githubusercontent.com` domain.
 

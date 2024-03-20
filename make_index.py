@@ -5,7 +5,7 @@ import re
 
 def build_json_index():
     index = {}
-    for root, dirs, files in os.walk('v1-examples'):
+    for root, dirs, files in os.walk('blueprints'):
         for file in files:
             if file == 'blueprint.json':
                 path = os.path.join(root, file)

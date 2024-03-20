@@ -8,7 +8,9 @@ Blueprints are WordPress setup descriptions that can be previewed live in [WordP
 
 ```json
 {
-    "plugins": ["hello-dolly", "gutenberg"]
+    "plugins": ["hello-dolly", "gutenberg"],
+    "login": true,
+    "landingPage": "/wp-admin/plugins.php"
 }
 ```
 

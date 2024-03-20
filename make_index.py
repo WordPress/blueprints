@@ -2,6 +2,7 @@ import json
 import os
 import re
 
+
 def build_json_index():
     index = {}
     for root, dirs, files in os.walk('v1-examples'):
@@ -16,6 +17,16 @@ def build_json_index():
         json.dump(index, f, indent=2)
 
 build_json_index()
+
+def get_dot_template_files():
+    dot_template_files = []
+    for root, dirs, files in os.walk('.'):
+        for file in files:
+            if file.endswith('.template'):
+                path = os.path.join(root, file)
+                dot_template_files.append(path)
+    return dot_template_files
+
 
 def build_markdown_table():
     with open('index.json', 'r') as f:
@@ -51,10 +62,12 @@ def build_markdown_table():
         formatted_rows.append(format_row(row))
     formatted_table = '\n'.join(formatted_rows)
 
-    # Replace "{BLUEPRINTS_TABLE}" in README.md.template and save to README.md
-    with open('README.md.template', 'r') as f:
-        template = f.read()
-        with open('README.md', 'w') as f:
-            f.write(re.sub(r'{BLUEPRINTS_TABLE}', ''.join(formatted_table), template))
+    # Replace "{BLUEPRINTS_TABLE}" in all the *.template files
+    DOT_TEMPLATE_FILES = get_dot_template_files()
+    for file in DOT_TEMPLATE_FILES:
+        with open(file, 'r') as f:
+            template = f.read()
+            with open(file.replace('.template', ''), 'w') as f:
+                f.write(re.sub(r'{BLUEPRINTS_TABLE}', ''.join(formatted_table), template))
 
 build_markdown_table()

@@ -26,7 +26,7 @@ Blueprints can help you:
 * Save time – Instead of manually setting up your site, choosing themes, and installing plugins one by one, Blueprints do all that work for you in a few clicks.
 * Learn WordPress – Blueprints are a fantastic way to play with a variety of WordPress configurations.
 
-### Ready to jump in?
+## Ready to jump in?
 
 In this community space, you can:
 

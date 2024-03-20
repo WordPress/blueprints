@@ -1,8 +1,16 @@
-## Contributing your Blueprint
+## Contributing Guidelines
 
-We encourage you to contribute your own Blueprints to this repository! To make the process smooth, please follow these guidelines:
+We encourage you to contribute your own Blueprints to this repository!
 
-To add a Blueprint to this repository, submit it as a Pull Request to this repository.
+### Building your first Blueprint
+
+See [Building your first Blueprint](./docs/how-to-build-a-blueprint/your-first-blueprint.md).
+
+### Submitting your Blueprint to this repository
+
+To keep the submission process smooth, please follow the following guidelines:
+
+Submit your Blueprint as a Pull Request to this repository.
 
 Your Pull Request must contain a single `blueprint.json` file under a path `blueprints/your-blueprint-name/blueprint.json`.
 
@@ -34,3 +42,7 @@ Here's an example:
     }
 }
 ```
+
+### Needing Help?
+
+If you have questions or need assistance, start a new issue in this repository.

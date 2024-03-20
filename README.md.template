@@ -4,7 +4,7 @@ Welcome to the WordPress Blueprints Community Gallery!
 
 Blueprints are WordPress setup descriptions that can be previewed online in [Playground](https://w.org/playground). They contain all the setup information like the plugins and themes to install, site options to configure, starter content to import, and more. Simple Blueprints can be created with minimal technical knowledge, for example this Blueprint installs a few plugins:
 
-``json
+```json
 {
     "plugins": ["hello-dolly", "gutenberg"]
 }

@@ -1,14 +1,27 @@
 # WordPress Blueprints Community Gallery
 
 Welcome to the WordPress Blueprints Community Gallery!
-This is a space for WordPress developers to share and explore pre-configured WordPress setups, also known as Blueprints.
 
-Here you'll find a collection of Blueprints for various purposes, from pre-configured WooCommerce stores to custom development environments.
+Blueprints are WordPress setup descriptions that can be previewed online in [Playground](https://w.org/playground). They contain all the setup information like the plugins and themes to install, site options to configure, starter content to import, and more. Simple Blueprints can be created with minimal technical knowledge, for example this Blueprint installs a few plugins:
 
-Ready to jump in?
+``json
+{
+    "plugins": ["hello-dolly", "gutenberg"]
+}
+```
 
-* Browse Blueprints – See the current list of available Blueprints below.
-* Create your first Blueprint – Get started by following the official guide on creating Blueprints.
+Blueprints can help you:
+
+* Explore different setups – Try out different themes and plugins without the risk of breaking your site. It's a safe environment to see what works best for your needs.
+* Save time – Instead of manually setting up your site, choosing themes, and installing plugins one by one, Blueprints do all that work for you in a few clicks.
+* Learn WordPress – Blueprints are a fantastic way to play with a variety of WordPress configurations.
+
+### Ready to jump in?
+
+In this community space, you can:
+
+* [Browse the Blueprints Gallery](#blueprints-gallery) to explore a variety of WordPress sites.
+* [Submit your own Blueprint](#contributing-your-blueprint) to share your WordPress setup with the community.
 
 ## Blueprints Gallery
 
@@ -21,67 +34,14 @@ Ready to jump in?
 
 ## Contributing your Blueprint
 
-We encourage you to contribute your own Blueprints to this repository! To make the process smooth, follow these guidelines:
+We encourage you to contribute your own Blueprints to this repository! New submissions are accepted as Pull Requests, for more details consult:
 
-* Create a Pull Request: Submit a Pull Request to this repository.
-* Blueprint Structure: Each Blueprint should reside in a new directory within the v1-examples folder. This directory must include a blueprint.json file.
-* Include Static Files: Any static files your Blueprint uses (like WXR, ZIP, or JPG files) should be included within your submitted directory and referenced using the raw.githubusercontent.com domain.
-* Licensing: By submitting a Blueprint, you agree to license it under the GPLv2 or later license.
-
-See [getting started with Blueprints](https://w.org/@TODO) for more information on how to create one.
-
-## Publishing guidelines
-
-To add a Blueprint to this repository, submit it as a Pull Request to this repository.
-
-Your Pull Request must contain a single, new directory created in the `v1-examples` with a `blueprint.json` file in it.
-
-All static files (WXR, ZIP, JPG etc.) referenced by the Blueprint must be included in the submitted directory in your Pull Request and referenced via the `raw.githubusercontent.com` domain.
-
-By submitting a Blueprint, you agree to license it under GPLv2 or later license.
-
-### Blueprint Metadata
-
-Each Blueprint should include some basic metadata within the top-level "meta" key in the blueprint.json file. Here's what's required:
-
-* Title: A clear and concise name for your Blueprint.
-* Author (GitHub Username): Let others know who created the Blueprint.
-
-Optionally, you can also include:
-
-* Description: Provide a brief explanation of what your Blueprint offers.
-* Categories: Specify relevant categories to help users find your Blueprint in the future Blueprints section on WordPress.org.
-
-Here's an example:
-
-```json
-{
-    "meta": {
-        "title": "WooCommerce Developer Environment",
-        "description": "A local development environment for WooCommerce that includes WP-CLI.",
-        "author": "zieladam",
-        "categories": ["woocommerce", "developer environment"]
-    }
-}
-```
-
-### Developer Tools
-
-If you use an IDE like VSCode or PHPStorm, use the Blueprint JSON Schema for an autocompleted Blueprint development experience. Simply add the following line at the top of your blueprint.json file:
-
-```json
-{
-    "$schema": "https://playground.wordpress.net/blueprint-schema.json"
-}
-```
-
-## Important – Version 2 of Blueprints
-
-It's important to note that [Version 2 of Blueprints](https://github.com/WordPress/blueprints/issues/6) is currently under discussion. While we're excited to launch this v1 community space to gather feedback, this feedback will directly inform the development of v2. Rest assured, all v1 Blueprints will continue to function even after the v2 rollout.
+* [Building your first Blueprint](./docs/how-to-build-a-blueprint/your-first-blueprint.md)
+* [Contributing guidelines](./docs/contributing.md)
 
 ## Needing Help?
 
-If you have questions or need assistance, feel free to start a new issue in this repository: @TODO.
+If you have questions or need assistance, start a new issue in this repository.
 
 ## Let's Build the Blueprint Community Together!
 

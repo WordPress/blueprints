@@ -32,14 +32,11 @@ Blueprints can help you:
 In this community space, you can:
 
 * [Browse the Blueprints Gallery](./GALLERY.md) to explore a variety of WordPress sites.
-* [Submit your own Blueprint](#contributing-your-blueprint) to share your WordPress setup with the community.
+* [Submit your own Blueprint](./CONTRIBUTING.md) to share your WordPress setup with the community.
 
 ## Contributing your Blueprint
 
-We encourage you to contribute your own Blueprints to this repository! New submissions are accepted as Pull Requests, for more details consult:
-
-* [Building your first Blueprint](./docs/how-to-build-a-blueprint/your-first-blueprint.md)
-* [Contributing guidelines](./docs/contributing.md)
+We encourage you to contribute your own Blueprints to this repository! New submissions are accepted as Pull Requests, for more details consult [Contributing Guidelines](./CONTRIBUTING.md)
 
 ## Needing Help?
 

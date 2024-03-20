@@ -1,6 +1,6 @@
-# WordPress Blueprints Community Gallery
+# WordPress Blueprints Community Space
 
-Welcome to the WordPress Blueprints Community Gallery!
+Browse the [Blueprints Gallery](./GALLERY.md) to explore a variety of WordPress sites. Keep reading to learn more about Blueprints and how to contribute your own.
 
 ## What are Blueprints?
 
@@ -30,17 +30,8 @@ Blueprints can help you:
 
 In this community space, you can:
 
-* [Browse the Blueprints Gallery](#blueprints-gallery) to explore a variety of WordPress sites.
+* [Browse the Blueprints Gallery](./GALLERY.md) to explore a variety of WordPress sites.
 * [Submit your own Blueprint](#contributing-your-blueprint) to share your WordPress setup with the community.
-
-## Blueprints Gallery
-
-> [!IMPORTANT]  
-> Here's are all the Blueprints submitted to this repository:
-
-| Title                   | Preview                                                                                                                                                            | Source                                                                                                  |
-| -----                   | -------                                                                                                                                                            | ------                                                                                                  |
-| Latest Gutenberg plugin | [Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/v1-examples/latest-gutenberg/blueprint.json) | [Source](https://github.com/adamziel/blueprints/blob/trunk/v1-examples/latest-gutenberg/blueprint.json) |
 
 ## Contributing your Blueprint
 

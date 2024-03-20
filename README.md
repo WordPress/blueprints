@@ -10,10 +10,13 @@ Ready to jump in?
 * Browse Blueprints – See the current list of available Blueprints below.
 * Create your first Blueprint – Get started by following the official guide on creating Blueprints.
 
-## Available Blueprints
+## Blueprints Gallery
 
-* Latest Gutenberg plugin – [Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/v1-examples/latest-gutenberg/blueprint.json) | [Source](https://github.com/adamziel/blueprints/blob/trunk/v1-examples/latest-gutenberg/blueprint.json)
+> :information_source: Here's a list of all the Blueprints submitted to this repository:
 
+| Title                   | Preview                                                                                                                                                            | Source                                                                                                  |
+| -----                   | -------                                                                                                                                                            | ------                                                                                                  |
+| Latest Gutenberg plugin | [Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/v1-examples/latest-gutenberg/blueprint.json) | [Source](https://github.com/adamziel/blueprints/blob/trunk/v1-examples/latest-gutenberg/blueprint.json) |
 
 ## Contributing your Blueprint
 
@@ -61,10 +64,6 @@ Here's an example:
 }
 ```
 
-## Important – Version 2 of Blueprints
-
-It's important to note that [Version 2 of Blueprints](https://github.com/WordPress/blueprints/issues/6) is currently under discussion. While we're excited to launch this v1 community space to gather feedback, this feedback will directly inform the development of v2. Rest assured, all v1 Blueprints will continue to function even after the v2 rollout.
-
 ### Developer Tools
 
 If you use an IDE like VSCode or PHPStorm, use the Blueprint JSON Schema for an autocompleted Blueprint development experience. Simply add the following line at the top of your blueprint.json file:
@@ -74,6 +73,10 @@ If you use an IDE like VSCode or PHPStorm, use the Blueprint JSON Schema for an 
     "$schema": "https://playground.wordpress.net/blueprint-schema.json"
 }
 ```
+
+## Important – Version 2 of Blueprints
+
+It's important to note that [Version 2 of Blueprints](https://github.com/WordPress/blueprints/issues/6) is currently under discussion. While we're excited to launch this v1 community space to gather feedback, this feedback will directly inform the development of v2. Rest assured, all v1 Blueprints will continue to function even after the v2 rollout.
 
 ## Needing Help?
 

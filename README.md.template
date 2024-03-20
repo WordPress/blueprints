@@ -10,9 +10,11 @@ Ready to jump in?
 * Browse Blueprints – See the current list of available Blueprints below.
 * Create your first Blueprint – Get started by following the official guide on creating Blueprints.
 
-## Available Blueprints
+## Blueprints Gallery
 
-{BLUEPRINTS_LIST}
+> :information_source: Here's a list of all the Blueprints submitted to this repository:
+
+{BLUEPRINTS_TABLE}
 
 ## Contributing your Blueprint
 

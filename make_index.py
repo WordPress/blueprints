@@ -17,20 +17,44 @@ def build_json_index():
 
 build_json_index()
 
-def build_markdown_index():
+def build_markdown_table():
     with open('index.json', 'r') as f:
         index = json.load(f)
-    blueprints_list = []
+    # blueprints_list = []
+    # for path, meta in index.items():
+    #     blueprints_list.append('* {0} – [Preview]({1}) | [Source]({2})\n'.format(
+    #         meta.get('title', ''),
+    #         'https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/' + path,
+    #         'https://github.com/adamziel/blueprints/blob/trunk/' + path
+    #     ))
+    blueprints_rows = [
+        ['Title', 'Preview', 'Source']
+    ]
     for path, meta in index.items():
-        blueprints_list.append('* {0} – [Preview]({1}) | [Source]({2})\n'.format(
+        blueprints_rows.append([
             meta.get('title', ''),
-            'https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/' + path,
-            'https://github.com/adamziel/blueprints/blob/trunk/' + path
-        ))
-    # Replace "{BLUEPRINTS_LIST}" in README.md.template and save to README.md
+            '[Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/{0})'.format(path),
+            '[Source](https://github.com/adamziel/blueprints/blob/trunk/{0})'.format(path)
+        ])
+
+    widths = [max(map(len, col)) for col in zip(*blueprints_rows)]
+
+    def format_row(row):
+        formatted_row = ' | '.join((val.ljust(width) for val, width in zip(row, widths)))
+        return '| ' + formatted_row + ' |'
+
+    formatted_rows = [
+        format_row(blueprints_rows[0]),
+        format_row(['-' * len(cell) for cell in blueprints_rows[0]])
+    ]
+    for row in blueprints_rows[1:]:
+        formatted_rows.append(format_row(row))
+    formatted_table = '\n'.join(formatted_rows)
+
+    # Replace "{BLUEPRINTS_TABLE}" in README.md.template and save to README.md
     with open('README.md.template', 'r') as f:
         template = f.read()
         with open('README.md', 'w') as f:
-            f.write(re.sub(r'{BLUEPRINTS_LIST}', ''.join(blueprints_list), template))
+            f.write(re.sub(r'{BLUEPRINTS_TABLE}', ''.join(formatted_table), template))
 
-build_markdown_index()
+build_markdown_table()

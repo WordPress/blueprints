@@ -40,5 +40,5 @@ jobs:
           git commit -a -m "Reindex Blueprints"
           git pull --rebase
           if [ $? -eq 0 ]; then
-            git push git@github.com:wordpress/playground-tools.git --follow-tags
+            git push git@github.com:${{ github.repository }}.git --follow-tags
           fi;

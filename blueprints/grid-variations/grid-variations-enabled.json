@@ -1,0 +1,33 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "meta": {
+        "title": "Grid Variations Experiments enabled",
+        "description": "Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin",
+        "author": "bph",
+        "categories": ["Gutenberg", "Experiments"]
+    },
+    "landingPage": "/wp-admin/site-editor.php",
+    "steps":[
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+            "step":"installPlugin",
+                "pluginZipFile":{
+                    "resource": "wordpress.org/plugins",
+                    "slug":"gutenberg"
+                },
+                "options": {
+                    "activate": true
+                }
+        },
+        {
+            "step": "runPHP", 
+            "code": "<?php require '/wordpress/wp-load.php'; update_option( 'gutenberg-experiments', array( 'gutenberg-grid-interactivity' => true ) );"
+        
+        }
+        
+    ]
+}

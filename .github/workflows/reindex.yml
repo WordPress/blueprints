@@ -27,15 +27,18 @@ jobs:
               echo "Changes detected"
               echo 'CHANGES=1' >> $GITHUB_OUTPUT
           fi
+    - name: Setup SSH Keys
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+          ssh-private-key: ${{ secrets.GH_DEPLOY_KEY }}
     - name: Push rebuilt WordPress to GitHub
       if: steps.changes.outputs.CHANGES == '1'
       run: |
           git config --global user.name "deployment_bot"
           git config --global user.email "deployment_bot@users.noreply.github.com"
-          git remote set-url origin https://${{ secrets.GH_ACTOR }}:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}
           git add -A
           git commit -a -m "Reindex Blueprints"
           git pull --rebase
           if [ $? -eq 0 ]; then
-              git push origin HEAD:trunk
+            git push git@github.com:wordpress/playground-tools.git --follow-tags
           fi;

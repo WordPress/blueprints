@@ -6,5 +6,14 @@
     "categories": [
       "plugins"
     ]
+  },
+  "blueprints/grid-variations/blueprint.json": {
+    "title": "Grid Variations Experiments enabled",
+    "description": "Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin",
+    "author": "bph",
+    "categories": [
+      "Gutenberg",
+      "Experiments"
+    ]
   }
 }

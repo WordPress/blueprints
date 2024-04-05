@@ -207,7 +207,7 @@ Here's what that looks like in a Blueprint:
 
 There's just one more thing – we will log the user in as an admin to make testing easier:
 
-```json
+```js
 {
     "login": true,
     "steps": {

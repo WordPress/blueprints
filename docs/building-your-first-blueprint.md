@@ -111,7 +111,7 @@ Let's install it on our site using the [installTheme](https://wordpress.github.i
 
 The site now has the Adventurer theme installed and activated:
 
-![Site with the adventurer theme](./assets/adventurer-theme.png)
+![Site with the adventurer theme](./assets/installed-adventurer-theme.png)
 
 #### Resources
 

@@ -18,7 +18,7 @@ For example, to create a Playground with specific versions of WordPress and PHP 
 
 And then you would go to `https://playground.wordpress.net/#{"preferredVersions": {"php":"7.4", "wp":"5.9"}}` – you can also use the "Run the Blueprint" button below to do the same:
 
-[<kbd> <br>Run the Blueprint<br> </kbd>](https://playground.wordpress.net/#{"preferredVersions": {"php":"7.4", "wp":"5.9"}})
+[<kbd> <br>Run the Blueprint<br> </kbd>](https://playground.wordpress.net/#{"preferredVersions":{"php":"7.4","wp":"5.9"}})
 
 #### Base64 Encoded Blueprints
 

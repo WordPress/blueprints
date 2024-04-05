@@ -1,12 +1,4 @@
 {
-  "blueprints/latest-gutenberg/blueprint.json": {
-    "title": "Latest Gutenberg plugin",
-    "description": "A preview of the latest version of the Gutenberg plugin.",
-    "author": "zieladam",
-    "categories": [
-      "plugins"
-    ]
-  },
   "blueprints/grid-variations/blueprint.json": {
     "title": "Grid Variations Experiments enabled",
     "description": "Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin",
@@ -14,6 +6,14 @@
     "categories": [
       "Gutenberg",
       "Experiments"
+    ]
+  },
+  "blueprints/latest-gutenberg/blueprint.json": {
+    "title": "Latest Gutenberg plugin",
+    "description": "A preview of the latest version of the Gutenberg plugin.",
+    "author": "zieladam",
+    "categories": [
+      "plugins"
     ]
   }
 }

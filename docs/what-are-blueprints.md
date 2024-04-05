@@ -1,8 +1,8 @@
 ## What are Blueprints and how are they useful?
 
-Functioning as build scripts, Blueprints are JSON files let you create a whole website, including plugins, themes, content (posts, pages, taxonomy, and comments), settings (site name, users, permalinks, and more), etc. You can generate a WooCommerce store complete with products, a magazine populated with articles, a corporate blog with multiple users, and more.
+Blueprints are JSON files you can use to create a whole website, including plugins, themes, content (posts, pages, taxonomy, and comments), settings (site name, users, permalinks, and more), etc. You can generate a WooCommerce store complete with products, a magazine populated with articles, a corporate blog with multiple users, and more.
 
-The Blueprint API supports advanced use cases, like file system and database manipulation, and gives you fine-grained control over the instance you create. The WordPress Test Team has been using Playground in [the 6.5 beta release cycle](https://wordpress.org/news/2024/03/wordpress-6-5-release-candidate-2/), creating a Blueprint that loads the latest version, several testing plugins, and dummy data.
+Blueprints support advanced use cases, like file system and database manipulation, and gives you fine-grained control over the instance you create. The WordPress Test Team has been using Playground in [the 6.5 beta release cycle](https://wordpress.org/news/2024/03/wordpress-6-5-release-candidate-2/), creating a Blueprint that loads the latest version, several testing plugins, and dummy data.
 
 ### A simple Blueprint example
 

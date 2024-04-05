@@ -4,7 +4,7 @@ We encourage you to contribute your own Blueprints to this repository!
 
 ### Building your first Blueprint
 
-See [Building your first Blueprint](./docs/how-to-build-a-blueprint/your-first-blueprint.md).
+See the [Blueprints Crash Course](./docs/index.md).
 
 ### Submitting your Blueprint to this repository
 

@@ -5,6 +5,8 @@
 
 ## What are Blueprints?
 
+Review the [Blueprints Crash Course](./docs/index.md) to get started. Here's a quick overview:
+
 Blueprints are WordPress setup descriptions that can be previewed live in [WordPress Playground](https://w.org/playground). Just like this one:
 
 ```json
@@ -17,7 +19,9 @@ Blueprints are WordPress setup descriptions that can be previewed live in [WordP
 
 [<kbd> <br> Preview in WordPress Playground <br> </kbd>](https://playground.wordpress.net/#%7B%22plugins%22:%5B%22hello-dolly%22,%22gutenberg%22%5D,%20%22login%22:%20true,%20%22landingPage%22:%20%22/wp-admin/plugins.php%22%20%7D)
 
-Blueprints contain all the setup information including plugins, themes, site options, starter content to import, and more. See [Building your first Blueprint](./docs/how-to-build-a-blueprint/your-first-blueprint.md) for more details.
+Blueprints contain all the setup information including plugins, themes, site options, starter content to import, and more.
+
+Review the [Blueprints Crash Course](./docs/index.md) to get started with Blueprints.
 
 ## Why use Blueprints?
 

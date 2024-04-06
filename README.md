@@ -5,9 +5,11 @@
 
 ## What are Blueprints?
 
-Review the [Blueprints Crash Course](./docs/index.md) to get started. Here's a quick overview:
+Check out [Blueprints 101](./docs/index.md) to get started.
 
-Blueprints are WordPress setup descriptions that can be previewed live in [WordPress Playground](https://w.org/playground). Just like this one:
+Here's a quick overview:
+
+Blueprints are WordPress setup scripts that you can preview live in [WordPress Playground](https://w.org/playground). Here's a simple example:
 
 ```json
 {
@@ -19,33 +21,33 @@ Blueprints are WordPress setup descriptions that can be previewed live in [WordP
 
 [<kbd> <br> Preview in WordPress Playground <br> </kbd>](https://playground.wordpress.net/#%7B%22plugins%22:%5B%22hello-dolly%22,%22gutenberg%22%5D,%20%22login%22:%20true,%20%22landingPage%22:%20%22/wp-admin/plugins.php%22%20%7D)
 
-Blueprints contain all the setup information including plugins, themes, site options, starter content to import, and more.
+Blueprints contain all the installation instructions needed to setup WordPress, including plugins, themes, site options, starter content to import, and more.
 
-Review the [Blueprints Crash Course](./docs/index.md) to get started with Blueprints.
+Check out [Blueprints 101](./docs/index.md) to get started with Blueprints.
 
 ## Why use Blueprints?
 
-Blueprints can help you:
+Blueprints can help you
 
-* Explore different setups – Try out different themes and plugins without the risk of breaking your site. It's a safe environment to see what works best for your needs.
-* Save time – Instead of manually setting up your site, choosing themes, and installing plugins one by one, Blueprints do all that work for you in a few clicks.
-* Learn WordPress – Blueprints are a fantastic way to play with a variety of WordPress configurations.
+- **Explore different setups:** try out different themes and plugins without the risk of breaking your site. It's a safe environment to see what works best for your needs.
+- **Save time**:** instead of manually setting up your site, choosing themes, and installing plugins one by one, Blueprints do all work for you.
+- **Learn WordPress:** Blueprints are a fantastic way to play with a variety of WordPress configurations.
 
 ## Ready to jump in?
 
-In this community space, you can:
+This community space allows you to
 
-* [Browse the Blueprints Gallery](./GALLERY.md) to explore a variety of WordPress sites.
-* [Submit your own Blueprint](./CONTRIBUTING.md) to share your WordPress setup with the community.
+* [Browse the Blueprints Gallery](./GALLERY.md) and explore diverse WordPress sites.
+* [Submit your own Blueprint](./CONTRIBUTING.md) and share your WordPress setup with the community.
 
 ## Contributing your Blueprint
 
-We encourage you to contribute your own Blueprints to this repository! New submissions are accepted as Pull Requests, for more details consult [Contributing Guidelines](./CONTRIBUTING.md)
+We encourage you to contribute your Blueprints to this repository! We accepet new submissions as Pull Requests. Read the [Contributing Guidelines](./CONTRIBUTING.md) for more details. 
 
-## Needing Help?
+## Need help?
 
-If you have questions or need assistance, start a new issue in this repository.
+If you have questions or comments, [start a new issue](https://github.com/adamziel/blueprints/issues) in this repository.
 
-## Let's Build the Blueprint Community Together!
+## Let's build the Blueprint Community together!
 
-This is a minimal version 1 (v1) to get the community space up and running quickly. We plan to build upon this foundation based on your feedback. So, explore, create, and share your Blueprints!
+This is a minimal version 1 (v1) to get the community space up and running. We plan to build upon this foundation, expand, and improve it—with your feedback. So, explore, create, and share your Blueprints!

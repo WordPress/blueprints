@@ -46,7 +46,7 @@ We encourage you to contribute your Blueprints to this repository! We accepet ne
 
 ## Need help?
 
-If you have questions or comments, [start a new issue](https://github.com/adamziel/blueprints/issues) in this repository.
+If you have questions or comments, [open a new issue](https://github.com/adamziel/blueprints/issues) in this repository.
 
 ## Let's build the Blueprint Community together!
 

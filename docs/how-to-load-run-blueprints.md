@@ -2,7 +2,7 @@
 
 ## URL fragment
 
-The easiest way to start using Blueprints is to paste one into the URL "fragment" of a WordPress Playground website.
+The easiest way to start using Blueprints is to paste one into the URL "fragment" of a WordPress Playground website. Just add a `#` after the `.net/`.
 
 Let's say you want to create a Playground with specific versions of WordPress and PHP using the following Blueprint:
 
@@ -20,9 +20,11 @@ To run it, go to `https://playground.wordpress.net/#{"preferredVersions": {"php"
 
 [<kbd> <br>Run the Blueprint<br> </kbd>](https://playground.wordpress.net/#{"preferredVersions":{"php":"7.4","wp":"5.9"}})
 
+Use this method to run the example code in the next chapter, [**Build your first Blueprint**](./build-your-first-blueprint.md).
+
 ### Base64 encoded Blueprints
 
-Some tools, including GitHub, might not format the Blueprint correctly when pasted into the URL. In such cases, encode your Blueprint in Base64 and append it to the URL. For example, that's the above Blueprint in Base64 format: `eyJwcmVmZXJyZWRWZXJzaW9ucyI6IHsicGhwIjoiNy40IiwgIndwIjoiNS45In19`.
+Some tools, including GitHub, might not format the Blueprint correctly when pasted into the URL. In such cases, [encode your Blueprint in Base64](https://www.base64encode.org) and append it to the URL. For example, that's the above Blueprint in Base64 format: `eyJwcmVmZXJyZWRWZXJzaW9ucyI6IHsicGhwIjoiNy40IiwgIndwIjoiNS45In19`.
 
 To run it, go to [https://playground.wordpress.net/#eyJwcmVmZXJyZWRWZXJzaW9ucyI6IHsicGhwIjoiNy40IiwgIndwIjoiNS45In19](https://playground.wordpress.net/#eyJwcmVmZXJyZWRWZXJzaW9ucyI6IHsicGhwIjoiNy40IiwgIndwIjoiNS45In19)
 

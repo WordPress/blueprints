@@ -52,6 +52,6 @@ Blueprints are an invaluable tool for building WordPress sites:
 
 **Table of contents**
 1. What are Blueprints, and what can you do with them?
-2. [How to load and run Blueprints?](./how-to-run-blueprints.md)
-3. [Build your first Blueprint](./building-your-first-blueprint.md)
-4. [Troubleshoot and debug Blueprints](./debugging-blueprints.md)
+2. [How to load and run Blueprints?](./how-to-load-run-blueprints.md)
+3. [Build your first Blueprint](./build-your-first-blueprint.md)
+4. [Troubleshoot and debug Blueprints](./troubleshoot-debug-blueprints.md)

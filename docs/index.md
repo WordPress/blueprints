@@ -2,10 +2,10 @@
 
 Welcome to a Blueprints crash course, where you'll find everything you need to know about Blueprints: what they are, how to create them, and how to use them effectively.
 
-1. [What are Blueprints, and what can you do with them?](./what-are-blueprints.md)
-2. [How to load and run Blueprints?](./how-to-run-blueprints.md)
-3. [Build your first Blueprint](./building-your-first-blueprint.md)
-4. [Troubleshoot and debug Blueprints](./debugging-blueprints.md)
+1. [What are Blueprints, and what can you do with them?](./what-are-blueprints-what-you-can-do-with-them.md)
+2. [How to load and run Blueprints?](./how-to-load-run-blueprints.md)
+3. [Build your first Blueprint](./build-your-first-blueprint.md)
+4. [Troubleshoot and debug Blueprints](./troubleshoot-debug-blueprints.md)
 
 > [!NOTE]
 > ## Blueprints version 2

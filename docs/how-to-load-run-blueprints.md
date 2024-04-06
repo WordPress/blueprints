@@ -41,7 +41,7 @@ Access-Control-Allow-Origin: *
 ***
 
 **Table of contents**
-1. [What are Blueprints, and what can you do with them?](./what-are-blueprints.md)
+1. [What are Blueprints, and what can you do with them?](./what-are-blueprints-what-you-can-do-with-them.md)
 2. How to load and run Blueprints?
-3. [Build your first Blueprint](./building-your-first-blueprint.md)
-4. [Troubleshoot and debug Blueprints](./debugging-blueprints.md)
+3. [Build your first Blueprint](./build-your-first-blueprint.md)
+4. [Troubleshoot and debug Blueprints](./troubleshoot-debug-blueprints.md)

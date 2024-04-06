@@ -37,7 +37,7 @@ The community is here to help! If you have questions or comments, [open a new is
 ***
 
 **Table of contents**
-1. [What are Blueprints, and what can you do with them?](./what-are-blueprints.md)
-2. [How to load and run Blueprints?](./how-to-run-blueprints.md)
-3. [Build your first Blueprint](./building-your-first-blueprint.md)
+1. [What are Blueprints, and what can you do with them?](./what-are-blueprints-what-you-can-do-with-them.md)
+2. [How to load and run Blueprints?](./how-to-load-run-blueprints.md)
+3. [Build your first Blueprint](./build-your-first-blueprint.md)
 4. Troubleshoot and debug Blueprints

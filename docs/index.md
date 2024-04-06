@@ -1,13 +1,14 @@
-## Blueprints Crash Course
+# Blueprints 101
 
-Welcome to the Blueprints documentation! Here you will find everything you need to know about Blueprints, including what they are, how to create them, and how to use them effectively.
+Welcome to a Blueprints crash course, where you'll find everything you need to know about Blueprints: what they are, how to create them, and how to use them effectively.
 
-This page is your entrypoint to the awesome:
+1. [What are Blueprints, and what can you do with them?](./what-are-blueprints.md)
+2. [How to load and run Blueprints?](./how-to-run-blueprints.md)
+3. [Build your first Blueprint](./building-your-first-blueprint.md)
+4. [Troubleshoot and debug Blueprints](./debugging-blueprints.md)
 
-1. [What are Blueprints and how are they useful?](./what-are-blueprints.md)
-2. [How to run Blueprints?](./how-to-run-blueprints.md)
-3. [Building your first Blueprint](./building-your-first-blueprint.md)
-4. [Debugging Blueprints](./debugging-blueprints.md)
-5. [Developer Tools](./developer-tools.md)
-6. [More Resources](./more-resources.md)
-
+> [!NOTE]
+> ## Blueprints version 2
+> The team is exploring ways to transition Blueprints from a TypeScript library to a PHP library. This would allow people to run Blueprints in any WordPress environments: Playground, a hosted site, or a local setup.
+>
+> The proposed [new specification](https://github.com/WordPress/blueprints/issues/6) is discussed on a separate [GitHub repository](https://github.com/WordPress/blueprints/), and you’re more than welcome to join (there or on the [#meta-playground](https://wordpress.slack.com/archives/C04EWKGDJ0K) Slack channel) and help shape the next generation of Playground.

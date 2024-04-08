@@ -1,8 +1,8 @@
 {
 	"meta": {
 		"title": "Latest Gutenberg plugin",
-		"description": "A preview of the latest version of the Gutenberg plugin.",
 		"author": "zieladam",
+		"description": "A preview of the latest version of the Gutenberg plugin.",
 		"categories": ["plugins"]
 	},
 	"plugins": ["gutenberg"]

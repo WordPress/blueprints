@@ -1,0 +1,21 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "meta": {
+        "title": "Use wp-cli command to add posts",
+        "description": "Blueprint example to add posts via a wp-cli command.",
+        "author": "bph",
+        "categories": ["Content", "wpcli"]
+    },
+    "landingPage": "wp-admin/edit.php",
+    "steps":[
+                {
+                    "step": "login",
+                    "username": "admin",
+                    "password": "password"
+                },
+                {
+                    "step": "wp-cli",
+                    "command": "wp post generate --count=12 --post_type=post --post_date=1999-01-04"
+                }
+            ]
+}

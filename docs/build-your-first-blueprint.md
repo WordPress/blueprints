@@ -1,6 +1,6 @@
 ## Build your first Blueprint
 
-Let's build a simple Blueprint that
+Let's build a basic Blueprint that
 
 1. Creates a new WordPress site
 2. Sets the site title to "My first Blueprint"
@@ -17,7 +17,7 @@ Let's start by creating a `blueprint.json` file with the following contents:
 {}
 ```
 
-It may seem like nothing is happening, but this Blueprint already spins a WordPress site using the latest major version.
+It may seem like nothing is happening, but this Blueprint already spins up a WordPress site with the latest major version.
 
 [<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#{})
 
@@ -113,7 +113,7 @@ The site should now look like the screenshot below:
 
 ### Resources
 
-The `themeZipFile` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/)—a reference to an external file required to complete the step. Playground supports different types of resources, including `url`, `wordpress.org/themes`, `wordpress.org/plugins`, `vfs`, or `literal`. The example uses the `wordpress.org/themes` resource, which requires a `slug` identical to the one used in WordPress theme directory:
+The `themeZipFile` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/) and referrences an external file required to complete the step. Playground supports different types of resources, including `url`, `wordpress.org/themes`, `wordpress.org/plugins`, `vfs`, or `literal`. The example uses the `wordpress.org/themes` resource, which requires a `slug` identical to the one used in WordPress theme directory:
 
 In this case, `https://wordpress.org/themes/<slug>/` becomes `https://wordpress.org/themes/adventurer/`.
 

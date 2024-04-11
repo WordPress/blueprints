@@ -1,6 +1,6 @@
 ## Build your first Blueprint
 
-Let's build a basic Blueprint that
+Let's build an elementary Blueprint that
 
 1. Creates a new WordPress site
 2. Sets the site title to "My first Blueprint"
@@ -113,7 +113,14 @@ The site should now look like the screenshot below:
 
 ### Resources
 
-The `themeZipFile` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/) and referrences an external file required to complete the step. Playground supports different types of resources, including `url`, `wordpress.org/themes`, `wordpress.org/plugins`, `vfs`, or `literal`. The example uses the `wordpress.org/themes` resource, which requires a `slug` identical to the one used in WordPress theme directory:
+The `themeZipFile` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/) and referrences an external file required to complete the step. Playground supports different types of resources, including
+- `url`,
+- `wordpress.org/themes`,
+- `wordpress.org/plugins`,
+- `vfs`(virtual file system), or
+- `literal`.
+
+The example uses the `wordpress.org/themes` resource, which requires a `slug` identical to the one used in WordPress theme directory:
 
 In this case, `https://wordpress.org/themes/<slug>/` becomes `https://wordpress.org/themes/adventurer/`.
 

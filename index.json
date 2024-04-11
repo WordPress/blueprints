@@ -24,5 +24,14 @@
     "categories": [
       "plugins"
     ]
+  },
+  "blueprints/posts-via-wp-cli/blueprint.json": {
+    "title": "Use wp-cli command to add posts",
+    "description": "Blueprint example to add posts via a wp-cli command.",
+    "author": "bph",
+    "categories": [
+      "Content",
+      "wpcli"
+    ]
   }
 }

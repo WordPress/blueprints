@@ -6,7 +6,7 @@
         "author": "bph",
         "categories": ["Content", "wpcli"]
     },
-    "landingPage": "wp-admin/edit.php",
+    "landingPage": "/wp-admin/edit.php",
     "steps":[
                 {
                     "step": "login",

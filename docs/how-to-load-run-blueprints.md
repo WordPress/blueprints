@@ -2,7 +2,7 @@
 
 ## URL fragment
 
-A first step to learn using Blueprints is to paste one into the URL "fragment" of a WordPress Playground website. Just add a `#` after the `.net/`.
+The fastest way to run Blueprints is to paste one into the URL "fragment" of a WordPress Playground website. Just add a `#` after the `.net/`.
 
 Let's say you want to create a Playground with specific versions of WordPress and PHP using the following Blueprint:
 

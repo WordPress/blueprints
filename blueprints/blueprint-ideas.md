@@ -41,11 +41,11 @@ Hooks, Actions, and Filters (oh my!)
 #### Create content
 - Generate content using Fakerpress (plugin demo, content), navigate to Pages
 - Markdown to WordPress - Create WordPress posts from a Markdown file
- - read file via `wp-cli`
- - create a new post
- - how to handle taxonomy and meta, etc.
- - sets the stage for migrating all Markdown related docs pages to WordPress
- - also sets the stage to standardize Gutenberg for documentation in other Open Source Software projects!!
+    - read file via `wp-cli`
+    - create a new post
+    - how to handle taxonomy and meta, etc.
+    - sets the stage for migrating all Markdown related docs pages to WordPress
+    - also sets the stage to standardize Gutenberg for documentation in other Open Source Software projects!!
 
 #### Working with content
 Working with the datastore

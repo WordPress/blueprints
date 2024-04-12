@@ -52,7 +52,7 @@ function register_books() {
 		'label'                 => __( 'Book', 'gbt' ),
 		'description'           => __( 'Books', 'gbt' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', excerpt, featured_image),
+		'supports'              => array( 'title', 'editor'),
 		'taxonomies'            => array( 'genre', ' publisher' ),
 		'hierarchical'          => false,
 		'public'                => true,

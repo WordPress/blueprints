@@ -20,7 +20,7 @@
                 "path": "/wordpress/wp-content/plugins/books/books.php",
                 "data": {
                     "resource": "url",
-                    "url": "https://raw.githubusercontent.com/adamziel/blueprints/trunk/custom-post/book.php"
+                    "url": "https://raw.githubusercontent.com/adamziel/blueprints/trunk/custom-post/books.php"
                 }
             },
             {

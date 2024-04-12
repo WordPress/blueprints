@@ -15,9 +15,7 @@
     },
     "steps":[
         {
-            "step":"login",
-            "username":"admin",
-            "password":"password"
+            "step": "login"
         },
         {
             "step":"importFile",

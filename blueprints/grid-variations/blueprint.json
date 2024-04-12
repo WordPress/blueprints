@@ -9,9 +9,7 @@
     "landingPage": "/wp-admin/site-editor.php",
     "steps":[
         {
-            "step": "login",
-            "username": "admin",
-            "password": "password"
+            "step": "login"
         },
         {
             "step":"installPlugin",

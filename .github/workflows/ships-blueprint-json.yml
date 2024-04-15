@@ -2,8 +2,6 @@ name: Ships Blueprint.json file?
 
 on:
     pull_request:
-        branches:
-            - main
 
 jobs:
     check_blueprints:

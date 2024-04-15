@@ -34,6 +34,14 @@
       "wpcli"
     ]
   },
+  "blueprints/install-plugin-from-gist/blueprint.json": {
+    "title": "Install plugin from a gist",
+    "author": "zieladam",
+    "description": "Install and activate a WordPress plugin from a .php file stored in a gist.",
+    "categories": [
+      "plugins"
+    ]
+  },
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",

@@ -8,7 +8,7 @@ jobs:
         runs-on: ubuntu-latest
 
         env:
-            GITHUB_BRANCH: ${{ github.ref }}
+            GITHUB_BRANCH: ${{ github.event.pull_request.head.ref }}
 
         steps:
             - name: Checkout code

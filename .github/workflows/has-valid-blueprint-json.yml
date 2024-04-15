@@ -7,12 +7,12 @@ jobs:
     check_blueprints:
         runs-on: ubuntu-latest
 
+        env:
+            GITHUB_BRANCH: ${{ github.ref }}
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
-              with:
-                ref: ${{ github.ref }}
-                fetch-depth: 0
 
             - name: Fetch trunk
               run: |

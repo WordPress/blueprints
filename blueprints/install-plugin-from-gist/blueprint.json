@@ -1,0 +1,31 @@
+{
+	"meta": {
+		"title": "Install plugin from a gist",
+		"author": "zieladam",
+		"description": "Install and activate a WordPress plugin from a .php file stored in a gist.",
+		"categories": ["plugins"]
+	},
+	"landingPage": "/wp-admin/plugins.php",
+	"preferredVersions": {
+		"wp": "beta",
+		"php": "8.0"
+	},
+	"steps": [
+		{
+			"step": "login"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/0-plugin.php",
+			"data": {
+				"resource": "url",
+				"url": "https://gist.githubusercontent.com/ndiego/456b74b243d86c97cda89264c68cbdee/raw/ff00cf25e6eebe4f5a4eaecff10286f71e65340b/block-hooks-demo.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginName": "Block Hooks Demo",
+			"pluginPath": "0-plugin.php"
+		}
+	]
+}

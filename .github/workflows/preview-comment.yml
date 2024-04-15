@@ -26,18 +26,18 @@ jobs:
             const issue_number = context.payload.pull_request.number;
             const branch_name = context.payload.pull_request.head.ref;
 
-            // First, find a blueprint.json file in the pull request
-            const blueprintFile = ( await github.rest.pulls.listFiles( commentInfo ) ).data.filter( file => file.filename.endsWith( '/blueprint.json' ) )[0];
-            if ( !blueprintFile ) {
-              return;
-            }
-
             // Comments are only added after the first successful build. Check for the presence of a comment and bail early.
             const commentInfo = {
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number,
             };
+
+            // First, find a blueprint.json file in the pull request
+            const blueprintFile = ( await github.rest.pulls.listFiles( commentInfo ) ).data.filter( file => file.filename.endsWith( '/blueprint.json' ) )[0];
+            if ( !blueprintFile ) {
+              return;
+            }
 
             const comments = ( await github.rest.issues.listComments( commentInfo ) ).data;
 

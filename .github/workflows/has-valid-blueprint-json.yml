@@ -1,4 +1,4 @@
-name: Ships a valid Blueprint.json file?
+name: Has a valid Blueprint.json file?
 
 on:
     pull_request:
@@ -14,6 +14,10 @@ jobs:
             - name: Fetch trunk
               run: |
                   git fetch origin trunk
+
+            - name: Install pre-requisites
+              run: |
+                  pip install -r requirements.txt
 
             - name: Run validate_pr.py
               run: |

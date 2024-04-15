@@ -33,5 +33,14 @@
       "Content",
       "wpcli"
     ]
+  },
+  "blueprints/custom-post/blueprint.json": {
+    "title": "Custom Post Type: Books",
+    "description": "Blueprint that added a custom post type to playground",
+    "author": "bph",
+    "categories": [
+      "Content",
+      "CPT"
+    ]
   }
 }

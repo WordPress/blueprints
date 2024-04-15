@@ -14,6 +14,8 @@ def build_json_index():
                     data = json.load(f)
                     meta = data.get('meta', {})
                     index[path] = meta
+    # Sort index alphabetically by title
+    index = dict(sorted(index.items(), key=lambda item: item[1].get('title', '')))
     with open('index.json', 'w') as f:
         json.dump(index, f, indent=2)
 

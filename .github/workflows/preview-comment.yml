@@ -3,7 +3,10 @@ name: Pull Request Comments
 
 on:
   pull_request_target:
-    types: [ 'opened', 'edited' ]
+    types:
+      - opened
+      - reopened
+      - synchronize
 
 # Disable permissions for all available scopes by default.
 # Any needed permissions should be configured at the job level.

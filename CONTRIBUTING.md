@@ -15,30 +15,32 @@ To keep the submission process smooth, please follow these guidelines:
 3. Include all static files (WXR, ZIP, JPG, etc.) listed in the Blueprint in the submitted directory of your PR, and reference them via the `https://raw.githubusercontent.com` domain.
 4. By submitting a Blueprint, you agree to license it under [GPLv2 or later license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
+Make sure to correctly indent your Blueprints using tabs using a code formatter like [Prettier](https://prettier.io/) – this repository ships a `.prettierrc` file you could use. This is mostly to help the reviewers understand your Blueprint better. Every accepted and merged Blueprint will automatically be re-formatted using the `.prettierrc` file.
+
 ## Blueprint metadata
 
 Each Blueprint should include metadata within the top-level "meta" key of the `blueprint.json` file.
 
 Here's what's required:
 
-- **Title:** a clear and concise name for your Blueprint.
-- **Author:** your GitHub username, to let others know who created the Blueprint.
+-   **Title:** a clear and concise name for your Blueprint.
+-   **Author:** your GitHub username, to let others know who created the Blueprint.
 
 Optionally, you can add:
 
-- **Description:** a brief explanation of what the Blueprint offers.
-- **Categories:** specify relevant categories to help users find your Blueprint in the future Blueprints section on WordPress.org.
+-   **Description:** a brief explanation of what the Blueprint offers.
+-   **Categories:** specify relevant categories to help users find your Blueprint in the future Blueprints section on WordPress.org.
 
 Here's an example:
 
 ```json
 {
-    "meta": {
-        "title": "WooCommerce Developer Environment",
-        "description": "A local development environment for WooCommerce that includes WP-CLI.",
-        "author": "zieladam",
-        "categories": ["woocommerce", "developer environment"]
-    }
+	"meta": {
+		"title": "WooCommerce Developer Environment",
+		"description": "A local development environment for WooCommerce that includes WP-CLI.",
+		"author": "zieladam",
+		"categories": ["woocommerce", "developer environment"]
+	}
 }
 ```
 

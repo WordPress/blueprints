@@ -20,7 +20,7 @@
 		},
 		{
 			"step": "writeFile",
-			"path": "/wordpress/wp-content/plugins/books/books.php"
+			"path": "/wordpress/wp-content/plugins/books/books.php",
 			"data": {
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/adamziel/blueprints/try-adding-blueprint/blueprints/custom-post/books.php"

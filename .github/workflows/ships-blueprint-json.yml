@@ -1,0 +1,29 @@
+name: Ships Blueprint.json file?
+
+on:
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    check_blueprints:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Find updated directories
+              id: find_directories
+              run: |
+                  git diff --name-only origin/main...$GITHUB_SHA | grep '^blueprints/' | cut -d/ -f2 | sort -u > updated_directories.txt
+
+            - name: Check blueprint.json files
+              id: check_blueprints
+              run: |
+                  while IFS= read -r directory; do
+                      if [ ! -f "blueprints/$directory/blueprint.json" ]; then
+                          echo "Missing blueprint.json file in $directory"
+                          exit 1
+                      fi
+                  done < updated_directories.txt

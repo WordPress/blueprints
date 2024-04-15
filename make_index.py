@@ -31,13 +31,6 @@ def get_dot_template_files():
 def build_markdown_table():
     with open('index.json', 'r') as f:
         index = json.load(f)
-    # blueprints_list = []
-    # for path, meta in index.items():
-    #     blueprints_list.append('* {0} – [Preview]({1}) | [Source]({2})\n'.format(
-    #         meta.get('title', ''),
-    #         'https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/' + path,
-    #         'https://github.com/adamziel/blueprints/blob/trunk/' + path
-    #     ))
     blueprints_rows = [
         ['Title', 'Preview', 'Source']
     ]

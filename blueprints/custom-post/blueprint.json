@@ -4,7 +4,10 @@
 		"title": "Custom Post Type: Books",
 		"description": "Blueprint that added a custom post type to playground",
 		"author": "bph",
-		"categories": ["Content", "CPT"]
+		"categories": [
+			"Content",
+			"CPT"
+		]
 	},
 	"landingPage": "/wp-admin/",
 	"steps": [

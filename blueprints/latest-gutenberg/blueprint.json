@@ -3,7 +3,11 @@
 		"title": "Latest Gutenberg plugin",
 		"author": "zieladam",
 		"description": "A preview of the latest version of the Gutenberg plugin.",
-		"categories": ["plugins"]
+		"categories": [
+			"plugins"
+		]
 	},
-	"plugins": ["gutenberg"]
+	"plugins": [
+		"gutenberg"
+	]
 }

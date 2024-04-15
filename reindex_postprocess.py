@@ -1,6 +1,7 @@
 import json
 import os
 import re
+import sys
 
 
 def build_json_index():
@@ -16,7 +17,6 @@ def build_json_index():
     with open('index.json', 'w') as f:
         json.dump(index, f, indent=2)
 
-build_json_index()
 
 def get_dot_template_files():
     dot_template_files = []
@@ -63,4 +63,54 @@ def build_markdown_table():
             with open(file.replace('.template', ''), 'w') as f:
                 f.write(re.sub(r'{BLUEPRINTS_TABLE}', ''.join(formatted_table), template))
 
-build_markdown_table()
+
+def rewrite_branch_urls_to_trunk():
+    with open('index.json', 'r') as f:
+        index = json.load(f)
+
+    for path, meta in index.items():
+        with open(path, 'r') as f:
+            blueprint = f.read()
+            json_blueprint = json.loads(blueprint)
+            map_url_resources(json_blueprint, branch_url_mapper)
+            with open(path, 'w') as f:
+                f.write(json.dumps(json_blueprint, indent="\t"))
+
+
+def map_url_resources(blueprint_fragment, mapper):
+    """
+    Recursively map URL resources in a blueprint using a mapper function.
+    A URL resource is a dictionary with a "resource": "url" entry, and a "url" key.
+    """
+    if isinstance(blueprint_fragment, dict):
+        if 'resource' in blueprint_fragment and blueprint_fragment['resource'] == 'url' and 'url' in blueprint_fragment:
+            blueprint_fragment['url'] = mapper(blueprint_fragment['url'])
+        else:
+            for key, value in blueprint_fragment.items():
+                map_url_resources(value, mapper)
+    elif isinstance(blueprint_fragment, list):
+        for item in blueprint_fragment:
+            map_url_resources(item, mapper)
+
+def branch_url_mapper(url):
+    """
+    Rewrite a raw.githubusercontent.com URL to point to the trunk branch.
+
+    >>> branch_url_mapper('https://raw.githubusercontent.com/adamziel/blueprints/my-branch/blueprint.json')
+    'https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprint.json'
+    >>> branch_url_mapper('https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprint.json')
+    'https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprint.json'
+    """
+    if not url.startswith("https://raw.githubusercontent.com"):
+        return url
+    return re.sub(r'https://raw.githubusercontent.com/([^/]+)/([^/]+)/([^/]+)', r'https://raw.githubusercontent.com/\1/\2/trunk', url)
+
+if '--test' in sys.argv:
+    print("Running doctests")
+    import doctest
+    doctest.testmod()
+else:
+    print("Reindexing")
+    build_json_index()
+    build_markdown_table()
+    rewrite_branch_urls_to_trunk()

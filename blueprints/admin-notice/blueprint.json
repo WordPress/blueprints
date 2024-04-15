@@ -4,7 +4,10 @@
 		"title": "Display Admin Notice ",
 		"description": "Blueprint to add a tiny mu-plugin and display an admin notice",
 		"author": "bph",
-		"categories": ["Admin", "notices"]
+		"categories": [
+			"Admin",
+			"notices"
+		]
 	},
 	"landingPage": "/wp-admin/plugins.php",
 	"steps": [

@@ -8,7 +8,6 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-
         steps:
             - uses: actions/checkout@v2
             - name: Set up Python 3.8
@@ -17,8 +16,8 @@ jobs:
                   python-version: 3.8
             - name: Install Prettier
               run: npm install -g prettier
-            - name: Run make_index.py
-              run: python make_index.py
+            - name: Run reindex_postprocess.py
+              run: python reindex_postprocess.py
             - name: Run Prettier
               run: prettier --write blueprints/**/*.json
             - name: Check for uncommitted changes

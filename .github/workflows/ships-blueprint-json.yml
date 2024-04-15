@@ -13,6 +13,12 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
 
+            - name: Install jsonlint
+              run: |
+                sudo apt-get update
+                sudo apt-get install -y npm
+                npm install -g jsonlint
+
             - name: Find updated directories
               id: find_directories
               run: |
@@ -27,3 +33,12 @@ jobs:
                           exit 1
                       fi
                   done < updated_directories.txt
+
+            - name: Validate blueprint.json files
+              run: |
+                while IFS= read -r directory; do
+                    if [ -f "blueprints/$directory/blueprint.json" ]; then
+                        echo "Validating blueprint.json file in $directory"
+                        jsonlint -q "blueprints/$directory/blueprint.json"
+                    fi
+                done < updated_directories.txt

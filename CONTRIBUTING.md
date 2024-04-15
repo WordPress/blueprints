@@ -1,34 +1,33 @@
-## Contributing Guidelines
+# Contribution Guidelines
 
 We encourage you to contribute your own Blueprints to this repository!
 
-### Building your first Blueprint
+## Build your first Blueprint
 
-See [Building your first Blueprint](./docs/how-to-build-a-blueprint/your-first-blueprint.md).
+Not sure how? Check out the [Blueprints 101](./docs/index.md).
 
-### Submitting your Blueprint to this repository
+## Submit your Blueprint to this repository
 
-To keep the submission process smooth, please follow the following guidelines:
+To keep the submission process smooth, please follow these guidelines:
 
-Submit your Blueprint as a Pull Request to this repository.
+1. Submit [a Pull Request (PR)](https://github.com/adamziel/blueprints/pulls) with your Blueprint.
+2. The PR must contain a single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/adamziel/blueprints/tree/trunk/blueprints)).
+3. Include all static files (WXR, ZIP, JPG, etc.) listed in the Blueprint in the submitted directory of your PR, and reference them via the `https://raw.githubusercontent.com` domain.
+4. By submitting a Blueprint, you agree to license it under [GPLv2 or later license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
-Your Pull Request must contain a single `blueprint.json` file under a path `blueprints/your-blueprint-name/blueprint.json`.
+## Blueprint metadata
 
-All static files (WXR, ZIP, JPG etc.) referenced by the Blueprint must be included in the submitted directory in your Pull Request and referenced via the `raw.githubusercontent.com` domain.
+Each Blueprint should include metadata within the top-level "meta" key of the `blueprint.json` file.
 
-By submitting a Blueprint, you agree to license it under GPLv2 or later license.
+Here's what's required:
 
-### Blueprint Metadata
+- **Title:** a clear and concise name for your Blueprint.
+- **Author:** your GitHub username, to let others know who created the Blueprint.
 
-Each Blueprint should include some basic metadata within the top-level "meta" key in the blueprint.json file. Here's what's required:
+Optionally, you can add:
 
-* Title: A clear and concise name for your Blueprint.
-* Author (GitHub Username): Let others know who created the Blueprint.
-
-Optionally, you can also include:
-
-* Description: Provide a brief explanation of what your Blueprint offers.
-* Categories: Specify relevant categories to help users find your Blueprint in the future Blueprints section on WordPress.org.
+- **Description:** a brief explanation of what the Blueprint offers.
+- **Categories:** specify relevant categories to help users find your Blueprint in the future Blueprints section on WordPress.org.
 
 Here's an example:
 
@@ -43,6 +42,6 @@ Here's an example:
 }
 ```
 
-### Needing Help?
+## Need help?
 
-If you have questions or need assistance, start a new issue in this repository.
+If you have questions or comments, [open a new issue](https://github.com/adamziel/blueprints/issues) in this repository.

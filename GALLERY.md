@@ -1,6 +1,8 @@
 # WordPress Blueprints Gallery
 
-Here's the list of all the community Blueprints submitted to this repository. See the [contribution guidelines](./README.md#contributing-your-blueprint) to submit your Blueprint and share your WordPress setup with the world!
+Here are all the community Blueprints submitted to this repository.
+
+Want to share your WordPress setup with the world? See the [contribution guidelines](./CONTRIBUTING.md) for more information on how to submit your Blueprint.
 
 | Title                               | Preview                                                                                                                                                           | Source                                                                                                 |
 | -----                               | -------                                                                                                                                                           | ------                                                                                                 |

@@ -7,6 +7,9 @@ jobs:
     check_blueprints:
         runs-on: ubuntu-latest
 
+        env:
+            GITHUB_BRANCH: ${{ github.event.pull_request.head.ref }}
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v2

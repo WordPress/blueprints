@@ -49,7 +49,7 @@ def validate_blueprints():
 
         # Check if the URLs all point to raw.githubusercontent.com/adamziel/blueprints/{CURRENT BRANCH}
         urls_valid = True
-        current_branch = os.popen('git rev-parse --abbrev-ref HEAD').read().strip()
+        current_branch = os.environ.get('GITHUB_BRANCH') or os.popen('git rev-parse --abbrev-ref HEAD').read().strip()
         for url in urls:
             if not url.startswith('https://') and not url.startswith('http://'):
                 continue

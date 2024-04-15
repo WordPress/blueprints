@@ -29,7 +29,7 @@ For example, if you want to load `a content-export.xml` file and your branch is 
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/adamziel/blueprints/woocommerce-subscriptions/content-export.xml"
+				"url": "https://raw.githubusercontent.com/adamziel/blueprints/woocommerce-subscriptions/blueprints/woocommerce-subscriptions/content-export.xml"
 			}
 		}
 	]

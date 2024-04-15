@@ -4,10 +4,7 @@
 		"title": "Grid Variations Experiments enabled",
 		"author": "bph",
 		"description": "Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin",
-		"categories": [
-			"Gutenberg",
-			"Experiments"
-		]
+		"categories": ["Gutenberg", "Experiments"]
 	},
 	"landingPage": "/wp-admin/site-editor.php",
 	"steps": [

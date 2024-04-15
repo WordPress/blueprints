@@ -4,10 +4,7 @@
 		"title": "Use wp-cli command to add posts",
 		"description": "Blueprint example to add posts via a wp-cli command.",
 		"author": "bph",
-		"categories": [
-			"Content",
-			"wpcli"
-		]
+		"categories": ["Content", "wpcli"]
 	},
 	"landingPage": "/wp-admin/edit.php",
 	"steps": [

@@ -1,19 +1,11 @@
 {
-  "blueprints/custom-post/blueprint.json": {
-    "title": "Custom Post Type: Books",
-    "description": "Blueprint that added a custom post type to playground",
+  "blueprints/grid-variations/blueprint.json": {
+    "title": "Grid Variations Experiments enabled",
     "author": "bph",
+    "description": "Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin",
     "categories": [
-      "Content",
-      "CPT"
-    ]
-  },
-  "blueprints/latest-gutenberg/blueprint.json": {
-    "title": "Latest Gutenberg plugin",
-    "author": "zieladam",
-    "description": "A preview of the latest version of the Gutenberg plugin.",
-    "categories": [
-      "plugins"
+      "Gutenberg",
+      "Experiments"
     ]
   },
   "blueprints/admin-notice/blueprint.json": {
@@ -25,6 +17,14 @@
       "notices"
     ]
   },
+  "blueprints/latest-gutenberg/blueprint.json": {
+    "title": "Latest Gutenberg plugin",
+    "author": "zieladam",
+    "description": "A preview of the latest version of the Gutenberg plugin.",
+    "categories": [
+      "plugins"
+    ]
+  },
   "blueprints/posts-via-wp-cli/blueprint.json": {
     "title": "Use wp-cli command to add posts",
     "description": "Blueprint example to add posts via a wp-cli command.",
@@ -34,13 +34,13 @@
       "wpcli"
     ]
   },
-  "blueprints/grid-variations/blueprint.json": {
-    "title": "Grid Variations Experiments enabled",
+  "blueprints/custom-post/blueprint.json": {
+    "title": "Custom Post Type: Books",
+    "description": "Blueprint that added a custom post type to playground",
     "author": "bph",
-    "description": "Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin",
     "categories": [
-      "Gutenberg",
-      "Experiments"
+      "Content",
+      "CPT"
     ]
   }
 }

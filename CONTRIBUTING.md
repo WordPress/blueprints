@@ -42,7 +42,7 @@ Make sure to correctly indent your Blueprints using tabs using a code formatter 
 
 ## Blueprint metadata
 
-Each Blueprint should include metadata within the top-level "meta" key of the `blueprint.json` file.
+Each Blueprint should include metadata within the top-level "meta" key of the `blueprint.json` file. Note that metadata is not required for all Blueprints, only for Blueprints submitted to this gallery.
 
 Here's what's required:
 

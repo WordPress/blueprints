@@ -1,22 +1,22 @@
 {
-    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-    "meta": {
-        "title": "Display Admin Notice ",
-        "description": "Blueprint to add a tiny mu-plugin and display an admin notice",
-        "author": "bph",
-        "categories": ["Admin", "notices"]
-    },
-    "landingPage": "/wp-admin/plugins.php",
-    "steps":[
-        {
-            "step": "login",
-            "username": "admin",
-            "password": "password"
-        },
-        { 
-            "step": "writeFile",
-            "path": "/wordpress/wp-content/mu-plugins/bgnightly-notice.php",
-            "data": "<?php add_action('admin_notices', function() {  echo '<div class=\"notice notice-info is-dismissible\"><p>Hello from Playground.</p></div>'; });"
-        }
-    ]
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Display Admin Notice ",
+		"description": "Blueprint to add a tiny mu-plugin and display an admin notice",
+		"author": "bph",
+		"categories": ["Admin", "notices"]
+	},
+	"landingPage": "/wp-admin/plugins.php",
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/bgnightly-notice.php",
+			"data": "<?php add_action('admin_notices', function() {  echo '<div class=\"notice notice-info is-dismissible\"><p>Hello from Playground.</p></div>'; });"
+		}
+	]
 }

@@ -11,6 +11,10 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v2
 
+            - name: Fetch trunk
+              run: |
+                  git fetch origin trunk
+
             - name: Run validate_pr.py
               run: |
                   python validate_pr.py

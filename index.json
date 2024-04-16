@@ -42,6 +42,15 @@
       "plugins"
     ]
   },
+  "blueprints/theme-a11y-test/blueprint.json": {
+    "title": "Theme Tester",
+    "description": "Blueprint example to add content and plugins to explore a theme",
+    "author": "bph",
+    "categories": [
+      "themes",
+      "content"
+    ]
+  },
   "blueprints/posts-via-wp-cli/blueprint.json": {
     "title": "Use wp-cli command to add posts",
     "description": "Blueprint example to add posts via a wp-cli command.",

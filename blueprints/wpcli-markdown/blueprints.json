@@ -1,0 +1,19 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Content via wp-cli and markdown",
+		"description": "create post from markdown file with an image",
+		"author": "bph",
+		"categories": ["Content", "wpcli"]
+	},
+	"landingPage": "/wp-admin/",
+	"steps": [
+		{
+			"step": "login"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp post create postcontent.md"
+		}
+	]
+}

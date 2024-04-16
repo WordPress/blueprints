@@ -12,8 +12,16 @@
 			"step": "login"
 		},
 		{
+			"step": "writeFile",
+			"path": "/wp-content/uploads/postcontent.md",
+			"data": {
+				"resource": "url",
+				"url": "https://gutenbergtimes.com/wp-content/uploads/2020/11/wpcli-markdown/postcontent.md"
+			}
+		},
+		{
 			"step": "wp-cli",
-			"command": "wp post create https://gutenbergtimes.com/wp-content/uploads/2020/11/wpcli-markdown/postcontent.md"
+			"command": "wp post create --post_title 'Welcome to Playground'  /wp-content/uploads/postcontent.md"
 		}
 	]
 }

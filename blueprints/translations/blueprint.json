@@ -5,31 +5,31 @@
 		"description": "Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/.",
 		"categories": ["core"]
 	},
-   "landingPage":"/wp-admin/?welcome=0",
-   "login": true,
-   "steps":[
-      {
-         "step":"mkdir",
-         "path":"/wordpress/wp-content/languages/plugins"
-      },
-      {
-         "step":"mkdir",
-         "path":"/wordpress/wp-content/languages/themes"
-      },
-      {
-         "step":"writeFile",
-         "path":"/wordpress/wp-content/languages/admin-ja_JA.mo",
-         "data":{
-            "resource":"url",
-            "caption":"Downloading admin-ja_JA.mo",
-            "url":"https://translate.wordpress.org/projects/wp/dev/admin/ja/default/export-translations?format=mo"
-         }
-      },
-      {
-         "step":"setSiteOptions",
-         "options":{
-            "WPLANG":"ja_JA"
-         }
-      }
-   ]
+	"landingPage": "/wp-admin/?welcome=0",
+	"login": true,
+	"steps": [
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/languages/plugins"
+		},
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/languages/themes"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/languages/admin-ja_JA.mo",
+			"data": {
+				"resource": "url",
+				"caption": "Downloading admin-ja_JA.mo",
+				"url": "https://translate.wordpress.org/projects/wp/dev/admin/ja/default/export-translations?format=mo"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"WPLANG": "ja_JA"
+			}
+		}
+	]
 }

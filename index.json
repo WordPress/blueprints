@@ -26,6 +26,14 @@
       "Experiments"
     ]
   },
+  "blueprints/translations/blueprint.json": {
+    "title": "Install WordPress language packs",
+    "author": "adamziel",
+    "description": "Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/.",
+    "categories": [
+      "core"
+    ]
+  },
   "blueprints/install-plugin-from-gist/blueprint.json": {
     "title": "Install plugin from a gist",
     "author": "zieladam",

@@ -22,16 +22,16 @@
 			"data": {
 				"resource": "url",
 				"caption": "Downloading admin-ja_JA.mo",
-				"url":"https://translate.wordpress.org/projects/wp/dev/ja/default/export-translations?format=mo"
+				"url": "https://translate.wordpress.org/projects/wp/dev/ja/default/export-translations?format=mo"
 			}
 		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/languages/admin-ja_JA.mo",
-         		"data": {
-				"resource":"url",
-				"caption":"Downloading admin-ja_JA.mo",
-				"url":"https://translate.wordpress.org/projects/wp/dev/admin/ja/default/export-translations?format=mo"
+			"data": {
+				"resource": "url",
+				"caption": "Downloading admin-ja_JA.mo",
+				"url": "https://translate.wordpress.org/projects/wp/dev/admin/ja/default/export-translations?format=mo"
 			}
 		},
 		{

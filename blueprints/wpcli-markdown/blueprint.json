@@ -6,7 +6,7 @@
 		"author": "bph",
 		"categories": ["Content", "wpcli"]
 	},
-	"landingPage": "/wp-admin/",
+	"landingPage": "/?p=4",
 	"steps": [
 		{
 			"step": "login"
@@ -21,7 +21,19 @@
 		},
 		{
 			"step": "wp-cli",
-			"command": "wp post create --post_title='Welcome to Playground' /wordpress/wp-content/postcontent.md"
+			"command": "wp post create --post_title='Welcome to Playground' --post_status='published' /wordpress/wp-content/postcontent.md" 
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/Select-storage-method.png",
+			"data": {
+				"resource": "url",
+				"url": "https://gutenbergtimes.com/wp-content/uploads/2020/11/wpcli-markdown/Select-storage-method.png"
+			}
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp media import wordpress/wp-content/Select-storage-method.png --post_id=4 --title='Select your storage method' --featured_image"
 		}
 	]
 }

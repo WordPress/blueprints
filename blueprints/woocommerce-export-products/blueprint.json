@@ -1,51 +1,49 @@
 {
-    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-    "meta": {
-        "title": "woocommerce product feed",
-        "description": "Blueprint to create a woocommerce product and export an XML/CSV product feed",
-        "author": "mujuonly",
-        "categories": ["WooCommerce", "Content"]
-    },
-    "landingPage": "/wp-admin/admin.php?page=webtoffee_product_feed_main_export",
-    "preferredVersions": {
-        "php": "7.4",
-        "wp": "6.4"
-    },
-    "phpExtensionBundles": [
-        "kitchen-sink"
-    ],
-    "features": {
-        "networking": true
-    },
-    "steps": [
-        {
-            "step": "login",
-            "username": "admin",
-            "password": "password"
-        },
-        {
-            "step": "installPlugin",
-            "pluginZipFile": {
-                "resource": "wordpress.org/plugins",
-                "slug": "woocommerce"
-            },
-            "options": {
-                "activate": true
-            }
-        },
-        {
-            "step": "installPlugin",
-            "pluginZipFile": {
-                "resource": "wordpress.org/plugins",
-                "slug": "webtoffee-product-feed"
-            },
-            "options": {
-                "activate": true
-            }
-        },
-        {
-            "step": "runPHP",
-            "code": "<?php include 'wordpress/wp-load.php'; delete_transient( '_wc_activation_redirect' ); wp_insert_post(array( 'import_id' => 5, 'post_title' => 'Sample Product', 'post_content' => '<!-- wp:paragraph --><p>Sample product description</p><!-- /wp:paragraph -->','post_status' => 'publish','post_type' => 'product','post_author' => 1, 'meta_input' => array('_sku' => 'WEBTOFFEE-FEED-ITEM', '_regular_price' => 25.00, '_sale_price' => 22.00, '_price' => 22.00, '_wt_feed_brand' => 'WebToffee', '_wt_feed_gtin' => 'WEBTOFFEE123', '_wt_feed_mpn' => 'WebToffee123', '_wt_feed_color' => 'Red', '_wt_feed_gender' => 'Male' ) ) );"
-        }
-    ]
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "woocommerce product feed",
+		"description": "Blueprint to create a woocommerce product and export an XML/CSV product feed",
+		"author": "mujuonly",
+		"categories": ["WooCommerce", "Content"]
+	},
+	"landingPage": "/wp-admin/admin.php?page=webtoffee_product_feed_main_export",
+	"preferredVersions": {
+		"php": "7.4",
+		"wp": "6.4"
+	},
+	"phpExtensionBundles": ["kitchen-sink"],
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "webtoffee-product-feed"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php include 'wordpress/wp-load.php'; delete_transient( '_wc_activation_redirect' ); wp_insert_post(array( 'import_id' => 5, 'post_title' => 'Sample Product', 'post_content' => '<!-- wp:paragraph --><p>Sample product description</p><!-- /wp:paragraph -->','post_status' => 'publish','post_type' => 'product','post_author' => 1, 'meta_input' => array('_sku' => 'WEBTOFFEE-FEED-ITEM', '_regular_price' => 25.00, '_sale_price' => 22.00, '_price' => 22.00, '_wt_feed_brand' => 'WebToffee', '_wt_feed_gtin' => 'WEBTOFFEE123', '_wt_feed_mpn' => 'WebToffee123', '_wt_feed_color' => 'Red', '_wt_feed_gender' => 'Male' ) ) );"
+		}
+	]
 }

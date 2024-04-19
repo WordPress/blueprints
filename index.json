@@ -76,5 +76,14 @@
       "Content",
       "wpcli"
     ]
+  },
+  "blueprints/woocommerce-export-products/blueprint.json": {
+    "title": "woocommerce product feed",
+    "description": "Blueprint to create a woocommerce product and export an XML/CSV product feed",
+    "author": "mujuonly",
+    "categories": [
+      "WooCommerce",
+      "Content"
+    ]
   }
 }

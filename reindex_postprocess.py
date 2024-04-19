@@ -41,7 +41,7 @@ def build_markdown_table():
             meta.get('title', ''),
             '[Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/{0})'.format(path),
             '[Source](https://github.com/adamziel/blueprints/blob/trunk/{0})'.format(path),
-            '@%s' % meta.get('author', '') if meta.get('author', '') else '',
+            '[@{0}](https://github.com/{0})'.format(meta.get('author', '')) if meta.get('author', '') else '',
             meta.get('description', ''),
         ])
 

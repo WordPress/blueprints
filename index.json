@@ -1,4 +1,13 @@
 {
+  "blueprints/wpcli-markdown/blueprint.json": {
+    "title": "Content via wp-cli and markdown",
+    "description": "create post from markdown file with an image",
+    "author": "bph",
+    "categories": [
+      "Content",
+      "wpcli"
+    ]
+  },
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",

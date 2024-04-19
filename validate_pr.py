@@ -85,8 +85,9 @@ def find_urls(obj):
         
 
 def get_touched_directories():
-    # Run git diff command to get the list of directories touched in the current branch
-    diff_output = os.popen('git diff --name-only origin/trunk').read()
+    # Run git diff command to get the list of directories touched in the current branch as compared to 
+    # the point where it was forked from the trunk branch
+    diff_output = os.popen('git diff --name-only $(git merge-base trunk HEAD)').read()
     touched_dirs = set()
 
     # Extract the directory paths from the diff output

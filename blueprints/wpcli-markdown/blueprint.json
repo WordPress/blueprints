@@ -16,7 +16,7 @@
 			"path": "/wordpress/wp-content/postcontent.md",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprints/cli-markdown/postcontent.md"
+				"url": "https://raw.githubusercontent.com/adamziel/blueprints/cli-markdown/blueprints/wpcli-markdown/postcontent.md"
 			}
 		},
 		{

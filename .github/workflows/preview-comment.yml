@@ -2,7 +2,7 @@
 name: Pull Request Comments
 
 on:
-    pull_request:
+    pull_request_target:
 
 # Disable permissions for all available scopes by default.
 # Any needed permissions should be configured at the job level.
@@ -16,8 +16,6 @@ jobs:
         permissions:
             issues: write
             pull-requests: write
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         steps:
             - name: Leave a comment about testing with Playground
               uses: actions/github-script@60a0d83039c74a4aee543508d2ffcb1c3799cdea # v7.0.1

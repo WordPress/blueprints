@@ -34,13 +34,14 @@ def build_markdown_table():
     with open('index.json', 'r') as f:
         index = json.load(f)
     blueprints_rows = [
-        ['Title', 'Preview', 'Source']
+        ['Title', 'Preview', 'Source', 'Description', ]
     ]
     for path, meta in index.items():
         blueprints_rows.append([
             meta.get('title', ''),
             '[Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/{0})'.format(path),
-            '[Source](https://github.com/adamziel/blueprints/blob/trunk/{0})'.format(path)
+            '[Source](https://github.com/adamziel/blueprints/blob/trunk/{0})'.format(path),
+            meta.get('description', ''),
         ])
 
     widths = [max(map(len, col)) for col in zip(*blueprints_rows)]

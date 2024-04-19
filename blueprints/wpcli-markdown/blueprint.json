@@ -1,0 +1,39 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Content via wp-cli and markdown",
+		"description": "create post from markdown file with an image",
+		"author": "bph",
+		"categories": ["Content", "wpcli"]
+	},
+	"landingPage": "/?p=4",
+	"steps": [
+		{
+			"step": "login"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/postcontent.md",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/adamziel/blueprints/cli-markdown/blueprints/wpcli-markdown/postcontent.md"
+			}
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp post create --post_title='Welcome to Playground' --post_status='published' /wordpress/wp-content/postcontent.md" 
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/Select-storage-method.png",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/adamziel/blueprints/cli-markdown/blueprints/wpcli-markdown/Select-storage-method.png"
+			}
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp media import wordpress/wp-content/Select-storage-method.png --post_id=4 --title='Select your storage method' --featured_image"
+		}
+	]
+}

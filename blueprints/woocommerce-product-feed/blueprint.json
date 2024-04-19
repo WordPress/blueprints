@@ -1,8 +1,8 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "woocommerce product feed",
-		"description": "Blueprint to create a woocommerce product and export an XML/CSV product feed",
+		"title": "WooCommerce product feed",
+		"description": "Blueprint to create a WooCommerce product and export an XML/CSV product feed",
 		"author": "mujuonly",
 		"categories": ["WooCommerce", "Content"]
 	},

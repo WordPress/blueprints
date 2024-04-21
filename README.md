@@ -5,11 +5,9 @@
 
 ## What are Blueprints?
 
-Check out [Blueprints 101](./docs/index.md) to get started.
+Blueprints are WordPress setup scripts that you can preview live in [WordPress Playground](https://w.org/playground). Blueprints contain all the installation instructions needed to setup WordPress, including plugins, themes, site options, starter content to import, and more.
 
-Here's a quick overview:
-
-Blueprints are WordPress setup scripts that you can preview live in [WordPress Playground](https://w.org/playground). Here's a simple example:
+The basic example below will load a Playground instance with the Hello Dolly plugin preinstalled and that opens in wp-admin plugins screen after it automattically logs in. 
 
 ```json
 {
@@ -18,12 +16,10 @@ Blueprints are WordPress setup scripts that you can preview live in [WordPress P
     "landingPage": "/wp-admin/plugins.php"
 }
 ```
-
 [<kbd> <br> Preview in WordPress Playground <br> </kbd>](https://playground.wordpress.net/#%7B%22plugins%22:%5B%22hello-dolly%22,%22gutenberg%22%5D,%20%22login%22:%20true,%20%22landingPage%22:%20%22/wp-admin/plugins.php%22%20%7D)
 
-Blueprints contain all the installation instructions needed to setup WordPress, including plugins, themes, site options, starter content to import, and more.
+Check out [Blueprints 101](./docs/index.md) to get started creating blueprints. 
 
-Check out [Blueprints 101](./docs/index.md) to get started with Blueprints.
 
 ## Why use Blueprints?
 
@@ -37,10 +33,10 @@ Blueprints can help you
 
 This community space allows you to
 
-* [Browse the Blueprints Gallery](./GALLERY.md) and explore diverse WordPress sites.
+* [Browse the Blueprints Gallery](./GALLERY.md) and explore diverse WordPress sites and different configurations. 
 * [Submit your own Blueprint](./CONTRIBUTING.md) and share your WordPress setup with the community.
 
-## Contributing your Blueprint
+## How to contribute your Blueprint
 
 We encourage you to contribute your Blueprints to this repository! We accepet new submissions as Pull Requests. Read the [Contributing Guidelines](./CONTRIBUTING.md) for more details. 
 

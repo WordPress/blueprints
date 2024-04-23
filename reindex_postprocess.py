@@ -34,13 +34,14 @@ def build_markdown_table():
     with open('index.json', 'r') as f:
         index = json.load(f)
     blueprints_rows = [
-        ['Title', 'Preview', 'Source', 'Author', 'Description', ]
+        ['Title', 'Actions', 'Author', 'Description', ]
     ]
     for path, meta in index.items():
         blueprints_rows.append([
             meta.get('title', ''),
-            '[Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path),
-            '[Source](https://github.com/wordpress/blueprints/blob/trunk/{0})'.format(path),
+            '[Run](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path) +
+            '<br> [Read](https://github.com/wordpress/blueprints/blob/trunk/{0})'.format(path) +
+            '<br> [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path),
             '[@{0}](https://github.com/{0})'.format(meta.get('author', '')) if meta.get('author', '') else '',
             meta.get('description', ''),
         ])

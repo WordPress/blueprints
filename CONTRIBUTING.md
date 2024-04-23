@@ -17,7 +17,7 @@ The PR should contain:
 * A single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/adamziel/blueprints/tree/trunk/blueprints)).
 * All the static files (WXR, ZIP, JPG, etc.) your Blueprint references. The static files must be loaded via the `https://raw.githubusercontent.com` URL pointing to your branch. `raw.githubusercontent.com` is a service that allows you to serve files directly from your GitHub repository. This is useful for loading static files in Blueprints. The URLs follow the `raw.githubusercontent.com/${user}/${repo}/${branch}/${path}` pattern.
 
-For example, if you want to load a content-export.xml file, you create a new folder in the blueprints directory, /woocommerce-subscription (the name should correpont to the name of the blueprint and must hold two files.
+For example, if you want to load a content-export.xml file, you create a new folder in the blueprints directory, /woocommerce-subscription (the name should correpond to the name of the blueprint). The folder must hold two files:
 
 * A `blueprints/woocommerce-subscriptions/blueprint.json` file
 * A `blueprints/woocommerce-subscription/content-export.xml` file

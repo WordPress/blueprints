@@ -1,13 +1,4 @@
 {
-  "blueprints/wpcli-markdown/blueprint.json": {
-    "title": "Content via wp-cli and markdown",
-    "description": "create post from markdown file with an image",
-    "author": "bph",
-    "categories": [
-      "Content",
-      "wpcli"
-    ]
-  },
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",
@@ -71,6 +62,15 @@
   "blueprints/posts-via-wp-cli/blueprint.json": {
     "title": "Use wp-cli command to add posts",
     "description": "Blueprint example to add posts via a wp-cli command.",
+    "author": "bph",
+    "categories": [
+      "Content",
+      "wpcli"
+    ]
+  },
+  "blueprints/wpcli-post-with-image/blueprint.json": {
+    "title": "Use wp-cli to add a post with image",
+    "description": "Use wp-cli to create a post from text file with block markup and a featured image",
     "author": "bph",
     "categories": [
       "Content",

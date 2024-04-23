@@ -1,8 +1,8 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Content via wp-cli and markdown",
-		"description": "create post from markdown file with an image",
+		"title": "Use wp-cli to add a post with image",
+		"description": "Use wp-cli to create a post from text file with block markup and a featured image",
 		"author": "bph",
 		"categories": ["Content", "wpcli"]
 	},
@@ -16,7 +16,7 @@
 			"path": "/wordpress/wp-content/postcontent.md",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprints/wpcli-markdown/postcontent.md"
+				"url": "https://raw.githubusercontent.com/adamziel/blueprints/update-desc/blueprints/wpcli-post-with-image/postcontent.md"
 			}
 		},
 		{
@@ -28,7 +28,7 @@
 			"path": "/wordpress/wp-content/Select-storage-method.png",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprints/wpcli-markdown/Select-storage-method.png"
+				"url": "https://raw.githubusercontent.com/adamziel/blueprints/update-desc/blueprints/wpcli-post-with-image/Select-storage-method.png"
 			}
 		},
 		{

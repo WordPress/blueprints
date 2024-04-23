@@ -17,10 +17,13 @@ The PR should contain:
 * A single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/adamziel/blueprints/tree/trunk/blueprints)).
 * All the static files (WXR, ZIP, JPG, etc.) your Blueprint references. The static files must be loaded via the `https://raw.githubusercontent.com` URL pointing to your branch. `raw.githubusercontent.com` is a service that allows you to serve files directly from your GitHub repository. This is useful for loading static files in Blueprints. The URLs follow the `raw.githubusercontent.com/${user}/${repo}/${branch}/${path}` pattern.
 
-For example, if you want to load `a content-export.xml` file and your branch is called `woocommerce-subscriptions`, then your PR must contain a:
+For example, if you want to load a content-export.xml file, you create a new folder in the blueprints directory, /woocommerce-subscription (the name should correpont to the name of the blueprint and must hold two files.
 
 * A `blueprints/woocommerce-subscriptions/blueprint.json` file
-* A `blueprints/woocommerce-subscription/content-export.xml` file the Blueprint should reference as follows:
+* A `blueprints/woocommerce-subscription/content-export.xml` file
+* The branch is named `/woo-subscription/` 
+
+Then the Blueprint should reference as follows:
 
 ```json
 {
@@ -29,7 +32,7 @@ For example, if you want to load `a content-export.xml` file and your branch is 
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/adamziel/blueprints/woocommerce-subscriptions/blueprints/woocommerce-subscriptions/content-export.xml"
+				"url": "https://raw.githubusercontent.com/adamziel/blueprints/woo-subscriptions/blueprints/woocommerce-subscriptions/content-export.xml"
 			}
 		}
 	]
@@ -38,7 +41,7 @@ For example, if you want to load `a content-export.xml` file and your branch is 
 
 By submitting a Blueprint, you agree to license it under [GPLv2 or later license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 
-Make sure to correctly indent your Blueprints using tabs using a code formatter like [Prettier](https://prettier.io/) – this repository ships a `.prettierrc` file you could use. This is mostly to help the reviewers understand your Blueprint better. Every accepted and merged Blueprint will automatically be re-formatted using the `.prettierrc` file.
+Make sure to correctly indent your Blueprints using tabs using a code formatter like [Prettier](https://prettier.io/). This repository ships a `.prettierrc` file you could use. This is mostly to help the reviewers understand your Blueprint better. Every accepted and merged Blueprint will automatically be re-formatted using the `.prettierrc` file.
 
 ## Blueprint metadata
 

@@ -21,14 +21,14 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wpaccessibility/a11y-theme-unit-test/trunk/a11y-theme-unit-test-data.xml"
+				"url": "https://raw.githubusercontent.com/wpaccessibility/a11y-theme-unit-test/master/a11y-theme-unit-test-data.xml"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/theme-test-data/trunk/themeunittestdata.wordpress.xml"
+				"url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/themeunittestdata.wordpress.xml"
 			}
 		},
 		{

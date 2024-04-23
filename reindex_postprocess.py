@@ -107,7 +107,7 @@ def branch_url_mapper(url):
     """
     if not url.startswith("https://raw.githubusercontent.com"):
         return url
-    return re.sub(r'https://raw.githubusercontent.com/([^/]+)/([^/]+)/([^/]+)', r'https://raw.githubusercontent.com/\1/\2/trunk', url)
+    return re.sub(r'https://raw.githubusercontent.com/adamziel/blueprints/([^/]+)', r'https://raw.githubusercontent.com/adamziel/blueprints/trunk', url)
 
 if '--test' in sys.argv:
     print("Running doctests")

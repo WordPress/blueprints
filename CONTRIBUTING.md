@@ -21,9 +21,8 @@ For example, if you want to load a content-export.xml file, you create a new fol
 
 * A `blueprints/woocommerce-subscriptions/blueprint.json` file
 * A `blueprints/woocommerce-subscription/content-export.xml` file
-* The branch is named `/woo-subscription/` 
 
-Then the Blueprint should reference as follows:
+Assuming your branch is named `/woo-subscription/`, the Blueprint should reference as follows:
 
 ```json
 {

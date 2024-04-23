@@ -47,18 +47,18 @@ def validate_blueprints():
         # Recursively find all urls in the blueprint.json file
         urls = find_urls(blueprint_json)
 
-        # Check if the URLs all point to raw.githubusercontent.com/adamziel/blueprints/{CURRENT BRANCH}
+        # Check if the URLs all point to raw.githubusercontent.com/wordpress/blueprints/{CURRENT BRANCH}
         urls_valid = True
         current_branch = os.environ.get('GITHUB_BRANCH') or os.popen('git rev-parse --abbrev-ref HEAD').read().strip()
         for url in urls:
             if not url.startswith('https://') and not url.startswith('http://'):
                 continue
-            if not url.startswith(f'https://raw.githubusercontent.com/adamziel/blueprints/{current_branch}/'):
+            if not url.startswith(f'https://raw.githubusercontent.com/wordpress/blueprints/{current_branch}/'):
                 urls_valid = False
                 errors.append(
                     f"Error: {dir}/{blueprint_json_path} contains a URL that is not allowed: \n* {url}\n"
-                    f"Since the current branch is {current_branch}, the URL should start with \n* https://raw.githubusercontent.com/adamziel/blueprints/{current_branch}/\n"
-                    "In general, all URLs in the blueprint.json file must start with https://raw.githubusercontent.com/adamziel/blueprints/{CURRENT BRANCH}/"
+                    f"Since the current branch is {current_branch}, the URL should start with \n* https://raw.githubusercontent.com/wordpress/blueprints/{current_branch}/\n"
+                    "In general, all URLs in the blueprint.json file must start with https://raw.githubusercontent.com/wordpress/blueprints/{CURRENT BRANCH}/"
                 )
 
         if not urls_valid:

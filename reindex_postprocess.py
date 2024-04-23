@@ -39,8 +39,8 @@ def build_markdown_table():
     for path, meta in index.items():
         blueprints_rows.append([
             meta.get('title', ''),
-            '[Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/adamziel/blueprints/trunk/{0})'.format(path),
-            '[Source](https://github.com/adamziel/blueprints/blob/trunk/{0})'.format(path),
+            '[Preview](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path),
+            '[Source](https://github.com/wordpress/blueprints/blob/trunk/{0})'.format(path),
             '[@{0}](https://github.com/{0})'.format(meta.get('author', '')) if meta.get('author', '') else '',
             meta.get('description', ''),
         ])
@@ -100,14 +100,14 @@ def branch_url_mapper(url):
     """
     Rewrite a raw.githubusercontent.com URL to point to the trunk branch.
 
-    >>> branch_url_mapper('https://raw.githubusercontent.com/adamziel/blueprints/my-branch/blueprint.json')
-    'https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprint.json'
-    >>> branch_url_mapper('https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprint.json')
-    'https://raw.githubusercontent.com/adamziel/blueprints/trunk/blueprint.json'
+    >>> branch_url_mapper('https://raw.githubusercontent.com/wordpress/blueprints/my-branch/blueprint.json')
+    'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprint.json'
+    >>> branch_url_mapper('https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprint.json')
+    'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprint.json'
     """
     if not url.startswith("https://raw.githubusercontent.com"):
         return url
-    return re.sub(r'https://raw.githubusercontent.com/adamziel/blueprints/([^/]+)', r'https://raw.githubusercontent.com/adamziel/blueprints/trunk', url)
+    return re.sub(r'https://raw.githubusercontent.com/wordpress/blueprints/([^/]+)', r'https://raw.githubusercontent.com/wordpress/blueprints/trunk', url)
 
 if '--test' in sys.argv:
     print("Running doctests")

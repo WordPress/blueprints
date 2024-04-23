@@ -27,7 +27,7 @@ The developer tools window allows you to inspect network requests, view console 
 
 ## Ask for help
 
-The community is here to help! If you have questions or comments, [open a new issue](https://github.com/adamziel/blueprints/issues) in this repository. Remember to include the following details:
+The community is here to help! If you have questions or comments, [open a new issue](https://github.com/wordpress/blueprints/issues) in this repository. Remember to include the following details:
 
 - The Blueprint you’re trying to run.
 - The error message you’re seeing, if any.

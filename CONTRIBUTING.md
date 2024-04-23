@@ -10,11 +10,15 @@ Not sure how? Check out the [Blueprints 101](./docs/index.md).
 
 To keep the submission process smooth, please follow these guidelines:
 
+<<<<<<< HEAD
 Submit [a Pull Request (PR)](https://github.com/adamziel/blueprints/pulls) with your Blueprint. Consult this page [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) if you need a refresher on the process. 
+=======
+Submit [a Pull Request (PR)](https://github.com/wordpress/blueprints/pulls) with your Blueprint.
+>>>>>>> 5b14b88 (Replace "adamziel/blueprints" with "wordpress/blueprints" in the documentation)
 
 The PR should contain:
 
-* A single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/adamziel/blueprints/tree/trunk/blueprints)).
+* A single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/wordpress/blueprints/tree/trunk/blueprints)).
 * All the static files (WXR, ZIP, JPG, etc.) your Blueprint references. The static files must be loaded via the `https://raw.githubusercontent.com` URL pointing to your branch. `raw.githubusercontent.com` is a service that allows you to serve files directly from your GitHub repository. This is useful for loading static files in Blueprints. The URLs follow the `raw.githubusercontent.com/${user}/${repo}/${branch}/${path}` pattern.
 
 For example, if you want to load a content-export.xml file, you create a new folder in the blueprints directory, /woocommerce-subscription (the name should correpond to the name of the blueprint). The folder must hold two files:
@@ -31,7 +35,7 @@ Assuming your branch is named `/woo-subscription/`, the Blueprint should referen
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/adamziel/blueprints/woo-subscriptions/blueprints/woocommerce-subscriptions/content-export.xml"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/woo-subscriptions/blueprints/woocommerce-subscriptions/content-export.xml"
 			}
 		}
 	]
@@ -71,4 +75,4 @@ Here's an example:
 
 ## Need help?
 
-If you have questions or comments, [open a new issue](https://github.com/adamziel/blueprints/issues) in this repository.
+If you have questions or comments, [open a new issue](https://github.com/wordpress/blueprints/issues) in this repository.

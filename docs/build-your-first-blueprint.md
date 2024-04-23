@@ -300,7 +300,7 @@ Encoding PHP files as `JSON` can be useful for quick testing, but it's inconveni
             "step": "installPlugin",
             "pluginZipFile": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/adamziel/blueprints/trunk/docs/assets/hello-from-the-dashboard.zip"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/docs/assets/hello-from-the-dashboard.zip"
             }
         }
     ]
@@ -318,7 +318,7 @@ You can shorten that Blueprint even more using the shorthand syntax:
     },
     "plugins": [
         "hello-dolly",
-        "https://raw.githubusercontent.com/adamziel/blueprints/trunk/docs/assets/hello-from-the-dashboard.zip"
+        "https://raw.githubusercontent.com/wordpress/blueprints/trunk/docs/assets/hello-from-the-dashboard.zip"
     ],
     "steps": [
         {
@@ -389,7 +389,7 @@ Here's what the final Blueprint looks like:
     },
     "plugins": [
         "hello-dolly",
-        "https://raw.githubusercontent.com/adamziel/blueprints/trunk/docs/assets/hello-from-the-dashboard.zip"
+        "https://raw.githubusercontent.com/wordpress/blueprints/trunk/docs/assets/hello-from-the-dashboard.zip"
     ],
     "steps": [
         {

@@ -26,7 +26,7 @@ Check out [Blueprints 101](./docs/index.md) to get started creating blueprints.
 Blueprints can help you
 
 - **Explore different setups:** try out different themes and plugins without the risk of breaking your site. It's a safe environment to see what works best for your needs.
-- **Save time**:** instead of manually setting up your site, choosing themes, and installing plugins one by one, Blueprints do all work for you.
+- **Save time**: instead of manually setting up your site, choosing themes, and installing plugins one by one, Blueprints do all of the work for you.
 - **Learn WordPress:** Blueprints are a fantastic way to play with a variety of WordPress configurations.
 
 ## Ready to jump in?

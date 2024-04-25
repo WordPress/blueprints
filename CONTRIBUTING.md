@@ -10,11 +10,7 @@ Not sure how? Check out the [Blueprints 101](./docs/index.md).
 
 To keep the submission process smooth, please follow these guidelines:
 
-<<<<<<< HEAD
 Submit [a Pull Request (PR)](https://github.com/adamziel/blueprints/pulls) with your Blueprint. Consult this page [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) if you need a refresher on the process. 
-=======
-Submit [a Pull Request (PR)](https://github.com/wordpress/blueprints/pulls) with your Blueprint.
->>>>>>> 5b14b88 (Replace "adamziel/blueprints" with "wordpress/blueprints" in the documentation)
 
 The PR should contain:
 

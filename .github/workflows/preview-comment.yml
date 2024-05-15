@@ -68,7 +68,7 @@ jobs:
 
                       For more details about these limitations and more, check out the [Limitations page](https://wordpress.github.io/wordpress-playground/limitations/) in the WordPress Playground documentation.
 
-                      [Test this pull request with WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/${ branch_name }/${ blueprintFile.filename }).
+                      [Test this pull request with WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/${ github.event.pull_request.head.repo.owner.login }/${ github.event.pull_request.head.repo.name }/${ branch_name }/${ blueprintFile.filename }).
                       `;
 
                       if ( commentInfo.comment_id ) {

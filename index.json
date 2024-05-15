@@ -50,6 +50,15 @@
       "plugins"
     ]
   },
+  "blueprints/login-as-editor/blueprint.json": {
+    "title": "Login as an editor",
+    "description": "Test WordPress functionality as an editor rather than an administrator.",
+    "author": "bacoords",
+    "categories": [
+      "User",
+      "Role"
+    ]
+  },
   "blueprints/theme-a11y-test/blueprint.json": {
     "title": "Theme Tester",
     "description": "Blueprint example to add content and plugins to explore a theme",

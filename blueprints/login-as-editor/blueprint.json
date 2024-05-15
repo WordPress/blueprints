@@ -8,14 +8,14 @@
 	},
 	"landingPage": "/wp-admin/",
 	"steps": [
-	  {
-		"step": "runPHP",
-		"code": "<?php require '/wordpress/wp-load.php'; $user_id = wp_create_user('myuser', 'mypass', 'myuser@localhost'); (new WP_User($user_id))->set_role('editor');"
-	  },
-	  {
-		"step": "login",
-		"username": "myuser",
-		"password": "mypass"
-	  }
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $user_id = wp_create_user('myuser', 'mypass', 'myuser@localhost'); (new WP_User($user_id))->set_role('editor');"
+		},
+		{
+			"step": "login",
+			"username": "myuser",
+			"password": "mypass"
+		}
 	]
-  }
+}

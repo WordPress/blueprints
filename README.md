@@ -1,7 +1,9 @@
 # WordPress Blueprints Community Gallery
 
 > [!IMPORTANT]  
-> [Skip to the Blueprints Gallery](./GALLERY.md) to explore a variety of WordPress sites. Keep reading to learn more about Blueprints and how to contribute your own.
+> Skip to the Blueprints Gallery to explore a variety of WordPress sites. Keep reading to learn more about Blueprints and how to contribute your own:
+> 
+> [<kbd> <br> Browse the Blueprints Gallery <br> </kbd>](./GALLERY.md)
 
 ## What are Blueprints?
 

@@ -59,6 +59,14 @@
       "Role"
     ]
   },
+  "blueprints/use-pretty-permalinks/blueprint.json": {
+    "title": "Pretty permalinks",
+    "description": "Set the permalink structure to use pretty permalinks.",
+    "author": "bgrgicak",
+    "categories": [
+      "Settings"
+    ]
+  },
   "blueprints/theme-a11y-test/blueprint.json": {
     "title": "Theme Tester",
     "description": "Blueprint example to add content and plugins to explore a theme",

@@ -1,0 +1,17 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Pretty permalinks",
+		"description": "Set the permalink structure to use pretty permalinks.",
+		"author": "bgrgicak",
+		"categories": ["Settings"]
+	},
+	"landingPage": "/category/uncategorized/",
+	"steps": [
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
+			"data": "<?php add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
+		}
+	]
+}

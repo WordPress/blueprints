@@ -1,4 +1,11 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Pretty permalinks",
+		"description": "Set the permalink structure to use pretty permalinks.",
+		"author": "bgrgicak",
+		"categories": ["Settings"]
+	},
 	"landingPage": "/category/uncategorized/",
 	"steps": [
 		{

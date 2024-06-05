@@ -67,6 +67,15 @@
       "Settings"
     ]
   },
+  "blueprints/stylish-press/blueprint.json": {
+    "title": "Stylish Press",
+    "description": "A Woo store with custom theme, content, and products.",
+    "author": "adamziel",
+    "categories": [
+      "Woocommerce",
+      "Site"
+    ]
+  },
   "blueprints/theme-a11y-test/blueprint.json": {
     "title": "Theme Tester",
     "description": "Blueprint example to add content and plugins to explore a theme",

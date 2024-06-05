@@ -27,7 +27,7 @@
 			"step": "setSiteOptions",
 			"options": {
 				"blogname": "Stylish Press",
-				"woocommerce_store_city": "Wrocław",
+				"woocommerce_store_city": "Wroc\u0142aw",
 				"woocommerce_store_address": "Aleje Jerozolimskie 14",
 				"woocommerce_store_postcode": "00-153",
 				"woocommerce_default_country": "Poland",
@@ -57,14 +57,14 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-products.wxr"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/woo-products.wxr"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/site-content.wxr"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/site-content.wxr"
 			}
 		},
 		{
@@ -75,25 +75,25 @@
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/style.css",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/WordPress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/style.css"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/style.css"
+			}
 		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/theme.json",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/theme.json"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/stylish-press-theme/theme.json"
+			}
 		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/functions.php",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/functions.php"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/stylish-press-theme/functions.php"
+			}
 		},
 		{
 			"step": "mkdir",
@@ -103,9 +103,9 @@
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/parts/header.html",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/parts/header.html"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/stylish-press-theme/parts/header.html"
+			}
 		},
 		{
 			"step": "activateTheme",

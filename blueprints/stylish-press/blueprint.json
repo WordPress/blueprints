@@ -29,7 +29,7 @@
 		{
 			"step": "setSiteOptions",
 			"options": {
-				"blogname": "Stylish Threads",
+				"blogname": "Stylish Press",
 				"woocommerce_store_city": "Wrocław",
 				"woocommerce_store_address": "Aleje Jerozolimskie 14",
 				"woocommerce_store_postcode": "00-153",

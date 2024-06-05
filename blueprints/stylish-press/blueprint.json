@@ -1,4 +1,11 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Stylish Press",
+		"description": "A Woo store with custom theme, content, and products.",
+		"author": "adamziel",
+		"categories": ["Woocommerce", "Site"],
+	},
 	"landingPage": "/?page_id=5",
 	"phpExtensionBundles": ["kitchen-sink"],
 	"preferredVersions": {
@@ -46,14 +53,14 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/woo-products.wxr"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/woo-products.wxr"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/site-content.wxr"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/site-content.wxr"
 			}
 		},
 		{
@@ -65,7 +72,7 @@
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/style.css",
 			"data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/style.css"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/style.css"
             }
 		},
 		{
@@ -73,7 +80,7 @@
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/theme.css",
 			"data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/theme.css"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/theme.css"
             }
 		},
 		{
@@ -81,7 +88,7 @@
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/functions.php",
 			"data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/functions.php"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/functions.php"
             }
 		},
 		{
@@ -93,7 +100,7 @@
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/part/header.html",
 			"data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/part/header.html"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/part/header.html"
             }
 		},
 		{

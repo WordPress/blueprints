@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/"
+>
+<channel>
+    <title>Stylish Press</title>
+    <link>http://www.stylishpress.wordpress.org</link>
+    <description>Fashion-forward apparel for everyone!</description>
+    <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
+    <language>en-US</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>http://www.stylishpress.wordpress.org</wp:base_site_url>
+    <wp:base_blog_url>http://www.stylishpress.wordpress.org</wp:base_blog_url>
+
+    <wp:author>
+        <wp:author_id>1</wp:author_id>
+        <wp:author_login>admin</wp:author_login>
+        <wp:author_email>admin@stylishpress.wordpress.org</wp:author_email>
+        <wp:author_display_name><![CDATA[Admin]]></wp:author_display_name>
+        <wp:author_first_name><![CDATA[John]]></wp:author_first_name>
+        <wp:author_last_name><![CDATA[Doe]]></wp:author_last_name>
+    </wp:author>
+
+    <!-- Page 1: Home - Welcome to Stylish Press -->
+    <item>
+        <title>Welcome to Stylish Press</title>
+        <link>http://www.stylishpress.wordpress.org/home</link>
+        <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
+        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=1</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <!-- wp:cover {"url":"https://wordpress.org/openverse.jpg","dimRatio":50,"overlayColor":"black"} -->
+            <div class="wp-block-cover" style="background-image:url(https://wordpress.org/openverse.jpg);background-size:cover;height:600px;">
+                <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
+                <div class="wp-block-cover__inner-container">
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}} -->
+                    <h1 class="has-text-align-center" style="font-size:48px;color:#fff">Welcome to Stylish Press</h1>
+                    <!-- /wp:heading -->
+                    <!-- wp:paragraph {"align":"center"} -->
+                    <p class="has-text-align-center" style="color:#fff">Discover the latest in fashion and style.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+            </div>
+            <!-- /wp:cover -->
+
+            <!-- wp:columns -->
+            <div class="wp-block-columns">
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
+                    <figure class="wp-block-image size-large"><img src="https://wordpress.org/openverse-image-1.jpg" alt="Trendy Outfit"/></figure>
+                    <!-- /wp:image -->
+                </div>
+                <!-- /wp:column -->
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:paragraph -->
+                    <p>At Stylish Press, we're dedicated to bringing you the latest trends in fashion. Our collection is carefully curated to ensure you look your best, whether you're hitting the streets or the runway. Explore our site to find out more about our latest collections, fashion tips, and exclusive offers.</p>
+                    <!-- /wp:paragraph -->
+                    <!-- wp:paragraph -->
+                    <p>Browse through our diverse range of apparel, featuring everything from chic tops to stylish bottoms, and accessories that complete your look. Our pieces are designed to make you feel confident and fashionable, day or night.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:spacer {"height":40} -->
+            <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <h2 style="font-size:36px;color:#ff6e40">Our Mission</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Stylish Press was founded with a firm belief that fashion should be accessible, inclusive, and always evolving. We aim to empower our customers to express themselves through bold and contemporary designs that speak volumes about their unique style.</p>
+            <!-- /wp:paragraph -->
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>1</wp:post_id>
+        <wp:post_date>2024-06-05 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2024-06-05 12:00:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>home</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_type>page</wp:post_type>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>1</wp:menu_order>
+        <wp:postmeta>
+            <wp:meta_key>_edit_last</wp:meta_key>
+            <wp:meta_value>1</wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Page 2: The Stylish Story -->
+    <item>
+        <title>The Stylish Story</title>
+        <link>http://www.stylishpress.wordpress.org/the-stylish-story</link>
+        <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
+        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=2</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <!-- wp:cover {"url":"https://wordpress.org/openverse.jpg","dimRatio":50,"overlayColor":"black"} -->
+            <div class="wp-block-cover" style="background-image:url(https://wordpress.org/openverse.jpg);background-size:cover;height:400px;">
+                <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
+                <div class="wp-block-cover__inner-container">
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}} -->
+                    <h1 class="has-text-align-center" style="font-size:48px;color:#fff">The Stylish Story</h1>
+                    <!-- /wp:heading -->
+                </div>
+            </div>
+            <!-- /wp:cover -->
+
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <h2 style="font-size:36px;color:#ff6e40">Our Beginnings</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Stylish Press was founded in 2020 by a group of fashion enthusiasts who wanted to bring a fresh perspective to the fashion industry. We began as a small online store, focusing on minimalist designs with a bold twist. Our unique approach quickly gained a loyal following, and we have been expanding our collection ever since.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:gallery {"ids":[1,2,3,4,5],"columns":3} -->
+            <figure class="wp-block-gallery columns-3 is-cropped">
+                <ul class="blocks-gallery-grid">
+                    <li class="blocks-gallery-item">
+                        <figure>
+                            <img src="https://wordpress.org/openverse-image-2.jpg" alt="Founders"/>
+                        </figure>
+                    </li>
+                    <li class="blocks-gallery-item">
+                        <figure>
+                            <img src="https://wordpress.org/openverse-image-3.jpg" alt="Fashion Show"/>
+                        </figure>
+                    </li>
+                    <li class="blocks-gallery-item">
+                        <figure>
+                            <img src="https://wordpress.org/openverse-image-4.jpg" alt="Design Process"/>
+                        </figure>
+                    </li>
+                </ul>
+            </figure>
+            <!-- /wp:gallery -->
+
+            <!-- wp:spacer {"height":40} -->
+            <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <h2 style="font-size:36px;color:#ff6e40">Our Commitment</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>We believe in sustainable fashion practices and ethical sourcing. Every piece in our collection is made with care, ensuring minimal impact on the environment. Our commitment to quality craftsmanship means that each item is built to last, keeping you stylish and sustainable.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:quote -->
+            <blockquote class="wp-block-quote">
+                <p>"Fashion is not just about looking good, it's about feeling good and doing good." - Founders of Stylish Press</p>
+            </blockquote>
+            <!-- /wp:quote -->
+
+            <!-- wp:paragraph -->
+            <p>Join us on our journey to revolutionize the fashion industry, one stylish piece at a time. Together, we can make fashion more inclusive, innovative, and inspiring.</p>
+            <!-- /wp:paragraph -->
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>2</wp:post_id>
+        <wp:post_date>2024-06-05 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2024-06-05 12:00:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>the-stylish-story</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_type>page</wp:post_type>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>2</wp:menu_order>
+        <wp:postmeta>
+            <wp:meta_key>_edit_last</wp:meta_key>
+            <wp:meta_value>1</wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Page 3: Trendsetters' Picks -->
+    <item>
+        <title>Trendsetters' Picks</title>
+        <link>http://www.stylishpress.wordpress.org/shop</link>
+        <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
+        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=3</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <!-- wp:cover {"url":"https://wordpress.org/openverse.jpg","dimRatio":50,"overlayColor":"black"} -->
+            <div class="wp-block-cover" style="background-image:url(https://wordpress.org/openverse.jpg);background-size:cover;height:400px;">
+                <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
+                <div class="wp-block-cover__inner-container">
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}} -->
+                    <h1 class="has-text-align-center" style="font-size:48px;color:#fff">Trendsetters' Picks</h1>
+                    <!-- /wp:heading -->
+                </div>
+            </div>
+            <!-- /wp:cover -->
+
+            <!-- wp:paragraph -->
+            <p>Welcome to our Trendsetters' Picks, where we showcase the latest must-have items selected by our team of fashion experts. Each piece is chosen for its unique style, quality, and ability to make a statement. Stay ahead of the trends with these exclusive selections.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:columns -->
+            <div class="wp-block-columns">
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
+                    <figure class="wp-block-image size-large"><img src="https://wordpress.org/openverse-image-5.jpg" alt="Stylish Dress"/></figure>
+                    <!-- /wp:image -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Ultra-Chic Dress</strong><br>This ultra-chic dress combines elegance with modern style, perfect for any formal occasion or casual get-together.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
+                    <figure class="wp-block-image size-large"><img src="https://wordpress.org/openverse-image-6.jpg" alt="Fashionable Jacket"/></figure>
+                    <!-- /wp:image -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Bold Statement Jacket</strong><br>Make an entrance with this bold statement jacket, perfect for layering and adding a touch of flair to any outfit.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
+                    <figure class="wp-block-image size-large"><img src="https://wordpress.org/openverse-image-7.jpg" alt="Cool Sneakers"/></figure>
+                    <!-- /wp:image -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Cool Casual Sneakers</strong><br>Step up your shoe game with these cool casual sneakers, designed for comfort and style in equal measure.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:spacer {"height":40} -->
+            <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <h2 style="font-size:36px;color:#ff6e40">Explore More</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Our Trendsetters' Picks are updated regularly to feature the hottest items in fashion. Be sure to check back often for new arrivals and exclusive pieces. Each selection is designed to help you stand out and express your unique sense of style.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:quote -->
+            <blockquote class="wp-block-quote">
+                <p>"Fashion is about dreaming and making other people dream." - Donatella Versace</p>
+            </blockquote>
+            <!-- /wp:quote -->
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>3</wp:post_id>
+        <wp:post_date>2024-06-05 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2024-06-05 12:00:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>trendsetters-picks</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_type>page</wp:post_type>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>3</wp:menu_order>
+        <wp:postmeta>
+            <wp:meta_key>_edit_last</wp:meta_key>
+            <wp:meta_value>1</wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Page 4: Style Inspirations -->
+    <item>
+        <title>Style Inspirations</title>
+        <link>http://www.stylishpress.wordpress.org/fashion-inspirations</link>
+        <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
+        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=4</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <!-- wp:cover {"url":"https://wordpress.org/openverse.jpg","dimRatio":50,"overlayColor":"black"} -->
+            <div class="wp-block-cover" style="background-image:url(https://wordpress.org/openverse.jpg);background-size:cover;height:400px;">
+                <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
+                <div class="wp-block-cover__inner-container">
+                    <!-- wp:heading {"textAlign":"center <style="font-size:48px;color:#fff">Style Inspirations</h1>
+                    <!-- /wp:heading -->
+                </div>
+            </div>
+            <!-- /wp:cover -->
+
+            <!-- wp:paragraph -->
+            <p>Welcome to our Style Inspirations page, where we gather the most captivating fashion ideas and trends from around the world. This is your go-to source for outfit ideas, styling tips, and the latest in fashion news. Dive into our curated selections and take your style to the next level.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:columns -->
+            <div class="wp-block-columns">
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
+                    <figure class="wp-block-image size-large"><img src="https://wordpress.org/openverse-image-8.jpg" alt="Boho Chic"/></figure>
+                    <!-- /wp:image -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Boho Chic</strong><br>Embrace your inner bohemian with flowy fabrics, earthy tones, and intricate patterns. This style is perfect for those who love a relaxed yet stylish look.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
+                    <figure class="wp-block-image size-large"><img src="https://wordpress.org/openverse-image-9.jpg" alt="Street Style"/></figure>
+                    <!-- /wp:image -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Street Style</strong><br>Get inspired by the raw and edgy fashion found on the streets. From oversized jackets to statement sneakers, street style is all about making a bold statement.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
+                    <figure class="wp-block-image size-large"><img src="https://wordpress.org/openverse-image-10.jpg" alt="Classic Elegance"/></figure>
+                    <!-- /wp:image -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Classic Elegance</strong><br>Timeless pieces that never go out of style. Think tailored blazers, sleek pencil skirts, and sophisticated accessories. Perfect for any formal occasion or professional setting.</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:spacer {"height":40} -->
+            <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+            <!-- /wp:spacer -->
+
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <h2 style="font-size:36px;color:#ff6e40">Latest Trends</h2>
+            <!-- /wp:heading -->
+            <!-- wp:paragraph -->
+            <p>Stay updated with the latest trends and fashion news. From runway looks to celebrity styles, we bring you the freshest ideas to keep your wardrobe current and chic.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:quote -->
+            <blockquote class="wp-block-quote">
+                <p>"Fashion is the armor to survive the reality of everyday life." - Bill Cunningham</p>
+            </blockquote>
+            <!-- /wp:quote-->
+
+            <!-- wp:paragraph -->
+            <p>Let Stylish Press be your guide to navigating the ever-changing world of fashion. Whether you're looking for inspiration for your next outfit or simply want to stay informed about the latest trends, we've got you covered.</p>
+            <!-- /wp:paragraph -->
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>4</wp:post_id>
+        <wp:post_date>2024-06-05 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2024-06-05 12:00:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>fashion-inspirations</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_type>page</wp:post_type>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>4</wp:menu_order>
+        <wp:postmeta>
+            <wp:meta_key>_edit_last</wp:meta_key>
+            <wp:meta_value>1</wp:meta_value>
+        </wp:postmeta>
+    </item>
+
+    <!-- Page 5: Connect with Us -->
+    <item>
+        <title>Connect with Us</title>
+        <link>http://www.stylishpress.wordpress.org/contact-us</link>
+        <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
+        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=5</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+            <!-- wp:cover {"url":"https://wordpress.org/openverse.jpg","dimRatio":50,"overlayColor":"black"} -->
+            <div class="wp-block-cover" style="background-image:url(https://wordpress.org/openverse.jpg);background-size:cover;height:400px;">
+                <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
+                <div class="wp-block-cover__inner-container">
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}} -->
+                    <h1 class="has-text-align-center" style="font-size:48px;color:#fff">Connect with Us</h1>
+                    <!-- /wp:heading -->
+                </div>
+            </div>
+            <!-- /wp:cover -->
+
+            <!-- wp:paragraph -->
+            <p>We love hearing from our customers! Whether you have questions about our products, need styling advice, or just want to share your own fashion journey, we're here for you. Reach out to us through our various contact points listed below, and let’s stay connected.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:columns -->
+            <div class="wp-block-columns">
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:contact-form-7/contact-form-selector {"id":1} /-->
+                </div>
+                <!-- /wp:column -->
+                <!-- wp:column -->
+                <div class="wp-block-column">
+                    <!-- wp:heading {"style":{"typography":{"fontSize":"24px"}}} -->
+                    <h3 style="font-size:24px;color:#ff6e40">Find Us Here</h3>
+                    <!-- /wp:heading -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Email:</strong> <a href="mailto:support@stylishpress.wordpress.org">support@stylishpress.wordpress.org</a></p>
+                    <!-- /wp:paragraph -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Phone:</strong> +1 (234) 567-890</p>
+                    <!-- /wp:paragraph -->
+                    <!-- wp:paragraph -->
+                    <p><strong>Address:</strong> 123 Fashion Street, Trend City, ST 56789</p>
+                    <!-- /wp:paragraph -->
+                    <!-- wp:heading {"style":{"typography":{"fontSize":"24px"}}} -->
+                    <h3 style="font-size:24px;color:#ff6e40">Follow Us</h3>
+                    <!-- /wp:heading -->
+                    <!-- wp:social-links {"className":"is-style-default"} -->
+                    <ul class="wp-block-social-links is-style-default">
+                        <li class="wp-social-link wp-social-link-facebook"><a href="https://stylishpress.wordpress.org" target="_blank" aria-label="Facebook"></a></li>
+                        <li class="wp-social-link wp-social-link-instagram"><a href="https://stylishpress.wordpress.org" target="_blank" aria-label="Instagram"></a></li>
+                        <li class="wp-social-link wp-social-link-twitter"><a href="https://stylishpress.wordpress.org" target="_blank" aria-label="Twitter"></a></li>
+                    </ul>
+                    <!-- /wp:social-links -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+
+            <!-- wp:quote -->
+            <blockquote class="wp-block-quote">
+                <p>"Fashion is instant language." - Miuccia Prada</p>
+            </blockquote>
+            <!-- /wp:quote -->
+
+            <!-- wp:paragraph -->
+            <p>Connect with Stylish Press today and become a part of our vibrant community where fashion meets passion.</p>
+            <!-- /wp:paragraph -->
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>5</wp:post_id>
+        <wp:post_date>2024-06-05 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2024-06-05 12:00:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>contact-us</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_type>page</wp:post_type>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>5</wp:menu_order>
+        <wp:postmeta>
+            <wp:meta_key>_edit_last</wp:meta_key>
+            <wp:meta_value>1</wp:meta_value>
+        </wp:postmeta>
+    </item>
+</channel>
+</rss>

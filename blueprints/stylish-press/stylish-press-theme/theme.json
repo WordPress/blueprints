@@ -1,0 +1,94 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"palette": [
+				{ "slug": "st-primary", "color": "#1E1E1E", "name": "Primary" },
+				{
+					"slug": "st-secondary",
+					"color": "#FF6E40",
+					"name": "Secondary"
+				},
+				{
+					"slug": "background",
+					"color": "#121212",
+					"name": "Background"
+				},
+				{ "slug": "text", "color": "#E0E0E0", "name": "Text" },
+				{
+					"slug": "heading-text",
+					"color": "#FFFFFF",
+					"name": "Heading Text"
+				},
+				{ "slug": "link", "color": "#FF6E40", "name": "Link" }
+			],
+			"background": "#121212",
+			"text": "#E0E0E0",
+			"link": "#FF6E40"
+		},
+		"fontFamilies": [
+			{
+				"fontFamily": "'Montserrat', sans-serif",
+				"slug": "montserrat",
+				"name": "Montserrat"
+			},
+			{
+				"fontFamily": "'Open Sans', sans-serif",
+				"slug": "open-sans",
+				"name": "Open Sans"
+			}
+		],
+		"custom": { "components": { "buttons": { "borderRadius": "4px" } } }
+	},
+	"styles": {
+		"color": {
+			"background": "#121212",
+			"text": "#E0E0E0",
+			"link": "#FF6E40"
+		},
+		"typography": { "fontFamily": "Open Sans, sans-serif" },
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontFamily": "Montserrat, sans-serif",
+					"fontWeight": "700",
+					"color": "#FFFFFF"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "Montserrat, sans-serif",
+					"fontWeight": "700",
+					"color": "#FFFFFF"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "Montserrat, sans-serif",
+					"fontWeight": "700",
+					"color": "#FFFFFF"
+				}
+			},
+			"button": {
+				"color": { "background": "#FF6E40", "text": "#FFFFFF" },
+				"border": { "radius": "4px" }
+			}
+		},
+		"blocks": {
+			"core/paragraph": {
+				"typography": {
+					"fontFamily": "Open Sans, sans-serif",
+					"fontSize": "16px"
+				}
+			},
+			"core/heading": {
+				"typography": { "fontFamily": "Montserrat, sans-serif" }
+			},
+			"core/button": {
+				"color": { "background": "#FF6E40", "text": "#FFFFFF" },
+				"border": { "radius": "4px" }
+			}
+		}
+	}
+}

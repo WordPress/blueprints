@@ -4,7 +4,7 @@
 		"title": "Stylish Press",
 		"description": "A Woo store with custom theme, content, and products.",
 		"author": "adamziel",
-		"categories": ["Woocommerce", "Site"],
+		"categories": ["Woocommerce", "Site"]
 	},
 	"landingPage": "/?page_id=5",
 	"phpExtensionBundles": ["kitchen-sink"],
@@ -53,7 +53,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/woo-products.wxr"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/woo-products.wxr"
 			}
 		},
 		{
@@ -71,25 +71,25 @@
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/style.css",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/style.css"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/style.css"
+			}
 		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/theme.css",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/theme.css"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/theme.css"
+			}
 		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/functions.php",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/functions.php"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/functions.php"
+			}
 		},
 		{
 			"step": "mkdir",
@@ -99,9 +99,9 @@
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/part/header.html",
 			"data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/part/header.html"
-            }
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/stylish-press-theme/part/header.html"
+			}
 		},
 		{
 			"step": "activateTheme",

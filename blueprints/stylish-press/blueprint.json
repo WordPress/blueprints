@@ -17,16 +17,6 @@
 	},
 	"steps": [
 		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "woocommerce"
-			},
-			"options": {
-				"activate": true
-			}
-		},
-		{
 			"step": "setSiteOptions",
 			"options": {
 				"blogname": "Stylish Press",
@@ -54,6 +44,16 @@
 			"file": {
 				"resource": "url",
                 "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-products.wxr"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			},
+			"options": {
+				"activate": true
 			}
 		},
 		{

@@ -368,5 +368,33 @@
             <wp:meta_value>1</wp:meta_value>
         </wp:postmeta>
     </item>
+
+    <!-- Page 5: Store -->
+    <item>
+        <title>Store</title>
+        <link>http://www.stylishpress.wordpress.org/contact-us</link>
+        <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
+        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=5</guid>
+        <description></description>
+        <content:encoded><![CDATA[
+        ]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>5</wp:post_id>
+        <wp:post_date>2024-06-05 12:00:00</wp:post_date>
+        <wp:post_date_gmt>2024-06-05 12:00:00</wp:post_date_gmt>
+        <wp:comment_status>closed</wp:comment_status>
+        <wp:ping_status>closed</wp:ping_status>
+        <wp:post_name>contact-us</wp:post_name>
+        <wp:status>publish</wp:status>
+        <wp:post_type>page</wp:post_type>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>5</wp:menu_order>
+        <wp:postmeta>
+            <wp:meta_key>_edit_last</wp:meta_key>
+            <wp:meta_value>1</wp:meta_value>
+        </wp:postmeta>
+    </item>
 </channel>
 </rss>

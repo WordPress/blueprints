@@ -1,0 +1,24 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Set the admin color scheme",
+		"description": "Set the admin color scheme to Modern using the updateUserMeta step.",
+		"author": "ndiego",
+		"categories": ["user meta"]
+	},
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "latest"
+	},
+	"landingPage": "/wp-admin/?welcome=0",
+	"login": true,
+	"steps": [
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"admin_color": "modern"
+			},
+			"userId": 1
+		}
+	]
+}

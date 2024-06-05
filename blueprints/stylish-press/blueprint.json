@@ -97,10 +97,10 @@
 		},
 		{
 			"step": "writeFile",
-			"path": "/wordpress/wp-content/themes/stylish-press-theme/part/header.html",
+			"path": "/wordpress/wp-content/themes/stylish-press-theme/parts/header.html",
 			"data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/part/header.html"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/parts/header.html"
             }
 		},
 		{

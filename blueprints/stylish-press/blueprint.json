@@ -6,8 +6,7 @@
 		"author": "adamziel",
 		"categories": ["Woocommerce", "Site"]
 	},
-	"landingPage": "/?page_id=5",
-	"phpExtensionBundles": ["kitchen-sink"],
+	"landingPage": "/shop",
 	"preferredVersions": {
 		"php": "8.3",
 		"wp": "latest"
@@ -16,6 +15,14 @@
 		"networking": true
 	},
 	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
+			"data": "<?php /* Use pretty permalinks */ add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
+		},
 		{
 			"step": "setSiteOptions",
 			"options": {
@@ -37,16 +44,6 @@
 			}
 		},
 		{
-			"step": "resetData"
-		},
-		{
-			"step": "importWxr",
-			"file": {
-				"resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-products.wxr"
-			}
-		},
-		{
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "wordpress.org/plugins",
@@ -54,6 +51,13 @@
 			},
 			"options": {
 				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-products.wxr"
 			}
 		},
 		{

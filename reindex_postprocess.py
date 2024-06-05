@@ -15,7 +15,10 @@ def build_json_index():
                     meta = data.get('meta', {})
                     index[path] = meta
     # Sort index alphabetically by title
-    index = dict(sorted(index.items(), key=lambda item: item[1].get('title', '')))
+    index = dict(sorted(index.items(), key=lambda item: (
+        item[1].get('title', '') != 'Stylish Press', 
+        item[1].get('title', '')
+    )))
     with open('index.json', 'w') as f:
         json.dump(index, f, indent=2)
 
@@ -37,8 +40,11 @@ def build_markdown_table():
         ['Title', 'Description', 'Author', 'Actions', ]
     ]
     for path, meta in index.items():
+        title = meta.get('title', '')
+        if title == 'Stylish Press':
+            title = "**Stylish Press**"
         blueprints_rows.append([
-            meta.get('title', ''),
+            title,
             meta.get('description', ''),
             '[@{0}](https://github.com/{0})'.format(meta.get('author', '')) if meta.get('author', '') else '',
             '• [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path) +

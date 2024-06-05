@@ -31,7 +31,7 @@
 <wp:author>
   <wp:author_id>1</wp:author_id>
   <wp:author_login>shopmanager</wp:author_login>
-  <wp:author_email>info@woocommerce.com</wp:author_email>
+  <wp:author_email>info@wordpress.org</wp:author_email>
   <wp:author_display_name><![CDATA[Shop Manager]]></wp:author_display_name>
   <wp:author_first_name><![CDATA[]]></wp:author_first_name>
   <wp:author_last_name><![CDATA[]]></wp:author_last_name>
@@ -2181,7 +2181,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_downloadable_files</wp:meta_key>
-    <wp:meta_value><![CDATA[a:2:{s:36:"356506a5-cc15-41b9-801b-9104dda1702c";a:3:{s:2:"id";s:36:"356506a5-cc15-41b9-801b-9104dda1702c";s:4:"name";s:8:"Single 1";s:4:"file";s:85:"https://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2017/08/single.jpg";}s:36:"18e70c59-59f3-43a3-8525-ce1ea0c12943";a:3:{s:2:"id";s:36:"18e70c59-59f3-43a3-8525-ce1ea0c12943";s:4:"name";s:8:"Single 2";s:4:"file";s:84:"https://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2017/08/album.jpg";}}]]></wp:meta_value>
+    <wp:meta_value><![CDATA[a:2:{s:36:"356506a5-cc15-41b9-801b-9104dda1702c";a:3:{s:2:"id";s:36:"356506a5-cc15-41b9-801b-9104dda1702c";s:4:"name";s:8:"Single 1";s:4:"file";s:85:"https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/single.jpg";}s:36:"18e70c59-59f3-43a3-8525-ce1ea0c12943";a:3:{s:2:"id";s:36:"18e70c59-59f3-43a3-8525-ce1ea0c12943";s:4:"name";s:8:"Single 2";s:4:"file";s:84:"https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/album.jpg";}}]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_product_attributes</wp:meta_key>
@@ -2345,7 +2345,7 @@
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_downloadable_files</wp:meta_key>
-    <wp:meta_value><![CDATA[a:1:{s:36:"a0fdda89-5f0e-440d-93f5-188e12c910d1";a:3:{s:2:"id";s:36:"a0fdda89-5f0e-440d-93f5-188e12c910d1";s:4:"name";s:6:"Single";s:4:"file";s:85:"https://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2017/08/single.jpg";}}]]></wp:meta_value>
+    <wp:meta_value><![CDATA[a:1:{s:36:"a0fdda89-5f0e-440d-93f5-188e12c910d1";a:3:{s:2:"id";s:36:"a0fdda89-5f0e-440d-93f5-188e12c910d1";s:4:"name";s:6:"Single";s:4:"file";s:85:"https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/single.jpg";}}]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_product_attributes</wp:meta_key>
@@ -4261,7 +4261,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=31</link>
   <pubDate>Wed, 16 Jan 2019 13:01:56 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vneck-tee-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vneck-tee-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4277,10 +4277,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vneck-tee-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vneck-tee-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vneck-tee-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vneck-tee-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4288,7 +4288,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=32</link>
   <pubDate>Wed, 16 Jan 2019 13:01:57 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vnech-tee-green-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vnech-tee-green-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4304,10 +4304,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vnech-tee-green-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vnech-tee-green-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vnech-tee-green-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vnech-tee-green-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4315,7 +4315,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=33</link>
   <pubDate>Wed, 16 Jan 2019 13:01:58 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vnech-tee-blue-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vnech-tee-blue-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4331,10 +4331,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vnech-tee-blue-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vnech-tee-blue-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/vnech-tee-blue-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/vnech-tee-blue-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4342,7 +4342,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=34</link>
   <pubDate>Wed, 16 Jan 2019 13:01:58 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4358,10 +4358,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4369,7 +4369,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=35</link>
   <pubDate>Wed, 16 Jan 2019 13:01:59 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-blue-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-blue-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4385,10 +4385,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-blue-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-blue-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-blue-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-blue-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4396,7 +4396,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=36</link>
   <pubDate>Wed, 16 Jan 2019 13:02:00 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-green-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-green-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4412,10 +4412,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-green-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-green-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-green-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-green-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4423,7 +4423,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=37</link>
   <pubDate>Wed, 16 Jan 2019 13:02:01 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-logo-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-logo-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4439,10 +4439,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-logo-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-logo-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-logo-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-logo-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4450,7 +4450,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=38</link>
   <pubDate>Wed, 16 Jan 2019 13:02:02 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/tshirt-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/tshirt-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4466,10 +4466,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/tshirt-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/tshirt-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/tshirt-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/tshirt-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4477,7 +4477,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=39</link>
   <pubDate>Wed, 16 Jan 2019 13:02:02 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/beanie-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/beanie-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4493,10 +4493,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/beanie-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/beanie-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/beanie-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/beanie-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4504,7 +4504,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=40</link>
   <pubDate>Wed, 16 Jan 2019 13:02:03 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/belt-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/belt-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4520,10 +4520,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/belt-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/belt-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/belt-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/belt-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4531,7 +4531,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=41</link>
   <pubDate>Wed, 16 Jan 2019 13:02:04 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/cap-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/cap-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4547,10 +4547,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/cap-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/cap-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/cap-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/cap-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4558,7 +4558,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=42</link>
   <pubDate>Wed, 16 Jan 2019 13:02:05 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/sunglasses-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/sunglasses-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4574,10 +4574,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/sunglasses-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/sunglasses-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/sunglasses-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/sunglasses-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4585,7 +4585,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=43</link>
   <pubDate>Wed, 16 Jan 2019 13:02:06 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-pocket-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-pocket-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4601,10 +4601,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-pocket-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-pocket-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-pocket-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-pocket-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4612,7 +4612,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=44</link>
   <pubDate>Wed, 16 Jan 2019 13:02:06 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-zipper-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-zipper-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4628,10 +4628,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-zipper-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-zipper-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/hoodie-with-zipper-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/hoodie-with-zipper-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4639,7 +4639,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=45</link>
   <pubDate>Wed, 16 Jan 2019 13:02:07 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/long-sleeve-tee-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/long-sleeve-tee-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4655,10 +4655,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/long-sleeve-tee-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/long-sleeve-tee-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/long-sleeve-tee-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/long-sleeve-tee-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4666,7 +4666,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=46</link>
   <pubDate>Wed, 16 Jan 2019 13:02:08 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/polo-2.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/polo-2.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4682,10 +4682,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/polo-2.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/polo-2.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/polo-2.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/polo-2.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4693,7 +4693,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=47</link>
   <pubDate>Wed, 16 Jan 2019 13:02:09 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/album-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/album-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4709,10 +4709,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/album-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/album-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/album-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/album-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4720,7 +4720,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=48</link>
   <pubDate>Wed, 16 Jan 2019 13:02:10 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/single-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/single-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4736,10 +4736,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/single-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/single-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/single-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/single-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4747,7 +4747,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=49</link>
   <pubDate>Wed, 16 Jan 2019 13:02:11 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/t-shirt-with-logo-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/t-shirt-with-logo-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4763,10 +4763,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/t-shirt-with-logo-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/t-shirt-with-logo-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/t-shirt-with-logo-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/t-shirt-with-logo-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4774,7 +4774,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=50</link>
   <pubDate>Wed, 16 Jan 2019 13:02:12 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/beanie-with-logo-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/beanie-with-logo-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4790,10 +4790,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/beanie-with-logo-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/beanie-with-logo-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/beanie-with-logo-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/beanie-with-logo-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4801,7 +4801,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=51</link>
   <pubDate>Wed, 16 Jan 2019 13:02:13 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/logo-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/logo-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4817,10 +4817,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/logo-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/logo-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/logo-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/logo-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>
@@ -4828,7 +4828,7 @@
   <link>https://stylish-press.wordpress.org/?attachment_id=52</link>
   <pubDate>Wed, 16 Jan 2019 13:02:13 +0000</pubDate>
   <dc:creator>shopmanager</dc:creator>
-  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/pennant-1.jpg</guid>
+  <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/pennant-1.jpg</guid>
   <description/>
   <content:encoded><![CDATA[]]></content:encoded>
   <excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -4844,10 +4844,10 @@
   <wp:post_type>attachment</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/pennant-1.jpg</wp:attachment_url>
+  <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/pennant-1.jpg</wp:attachment_url>
   <wp:postmeta>
     <wp:meta_key>_wc_attachment_source</wp:meta_key>
-    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/pennant-1.jpg]]></wp:meta_value>
+    <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/woo-product-images/pennant-1.jpg]]></wp:meta_value>
   </wp:postmeta>
 </item>
   </channel>

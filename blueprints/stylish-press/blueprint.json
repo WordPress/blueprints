@@ -53,14 +53,14 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/woo-products.wxr"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-products.wxr"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/woo-product-images/site-content.wxr"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/site-content.wxr"
 			}
 		},
 		{
@@ -72,15 +72,15 @@
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/style.css",
 			"data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/style.css"
+                "url": "https://raw.githubusercontent.com/WordPress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/style.css"
             }
 		},
 		{
 			"step": "writeFile",
-			"path": "/wordpress/wp-content/themes/stylish-press-theme/theme.css",
+			"path": "/wordpress/wp-content/themes/stylish-press-theme/theme.json",
 			"data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/theme.css"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/theme.json"
             }
 		},
 		{

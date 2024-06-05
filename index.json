@@ -76,6 +76,14 @@
       "Settings"
     ]
   },
+  "blueprints/set-admin-color-scheme/blueprint.json": {
+    "title": "Set the admin color scheme",
+    "description": "Set the admin color scheme to Modern using the updateUserMeta step.",
+    "author": "ndiego",
+    "categories": [
+      "user meta"
+    ]
+  },
   "blueprints/theme-a11y-test/blueprint.json": {
     "title": "Theme Tester",
     "description": "Blueprint example to add content and plugins to explore a theme",

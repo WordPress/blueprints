@@ -1,4 +1,13 @@
 {
+  "blueprints/stylish-press/blueprint.json": {
+    "title": "Stylish Press",
+    "description": "A Woo store with custom theme, content, and products.",
+    "author": "adamziel",
+    "categories": [
+      "Woocommerce",
+      "Site"
+    ]
+  },
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",
@@ -65,15 +74,6 @@
     "author": "bgrgicak",
     "categories": [
       "Settings"
-    ]
-  },
-  "blueprints/stylish-press/blueprint.json": {
-    "title": "Stylish Press",
-    "description": "A Woo store with custom theme, content, and products.",
-    "author": "adamziel",
-    "categories": [
-      "Woocommerce",
-      "Site"
     ]
   },
   "blueprints/theme-a11y-test/blueprint.json": {

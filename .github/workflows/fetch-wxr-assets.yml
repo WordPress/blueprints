@@ -53,10 +53,13 @@ jobs:
             echo "Normalizing $FILE"
             ASSETS_DIR=$(dirname $FILE)/wxr-assets
             mkdir -p $ASSETS_DIR
-            php /tmp/preprocess-wxr.phar --wxr=$FILE --downloads-path=$ASSETS_DIR --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR\
-              > FILE.tmp
-            if [ -s FILE.tmp ]; then 
-              mv FILE.tmp $FILE
+            php /tmp/preprocess-wxr.phar \
+              --wxr=$FILE \
+              --downloads-path=$ASSETS_DIR \
+              --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR \
+              > /tmp/wxr.swap
+            if [ -s /tmp/wxr.swap ]; then 
+              mv /tmp/wxr.swap $FILE
             else
               echo "No changes made to $FILE"
             fi

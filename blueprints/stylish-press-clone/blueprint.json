@@ -1,0 +1,18 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Stylish Press",
+		"description": "A Woo store with custom theme, content, and products.",
+		"author": "adamziel",
+		"categories": ["Woocommerce", "Site"]
+	},
+	"landingPage": "/shop",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"steps": []
+}

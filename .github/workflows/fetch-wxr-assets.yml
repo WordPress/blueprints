@@ -25,7 +25,7 @@ jobs:
       - name: Find WXR and XML files added in PR
         id: find_files
         run: |
-          FILES=$(git diff --name-only trunk | grep -E '\.(wxr|xml)$')
+          FILES=$(git diff --name-only origin/trunk | grep -E '\.(wxr|xml)$')
           if [ -z "$FILES" ]; then
             echo "No newly added WXR or XML files to check."
             exit 0

@@ -38,7 +38,7 @@ jobs:
 
       - name: Get WXR normalizer
         run: |
-          wget https://github.com/adamziel/wxr-normalize/raw/trunk/preprocess-wxr.phar
+          curl https://github.com/adamziel/wxr-normalize/raw/trunk/preprocess-wxr.phar > /tmp/preprocess-wxr.phar
 
       - name: Validate file contents
         id: validate_files
@@ -57,7 +57,7 @@ jobs:
             echo "Normalizing $FILE"
             ASSETS_DIR=$(dirname $FILE)/wxr-assets
             mkdir -p $ASSETS_DIR
-            php preprocess-wxr.phar --wxr=$FILE --downloads-path=$ASSETS_DIR --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR\
+            php /tmp/preprocess-wxr.phar --wxr=$FILE --downloads-path=$ASSETS_DIR --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR\
               > FILE.tmp
             if [ -s FILE.tmp ]; then 
               mv FILE.tmp $FILE

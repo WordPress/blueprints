@@ -28,21 +28,21 @@
     <!-- Page 1: Home - Welcome to Stylish Press -->
     <item>
         <title>Homepage</title>
-        <link>http://www.stylishpress.wordpress.org/home</link>
+        <link>https://playground.internal/home</link>
         <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
-        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=1</guid>
+        <guid isPermaLink="false">https://playground.internal/?p=1</guid>
         <description></description>
         <content:encoded><![CDATA[
-            <!-- wp:cover {"url":"https://pd.w.org/2024/06/398665facdd5a0ea5.69441088-1536x1370.jpeg","dimRatio":50,"overlayColor":"black"} -->
-            <div class="wp-block-cover" style="background-image:url(https://pd.w.org/2024/06/398665facdd5a0ea5.69441088-1536x1370.jpeg);background-size:cover;height:600px;">
+            <!-- wp:cover {"url":"=https:\/\/raw.githubusercontent.com\/wordpress\/blueprints\/normalize-wxr-assets\/blueprints\/stylish-press-clone\/wxr-assets\/398665facdd5a0ea5.69441088-1536x1370.jpeg","dimRatio":50,"overlayColor":"black"}-->
+            <div class="wp-block-cover" style="background-image:url(=https://raw.githubusercontent.com/wordpress/blueprints/normalize-wxr-assets/blueprints/stylish-press-clone/wxr-assets/398665facdd5a0ea5.69441088-1536x1370.jpeg);background-size:cover;height:600px;">
                 <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
                 <div class="wp-block-cover__inner-container">
-                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}} -->
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}}-->
                     <h1 class="has-text-align-center" style="font-size:48px;color:#fff">Welcome to Stylish Press</h1>
                     <!-- /wp:heading -->
-                    <!-- wp:paragraph {"align":"center"} -->
+                    <!-- wp:paragraph {"align":"center"}-->
                     <p class="has-text-align-center" style="color:#fff">Discover the latest in fashion and style.</p>
                     <!-- /wp:paragraph -->
                 </div>
@@ -53,8 +53,8 @@
             <div class="wp-block-columns">
                 <!-- wp:column -->
                 <div class="wp-block-column">
-                    <!-- wp:image {"id":1,"sizeSlug":"large"} -->
-                    <figure class="wp-block-image size-large"><img src="https://pd.w.org/2024/06/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Trendy Outfit"/></figure>
+                    <!-- wp:image {"id":1,"sizeSlug":"large"}-->
+                    <figure class="wp-block-image size-large"><img src="=https://raw.githubusercontent.com/wordpress/blueprints/normalize-wxr-assets/blueprints/stylish-press-clone/wxr-assets/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Trendy Outfit"/></figure>
                     <!-- /wp:image -->
                 </div>
                 <!-- /wp:column -->
@@ -71,11 +71,11 @@
             </div>
             <!-- /wp:columns -->
 
-            <!-- wp:spacer {"height":40} -->
+            <!-- wp:spacer {"height":40}-->
             <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
 
-            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}}-->
             <h2 style="font-size:36px;color:#ff6e40">Our Mission</h2>
             <!-- /wp:heading -->
             <!-- wp:paragraph -->
@@ -102,58 +102,58 @@
     <!-- Page 2: The Stylish Story -->
     <item>
         <title>The Stylish Story</title>
-        <link>http://www.stylishpress.wordpress.org/the-stylish-story</link>
+        <link>https://playground.internal/the-stylish-story</link>
         <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
-        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=2</guid>
+        <guid isPermaLink="false">https://playground.internal/?p=2</guid>
         <description></description>
         <content:encoded><![CDATA[
-            <!-- wp:cover {"url":"https://pd.w.org/2024/06/398665facdd5a0ea5.69441088-1536x1370.jpeg","dimRatio":50,"overlayColor":"black"} -->
-            <div class="wp-block-cover" style="background-image:url(https://pd.w.org/2024/06/398665facdd5a0ea5.69441088-1536x1370.jpeg);background-size:cover;height:400px;">
+            <!-- wp:cover {"url":"=https:\/\/raw.githubusercontent.com\/wordpress\/blueprints\/normalize-wxr-assets\/blueprints\/stylish-press-clone\/wxr-assets\/398665facdd5a0ea5.69441088-1536x1370.jpeg","dimRatio":50,"overlayColor":"black"}-->
+            <div class="wp-block-cover" style="background-image:url(=https://raw.githubusercontent.com/wordpress/blueprints/normalize-wxr-assets/blueprints/stylish-press-clone/wxr-assets/398665facdd5a0ea5.69441088-1536x1370.jpeg);background-size:cover;height:400px;">
                 <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
                 <div class="wp-block-cover__inner-container">
-                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}} -->
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}}-->
                     <h1 class="has-text-align-center" style="font-size:48px;color:#fff">The Stylish Story</h1>
                     <!-- /wp:heading -->
                 </div>
             </div>
             <!-- /wp:cover -->
 
-            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}}-->
             <h2 style="font-size:36px;color:#ff6e40">Our Beginnings</h2>
             <!-- /wp:heading -->
             <!-- wp:paragraph -->
             <p>Stylish Press was founded in 2020 by a group of fashion enthusiasts who wanted to bring a fresh perspective to the fashion industry. We began as a small online store, focusing on minimalist designs with a bold twist. Our unique approach quickly gained a loyal following, and we have been expanding our collection ever since.</p>
             <!-- /wp:paragraph -->
 
-            <!-- wp:gallery {"ids":[1,2,3,4,5],"columns":3} -->
+            <!-- wp:gallery {"ids":[1,2,3,4,5],"columns":3}-->
             <figure class="wp-block-gallery columns-3 is-cropped">
                 <ul class="blocks-gallery-grid">
                     <li class="blocks-gallery-item">
                         <figure>
-                            <img src="https://pd.w.org/2024/06/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Founders"/>
+                            <img src="=https://raw.githubusercontent.com/wordpress/blueprints/normalize-wxr-assets/blueprints/stylish-press-clone/wxr-assets/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Founders"/>
                         </figure>
                     </li>
                     <li class="blocks-gallery-item">
                         <figure>
-                            <img src="https://pd.w.org/2024/06/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Fashion Show"/>
+                            <img src="=https://raw.githubusercontent.com/wordpress/blueprints/normalize-wxr-assets/blueprints/stylish-press-clone/wxr-assets/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Fashion Show"/>
                         </figure>
                     </li>
                     <li class="blocks-gallery-item">
                         <figure>
-                            <img src="https://pd.w.org/2024/06/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Design Process"/>
+                            <img src="=https://raw.githubusercontent.com/wordpress/blueprints/normalize-wxr-assets/blueprints/stylish-press-clone/wxr-assets/463665c9cc5d4a598.44930142-768x576.jpeg" alt="Design Process"/>
                         </figure>
                     </li>
                 </ul>
             </figure>
             <!-- /wp:gallery -->
 
-            <!-- wp:spacer {"height":40} -->
+            <!-- wp:spacer {"height":40}-->
             <div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
             <!-- /wp:spacer -->
 
-            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}} -->
+            <!-- wp:heading {"style":{"typography":{"fontSize":"36px"}}}-->
             <h2 style="font-size:36px;color:#ff6e40">Our Commitment</h2>
             <!-- /wp:heading -->
             <!-- wp:paragraph -->
@@ -190,18 +190,18 @@
     <!-- Page 4: Connect with Us -->
     <item>
         <title>Connect</title>
-        <link>http://www.stylishpress.wordpress.org/contact-us</link>
+        <link>https://playground.internal/contact-us</link>
         <pubDate>Tue, 05 Jun 2024 12:00:00 +0000</pubDate>
         <dc:creator><![CDATA[admin]]></dc:creator>
         <category domain="category" nicename="pages"><![CDATA[Pages]]></category>
-        <guid isPermaLink="false">http://www.stylishpress.wordpress.org/?p=5</guid>
+        <guid isPermaLink="false">https://playground.internal/?p=5</guid>
         <description></description>
         <content:encoded><![CDATA[
-            <!-- wp:cover {"url":"https://pd.w.org/2024/06/398665facdd5a0ea5.69441088-1536x1370.jpeg","dimRatio":50,"overlayColor":"black"} -->
-            <div class="wp-block-cover" style="background-image:url(https://pd.w.org/2024/06/398665facdd5a0ea5.69441088-1536x1370.jpeg);background-size:cover;height:400px;">
+            <!-- wp:cover {"url":"=https:\/\/raw.githubusercontent.com\/wordpress\/blueprints\/normalize-wxr-assets\/blueprints\/stylish-press-clone\/wxr-assets\/398665facdd5a0ea5.69441088-1536x1370.jpeg","dimRatio":50,"overlayColor":"black"}-->
+            <div class="wp-block-cover" style="background-image:url(=https://raw.githubusercontent.com/wordpress/blueprints/normalize-wxr-assets/blueprints/stylish-press-clone/wxr-assets/398665facdd5a0ea5.69441088-1536x1370.jpeg);background-size:cover;height:400px;">
                 <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim"></span>
                 <div class="wp-block-cover__inner-container">
-                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}} -->
+                    <!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"fontSize":"48px"}}}-->
                     <h1 class="has-text-align-center" style="font-size:48px;color:#fff">Connect with Us</h1>
                     <!-- /wp:heading -->
                 </div>
@@ -221,7 +221,7 @@
                 <!-- /wp:column -->
                 <!-- wp:column -->
                 <div class="wp-block-column">
-                    <!-- wp:heading {"style":{"typography":{"fontSize":"24px"}}} -->
+                    <!-- wp:heading {"style":{"typography":{"fontSize":"24px"}}}-->
                     <h3 style="font-size:24px;color:#ff6e40">Find Us Here</h3>
                     <!-- /wp:heading -->
                     <!-- wp:paragraph -->
@@ -233,14 +233,14 @@
                     <!-- wp:paragraph -->
                     <p><strong>Address:</strong> 123 Fashion Street, Trend City, ST 56789</p>
                     <!-- /wp:paragraph -->
-                    <!-- wp:heading {"style":{"typography":{"fontSize":"24px"}}} -->
+                    <!-- wp:heading {"style":{"typography":{"fontSize":"24px"}}}-->
                     <h3 style="font-size:24px;color:#ff6e40">Follow Us</h3>
                     <!-- /wp:heading -->
-                    <!-- wp:social-links {"className":"is-style-default"} -->
+                    <!-- wp:social-links {"className":"is-style-default"}-->
                     <ul class="wp-block-social-links is-style-default">
-                        <li class="wp-social-link wp-social-link-facebook"><a href="https://stylishpress.wordpress.org" target="_blank" aria-label="Facebook"></a></li>
-                        <li class="wp-social-link wp-social-link-instagram"><a href="https://stylishpress.wordpress.org" target="_blank" aria-label="Instagram"></a></li>
-                        <li class="wp-social-link wp-social-link-twitter"><a href="https://stylishpress.wordpress.org" target="_blank" aria-label="Twitter"></a></li>
+                        <li class="wp-social-link wp-social-link-facebook"><a href="https://playground.internal" target="_blank" aria-label="Facebook"></a></li>
+                        <li class="wp-social-link wp-social-link-instagram"><a href="https://playground.internal" target="_blank" aria-label="Instagram"></a></li>
+                        <li class="wp-social-link wp-social-link-twitter"><a href="https://playground.internal" target="_blank" aria-label="Twitter"></a></li>
                     </ul>
                     <!-- /wp:social-links -->
                 </div>

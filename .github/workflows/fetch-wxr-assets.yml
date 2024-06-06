@@ -57,7 +57,13 @@ jobs:
             echo "Normalizing $FILE"
             ASSETS_DIR=$(dirname $FILE)/wxr-assets
             mkdir -p $ASSETS_DIR
-            php preprocess-wxr.phar --wxr=$FILE --downloads-path=$ASSETS_DIR --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR
+            php preprocess-wxr.phar --wxr=$FILE --downloads-path=$ASSETS_DIR --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR\
+              > FILE.tmp
+            if [ -s FILE.tmp ]; then 
+              mv FILE.tmp $FILE
+            else
+              echo "No changes made to $FILE"
+            fi
           done
 
       - name: Check for uncommitted changes

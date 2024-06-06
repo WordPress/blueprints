@@ -18,11 +18,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
-      - name: Checkout the base branch
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.base.ref }}
-          path: base
+      - name: Fetch base branch
+        run: |
+          git fetch origin ${{ github.event.pull_request.base.ref }}:refs/remotes/origin/${{ github.event.pull_request.base.ref }}
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:

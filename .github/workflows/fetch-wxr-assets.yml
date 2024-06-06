@@ -28,7 +28,7 @@ jobs:
 
       - name: Get WXR normalizer
         run: |
-          curl https://github.com/adamziel/wxr-normalize/raw/trunk/preprocess-wxr.phar > /tmp/preprocess-wxr.phar
+          curl https://github.com/adamziel/wxr-normalize/raw/trunk/preprocess-wxr.phar > preprocess-wxr.phar
 
       # TODO: Go by file paths listed under importWxr in blueprint.json
       - name: Validate file contents
@@ -53,7 +53,7 @@ jobs:
             echo "Normalizing $FILE"
             ASSETS_DIR=$(dirname $FILE)/wxr-assets
             mkdir -p $ASSETS_DIR
-            php /tmp/preprocess-wxr.phar \
+            php preprocess-wxr.phar \
               --wxr=$FILE \
               --downloads-path=$ASSETS_DIR \
               --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR \
@@ -69,6 +69,7 @@ jobs:
       - name: Check for uncommitted changes
         id: changes
         run: |
+            rm preprocess-wxr.phar*
             if [ -z "$(git status --porcelain)" ]; then
                 echo "No changes"
                 echo 'CHANGES=0' >> $GITHUB_OUTPUT

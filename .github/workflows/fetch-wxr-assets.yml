@@ -61,7 +61,8 @@ jobs:
             if [ -s /tmp/wxr.swap ]; then 
               mv /tmp/wxr.swap $FILE
             else
-              echo "No changes made to $FILE"
+              echo "/tmp/wxr.swap seems empty"
+              cat /tmp/wxr.swap
             fi
           done
 

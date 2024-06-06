@@ -14,5 +14,20 @@
 	"features": {
 		"networking": true
 	},
-	"steps": []
+	"steps": [
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press-clone/woo-products.wxr"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/stylish-press/blueprints/stylish-press-clone/site-content.wxr"
+			}
+		}
+	]
 }

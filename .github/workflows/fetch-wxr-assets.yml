@@ -14,9 +14,15 @@ jobs:
         uses: webfactory/ssh-agent@v0.5.3
         with:
             ssh-private-key: ${{ secrets.GH_DEPLOY_KEY }}
-      - name: Checkout
+      - name: Checkout the PR branch
         uses: actions/checkout@v3
-
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Checkout the base branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          path: base
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -30,7 +36,7 @@ jobs:
       - name: Find WXR and XML files added in PR
         id: find_files
         run: |
-          FILES=$(git diff --diff-filter=A --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E '\.(wxr|xml)$')
+          FILES=$(git diff --diff-filter=A --name-only HEAD base/${{ github.event.pull_request.base.ref }} | grep -E '\.(wxr|xml)$')
           if [ -z "$FILES" ]; then
             echo "No newly added WXR or XML files to check."
             exit 0

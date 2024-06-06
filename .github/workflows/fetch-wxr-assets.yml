@@ -21,16 +21,6 @@ jobs:
       - name: Fetch base branch
         run: |
           git fetch origin trunk
-      # TODO: Go by file paths listed under importWxr in blueprint.json
-      - name: Find WXR and XML files added in PR
-        id: find_files
-        run: |
-          FILES=$(git diff --name-only origin/trunk | grep -E '\.(wxr|xml)$')
-          if [ -z "$FILES" ]; then
-            echo "No newly added WXR or XML files to check."
-            exit 0
-          fi
-          echo "::set-output name=files::$FILES"
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -40,10 +30,16 @@ jobs:
         run: |
           curl https://github.com/adamziel/wxr-normalize/raw/trunk/preprocess-wxr.phar > /tmp/preprocess-wxr.phar
 
+      # TODO: Go by file paths listed under importWxr in blueprint.json
       - name: Validate file contents
         id: validate_files
         run: |
-          for FILE in ${{ steps.find_files.outputs.files }}; do
+          FILES=$(git diff --name-only origin/trunk | grep -E '\.(wxr|xml)$')
+          if [ -z "$FILES" ]; then
+            echo "No newly added WXR or XML files to check."
+            exit 1
+          fi
+          for FILE in $FILES; do
             CONTENT=$(cat $FILE)
             if [[ "$CONTENT" != *"<content:encoded>"* ]]; then
               echo "File $FILE does not contain '<content:encoded>', skipping."

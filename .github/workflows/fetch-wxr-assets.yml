@@ -28,7 +28,6 @@ jobs:
 
       - name: Get WXR normalizer
         run: |
-          rm preprocess-wxr.phar*
           wget https://github.com/adamziel/wxr-normalize/raw/trunk/preprocess-wxr.phar
 
       # TODO: Go by file paths listed under importWxr in blueprint.json

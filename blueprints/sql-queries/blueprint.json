@@ -28,7 +28,7 @@
             "step": "importWxr",
             "file": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/sql-queries/content.xml"
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/sql-queries/content.xml"
             }
         }
     ]

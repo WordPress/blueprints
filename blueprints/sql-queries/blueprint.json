@@ -1,18 +1,21 @@
 {
-	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"meta": {
-		"title": "Use runSql to run SQL queries",
-		"description": "Use runSql to run a SQL query that removes default posts from default theme and import a new set of posts from a WXR file",
-		"author": "juanmaguitar",
-		"categories": ["SQL", "import"]
-	},
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "meta": {
+        "title": "Use runSql to run SQL queries",
+        "description": "Use runSql to run a SQL query that removes default posts from default theme and import a new set of posts from a WXR file",
+        "author": "juanmaguitar",
+        "categories": [
+            "SQL",
+            "import"
+        ]
+    },
     "landingPage": "/?p=10",
     "steps": [
         {
-			"step": "login",
-			"username": "admin",
-			"password": "password"
-		},
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
         {
             "step": "runSql",
             "sql": {
@@ -30,6 +33,3 @@
         }
     ]
 }
-
-
-

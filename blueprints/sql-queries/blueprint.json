@@ -9,6 +9,11 @@
     "landingPage": "/?p=10",
     "steps": [
         {
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+        {
             "step": "runSql",
             "sql": {
                 "resource": "literal",

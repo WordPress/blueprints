@@ -1,0 +1,30 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Use runSql to run SQL queries",
+		"description": "Use runSql to run a SQL query that removes default posts from default theme",
+		"author": "juanmaguitar",
+		"categories": ["SQL", "import"]
+	},
+    "landingPage": "/?p=10",
+    "steps": [
+        {
+            "step": "runSql",
+            "sql": {
+                "resource": "literal",
+                "name": "schema.sql",
+                "contents": "DELETE FROM wp_posts"
+            }
+        },
+        {
+            "step": "importWxr",
+            "file": {
+                "resource": "url",
+                "url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/block-variations-demo/main/_playground/export.xml"
+            }
+        }
+    ]
+}
+
+
+

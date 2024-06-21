@@ -1,6 +1,8 @@
 # Showcase custom plugin from own server with media files and custom theme
 
-### Custom theme is customized child theme of twentytwentyfour
+➡ Custom theme is customized child theme of twentytwentyfour
+
+### Transfering content
 
 > For transferring content, WXR file is used. The same could be probably achieved with sql dump and runsql step.
 

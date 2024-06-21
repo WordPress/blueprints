@@ -16,3 +16,7 @@ If sql export-import is used, I propose similarly to use wp-cli search-replace c
 Here, the unzip step is used: zip all the folders in upload folder and in unzip step unpack them to respective path `/site-slug/wp-content/uploads`, where slug
 is the custom slug if given, e.g. for `site-slug=mysite` in URL query, path would be `/site-mysite/wp-content/uploads`. If custom slug is not given, replace site-slug
 with `wordpress`
+
+### Setting defaults
+
+`setSiteOptions` step is used to set home page and other default WP options, and `landingPage` json property is used to start on front page instead of admin. In your example, you would replace `page_on_front` option with page ID which is front page (if you have front page and not blog).

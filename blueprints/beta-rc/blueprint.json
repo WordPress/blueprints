@@ -1,4 +1,11 @@
 {
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "WordPress Beta",
+		"description": "Test the latest WordPress Beta or RC release with theme test data and debugging plugins. Only loads the Beta version during the Beta period.",
+		"author": "courtneyr-dev",
+		"categories": ["Testing"]
+	},
 	"preferredVersions": {
 		"php": "8.0",
 		"wp": "beta"

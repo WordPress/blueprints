@@ -8,7 +8,6 @@
       "Site"
     ]
   },
-  "blueprints/beta-rc/blueprint.json": {},
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",
@@ -119,6 +118,14 @@
     "categories": [
       "WooCommerce",
       "Content"
+    ]
+  },
+  "blueprints/beta-rc/blueprint.json": {
+    "title": "WordPress Beta",
+    "description": "Test the latest WordPress Beta or RC release with theme test data and debugging plugins. Only loads the Beta version during the Beta period.",
+    "author": "courtneyr-dev",
+    "categories": [
+      "Testing"
     ]
   }
 }

@@ -8,6 +8,7 @@
       "Site"
     ]
   },
+  "blueprints/beta-rc/blueprint.json": {},
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",

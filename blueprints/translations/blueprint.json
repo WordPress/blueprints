@@ -2,12 +2,12 @@
 	"meta": {
 		"title": "Install WordPress language packs",
 		"author": "adamziel",
-		"description": "Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/ – both for WordPress core and for the friends plugin.",
+		"description": "Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/ \u2013 both for WordPress core and for the friends plugin.",
 		"categories": ["core"]
 	},
 	"landingPage": "/wp-admin/?welcome=0",
 	"login": true,
-	"plugins": [ "friends" ],
+	"plugins": ["friends"],
 	"steps": [
 		{
 			"step": "setSiteLanguage",

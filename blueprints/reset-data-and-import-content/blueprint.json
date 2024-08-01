@@ -7,7 +7,6 @@
 		"categories": ["reset"]
 	},
 	"landingPage": "/wp-admin/edit.php",
-	"plugins": ["wpide"],
 	"steps": [
 		{
 			"step": "login",

@@ -1,8 +1,8 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Use runSql to run SQL queries",
-		"description": "Use runSql to run a SQL query that removes default posts from default theme and import a new set of posts from a WXR file",
+		"title": "Reset data and import content",
+		"description": "It resets the data and then imports a custom content",
 		"author": "juanmaguitar",
 		"categories": ["reset"]
 	},
@@ -20,7 +20,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/sql-queries/content.xml"
+				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/content.xml"
 			}
 		}
 	]

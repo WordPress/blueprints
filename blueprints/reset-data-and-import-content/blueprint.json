@@ -14,15 +14,23 @@
 			"password": "password"
 		},
 		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/log-content-state.php",
+			"data": {
+				"resource": "url",
+				"url": "raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/log-content-state.php"
+			}
+		},
+		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP1 */; require '/wordpress/wp-load.php'; $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post by default'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
+			"code": "<?php /* runPHP1 */; log_content_state('Last post by default');"
 		},
 		{
 			"step": "resetData"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP2 */; require '/wordpress/wp-load.php'; $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post after resetData'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
+			"code": "<?php /* runPHP2 */; log_content_state('Last post after resetData');"
 		},
 		{
 			"step": "importWxr",
@@ -33,7 +41,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP3 */; require '/wordpress/wp-load.php'; $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post after importWxr'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
+			"code": "<?php /* runPHP3 */; log_content_state('Last post after importWxr');"
 		}
 	]
 }

@@ -18,7 +18,7 @@
 			"path": "/wordpress/wp-content/mu-plugins/log-content-state.php",
 			"data": {
 				"resource": "url",
-				"url": "raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/log-content-state.php"
+				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/log-content-state.php"
 			}
 		},
 		{

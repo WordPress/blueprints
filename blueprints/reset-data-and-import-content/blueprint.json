@@ -20,14 +20,14 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP1 */ MyPlayground\\Utils\\Debug\\log_content_state('Last post by default');"
+			"code": "<?php /* runPHP1 */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post by default');"
 		},
 		{
 			"step": "resetData"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP2 */ MyPlayground\\Utils\\Debug\\log_content_state('Last post after resetData');"
+			"code": "<?php /* runPHP2 */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after resetData');"
 		},
 		{
 			"step": "importWxr",
@@ -38,7 +38,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP3 */ MyPlayground\\Utils\\Debug\\log_content_state('Last post after importWxr');"
+			"code": "<?php /* runPHP3 */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after importWxr');"
 		}
 	]
 }

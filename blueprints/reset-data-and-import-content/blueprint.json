@@ -1,12 +1,12 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Reset data and import content",
-		"description": "It resets the data and then imports a custom content",
+		"title": "Reset data",
+		"description": "It gets a WordPress installation without any content",
 		"author": "juanmaguitar",
 		"categories": ["reset"]
 	},
-	"landingPage": "/?p=10",
+	"landingPage": "/wp-admin",
 	"steps": [
 		{
 			"step": "login",
@@ -15,13 +15,6 @@
 		},
 		{
 			"step": "resetData"
-		},
-		{
-			"step": "importWxr",
-			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/content.xml"
-			}
 		}
 	]
 }

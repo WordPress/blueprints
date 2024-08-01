@@ -1,5 +1,7 @@
 <?php
 
+namespace MyPlayground\Utils\Debug;
+
 require "/wordpress/wp-load.php";
 
 function log_content_state($message)

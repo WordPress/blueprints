@@ -1,7 +1,7 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Reset data and import content",
+		"title": "Reset data and import content (with logs)",
 		"description": "It resets default data before importing custom content. It also logs the state of the content after each step.",
 		"author": "juanmaguitar",
 		"categories": ["reset", "log", "debug", "debug", "import", "content"]

@@ -1,8 +1,8 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Resetdataandimportcontent",
-		"description": "Itresetsdedaultdatabeforeimportingcustomcontent",
+		"title": "Reset data and import content",
+		"description": "It resets dedault data before importing custom content",
 		"author": "juanmaguitar",
 		"categories": ["reset"]
 	},
@@ -17,18 +17,18 @@
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/mu-plugins/log_content_state.php",
-			"data": "<?php namespace MyPlayground\\Utils\\Debug; require '/wordpress/wp-load.php'; function log_content_state($message) { $args = ['post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1]; $posts = get_posts($args); error_log($message); if (!empty($posts)) { $last_post = $posts[count($posts) - 1]; error_log(count($posts) . ' posts - Last Post title: ' . $last_post->post_title); } else { error_log('No posts found'); } }"
+			"data": "<?php  /* log_content_state() definition */  namespace MyPlayground\\Utils\\Debug; require '/wordpress/wp-load.php'; function log_content_state($message) { $args = ['post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1]; $posts = get_posts($args); error_log($message); if (!empty($posts)) { $last_post = $posts[count($posts) - 1]; error_log(count($posts) . ' posts - Last Post title: ' . $last_post->post_title); } else { error_log('No posts found'); } }"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP1 */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post by default');"
+			"code": "<?php /* Log state content by default */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post by default');"
 		},
 		{
 			"step": "resetData"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP2 */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after resetData');"
+			"code": "<?php /* Log state content after resetData */  require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after resetData');"
 		},
 		{
 			"step": "importWxr",
@@ -39,7 +39,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP3 */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after importWxr');"
+			"code": "<?php /* Log state content after importWxr */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after importWxr');"
 		}
 	]
 }

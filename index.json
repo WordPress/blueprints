@@ -76,6 +76,14 @@
       "Settings"
     ]
   },
+  "blueprints/reset-data-and-import-content/blueprint.json": {
+    "title": "Reset data",
+    "description": "It gets a WordPress installation without any content",
+    "author": "juanmaguitar",
+    "categories": [
+      "reset"
+    ]
+  },
   "blueprints/set-admin-color-scheme/blueprint.json": {
     "title": "Set the admin color scheme",
     "description": "Set the admin color scheme to Modern using the updateUserMeta step.",

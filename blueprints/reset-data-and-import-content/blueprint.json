@@ -1,0 +1,20 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Reset data",
+		"description": "It gets a WordPress installation without any content",
+		"author": "juanmaguitar",
+		"categories": ["reset"]
+	},
+	"landingPage": "/wp-admin",
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "resetData"
+		}
+	]
+}

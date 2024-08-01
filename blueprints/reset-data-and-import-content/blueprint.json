@@ -16,14 +16,14 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php';$args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('Last post by default');error_log($posts.length. ' posts - Last Post title:'.$posts[$posts.length]->post_title);"
+			"code": "<?php require '/wordpress/wp-load.php';$args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('Last post by default');error_log(count($posts). ' posts - Last Post title:'.$posts[count($posts) - 1]->post_title);"
 		},
 		{
 			"step": "resetData"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php $args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('Last post after resetData');error_log($posts.length. ' posts - Last Post title:'.$posts[$posts.length]->post_title);"
+			"code": "<?php $args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('Last post after resetData');error_log(count($posts). ' posts - Last Post title:'.$posts[count($posts) - 1]->post_title);"
 		},
 		{
 			"step": "importWxr",
@@ -34,7 +34,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php $args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('Last post after importWxr');error_log($posts.length. ' posts - Last Post title:'.$posts[$posts.length]->post_title);"
+			"code": "<?php $args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('Last post after importWxr');error_log(count($posts). ' posts - Last Post title:'.$posts[count($posts) - 1]->post_title);"
 		}
 	]
 }

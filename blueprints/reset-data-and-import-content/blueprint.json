@@ -16,14 +16,14 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post by default'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
+			"code": "<?php /* runPHP1 */; require '/wordpress/wp-load.php'; $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post by default'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
 		},
 		{
 			"step": "resetData"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post by default'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
+			"code": "<?php /* runPHP2 */; $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post by default'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
 		},
 		{
 			"step": "importWxr",
@@ -34,7 +34,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post by default'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
+			"code": "<?php /* runPHP3 */; $args = array('post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1); $posts = get_posts($args); error_log('Last post by default'); !empty($posts) ? error_log(count($posts) . ' posts - Last Post title: ' . $posts[count($posts) - 1]->post_title) : error_log('No posts found');"
 		}
 	]
 }

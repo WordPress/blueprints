@@ -38,7 +38,7 @@
   "blueprints/translations/blueprint.json": {
     "title": "Install WordPress language packs",
     "author": "adamziel",
-    "description": "Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/.",
+    "description": "Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/ \u2013 both for WordPress core and for the friends plugin.",
     "categories": [
       "core"
     ]
@@ -118,6 +118,14 @@
     "categories": [
       "WooCommerce",
       "Content"
+    ]
+  },
+  "blueprints/beta-rc/blueprint.json": {
+    "title": "WordPress Beta",
+    "description": "Test the latest WordPress Beta or RC release with theme test data and debugging plugins. Only loads the Beta version during the Beta period.",
+    "author": "courtneyr-dev",
+    "categories": [
+      "Testing"
     ]
   }
 }

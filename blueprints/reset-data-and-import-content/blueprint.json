@@ -1,12 +1,12 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Reset data",
-		"description": "It gets a WordPress installation without any content",
+		"title": "Reset data and import content",
+		"description": "It resets dedault data before importing custom content",
 		"author": "juanmaguitar",
 		"categories": ["reset"]
 	},
-	"landingPage": "/wp-admin",
+	"landingPage": "/wp-admin/edit.php",
 	"steps": [
 		{
 			"step": "login",
@@ -14,7 +14,26 @@
 			"password": "password"
 		},
 		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; $args = array( 'post_type'   => 'post', 'post_status' => 'publish', 'posts_per_page' => -1 ); $posts = get_posts( $args ); error_log( 'Post Title: ' . $post[$posts.length]->post_title );"
+		},
+		{
 			"step": "resetData"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php $args = array( 'post_type'   => 'post', 'post_status' => 'publish', 'posts_per_page' => -1 ); $posts = get_posts( $args ); error_log( 'Post Title: ' . $post[$posts.length]->post_title );"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/starter-content.xml"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php $args = array( 'post_type'   => 'post', 'post_status' => 'publish', 'posts_per_page' => -1 ); $posts = get_posts( $args ); error_log( 'Post Title: ' . $post[$posts.length]->post_title );"
 		}
 	]
 }

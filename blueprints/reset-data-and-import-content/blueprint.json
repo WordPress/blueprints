@@ -1,8 +1,8 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Reset data and import content",
-		"description": "It resets dedault data before importing custom content",
+		"title": "Resetdataandimportcontent",
+		"description": "Itresetsdedaultdatabeforeimportingcustomcontent",
 		"author": "juanmaguitar",
 		"categories": ["reset"]
 	},
@@ -16,14 +16,14 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php require '/wordpress/wp-load.php'; $args = array( 'post_type'   => 'post', 'post_status' => 'publish', 'posts_per_page' => -1 ); $posts = get_posts( $args ); error_log( 'Post Title: ' . $post[$posts.length]->post_title );"
+			"code": "<?phprequire'/wordpress/wp-load.php';$args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('PostTitle:'.$post[$posts.length]->post_title);"
 		},
 		{
 			"step": "resetData"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php $args = array( 'post_type'   => 'post', 'post_status' => 'publish', 'posts_per_page' => -1 ); $posts = get_posts( $args ); error_log( 'Post Title: ' . $post[$posts.length]->post_title );"
+			"code": "<?php$args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('PostTitle:'.$post[$posts.length]->post_title);"
 		},
 		{
 			"step": "importWxr",
@@ -34,7 +34,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php $args = array( 'post_type'   => 'post', 'post_status' => 'publish', 'posts_per_page' => -1 ); $posts = get_posts( $args ); error_log( 'Post Title: ' . $post[$posts.length]->post_title );"
+			"code": "<?php$args=array('post_type'=>'post','post_status'=>'publish','posts_per_page'=>-1);$posts=get_posts($args);error_log('PostTitle:'.$post[$posts.length]->post_title);"
 		}
 	]
 }

@@ -23,14 +23,14 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP1 */; log_content_state('Last post by default');"
+			"code": "<?php /* runPHP1 */ log_content_state('Last post by default');"
 		},
 		{
 			"step": "resetData"
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP2 */; log_content_state('Last post after resetData');"
+			"code": "<?php /* runPHP2 */ log_content_state('Last post after resetData');"
 		},
 		{
 			"step": "importWxr",
@@ -41,7 +41,7 @@
 		},
 		{
 			"step": "runPHP",
-			"code": "<?php /* runPHP3 */; log_content_state('Last post after importWxr');"
+			"code": "<?php /* runPHP3 */ log_content_state('Last post after importWxr');"
 		}
 	]
 }

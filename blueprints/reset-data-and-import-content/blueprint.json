@@ -1,12 +1,12 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Reset data",
-		"description": "It gets a WordPress installation without any content",
+		"title": "Reset data and import content (with logs)",
+		"description": "It resets default data before importing custom content. It also logs the state of the content after each step.",
 		"author": "juanmaguitar",
-		"categories": ["reset"]
+		"categories": ["reset", "log", "debug", "debug", "import", "content"]
 	},
-	"landingPage": "/wp-admin",
+	"landingPage": "/wp-admin/edit.php",
 	"steps": [
 		{
 			"step": "login",
@@ -14,7 +14,31 @@
 			"password": "password"
 		},
 		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/log_content_state.php",
+			"data": "<?php  /* log_content_state() definition */  namespace MyPlayground\\Utils\\Debug; require '/wordpress/wp-load.php'; function log_content_state($message) { $args = ['post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => -1]; $posts = get_posts($args); error_log($message); if (!empty($posts)) { $last_post = $posts[count($posts) - 1]; error_log(count($posts) . ' posts - Last Post title: ' . $last_post->post_title); } else { error_log('No posts found'); } }"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php /* Log state content by default */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post by default');"
+		},
+		{
 			"step": "resetData"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php /* Log state content after resetData */  require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after resetData');"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/starter-content.xml"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php /* Log state content after importWxr */ require '/wordpress/wp-load.php'; MyPlayground\\Utils\\Debug\\log_content_state('Last post after importWxr');"
 		}
 	]
 }

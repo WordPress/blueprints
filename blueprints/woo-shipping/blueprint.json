@@ -1,0 +1,52 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "WooCommerce Custom Flat Rate Shipping Demo",
+		"description": "A WordPress Playground instance that installs WooCommerce, adds a custom flat rate shipping method via a plugin, and imports a product to demonstrate the shipping method on the cart/checkout pages.",
+		"author": "calvinrodrigues500",
+		"categories": [
+			"woocommerce",
+			"shipping",
+			"flat_rate"
+		]
+	},
+	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogName": "Woo Shipping Method"
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/woo-product.wxr"
+			}
+		},
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/woo-shipping-method"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/woo-shipping-method/woo-shipping-method.php",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginName": "woo-shipping-method",
+			"pluginPath": "woo-shipping-method/woo-shipping-method.php"
+		}
+	]
+}

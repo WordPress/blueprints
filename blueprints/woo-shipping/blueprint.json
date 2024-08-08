@@ -2,7 +2,7 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "WooCommerce Custom Flat Rate Shipping Demo",
-		"description": "A WordPress Playground instance that installs WooCommerce, adds a custom flat rate shipping method via a plugin, and imports a product to demonstrate the shipping method on the cart/checkout pages.",
+		"description": "To create a WordPress Playground instance that installs WooCommerce, adds a custom flat rate shipping method via a plugin, imports a product to demonstrate the shipping method on the cart/checkout pages, and enables the Direct Bank Transfer payment method.",
 		"author": "calvinrodrigues500",
 		"categories": [
 			"woocommerce",

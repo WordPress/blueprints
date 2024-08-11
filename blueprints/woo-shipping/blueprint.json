@@ -1,8 +1,8 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "WooCommerce with shipping and payment methods",
-		"description": "To create a WordPress Playground instance that installs WooCommerce, adds a custom flat rate shipping method via a plugin, imports a product to demonstrate the shipping method on the cart/checkout pages, and enables the Direct Bank Transfer payment method.",
+		"title": "Minimal WooCommerce Setup with Sample Products, Shipping, and Payment Method",
+		"description": "To create a WordPress Playground instance that installs WooCommerce, adds a custom flat rate shipping method via a plugin, imports WooCommerce sample products XML to demonstrate the shipping method on the cart/checkout pages, and enables the Direct Bank Transfer payment method.",
 		"author": "calvinrodrigues500",
 		"categories": [
 			"woocommerce",
@@ -28,7 +28,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/woo-product.wxr"
+				"url": "https://github.com/woocommerce/woocommerce/blob/trunk/plugins/woocommerce/sample-data/sample_products.xml"
 			}
 		},
 		{

@@ -8,8 +8,8 @@
 	},
 	"landingPage": "/wp-admin/admin.php?page=webtoffee_product_feed_main_export",
 	"preferredVersions": {
-		"php": "7.4",
-		"wp": "6.4"
+		"php": "latest",
+		"wp": "latest"
 	},
 	"phpExtensionBundles": ["kitchen-sink"],
 	"features": {

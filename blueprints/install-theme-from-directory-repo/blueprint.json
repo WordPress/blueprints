@@ -6,7 +6,6 @@
 		"author": "juanmaguitar",
 		"categories": ["theme", "repository", "test"]
 	},
-	"landingPage": "/wp-admin/post.php",
 	"preferredVersions": {
 		"php": "8.0",
 		"wp": "beta"

@@ -1,0 +1,30 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Install theme from a GitHub repo",
+		"description": "It installs a theme from a directory inside a GitHub repo.",
+		"author": "juanmaguitar",
+		"categories": ["theme", "repository", "test"]
+	},
+	"landingPage": "/wp-admin/post.php",
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "beta"
+	},
+	"features": {
+		"networking": true
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://github-proxy.com/proxy/?repo=Automattic/themes&branch=trunk&directory=assembler"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
+}

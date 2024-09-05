@@ -7,7 +7,7 @@
 		"categories": ["theme", "repository", "test"]
 	},
 	"login": true,
-	"landingPage": "/wp-admin/",
+	"landingPage": "/wp-admin/themes.php",
 	"steps": [
 		{
 			"step": "installTheme",

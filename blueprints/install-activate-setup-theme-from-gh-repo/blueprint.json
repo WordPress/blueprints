@@ -1,0 +1,64 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Loading, activating, and configuring a theme from a GitHub repository.",
+		"description": "This is a good example of typical steps used on a theme's loading, activation and configuration",
+		"author": "richtabor",
+		"categories": ["theme"]
+	},
+	"landingPage": "/wp-admin/site-editor.php",
+	"login": true,
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
+			"data": "<?php /* Use pretty permalinks */ add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"admin_color": "modern"
+			},
+			"userId": 1
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"first_name": "Rich",
+				"last_name": "Tabor"
+			},
+			"userId": 1
+		},
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://github-proxy.com/proxy/?repo=richtabor/kanso&branch=main"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/blueprint-content.xml"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Rich Tabor",
+				"blogdescription": "Multidisciplinary maker specializing in the intersection of product, design and engineering. Making WordPress.",
+				"show_on_front": "page",
+				"page_on_front": 6,
+				"page_for_posts": 2
+			}
+		}
+	],
+	"plugins": ["todo-list-block", "markdown-comment-block"]
+}

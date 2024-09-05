@@ -2,16 +2,32 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Install theme from a GitHub repo",
-		"description": "It installs a theme from a directory inside a GitHub repo.",
+		"description": "It installs several themes from GitHub repos.",
 		"author": "juanmaguitar",
 		"categories": ["theme", "repository", "test"]
 	},
+	"login": true,
+	"landingPage": "/wp-admin/",
 	"steps": [
 		{
 			"step": "installTheme",
 			"themeZipFile": {
 				"resource": "url",
 				"url": "https://github-proxy.com/proxy/?repo=Automattic/themes&branch=trunk&directory=assembler"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://github-proxy.com/proxy/?repo=OllieWP/ollie&branch=develop"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeZipFile": {
+				"resource": "url",
+				"url": "https://github-proxy.com/proxy/?repo=WordPress/community-themes&branch=trunk&directory=tt1-blocks"
 			},
 			"options": {
 				"activate": true

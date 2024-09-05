@@ -46,7 +46,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/blueprint-content.xml"
+				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint-content.xml"
 			}
 		},
 		{

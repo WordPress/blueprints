@@ -861,7 +861,7 @@
 											<!-- /wp:paragraph -->
 											<!-- wp:image {"lightbox":{"enabled":false},"id":4751,"width":"78px","sizeSlug":"full","linkDestination":"none","align":"center","className":"no-border"} -->
 											<figure class="wp-block-image aligncenter size-full is-resized no-border">
-												<img src="https://rich.blog/wp-content/uploads/2024/02/avatars.png" alt="" class="wp-image-4751" style="width:78px"/>
+												<img src="https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/install-theme-directory-from-repo/blueprints/install-activate-setup-theme-from-gh-repo/images/avatars.png" alt="" class="wp-image-4751" style="width:78px"/>
 											</figure>
 											<!-- /wp:image -->
 										</div>

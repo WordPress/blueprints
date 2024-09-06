@@ -23,7 +23,8 @@
 		{
 			"step": "updateUserMeta",
 			"meta": {
-				"user_email": "admin@rich.blog",
+				"first_name": "Rich",
+				"last_name": "Tabor",
 				"user_url": "https://rich.blog/",
 				"admin_color": "modern"
 			},
@@ -57,5 +58,5 @@
 			}
 		}
 	],
-	"plugins": ["todo-list-block", "markdown-comment-block"]
+	"plugins": ["todo-list-block", "markdown-comment-block", "sql-buddy"]
 }

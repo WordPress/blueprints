@@ -23,15 +23,9 @@
 		{
 			"step": "updateUserMeta",
 			"meta": {
+				"user_email": "admin@rich.blog",
+				"user_url": "https://rich.blog/",
 				"admin_color": "modern"
-			},
-			"userId": 1
-		},
-		{
-			"step": "updateUserMeta",
-			"meta": {
-				"first_name": "Rich",
-				"last_name": "Tabor"
 			},
 			"userId": 1
 		},

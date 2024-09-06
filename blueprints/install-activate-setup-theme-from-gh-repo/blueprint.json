@@ -25,7 +25,6 @@
 			"meta": {
 				"first_name": "Rich",
 				"last_name": "Tabor",
-				"user_url": "https://rich.blog/",
 				"admin_color": "modern"
 			},
 			"userId": 1
@@ -58,5 +57,5 @@
 			}
 		}
 	],
-	"plugins": ["todo-list-block", "markdown-comment-block", "sql-buddy"]
+	"plugins": ["todo-list-block", "markdown-comment-block"]
 }

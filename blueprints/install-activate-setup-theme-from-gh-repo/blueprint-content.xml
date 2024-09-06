@@ -771,7 +771,7 @@
 							<div class="wp-block-group is-style-section-3" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
 								<!-- wp:paragraph {"className":"no-underline","fontSize":"small"} -->
 								<p class="no-underline has-small-font-size">
-									<a href="https://rich.blog/shaping-wordpress">Shaping WordPress</a>
+									<a href="/shaping-wordpress">Shaping WordPress</a>
 								</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph {"className":"is-style-text-subtitle","style":{"typography":{"fontSize":"13px"}}} -->
@@ -783,7 +783,7 @@
 							<div class="wp-block-group is-style-section-3" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
 								<!-- wp:paragraph {"className":"no-underline","fontSize":"small"} -->
 								<p class="no-underline has-small-font-size">
-									<a href="https://rich.blog">Rich's Blog</a>
+									<a href="">Rich's Blog</a>
 								</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph {"className":"is-style-text-subtitle","style":{"typography":{"fontSize":"13px"}}} -->
@@ -807,7 +807,7 @@
 							<div class="wp-block-group is-style-section-3" style="padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)">
 								<!-- wp:paragraph {"className":"no-underline","fontSize":"small"} -->
 								<p class="no-underline has-small-font-size">
-									<a href="https://rich.blog/shaping-wordpress">Shaping WordPress</a>
+									<a href="/shaping-wordpress">Shaping WordPress</a>
 								</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph {"className":"is-style-text-subtitle","style":{"typography":{"fontSize":"13px"}}} -->
@@ -841,7 +841,7 @@
 						<!-- wp:group {"metadata":{"name":"Subscribe Form Embed"},"layout":{"type":"constrained","contentSize":"300px"}} -->
 						<div class="wp-block-group">
 							<!-- wp:html -->
-							<form action="https://richtabor.us6.list-manage.com/subscribe/post?u=e7267bfd563b8f29ef95ba846&amp;id=3ad25ea4f0&amp;f_id=005231e3f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe" target="_self" novalidate="">
+							<form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate subscribe" target="_self" novalidate="">
 								<input placeholder="Enter your email" type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="">
 									<div hidden="">
 										<input type="hidden" name="tags" value="3465146,3465838">
@@ -954,7 +954,7 @@
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->
 								<p>Designing and building experiences is what I do. I think big. I obsess over&nbsp;
-									<a href="https://rich.blog/tiny-details">tiny details</a>. I&nbsp;breathe curiosity.
+									<a href="/tiny-details">tiny details</a>. I&nbsp;breathe curiosity.
 								</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->
@@ -998,186 +998,6 @@
 								<![CDATA[]]>
 							</wp:post_password>
 							<wp:is_sticky>0</wp:is_sticky>
-						</item>
-						<item>
-							<title>
-								<![CDATA[abeezee;italic;400;100%;U+0-10FFFF]]>
-							</title>
-							<link>/abeezeeitalic400100u0-10ffff/</link>
-							<pubDate>Wed, 01 May 2024 11:34:57 +0000</pubDate>
-							<dc:creator>
-								<![CDATA[admin]]>
-							</dc:creator>
-							<guid isPermaLink="false">/?p=1137</guid>
-							<description></description>
-							<content:encoded>
-								<![CDATA[{"src":"https:\/\/rich.test\/wp-content\/uploads\/fonts\/esDT31xSG-6AGleN2tCkkJUCGpG-GQ.woff2","fontWeight":"400","fontStyle":"italic","fontFamily":"ABeeZee","preview":"https:\/\/s.w.org\/images\/fonts\/17.7\/previews\/abeezee\/abeezee-400-italic.svg"}]]>
-							</content:encoded>
-							<excerpt:encoded>
-								<![CDATA[]]>
-							</excerpt:encoded>
-							<wp:post_id>1137</wp:post_id>
-							<wp:post_date>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_date>
-							<wp:post_date_gmt>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_date_gmt>
-							<wp:post_modified>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_modified>
-							<wp:post_modified_gmt>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_modified_gmt>
-							<wp:comment_status>
-								<![CDATA[closed]]>
-							</wp:comment_status>
-							<wp:ping_status>
-								<![CDATA[closed]]>
-							</wp:ping_status>
-							<wp:post_name>
-								<![CDATA[abeezeeitalic400100u0-10ffff]]>
-							</wp:post_name>
-							<wp:status>
-								<![CDATA[publish]]>
-							</wp:status>
-							<wp:post_parent>1136</wp:post_parent>
-							<wp:menu_order>0</wp:menu_order>
-							<wp:post_type>
-								<![CDATA[wp_font_face]]>
-							</wp:post_type>
-							<wp:post_password>
-								<![CDATA[]]>
-							</wp:post_password>
-							<wp:is_sticky>0</wp:is_sticky>
-							<wp:postmeta>
-								<wp:meta_key>
-									<![CDATA[_wp_font_face_file]]>
-								</wp:meta_key>
-								<wp:meta_value>
-									<![CDATA[esDT31xSG-6AGleN2tCkkJUCGpG-GQ.woff2]]>
-								</wp:meta_value>
-							</wp:postmeta>
-						</item>
-						<item>
-							<title>
-								<![CDATA[abeezee;normal;400;100%;U+0-10FFFF]]>
-							</title>
-							<link>/abeezeenormal400100u0-10ffff/</link>
-							<pubDate>Wed, 01 May 2024 11:34:57 +0000</pubDate>
-							<dc:creator>
-								<![CDATA[admin]]>
-							</dc:creator>
-							<guid isPermaLink="false">/?p=1138</guid>
-							<description></description>
-							<content:encoded>
-								<![CDATA[{"src":"https:\/\/rich.test\/wp-content\/uploads\/fonts\/esDR31xSG-6AGleN6teukbcHCpE.woff2","fontWeight":"400","fontStyle":"normal","fontFamily":"ABeeZee","preview":"https:\/\/s.w.org\/images\/fonts\/17.7\/previews\/abeezee\/abeezee-400-normal.svg"}]]>
-							</content:encoded>
-							<excerpt:encoded>
-								<![CDATA[]]>
-							</excerpt:encoded>
-							<wp:post_id>1138</wp:post_id>
-							<wp:post_date>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_date>
-							<wp:post_date_gmt>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_date_gmt>
-							<wp:post_modified>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_modified>
-							<wp:post_modified_gmt>
-								<![CDATA[2024-05-01 11:34:57]]>
-							</wp:post_modified_gmt>
-							<wp:comment_status>
-								<![CDATA[closed]]>
-							</wp:comment_status>
-							<wp:ping_status>
-								<![CDATA[closed]]>
-							</wp:ping_status>
-							<wp:post_name>
-								<![CDATA[abeezeenormal400100u0-10ffff]]>
-							</wp:post_name>
-							<wp:status>
-								<![CDATA[publish]]>
-							</wp:status>
-							<wp:post_parent>1136</wp:post_parent>
-							<wp:menu_order>0</wp:menu_order>
-							<wp:post_type>
-								<![CDATA[wp_font_face]]>
-							</wp:post_type>
-							<wp:post_password>
-								<![CDATA[]]>
-							</wp:post_password>
-							<wp:is_sticky>0</wp:is_sticky>
-							<wp:postmeta>
-								<wp:meta_key>
-									<![CDATA[_wp_font_face_file]]>
-								</wp:meta_key>
-								<wp:meta_value>
-									<![CDATA[esDR31xSG-6AGleN6teukbcHCpE.woff2]]>
-								</wp:meta_value>
-							</wp:postmeta>
-						</item>
-						<item>
-							<title>
-								<![CDATA[adlam display;normal;400;100%;U+0-10FFFF]]>
-							</title>
-							<link>/adlam-displaynormal400100u0-10ffff/</link>
-							<pubDate>Wed, 26 Jun 2024 12:26:29 +0000</pubDate>
-							<dc:creator>
-								<![CDATA[admin]]>
-							</dc:creator>
-							<guid isPermaLink="false">/?p=1668</guid>
-							<description></description>
-							<content:encoded>
-								<![CDATA[{"src":"https:\/\/rich.test\/wp-content\/uploads\/fonts\/KFOhCnGXkPOLlhx6jD8_b1ZECsTYkYBPY3o.woff2","fontWeight":"400","fontStyle":"normal","fontFamily":"\"ADLaM Display\"","preview":"https:\/\/s.w.org\/images\/fonts\/17.7\/previews\/adlam-display\/adlam-display-400-normal.svg"}]]>
-							</content:encoded>
-							<excerpt:encoded>
-								<![CDATA[]]>
-							</excerpt:encoded>
-							<wp:post_id>1668</wp:post_id>
-							<wp:post_date>
-								<![CDATA[2024-06-26 12:26:29]]>
-							</wp:post_date>
-							<wp:post_date_gmt>
-								<![CDATA[2024-06-26 12:26:29]]>
-							</wp:post_date_gmt>
-							<wp:post_modified>
-								<![CDATA[2024-06-26 12:26:29]]>
-							</wp:post_modified>
-							<wp:post_modified_gmt>
-								<![CDATA[2024-06-26 12:26:29]]>
-							</wp:post_modified_gmt>
-							<wp:comment_status>
-								<![CDATA[closed]]>
-							</wp:comment_status>
-							<wp:ping_status>
-								<![CDATA[closed]]>
-							</wp:ping_status>
-							<wp:post_name>
-								<![CDATA[adlam-displaynormal400100u0-10ffff]]>
-							</wp:post_name>
-							<wp:status>
-								<![CDATA[publish]]>
-							</wp:status>
-							<wp:post_parent>1667</wp:post_parent>
-							<wp:menu_order>0</wp:menu_order>
-							<wp:post_type>
-								<![CDATA[wp_font_face]]>
-							</wp:post_type>
-							<wp:post_password>
-								<![CDATA[]]>
-							</wp:post_password>
-							<wp:is_sticky>0</wp:is_sticky>
-							<wp:postmeta>
-								<wp:meta_key>
-									<![CDATA[_wp_font_face_file]]>
-								</wp:meta_key>
-								<wp:meta_value>
-									<![CDATA[KFOhCnGXkPOLlhx6jD8_b1ZECsTYkYBPY3o.woff2]]>
-								</wp:meta_value>
-							</wp:postmeta>
 						</item>
 						<item>
 							<title>
@@ -1449,7 +1269,7 @@
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->
 								<p>In the realm of&nbsp;
-									<a href="https://rich.blog/topic/design/">design</a>&nbsp;and product, these tiny details are essential catalysts for curating thoughtful experiences.&nbsp;
+									<a href="/topic/design/">design</a>&nbsp;and product, these tiny details are essential catalysts for curating thoughtful experiences.&nbsp;
 								</p>
 								<!-- /wp:paragraph -->
 								<!-- wp:paragraph -->

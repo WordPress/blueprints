@@ -59,6 +59,14 @@
       "plugins"
     ]
   },
+  "blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json": {
+    "title": "Loading, activating, and configuring a theme from a GitHub repository.",
+    "description": "This is a good example of typical steps used on a theme's loading, activation and configuration",
+    "author": "richtabor",
+    "categories": [
+      "theme"
+    ]
+  },
   "blueprints/login-as-editor/blueprint.json": {
     "title": "Login as an editor",
     "description": "Test WordPress functionality as an editor rather than an administrator.",

@@ -1,13 +1,13 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Pretty permalinks",
-		"description": "Set the permalink structure to use pretty permalinks.",
-		"author": "bgrgicak",
+		"title": "Redirect upload requests",
+		"description": "Redirect any requests to files within the uploads directory to an external host. This is useful when you have a lot of image attachments in your playground but don’t want to include them all in the blueprint.",
+		"author": "ivanblagdan",
 		"categories": ["Settings"]
 	},
 	"landingPage": "/category/uncategorized/",
-	"constsnats": {
+	"constants": {
 		"PLAYGROUND_REDIRECT_UPLOADS_URL": "https://production.example.com"
 	},
 	"steps": [

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Redirect upload requests",
+		"title": "Serve media files from another host",
 		"description": "Redirect any requests to files within the uploads directory to an external host. This is useful when you have a lot of image attachments in your playground but don’t want to include them all in the blueprint.",
 		"author": "ivanblagdan",
 		"categories": ["Settings"]

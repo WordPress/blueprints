@@ -97,6 +97,14 @@
       "content"
     ]
   },
+  "blueprints/redirect-upload-requests/blueprint.json": {
+    "title": "Serve media files from another host",
+    "description": "Redirect any requests to files within the uploads directory to an external host. This is useful when you have a lot of image attachments in your playground but don\u2019t want to include them all in the blueprint.",
+    "author": "ivanblagdan",
+    "categories": [
+      "Settings"
+    ]
+  },
   "blueprints/set-admin-color-scheme/blueprint.json": {
     "title": "Set the admin color scheme",
     "description": "Set the admin color scheme to Modern using the updateUserMeta step.",

@@ -1,0 +1,20 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Serve media files from another host",
+		"description": "Redirect any requests to files within the uploads directory to an external host. This is useful when you have a lot of image attachments in your playground but don’t want to include them all in the blueprint.",
+		"author": "ivanblagdan",
+		"categories": ["Settings"]
+	},
+	"landingPage": "/category/uncategorized/",
+	"constants": {
+		"PLAYGROUND_REDIRECT_UPLOADS_URL": "https://production.example.com"
+	},
+	"steps": [
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/redirect-uploads.php",
+			"data": "<?php add_action('init', function() { if (!defined('PLAYGROUND_REDIRECT_UPLOADS_URL')) exit; $request_uri = $_SERVER['REQUEST_URI']; $uploads_position = strpos($request_uri, '/wp-content/uploads'); if ($uploads_position !== false) { $uploads_path = substr($request_uri, $uploads_position); $redirect_url = PLAYGROUND_REDIRECT_UPLOADS_URL . $uploads_path; wp_redirect($redirect_url, 302); exit; } });"
+		}
+	]
+}

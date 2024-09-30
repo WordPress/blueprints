@@ -1,0 +1,90 @@
+name: Get WXR assets
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  validate-and-normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup SSH Keys
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+            ssh-private-key: ${{ secrets.GH_DEPLOY_KEY }}
+      - name: Checkout the PR branch
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+      - name: Fetch base branch
+        run: |
+          git fetch origin trunk
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'  # or any other version you need
+
+      - name: Get WXR normalizer
+        run: |
+          wget https://github.com/adamziel/wxr-normalize/raw/trunk/preprocess-wxr.phar
+
+      # TODO: Go by file paths listed under importWxr in blueprint.json
+      - name: Validate file contents
+        id: validate_files
+        run: |
+          FILES=$(git diff --name-only origin/trunk | grep -E '\.(wxr|xml)$')
+          if [ -z "$FILES" ]; then
+            echo "No newly added WXR or XML files to check."
+            exit 1
+          fi
+          for FILE in $FILES; do
+            CONTENT=$(cat $FILE)
+            if [[ "$CONTENT" != *"<content:encoded>"* ]]; then
+              echo "File $FILE does not contain '<content:encoded>', skipping."
+              continue
+            fi
+            if [[ "$CONTENT" == *"githubusercontent.com"* ]]; then
+              echo "File $FILE contains 'githubusercontent.com', skipping."
+              continue
+            fi
+
+            echo "Normalizing $FILE"
+            ASSETS_DIR=$(dirname $FILE)/wxr-assets
+            mkdir -p $ASSETS_DIR
+            php preprocess-wxr.phar \
+              --wxr=$FILE \
+              --downloads-path=$ASSETS_DIR \
+              --new-assets-prefix=https://raw.githubusercontent.com/wordpress/blueprints/${{ github.head_ref }}/$ASSETS_DIR \
+              > /tmp/wxr.swap
+            if [ -s /tmp/wxr.swap ]; then 
+              mv /tmp/wxr.swap $FILE
+            else
+              echo "/tmp/wxr.swap seems empty"
+              cat /tmp/wxr.swap
+            fi
+          done
+
+      - name: Check for uncommitted changes
+        id: changes
+        run: |
+            rm preprocess-wxr.phar*
+            if [ -z "$(git status --porcelain)" ]; then
+                echo "No changes"
+                echo 'CHANGES=0' >> $GITHUB_OUTPUT
+            else
+                echo "Changes detected"
+                echo 'CHANGES=1' >> $GITHUB_OUTPUT
+            fi
+      - name: Push rebuilt WordPress to GitHub
+        if: steps.changes.outputs.CHANGES == '1'
+        run: |
+            git config --global user.name "deployment_bot"
+            git config --global user.email "deployment_bot@users.noreply.github.com"
+            git add -A
+            git commit -a -m "Reindex and reformat Blueprints"
+            git pull --rebase
+            if [ $? -eq 0 ]; then
+              git push git@github.com:${{ github.repository }}.git --follow-tags
+            fi;

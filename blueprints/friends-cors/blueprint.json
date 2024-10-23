@@ -1,5 +1,5 @@
 {
-  "landingPage": "/friends/",
+  "landingPage": "/friends/?refresh&welcome",
   "features": {
     "networking": true
   },
@@ -31,7 +31,7 @@
     },
     {
       "step": "runPHP",
-      "code": "<?php require_once 'wordpress/wp-load.php';\nif ( class_exists('Friends\\Import')) {\nFriends\\Import::opml(\"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><opml version=\\\"2.0\\\">\n<head>\n<title>Subscriptions</title>\n</head>\n<body>\n<outline text=\\\"Subscriptions\\\" title=\\\"Subscriptions\\\">\n<outline type=\\\"rss\\\" text=\\\"Alex Kirk\\\" title=\\\"Alex Kirk\\\" xmlUrl=\\\"https://alex.kirk.at\\\" htmlUrl=\\\"https://alex.kirk.at\\\" />\n<outline type=\\\"rss\\\" text=\\\"Adam Zieliński\\\" title=\\\"Adam Zieliński\\\" xmlUrl=\\\"https://adamadam.blog\\\" htmlUrl=\\\"https://adamadam.blog\\\" />\n</outline>\n</body>\n</opml>\");\ndo_action( 'cron_friends_refresh_feeds' );\n}"
+      "code": "<?php require_once 'wordpress/wp-load.php';\nif ( class_exists('Friends\\Import')) {\nFriends\\Import::opml(\"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><opml version=\\\"2.0\\\">\n<head>\n<title>Subscriptions</title>\n</head>\n<body>\n<outline text=\\\"Subscriptions\\\" title=\\\"Subscriptions\\\">\n<outline type=\\\"rss\\\" text=\\\"Alex Kirk\\\" title=\\\"Alex Kirk\\\" xmlUrl=\\\"https://alex.kirk.at\\\" htmlUrl=\\\"https://alex.kirk.at\\\" />\n<outline type=\\\"rss\\\" text=\\\"Adam Zieliński\\\" title=\\\"Adam Zieliński\\\" xmlUrl=\\\"https://adamadam.blog\\\" htmlUrl=\\\"https://adamadam.blog\\\" />\n</outline>\n</body>\n</opml>\");\n}"
     },
     {
       "step": "installPlugin",

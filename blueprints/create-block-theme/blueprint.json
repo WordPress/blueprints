@@ -1,0 +1,17 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Create Block Theme ",
+    "description": "Blueprint to install Create Block Theme and start editing right away",
+    "author": "psykro",
+    "categories": ["Editor", "theme"]
+  },
+  "plugins": [
+    "create-block-theme"
+  ],
+  "features": {
+    "networking": true
+  },
+  "login": true,
+  "landingPage": "/wp-admin/site-editor.php"
+}

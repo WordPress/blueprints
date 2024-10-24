@@ -1,0 +1,54 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Feed Reader with the Friends Plugin",
+    "description": "By using the Friends plugin and a CORS proxy, you can read feeds from the web in Playground, and even via ActivityPub",
+    "author": "akirk",
+    "categories": ["rss", "social web"]
+  },
+  "landingPage": "/friends/?refresh&welcome",
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "mkdir",
+      "path": "wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/mu-plugins/addFilter-0.php",
+      "data": "<?php add_action( 'requests-requests.before_request', function( &$url ) {\n$url = 'https://playground.wordpress.net/cors-proxy.php?' . $url;\n} );"
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "permalink_structure": "/%postname%/"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "friends"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once 'wordpress/wp-load.php';\nif ( class_exists('Friends\\Import')) {\nFriends\\Import::opml(\"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><opml version=\\\"2.0\\\">\n<head>\n<title>Subscriptions</title>\n</head>\n<body>\n<outline text=\\\"Subscriptions\\\" title=\\\"Subscriptions\\\">\n<outline type=\\\"rss\\\" text=\\\"Alex Kirk\\\" title=\\\"Alex Kirk\\\" xmlUrl=\\\"https://alex.kirk.at/feed/\\\" htmlUrl=\\\"https://alex.kirk.at/feed/\\\" />\n<outline type=\\\"rss\\\" text=\\\"Adam Zieliński\\\" title=\\\"Adam Zieliński\\\" xmlUrl=\\\"https://adamadam.blog/feed/\\\" htmlUrl=\\\"https://adamadam.blog/feed/\\\" />\n</outline>\n</body>\n</opml>\");\n}"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "activitypub"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}

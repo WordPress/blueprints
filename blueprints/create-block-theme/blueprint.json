@@ -1,9 +1,9 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Create Block Theme ",
+    "title": "Create Block Theme",
     "description": "Blueprint to install Create Block Theme and start editing right away",
-    "author": "psykro",
+    "author": "jonathanbossenger",
     "categories": ["Editor", "theme"]
   },
   "plugins": [

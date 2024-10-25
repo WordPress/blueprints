@@ -8,6 +8,15 @@
       "Site"
     ]
   },
+  "blueprints/create-block-theme/blueprint.json": {
+    "title": "Create Block Theme",
+    "description": "Blueprint to install Create Block Theme and start editing right away",
+    "author": "jonathanbossenger",
+    "categories": [
+      "Editor",
+      "theme"
+    ]
+  },
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",

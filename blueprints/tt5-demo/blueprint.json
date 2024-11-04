@@ -2,7 +2,7 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Demo of Twenty-Twenty-Five",
+		"title": "Demo of Twenty-Twenty-Five theme",
 		"description": "Blueprint with demo content for the Twenty-Twenty-Five default theme",
 		"author": "bph",
 		"categories": ["Themes", "default"]

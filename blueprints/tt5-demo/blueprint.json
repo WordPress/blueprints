@@ -12,7 +12,8 @@
     "features": {
       "networking": true
     },
-    "preferredVersion": {
+    "preferredVersions": {
+        "php": "8.0",
         "wp": "beta"
     },
     "steps": [

@@ -37,7 +37,7 @@
         "step": "importWxr",
         "file": {
             "resource": "url",
-            "url": "https://raw.githubusercontent.com/wordpress/blueprints/tt5-demo/blueprints/tt5-demo/stories.WordPress.2024-10-17-demo.xml"
+            "url": "https://raw.githubusercontent.com/wordpress/blueprints/bph/tt5-demo/blueprints/tt5-demo/stories.WordPress.2024-10-17-demo.xml"
         }
     }
     ]

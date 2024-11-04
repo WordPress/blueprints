@@ -4,7 +4,7 @@
       "networking": true
     },
     "preferredVersion": {
-        "wp":"beta"
+        "wp": "beta"
     },
     "steps": [
       {
@@ -21,8 +21,6 @@
         },
         "userId": 1
       },
-      
-      
       {
         "step": "writeFile",
         "path": "/wordpress/wp-content/mu-plugins/rewrite.php",

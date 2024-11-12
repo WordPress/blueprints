@@ -10,6 +10,7 @@
 	"features": {
 		"networking": true
 	},
+    "plugins": ["woocommerce"],
     "steps": [
         {
             "step": "installTheme",
@@ -22,5 +23,6 @@
             "importStarterContent": true
             }
         }
+        
     ]
   }

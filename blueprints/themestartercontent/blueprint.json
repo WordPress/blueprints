@@ -1,12 +1,12 @@
 {
     "$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "import Theme Starter Content",
+		"title": "Import Theme Starter Content",
 		"author": "bph",
-		"description": "Blueprint example to install theme with starter content",
+		"description": "Blueprint to install Storefront with starter content, WooCommerce, ready to add first product.",
 		"categories": ["Themes", "Starter Content"]
 	},
-    "landingPage": "/",
+    "landingPage": "/wp-admin/edit.php?post_type=product",
 	"features": {
 		"networking": true
 	},

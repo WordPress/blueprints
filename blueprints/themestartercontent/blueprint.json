@@ -1,0 +1,26 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "import Theme Starter Content",
+		"author": "bph",
+		"description": "Blueprint example to install theme with starter content",
+		"categories": ["Themes", "Starter Content"]
+	},
+    "landingPage": "/",
+	"features": {
+		"networking": true
+	},
+    "steps": [
+        {
+            "step": "installTheme",
+            "themeData": {
+                "resource": "wordpress.org/themes",
+                "slug": "storefront"
+        },
+        "options": {
+            "activate": true,
+            "importStarterContent": true
+            }
+        }
+    ]
+  }

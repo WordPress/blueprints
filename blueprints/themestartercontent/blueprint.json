@@ -3,7 +3,7 @@
 	"meta": {
 		"title": "Import Theme Starter Content",
 		"author": "bph",
-		"description": "Blueprint to install a theme with starter content, (here: Twenty-twenty-one)",
+		"description": "Blueprint to install a theme with starter content, (here: Twenty-Twenty-One)",
 		"categories": ["Themes", "Starter Content"]
 	},
     "landingPage": "/",

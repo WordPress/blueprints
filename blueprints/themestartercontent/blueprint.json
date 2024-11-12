@@ -3,7 +3,7 @@
 	"meta": {
 		"title": "Import Theme Starter Content",
 		"author": "bph",
-		"description": "Blueprint to install a theme with starter content, (here: Crio)",
+		"description": "Blueprint to install a theme with starter content, (here: Twenty-twenty-one)",
 		"categories": ["Themes", "Starter Content"]
 	},
     "landingPage": "/",
@@ -15,7 +15,7 @@
             "step": "installTheme",
             "themeData": {
                 "resource": "wordpress.org/themes",
-                "slug": "crio"
+                "slug": "twentytwentyone"
             },
             "options": {
                 "activate": true,

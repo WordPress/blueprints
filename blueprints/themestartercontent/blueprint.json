@@ -17,11 +17,11 @@
             "themeData": {
                 "resource": "wordpress.org/themes",
                 "slug": "storefront"
-        },
-        "options": {
-            "activate": true,
-            "importStarterContent": true
-            }
+            },
+            "options": {
+                "activate": true,
+                "importStarterContent": true
+                }
         }
         
     ]

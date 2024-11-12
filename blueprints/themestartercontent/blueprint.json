@@ -3,10 +3,10 @@
 	"meta": {
 		"title": "Import Theme Starter Content",
 		"author": "bph",
-		"description": "Blueprint to install Storefront with starter content, WooCommerce, ready to add first product.",
+		"description": "Blueprint to install a theme with starter content, (here: Crio)",
 		"categories": ["Themes", "Starter Content"]
 	},
-    "landingPage": "/wp-admin/edit.php?post_type=product",
+    "landingPage": "/",
 	"features": {
 		"networking": true
 	},
@@ -15,7 +15,7 @@
             "step": "installTheme",
             "themeData": {
                 "resource": "wordpress.org/themes",
-                "slug": "storefront"
+                "slug": "crio"
             },
             "options": {
                 "activate": true,

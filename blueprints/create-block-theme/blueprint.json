@@ -11,5 +11,5 @@
 		"networking": true
 	},
 	"login": true,
-	"landingPage": "/wp-admin/site-editor.php"
+	"landingPage": "/wp-admin/site-editor.php?canvas=edit"
 }

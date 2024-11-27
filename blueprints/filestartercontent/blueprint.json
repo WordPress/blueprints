@@ -1,9 +1,9 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Import Theme Starter Content",
+		"title": "Import standalone starter content",
 		"author": "bph",
-		"description": "Blueprint to install a theme with starter content, (here: Twenty-Twenty-One)",
+		"description": "Blueprint to use a stand-along starter content file and import it. ",
 		"categories": ["Themes", "Starter Content"]
 	},
 	"landingPage": "/",

@@ -16,7 +16,7 @@
             "path": "/wordpress/wp-content/plugins/starter-content.php",
             "data": {
               "resource": "url",
-              "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/filestartercontent/startercontent.php"
+              "url": "https://raw.githubusercontent.com/wordpress/blueprints/filestartercontent/blueprints/filestartercontent/startercontent.php"
             }
           },
           {

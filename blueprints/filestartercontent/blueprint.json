@@ -1,9 +1,9 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Imports a standalone starter content",
+		"title": "Import a standalone starter content via a blueprint step",
 		"author": "bph",
-		"description": "Blueprint to use a stand-alone starter content file and then imports it. Click on 'Subscriptions'",
+		"description": "Blueprint to use a stand-alone starter content file and then to import it. Click on 'Subscriptions'",
 		"categories": ["Themes", "Starter Content"]
 	},
 	"landingPage": "/",

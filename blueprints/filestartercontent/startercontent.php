@@ -10,10 +10,9 @@ add_action( 'after_setup_theme', function() {
         'posts' => array(
             'homepage-section' => array(
                 'post_type'    => 'page',
-                'post_title'   => _x( 'Subscriptions', 'Theme starter content', 'your-text-domain' ),
+                'post_title'   => _x( 'Our Subscriptions', 'Theme starter content', 'your-text-domain' ),
                 'post_content' => '<!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center"} -->
-<h2 class="wp-block-heading has-text-align-center">Our Subscriptions</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.125rem"},"spacing":{"margin":{"top":"var:preset|spacing|10"}}}} -->
 <p class="has-text-align-center" style="margin-top:var(--wp--preset--spacing--10);font-size:1.125rem">We offer two subscription levels: </p>

@@ -1,0 +1,30 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Import Theme Starter Content",
+		"author": "bph",
+		"description": "Blueprint to install a theme with starter content, (here: Twenty-Twenty-One)",
+		"categories": ["Themes", "Starter Content"]
+	},
+	"landingPage": "/",
+	"features": {
+		"networking": true
+	},
+	"steps": [
+        {
+            "step": "writeFile",
+            "path": "/wordpress/wp-content/plugins/starter-content.php",
+            "data": {
+              "resource": "url",
+              "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/filestartercontent/startercontent.php"
+            }
+          },
+          {
+            "step": "activatePlugin",
+            "pluginPath": "/wordpress/wp-content/plugins/starter-content.php"
+          },
+          {
+            "step": "importThemeStarterContent"
+          }
+	]
+}

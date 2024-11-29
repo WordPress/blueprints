@@ -5,6 +5,9 @@ Description: This plugin adds a starter content to a Playground instance. Used a
 Author: Birgit Pauli-Haack
 Version: 0.0.1
 */
+/**
+ * To learn more about Starter Content for Themes read: https://make.wordpress.org/core/2016/11/30/starter-content-for-themes-in-4-7/
+ */
 add_action( 'after_setup_theme', function() {
     add_theme_support( 'starter-content', array(
         'posts' => array(

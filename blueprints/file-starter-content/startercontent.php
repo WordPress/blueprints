@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Short Starter Content Example
-Description: This plugin adds a starter contentto a Playground instance. Used as part of a Playground Blueprint example.
+Description: This plugin adds a starter content to a Playground instance. Used as part of a Playground Blueprint example.
 Author: Birgit Pauli-Haack
 Version: 0.0.1
 */

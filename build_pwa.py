@@ -5,6 +5,7 @@ import shutil
 # Define the base directory where blueprints are located
 BLUEPRINTS_DIR = 'blueprints'
 TEMPLATE_DIR = 'pwa-template'
+PWA_HOME_PATH = os.getenv('PWA_HOME_PATH', '/')
 
 def read_template(file_path):
     with open(file_path, 'r') as file:
@@ -23,12 +24,14 @@ def build_pwa_for_folder(folder_path):
     # Extract necessary fields
     title = blueprint['meta']['title']
     description = blueprint['meta']['description']
-    start_url = blueprint.get('landingPage', '/')
+    start_url = PWA_HOME_PATH + folder_path + "/"
+    slug = folder_path.split('/')[-1]
 
     # Read and format index.html template
     index_html_template = read_template(os.path.join(TEMPLATE_DIR, 'index.html'))
     index_html_content = index_html_template.replace('{{PWA_NAME}}', title)\
-                                            .replace('{{BLUEPRINT}}', json.dumps(blueprint, indent=2))
+                                            .replace('{{BLUEPRINT}}', json.dumps(blueprint, indent=2))\
+                                            .replace('{{PWA_SLUG}}', slug)
 
     with open(os.path.join(folder_path, 'index.html'), 'w') as f:
         f.write(index_html_content)

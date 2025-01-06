@@ -20,6 +20,8 @@ jobs:
               run: python reindex_postprocess.py
             - name: Run PWA build
               run: python build_pwa.py
+              env:
+                  PWA_HOME_PATH: /blueprints/
             - name: Run Prettier
               run: prettier --write blueprints/**/*.json
             - name: Check for uncommitted changes

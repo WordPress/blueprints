@@ -5,6 +5,9 @@ on:
         branches:
             - trunk
     workflow_dispatch:
+    pull_request_target:
+        branches:
+            - add/pwa-apps
 
 jobs:
     build:

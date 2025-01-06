@@ -65,6 +65,8 @@
 		</header>
 		<iframe id="wp"></iframe>
 		<script type="module" async>
+            const slug = "{{PWA_SLUG}}";
+
             /**
              * Install PWA button
              */
@@ -75,7 +77,11 @@
             window.addEventListener("beforeinstallprompt", (event) => {
                 event.preventDefault();
                 installPrompt = event;
-                showInstallHeader();
+                if (localStorage.getItem(`hide-install-header-for-${slug}`) === 'true') {
+                    hideInstallHeader();
+                } else {
+                    showInstallHeader();
+                }
             });
             installButton.addEventListener("click", async () => {
                 if (!installPrompt) {
@@ -86,6 +92,7 @@
                 hideInstallHeader();
             });
             closeInstallButton.addEventListener("click", () => {
+                localStorage.setItem(`hide-install-header-for-${slug}`, 'true');
                 hideInstallHeader();
             });
             function hideInstallHeader() {
@@ -97,7 +104,6 @@
 
             // Boot Playground
             import { startPlaygroundWeb } from "https://playground.wordpress.net/client/index.js";
-            const slug = "{{PWA_SLUG}}";
 
             function isWordPressInstalled(slug) {
                 return localStorage.getItem(`wordpress-installed-for-${slug}`) === 'true';

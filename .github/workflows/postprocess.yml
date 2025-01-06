@@ -18,6 +18,8 @@ jobs:
               run: npm install -g prettier
             - name: Run reindex_postprocess.py
               run: python reindex_postprocess.py
+            - name: Run PWA build
+              run: python build_pwa.py
             - name: Run Prettier
               run: prettier --write blueprints/**/*.json
             - name: Check for uncommitted changes

@@ -4,52 +4,109 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>{{PWA_NAME}}</title>
 		<link rel="manifest" href="manifest.json" />
+        <style>
+            :root {
+                --header-height: 39px;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .install-header {
+                height: var(--header-height);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 8px;
+                background-color: #1e2327;
+            }
+
+            .install-button {
+                color: #9ba2a6;
+                background: #2b2a33;
+                border: none;
+                padding: 8px 16px;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+            .install-button:hover {
+                background: #9ba2a6;
+                color: #1e2327;
+            }
+
+            #closeInstall {
+                font-size: 24px;
+                line-height: 15px;
+            }
+
+            #wp {
+                width: 100%;
+                height: calc(100vh - var(--header-height));
+                border: 0;
+            }
+
+            .hide-install-header .install-header {
+                display: none;
+            }
+            .hide-install-header #wp {
+                height: 100vh;
+            }
+        </style>
 	</head>
 
-	<body style="margin: 0; padding: 0">
-		<header
-			style="
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 4px;
-				height: 30px;
-				border-bottom: 1px solid #e0e0e0;
-			"
-		>
-			<h1>{{PWA_NAME}}</h1>
-			<button id="install" hidden>Install</button>
+	<body class="hide-install-header">
+		<header class="install-header">
+			<button id="install" class="install-button">Install {{PWA_NAME}}</button>
+			<button id="closeInstall" class="install-button">×</button>
 		</header>
-		<iframe
-			id="wp"
-			style="width: 100%; height: calc(100vh - 39px); border: 0"
-		></iframe>
+		<iframe id="wp"></iframe>
 		<script type="module" async>
             /**
              * Install PWA button
              */
             let installPrompt = null;
             const installButton = document.getElementById("install");
+            const closeInstallButton = document.getElementById("closeInstall");
+            const installHeader = document.querySelector(".install-header");
             window.addEventListener("beforeinstallprompt", (event) => {
                 event.preventDefault();
                 installPrompt = event;
-                installButton.removeAttribute("hidden");
+                if (isInstallHeaderHidden()) {
+                    hideInstallHeader();
+                } else {
+                    showInstallHeader();
+                }
             });
             installButton.addEventListener("click", async () => {
                 if (!installPrompt) {
                     return;
                 }
                 const result = await installPrompt.prompt();
-                disableInAppInstallPrompt();
-            });
-
-            function disableInAppInstallPrompt() {
                 installPrompt = null;
-                installButton.setAttribute("hidden", "");
+                hideInstallHeader();
+            });
+            closeInstallButton.addEventListener("click", () => {
+                saveHideInstallHeader();
+                hideInstallHeader();
+            });
+            function saveHideInstallHeader() {
+                localStorage.setItem("hideInstallHeader", "true");
+            }
+            function isInstallHeaderHidden() {
+                return localStorage.getItem("hideInstallHeader") === "true";
+            }
+            function hideInstallHeader() {
+                document.body.classList.add("hide-install-header");
+            }
+            function showInstallHeader() {
+                document.body.classList.remove("hide-install-header");
             }
 
             // Boot Playground
-                import { startPlaygroundWeb } from "https://playground.wordpress.net/client/index.js";
+            import { startPlaygroundWeb } from "https://playground.wordpress.net/client/index.js";
             const client = await startPlaygroundWeb({
                 iframe: document.getElementById("wp"),
                 remoteUrl: `https://playground.wordpress.net/remote.html`,

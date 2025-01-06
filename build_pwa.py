@@ -47,9 +47,10 @@ def build_pwa_for_folder(folder_path):
     icons_dir = os.path.join(folder_path, 'icons')
     if not os.path.exists(icons_dir):
         os.makedirs(icons_dir)
-        # Copy default icons
-        default_icons_dir = os.path.join(TEMPLATE_DIR, 'icons')
-        for icon in os.listdir(default_icons_dir):
+    # Copy default icons if they don't exist
+    default_icons_dir = os.path.join(TEMPLATE_DIR, 'icons')
+    for icon in os.listdir(default_icons_dir):
+        if not os.path.exists(os.path.join(icons_dir, icon)):
             shutil.copy(os.path.join(default_icons_dir, icon), icons_dir)
 
 def main():

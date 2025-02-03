@@ -6,43 +6,33 @@
 		"author": "calvinrodrigues500",
 		"categories": ["woocommerce", "shipping", "flat_rate"]
 	},
+	"plugins":["woocommerce"],
 	"steps": [
-		{
-			"step": "setSiteOptions",
-			"options": {
-				"blogName": "Woo Shipping Method"
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "woocommerce"
-			}
-		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/sample_products.xml"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/woo-shipping/blueprints/woo-shipping/sample_products.xml"
 			}
 		},
 		{
-			"step": "mkdir",
-			"path": "/wordpress/wp-content/plugins/woo-shipping-method"
-		},
-		{
-			"step": "writeFile",
-			"path": "/wordpress/wp-content/plugins/woo-shipping-method/woo-shipping-method.php",
-			"data": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
+			"step": "installPlugin",
+			"pluginData": {
+			  "resource": "literal:directory",
+			  "name": "woo-shipping-method",
+			  "files": {
+				"woo-shipping-method.php": {
+				  "resource": "url",
+				  "url": "https://raw.githubusercontent.com/wordpress/blueprints/woo-shipping/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
+				}
+			  }
+			},
+			"options": {
+			  "activate": true
 			}
-		},
-		{
-			"step": "activatePlugin",
-			"pluginName": "woo-shipping-method",
-			"pluginPath": "woo-shipping-method/woo-shipping-method.php"
-		}
-	]
+		  }
+	],
+	"siteOptions": {
+		"blogName": "Woo Shipping Method"
+	}
 }

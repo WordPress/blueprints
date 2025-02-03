@@ -13,11 +13,10 @@
 	"features": {
 		"networking": true
 	},
+	"login":true,
 	"plugins": ["create-block-theme"],
 	"steps": [
-		{
-			"step": "login"
-		},
+		
 		{
 			"step": "importWxr",
 			"file": {
@@ -34,9 +33,9 @@
 		},
 		{
 			"step": "installTheme",
-			"themeZipFile": {
+			"themeData": {
 				"resource": "wordpress.org/themes",
-				"slug": "twentytwentyfour"
+				"slug": "twentytwentyfive"
 			},
 			"options": {
 				"activate": true

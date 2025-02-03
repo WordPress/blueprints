@@ -7,6 +7,7 @@
 		"categories": ["Themes", "default"]
 	},
 	"landingPage": "/",
+	"login": true,
 	"features": {
 		"networking": true
 	},
@@ -16,11 +17,7 @@
 	},
 	"steps": [
 		{
-			"step": "login"
-		},
-		{
-			"step": "wp-cli",
-			"command": "wp site empty --yes"
+			 "step": "resetData"
 		},
 		{
 			"step": "updateUserMeta",
@@ -34,18 +31,19 @@
 			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
 			"data": "<?php add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
 		},
-		{
-			"step": "setSiteOptions",
-			"options": {
-				"blogname": "Twenty-Twenty-Five",
-				"blogdescription": "A preview of the next WordPress default theme"
-			}
-		},
+		
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/tt5-demo/tt5-demo-content.xml"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Twenty-Twenty-Five",
+				"blogdescription": "A preview of the next WordPress default theme"
 			}
 		}
 	]

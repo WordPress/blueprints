@@ -24,7 +24,7 @@
 			  "files": {
 				"woo-shipping-method.php": {
 				  "resource": "url",
-				  "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
+				   "url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
 				}
 			  }
 			}

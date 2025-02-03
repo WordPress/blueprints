@@ -8,10 +8,8 @@
 	},
 	"landingPage": "/wp-admin/site-editor.php",
 	"plugins": ["gutenberg"],
+	"login":true,
 	"steps": [
-		{
-			"step": "login"
-		},
 		{
 			"step": "runPHP",
 			"code": "<?php require '/wordpress/wp-load.php'; update_option( 'gutenberg-experiments', array( 'gutenberg-custom-dataviews' => true, 'gutenberg-new-posts-dashboard' => true, 'gutenberg-quick-edit-dataviews' => true )  );"

@@ -12,7 +12,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/woo-shipping/blueprints/woo-shipping/sample_products.xml"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/sample_products.xml"
 			}
 		},
 		{
@@ -23,7 +23,7 @@
 			  "files": {
 				"woo-shipping-method.php": {
 				  "resource": "url",
-				  "url": "https://raw.githubusercontent.com/wordpress/blueprints/woo-shipping/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
+				  "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
 				}
 			  }
 			},

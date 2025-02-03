@@ -7,12 +7,8 @@
 		"categories": ["Content", "wpcli"]
 	},
 	"landingPage": "/wp-admin/edit.php",
+	"login":true,
 	"steps": [
-		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
-		},
 		{
 			"step": "wp-cli",
 			"command": "wp post generate --count=12 --post_type=post --post_date=1999-01-04"

@@ -16,8 +16,9 @@
 			}
 		},
 		{
-			"step": "installPlugin",
-			"pluginData": {
+			"step": "writeFiles",
+			"writeToPath": "/wordpress/wp-content/plugins/woo-shipping-method",
+			"filesTree": {
 			  "resource": "literal:directory",
 			  "name": "woo-shipping-method",
 			  "files": {
@@ -26,10 +27,11 @@
 				  "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
 				}
 			  }
-			},
-			"options": {
-			  "activate": true
 			}
+		  },
+		  {
+			"step": "activatePlugin",
+			"pluginPath": "woo-shipping-method/woo-shipping-method.php"
 		  }
 	],
 	"siteOptions": {

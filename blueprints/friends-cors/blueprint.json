@@ -10,45 +10,25 @@
 	"features": {
 		"networking": true
 	},
+	"plugins":["friends","activitypub"],
+	"siteOptions": {
+		"permalink_structure": "/%postname%/"
+	},
 	"steps": [
 		{
-			"step": "mkdir",
-			"path": "wordpress/wp-content/mu-plugins"
-		},
-		{
-			"step": "writeFile",
-			"path": "wordpress/wp-content/mu-plugins/addFilter-0.php",
-			"data": "<?php add_action( 'requests-requests.before_request', function( &$url ) {\n$url = 'https://playground.wordpress.net/cors-proxy.php?' . $url;\n} );"
-		},
-		{
-			"step": "setSiteOptions",
-			"options": {
-				"permalink_structure": "/%postname%/"
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginData": {
-				"resource": "wordpress.org/plugins",
-				"slug": "friends"
-			},
-			"options": {
-				"activate": true
+			"step": "writeFiles",
+				"writeToPath": "wordpress/wp-content/mu-plugins",
+				"filesTree": {
+				"resource": "literal:directory", 
+				"name": "mu-plugins",
+				"files": {
+					"addFilter-0.php": "<?php add_action( 'requests-requests.before_request', function( &$url ) {\n$url = 'https://playground.wordpress.net/cors-proxy.php?' . $url;\n} );"
+			  }
 			}
 		},
 		{
 			"step": "runPHP",
 			"code": "<?php require_once 'wordpress/wp-load.php';\nif ( class_exists('Friends\\Import')) {\nFriends\\Import::opml(\"<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?><opml version=\\\"2.0\\\">\n<head>\n<title>Subscriptions</title>\n</head>\n<body>\n<outline text=\\\"Subscriptions\\\" title=\\\"Subscriptions\\\">\n<outline type=\\\"rss\\\" text=\\\"Alex Kirk\\\" title=\\\"Alex Kirk\\\" xmlUrl=\\\"https://alex.kirk.at/feed/\\\" htmlUrl=\\\"https://alex.kirk.at/feed/\\\" />\n<outline type=\\\"rss\\\" text=\\\"Adam Zieli\u0144ski\\\" title=\\\"Adam Zieli\u0144ski\\\" xmlUrl=\\\"https://adamadam.blog/feed/\\\" htmlUrl=\\\"https://adamadam.blog/feed/\\\" />\n</outline>\n</body>\n</opml>\");\n}"
-		},
-		{
-			"step": "installPlugin",
-			"pluginData": {
-				"resource": "wordpress.org/plugins",
-				"slug": "activitypub"
-			},
-			"options": {
-				"activate": true
-			}
 		}
 	]
 }

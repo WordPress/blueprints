@@ -6,7 +6,7 @@
 		"author": "adamziel",
 		"categories": ["Woocommerce", "Site"]
 	},
-	"landingPage": "/shop",
+	"landingPage": "/contact-us/",
 	"preferredVersions": {
 		"php": "8.3",
 		"wp": "6.6"

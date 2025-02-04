@@ -14,6 +14,8 @@
 	"features": {
 		"networking": true
 	},
+	"login":true,
+	"plugins":["woocommerce"],
 	"steps": [
 		{
 			"step": "resetData"
@@ -23,36 +25,7 @@
 			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
 			"data": "<?php /* Use pretty permalinks */ add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
 		},
-		{
-			"step": "setSiteOptions",
-			"options": {
-				"blogname": "Stylish Press",
-				"woocommerce_store_city": "Wroc\u0142aw",
-				"woocommerce_store_address": "Aleje Jerozolimskie 14",
-				"woocommerce_store_postcode": "00-153",
-				"woocommerce_default_country": "Poland",
-				"woocommerce_onboarding_profile": {
-					"skipped": true
-				},
-				"woocommerce_currency": "PLN",
-				"woocommerce_weight_unit": "oz",
-				"woocommerce_dimension_unit": "in",
-				"woocommerce_allow_tracking": "no",
-				"woocommerce_cheque_settings": {
-					"enabled": "yes"
-				}
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "woocommerce"
-			},
-			"options": {
-				"activate": true
-			}
-		},
+		
 		{
 			"step": "importWxr",
 			"file": {
@@ -112,9 +85,24 @@
 			"themeFolderName": "stylish-press-theme"
 		},
 		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Stylish Press",
+				"woocommerce_store_city": "Wroc\u0142aw",
+				"woocommerce_store_address": "Aleje Jerozolimskie 14",
+				"woocommerce_store_postcode": "00-153",
+				"woocommerce_default_country": "Poland",
+				"woocommerce_onboarding_profile": {
+					"skipped": true
+				},
+				"woocommerce_currency": "PLN",
+				"woocommerce_weight_unit": "oz",
+				"woocommerce_dimension_unit": "in",
+				"woocommerce_allow_tracking": "no",
+				"woocommerce_cheque_settings": {
+					"enabled": "yes"
+				}
+			}
 		}
 	]
 }

@@ -16,23 +16,22 @@
 			}
 		},
 		{
-			"step": "writeFiles",
-			"writeToPath": "/wordpress/wp-content/plugins/woo-shipping-method",
-			"filesTree": {
-			  "resource": "literal:directory",
-			  "name": "woo-shipping-method",
-			  "files": {
-				"woo-shipping-method.php": {
-				  "resource": "url",
-				   "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
-				}
-			  }
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/woo-shipping-method"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/woo-shipping-method/woo-shipping-method.php",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
 			}
-		  },
-		  {
+		},
+		{
 			"step": "activatePlugin",
+			"pluginName": "woo-shipping-method",
 			"pluginPath": "woo-shipping-method/woo-shipping-method.php"
-		  }
+		}
 	],
 	"siteOptions": {
 		"blogName": "Woo Shipping Method"

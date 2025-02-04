@@ -10,23 +10,21 @@
 	"login": true,
 	"steps": [
 		{
-			"step": "writeFiles",
-			"writeToPath": "/wordpress/wp-content",
-			"filesTree": {
-			  "resource": "literal:directory",
-			  "name": "wp-content",
-			  "files": {
-				"postcontent.md": {
-				  "resource": "url",
-				  "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/postcontent.md"
-				},
-				"Select-storage-method.png": {
-				  "resource": "url",
-				  "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/Select-storage-method.png"
-				}
-			  }
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/postcontent.md",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/postcontent.md"
 			}
-		   },
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/Select-storage-method.png",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/Select-storage-method.png"
+			}
+		},
 		{
 			"step": "wp-cli",
 			"command": "wp post create --post_title='Welcome to Playground' --post_status='published' /wordpress/wp-content/postcontent.md"

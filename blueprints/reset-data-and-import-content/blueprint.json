@@ -7,12 +7,8 @@
 		"categories": ["reset", "log", "debug", "debug", "import", "content"]
 	},
 	"landingPage": "/wp-admin/edit.php",
+	"login":true,
 	"steps": [
-		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
-		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/mu-plugins/log_content_state.php",
@@ -33,7 +29,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress-juanmaguitar/blueprints/trunk/blueprints/reset-data-and-import-content/starter-content.xml"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/reset-data-and-import-content/starter-content.xml"
 			}
 		},
 		{

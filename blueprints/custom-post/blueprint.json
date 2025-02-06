@@ -6,7 +6,7 @@
 		"author": "bph",
 		"categories": ["Content", "CPT"]
 	},
-	"landingPage": "/wp-admin/",
+	"landingPage": "/wp-admin/edit.php?post_type=gbtbooks",
 	"login":true,
 	"steps": [
 		

@@ -32,10 +32,8 @@
 		{
 			"step": "installTheme",
 			"themeData": {
-			  "resource": "git:directory",
-			  "url": "https://github.com/richtabor/kanso",
-			  "ref": "main",
-			  "path": "/"
+				"resource":"url",
+			    "url": "https://github.com/richtabor/kanso"
 			},
 			"options": {
 			  "activate": true

@@ -29,7 +29,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/reset-data-and-import-content/starter-content.xml"
+				"url": "https://github.com/WordPress/blueprints/blob/trunk/blueprints/reset-data-and-import-content/starter-content.xml"
 			}
 		},
 		{

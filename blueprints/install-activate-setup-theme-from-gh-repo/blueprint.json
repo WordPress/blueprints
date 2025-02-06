@@ -31,31 +31,30 @@
 		},
 		{
 			"step": "installTheme",
-			"themeZipFile": {
-				"resource": "url",
-				"url": "https://github-proxy.com/proxy/?repo=richtabor/kanso&branch=main"
+			"themeData": {
+			  "resource": "git:directory",
+			  "url": "https://github.com/richtabor/kanso",
+			  "ref": "main",
+			  "path": "/"
 			},
 			"options": {
-				"activate": true
+			  "activate": true
 			}
-		},
+		  },
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint-content.xml"
-			}
-		},
-		{
-			"step": "setSiteOptions",
-			"options": {
-				"blogname": "Rich Tabor",
-				"blogdescription": "Multidisciplinary maker specializing in the intersection of product, design and engineering. Making WordPress.",
-				"show_on_front": "page",
-				"page_on_front": 6,
-				"page_for_posts": 2
+				"url": "https://github.com/WordPress/blueprints/blob/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint-content.xml"
 			}
 		}
 	],
+	"siteOptions": {
+		"blogname": "Rich Tabor",
+		"blogdescription": "Multidisciplinary maker specializing in the intersection of product, design and engineering. Making WordPress.",
+		"show_on_front": "page",
+		"page_on_front": "6",
+		"page_for_posts": "2"
+	},
 	"plugins": ["todo-list-block", "markdown-comment-block"]
 }

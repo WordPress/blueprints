@@ -10,17 +10,20 @@
 		"wp": "beta",
 		"php": "8.0"
 	},
-	"login": true,
+	"login":true,
 	"steps": [
 		{
-		"step": "installPlugin",
-		"pluginData": {
-			"resource": "url",
-			"url": "https://gist.githubusercontent.com/ndiego/456b74b243d86c97cda89264c68cbdee/raw/ff00cf25e6eebe4f5a4eaecff10286f71e65340b/block-hooks-demo.php"
-			},
-		"options": {
-			"activate": true
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/0-plugin.php",
+			"data": {
+				"resource": "url",
+				"url": "https://gist.githubusercontent.com/ndiego/456b74b243d86c97cda89264c68cbdee/raw/ff00cf25e6eebe4f5a4eaecff10286f71e65340b/block-hooks-demo.php"
 			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginName": "Block Hooks Demo",
+			"pluginPath": "0-plugin.php"
 		}
 	]
 }

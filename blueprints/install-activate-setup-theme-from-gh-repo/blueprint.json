@@ -33,7 +33,7 @@
 			"step": "installTheme",
 			"themeData": {
 				"resource":"url",
-			    "url": "https://github.com/richtabor/kanso?branch=main"
+			    "url": "https://github.com/richtabor/kanso/archive/refs/heads/main.zip"
 			},
 			"options": {
 			  "activate": true

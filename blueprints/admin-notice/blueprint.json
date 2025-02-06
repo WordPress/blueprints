@@ -7,12 +7,9 @@
 		"categories": ["Admin", "notices"]
 	},
 	"landingPage": "/wp-admin/plugins.php",
+	"login":true,
 	"steps": [
-		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
-		},
+		
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/mu-plugins/bgnightly-notice.php",

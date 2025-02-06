@@ -7,7 +7,7 @@
 		"categories": ["woocommerce", "shipping", "flat_rate"]
 	},
 	"plugins":["woocommerce"],
-	"landingPage": "/wp-admin/edit.php?post_type=product",
+	"landingPage": "/wp-admin/admin.php?page=wc-settings&tab=shipping",
 	"steps": [
 		{
 			"step": "importWxr",

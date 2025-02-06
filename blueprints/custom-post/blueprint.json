@@ -28,6 +28,13 @@
 		},
 		{ "step": "wp-cli",
 		  "command":"wp post create --post_type=gbtbooks --post_title='WordPress Styling with Blocks, Patterns, Templates, and Themes' --post_content='Explore WordPress styling with step-by-step guidance, practical examples, and tips by Tammie Lister' --post_status=publish"
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"admin_color": "modern"
+			},
+			"userId": 1
 		}
 	]
 }

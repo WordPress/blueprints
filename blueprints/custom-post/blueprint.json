@@ -7,10 +7,9 @@
 		"categories": ["Content", "CPT"]
 	},
 	"landingPage": "/wp-admin/",
+	"login":true,
 	"steps": [
-		{
-			"step": "login"
-		},
+		
 		{
 			"step": "mkdir",
 			"path": "/wordpress/wp-content/plugins/books"
@@ -20,7 +19,7 @@
 			"path": "/wordpress/wp-content/plugins/books/books.php",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/books.php"
+				"url": "https://github.com/WordPress/blueprints/blob/trunk/blueprints/custom-post/books.php"
 			}
 		},
 		{

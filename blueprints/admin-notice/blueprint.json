@@ -9,7 +9,6 @@
 	"landingPage": "/wp-admin/plugins.php",
 	"login":true,
 	"steps": [
-		
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/mu-plugins/bgnightly-notice.php",

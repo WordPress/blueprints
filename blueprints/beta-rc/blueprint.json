@@ -15,7 +15,6 @@
 	},
 	"login":true,
 	"plugins":[
-			"query-monitor",
 			"create-block-theme",
 			"debug-bar",
 			"health-check",
@@ -23,6 +22,16 @@
 			"user-switching"
 			],
 	"steps": [
+		{	
+			"step":"installPlugin",
+				"pluginData": {
+				  "resource": "wordpress.org/plugins",
+				  "slug": "query-monitor"
+				},
+				"options": {
+				  "activate": false
+			}
+		},
 		{
 			"step": "importWxr",
 			"file": {

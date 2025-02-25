@@ -1,0 +1,49 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Demo of Twenty-Twenty-Five theme",
+		"description": "Blueprint with demo content for the Twenty-Twenty-Five default theme",
+		"author": "bph",
+		"categories": ["Themes", "default"]
+	},
+	"landingPage": "/",
+	"login": true,
+	"features": {
+		"networking": true
+	},
+	"preferredVersions": {
+		"php": "8.0",
+		"wp": "beta"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"admin_color": "modern"
+			},
+			"userId": 1
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
+			"data": "<?php add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/tt5-demo/tt5-demo-content.xml"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Twenty-Twenty-Five",
+				"blogdescription": "A preview of the next WordPress default theme"
+			}
+		}
+	]
+}

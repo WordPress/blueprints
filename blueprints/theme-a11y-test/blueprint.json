@@ -13,39 +13,28 @@
 	"features": {
 		"networking": true
 	},
+	"login": true,
+	"plugins": ["create-block-theme"],
 	"steps": [
 		{
-			"step": "login"
-		},
-		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wpaccessibility/a11y-theme-unit-test/master/a11y-theme-unit-test-data.xml"
+				"url": "https://github.com/wpaccessibility/a11y-theme-unit-test/blob/master/a11y-theme-unit-test-data.xml"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/themeunittestdata.wordpress.xml"
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "create-block-theme"
-			},
-			"progress": {
-				"weight": 2
+				"url": "https://github.com/WordPress/theme-test-data/blob/master/themeunittestdata.wordpress.xml"
 			}
 		},
 		{
 			"step": "installTheme",
-			"themeZipFile": {
+			"themeData": {
 				"resource": "wordpress.org/themes",
-				"slug": "twentytwentyfour"
+				"slug": "twentytwentyfive"
 			},
 			"options": {
 				"activate": true

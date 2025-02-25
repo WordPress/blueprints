@@ -1,0 +1,26 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Import Theme Starter Content",
+		"author": "bph",
+		"description": "Blueprint to install a theme with starter content, (here: Twenty-Twenty-One)",
+		"categories": ["Themes", "Starter Content"]
+	},
+	"landingPage": "/",
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyone"
+			},
+			"options": {
+				"activate": true,
+				"importStarterContent": true
+			}
+		}
+	]
+}

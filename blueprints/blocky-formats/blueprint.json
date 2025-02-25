@@ -1,0 +1,26 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Markdown and Trac Syntax Editor",
+		"description": "Edit Markdown and Trac formatting in the block editor thanks to the blocky-formats plugin!",
+		"author": "adamziel",
+		"categories": ["block-editor"]
+	},
+	"login": true,
+	"landingPage": "/wp-admin/post-new.php",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"options": {
+				"activate": true,
+				"targetFolderName": "blocky-formats"
+			},
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/dmsnell/blocky-formats.git",
+				"ref": "trunk",
+				"path": ""
+			}
+		}
+	]
+}

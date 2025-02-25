@@ -1,0 +1,30 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Import a standalone starter content via a blueprint step",
+		"author": "bph",
+		"description": "Blueprint to use a stand-alone starter content file and then to import it. Click on 'Subscriptions'",
+		"categories": ["Themes", "Starter Content"]
+	},
+	"landingPage": "/",
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/starter-content.php",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/file-starter-content/startercontent.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "/wordpress/wp-content/plugins/starter-content.php"
+		},
+		{
+			"step": "importThemeStarterContent"
+		}
+	]
+}

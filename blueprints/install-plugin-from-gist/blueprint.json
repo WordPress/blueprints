@@ -10,10 +10,8 @@
 		"wp": "beta",
 		"php": "8.0"
 	},
+	"login": true,
 	"steps": [
-		{
-			"step": "login"
-		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/plugins/0-plugin.php",

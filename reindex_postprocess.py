@@ -3,6 +3,10 @@ import os
 import re
 import sys
 
+highlighted_blueprints = [
+    'Stylish Press',
+    'Feed Reader with the Friends Plugin'
+]
 
 def build_json_index():
     index = {}
@@ -16,7 +20,7 @@ def build_json_index():
                     index[path] = meta
     # Sort index alphabetically by title
     index = dict(sorted(index.items(), key=lambda item: (
-        item[1].get('title', '') != 'Stylish Press', 
+        item[1].get('title', '') not in highlighted_blueprints, 
         item[1].get('title', '')
     )))
     with open('index.json', 'w') as f:
@@ -41,8 +45,8 @@ def build_markdown_table():
     ]
     for path, meta in index.items():
         title = meta.get('title', '')
-        if title == 'Stylish Press':
-            title = "**Stylish Press**"
+        if title in highlighted_blueprints:
+            title = f"**{title}**"
         blueprints_rows.append([
             title,
             meta.get('description', ''),

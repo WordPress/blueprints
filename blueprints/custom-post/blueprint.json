@@ -6,11 +6,9 @@
 		"author": "bph",
 		"categories": ["Content", "CPT"]
 	},
-	"landingPage": "/wp-admin/",
+	"landingPage": "/wp-admin/edit.php?post_type=gbtbooks",
+	"login": true,
 	"steps": [
-		{
-			"step": "login"
-		},
 		{
 			"step": "mkdir",
 			"path": "/wordpress/wp-content/plugins/books"
@@ -20,12 +18,23 @@
 			"path": "/wordpress/wp-content/plugins/books/books.php",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/books.php"
+				"url": "https://github.com/WordPress/blueprints/blob/trunk/blueprints/custom-post/books.php"
 			}
 		},
 		{
 			"step": "activatePlugin",
 			"pluginPath": "books/books.php"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp post create --post_type=gbtbooks --post_title='WordPress Styling with Blocks, Patterns, Templates, and Themes' --post_content='<!-- wp:paragraph --><p>Explore WordPress styling with step-by-step guidance, practical examples, and tips by Tammie Lister</p><!-- /wp:paragraph -->' --post_status=publish"
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"admin_color": "modern"
+			},
+			"userId": 1
 		}
 	]
 }

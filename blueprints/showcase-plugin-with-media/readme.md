@@ -9,14 +9,14 @@ Custom child theme is zipped and installed as [URLReference](https://wordpress.g
 
 ### Installing plugin
 
-Plugin is installed from *WordPress.org* repository. If your plugin is not (yet) there, you could self-host it and install id as [URLReference](https://wordpress.github.io/wordpress-playground/blueprints/steps/resources#urlreference) resource.
+Plugin is installed from _WordPress.org_ repository. If your plugin is not (yet) there, you could self-host it and install it as [URLReference](https://wordpress.github.io/wordpress-playground/blueprints/steps/resources#urlreference) resource.
 
 ### Importing media files into file system
 
 Here, the [unzip](https://wordpress.github.io/wordpress-playground/blueprints/steps#UnzipStep) step is used:
 zip all the folders in upload folder and in unzip step unpack them to respective path `/site-slug/wp-content/uploads`, where slug
 is the custom slug if given, e.g. for `site-slug=mysite` in URL query, path would be `/site-mysite/wp-content/uploads`. If custom slug is not given, replace site-slug
-with `wordpress`. In this example, all media content from 2024 year is packed as 2024 folder in *.zip* file, just as it appears in WordPress content directory.
+with `wordpress`. In this example, all media content from 2024 year is packed as 2024 folder in _.zip_ file, just as it appears in WordPress content directory.
 
 ### Setting defaults
 

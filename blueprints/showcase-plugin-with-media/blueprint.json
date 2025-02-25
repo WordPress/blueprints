@@ -2,8 +2,8 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Showcase plugin",
-		"description": "Offer full demo of plugin with media included",
-		"author": "lovor",
+		"description": "Showcase custom plugin from own server with media files and content imported as WXR. There is a readme file in github repository (https://github.com/Lovor01/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/readme.md) which explains all steps.",
+		"author": "Lovor01",
 		"categories": ["plugin", "demo", "media", "images"]
 	},
 	"preferredVersions": {
@@ -50,7 +50,7 @@
 			"step": "installTheme",
 			"themeData": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/twentytwentyfour-child.zip"
+				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/twentytwentyfour-child.zip"
 			},
 			"options": {
 				"activate": true
@@ -87,7 +87,7 @@
 			"step": "unzip",
 			"zipFile": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/2024.zip"
+				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/2024.zip"
 			},
 			"extractToPath": "/wordpress/wp-content/uploads"
 		},
@@ -95,7 +95,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/makeiteasypopupblock.WordPress.2024-06-20.xml"
+				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/makeiteasypopupblock.WordPress.2024-06-20.xml"
 			}
 		}
 	]

@@ -10,8 +10,8 @@
     "login": true,
     "plugins": [
         "woocommerce",
-        "woocommerce-admin",
         "woocommerce-services",
+        "woocommerce-admin",
         "woocommerce-payments",
         "mailpoet"
     ],

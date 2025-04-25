@@ -10,17 +10,7 @@
         <item>
             <title>ZoomZoom CloudWalker Pro</title>
             <excerpt:encoded><![CDATA[Experience cloud-like comfort with revolutionary FloatTech cushioning. Perfect for both style and performance.]]></excerpt:encoded>
-            <content:encoded><![CDATA[The ZoomZoom CloudWalker Pro delivers cloud-like comfort with its revolutionary FloatTech cushioning. Features:
-
-• Advanced FloatTech cushioning system
-• Breathable mesh upper with supportive overlays
-• Responsive midsole for energy return
-• Durable rubber outsole with cloud-inspired traction pattern
-• Reflective details for visibility
-• Padded collar and tongue for comfort
-• Removable cushioned insole
-
-Perfect for both style and bouncing around town. Available in multiple sizes for the perfect fit.]]></content:encoded>
+            <content:encoded><![CDATA[The ZoomZoom CloudWalker Pro delivers cloud-like comfort with its revolutionary FloatTech cushioning. Perfect for both style and bouncing around town. Available in multiple sizes for the perfect fit.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>
@@ -116,7 +106,7 @@ Perfect for both style and bouncing around town. Available in multiple sizes for
             <category domain="product_tag" nicename="breathable"><![CDATA[Breathable]]></category>
             <category domain="product_visibility" nicename="featured"><![CDATA[Featured]]></category>
             <wp:attachment>
-                <wp:attachment_url>woo-product-images/ZoomZoom CloudWalker Pro.png</wp:attachment_url>
+                <wp:attachment_url>https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/woo-product-images/ZoomZoom_CloudWalker_Pro.png</wp:attachment_url>
                 <wp:title>ZoomZoom CloudWalker Pro</wp:title>
             </wp:attachment>
         </item>
@@ -226,17 +216,7 @@ Engineered for maximum energy return and superior comfort. Perfect for athletes 
         <item>
             <title>FloatFeet CloudHopper X</title>
             <excerpt:encoded><![CDATA[Premium performance shoe with CloudTech midsole for maximum bounce and energy return.]]></excerpt:encoded>
-            <content:encoded><![CDATA[The FloatFeet CloudHopper X delivers unmatched comfort and performance. Features:
-
-• CloudTech midsole technology for superior cushioning
-• Engineered mesh upper for targeted breathability
-• Zero-gravity foam for lightweight comfort
-• Strategic rubber placement for durability
-• Heel crash pad for smooth transitions
-• Quick-lace system for secure fit
-• Removable OrthoLite® sockliner
-
-Perfect for those who want to feel like they're walking on clouds. Ideal for daily wear and athletic activities.]]></content:encoded>
+            <content:encoded><![CDATA[The FloatFeet CloudHopper X delivers unmatched comfort and performance. Perfect for those who want to feel like they're walking on clouds. Ideal for daily wear and athletic activities.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>
@@ -368,17 +348,7 @@ Perfect for those who want to feel like they're walking on clouds. Ideal for dai
         <item>
             <title>SpringStep BouncyBounce Max</title>
             <excerpt:encoded><![CDATA[Experience maximum bounce and style with our innovative SpringStep technology and modern design.]]></excerpt:encoded>
-            <content:encoded><![CDATA[The SpringStep BouncyBounce Max combines style and technology for an unmatched bouncing experience. Features:
-
-• Advanced SpringStep cushioning pods
-• Dynamic support frame
-• Breathable knit upper
-• Energy-returning midsole
-• Durable rubber outsole
-• Reflective elements
-• Cushioned collar and tongue
-
-Perfect for those who want to stand out while enjoying superior comfort. Available in eye-catching color combinations.]]></content:encoded>
+            <content:encoded><![CDATA[The SpringStep BouncyBounce Max combines style and technology for an unmatched bouncing experience. Perfect for those who want to stand out while enjoying superior comfort. Available in eye-catching color combinations.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>

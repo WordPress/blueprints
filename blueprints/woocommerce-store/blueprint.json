@@ -42,7 +42,14 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/sample_products.xml"
+				"url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/products.xml"
+			}
+		},
+        {
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/media.xml"
 			}
 		},
         {

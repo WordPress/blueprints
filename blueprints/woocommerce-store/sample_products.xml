@@ -9,7 +9,18 @@
         <wp:wxr_version>1.2</wp:wxr_version>
         <item>
             <title>ZoomZoom CloudWalker Pro</title>
-            <content:encoded><![CDATA[The ZoomZoom CloudWalker Pro delivers cloud-like comfort with its revolutionary FloatTech cushioning. Perfect for both style and bouncing around town.]]></content:encoded>
+            <excerpt:encoded><![CDATA[Experience cloud-like comfort with revolutionary FloatTech cushioning. Perfect for both style and performance.]]></excerpt:encoded>
+            <content:encoded><![CDATA[The ZoomZoom CloudWalker Pro delivers cloud-like comfort with its revolutionary FloatTech cushioning. Features:
+
+• Advanced FloatTech cushioning system
+• Breathable mesh upper with supportive overlays
+• Responsive midsole for energy return
+• Durable rubber outsole with cloud-inspired traction pattern
+• Reflective details for visibility
+• Padded collar and tongue for comfort
+• Removable cushioned insole
+
+Perfect for both style and bouncing around town. Available in multiple sizes for the perfect fit.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>
@@ -23,6 +34,10 @@
             <wp:postmeta>
                 <wp:meta_key>_stock_status</wp:meta_key>
                 <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock</wp:meta_key>
+                <wp:meta_value>100</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
                 <wp:meta_key>_sku</wp:meta_key>
@@ -45,17 +60,61 @@
                 <wp:meta_value>6</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_brand</wp:meta_key>
-                <wp:meta_value>ZoomZoom</wp:meta_value>
+                <wp:meta_key>_tax_status</wp:meta_key>
+                <wp:meta_value>taxable</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_color</wp:meta_key>
-                <wp:meta_value>Black/White</wp:meta_value>
+                <wp:meta_key>_tax_class</wp:meta_key>
+                <wp:meta_value></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_backorders</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sold_individually</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_virtual</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_downloadable</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_featured</wp:meta_key>
+                <wp:meta_value>yes</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_visibility</wp:meta_key>
+                <wp:meta_value>visible</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_purchase_note</wp:meta_key>
+                <wp:meta_value>Thank you for purchasing the ZoomZoom CloudWalker Pro! Your feet are about to experience cloud-like comfort.</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_attributes</wp:meta_key>
+                <wp:meta_value>a:3:{s:4:"size";a:6:{s:4:"name";s:4:"Size";s:5:"value";s:23:"36|37|38|39|40|41|42|43";s:8:"position";s:1:"0";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:5:"color";a:6:{s:4:"name";s:5:"Color";s:5:"value";s:11:"Black/White";s:8:"position";s:1:"1";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:7:"material";a:6:{s:4:"name";s:8:"Material";s:5:"value";s:31:"Mesh, Synthetic Leather, Rubber";s:8:"position";s:1:"2";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}}</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_version</wp:meta_key>
+                <wp:meta_value>8.2.1</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
                 <wp:meta_key>_thumbnail_id</wp:meta_key>
                 <wp:meta_value>1</wp:meta_value>
             </wp:postmeta>
+            <category domain="product_cat" nicename="athletic"><![CDATA[Athletic]]></category>
+            <category domain="product_cat" nicename="sneakers"><![CDATA[Sneakers]]></category>
+            <category domain="product_tag" nicename="comfortable"><![CDATA[Comfortable]]></category>
+            <category domain="product_tag" nicename="cushioning"><![CDATA[Cushioning]]></category>
+            <category domain="product_tag" nicename="lightweight"><![CDATA[Lightweight]]></category>
+            <category domain="product_tag" nicename="athletic"><![CDATA[Athletic]]></category>
+            <category domain="product_tag" nicename="breathable"><![CDATA[Breathable]]></category>
+            <category domain="product_visibility" nicename="featured"><![CDATA[Featured]]></category>
             <wp:attachment>
                 <wp:attachment_url>woo-product-images/ZoomZoom CloudWalker Pro.png</wp:attachment_url>
                 <wp:title>ZoomZoom CloudWalker Pro</wp:title>
@@ -88,7 +147,18 @@
         </item>
         <item>
             <title>BounceMaster SuperSpring Elite</title>
-            <content:encoded><![CDATA[Experience ultimate bounce with the BounceMaster SuperSpring Elite. Features SpringTech cushioning and a responsive FlexFit upper for a perfect bounce.]]></content:encoded>
+            <excerpt:encoded><![CDATA[Premium performance sneaker with revolutionary SpringTech cushioning and responsive FlexFit upper.]]></excerpt:encoded>
+            <content:encoded><![CDATA[Experience ultimate bounce with the BounceMaster SuperSpring Elite. Features:
+
+• Revolutionary SpringTech cushioning system
+• FlexFit knitted upper for adaptive support
+• High-rebound midsole technology
+• Stabilizing heel counter
+• Multi-surface traction pattern
+• Moisture-wicking liner
+• Anatomical arch support
+
+Engineered for maximum energy return and superior comfort. Perfect for athletes and active lifestyles.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>
@@ -155,7 +225,18 @@
         </item>
         <item>
             <title>FloatFeet CloudHopper X</title>
-            <content:encoded><![CDATA[Premium floating shoe with CloudTech midsole for maximum bounce and energy return. Perfect for those who want to feel like they're walking on clouds.]]></content:encoded>
+            <excerpt:encoded><![CDATA[Premium performance shoe with CloudTech midsole for maximum bounce and energy return.]]></excerpt:encoded>
+            <content:encoded><![CDATA[The FloatFeet CloudHopper X delivers unmatched comfort and performance. Features:
+
+• CloudTech midsole technology for superior cushioning
+• Engineered mesh upper for targeted breathability
+• Zero-gravity foam for lightweight comfort
+• Strategic rubber placement for durability
+• Heel crash pad for smooth transitions
+• Quick-lace system for secure fit
+• Removable OrthoLite® sockliner
+
+Perfect for those who want to feel like they're walking on clouds. Ideal for daily wear and athletic activities.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>
@@ -175,21 +256,85 @@
                 <wp:meta_value>instock</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
+                <wp:meta_key>_stock</wp:meta_key>
+                <wp:meta_value>85</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
                 <wp:meta_key>_sku</wp:meta_key>
                 <wp:meta_value>FF-CH-BLK</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_brand</wp:meta_key>
-                <wp:meta_value>FloatFeet</wp:meta_value>
+                <wp:meta_key>_weight</wp:meta_key>
+                <wp:meta_value>0.75</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_color</wp:meta_key>
-                <wp:meta_value>Black/Blue</wp:meta_value>
+                <wp:meta_key>_length</wp:meta_key>
+                <wp:meta_value>12</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_width</wp:meta_key>
+                <wp:meta_value>4.5</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_height</wp:meta_key>
+                <wp:meta_value>6</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_tax_status</wp:meta_key>
+                <wp:meta_value>taxable</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_tax_class</wp:meta_key>
+                <wp:meta_value></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_backorders</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sold_individually</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_virtual</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_downloadable</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_featured</wp:meta_key>
+                <wp:meta_value>yes</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_visibility</wp:meta_key>
+                <wp:meta_value>visible</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_purchase_note</wp:meta_key>
+                <wp:meta_value>Thank you for choosing the FloatFeet CloudHopper X! Get ready to experience walking on clouds.</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_attributes</wp:meta_key>
+                <wp:meta_value>a:3:{s:4:"size";a:6:{s:4:"name";s:4:"Size";s:5:"value";s:23:"36|37|38|39|40|41|42|43";s:8:"position";s:1:"0";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:5:"color";a:6:{s:4:"name";s:5:"Color";s:5:"value";s:10:"Black/Blue";s:8:"position";s:1:"1";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:7:"material";a:6:{s:4:"name";s:8:"Material";s:5:"value";s:35:"Engineered Mesh, CloudTech Foam, TPU";s:8:"position";s:1:"2";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}}</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_version</wp:meta_key>
+                <wp:meta_value>8.2.1</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
                 <wp:meta_key>_thumbnail_id</wp:meta_key>
                 <wp:meta_value>3</wp:meta_value>
             </wp:postmeta>
+            <category domain="product_cat" nicename="performance"><![CDATA[Performance]]></category>
+            <category domain="product_cat" nicename="running"><![CDATA[Running]]></category>
+            <category domain="product_tag" nicename="cloudtech"><![CDATA[CloudTech]]></category>
+            <category domain="product_tag" nicename="cushioning"><![CDATA[Cushioning]]></category>
+            <category domain="product_tag" nicename="lightweight"><![CDATA[Lightweight]]></category>
+            <category domain="product_tag" nicename="performance"><![CDATA[Performance]]></category>
+            <category domain="product_tag" nicename="running"><![CDATA[Running]]></category>
+            <category domain="product_visibility" nicename="featured"><![CDATA[Featured]]></category>
             <wp:attachment>
                 <wp:attachment_url>woo-product-images/FloatFeet CloudHopper X.png</wp:attachment_url>
                 <wp:title>FloatFeet CloudHopper X</wp:title>
@@ -222,7 +367,18 @@
         </item>
         <item>
             <title>SpringStep BouncyBounce Max</title>
-            <content:encoded><![CDATA[Chunky sneaker with extra bounce and superior comfort. Features SpringStep technology for enhanced floating and a modern aesthetic.]]></content:encoded>
+            <excerpt:encoded><![CDATA[Experience maximum bounce and style with our innovative SpringStep technology and modern design.]]></excerpt:encoded>
+            <content:encoded><![CDATA[The SpringStep BouncyBounce Max combines style and technology for an unmatched bouncing experience. Features:
+
+• Advanced SpringStep cushioning pods
+• Dynamic support frame
+• Breathable knit upper
+• Energy-returning midsole
+• Durable rubber outsole
+• Reflective elements
+• Cushioned collar and tongue
+
+Perfect for those who want to stand out while enjoying superior comfort. Available in eye-catching color combinations.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>
@@ -238,25 +394,80 @@
                 <wp:meta_value>instock</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
+                <wp:meta_key>_stock</wp:meta_key>
+                <wp:meta_value>75</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
                 <wp:meta_key>_sku</wp:meta_key>
                 <wp:meta_value>SS-BB-WHT</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_brand</wp:meta_key>
-                <wp:meta_value>SpringStep</wp:meta_value>
+                <wp:meta_key>_weight</wp:meta_key>
+                <wp:meta_value>0.85</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_color</wp:meta_key>
-                <wp:meta_value>White/Multi</wp:meta_value>
+                <wp:meta_key>_length</wp:meta_key>
+                <wp:meta_value>12</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_thumbnail_id</wp:meta_key>
-                <wp:meta_value>4</wp:meta_value>
+                <wp:meta_key>_width</wp:meta_key>
+                <wp:meta_value>4.5</wp:meta_value>
             </wp:postmeta>
-            <wp:attachment>
-                <wp:attachment_url>woo-product-images/SpringStep BouncyBounce Max.png</wp:attachment_url>
-                <wp:title>SpringStep BouncyBounce Max</wp:title>
-            </wp:attachment>
+            <wp:postmeta>
+                <wp:meta_key>_height</wp:meta_key>
+                <wp:meta_value>6</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_tax_status</wp:meta_key>
+                <wp:meta_value>taxable</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_tax_class</wp:meta_key>
+                <wp:meta_value></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_backorders</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sold_individually</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_virtual</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_downloadable</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_featured</wp:meta_key>
+                <wp:meta_value>yes</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_visibility</wp:meta_key>
+                <wp:meta_value>visible</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_purchase_note</wp:meta_key>
+                <wp:meta_value>Thank you for purchasing the SpringStep BouncyBounce Max! Get ready to bounce in style.</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_attributes</wp:meta_key>
+                <wp:meta_value>a:3:{s:4:"size";a:6:{s:4:"name";s:4:"Size";s:5:"value";s:23:"36|37|38|39|40|41|42|43";s:8:"position";s:1:"0";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:5:"color";a:6:{s:4:"name";s:5:"Color";s:5:"value";s:11:"White/Multi";s:8:"position";s:1:"1";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:7:"material";a:6:{s:4:"name";s:8:"Material";s:5:"value";s:33:"Knit Fabric, SpringFoam, Rubber";s:8:"position";s:1:"2";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}}</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_version</wp:meta_key>
+                <wp:meta_value>8.2.1</wp:meta_value>
+            </wp:postmeta>
+            <category domain="product_cat" nicename="lifestyle"><![CDATA[Lifestyle]]></category>
+            <category domain="product_cat" nicename="fashion"><![CDATA[Fashion]]></category>
+            <category domain="product_tag" nicename="stylish"><![CDATA[Stylish]]></category>
+            <category domain="product_tag" nicename="comfortable"><![CDATA[Comfortable]]></category>
+            <category domain="product_tag" nicename="spring-technology"><![CDATA[Spring Technology]]></category>
+            <category domain="product_tag" nicename="trendy"><![CDATA[Trendy]]></category>
+            <category domain="product_visibility" nicename="featured"><![CDATA[Featured]]></category>
         </item>
         <item>
             <title>SpringStep BouncyBounce Max Image</title>
@@ -285,7 +496,18 @@
         </item>
         <item>
             <title>CloudWalker Classic Float</title>
-            <content:encoded><![CDATA[Timeless design meets cloud-like comfort. The Classic Float features premium cloud material upper and durable rubber outsole.]]></content:encoded>
+            <excerpt:encoded><![CDATA[Timeless design meets modern comfort technology in this versatile everyday sneaker.]]></excerpt:encoded>
+            <content:encoded><![CDATA[The CloudWalker Classic Float combines timeless style with modern comfort technology. Features:
+
+• Premium cloud material upper
+• Memory foam insole
+• Lightweight EVA midsole
+• Durable rubber outsole
+• Classic design elements
+• Moisture-wicking lining
+• Padded collar and tongue
+
+Perfect for everyday wear, offering both style and comfort. A modern take on a classic design.]]></content:encoded>
             <wp:post_type>product</wp:post_type>
             <wp:status>publish</wp:status>
             <wp:postmeta>
@@ -301,50 +523,80 @@
                 <wp:meta_value>instock</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
+                <wp:meta_key>_stock</wp:meta_key>
+                <wp:meta_value>90</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
                 <wp:meta_key>_sku</wp:meta_key>
                 <wp:meta_value>CW-CF-WHT</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_brand</wp:meta_key>
-                <wp:meta_value>CloudWalker</wp:meta_value>
+                <wp:meta_key>_weight</wp:meta_key>
+                <wp:meta_value>0.7</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_color</wp:meta_key>
-                <wp:meta_value>White</wp:meta_value>
+                <wp:meta_key>_length</wp:meta_key>
+                <wp:meta_value>11</wp:meta_value>
             </wp:postmeta>
             <wp:postmeta>
-                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_key>_width</wp:meta_key>
+                <wp:meta_value>4</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_height</wp:meta_key>
                 <wp:meta_value>5</wp:meta_value>
             </wp:postmeta>
-            <wp:attachment>
-                <wp:attachment_url>woo-product-images/CloudWalker Classic Float.png</wp:attachment_url>
-                <wp:title>CloudWalker Classic Float</wp:title>
-            </wp:attachment>
-        </item>
-        <item>
-            <title>CloudWalker Classic Float Image</title>
-            <link>https://woocommerce-store.wordpress.org/?attachment_id=5</link>
-            <pubDate>Wed, 16 Jan 2024 13:02:00 +0000</pubDate>
-            <dc:creator>admin</dc:creator>
-            <guid isPermaLink="false">https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/woo-product-images/CloudWalker_Classic_Float.png</guid>
-            <description/>
-            <content:encoded><![CDATA[]]></content:encoded>
-            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
-            <wp:post_id>5</wp:post_id>
-            <wp:post_date>2024-01-16 13:02:00</wp:post_date>
-            <wp:post_date_gmt>2024-01-16 13:02:00</wp:post_date_gmt>
-            <wp:comment_status>open</wp:comment_status>
-            <wp:ping_status>closed</wp:ping_status>
-            <wp:post_name>cloudwalker-classic-float-png</wp:post_name>
-            <wp:status>inherit</wp:status>
-            <wp:post_parent>5</wp:post_parent>
-            <wp:menu_order>0</wp:menu_order>
-            <wp:post_type>attachment</wp:post_type>
-            <wp:attachment_url>https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/woo-product-images/CloudWalker_Classic_Float.png</wp:attachment_url>
             <wp:postmeta>
-                <wp:meta_key>_wc_attachment_source</wp:meta_key>
-                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/woo-product-images/CloudWalker_Classic_Float.png]]></wp:meta_value>
+                <wp:meta_key>_tax_status</wp:meta_key>
+                <wp:meta_value>taxable</wp:meta_value>
             </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_tax_class</wp:meta_key>
+                <wp:meta_value></wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_backorders</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sold_individually</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_virtual</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_downloadable</wp:meta_key>
+                <wp:meta_value>no</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_featured</wp:meta_key>
+                <wp:meta_value>yes</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_visibility</wp:meta_key>
+                <wp:meta_value>visible</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_purchase_note</wp:meta_key>
+                <wp:meta_value>Thank you for choosing the CloudWalker Classic Float! Experience timeless comfort with every step.</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_attributes</wp:meta_key>
+                <wp:meta_value>a:3:{s:4:"size";a:6:{s:4:"name";s:4:"Size";s:5:"value";s:23:"36|37|38|39|40|41|42|43";s:8:"position";s:1:"0";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:5:"color";a:6:{s:4:"name";s:5:"Color";s:5:"value";s:5:"White";s:8:"position";s:1:"1";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}s:7:"material";a:6:{s:4:"name";s:8:"Material";s:5:"value";s:39:"Premium Cloud Material, EVA Foam, Rubber";s:8:"position";s:1:"2";s:10:"is_visible";s:1:"1";s:12:"is_variation";s:1:"0";s:11:"is_taxonomy";s:1:"0";}}</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_product_version</wp:meta_key>
+                <wp:meta_value>8.2.1</wp:meta_value>
+            </wp:postmeta>
+            <category domain="product_cat" nicename="casual"><![CDATA[Casual]]></category>
+            <category domain="product_cat" nicename="classic"><![CDATA[Classic]]></category>
+            <category domain="product_tag" nicename="classic"><![CDATA[Classic]]></category>
+            <category domain="product_tag" nicename="comfortable"><![CDATA[Comfortable]]></category>
+            <category domain="product_tag" nicename="everyday"><![CDATA[Everyday]]></category>
+            <category domain="product_tag" nicename="versatile"><![CDATA[Versatile]]></category>
+            <category domain="product_visibility" nicename="featured"><![CDATA[Featured]]></category>
         </item>
         <item>
             <title>FloatMaster CloudTech Pro</title>

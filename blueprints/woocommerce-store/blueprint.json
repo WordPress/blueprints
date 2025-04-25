@@ -42,7 +42,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/products-and-media.xml"
+				"url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/products-and-media.wxr"
 			}
 		},
         {

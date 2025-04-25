@@ -36,20 +36,15 @@
     },
     "steps": [
         {
-            "step": "writeFile",
-            "path": "/wordpress/sample_products.xml",
-            "data": {
-                "resource": "url",
-                "url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/sample_products.xml"
-            }
-        },
+			"step": "resetData"
+		},
         {
-            "step": "importWxr",
-            "file": {
-                "resource": "vfs",
-                "path": "/wordpress/sample_products.xml"
-            }
-        },
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/sample_products.xml"
+			}
+		},
         {
             "step": "runPHP",
             "code": "<?php include 'wordpress/wp-load.php'; delete_transient('_wc_activation_redirect');"

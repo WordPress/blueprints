@@ -6,6 +6,14 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:wp="http://wordpress.org/export/1.2/">
     <channel>
+        <wp:author>
+            <wp:author_id>1</wp:author_id>
+            <wp:author_login>shopmanager</wp:author_login>
+            <wp:author_email>info@wordpress.org</wp:author_email>
+            <wp:author_display_name><![CDATA[Shop Manager]]></wp:author_display_name>
+            <wp:author_first_name><![CDATA[]]></wp:author_first_name>
+            <wp:author_last_name><![CDATA[]]></wp:author_last_name>
+        </wp:author>
         <wp:wxr_version>1.2</wp:wxr_version>
         <item>
             <title>ZoomZoom CloudWalker Pro</title>

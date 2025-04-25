@@ -1,0 +1,75 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "meta": {
+        "title": "Complete WooCommerce Store Setup",
+        "description": "A comprehensive WooCommerce store setup with essential plugins, payment gateways, sample products, and optimal configurations for an online store.",
+        "author": "WordPress Contributors",
+        "categories": ["woocommerce", "e-commerce", "store"]
+    },
+    "landingPage": "/wp-admin/admin.php?page=wc-settings",
+    "login": true,
+    "plugins": [
+        "woocommerce",
+        "woocommerce-admin",
+        "woocommerce-services",
+        "woocommerce-payments",
+        "mailpoet"
+    ],
+    "siteOptions": {
+        "blogname": "WooCommerce Demo Store",
+        "blogdescription": "Your One-Stop Shop for Running Shoes",
+        "woocommerce_store_address": "123 Store Street",
+        "woocommerce_store_city": "Store City",
+        "woocommerce_default_country": "US:CA",
+        "woocommerce_currency": "USD",
+        "woocommerce_currency_pos": "left",
+        "woocommerce_price_thousand_sep": ",",
+        "woocommerce_price_decimal_sep": ".",
+        "woocommerce_price_num_decimals": "2",
+        "woocommerce_default_gateway": "woocommerce_payments",
+        "woocommerce_email_from_name": "WooCommerce Demo Store",
+        "woocommerce_email_from_address": "store@example.com",
+        "woocommerce_calc_taxes": "yes",
+        "woocommerce_enable_coupons": "yes",
+        "woocommerce_enable_reviews": "yes",
+        "woocommerce_enable_shipping_calc": "yes",
+        "woocommerce_shipping_cost_requires_address": "no"
+    },
+    "steps": [
+        {
+            "step": "writeFile",
+            "path": "/wordpress/sample_products.xml",
+            "data": {
+                "resource": "url",
+                "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/sample_products.xml"
+            }
+        },
+        {
+            "step": "importWxr",
+            "file": {
+                "resource": "vfs",
+                "path": "/wordpress/sample_products.xml"
+            }
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php include 'wordpress/wp-load.php'; delete_transient('_wc_activation_redirect');"
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php include 'wordpress/wp-load.php'; update_option('woocommerce_stripe_settings', array('enabled' => 'yes', 'title' => 'Credit Card (Stripe)', 'description' => 'Pay with your credit card via Stripe.', 'testmode' => 'yes'));"
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php include 'wordpress/wp-load.php'; update_option('woocommerce_bacs_settings', array('enabled' => 'yes', 'title' => 'Direct Bank Transfer', 'description' => 'Make your payment directly into our bank account.'));"
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php include 'wordpress/wp-load.php'; update_option('woocommerce_cod_settings', array('enabled' => 'yes', 'title' => 'Cash on Delivery', 'description' => 'Pay with cash upon delivery.'));"
+        },
+        {
+            "step": "runPHP",
+            "code": "<?php include 'wordpress/wp-load.php'; update_option('woocommerce_flat_rate_settings', array('enabled' => 'yes', 'title' => 'Flat Rate Shipping', 'cost' => '10'));"
+        }
+    ]
+} 

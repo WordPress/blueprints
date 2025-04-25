@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/">
+    <channel>
+        <wp:wxr_version>1.2</wp:wxr_version>
+        <item>
+            <title>ZoomZoom CloudWalker Pro</title>
+            <content:encoded><![CDATA[The ZoomZoom CloudWalker Pro delivers cloud-like comfort with its revolutionary FloatTech cushioning. Perfect for both style and bouncing around town.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>150.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>150.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>ZZ-CW-BLK</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_weight</wp:meta_key>
+                <wp:meta_value>0.8</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_length</wp:meta_key>
+                <wp:meta_value>12</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_width</wp:meta_key>
+                <wp:meta_value>4</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_height</wp:meta_key>
+                <wp:meta_value>6</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>ZoomZoom</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>Black/White</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>1</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/ZoomZoom CloudWalker Pro.png</wp:attachment_url>
+                <wp:title>ZoomZoom CloudWalker Pro</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>ZoomZoom CloudWalker Pro Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=1</link>
+            <pubDate>Wed, 16 Jan 2024 13:01:56 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/ZoomZoom_CloudWalker_Pro.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>1</wp:post_id>
+            <wp:post_date>2024-01-16 13:01:56</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:01:56</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>zoomzoom-cloudwalker-pro-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>1</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/ZoomZoom_CloudWalker_Pro.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/ZoomZoom_CloudWalker_Pro.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>BounceMaster SuperSpring Elite</title>
+            <content:encoded><![CDATA[Experience ultimate bounce with the BounceMaster SuperSpring Elite. Features SpringTech cushioning and a responsive FlexFit upper for a perfect bounce.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>180.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>180.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>BM-SS-GRY</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_weight</wp:meta_key>
+                <wp:meta_value>0.7</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>BounceMaster</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>Grey/White</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>2</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/BounceMaster SuperSpring Elite.png</wp:attachment_url>
+                <wp:title>BounceMaster SuperSpring Elite</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>BounceMaster SuperSpring Elite Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=2</link>
+            <pubDate>Wed, 16 Jan 2024 13:01:57 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/BounceMaster_SuperSpring_Elite.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>2</wp:post_id>
+            <wp:post_date>2024-01-16 13:01:57</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:01:57</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>bouncemaster-superspring-elite-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>2</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/BounceMaster_SuperSpring_Elite.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/BounceMaster_SuperSpring_Elite.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>FloatFeet CloudHopper X</title>
+            <content:encoded><![CDATA[Premium floating shoe with CloudTech midsole for maximum bounce and energy return. Perfect for those who want to feel like they're walking on clouds.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>160.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sale_price</wp:meta_key>
+                <wp:meta_value>140.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>140.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>FF-CH-BLK</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>FloatFeet</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>Black/Blue</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>3</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/FloatFeet CloudHopper X.png</wp:attachment_url>
+                <wp:title>FloatFeet CloudHopper X</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>FloatFeet CloudHopper X Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=3</link>
+            <pubDate>Wed, 16 Jan 2024 13:01:58 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/FloatFeet_CloudHopper_X.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>3</wp:post_id>
+            <wp:post_date>2024-01-16 13:01:58</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:01:58</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>floatfeet-cloudhopper-x-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>3</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/FloatFeet_CloudHopper_X.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/FloatFeet_CloudHopper_X.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>SpringStep BouncyBounce Max</title>
+            <content:encoded><![CDATA[Chunky sneaker with extra bounce and superior comfort. Features SpringStep technology for enhanced floating and a modern aesthetic.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>120.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>120.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>SS-BB-WHT</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>SpringStep</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>White/Multi</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>4</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/SpringStep BouncyBounce Max.png</wp:attachment_url>
+                <wp:title>SpringStep BouncyBounce Max</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>SpringStep BouncyBounce Max Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=4</link>
+            <pubDate>Wed, 16 Jan 2024 13:01:59 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/SpringStep_BouncyBounce_Max.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>4</wp:post_id>
+            <wp:post_date>2024-01-16 13:01:59</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:01:59</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>springstep-bouncybounce-max-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>4</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/SpringStep_BouncyBounce_Max.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/SpringStep_BouncyBounce_Max.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>CloudWalker Classic Float</title>
+            <content:encoded><![CDATA[Timeless design meets cloud-like comfort. The Classic Float features premium cloud material upper and durable rubber outsole.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>80.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>80.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>CW-CF-WHT</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>CloudWalker</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>White</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>5</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/CloudWalker Classic Float.png</wp:attachment_url>
+                <wp:title>CloudWalker Classic Float</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>CloudWalker Classic Float Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=5</link>
+            <pubDate>Wed, 16 Jan 2024 13:02:00 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/CloudWalker_Classic_Float.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>5</wp:post_id>
+            <wp:post_date>2024-01-16 13:02:00</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:02:00</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>cloudwalker-classic-float-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>5</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/CloudWalker_Classic_Float.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/CloudWalker_Classic_Float.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>FloatMaster CloudTech Pro</title>
+            <content:encoded><![CDATA[Premium floating shoe with CloudTech cushioning. Features FloatFoam technology for lightweight, cloud-like comfort.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>160.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sale_price</wp:meta_key>
+                <wp:meta_value>140.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>140.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>FM-CT-BLK</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>FloatMaster</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>Black/Red</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>6</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/FloatMaster CloudTech Pro.png</wp:attachment_url>
+                <wp:title>FloatMaster CloudTech Pro</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>FloatMaster CloudTech Pro Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=6</link>
+            <pubDate>Wed, 16 Jan 2024 13:02:01 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/FloatMaster_CloudTech_Pro.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>6</wp:post_id>
+            <wp:post_date>2024-01-16 13:02:01</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:02:01</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>floatmaster-cloudtech-pro-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>6</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/FloatMaster_CloudTech_Pro.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/FloatMaster_CloudTech_Pro.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>BounceStep Classic Hop</title>
+            <content:encoded><![CDATA[Iconic bouncing sneaker with timeless style. The Classic Hop features a durable bounce material upper and spring-loaded outsole.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>65.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>65.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>BS-CH-BLK</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>BounceStep</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>Black</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>7</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/BounceStep Classic Hop.png</wp:attachment_url>
+                <wp:title>BounceStep Classic Hop</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>BounceStep Classic Hop Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=7</link>
+            <pubDate>Wed, 16 Jan 2024 13:02:02 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/BounceStep_Classic_Hop.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>7</wp:post_id>
+            <wp:post_date>2024-01-16 13:02:02</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:02:02</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>bouncestep-classic-hop-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>7</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/BounceStep_Classic_Hop.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/BounceStep_Classic_Hop.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>CloudHopper Float Classic</title>
+            <content:encoded><![CDATA[Classic floating shoe with signature cloud stripe. The Float Classic features durable cloud material and vulcanized rubber sole.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>75.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>75.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>CH-FC-BLK</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>CloudHopper</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>Black/White</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>8</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/CloudHopper Float Classic.png</wp:attachment_url>
+                <wp:title>CloudHopper Float Classic</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>CloudHopper Float Classic Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=8</link>
+            <pubDate>Wed, 16 Jan 2024 13:02:03 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/CloudHopper_Float_Classic.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>8</wp:post_id>
+            <wp:post_date>2024-01-16 13:02:03</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:02:03</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>cloudhopper-float-classic-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>8</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/CloudHopper_Float_Classic.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/CloudHopper_Float_Classic.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+        <item>
+            <title>SpringMaster CloudRunner Elite</title>
+            <content:encoded><![CDATA[Innovative running shoe with SpringTech cushioning. Features zero-gravity feel and superior bounce for long-distance floating.]]></content:encoded>
+            <wp:post_type>product</wp:post_type>
+            <wp:status>publish</wp:status>
+            <wp:postmeta>
+                <wp:meta_key>_regular_price</wp:meta_key>
+                <wp:meta_value>140.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_price</wp:meta_key>
+                <wp:meta_value>140.00</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_stock_status</wp:meta_key>
+                <wp:meta_value>instock</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_sku</wp:meta_key>
+                <wp:meta_value>SM-CR-GRY</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_brand</wp:meta_key>
+                <wp:meta_value>SpringMaster</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_color</wp:meta_key>
+                <wp:meta_value>Grey/Black</wp:meta_value>
+            </wp:postmeta>
+            <wp:postmeta>
+                <wp:meta_key>_thumbnail_id</wp:meta_key>
+                <wp:meta_value>9</wp:meta_value>
+            </wp:postmeta>
+            <wp:attachment>
+                <wp:attachment_url>woo-product-images/SpringMaster CloudRunner Elite.png</wp:attachment_url>
+                <wp:title>SpringMaster CloudRunner Elite</wp:title>
+            </wp:attachment>
+        </item>
+        <item>
+            <title>SpringMaster CloudRunner Elite Image</title>
+            <link>https://woocommerce-store.wordpress.org/?attachment_id=9</link>
+            <pubDate>Wed, 16 Jan 2024 13:02:04 +0000</pubDate>
+            <dc:creator>admin</dc:creator>
+            <guid isPermaLink="false">https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/SpringMaster_CloudRunner_Elite.png</guid>
+            <description/>
+            <content:encoded><![CDATA[]]></content:encoded>
+            <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+            <wp:post_id>9</wp:post_id>
+            <wp:post_date>2024-01-16 13:02:04</wp:post_date>
+            <wp:post_date_gmt>2024-01-16 13:02:04</wp:post_date_gmt>
+            <wp:comment_status>open</wp:comment_status>
+            <wp:ping_status>closed</wp:ping_status>
+            <wp:post_name>springmaster-cloudrunner-elite-png</wp:post_name>
+            <wp:status>inherit</wp:status>
+            <wp:post_parent>9</wp:post_parent>
+            <wp:menu_order>0</wp:menu_order>
+            <wp:post_type>attachment</wp:post_type>
+            <wp:attachment_url>https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/SpringMaster_CloudRunner_Elite.png</wp:attachment_url>
+            <wp:postmeta>
+                <wp:meta_key>_wc_attachment_source</wp:meta_key>
+                <wp:meta_value><![CDATA[https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/woo-product-images/SpringMaster_CloudRunner_Elite.png]]></wp:meta_value>
+            </wp:postmeta>
+        </item>
+    </channel>
+</rss> 

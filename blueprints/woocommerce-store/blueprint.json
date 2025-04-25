@@ -41,7 +41,7 @@
             "path": "/wordpress/sample_products.xml",
             "data": {
                 "resource": "url",
-                "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-store/sample_products.xml"
+                "url": "https://raw.githubusercontent.com/rtio/blueprints/rtio/woo-e2e-store-test/blueprints/woocommerce-store/sample_products.xml"
             }
         },
         {

@@ -38,7 +38,7 @@ Here's what it looks like in VS Code:
 
 ### 2. Set the site title to "My first Blueprint"
 
-Blueprints consist of a series of [steps]((https://wordpress.github.io/wordpress-playground/blueprints-api/steps)) that define how to build a WordPress site. Before you write the first step, declare an empty list of steps:
+Blueprints consist of a series of [steps](https://wordpress.github.io/wordpress-playground/blueprints-api/steps) that define how to build a WordPress site. Before you write the first step, declare an empty list of steps:
 
 ```json
 {
@@ -82,7 +82,7 @@ You can specify some steps using a shorthand syntax. For example, you could writ
 }
 ```
 
-The shorthand syntax and the step syntax correspond with each other. Every step specified with the shorthand syntax is automatically added at the beginning of the `steps` array in an arbitrary order. Which should you choose? Use shorthands when brevity is your main concern, use steps when you need more control over the order of execution.
+Every step specified with the shorthand syntax is automatically added at the beginning of the Blueprint's execution, before any explicitly defined `steps` array. The order among multiple shorthands is not guaranteed. Which should you choose? Use shorthands when brevity is your main concern, and use explicit steps when you require more control over the order of execution.
 
 ### 3. Install the _Adventurer_ theme
 
@@ -113,7 +113,7 @@ The site should now look like the screenshot below:
 
 ### Resources
 
-The `themeZipFile` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/) and referrences an external file required to complete the step. Playground supports different types of resources, including
+The `themeZipFile` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/) and references an external file required to complete the step. Playground supports different types of resources, including
 - `url`,
 - `wordpress.org/themes`,
 - `wordpress.org/plugins`,
@@ -181,7 +181,7 @@ function my_custom_plugin() {
 add_action('admin_notices', 'my_custom_plugin');
 ```
 
-You can use the [installPlugin](https://wordpress.github.io/wordpress-playground/blueprints-api/steps#InstallPluginStep), but that requires creating a ZIP file. Let's start with something different to see if the plugin works:
+While you could use the [installPlugin](https://wordpress.github.io/wordpress-playground/blueprints-api/steps#InstallPluginStep) step for this, it typically requires creating a ZIP file. To demonstrate direct file creation and activation, let's start with something different:
 
 1. Create a `wp-content/plugins/hello-from-the-dashboard` directory using the [`mkdir` step](https://wordpress.github.io/wordpress-playground/blueprints-api/steps#MkdirStep).
 2. Write a `plugin.php` file using the [`writeFile` step](https://wordpress.github.io/wordpress-playground/blueprints-api/steps#WriteFileStep). 
@@ -340,7 +340,7 @@ Finally, let's delete the default content of the site and import a new one from 
 
 ### Delete the old content
 
-There isn't a Blueprint step to delete the default content, but you can do that with a snippet of PHP code:
+While there isn't a dedicated Blueprint step to delete default content, you can achieve this using a snippet of PHP code via the `runPHP` step:
 
 ```php
 <?php
@@ -423,5 +423,5 @@ And that's it. Congratulations on creating your first Blueprint! 🥳
 **Table of contents**
 1. [What are Blueprints, and what can you do with them?](./what-are-blueprints-what-you-can-do-with-them.md)
 2. [How to load and run Blueprints?](./how-to-load-run-blueprints.md)
-3. Build your first Blueprint
+3. 👉 Build your first Blueprint
 4. [Troubleshoot and debug Blueprints](./troubleshoot-debug-blueprints.md)

@@ -1,0 +1,34 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Creating a new user for the blog",
+		"description": "This is a simple example to update user meta data",
+		"author": "fellyph",
+		"categories": ["meta"]
+	},
+	"landingPage": "/wp-admin/users.php",
+	"login": true,
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "updateUserMeta",
+			"meta": {
+				"first_name": "John",
+				"last_name": "Doe",
+				"admin_color": "midnight",
+				"nickname": "Johny",
+				"description": "This is the biographical info from John Doe."
+			},
+			"userId": 1
+		}
+	],
+	"siteOptions": {
+		"blogname": "John Boe Blog",
+		"blogdescription": "Everything about Blueprints"
+	}
+}

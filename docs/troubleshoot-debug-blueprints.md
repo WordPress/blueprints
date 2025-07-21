@@ -4,7 +4,7 @@ When you build Blueprints, you might run into issues. Here are tips and tools to
 
 ## Review common gotchas
 
-- Require `wp-load`: to run a WordPress PHP function using the `runPHP` step, you would need to require [wp-load.php](https://github.com/WordPress/WordPress/blob/master/wp-load.php). So, the value of the `code` key should start with `"<?php require_once('/wordpress/wp-load.php'); REST_OF_YOUR_CODE"`.
+- Require `wp-load`: to run a WordPress PHP function using the `runPHP` step, you would need to require [wp-load.php](https://github.com/WordPress/WordPress/blob/master/wp-load.php). So, the value of the `code` key should start with `"<?php require_once('/wordpress/wp-load.php'); /* Your PHP code here */"`.
 - Enable `networking`: to access wp.org assets (themes, plugins, blocks, or patterns), or load a stylesheet using [add_editor_style()](https://developer.wordpress.org/reference/functions/add_editor_style/) (say, when [creating a custom block style](https://developer.wordpress.org/news/2023/02/creating-custom-block-styles-in-wordpress-themes)), you would need to enable the `networking` option: `"features": {"networking": true}`.
 
 ## Blueprints Builder
@@ -12,7 +12,7 @@ When you build Blueprints, you might run into issues. Here are tips and tools to
 You can use an in-browser [Blueprints editor](https://playground.wordpress.net/builder/builder.html) to build, validate, and preview your Blueprints in the browser. 
 
 > [!CAUTION]
-> The editor is under development and the embedded Playground sometimes fails to load. To get around it, refresh the page. We're aware of that, and are working to improve the experience.
+> The editor is currently under development, and the embedded Playground sometimes fails to load. If this happens, refresh the page. We are aware of this issue and are working to improve the experience.
 
 ## Check for errors in the browser console
 
@@ -32,7 +32,7 @@ The community is here to help! If you have questions or comments, [open a new is
 - The Blueprint you’re trying to run.
 - The error message you’re seeing, if any.
 - The full output from the browser developer tools.
-- Any other relevant information that might help us understand the issue: OS, broswer version, etc.
+- Any other relevant information that might help us understand the issue: OS, browser version, etc.
 
 ***
 
@@ -40,4 +40,4 @@ The community is here to help! If you have questions or comments, [open a new is
 1. [What are Blueprints, and what can you do with them?](./what-are-blueprints-what-you-can-do-with-them.md)
 2. [How to load and run Blueprints?](./how-to-load-run-blueprints.md)
 3. [Build your first Blueprint](./build-your-first-blueprint.md)
-4. Troubleshoot and debug Blueprints
+4. 👉 Troubleshoot and debug Blueprints

@@ -7,9 +7,6 @@
 		"categories": ["Editor", "theme"]
 	},
 	"plugins": ["create-block-theme"],
-	"features": {
-		"networking": true
-	},
 	"login": true,
 	"landingPage": "/wp-admin/site-editor.php"
 }

@@ -7,9 +7,6 @@
 		"categories": ["rss", "social web"]
 	},
 	"landingPage": "/friends/?refresh&welcome",
-	"features": {
-		"networking": true
-	},
 	"plugins": ["friends", "activitypub"],
 	"siteOptions": {
 		"permalink_structure": "/%postname%/"

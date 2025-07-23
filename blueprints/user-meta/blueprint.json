@@ -8,9 +8,6 @@
 	},
 	"landingPage": "/wp-admin/users.php",
 	"login": true,
-	"features": {
-		"networking": true
-	},
 	"steps": [
 		{
 			"step": "resetData"

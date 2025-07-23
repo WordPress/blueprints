@@ -8,9 +8,6 @@
 	},
 	"landingPage": "/",
 	"login": true,
-	"features": {
-		"networking": true
-	},
 	"preferredVersions": {
 		"php": "8.0",
 		"wp": "beta"

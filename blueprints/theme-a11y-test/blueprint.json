@@ -10,9 +10,6 @@
 		"php": "8.0",
 		"wp": "beta"
 	},
-	"features": {
-		"networking": true
-	},
 	"login": true,
 	"plugins": ["create-block-theme"],
 	"steps": [

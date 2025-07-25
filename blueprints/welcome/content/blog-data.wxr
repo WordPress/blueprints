@@ -75,7 +75,7 @@
 	<generator>https://wordpress.org/?v=6.8.2</generator>
 
 <image>
-	<urlhttps://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo-150x150.png</url>
+	<url>https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo-150x150.png</url>
 	<title>Welcome to WordPress Playground</title>
 	<link>/</link>
 	<width>32</width>

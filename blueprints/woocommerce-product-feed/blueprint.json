@@ -11,9 +11,6 @@
 		"php": "latest",
 		"wp": "latest"
 	},
-	"features": {
-		"networking": true
-	},
 	"login": true,
 	"plugins": ["woocommerce", "webtoffee-product-feed"],
 	"steps": [

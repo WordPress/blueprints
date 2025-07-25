@@ -26,6 +26,14 @@
       "theme"
     ]
   },
+  "blueprints/user-meta/blueprint.json": {
+    "title": "Creating a new user for the blog",
+    "description": "This is a simple example to update user meta data",
+    "author": "fellyph",
+    "categories": [
+      "meta"
+    ]
+  },
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
     "description": "Blueprint that added a custom post type to playground",

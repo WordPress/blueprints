@@ -11,9 +11,6 @@
 		"php": "8.3",
 		"wp": "latest"
 	},
-	"features": {
-		"networking": true
-	},
 	"login": true,
 	"plugins": ["woocommerce"],
 	"steps": [

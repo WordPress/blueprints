@@ -7,9 +7,6 @@
 		"categories": ["Themes", "Starter Content"]
 	},
 	"landingPage": "/",
-	"features": {
-		"networking": true
-	},
 	"steps": [
 		{
 			"step": "installTheme",

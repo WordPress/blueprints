@@ -1,0 +1,30 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"steps": [
+		{
+			"step": "runPHP",
+			"code": "<?php require_once '/wordpress/wp-load.php';\nforeach ( array( 'post', 'page', 'attachment', 'revision', 'nav_menu_item' ) as $post_type ) {\n$posts = get_posts( array('posts_per_page' => -1, 'post_type' => $post_type ) );\nforeach ($posts as $post) wp_delete_post($post->ID, true);\n}"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
+			"data": "<?php add_action('after_setup_theme',function(){$u='https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png';$i=get_option('github_imported_logo_id');if(!$i||!wp_get_attachment_url($i)){require_once(ABSPATH.'wp-admin/includes/media.php');require_once(ABSPATH.'wp-admin/includes/file.php');require_once(ABSPATH.'wp-admin/includes/image.php');$r=wp_remote_get($u);if(!is_wp_error($r)&&wp_remote_retrieve_response_code($r)===200){$d=wp_upload_dir();$f=$d['path'].'/playground-logo.png';file_put_contents($f,wp_remote_retrieve_body($r));$i=media_handle_sideload(['name'=>'playground-logo.png','tmp_name'=>$f],0);if(file_exists($f))unlink($f);if(!is_wp_error($i))update_option('github_imported_logo_id',$i);}}if($i){if(!has_custom_logo())set_theme_mod('custom_logo',$i);if(!has_site_icon())update_option('site_icon',$i);}});?>"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/content/blog-data.wxr"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Welcome to WordPress Playground",
+				"blogdescription": "WordPress without a server",
+				"show_on_front": "page",
+				"page_on_front": 2
+			}
+		}
+	]
+}

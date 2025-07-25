@@ -89,8 +89,8 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://localhost:8881/?page_id=2</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/cover-image-playground.png","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained","contentSize":"1120px"}} -->
-<div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/cover-image-playground.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","justifyContent":"left","contentSize":"50%"}} -->
+		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained","contentSize":"1120px"}} -->
+<div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","justifyContent":"left","contentSize":"50%"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":1,"fontSize":"xx-large"} -->
 <h1 class="wp-block-heading has-text-align-left has-xx-large-font-size">Run WordPress <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">directly in your browser</mark></h1>
 <!-- /wp:heading -->
@@ -143,19 +143,19 @@
 <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|30","left":"32px"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json"><img src="https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/thumbnail-playground-1.png" alt="handyman tools and equipment arranged neatly on a workbench, with a professional and approachable look"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json" data-type="link" data-id="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json">StylePress</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-1.png" alt="handyman tools and equipment arranged neatly on a workbench, with a professional and approachable look"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json" data-type="link" data-id="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json">StylePress</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json"><img src="https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/thumbnail-playground-2.png" alt="ecommerce store concept, showcasing online shopping with cart, products, and digital elements"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json">Woocommerce Store</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-2.png" alt="ecommerce store concept, showcasing online shopping with cart, products, and digital elements"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json">Woocommerce Store</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?lazy"><img src="https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/thumbnail-playground-3.png" alt="a white room with a canvas displaying a drawing of a website wireframe, representing a blank canvas website concept"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?lazy">Blank Canvas</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?lazy"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-3.png" alt="a white room with a canvas displaying a drawing of a website wireframe, representing a blank canvas website concept"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?lazy">Blank Canvas</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -331,7 +331,7 @@
 		<link>/playground-logo-1/</link>
 		<pubDate>Fri, 25 Jul 2025 09:22:57 +0000</pubDate>
 		<dc:creator><![CDATA[]]></dc:creator>
-		<guid isPermaLink="false"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -349,7 +349,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/playground-logo.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2025/07/playground-logo.png]]></wp:meta_value>
@@ -480,7 +480,7 @@
 		<link>/playground-logo-1-2/</link>
 		<pubDate>Fri, 25 Jul 2025 09:03:56 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -498,7 +498,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/playground-logo.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2025/07/playground-logo.png]]></wp:meta_value>
@@ -1146,7 +1146,7 @@
 		<link>/sample-page/cover-image-playground/</link>
 		<pubDate>Fri, 25 Jul 2025 08:49:35 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1164,7 +1164,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/fellyph/blueprints-demos/refs/heads/main/demos/assets/imgs/cover-image-playground.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2025/07/cover-image-playground.png]]></wp:meta_value>

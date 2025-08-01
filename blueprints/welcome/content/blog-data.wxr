@@ -87,7 +87,7 @@
 		<link>/</link>
 		<pubDate>Tue, 17 Jun 2025 08:11:38 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?page_id=2</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?page_id=2</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","justifyContent":"left","contentSize":"50%"}} -->
@@ -143,19 +143,19 @@
 <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|30","left":"32px"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-1.png" alt="handyman tools and equipment arranged neatly on a workbench, with a professional and approachable look"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json" data-type="link" data-id="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json">StylePress</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-1.webp" alt="handyman tools and equipment arranged neatly on a workbench, with a professional and approachable look"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json" data-type="link" data-id="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json">StylePress</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-2.png" alt="ecommerce store concept, showcasing online shopping with cart, products, and digital elements"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json">Woocommerce Store</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-2.webp" alt="ecommerce store concept, showcasing online shopping with cart, products, and digital elements"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json">Woocommerce Store</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?lazy"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-3.png" alt="a white room with a canvas displaying a drawing of a website wireframe, representing a blank canvas website concept"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?lazy">Blank Canvas</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?lazy"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-3.webp" alt="a white room with a canvas displaying a drawing of a website wireframe, representing a blank canvas website concept"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?lazy">Blank Canvas</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -513,7 +513,7 @@
 		<link>/2025/06/17/navigation/</link>
 		<pubDate>Tue, 17 Jun 2025 08:11:38 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=4</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=4</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Documentation","url":"Documentation","kind":"custom"} /-->
 
@@ -551,7 +551,7 @@
 		<link>/2025/06/17/wp-global-styles-twentytwentyfive/</link>
 		<pubDate>Tue, 17 Jun 2025 08:12:04 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=5</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=5</guid>
 		<description></description>
 		<content:encoded><![CDATA[{"styles":{"blocks":{"core\/button":{"border":{"radius":"0px"},"typography":{"fontFamily":"var(--wp--preset--font-family--manrope)","textTransform":"uppercase","fontStyle":"normal","fontWeight":"600"}}},"elements":{"button":{"color":{"background":"var(--wp--preset--color--accent-2)"},"typography":{"textTransform":"none"}},"heading":{"typography":{"fontStyle":"normal","fontWeight":"400","fontFamily":"var(--wp--preset--font-family--eb-garamond)","textTransform":"none","lineHeight":"1.5","letterSpacing":"0px"}}},"color":{"text":"var(--wp--preset--color--accent-4)"},"typography":{"fontStyle":"normal","fontWeight":"300","fontSize":"var(--wp--preset--font-size--medium)","letterSpacing":"0px","fontFamily":"var:preset|font-family|manrope","lineHeight":"1.5"}},"settings":{"color":{"palette":{"theme":[{"color":"#FFFFFF","name":"Base","slug":"base"},{"color":"#f2f6f3","name":"Contrast","slug":"contrast"},{"color":"#FFEE58","name":"Accent 1","slug":"accent-1"},{"color":"#1960d9","name":"Accent 2","slug":"accent-2"},{"color":"#1960d9","name":"Accent 3","slug":"accent-3"},{"color":"#1e1e1e","name":"Accent 4","slug":"accent-4"},{"color":"#FBFAF3","name":"Accent 5","slug":"accent-5"},{"color":"color-mix(in srgb, currentColor 20%, transparent)","name":"Accent 6","slug":"accent-6"}]}},"typography":{"fontFamilies":{"theme":[{"name":"Manrope","slug":"manrope","fontFamily":"Manrope, sans-serif","fontFace":[{"src":["file:.\/assets\/fonts\/manrope\/Manrope-VariableFont_wght.woff2"],"fontWeight":"200 800","fontStyle":"normal","fontFamily":"Manrope"}]},{"name":"Fira Code","slug":"fira-code","fontFamily":"\"Fira Code\", monospace","fontFace":[{"src":["file:.\/assets\/fonts\/fira-code\/FiraCode-VariableFont_wght.woff2"],"fontWeight":"300 700","fontStyle":"normal","fontFamily":"\"Fira Code\""}]}],"custom":[]}}},"isGlobalStylesUserThemeJSON":true,"version":3}]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -592,7 +592,7 @@
 		<link>/2025/06/17/page/</link>
 		<pubDate>Tue, 17 Jun 2025 08:19:21 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=8</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=8</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:template-part {"slug":"header","theme":"twentytwentyfive"} /-->
 
@@ -641,7 +641,7 @@
 		<link>/2025/06/17/header/</link>
 		<pubDate>Tue, 17 Jun 2025 08:19:21 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=9</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=9</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|30","bottom":"var:preset|spacing|30","left":"var:preset|spacing|30","right":"var:preset|spacing|30"}}},"backgroundColor":"accent-4","layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group has-accent-4-background-color has-background" style="padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -693,7 +693,7 @@
 		<link>/?p=23</link>
 		<pubDate></pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=23</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=23</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"D","url":"#"} /-->
 
@@ -739,7 +739,7 @@
 		<link>/2025/07/03/footer/</link>
 		<pubDate>Thu, 03 Jul 2025 09:33:39 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=40</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=40</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:group {"metadata":{"categories":["footer"],"patternName":"twentytwentyfive/footer","name":"Footer"},"style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
@@ -842,7 +842,7 @@
 		<link>/2025/07/03/footer-menu-2/</link>
 		<pubDate>Thu, 03 Jul 2025 10:41:52 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=41</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=41</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Shop","url":"#"} /-->
 
@@ -886,15 +886,15 @@
 		<link>/2025/07/03/footer-menu-3/</link>
 		<pubDate>Thu, 03 Jul 2025 10:41:52 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=42</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=42</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Make WordPress Blog","url":"#"} /-->
+		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Make WordPress Blog","url":"https://make.wordpress.org/playground/"} /-->
 
-<!-- wp:navigation-link {"label":"Documentation","url":"#"} /-->
+<!-- wp:navigation-link {"label":"Documentation","url":"https://wordpress.github.io/wordpress-playground/"} /-->
 
-<!-- wp:navigation-link {"label":"GitHub","url":"#"} /-->
+<!-- wp:navigation-link {"label":"GitHub","url":"https://github.com/WordPress/wordpress-playground"} /-->
 
-<!-- wp:navigation-link {"label":"Contribute to the project","url":"#"} /-->]]></content:encoded>
+]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>42</wp:post_id>
 		<wp:post_date><![CDATA[2025-07-03 10:41:52]]></wp:post_date>
@@ -932,32 +932,28 @@
 		<link>/2025/07/03/footer-columns/</link>
 		<pubDate>Thu, 03 Jul 2025 11:21:45 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=67</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=67</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"accent-4","textColor":"base","layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group has-base-color has-accent-4-background-color has-text-color has-background has-link-color" style="padding-top:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50)"><!-- wp:group {"align":"wide","layout":{"type":"default"}} -->
-<div class="wp-block-group alignwide"><!-- wp:group {"align":"full","fontSize":"small","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"top"}} -->
+<div class="wp-block-group alignwide"><!-- wp:group {"align":"full","fontSize":"small","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"right","verticalAlignment":"top"}} -->
 <div class="wp-block-group alignfull has-small-font-size"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|20","padding":{"top":"0","bottom":"0","left":"0","right":"0"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
 <div class="wp-block-group"><!-- wp:site-logo {"width":30} /-->
 
 <!-- wp:heading {"level":3,"fontSize":"large"} -->
-<h3 class="wp-block-heading has-large-font-size">What is new on Playground?</h3>
+<h3 class="wp-block-heading has-large-font-size">Learn more about Playground</h3>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
-<!-- wp:rss {"feedURL":"https://make.wordpress.org/playground/"} /--></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|80"}},"layout":{"type":"flex","flexWrap":"wrap"}} -->
-<div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group" style="padding-right:0;padding-left:0"><!-- wp:navigation {"ref":68,"overlayMenu":"never","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"fontSize":"medium","layout":{"type":"flex","orientation":"vertical"},"ariaLabel":"Featured"} /--></div>
+<!-- wp:group {"style":{"spacing":{"padding":{"right":"0","left":"0"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-right:0;padding-left:0"><!-- wp:navigation {"ref":68,"overlayMenu":"never","style":{"spacing":{"blockGap":"var:preset|spacing|20"}},"fontSize":"medium","layout":{"type":"flex","orientation":"vertical","justifyContent":"right"},"ariaLabel":"Featured"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:spacer {"height":"var:preset|spacing|60"} -->
-<div style="height:var(--wp--preset--spacing--60)" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- wp:spacer {"height":"var:preset|spacing|40"} -->
+<div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
 <!-- /wp:spacer -->
 
 <!-- wp:group {"align":"full","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
@@ -1015,15 +1011,17 @@
 		<link>/2025/07/03/menu/</link>
 		<pubDate>Thu, 03 Jul 2025 11:27:14 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=68</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=68</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Documentation","url":"#"} /-->
+		<content:encoded><![CDATA[<!-- wp:navigation-link {"label":"Documentation","url":"https://wordpress.github.io/wordpress-playground/"} /-->
 
-<!-- wp:navigation-link {"label":"Slack Channel","url":"#"} /-->
+<!-- wp:navigation-link {"label":"Slack Channel","url":"https://wordpress.slack.com/archives/C04EWKGDJ0K"} /-->
 
-<!-- wp:navigation-link {"label":"GitHub","url":"#"} /-->
+<!-- wp:navigation-link {"label":"GitHub","url":"https://github.com/WordPress/wordpress-playground"} /-->
 
-<!-- wp:navigation-link {"label":"Do you find a bug?","url":"#"} /-->]]></content:encoded>
+<!-- wp:navigation-link {"label":"Playground Blog","url":"https://make.wordpress.org/playground/"} /-->
+
+<!-- wp:navigation-link {"label":"Did you find a bug?","url":"https://github.com/WordPress/wordpress-playground/issues/new"} /-->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>68</wp:post_id>
 		<wp:post_date><![CDATA[2025-07-03 11:27:14]]></wp:post_date>
@@ -1061,7 +1059,7 @@
 		<link>/2025/07/03/home/</link>
 		<pubDate>Thu, 03 Jul 2025 11:30:17 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://localhost:8881/?p=72</guid>
+		<guid isPermaLink="false">https://playground.wordpress.net/?p=72</guid>
 		<description></description>
 		<content:encoded><![CDATA[<!-- wp:template-part {"slug":"header","theme":"twentytwentyfive"} /-->
 

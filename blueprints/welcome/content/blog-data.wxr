@@ -143,19 +143,19 @@
 <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|30","left":"32px"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-1.webp" alt="handyman tools and equipment arranged neatly on a workbench, with a professional and approachable look"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json" data-type="link" data-id="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json">StylishPress</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-1.webp" alt="handyman tools and equipment arranged neatly on a workbench, with a professional and approachable look"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json" data-type="link" data-id="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/stylish-press/blueprint.json">StylishPress</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-2.webp" alt="ecommerce store concept, showcasing online shopping with cart, products, and digital elements"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json">Woocommerce Store</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-2.webp" alt="ecommerce store concept, showcasing online shopping with cart, products, and digital elements"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/woo-shipping/blueprint.json">Woocommerce Store</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","width":"33.33%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:33.33%"><!-- wp:image {"lightbox":{"enabled":false},"sizeSlug":"large","linkDestination":"custom"} -->
-<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?lazy"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-3.webp" alt="a white room with a canvas displaying a drawing of a website wireframe, representing a blank canvas website concept"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?lazy">Blank Canvas</a></figcaption></figure>
+<figure class="wp-block-image size-large"><a href="https://playground.wordpress.net/?lazy"><img src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/thumbnail-playground-3.webp" alt="a white room with a canvas displaying a drawing of a website wireframe, representing a blank canvas website concept"/></a><figcaption class="wp-element-caption"><a href="https://playground.wordpress.net/?lazy" target="_blank" rel="noopener noreferrer">Blank Canvas</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -174,7 +174,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
-<p class="has-text-align-left">WordPress playground is available for developer, check their progress on plugins/themes developement and run test automation with the <a href="https://www.npmjs.com/package/@wp-playground/cli">WordPress playground CLI</a>.</p>
+<p class="has-text-align-left">WordPress playground is available for developer, check their progress on plugins/themes developement and run test automation with the <a href="https://www.npmjs.com/package/@wp-playground/cli" target="_blank" rel="noopener noreferrer">WordPress playground CLI</a>.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code {"style":{"elements":{"link":{"color":{"text":"var:preset|color|accent-4"}}}},"backgroundColor":"accent-5","textColor":"accent-4"} -->
@@ -682,7 +682,7 @@
 
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size">
-				Designed with <a href="https://wordpress.org" rel="nofollow">WordPress</a>			</p>
+				Designed with <a href="https://wordpress.org" rel="nofollow" target="_blank" rel="noopener noreferrer">WordPress</a>			</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -851,7 +851,7 @@
 
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size">
-			Designed with <a href="https://wordpress.org" rel="nofollow">WordPress</a>			</p>
+			Designed with <a href="https://wordpress.org" rel="nofollow" target="_blank" rel="noopener noreferrer">WordPress</a>			</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

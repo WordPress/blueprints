@@ -7,7 +7,7 @@
 		"categories": ["user meta"]
 	},
 	"preferredVersions": {
-		"php": "8.0",
+		"php": "8.3",
 		"wp": "latest"
 	},
 	"landingPage": "/wp-admin/?welcome=0",

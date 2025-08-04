@@ -7,7 +7,7 @@
 		"categories": ["themes", "content"]
 	},
 	"preferredVersions": {
-		"php": "8.0",
+		"php": "8.3",
 		"wp": "beta"
 	},
 	"login": true,

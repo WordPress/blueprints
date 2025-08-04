@@ -682,7 +682,7 @@
 
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size">
-				Designed with <a href="https://wordpress.org" rel="nofollow" target="_blank" rel="noopener noreferrer">WordPress</a>			</p>
+				Designed with <a href="https://wordpress.org" target="_blank" rel="noopener noreferrer">WordPress</a>			</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -851,7 +851,7 @@
 
 <!-- wp:paragraph {"fontSize":"small"} -->
 <p class="has-small-font-size">
-			Designed with <a href="https://wordpress.org" rel="nofollow" target="_blank" rel="noopener noreferrer">WordPress</a>			</p>
+			Designed with <a href="https://wordpress.org" target="_blank" rel="noopener noreferrer">WordPress</a>			</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

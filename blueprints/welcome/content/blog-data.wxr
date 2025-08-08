@@ -92,11 +92,11 @@
 		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","justifyContent":"left","contentSize":"50%"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":1,"fontSize":"xx-large"} -->
-<h1 class="wp-block-heading has-text-align-left has-xx-large-font-size">Run WordPress <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">directly in your browser</mark></h1>
+<h1 class="wp-block-heading has-text-align-left has-xx-large-font-size">Hello from <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">WordPress Playground!</mark></h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
-<p class="has-text-align-left">This website is perfect for training, demonstrating plugins and themes, and for testing purposes. It runs locally, so feel free to edit content, install plugins and play around. To restart, simply reload the browser.</p>
+<p class="has-text-align-left">This is Playground, a WordPress that runs client-side in your browser. It's perfect for training, demonstrating plugins and themes, and for testing purposes. It runs on your device – feel free to edit content, install plugins and play around. To restart, simply reload the page!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->

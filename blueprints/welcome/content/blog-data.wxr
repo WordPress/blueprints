@@ -174,7 +174,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
-<p class="has-text-align-left">Beyond the browser, WordPress Playground is also available as a <a href="https://www.npmjs.com/package/@wp-playground/cli" target="_blank" rel="noopener noreferrer">local CLI tool</a> for developers to develop their plugins, themes, run test automations.</p>
+<p class="has-text-align-left">Beyond the browser, WordPress Playground is also available as a <a href="https://www.npmjs.com/package/@wp-playground/cli" target="_blank" rel="noopener noreferrer">local CLI tool</a> for developers to build their plugins, themes, and run test automations.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code {"style":{"elements":{"link":{"color":{"text":"var:preset|color|accent-4"}}}},"backgroundColor":"accent-5","textColor":"accent-4"} -->

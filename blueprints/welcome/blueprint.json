@@ -20,8 +20,8 @@
 		{
 			"step": "importWxr",
 			"file": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/content/blog-data.wxr"
+				"resource": "bundled",
+				"url": "./content/blog-data.wxr"
 			}
 		},
 		{

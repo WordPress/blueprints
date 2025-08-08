@@ -21,7 +21,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "bundled",
-				"url": "./content/blog-data.wxr"
+				"path": "./content/blog-data.wxr"
 			}
 		},
 		{

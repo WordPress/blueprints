@@ -83,7 +83,7 @@
 </image> 
 
 		<item>
-		<title><![CDATA[Run WordPress directly in your browser]]></title>
+		<title><![CDATA[Hello from Playground!]]></title>
 		<link>/</link>
 		<pubDate>Tue, 17 Jun 2025 08:11:38 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
@@ -167,14 +167,14 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"metadata":{"name":"Run playground on the terminal","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
+<!-- wp:group {"metadata":{"name":"Run Playground in terminal","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
 <div class="wp-block-group alignfull wp-embed-aspect-16-9 wp-has-aspect-ratio" id="general-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|60","top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"}}},"backgroundColor":"contrast","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)"><!-- wp:heading {"align":"wide"} -->
-<h2 class="wp-block-heading alignwide">Run playground on the terminal</h2>
+<h2 class="wp-block-heading alignwide">Run Playground in terminal</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
-<p class="has-text-align-left">WordPress playground is available for developer, check their progress on plugins/themes developement and run test automation with the <a href="https://www.npmjs.com/package/@wp-playground/cli" target="_blank" rel="noopener noreferrer">WordPress playground CLI</a>.</p>
+<p class="has-text-align-left">Beyond the browser, WordPress Playground is also available as a <a href="https://www.npmjs.com/package/@wp-playground/cli" target="_blank" rel="noopener noreferrer">local CLI tool</a> for developers to develop their plugins, themes, run test automations.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:code {"style":{"elements":{"link":{"color":{"text":"var:preset|color|accent-4"}}}},"backgroundColor":"accent-5","textColor":"accent-4"} -->

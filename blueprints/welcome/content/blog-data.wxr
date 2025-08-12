@@ -89,9 +89,10 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://playground.wordpress.net/?page_id=2</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained","contentSize":"1120px"}} -->
-<div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"layout":{"type":"constrained","justifyContent":"left","contentSize":"50%"}} -->
-<div class="wp-block-group"><!-- wp:heading {"textAlign":"left","level":1,"fontSize":"xx-large"} -->
+		<content:encoded><![CDATA[<!-- wp:cover {"url":"http://127.0.0.1:9400/wp-content/uploads/2025/07/cover-image-playground.png","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="http://127.0.0.1:9400/wp-content/uploads/2025/07/cover-image-playground.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
+<div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:heading {"textAlign":"left","level":1,"fontSize":"xx-large"} -->
 <h1 class="wp-block-heading has-text-align-left has-xx-large-font-size">Hello from <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">WordPress Playground!</mark></h1>
 <!-- /wp:heading -->
 
@@ -101,19 +102,27 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons"><!-- wp:button {"style":{"border":{"radius":"0px"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/" target="_blank" rel="noopener noreferrer" style="border-radius:0px">Learn more</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/" style="border-radius:0px" target="_blank" rel="noopener noreferrer">Learn more</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
-<!-- /wp:group --></div></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div></div>
 <!-- /wp:cover -->
 
 <!-- wp:group {"metadata":{"categories":["about"],"name":"About","patternName":"assembler/about-1","patternCategory":"about","remotePatternId":13552},"align":"full","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"accent-4","textColor":"base","layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
-<div class="wp-block-group alignfull wp-embed-aspect-16-9 wp-has-aspect-ratio has-base-color has-accent-4-background-color has-text-color has-background has-link-color" id="about-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-<div class="wp-block-group"><!-- wp:html -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HWPSYWGY0YA?si=EFEzzWw3YI8vNSbd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<!-- /wp:html -->
+<div class="wp-block-group alignfull wp-embed-aspect-16-9 wp-has-aspect-ratio has-base-color has-accent-4-background-color has-text-color has-background has-link-color" id="about-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:html -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HWPSYWGY0YA?si=EFEzzWw3YI8vNSbd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="aspect-ratio: 16 / 9; max-height: 100%; max-width: 100%;"></iframe>
+<!-- /wp:html --></div>
+<!-- /wp:column -->
 
-<!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:column {"width":"50%"} -->
+<div class="wp-block-column" style="flex-basis:50%"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading -->
 <h2 class="wp-block-heading">What is WordPress Playground?</h2>
 <!-- /wp:heading -->
@@ -126,11 +135,12 @@
 <p>By leveraging WebAssembly (WASM), it offers a seamless and secure environment that replicates a traditional hosting experience and streamlining workflows.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
-<!-- /wp:group --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"metadata":{"name":"General content","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
-<div class="wp-block-group alignfull wp-embed-aspect-16-9 wp-has-aspect-ratio" id="general-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"24px"}}},"layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"name":"General content","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
+<div class="wp-block-group alignfull wp-embed-aspect-16-9 wp-has-aspect-ratio" id="general-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"24px"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-right:24px"><!-- wp:heading {"align":"wide"} -->
 <h2 class="wp-block-heading alignwide">Explore Blueprints Gallery</h2>
 <!-- /wp:heading -->
@@ -167,8 +177,8 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"metadata":{"name":"Run Playground in your terminal","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
-<div class="wp-block-group alignfull wp-embed-aspect-16-9 wp-has-aspect-ratio" id="general-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|60","top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"}}},"backgroundColor":"contrast","layout":{"type":"default"}} -->
+<!-- wp:group {"metadata":{"name":"Run Playground in your terminal","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","className":"wp-embed-aspect-16-9 wp-has-aspect-ratio","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
+<div class="wp-block-group alignfull wp-embed-aspect-16-9 wp-has-aspect-ratio" id="general-section" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|60","top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"}}},"backgroundColor":"contrast","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)"><!-- wp:heading {"align":"wide"} -->
 <h2 class="wp-block-heading alignwide">Run Playground in your terminal</h2>
 <!-- /wp:heading -->

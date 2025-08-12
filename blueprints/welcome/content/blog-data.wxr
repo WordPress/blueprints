@@ -75,7 +75,7 @@
 	<generator>https://wordpress.org/?v=6.8.2</generator>
 
 <image>
-	<url>https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo-150x150.png</url>
+	<url>https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo-150x150.webp</url>
 	<title>Welcome to WordPress Playground</title>
 	<link>/</link>
 	<width>32</width>
@@ -89,8 +89,8 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://playground.wordpress.net/?page_id=2</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:cover {"url":"http://127.0.0.1:9400/wp-content/uploads/2025/07/cover-image-playground.png","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="http://127.0.0.1:9400/wp-content/uploads/2025/07/cover-image-playground.png" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
+		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%"><!-- wp:heading {"textAlign":"left","level":1,"fontSize":"xx-large"} -->
 <h1 class="wp-block-heading has-text-align-left has-xx-large-font-size">Hello from <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">WordPress Playground!</mark></h1>
@@ -1042,7 +1042,7 @@
 		<link>/sample-page/cover-image-playground/</link>
 		<pubDate>Fri, 25 Jul 2025 08:49:35 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png</guid>
+		<guid isPermaLink="false">https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1060,14 +1060,14 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.png]]></wp:attachment_url>
+						<wp:attachment_url><![CDATA[https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp]]></wp:attachment_url>
 											<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 		<wp:meta_value><![CDATA[2025/07/cover-image-playground.png]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
-		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:1920;s:6:"height";i:1080;s:4:"file";s:34:"2025/07/cover-image-playground.png";s:8:"filesize";i:81129;s:5:"sizes";a:5:{s:6:"medium";a:5:{s:4:"file";s:34:"cover-image-playground-300x169.png";s:5:"width";i:300;s:6:"height";i:169;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:11045;}s:5:"large";a:5:{s:4:"file";s:35:"cover-image-playground-1024x576.png";s:5:"width";i:1024;s:6:"height";i:576;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:47596;}s:9:"thumbnail";a:5:{s:4:"file";s:34:"cover-image-playground-150x150.png";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:6805;}s:12:"medium_large";a:5:{s:4:"file";s:34:"cover-image-playground-768x432.png";s:5:"width";i:768;s:6:"height";i:432;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:31714;}s:9:"1536x1536";a:5:{s:4:"file";s:35:"cover-image-playground-1536x864.png";s:5:"width";i:1536;s:6:"height";i:864;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:79436;}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		<wp:meta_value><![CDATA[a:6:{s:5:"width";i:1920;s:6:"height";i:1080;s:4:"file";s:34:"2025/07/cover-image-playground.webp";s:8:"filesize";i:81129;s:5:"sizes";a:5:{s:6:"medium";a:5:{s:4:"file";s:34:"cover-image-playground-300x169.png";s:5:"width";i:300;s:6:"height";i:169;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:11045;}s:5:"large";a:5:{s:4:"file";s:35:"cover-image-playground-1024x576.png";s:5:"width";i:1024;s:6:"height";i:576;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:47596;}s:9:"thumbnail";a:5:{s:4:"file";s:34:"cover-image-playground-150x150.webp";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:6805;}s:12:"medium_large";a:5:{s:4:"file";s:34:"cover-image-playground-768x432.webp";s:5:"width";i:768;s:6:"height";i:432;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:31714;}s:9:"1536x1536";a:5:{s:4:"file";s:35:"cover-image-playground-1536x864.webp";s:5:"width";i:1536;s:6:"height";i:864;s:9:"mime-type";s:9:"image/png";s:8:"filesize";i:79436;}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_wxr_import_user_slug]]></wp:meta_key>

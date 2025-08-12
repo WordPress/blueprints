@@ -195,7 +195,31 @@
 
 <!-- wp:paragraph -->
 <p></p>
-<!-- /wp:paragraph -->]]></content:encoded>
+<!-- /wp:paragraph -->
+
+<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp","id":80,"dimRatio":0,"overlayColor":"base","isUserOverlayColor":true,"isDark":false,"sizeSlug":"full","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover is-light"><img class="wp-block-cover__image-background wp-image-80 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
+<div class="wp-block-columns alignwide"><!-- wp:column -->
+<div class="wp-block-column"></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"textAlign":"right"} -->
+<h2 class="wp-block-heading has-text-align-right">Test our brand new<br><em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">PHP Playground</mark></em></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"right"} -->
+<p class="has-text-align-right">Create and execute PHP code directly from the browser.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://playground.wordpress.net/php-playground.html" target="_blank" rel="noopener">Go to PHP playground</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></div></div>
+<!-- /wp:cover -->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>2</wp:post_id>
 		<wp:post_date><![CDATA[2025-06-17 08:11:38]]></wp:post_date>

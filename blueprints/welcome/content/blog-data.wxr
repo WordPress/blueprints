@@ -146,7 +146,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
-<p class="has-text-align-left">With Blueprints you can run a WordPress instance with a pre-defined content. The following examples displays what you can archive wit WordPress Playground + Blueprints </p>
+<p class="has-text-align-left">With Blueprints you can run a WordPress instance with a pre-defined content. The following examples displays what you can archive wit WordPress Playground + Blueprints.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -170,6 +170,10 @@
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
+<!-- wp:paragraph {"align":"center","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
+<p class="has-text-align-center">The Playground community created a directory of blueprint examples, from making posts with <code>WP-CLI</code> to showcasing plugins with media. Check out the link below to learn more.</p>
+<!-- /wp:paragraph -->
+
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/WordPress/blueprints/tree/trunk/blueprints" target="_blank" rel="noopener noreferrer">Blueprints directory</a></div>
@@ -192,10 +196,6 @@
 <!-- /wp:code --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
-
-<!-- wp:paragraph -->
-<p></p>
-<!-- /wp:paragraph -->
 
 <!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp","id":80,"dimRatio":0,"overlayColor":"base","isUserOverlayColor":true,"isDark":false,"sizeSlug":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-cover is-light"><img class="wp-block-cover__image-background wp-image-80 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->

@@ -89,8 +89,8 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://playground.wordpress.net/?page_id=2</guid>
 		<description></description>
-		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":100,"minHeightUnit":"vh","isDark":false,"sizeSlug":"full","layout":{"type":"constrained"}} -->
-<div class="wp-block-cover is-light" style="min-height:100vh"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
+		<content:encoded><![CDATA[<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp","id":77,"dimRatio":0,"isUserOverlayColor":true,"minHeight":1100,"minHeightUnit":"px","isDark":false,"sizeSlug":"full","align":"full","layout":{"type":"constrained","contentSize":"1120px"}} -->
+<div class="wp-block-cover alignfull is-light" style="min-height:1100px"><img class="wp-block-cover__image-background wp-image-77 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%"><!-- wp:heading {"textAlign":"left","level":1,"fontSize":"xx-large"} -->
 <h1 class="wp-block-heading has-text-align-left has-xx-large-font-size">Hello from <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">WordPress Playground!</mark></h1>
@@ -102,7 +102,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/" style="border-radius:0px" target="_blank" rel="noopener noreferrer">Learn more</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/" target="_blank" rel="noopener noreferrer">Learn more</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
@@ -197,14 +197,14 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp","id":80,"dimRatio":0,"overlayColor":"base","isUserOverlayColor":true,"isDark":false,"sizeSlug":"full","layout":{"type":"constrained","contentSize":"1120px"}} -->
-<div class="wp-block-cover is-light"><img class="wp-block-cover__image-background wp-image-80 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
+<!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp","id":80,"dimRatio":0,"overlayColor":"base","isUserOverlayColor":true,"isDark":false,"sizeSlug":"full","align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
+<div class="wp-block-cover alignfull is-light" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0"><img class="wp-block-cover__image-background wp-image-80 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column -->
 <div class="wp-block-column"></div>
 <!-- /wp:column -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"textAlign":"right"} -->
+<!-- wp:column {"width":"40%"} -->
+<div class="wp-block-column" style="flex-basis:40%"><!-- wp:heading {"textAlign":"right"} -->
 <h2 class="wp-block-heading has-text-align-right">Test Our Brand New<br><em><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">PHP Playground</mark></em></h2>
 <!-- /wp:heading -->
 
@@ -214,7 +214,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://playground.wordpress.net/php-playground.html" target="_blank" rel="noopener">Go to PHP playground</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://playground.wordpress.net/php-playground.html" target="_blank" rel="noopener noreferrer">Go to PHP playground</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column --></div>
@@ -475,7 +475,7 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">https://playground.wordpress.net/?p=5</guid>
 		<description></description>
-		<content:encoded><![CDATA[{"styles":{"blocks":{"core\/button":{"border":{"radius":"2px"},"typography":{"fontFamily":"var(--wp--preset--font-family--manrope)","textTransform":"uppercase","fontStyle":"normal","fontWeight":"600"}}},"elements":{"button":{"color":{"background":"var(--wp--preset--color--accent-2)"},"typography":{"textTransform":"none"}},"heading":{"typography":{"fontStyle":"normal","fontWeight":"400","fontFamily":"var(--wp--preset--font-family--eb-garamond)","textTransform":"none","lineHeight":"1.5","letterSpacing":"0px"}}},"color":{"text":"var(--wp--preset--color--accent-4)"},"typography":{"fontStyle":"normal","fontWeight":"300","fontSize":"var(--wp--preset--font-size--medium)","letterSpacing":"0px","fontFamily":"var(--wp--preset--font-family--manrope)","lineHeight":"1.5"},"css":"\/* Button hover *\/\n.wp-block-button__link:hover {\n    background-color: #F6F6F6;\n    color: #3858E9;\n}"},"settings":{"color":{"palette":{"theme":[{"color":"#FFFFFF","name":"Base","slug":"base"},{"color":"#f6f6f6","name":"Contrast","slug":"contrast"},{"color":"#33f078","name":"Accent 1","slug":"accent-1"},{"color":"#3858e9","name":"Accent 2","slug":"accent-2"},{"color":"#e26f56","name":"Accent 3","slug":"accent-3"},{"color":"#1a1919","name":"Accent 4","slug":"accent-4"},{"color":"#FBFAF3","name":"Accent 5","slug":"accent-5"},{"color":"color-mix(in srgb, currentColor 20%, transparent)","name":"Accent 6","slug":"accent-6"}]}},"typography":{"fontFamilies":{"theme":[{"name":"Manrope","slug":"manrope","fontFamily":"Manrope, sans-serif","fontFace":[{"src":["file:.\/assets\/fonts\/manrope\/Manrope-VariableFont_wght.woff2"],"fontWeight":"200 800","fontStyle":"normal","fontFamily":"Manrope"}]},{"name":"Fira Code","slug":"fira-code","fontFamily":"\"Fira Code\", monospace","fontFace":[{"src":["file:.\/assets\/fonts\/fira-code\/FiraCode-VariableFont_wght.woff2"],"fontWeight":"300 700","fontStyle":"normal","fontFamily":"\"Fira Code\""}]}],"custom":[]}}},"isGlobalStylesUserThemeJSON":true,"version":3}]]></content:encoded>
+		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>8</wp:post_id>
 		<wp:post_date><![CDATA[2025-06-17 08:12:04]]></wp:post_date>

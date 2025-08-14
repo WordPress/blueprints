@@ -7,6 +7,7 @@
 		"categories": ["meta"]
 	},
 	"login": true,
+	"landingPage": "/wp-admin/site-editor.php",
 	"steps": [
 		{
 			"step": "runPHP",
@@ -15,7 +16,10 @@
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
-			"data": "<?php add_action('after_setup_theme',function(){$u='https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/playground-logo.png';$i=get_option('github_imported_logo_id');if(!$i||!wp_get_attachment_url($i)){require_once(ABSPATH.'wp-admin/includes/media.php');require_once(ABSPATH.'wp-admin/includes/file.php');require_once(ABSPATH.'wp-admin/includes/image.php');$r=wp_remote_get($u);if(!is_wp_error($r)&&wp_remote_retrieve_response_code($r)===200){$d=wp_upload_dir();$f=$d['path'].'/playground-logo.png';file_put_contents($f,wp_remote_retrieve_body($r));$i=media_handle_sideload(['name'=>'playground-logo.png','tmp_name'=>$f],0);if(file_exists($f))unlink($f);if(!is_wp_error($i))update_option('github_imported_logo_id',$i);}}if($i){if(!has_custom_logo())set_theme_mod('custom_logo',$i);if(!has_site_icon())update_option('site_icon',$i);}});?>"
+			"data": {
+				"resource": "bundled",
+				"path": "./scripts/setup.php"
+			}
 		},
 		{
 			"step": "importWxr",

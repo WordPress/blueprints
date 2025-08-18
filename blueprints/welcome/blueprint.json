@@ -7,7 +7,6 @@
 		"categories": ["meta"]
 	},
 	"login": true,
-	"landingPage": "/wp-admin/site-editor.php",
 	"steps": [
 		{
 			"step": "runPHP",

@@ -96,13 +96,13 @@
 <h1 class="wp-block-heading has-text-align-left has-xx-large-font-size">Hello from <mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-accent-2-color">WordPress Playground!</mark></h1>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
-<p class="has-text-align-left">This is Playground, a WordPress that runs client-side in your browser. It's perfect for training, demonstrating plugins and themes, and for testing purposes. It runs on your device – feel free to edit content, install plugins and play around. To restart, simply reload the page!</p>
+<!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}},"fontSize":"large"} -->
+<p class="has-text-align-left has-large-font-size">This is Playground, a WordPress that runs client-side in your browser. It's perfect for training, demonstrating plugins and themes, and for testing purposes. Note that you are logged-in as admin, feel free to edit content, install plugins and play around. To start over simply reload the page!</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"left"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/" target="_blank" rel="noopener noreferrer">Learn more</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/" target="_blank" rel="noopener noreferrer">Discover the mission behind Playground</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
@@ -176,7 +176,7 @@
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/WordPress/blueprints/tree/trunk/blueprints" target="_blank" rel="noopener noreferrer">Blueprints directory</a></div>
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://blueprintlibrary.wordpress.com/" target="_blank" rel="noopener noreferrer">Blueprints Library</a></div>
 <!-- /wp:button --></div>
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->

@@ -191,30 +191,8 @@
 <!-- /wp:buttons --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"metadata":{"name":"Playground CLI","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
-<div class="wp-block-group alignfull" id="playground-cli" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|60","top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"}}},"backgroundColor":"contrast","layout":{"type":"default"}} -->
-<div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)"><!-- wp:heading {"align":"wide"} -->
-<h2 class="wp-block-heading alignwide">Run Playground in your terminal</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
-<p class="has-text-align-left">Beyond the browser, WordPress Playground is also available as a <a href="https://www.npmjs.com/package/@wp-playground/cli" target="_blank" rel="noopener noreferrer">local CLI tool</a> for developers to build their plugins, themes, and run test automations.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:code {"style":{"elements":{"link":{"color":{"text":"var:preset|color|accent-4"}}}},"backgroundColor":"accent-5","textColor":"accent-4"} -->
-<pre class="wp-block-code has-accent-4-color has-accent-5-background-color has-text-color has-background has-link-color"><code>$ npx @wp-playground/cli@latest server</code></pre>
-<!-- /wp:code -->
-
-<!-- wp:buttons -->
-<div class="wp-block-buttons"><!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/developers/local-development/wp-playground-cli" target="_blank" rel="noreferrer noopener">learn more</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:buttons --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group -->
-
-<!-- wp:group {"metadata":{"categories":["about"],"name":"Playground Users","patternName":"assembler/about-1","patternCategory":"about","remotePatternId":13552},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"accent-4","textColor":"base","layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
-<div class="wp-block-group alignfull has-base-color has-accent-4-background-color has-text-color has-background has-link-color" id="playground-users" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<!-- wp:group {"metadata":{"categories":["about"],"name":"Playground Users","patternName":"assembler/about-1","patternCategory":"about","remotePatternId":13552},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"accent-4","textColor":"base","layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
+<div class="wp-block-group alignfull has-base-color has-accent-4-background-color has-text-color has-background has-link-color" id="playground-users" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center"} -->
 <h2 class="wp-block-heading has-text-align-center">How Can WordPress Playground Be Useful to Me?</h2>
 <!-- /wp:heading -->
@@ -306,6 +284,28 @@
 <p class="has-medium-font-size">Create a personal demo site to experiment with widgets, settings, and layouts. This sandbox environment allows you to get comfortable with WordPress, helping you understand how to make the most of the platform for your own projects. You can then export your site to share it with others.</p>
 <!-- /wp:paragraph --></details>
 <!-- /wp:details --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"metadata":{"name":"Playground CLI","patternCategory":"general","remotePatternId":"14727-general"},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|60"},"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20","left":"var:preset|spacing|20","right":"var:preset|spacing|20"},"blockGap":"var:preset|spacing|40"}},"layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
+<div class="wp-block-group alignfull" id="playground-cli" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--60);padding-top:var(--wp--preset--spacing--20);padding-right:var(--wp--preset--spacing--20);padding-bottom:var(--wp--preset--spacing--20);padding-left:var(--wp--preset--spacing--20)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|60","top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|60"}}},"backgroundColor":"contrast","layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide has-contrast-background-color has-background" style="padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--60)"><!-- wp:heading {"align":"wide"} -->
+<h2 class="wp-block-heading alignwide">Run Playground in your terminal</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}}} -->
+<p class="has-text-align-left">Beyond the browser, WordPress Playground is also available as a <a href="https://www.npmjs.com/package/@wp-playground/cli" target="_blank" rel="noopener noreferrer">local CLI tool</a> for developers to build their plugins, themes, and run test automations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code {"style":{"elements":{"link":{"color":{"text":"var:preset|color|accent-4"}}}},"backgroundColor":"accent-5","textColor":"accent-4"} -->
+<pre class="wp-block-code has-accent-4-color has-accent-5-background-color has-text-color has-background has-link-color"><code>$ npx @wp-playground/cli@latest server</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://wordpress.github.io/wordpress-playground/developers/local-development/wp-playground-cli" target="_blank" rel="noreferrer noopener">learn more</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 

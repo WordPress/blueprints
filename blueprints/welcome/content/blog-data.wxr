@@ -102,7 +102,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}},"fontSize":"large"} -->
-<p class="has-text-align-left has-large-font-size"><mark style="background-color:#f6e38f" class="has-inline-color">Note that you are logged-in as admin!</mark> Thus you can modify this site as you like: edit content, install plugins and play around. To start over, simply reload the page!</p>
+<p class="has-text-align-left has-large-font-size"><mark style="background-color:#f6e38f" class="has-inline-color">Note that you are logged-in as admin!</mark><br>Thus, you can modify this site as you like: edit content, install plugins and play around.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"left","style":{"layout":{"selfStretch":"fixed","flexSize":"70%"}},"fontSize":"large"} -->
+<p class="has-text-align-left has-large-font-size">To start over, simply reload the page!</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

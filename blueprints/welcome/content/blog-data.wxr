@@ -957,7 +957,7 @@
 
 <!-- wp:navigation-link {"label":"GitHub","url":"https://github.com/WordPress/wordpress-playground"} /-->
 
-<!-- wp:navigation-link {"label":"Playground Blog on WordPress.org","url":"https://make.wordpress.org/playground/"} /-->
+<!-- wp:navigation-link {"label":"Playground Blog","url":"https://make.wordpress.org/playground/"} /-->
 
 <!-- wp:navigation-link {"label":"Did you find a bug?","url":"https://github.com/WordPress/wordpress-playground/issues/new"} /-->]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>

@@ -213,6 +213,102 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
+<!-- wp:group {"metadata":{"categories":["about"],"name":"Playground Users","patternName":"assembler/about-1","patternCategory":"about","remotePatternId":13552},"align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"},"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"backgroundColor":"accent-4","textColor":"base","layout":{"type":"constrained","justifyContent":"center","contentSize":"1120px"}} -->
+<div class="wp-block-group alignfull has-base-color has-accent-4-background-color has-text-color has-background has-link-color" id="playground-users" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--60);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--60);padding-left:var(--wp--preset--spacing--40)"><!-- wp:group {"layout":{"type":"constrained"}} -->
+<div class="wp-block-group"><!-- wp:heading {"textAlign":"center"} -->
+<h2 class="wp-block-heading has-text-align-center">How Can WordPress Playground Be Useful to Me?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">You've heard about WordPress Playground, but you’re still not sure how it can benefit you? Let’s find out together!</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:details {"showContent":true,"align":"wide","fontSize":"large"} -->
+<details class="wp-block-details alignwide has-large-font-size" open><summary>I’m a Theme Author</summary><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Showcase</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">As a theme author, WordPress Playground provides a platform to showcase your themes effortlessly. Visitors can experience your design in a live environment without needing a separate installation, which makes it easier for you to attract potential users.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Test</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"placeholder":"Type / to add a hidden block","fontSize":"medium"} -->
+<p class="has-medium-font-size">You can test your theme's responsiveness and compatibility across different devices and WordPress versions. WordPress Playground allows you to make adjustments in real-time and see how your theme looks and behaves with various settings and plugins.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:separator {"align":"wide"} -->
+<hr class="wp-block-separator alignwide has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:details {"align":"wide","fontSize":"large"} -->
+<details class="wp-block-details alignwide has-large-font-size"><summary>I’m a Plugin Author</summary><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Showcase</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">If you're developing or maintaining plugins, WordPress Playground can help you showcase your plugin, allowing you to convince future users to choose your plugin by trying it out without you having to maintain any infrastructure.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Test</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"placeholder":"Type / to add a hidden block","fontSize":"medium"} -->
+<p class="has-medium-font-size">You can spin up your plugin in different environments to figure out how it interacts with other plugins, confirm and try your onboarding flow, or use Playwright for end-to-end testing of your plugin.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:separator {"align":"wide"} -->
+<hr class="wp-block-separator alignwide has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:details {"align":"wide","fontSize":"large"} -->
+<details class="wp-block-details alignwide has-large-font-size"><summary>I’m a WordPress Site Owner</summary><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Experiment</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">As a WordPress site owner, WordPress Playground lets you experiment with new features, themes, and plugins in a risk-free environment. You can explore enhancements without fear of breaking your live site, giving you the confidence to try new ideas.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Validate</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"placeholder":"Type / to add a hidden block","fontSize":"medium"} -->
+<p class="has-medium-font-size">You can validate changes or updates before applying them to your live site, ensuring that everything works as intended. Whether it’s testing a new plugin or trying out a new theme, WordPress Playground helps you make informed decisions.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details -->
+
+<!-- wp:separator {"align":"wide"} -->
+<hr class="wp-block-separator alignwide has-alpha-channel-opacity"/>
+<!-- /wp:separator -->
+
+<!-- wp:details {"align":"wide","fontSize":"large"} -->
+<details class="wp-block-details alignwide has-large-font-size"><summary>I’m a WordPress User</summary><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Learn</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"fontSize":"medium"} -->
+<p class="has-medium-font-size">If you're exploring WordPress for the first time or looking to enhance your skills, the WordPress Playground is an excellent learning tool. You can practice working with WordPress like trying the Site Editor and gain hands-on experience, all without any risk to a live site.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Build</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"placeholder":"Type / to add a hidden block","fontSize":"medium"} -->
+<p class="has-medium-font-size">Create a personal demo site to experiment with widgets, settings, and layouts. This sandbox environment allows you to get comfortable with WordPress, helping you understand how to make the most of the platform for your own projects. You can then export your site to share it with others.</p>
+<!-- /wp:paragraph --></details>
+<!-- /wp:details --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->
+
 <!-- wp:cover {"url":"https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp","id":80,"dimRatio":0,"overlayColor":"base","isUserOverlayColor":true,"isDark":false,"sizeSlug":"full","align":"full","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-cover alignfull is-light" style="margin-top:0;margin-bottom:0;padding-top:0;padding-bottom:0" id="php-playground"><img class="wp-block-cover__image-background wp-image-80 size-full" alt="" src="https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-base-background-color has-background-dim-0 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"align":"wide"} -->
 <div class="wp-block-columns alignwide"><!-- wp:column -->

@@ -180,4 +180,16 @@ function custom_theme_json_theme( $theme_json ){
 }
 
 add_filter( 'wp_theme_json_data_theme', 'custom_theme_json_theme' );
-?>
+
+function modify_cover_block_url( $block_content, $block ) {
+    // Check for the block and change URL in the HTML
+    if ( isset( $block['attrs']['url'] ) ) {
+        $old_url = get_site_url() . '/wp-content/uploads/2025/07/cover-image-playground-2.webp';
+        $new_url = 'https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp';
+
+        $block_content = str_replace( esc_url( $old_url ), esc_url( $new_url ), $block_content );
+    }
+    return $block_content;
+}
+
+add_filter( 'render_block_core/cover', 'modify_cover_block_url', 10, 2 );

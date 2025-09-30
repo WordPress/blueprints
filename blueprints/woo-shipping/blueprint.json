@@ -7,6 +7,9 @@
 		"categories": ["woocommerce", "shipping", "flat_rate"]
 	},
 	"plugins": ["woocommerce"],
+	"features": {
+		"intl": true
+	},
 	"landingPage": "/wp-admin/admin.php?page=wc-settings&tab=shipping",
 	"steps": [
 		{

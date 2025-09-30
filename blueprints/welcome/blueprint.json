@@ -28,6 +28,10 @@
 			}
 		},
 		{
+			"step": "runPHP",
+			"code": "<?php require_once '/wordpress/wp-load.php';\n$post = get_page_by_title('Hello from Playground!', OBJECT, 'post');\nif ( $post ) {\n\t$search = 'wp-content/uploads/2025/07/cover-image-playground-2.webp';\n\t$replace = 'https://raw.githubusercontent.com/WordPress/blueprints/refs/heads/trunk/blueprints/welcome/assets/imgs/cover-image-playground-2.webp';\n\t$content = str_replace($search, $replace, $post->post_content);\n\tif ( $content !== $post->post_content ) {\n\t\twp_update_post([\n\t\t\t'ID' => $post->ID,\n\t\t\t'post_content' => $content,\n\t\t]);\n\t\tclean_post_cache($post->ID);\n\t}\n}\n"
+		},
+		{
 			"step": "setSiteOptions",
 			"options": {
 				"blogname": "Welcome to WordPress Playground",

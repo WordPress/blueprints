@@ -31,7 +31,7 @@
 			"step": "setSiteOptions",
 			"options": {
 				"blogname": "Welcome to WordPress Playground",
-				"blogdescription": "WordPress without a server 2",
+				"blogdescription": "WordPress without a server",
 				"show_on_front": "page",
 				"page_on_front": 2
 			}

@@ -1,0 +1,58 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "login": true,
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "siteOptions": {
+    "permalink_structure": "/%postname%/"
+  },
+  "landingPage": "wp-admin/?welcome=0",
+  "steps": [
+    {
+      "step": "updateUserMeta",
+      "meta": {
+        "admin_color": "modern"
+      },
+      "userId": 1
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "adventurer"
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "twentytwentyfive"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "hello-dolly"
+      }
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/plugins/my_custom_plugin"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/plugins/my_custom_plugin/custom.php",
+      "data": {
+        "resource": "url",
+        "url": "https://github.com/muryamsultana/playground/blob/main/custom.php"
+      }
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "my_custom_plugin/custom.php"
+    }
+  ]
+}

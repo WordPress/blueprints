@@ -1,5 +1,10 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+		"title": "Fancy Dashboard Widget",
+		"description": "A blueprint to display statistics about users, posts and comments on a WordPress site.",
+		"author": "muryamsultana"
+	},
   "login": true,
   "preferredVersions": {
     "php": "8.3",

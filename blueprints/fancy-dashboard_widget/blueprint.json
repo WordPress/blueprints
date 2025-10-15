@@ -16,7 +16,7 @@
   "siteOptions": {
     "permalink_structure": "/%postname%/"
   },
-  "landingPage": "wp-admin/?welcome=0",
+  "landingPage": "/wp-admin/?welcome=0",
   "steps": [
     {
       "step": "updateUserMeta",

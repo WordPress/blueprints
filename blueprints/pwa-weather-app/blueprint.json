@@ -1,34 +1,33 @@
 {
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-  "preferredVersions": {
-    "php": "latest",
-    "wp": "latest"
-  },
-  "siteOptions": {
-    "blogname": "Weather PWA",
-    "blogdescription": "Real-time weather app via OpenWeatherMap API"
-  },
-  "plugins": [
-    "super-progressive-web-apps"
-  ],
   "steps": [
     {
       "step": "mkdir",
-      "path": "/wordpress/wp-content/plugins/weather-api"
+      "path": "/wordpress/wp-content/plugins/weather-app"
     },
     {
       "step": "writeFile",
-      "path": "/wordpress/wp-content/plugins/weather-api/weather-api.php",
-      "data": "<?php\n/* Plugin Name: Weather API Integration */\nadd_shortcode('weather', function($atts) {\n  $atts = shortcode_atts(['city' => 'London'], $atts);\n  $api_key = 'bdabe763ab4c3757cd2754c5af5148ec'; // Replace with your API key\n  $url = \"http://api.openweathermap.org/data/2.5/weather?q={$atts['city']}&appid={$api_key}&units=metric\";\n  $response = wp_remote_get($url);\n  if (is_wp_error($response)) return 'Error fetching weather data';\n  $data = json_decode(wp_remote_retrieve_body($response));\n  if (!$data || !isset($data->main)) return 'Invalid city';\n  return sprintf('<div class=\"weather-box\" style=\"padding: 20px; background: #f0f0f0; border-radius: 8px;\"><h2>Weather in %s</h2><p>Temperature: %s�C</p><p>Condition: %s</p></div>', esc_html($data->name), esc_html($data->main->temp), esc_html($data->weather[0]->description));\n});"
+      "path": "/wordpress/wp-content/plugins/weather-app/weather.php",
+      "data": {
+        "resource": "path",
+        "path": "/weather.php"
+      }
     },
     {
-      "step": "runPHP",
-      "code": "<?php require_once('/wordpress/wp-load.php'); activate_plugin('weather-api/weather-api.php'); wp_insert_post(['post_title' => 'Weather Dashboard', 'post_content' => '<!-- wp:paragraph --><p>Enter a city in the shortcode to see the weather!</p><!-- /wp:paragraph --><!-- wp:shortcode -->[weather city=\"London\"]<!-- /wp:shortcode -->', 'post_status' => 'publish']); update_option('superpwa_name', 'Weather PWA'); update_option('superpwa_short_name', 'Weather'); update_option('superpwa_description', 'Real-time weather PWA'); update_option('superpwa_start_url', '/'); update_option('superpwa_display', 'standalone'); update_option('superpwa_background_color', '#e0f7fa'); update_option('superpwa_theme_color', '#0288d1'); ?>"
+      "step": "activatePlugin",
+      "pluginPath": "weather-app/weather.php"
+    },
+    {
+      "step": "wp-cli",
+      "command": "wp post create --post_title='Test post' --post_content='<h2>Today Weather in London</h2><p>Check out the current weather conditions in London below. Make sure to dress accordingly!</p>[weather]<p>You can use this shortcode for any city, e.g., [weather]. Stay prepared!</p>' --post_status='publish'"
+    },
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
     }
   ],
-  "features": {
-    "networking": true
+  "siteOptions": {
+    "permalink_structure": "/%postname%/"
   },
-  "login": true,
-  "landingPage": "/"
+  "landingPage": "/test-post"
 }

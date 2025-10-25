@@ -27,10 +27,6 @@
     {
       "step": "activatePlugin",
       "pluginPath": "/wordpress/wp-content/plugins/weather-api/weather-api.php"
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php require_once('/wordpress/wp-load.php'); wp_insert_post(['post_title' => 'Weather Dashboard', 'post_content' => '<!-- wp:paragraph --><p>Enter a city in the shortcode to see the weather!</p><!-- /wp:paragraph --><!-- wp:shortcode -->[weather city=\"London\"]<!-- /wp:shortcode -->', 'post_status' => 'publish']); update_option('superpwa_name', 'Weather PWA'); update_option('superpwa_short_name', 'Weather'); update_option('superpwa_description', 'Real-time weather PWA'); update_option('superpwa_start_url', '/'); update_option('superpwa_display', 'standalone'); update_option('superpwa_background_color', '#e0f7fa'); update_option('superpwa_theme_color', '#0288d1'); ?>"
     }
   ],
   "features": {

@@ -17,9 +17,12 @@
       "path": "/wordpress/wp-content/plugins/weather-api"
     },
     {
-      "step": "writeFile",
-      "path": "/wordpress/wp-content/plugins/weather-api/weather-api.php",
-      "data": "<?php\n/* Plugin Name: Weather API Integration */\nadd_shortcode('weather', function($atts) {\n  $atts = shortcode_atts(['city' => 'London'], $atts);\n  $api_key = 'bdabe763ab4c3757cd2754c5af5148ec'; // Replace with your API key\n  $url = \"http://api.openweathermap.org/data/2.5/weather?q={$atts['city']}&appid={$api_key}&units=metric\";\n  $response = wp_remote_get($url);\n  if (is_wp_error($response)) return 'Error fetching weather data';\n  $data = json_decode(wp_remote_retrieve_body($response));\n  if (!$data || !isset($data->main)) return 'Invalid city';\n  return sprintf('<div class=\"weather-box\" style=\"padding: 20px; background: #f0f0f0; border-radius: 8px;\"><h2>Weather in %s</h2><p>Temperature: %s�C</p><p>Condition: %s</p></div>', esc_html($data->name), esc_html($data->main->temp), esc_html($data->weather[0]->description));\n});"
+        "step": "writeFile",
+        "path": "/wordpress/wp-content/plugins/weather-api/weather-api.php",
+        "data": {
+                "resource": "path",
+                "url": "/weather.php"
+        }
     },
     {
       "step": "activatePlugin",

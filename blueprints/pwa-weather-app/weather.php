@@ -76,7 +76,7 @@ class WeatherPlugin {
         </div>";
     }
 }
-add_shortcode('weather', [$plugin, 'handleShortcode']);.
+add_shortcode('weather', [$plugin, 'handleShortcode']);
 
 // Example Usage (uncomment and customize)
 // $plugin = new WeatherPlugin('YOUR_API_KEY_HERE');

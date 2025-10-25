@@ -78,6 +78,7 @@ class WeatherPlugin {
 }
 add_shortcode('weather', [$plugin, 'handleShortcode']);
 
+
 // Example Usage (uncomment and customize)
 // $plugin = new WeatherPlugin('YOUR_API_KEY_HERE');
 // $weather = $plugin->getWeather('London');

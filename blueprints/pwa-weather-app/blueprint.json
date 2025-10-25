@@ -9,7 +9,7 @@
       "path": "/wordpress/wp-content/plugins/weather-app/weather.php",
       "data": {
         "resource": "path",
-        "path": "/weather.php"
+        "path": "weather.php"
       }
     },
     {

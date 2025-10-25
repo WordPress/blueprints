@@ -8,8 +8,8 @@
       "step": "writeFile",
       "path": "/wordpress/wp-content/plugins/weather-app/weather.php",
       "data": {
-        "resource": "url",
-        "url": "https://github.com/muryamsultana/playground/blob/main/weather.php"
+        "resource": "path",
+        "path": "weather.php"
       }
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "step": "wp-cli",
-      "command": "wp post create --post_title='Test post' --post_content='<h2>Today Weather in London</h2><p>Check out the current weather conditions in London below. Make sure to dress accordingly!</p>[weather]<p>You can use this shortcode for any city, e.g., [weather]. Stay prepared!</p>' --post_status='publish'"
+      "command": "wp post create --post_title='Test post' --post_content='<h2>Today Weather in London</h2><p>Check out the current weather conditions in London below. Make sure to dress accordingly!</p>[weather]<p>You can use this shortcode for any city, e.g., [weather city='Islamabad']. Stay prepared!</p>' --post_status='publish'"
     },
     {
       "step": "login",

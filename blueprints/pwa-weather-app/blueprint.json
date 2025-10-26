@@ -1,4 +1,7 @@
 {
+  "plugins": [
+    "super-progressive-web-apps"
+  ],
   "steps": [
     {
       "step": "mkdir",

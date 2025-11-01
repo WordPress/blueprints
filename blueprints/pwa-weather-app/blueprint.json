@@ -16,8 +16,8 @@
       "step": "writeFile",
       "path": "/wordpress/wp-content/plugins/weather-app/weather.php",
       "data": {
-        "resource": "url",
-        "url": "https://github.com/muryamsultana/playground/blob/main/weather.php"
+        "resource": "path",
+        "path": "/pwa-weather-app/plugin//weather.php"
       }
     },
     {

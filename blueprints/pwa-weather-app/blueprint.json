@@ -16,8 +16,8 @@
       "step": "writeFile",
       "path": "/wordpress/wp-content/plugins/weather-app/weather.php",
       "data": {
-        "resource": "path",
-        "path": "/pwa-weather-app/plugin//weather.php"
+        "resource": "url",
+        "url": "https://github.com/muryamsultana/blueprints/blob/pwa-weather-app/blueprints/pwa-weather-app/plugin/weather.php"
       }
     },
     {

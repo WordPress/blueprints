@@ -1,0 +1,34 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"metadata": {
+		"name": "Spiel",
+		"description": "A blueprint for the Spiel theme, see https://spieldemo.wordpress.com/?demo",
+		"author": "WordPress.com"
+	},
+	"login": true,
+	"siteOptions": {
+		"blogname": "Spiel"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "bundled",
+				"path": "./spiel.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "bundled",
+				"path": "./content.xml"
+			}
+		}
+	]
+}

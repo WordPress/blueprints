@@ -1,0 +1,34 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Grammer",
+		"description": "A blueprint for the Grammer theme, see https://grammer.mystagingwebsite.com/?demo",
+		"author": "WordPress.com"
+	},
+	"login": true,
+	"siteOptions": {
+		"blogname": "Grammer"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "bundled",
+				"path": "./grammer.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "bundled",
+				"path": "./content.xml"
+			}
+		}
+	]
+}

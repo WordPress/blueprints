@@ -1,0 +1,29 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"login": true,
+	"siteOptions": {
+		"blogname": "Goodskin"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "bundled",
+				"path": "./piel.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "bundled",
+				"path": "./content.xml"
+			}
+		}
+	]
+}

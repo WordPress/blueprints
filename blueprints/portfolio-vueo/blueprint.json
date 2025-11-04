@@ -1,0 +1,35 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Vueo",
+		"description": "A blueprint for the Vueo theme, see https://vueodemo.wordpress.com/?demo",
+		"author": "WordPress.com"
+	},
+	"login": true,
+	"siteOptions": {
+		"blogname": "Vueo",
+		"logo": "/uploads/2025/07/rm-nappyco-dazyah-150x150.jpg"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "bundled",
+				"path": "./vueo.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "bundled",
+				"path": "./content.xml"
+			}
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Kentwood",
+		"description": "A blueprint for the Kentwood theme, see https://kentwooddemo.wordpress.com/?demo",
+		"author": "WordPress.com"
+	},
+	"login": true,
+	"siteOptions": {
+		"blogname": "Kentwood"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "bundled",
+				"path": "./kentwood.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
+}

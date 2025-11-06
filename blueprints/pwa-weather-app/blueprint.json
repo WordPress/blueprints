@@ -4,20 +4,17 @@
 		"description": "A blueprint to connetc weather API and show data as shortcode on a WordPress site.",
 		"author": "muryamsultana"
 	},
-  "plugins": [
-    "super-progressive-web-apps"
-  ],
   "steps": [
     {
       "step": "mkdir",
       "path": "/wordpress/wp-content/plugins/weather-app"
     },
-    {
+     {
       "step": "writeFile",
       "path": "/wordpress/wp-content/plugins/weather-app/weather.php",
       "data": {
-        "resource": "url",
-        "url": "https://github.com/muryamsultana/blueprints/blob/pwa-weather-app/blueprints/pwa-weather-app/plugin/weather.php"
+        "resource": "bundled",
+        "path": "/plugin/weather.php"
       }
     },
     {

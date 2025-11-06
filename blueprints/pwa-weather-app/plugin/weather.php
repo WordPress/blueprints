@@ -4,6 +4,7 @@
  * Description: Displays current weather via shortcode [weather city="YourCity"] with beautiful styling.
  * Version: 1.0
  * Author: Muryam
+ * Text Domain: openweather-shortcode
  */
 
 // Prevent direct access
@@ -19,12 +20,13 @@ class OpenWeather_Shortcode {
         add_action('after_setup_theme', [$this, 'add_key']);
         add_action('admin_menu', [$this, 'add_settings_page']);
         add_shortcode('weather', [$this, 'shortcode_handler']);
-        //add_action('wp_enqueue_scripts', [$this, 'enqueue_styles']);
 
     }
     //add default key
     public function add_key(){
-          update_option($this->api_key_option, $this->key);
+        if (!get_option($this->api_key_option)) {
+            add_option($this->api_key_option, $this->key);
+        }
     }
     
     // Add settings page
@@ -63,17 +65,6 @@ class OpenWeather_Shortcode {
         </div>
         <?php
     }
-
-    // Enqueue CSS
-    public function enqueue_styles() {
-        wp_enqueue_style(
-            'openweather-styles',
-            plugin_dir_url(__FILE__) . 'openweather-styles.css',
-            [],
-            '1.0'
-        );
-    }
-
     // Shortcode handler
     public function shortcode_handler($atts) {
         $atts = shortcode_atts(['city' => 'London'], $atts);
@@ -95,18 +86,18 @@ class OpenWeather_Shortcode {
         $response = wp_remote_get($url, ['timeout' => 10]);
 
         if (is_wp_error($response)) {
-            return '<p class="openweather-error">OpenWeatherAPI Error: Unable to fetch data. Please try again later.</p>';
+            return '<p class="openweather-error">'. __('OpenWeatherAPI Error: Unable to fetch data. Please try again later.', 'openweather-shortcode') . '</p>';       
         }
 
         $body = wp_remote_retrieve_body($response);
         $data = json_decode($body, true);
 
         if (isset($data['cod']) && $data['cod'] != 200) {
-            return '<p class="openweather-error">OpenWeatherAPI Error: ' . esc_html($data['message']) . '</p>';
+            return '<p class="openweather-error">'.__('OpenWeatherAPI Error: ') . esc_html($data['message']) . '</p>';
         }
 
         if (!isset($data['main']) || !isset($data['weather'])) {
-            return '<p class="openweather-error">OpenWeatherAPI Error: Invalid response for city: ' . esc_html($city) . '</p>';
+            return '<p class="openweather-error">'. __('OpenWeatherAPI Error: Unable to fetch data. Please try again later.', 'openweather-shortcode') . '</p>';        
         }
 
         $condition = $data['weather'][0]['description'];

@@ -5,7 +5,13 @@ import sys
 
 highlighted_blueprints = [
     'Stylish Press',
-    'Feed Reader with the Friends Plugin'
+    'Feed Reader with the Friends Plugin',
+    'Gaming News',
+    'Skincare Blog',
+    'Non-profit Organization',
+    'Personal Resume',
+    'Personal Blog',
+    'University Website',
 ]
 
 def build_json_index():

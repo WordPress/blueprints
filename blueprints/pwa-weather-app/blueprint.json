@@ -1,6 +1,6 @@
 {
   	"meta": {
-		"title": "PWA Weather App",
+		"title": "Weather Shortcode Plugin",
 		"description": "A blueprint to connetc weather API and show data as shortcode on a WordPress site.",
 		"author": "muryamsultana"
 	},

@@ -1,9 +1,10 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Readymade",
-		"description": "A blueprint for the Readymade theme, see https://readymademo.wordpress.com/?demo",
-		"author": "WordPress.com"
+		"title": "Personal Resume",
+		"description": "A resume site created with the Readymade theme, see https://readymademo.wordpress.com/?demo",
+		"author": "WordPress.com",
+		"categories": ["Website", "Personal"]
 	},
 	"login": true,
 	"siteOptions": {

@@ -1,9 +1,10 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"metadata": {
-		"name": "Spiel",
-		"description": "A blueprint for the Spiel theme, see https://spieldemo.wordpress.com/?demo",
-		"author": "WordPress.com"
+	"meta": {
+		"title": "Gaming News",
+		"description": "A gaming news site created with the Spiel theme, see https://spieldemo.wordpress.com/?demo",
+		"author": "WordPress.com",
+		"categories": ["Website", "News"]
 	},
 	"login": true,
 	"siteOptions": {

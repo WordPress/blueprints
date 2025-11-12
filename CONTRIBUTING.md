@@ -42,6 +42,17 @@ By submitting a Blueprint, you agree to license it under [GPLv2 or later license
 
 Make sure to correctly indent your Blueprints using tabs using a code formatter like [Prettier](https://prettier.io/). This repository ships a `.prettierrc` file you could use. This is mostly to help the reviewers understand your Blueprint better. Every accepted and merged Blueprint will automatically be re-formatted using the `.prettierrc` file.
 
+## Automatic Screenshot Generation
+
+When you submit a Blueprint, screenshots are automatically generated to showcase your work in the gallery! The screenshot generation workflow:
+
+- Automatically runs when you create or update a pull request
+- Captures visual previews of your Blueprint running in WordPress Playground
+- Saves screenshots in a `screenshots/` subdirectory within your Blueprint folder
+- Commits the screenshots back to your PR
+
+For best results, ensure your Blueprint includes a meaningful `landingPage` setting that showcases the most interesting aspects of your setup. See the [Blueprint Screenshots Guide](./docs/blueprint-screenshots-guide.md) for tips on creating great screenshots.
+
 ## Blueprint metadata
 
 Each Blueprint should include metadata within the top-level "meta" key of the `blueprint.json` file. Note that metadata is not required for all Blueprints, only for Blueprints submitted to this gallery.

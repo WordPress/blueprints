@@ -55,9 +55,22 @@ def build_markdown_table():
         title = meta.get('title', '')
         if title in highlighted_blueprints:
             title = f"**{title}**"
+        
+        # Check if screenshot exists
+        blueprint_dir = os.path.dirname(path)
+        screenshot_path = os.path.join(blueprint_dir, 'screenshots', 'preview.png')
+        wordpress_screenshot_path = os.path.join(blueprint_dir, 'screenshots', 'wordpress.png')
+        
+        # Build description with optional screenshot
+        description = meta.get('description', '')
+        if os.path.exists(screenshot_path):
+            # Use the WordPress-only screenshot if available, otherwise use the preview
+            display_screenshot = wordpress_screenshot_path if os.path.exists(wordpress_screenshot_path) else screenshot_path
+            description = f"[![Preview]({display_screenshot})]({display_screenshot})<br>{description}"
+        
         blueprints_rows.append([
             title,
-            meta.get('description', ''),
+            description,
             '[@{0}](https://github.com/{0})'.format(meta.get('author', '')) if meta.get('author', '') else '',
             '• [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path) +
             '<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/{0})'.format(path) +

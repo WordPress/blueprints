@@ -28,3 +28,7 @@ yarn-error.log*
 *.swp
 *.bak
 *.tmp
+
+# Screenshot generation temporary files
+**/screenshots/_capture_temp.js
+.github/workflows/screenshots/

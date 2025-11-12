@@ -6,6 +6,7 @@ Welcome to this comprehensive guide to Blueprints, where you'll find everything 
 2. [How to load and run Blueprints?](./how-to-load-run-blueprints.md)
 3. [Build your first Blueprint](./build-your-first-blueprint.md)
 4. [Troubleshoot and debug Blueprints](./troubleshoot-debug-blueprints.md)
+5. [Screenshot Generation for Blueprints](./screenshot-generation.md)
 
 > [!NOTE]
 > ## Blueprints version 2

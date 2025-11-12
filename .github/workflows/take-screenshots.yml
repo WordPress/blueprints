@@ -1,0 +1,223 @@
+name: Generate Blueprint Screenshots
+
+on:
+    pull_request:
+        paths:
+            - 'blueprints/**/blueprint.json'
+    workflow_dispatch:
+
+jobs:
+    capture-screenshots:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event.pull_request.head.ref }}
+                  fetch-depth: 0
+
+            - name: Fetch trunk branch
+              run: |
+                  git fetch origin trunk
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+
+            - name: Install Playwright
+              run: |
+                  npm install -g playwright
+                  npx playwright install chromium
+
+            - name: Install Python dependencies
+              run: |
+                  pip install -r requirements.txt
+
+            - name: Get changed blueprint directories
+              id: changed_blueprints
+              run: |
+                  # Get the list of changed blueprint.json files
+                  CHANGED_FILES=$(git diff --name-only $(git merge-base origin/trunk HEAD) | grep 'blueprints/.*/blueprint.json' || echo "")
+                  
+                  if [ -z "$CHANGED_FILES" ]; then
+                    echo "No blueprint changes detected"
+                    echo "blueprints_changed=false" >> $GITHUB_OUTPUT
+                  else
+                    echo "Changed blueprints:"
+                    echo "$CHANGED_FILES"
+                    
+                    # Extract directory names
+                    BLUEPRINT_DIRS=""
+                    for file in $CHANGED_FILES; do
+                      dir=$(dirname "$file")
+                      BLUEPRINT_DIRS="$BLUEPRINT_DIRS $dir"
+                    done
+                    
+                    echo "blueprint_dirs=$BLUEPRINT_DIRS" >> $GITHUB_OUTPUT
+                    echo "blueprints_changed=true" >> $GITHUB_OUTPUT
+                  fi
+
+            - name: Create screenshots directory
+              if: steps.changed_blueprints.outputs.blueprints_changed == 'true'
+              run: |
+                  mkdir -p .github/workflows/screenshots
+
+            - name: Generate screenshot script
+              if: steps.changed_blueprints.outputs.blueprints_changed == 'true'
+              run: |
+                  cat > .github/workflows/screenshots/capture.js << 'EOF'
+                  const { chromium } = require('playwright');
+                  const fs = require('fs');
+                  const path = require('path');
+
+                  async function captureScreenshot(blueprintDir) {
+                      const blueprintPath = path.join(blueprintDir, 'blueprint.json');
+                      const blueprint = JSON.parse(fs.readFileSync(blueprintPath, 'utf8'));
+                      const blueprintName = path.basename(blueprintDir);
+                      
+                      console.log(`Processing ${blueprintName}...`);
+                      
+                      // Construct the Playground URL with the blueprint
+                      const branch = process.env.GITHUB_HEAD_REF || process.env.GITHUB_REF_NAME || 'trunk';
+                      const blueprintUrl = `https://raw.githubusercontent.com/wordpress/blueprints/${branch}/${blueprintPath}`;
+                      const playgroundUrl = `https://playground.wordpress.net/?blueprint-url=${encodeURIComponent(blueprintUrl)}`;
+                      
+                      console.log(`URL: ${playgroundUrl}`);
+                      
+                      const browser = await chromium.launch({
+                          headless: true,
+                          args: ['--no-sandbox', '--disable-setuid-sandbox']
+                      });
+                      
+                      const context = await browser.newContext({
+                          viewport: { width: 1280, height: 720 }
+                      });
+                      
+                      const page = await context.newPage();
+                      
+                      try {
+                          // Navigate to the playground
+                          console.log(`Loading playground for ${blueprintName}...`);
+                          await page.goto(playgroundUrl, { 
+                              waitUntil: 'networkidle',
+                              timeout: 120000  // 2 minutes timeout
+                          });
+                          
+                          // Wait for WordPress to load (look for common elements)
+                          await page.waitForSelector('iframe[title="WordPress Playground"]', { timeout: 60000 });
+                          
+                          // Additional wait to ensure content is fully loaded
+                          await page.waitForTimeout(5000);
+                          
+                          // Create screenshots directory if it doesn't exist
+                          const screenshotDir = path.join(blueprintDir, 'screenshots');
+                          if (!fs.existsSync(screenshotDir)) {
+                              fs.mkdirSync(screenshotDir, { recursive: true });
+                          }
+                          
+                          // Take screenshot
+                          const screenshotPath = path.join(screenshotDir, 'preview.png');
+                          await page.screenshot({ 
+                              path: screenshotPath,
+                              fullPage: false
+                          });
+                          
+                          console.log(`Screenshot saved to ${screenshotPath}`);
+                          
+                          // Try to capture the iframe content as well
+                          const iframe = page.frameLocator('iframe[title="WordPress Playground"]');
+                          const iframeScreenshotPath = path.join(screenshotDir, 'wordpress.png');
+                          
+                          try {
+                              await iframe.locator('body').screenshot({ 
+                                  path: iframeScreenshotPath,
+                                  timeout: 10000
+                              });
+                              console.log(`WordPress screenshot saved to ${iframeScreenshotPath}`);
+                          } catch (iframeError) {
+                              console.log(`Could not capture iframe screenshot: ${iframeError.message}`);
+                          }
+                          
+                      } catch (error) {
+                          console.error(`Error capturing screenshot for ${blueprintName}:`, error);
+                          throw error;
+                      } finally {
+                          await browser.close();
+                      }
+                  }
+
+                  async function main() {
+                      const blueprintDirs = process.argv.slice(2);
+                      
+                      if (blueprintDirs.length === 0) {
+                          console.log('No blueprint directories provided');
+                          return;
+                      }
+                      
+                      console.log(`Capturing screenshots for ${blueprintDirs.length} blueprint(s)...`);
+                      
+                      for (const dir of blueprintDirs) {
+                          try {
+                              await captureScreenshot(dir);
+                          } catch (error) {
+                              console.error(`Failed to capture screenshot for ${dir}:`, error);
+                              // Continue with other blueprints even if one fails
+                          }
+                      }
+                      
+                      console.log('Screenshot capture complete!');
+                  }
+
+                  main().catch(error => {
+                      console.error('Fatal error:', error);
+                      process.exit(1);
+                  });
+                  EOF
+
+            - name: Capture screenshots
+              if: steps.changed_blueprints.outputs.blueprints_changed == 'true'
+              env:
+                  GITHUB_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+              run: |
+                  BLUEPRINT_DIRS="${{ steps.changed_blueprints.outputs.blueprint_dirs }}"
+                  
+                  if [ -n "$BLUEPRINT_DIRS" ]; then
+                    node .github/workflows/screenshots/capture.js $BLUEPRINT_DIRS
+                  fi
+
+            - name: Check for new screenshots
+              if: steps.changed_blueprints.outputs.blueprints_changed == 'true'
+              id: screenshot_check
+              run: |
+                  if [ -n "$(git status --porcelain | grep 'screenshots/')" ]; then
+                      echo "screenshots_created=true" >> $GITHUB_OUTPUT
+                  else
+                      echo "screenshots_created=false" >> $GITHUB_OUTPUT
+                  fi
+
+            - name: Commit screenshots
+              if: steps.screenshot_check.outputs.screenshots_created == 'true'
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git add blueprints/**/screenshots/*.png
+                  git commit -m "Add automated screenshots for blueprints"
+                  git push
+
+            - name: Comment on PR
+              if: steps.screenshot_check.outputs.screenshots_created == 'true'
+              uses: actions/github-script@v7
+              with:
+                  script: |
+                      const issue_number = context.payload.pull_request.number;
+                      await github.rest.issues.createComment({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        issue_number,
+                        body: '✅ Screenshots have been automatically generated for the changed blueprints and committed to this PR.'
+                      });

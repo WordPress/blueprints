@@ -2,166 +2,372 @@
 
 Here's the list of all the community Blueprints submitted to this repository. See the [contribution guidelines](./README.md#contributing-your-blueprint) to submit your Blueprint and share your WordPress setup with the world!
 
-| Title                                                                        | Description                                                                                                                                                                                                                                                                            | Author                                                       | Actions                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -----                                                                        | -----------                                                                                                                                                                                                                                                                            | ------                                                       | -------                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| **Art Gallery**                                                              | An art gallery created with the Vueo theme.                                                                                                                                                                                                                                            | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-vueo/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-vueo/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-vueo/blueprint.json)                                                                                  |
-
-![portfolio-vueo](blueprints/portfolio-vueo/screenshot.jpg)
-
-| **Feed Reader with the Friends Plugin**                                      | By using the Friends plugin, you can read feeds from the web in Playground, and even via ActivityPub                                                                                                                                                                                   | [@akirk](https://github.com/akirk)                           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/friends-cors/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/friends-cors/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/friends-cors/blueprint.json)                                                                                        |
-
-![friends-cors](blueprints/friends-cors/screenshot.jpg)
-
-| **Gaming News**                                                              | A gaming news site created with the Spiel theme.                                                                                                                                                                                                                                       | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-spiel/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-spiel/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-spiel/blueprint.json)                                                                                              |
-
-![news-spiel](blueprints/news-spiel/screenshot.jpg)
-
-| **Non-profit Organization**                                                  | A non-profit organization site created with the Koinonia theme.                                                                                                                                                                                                                        | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-koinonia/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-koinonia/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-koinonia/blueprint.json)                                                             |
-
-![organization-koinonia](blueprints/organization-koinonia/screenshot.jpg)
-
-| **Personal Blog**                                                            | A personal blog site created with the Substrata theme.                                                                                                                                                                                                                                 | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-substrata/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-substrata/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-substrata/blueprint.json)                                                                      |
-
-![personal-substrata](blueprints/personal-substrata/screenshot.jpg)
-
-| **Personal Resume**                                                          | A resume site created with the Readymade theme.                                                                                                                                                                                                                                        | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-readymade/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-readymade/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-readymade/blueprint.json)                                                                      |
-
-![personal-readymade](blueprints/personal-readymade/screenshot.jpg)
-
-| **Photography Portfolio**                                                    | A photography portfolio created with the Grammer theme.                                                                                                                                                                                                                                | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-grammer/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-grammer/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-grammer/blueprint.json)                                                                         |
-
-![portfolio-grammer](blueprints/portfolio-grammer/screenshot.jpg)
-
-| **Skincare Blog**                                                            | A skincare blog created with the Piel theme.                                                                                                                                                                                                                                           | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-piel/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-piel/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-piel/blueprint.json)                                                                                                 |
-
-![news-piel](blueprints/news-piel/screenshot.jpg)
-
-| **Stylish Press**                                                            | A Woo store with custom theme, content, and products.                                                                                                                                                                                                                                  | [@adamziel](https://github.com/adamziel)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/stylish-press/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/blueprint.json)                                                                                     |
-
-![stylish-press](blueprints/stylish-press/screenshot.jpg)
-
-| **University Website**                                                       | A university website created with the Kentwood theme.                                                                                                                                                                                                                                  | [@WordPress.com](https://github.com/WordPress.com)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-kentwood/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-kentwood/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-kentwood/blueprint.json)                                                             |
-
-![organization-kentwood](blueprints/organization-kentwood/screenshot.jpg)
-
-| Create Block Theme                                                           | Blueprint to install Create Block Theme and start editing right away                                                                                                                                                                                                                   | [@jonathanbossenger](https://github.com/jonathanbossenger)   | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/create-block-theme/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/create-block-theme/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/create-block-theme/blueprint.json)                                                                      |
-
-![create-block-theme](blueprints/create-block-theme/screenshot.jpg)
-
-| Creating a new user for the blog                                             | This is a simple example to update user meta data                                                                                                                                                                                                                                      | [@fellyph](https://github.com/fellyph)                       | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/user-meta/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/user-meta/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/user-meta/blueprint.json)                                                                                                 |
-
-![user-meta](blueprints/user-meta/screenshot.jpg)
-
-| Custom Post Type: Books                                                      | Blueprint that added a custom post type to playground                                                                                                                                                                                                                                  | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/custom-post/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/blueprint.json)                                                                                           |
-
-![custom-post](blueprints/custom-post/screenshot.jpg)
-
-| Demo of Twenty-Twenty-Five theme                                             | Blueprint with demo content for the Twenty-Twenty-Five default theme                                                                                                                                                                                                                   | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/tt5-demo/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/tt5-demo/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/tt5-demo/blueprint.json)                                                                                                    |
-
-![tt5-demo](blueprints/tt5-demo/screenshot.jpg)
-
-| Display Admin Notice                                                         | Blueprint to add a tiny mu-plugin and display an admin notice                                                                                                                                                                                                                          | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/admin-notice/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/admin-notice/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/admin-notice/blueprint.json)                                                                                        |
-
-![admin-notice](blueprints/admin-notice/screenshot.jpg)
-
-| Enable all three Dataview Experiments in Gutenberg                           | Blueprint example to enable multiple Experiments within the Gutenberg plugin                                                                                                                                                                                                           | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/gb-more-experiments/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/gb-more-experiments/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/gb-more-experiments/blueprint.json)                                                                   |
-
-![gb-more-experiments](blueprints/gb-more-experiments/screenshot.jpg)
-
-| Fancy Dashboard Widget                                                       | A blueprint to display statistics about users, posts and comments on a WordPress site.                                                                                                                                                                                                 | [@muryamsultana](https://github.com/muryamsultana)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/fancy-dashboard_widget/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/fancy-dashboard_widget/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/fancy-dashboard_widget/blueprint.json)                                                          |
-
-![fancy-dashboard_widget](blueprints/fancy-dashboard_widget/screenshot.jpg)
-
-| Grid Variations Experiments enabled                                          | Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin                                                                                                                                                                                          | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/grid-variations/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/grid-variations/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/grid-variations/blueprint.json)                                                                               |
-
-![grid-variations](blueprints/grid-variations/screenshot.jpg)
-
-| Import Theme Starter Content                                                 | Blueprint to install a theme with starter content, (here: Twenty-Twenty-One)                                                                                                                                                                                                           | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-starter-content/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/theme-starter-content/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-starter-content/blueprint.json)                                                             |
-
-![theme-starter-content](blueprints/theme-starter-content/screenshot.jpg)
-
-| Import a standalone starter content via a blueprint step                     | Blueprint to use a stand-alone starter content file and then to import it. Click on 'Subscriptions'                                                                                                                                                                                    | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/file-starter-content/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/file-starter-content/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/file-starter-content/blueprint.json)                                                                |
-
-![file-starter-content](blueprints/file-starter-content/screenshot.jpg)
-
-| Install WordPress language packs                                             | Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/ – both for WordPress core and for the friends plugin.                                                                                                                      | [@adamziel](https://github.com/adamziel)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/translations/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/translations/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/translations/blueprint.json)                                                                                        |
-
-![translations](blueprints/translations/screenshot.jpg)
-
-| Install plugin from a gist                                                   | Install and activate a WordPress plugin from a .php file stored in a gist.                                                                                                                                                                                                             | [@zieladam](https://github.com/zieladam)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-plugin-from-gist/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/install-plugin-from-gist/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-plugin-from-gist/blueprint.json)                                                    |
-
-![install-plugin-from-gist](blueprints/install-plugin-from-gist/screenshot.jpg)
-
-| Latest Gutenberg plugin                                                      | A preview of the latest version of the Gutenberg plugin.                                                                                                                                                                                                                               | [@zieladam](https://github.com/zieladam)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/latest-gutenberg/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/latest-gutenberg/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/latest-gutenberg/blueprint.json)                                                                            |
-
-![latest-gutenberg](blueprints/latest-gutenberg/screenshot.jpg)
-
-| Loading, activating, and configuring a theme from a GitHub repository.       | This is a good example of typical steps used on a theme's loading, activation and configuration                                                                                                                                                                                        | [@richtabor](https://github.com/richtabor)                   | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json) |
-
-![install-activate-setup-theme-from-gh-repo](blueprints/install-activate-setup-theme-from-gh-repo/screenshot.jpg)
-
-| Login as an editor                                                           | Test WordPress functionality as an editor rather than an administrator.                                                                                                                                                                                                                | [@bacoords](https://github.com/bacoords)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/login-as-editor/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/login-as-editor/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/login-as-editor/blueprint.json)                                                                               |
-
-![login-as-editor](blueprints/login-as-editor/screenshot.jpg)
-
-| Markdown and Trac Syntax Editor                                              | Edit Markdown and Trac formatting in the block editor thanks to the blocky-formats plugin!                                                                                                                                                                                             | [@adamziel](https://github.com/adamziel)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/blocky-formats/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/blocky-formats/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/blocky-formats/blueprint.json)                                                                                  |
-
-![blocky-formats](blueprints/blocky-formats/screenshot.jpg)
-
-| Minimal WooCommerce Setup with Sample Products, Shipping, and Payment Method | To create a WordPress Playground instance that installs WooCommerce, adds a custom flat rate shipping method via a plugin, imports WooCommerce sample products XML to demonstrate the shipping method on the cart/checkout pages, and enables the Direct Bank Transfer payment method. | [@calvinrodrigues500](https://github.com/calvinrodrigues500) | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/woo-shipping/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/blueprint.json)                                                                                        |
-
-![woo-shipping](blueprints/woo-shipping/screenshot.jpg)
-
-| Playground Welcome Landing Page                                              | Landing page for the WordPress Playground giving a quick overview of the features and capabilities of the platform.                                                                                                                                                                    | [@fellyph](https://github.com/fellyph)                       | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/welcome/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/welcome/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/welcome/blueprint.json)                                                                                                       |
-
-![welcome](blueprints/welcome/screenshot.jpg)
-
-| Pretty permalinks                                                            | Set the permalink structure to use pretty permalinks.                                                                                                                                                                                                                                  | [@bgrgicak](https://github.com/bgrgicak)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/use-pretty-permalinks/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/use-pretty-permalinks/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/use-pretty-permalinks/blueprint.json)                                                             |
-
-![use-pretty-permalinks](blueprints/use-pretty-permalinks/screenshot.jpg)
-
-| Reset data and import content (with logs)                                    | It resets default data before importing custom content. It also logs the state of the content after each step.                                                                                                                                                                         | [@juanmaguitar](https://github.com/juanmaguitar)             | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/reset-data-and-import-content/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/reset-data-and-import-content/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/reset-data-and-import-content/blueprint.json)                                     |
-
-![reset-data-and-import-content](blueprints/reset-data-and-import-content/screenshot.jpg)
-
-| Serve media files from another host                                          | Redirect any requests to files within the uploads directory to an external host. This is useful when you have a lot of image attachments in your playground but don’t want to include them all in the blueprint.                                                                       | [@ivanblagdan](https://github.com/ivanblagdan)               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/redirect-upload-requests/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/redirect-upload-requests/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/redirect-upload-requests/blueprint.json)                                                    |
-
-![redirect-upload-requests](blueprints/redirect-upload-requests/screenshot.jpg)
-
-| Set the admin color scheme                                                   | Set the admin color scheme to Modern using the updateUserMeta step.                                                                                                                                                                                                                    | [@ndiego](https://github.com/ndiego)                         | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/set-admin-color-scheme/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/set-admin-color-scheme/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/set-admin-color-scheme/blueprint.json)                                                          |
-
-![set-admin-color-scheme](blueprints/set-admin-color-scheme/screenshot.jpg)
-
-| Showcase plugin                                                              | Showcase custom plugin from own server with media files and content imported as WXR. There is a readme file in github repository (https://github.com/Lovor01/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/readme.md) which explains all steps.                          | [@Lovor01](https://github.com/Lovor01)                       | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/blueprint.json)                                              |
-
-![showcase-plugin-with-media](blueprints/showcase-plugin-with-media/screenshot.jpg)
-
-| Theme Tester                                                                 | Blueprint example to add content and plugins to explore a theme                                                                                                                                                                                                                        | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-a11y-test/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/theme-a11y-test/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-a11y-test/blueprint.json)                                                                               |
-
-![theme-a11y-test](blueprints/theme-a11y-test/screenshot.jpg)
-
-| Use WPGraphQL to query WordPress                                             | Example that loads WordPress with WPGraphQL active and defaults to the WPGraphQL IDE page to allow users to test GraphQL queries and explore the GraphQL Schema.                                                                                                                       | [@jasonbahl](https://github.com/jasonbahl)                   | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpgraphql/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/wpgraphql/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpgraphql/blueprint.json)                                                                                                 |
-
-![wpgraphql](blueprints/wpgraphql/screenshot.jpg)
-
-| Use wp-cli command to add posts                                              | Blueprint example to add posts via a wp-cli command.                                                                                                                                                                                                                                   | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/posts-via-wp-cli/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/posts-via-wp-cli/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/posts-via-wp-cli/blueprint.json)                                                                            |
-
-![posts-via-wp-cli](blueprints/posts-via-wp-cli/screenshot.jpg)
-
-| Use wp-cli to add a post with image                                          | Use wp-cli to create a post from text file with block markup and a featured image                                                                                                                                                                                                      | [@bph](https://github.com/bph)                               | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/wpcli-post-with-image/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/blueprint.json)                                                             |
-
-![wpcli-post-with-image](blueprints/wpcli-post-with-image/screenshot.jpg)
-
-| Weather Shortcode Plugin                                                     | A blueprint to connetc weather API and show data as shortcode on a WordPress site.                                                                                                                                                                                                     | [@muryamsultana](https://github.com/muryamsultana)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/pwa-weather-app/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/pwa-weather-app/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/pwa-weather-app/blueprint.json)                                                                               |
-
-![pwa-weather-app](blueprints/pwa-weather-app/screenshot.jpg)
-
-| WooCommerce product feed                                                     | Blueprint to create a WooCommerce product and export an XML/CSV product feed                                                                                                                                                                                                           | [@mujuonly](https://github.com/mujuonly)                     | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-product-feed/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-product-feed/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-product-feed/blueprint.json)                                                    |
-
-![woocommerce-product-feed](blueprints/woocommerce-product-feed/screenshot.jpg)
-
-| WordPress Beta                                                               | Test the latest WordPress Beta or RC release with theme test data and debugging plugins. Only loads the Beta version during the Beta period.                                                                                                                                           | [@courtneyr-dev](https://github.com/courtneyr-dev)           | • [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/beta-rc/blueprint.json)<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/blueprints/beta-rc/blueprint.json)<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/beta-rc/blueprint.json)                                                                                                       |
-
-![beta-rc](blueprints/beta-rc/screenshot.jpg)
-
+<div class="blueprint-entry">
+<h2><strong>Art Gallery</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-vueo/blueprint.json"><img src="blueprints/portfolio-vueo/screenshot.jpg" alt="Art Gallery screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>An art gallery created with the Vueo theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-vueo/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-vueo/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-vueo/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Feed Reader with the Friends Plugin</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/friends-cors/blueprint.json"><img src="blueprints/friends-cors/screenshot.jpg" alt="Feed Reader with the Friends Plugin screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>By using the Friends plugin, you can read feeds from the web in Playground, and even via ActivityPub</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/friends-cors/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/akirk">@akirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/friends-cors/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/friends-cors/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Gaming News</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-spiel/blueprint.json"><img src="blueprints/news-spiel/screenshot.jpg" alt="Gaming News screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A gaming news site created with the Spiel theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-spiel/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-spiel/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-spiel/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Non-profit Organization</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-koinonia/blueprint.json"><img src="blueprints/organization-koinonia/screenshot.jpg" alt="Non-profit Organization screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A non-profit organization site created with the Koinonia theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-koinonia/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-koinonia/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-koinonia/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Personal Blog</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-substrata/blueprint.json"><img src="blueprints/personal-substrata/screenshot.jpg" alt="Personal Blog screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A personal blog site created with the Substrata theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-substrata/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-substrata/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-substrata/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Personal Resume</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-readymade/blueprint.json"><img src="blueprints/personal-readymade/screenshot.jpg" alt="Personal Resume screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A resume site created with the Readymade theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-readymade/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-readymade/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-readymade/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Photography Portfolio</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-grammer/blueprint.json"><img src="blueprints/portfolio-grammer/screenshot.jpg" alt="Photography Portfolio screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A photography portfolio created with the Grammer theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-grammer/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-grammer/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/portfolio-grammer/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Skincare Blog</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-piel/blueprint.json"><img src="blueprints/news-piel/screenshot.jpg" alt="Skincare Blog screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A skincare blog created with the Piel theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-piel/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-piel/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/news-piel/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>Stylish Press</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/blueprint.json"><img src="blueprints/stylish-press/screenshot.jpg" alt="Stylish Press screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A Woo store with custom theme, content, and products.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/adamziel">@adamziel</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/stylish-press/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2><strong>University Website</strong></h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-kentwood/blueprint.json"><img src="blueprints/organization-kentwood/screenshot.jpg" alt="University Website screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A university website created with the Kentwood theme.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-kentwood/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-kentwood/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/organization-kentwood/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Create Block Theme</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/create-block-theme/blueprint.json"><img src="blueprints/create-block-theme/screenshot.jpg" alt="Create Block Theme screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint to install Create Block Theme and start editing right away</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/create-block-theme/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/jonathanbossenger">@jonathanbossenger</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/create-block-theme/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/create-block-theme/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Creating a new user for the blog</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/user-meta/blueprint.json"><img src="blueprints/user-meta/screenshot.jpg" alt="Creating a new user for the blog screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>This is a simple example to update user meta data</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/user-meta/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/fellyph">@fellyph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/user-meta/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/user-meta/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Custom Post Type: Books</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/blueprint.json"><img src="blueprints/custom-post/screenshot.jpg" alt="Custom Post Type: Books screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint that added a custom post type to playground</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/custom-post/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Demo of Twenty-Twenty-Five theme</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/tt5-demo/blueprint.json"><img src="blueprints/tt5-demo/screenshot.jpg" alt="Demo of Twenty-Twenty-Five theme screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint with demo content for the Twenty-Twenty-Five default theme</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/tt5-demo/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/tt5-demo/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/tt5-demo/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Display Admin Notice </h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/admin-notice/blueprint.json"><img src="blueprints/admin-notice/screenshot.jpg" alt="Display Admin Notice  screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint to add a tiny mu-plugin and display an admin notice</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/admin-notice/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/admin-notice/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/admin-notice/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Enable all three Dataview Experiments in Gutenberg</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/gb-more-experiments/blueprint.json"><img src="blueprints/gb-more-experiments/screenshot.jpg" alt="Enable all three Dataview Experiments in Gutenberg screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint example to enable multiple Experiments within the Gutenberg plugin </p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/gb-more-experiments/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/gb-more-experiments/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/gb-more-experiments/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Fancy Dashboard Widget</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/fancy-dashboard_widget/blueprint.json"><img src="blueprints/fancy-dashboard_widget/screenshot.jpg" alt="Fancy Dashboard Widget screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A blueprint to display statistics about users, posts and comments on a WordPress site.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/fancy-dashboard_widget/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/muryamsultana">@muryamsultana</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/fancy-dashboard_widget/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/fancy-dashboard_widget/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Grid Variations Experiments enabled</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/grid-variations/blueprint.json"><img src="blueprints/grid-variations/screenshot.jpg" alt="Grid Variations Experiments enabled screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint example to toggle on enable a feature from the Experiments page in Gutenberg plugin</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/grid-variations/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/grid-variations/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/grid-variations/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Import Theme Starter Content</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-starter-content/blueprint.json"><img src="blueprints/theme-starter-content/screenshot.jpg" alt="Import Theme Starter Content screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint to install a theme with starter content, (here: Twenty-Twenty-One)</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-starter-content/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/theme-starter-content/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-starter-content/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Import a standalone starter content via a blueprint step</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/file-starter-content/blueprint.json"><img src="blueprints/file-starter-content/screenshot.jpg" alt="Import a standalone starter content via a blueprint step screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint to use a stand-alone starter content file and then to import it. Click on 'Subscriptions'</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/file-starter-content/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/file-starter-content/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/file-starter-content/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Install WordPress language packs</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/translations/blueprint.json"><img src="blueprints/translations/screenshot.jpg" alt="Install WordPress language packs screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/ – both for WordPress core and for the friends plugin.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/translations/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/adamziel">@adamziel</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/translations/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/translations/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Install plugin from a gist</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-plugin-from-gist/blueprint.json"><img src="blueprints/install-plugin-from-gist/screenshot.jpg" alt="Install plugin from a gist screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Install and activate a WordPress plugin from a .php file stored in a gist.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-plugin-from-gist/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/zieladam">@zieladam</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/install-plugin-from-gist/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-plugin-from-gist/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Latest Gutenberg plugin</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/latest-gutenberg/blueprint.json"><img src="blueprints/latest-gutenberg/screenshot.jpg" alt="Latest Gutenberg plugin screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A preview of the latest version of the Gutenberg plugin.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/latest-gutenberg/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/zieladam">@zieladam</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/latest-gutenberg/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/latest-gutenberg/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Loading, activating, and configuring a theme from a GitHub repository.</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json"><img src="blueprints/install-activate-setup-theme-from-gh-repo/screenshot.jpg" alt="Loading, activating, and configuring a theme from a GitHub repository. screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>This is a good example of typical steps used on a theme's loading, activation and configuration</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/richtabor">@richtabor</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Login as an editor</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/login-as-editor/blueprint.json"><img src="blueprints/login-as-editor/screenshot.jpg" alt="Login as an editor screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Test WordPress functionality as an editor rather than an administrator.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/login-as-editor/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bacoords">@bacoords</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/login-as-editor/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/login-as-editor/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Markdown and Trac Syntax Editor</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/blocky-formats/blueprint.json"><img src="blueprints/blocky-formats/screenshot.jpg" alt="Markdown and Trac Syntax Editor screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Edit Markdown and Trac formatting in the block editor thanks to the blocky-formats plugin!</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/blocky-formats/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/adamziel">@adamziel</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/blocky-formats/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/blocky-formats/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Minimal WooCommerce Setup with Sample Products, Shipping, and Payment Method</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/blueprint.json"><img src="blueprints/woo-shipping/screenshot.jpg" alt="Minimal WooCommerce Setup with Sample Products, Shipping, and Payment Method screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>To create a WordPress Playground instance that installs WooCommerce, adds a custom flat rate shipping method via a plugin, imports WooCommerce sample products XML to demonstrate the shipping method on the cart/checkout pages, and enables the Direct Bank Transfer payment method.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/calvinrodrigues500">@calvinrodrigues500</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woo-shipping/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Modern E-commerce Store</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/ecommerce-storefront/blueprint.json"><img src="blueprints/ecommerce-storefront/screenshot.jpg" alt="Modern E-commerce Store screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A modern e-commerce store created with the Blocksy theme and WooCommerce.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/ecommerce-storefront/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/ecommerce-storefront/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/ecommerce-storefront/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Playground Welcome Landing Page</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/welcome/blueprint.json"><img src="blueprints/welcome/screenshot.jpg" alt="Playground Welcome Landing Page screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Landing page for the WordPress Playground giving a quick overview of the features and capabilities of the platform.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/welcome/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/fellyph">@fellyph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/welcome/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/welcome/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Pretty permalinks</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/use-pretty-permalinks/blueprint.json"><img src="blueprints/use-pretty-permalinks/screenshot.jpg" alt="Pretty permalinks screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Set the permalink structure to use pretty permalinks.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/use-pretty-permalinks/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bgrgicak">@bgrgicak</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/use-pretty-permalinks/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/use-pretty-permalinks/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Reset data and import content (with logs)</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/reset-data-and-import-content/blueprint.json"><img src="blueprints/reset-data-and-import-content/screenshot.jpg" alt="Reset data and import content (with logs) screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>It resets default data before importing custom content. It also logs the state of the content after each step.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/reset-data-and-import-content/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/juanmaguitar">@juanmaguitar</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/reset-data-and-import-content/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/reset-data-and-import-content/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Serve media files from another host</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/redirect-upload-requests/blueprint.json"><img src="blueprints/redirect-upload-requests/screenshot.jpg" alt="Serve media files from another host screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Redirect any requests to files within the uploads directory to an external host. This is useful when you have a lot of image attachments in your playground but don’t want to include them all in the blueprint.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/redirect-upload-requests/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/ivanblagdan">@ivanblagdan</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/redirect-upload-requests/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/redirect-upload-requests/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Set the admin color scheme</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/set-admin-color-scheme/blueprint.json"><img src="blueprints/set-admin-color-scheme/screenshot.jpg" alt="Set the admin color scheme screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Set the admin color scheme to Modern using the updateUserMeta step.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/set-admin-color-scheme/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/ndiego">@ndiego</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/set-admin-color-scheme/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/set-admin-color-scheme/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Showcase plugin</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/blueprint.json"><img src="blueprints/showcase-plugin-with-media/screenshot.jpg" alt="Showcase plugin screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Showcase custom plugin from own server with media files and content imported as WXR. There is a readme file in github repository (https://github.com/Lovor01/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/readme.md) which explains all steps.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/Lovor01">@Lovor01</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Theme Tester</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-a11y-test/blueprint.json"><img src="blueprints/theme-a11y-test/screenshot.jpg" alt="Theme Tester screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint example to add content and plugins to explore a theme</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-a11y-test/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/theme-a11y-test/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/theme-a11y-test/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Use WPGraphQL to query WordPress</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpgraphql/blueprint.json"><img src="blueprints/wpgraphql/screenshot.jpg" alt="Use WPGraphQL to query WordPress screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Example that loads WordPress with WPGraphQL active and defaults to the WPGraphQL IDE page to allow users to test GraphQL queries and explore the GraphQL Schema.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpgraphql/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/jasonbahl">@jasonbahl</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wpgraphql/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpgraphql/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Use wp-cli command to add posts</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/posts-via-wp-cli/blueprint.json"><img src="blueprints/posts-via-wp-cli/screenshot.jpg" alt="Use wp-cli command to add posts screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint example to add posts via a wp-cli command.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/posts-via-wp-cli/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/posts-via-wp-cli/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/posts-via-wp-cli/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Use wp-cli to add a post with image</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/blueprint.json"><img src="blueprints/wpcli-post-with-image/screenshot.jpg" alt="Use wp-cli to add a post with image screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Use wp-cli to create a post from text file with block markup and a featured image</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/bph">@bph</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wpcli-post-with-image/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>Weather Shortcode Plugin</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/pwa-weather-app/blueprint.json"><img src="blueprints/pwa-weather-app/screenshot.jpg" alt="Weather Shortcode Plugin screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>A blueprint to connetc weather API and show data as shortcode on a WordPress site.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/pwa-weather-app/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/muryamsultana">@muryamsultana</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/pwa-weather-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/pwa-weather-app/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>WooCommerce product feed</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-product-feed/blueprint.json"><img src="blueprints/woocommerce-product-feed/screenshot.jpg" alt="WooCommerce product feed screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Blueprint to create a WooCommerce product and export an XML/CSV product feed</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-product-feed/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/mujuonly">@mujuonly</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-product-feed/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woocommerce-product-feed/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
+
+<div class="blueprint-entry">
+<h2>WordPress Beta</h2>
+<a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/beta-rc/blueprint.json"><img src="blueprints/beta-rc/screenshot.jpg" alt="WordPress Beta screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>
+<p>Test the latest WordPress Beta or RC release with theme test data and debugging plugins. Only loads the Beta version during the Beta period.</p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/beta-rc/blueprint.json"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>
+<br><br><p><small>By <a href="https://github.com/courtneyr-dev">@courtneyr-dev</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/beta-rc/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/beta-rc/blueprint.json">Edit</a></small></p>
+<div style="clear:both;"></div>
+</div>
 

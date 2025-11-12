@@ -4,11 +4,32 @@
 		"title": "Markdown and Trac Syntax Editor",
 		"description": "Edit Markdown and Trac formatting in the block editor thanks to the blocky-formats plugin!",
 		"author": "adamziel",
-		"categories": ["block-editor"]
+		"categories": [
+			"block-editor"
+		]
 	},
 	"login": true,
 	"landingPage": "/wp-admin/post-new.php",
 	"steps": [
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Blocky Formats Demo"
+			}
+		},
+		{
+			"step": "setUserMeta",
+			"meta": {
+				"wp_persisted_preferences": {
+					"core/edit-post": {
+						"welcomeGuide": false
+					},
+					"core/edit-site": {
+						"welcomeGuide": false
+					}
+				}
+			}
+		},
 		{
 			"step": "installPlugin",
 			"options": {

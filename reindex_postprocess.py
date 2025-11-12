@@ -16,6 +16,33 @@ highlighted_blueprints = [
     'Art Gallery',
 ]
 
+
+def build_raw_blueprint_url(path):
+    return 'https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0}'.format(path)
+
+
+def build_preview_url(path):
+    return 'https://playground.wordpress.net/?blueprint-url={0}'.format(build_raw_blueprint_url(path))
+
+
+def build_edit_url(path):
+    return 'https://playground.wordpress.net/builder/builder.html?blueprint-url={0}'.format(build_raw_blueprint_url(path))
+
+
+def resolve_screenshot_path(meta, blueprint_path):
+    screenshot = meta.get('screenshot')
+    if screenshot:
+        normalized = screenshot.replace('\\', '/').lstrip('./')
+        if normalized.startswith('http://') or normalized.startswith('https://'):
+            return normalized
+        if screenshot.startswith('/'):
+            return normalized
+        blueprint_dir = os.path.dirname(blueprint_path).replace('\\', '/')
+        return f"{blueprint_dir}/{normalized}".replace('//', '/')
+
+    blueprint_dir = os.path.dirname(blueprint_path)
+    return os.path.join(blueprint_dir, 'screenshot.jpg').replace('\\', '/')
+
 def build_json_index():
     index = {}
     for root, dirs, files in os.walk('blueprints'):
@@ -48,35 +75,57 @@ def get_dot_template_files():
 def build_markdown_table():
     with open('index.json', 'r') as f:
         index = json.load(f)
-    blueprints_rows = [
-        ['Title', 'Description', 'Author', 'Actions', ]
-    ]
+    entries = []
     for path, meta in index.items():
         title = meta.get('title', '')
-        if title in highlighted_blueprints:
-            title = f"**{title}**"
-        blueprints_rows.append([
-            title,
-            meta.get('description', ''),
-            '[@{0}](https://github.com/{0})'.format(meta.get('author', '')) if meta.get('author', '') else '',
-            '• [Open in Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path) +
-            '<br>• [View source](https://github.com/wordpress/blueprints/blob/trunk/{0})'.format(path) +
-            '<br>• [Edit](https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0})'.format(path),
-        ])
+        display_title = title or 'Untitled Blueprint'
+        if display_title in highlighted_blueprints:
+            display_title = f"<strong>{display_title}</strong>"
 
-    widths = [max(map(len, col)) for col in zip(*blueprints_rows)]
+        preview = build_preview_url(path)
+        screenshot_path = resolve_screenshot_path(meta, path)
+        screenshot_html = '<a href="{preview}"><img src="{src}" alt="{alt} screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>'.format(
+            preview=preview,
+            src=screenshot_path,
+            alt=title or 'Blueprint'
+        )
 
-    def format_row(row):
-        formatted_row = ' | '.join((val.ljust(width) for val, width in zip(row, widths)))
-        return '| ' + formatted_row + ' |'
+        description = meta.get('description', '')
+        description_html = f'<p>{description}</p>' if description else ''
 
-    formatted_rows = [
-        format_row(blueprints_rows[0]),
-        format_row(['-' * len(cell) for cell in blueprints_rows[0]])
-    ]
-    for row in blueprints_rows[1:]:
-        formatted_rows.append(format_row(row))
-    formatted_table = '\n'.join(formatted_rows)
+        preview_button = f'<p><a href="{preview}"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>'
+        edit_url = build_edit_url(path)
+        author = meta.get('author', '').strip()
+        if author:
+            author_link = f'<a href="https://github.com/{author}">@{author}</a>'
+            meta_line = (
+                '<br><br><p><small>'
+                f'By {author_link} • <a href="https://github.com/wordpress/blueprints/blob/trunk/{path}">View source</a> '
+                f'• <a href="{edit_url}">Edit</a>'
+                '</small></p>'
+            )
+        else:
+            meta_line = (
+                '<p><small>'
+                f'<a href="https://github.com/wordpress/blueprints/blob/trunk/{path}">View source</a> '
+                f'• <a href="{edit_url}">Edit</a>'
+                '</small></p>'
+            )
+
+        entry = (
+            '<div class="blueprint-entry">\n'
+            f'<h2>{display_title}</h2>\n'
+            f'{screenshot_html}\n'
+            f'{description_html}\n'
+            f'{preview_button}\n'
+            f'{meta_line}\n'
+            '<div style="clear:both;"></div>\n'
+            '</div>'
+        )
+
+        entries.append(entry)
+
+    formatted_table = '\n\n'.join(entries)
 
     # Replace "{BLUEPRINTS_TABLE}" in all the *.template files
     DOT_TEMPLATE_FILES = get_dot_template_files()

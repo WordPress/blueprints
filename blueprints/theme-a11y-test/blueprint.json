@@ -4,14 +4,19 @@
 		"title": "Theme Tester",
 		"description": "Blueprint example to add content and plugins to explore a theme",
 		"author": "bph",
-		"categories": ["themes", "content"]
+		"categories": [
+			"themes",
+			"content"
+		]
 	},
 	"preferredVersions": {
 		"php": "8.3",
 		"wp": "beta"
 	},
 	"login": true,
-	"plugins": ["create-block-theme"],
+	"plugins": [
+		"create-block-theme"
+	],
 	"steps": [
 		{
 			"step": "importWxr",

@@ -4,9 +4,14 @@
 		"title": "Create Block Theme",
 		"description": "Blueprint to install Create Block Theme and start editing right away",
 		"author": "jonathanbossenger",
-		"categories": ["Editor", "theme"]
+		"categories": [
+			"Editor",
+			"theme"
+		]
 	},
-	"plugins": ["create-block-theme"],
+	"plugins": [
+		"create-block-theme"
+	],
 	"login": true,
 	"landingPage": "/wp-admin/site-editor.php"
 }

@@ -4,7 +4,9 @@
 		"title": "Set the admin color scheme",
 		"description": "Set the admin color scheme to Modern using the updateUserMeta step.",
 		"author": "ndiego",
-		"categories": ["user meta"]
+		"categories": [
+			"user meta"
+		]
 	},
 	"preferredVersions": {
 		"php": "8.3",

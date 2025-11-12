@@ -4,7 +4,11 @@
 		"title": "Photography Portfolio",
 		"description": "A photography portfolio created with the Grammer theme.",
 		"author": "WordPress.com",
-		"categories": ["Website", "Personal", "Photography"]
+		"categories": [
+			"Website",
+			"Personal",
+			"Photography"
+		]
 	},
 	"login": true,
 	"siteOptions": {

@@ -4,7 +4,10 @@
 		"title": "Import Theme Starter Content",
 		"author": "bph",
 		"description": "Blueprint to install a theme with starter content, (here: Twenty-Twenty-One)",
-		"categories": ["Themes", "Starter Content"]
+		"categories": [
+			"Themes",
+			"Starter Content"
+		]
 	},
 	"landingPage": "/",
 	"steps": [

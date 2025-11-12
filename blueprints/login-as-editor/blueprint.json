@@ -4,7 +4,10 @@
 		"title": "Login as an editor",
 		"description": "Test WordPress functionality as an editor rather than an administrator.",
 		"author": "bacoords",
-		"categories": ["User", "Role"]
+		"categories": [
+			"User",
+			"Role"
+		]
 	},
 	"landingPage": "/wp-admin/",
 	"steps": [

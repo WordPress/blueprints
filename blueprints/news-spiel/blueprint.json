@@ -4,7 +4,10 @@
 		"title": "Gaming News",
 		"description": "A gaming news site created with the Spiel theme.",
 		"author": "WordPress.com",
-		"categories": ["Website", "News"]
+		"categories": [
+			"Website",
+			"News"
+		]
 	},
 	"login": true,
 	"siteOptions": {

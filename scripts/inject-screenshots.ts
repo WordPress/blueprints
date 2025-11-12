@@ -4,7 +4,6 @@ import path from 'node:path';
 
 const ROOT = path.resolve(process.cwd());
 const GALLERY = path.resolve('GALLERY.md');
-const SHOTS_DIR = 'docs/screenshots';
 const BLUEPRINTS_DIR = path.join(ROOT, 'blueprints');
 
 type BlueprintJson = { meta?: { screenshot?: string } };
@@ -46,20 +45,41 @@ async function hasRepoScreenshot(slug: string): Promise<boolean> {
   }
 }
 
+async function listBlueprintSlugs(): Promise<string[]> {
+  const entries = await fs.readdir(BLUEPRINTS_DIR, { withFileTypes: true });
+  const dirs = entries.filter((e) => e.isDirectory());
+  const slugs: string[] = [];
+  for (const d of dirs) {
+    const bpPath = path.join(BLUEPRINTS_DIR, d.name, 'blueprint.json');
+    try {
+      await fs.access(bpPath);
+      slugs.push(d.name);
+    } catch {}
+  }
+  return slugs.sort();
+}
+
 async function main() {
   let md = await fs.readFile(GALLERY, 'utf8');
-  const shots = (await fs.readdir(SHOTS_DIR)).filter((n) => n.endsWith('.jpg'));
+  const slugs = await listBlueprintSlugs();
 
-  for (const file of shots) {
-    const slug = file.replace(/\.jpg$/, '');
+  for (const slug of slugs) {
+    // Check if this blueprint has a screenshot.jpg file
+    const screenshotPath = path.join(BLUEPRINTS_DIR, slug, 'screenshot.jpg');
+    const hasScreenshot = await fileExists(screenshotPath);
+    
+    if (!hasScreenshot) continue;
 
-    // Skip injecting if blueprint declares a repo-backed screenshot.
+    // Skip injecting if blueprint already declares a screenshot in meta
     if (await hasRepoScreenshot(slug)) continue;
+
+    // Build the relative path for the markdown image
+    const screenshotRelPath = `blueprints/${slug}/screenshot.jpg`;
 
     // Match the entire table row that contains a link to this blueprint
     const re = new RegExp(`(^\\|.*blueprints\\/${slug}\\/blueprint\\.json.*\\|)$`, 'm');
-    if (re.test(md) && !md.includes(`(${SHOTS_DIR}/${slug}.jpg)`)) {
-      md = md.replace(re, `$1\n\n![${slug}](${SHOTS_DIR}/${slug}.jpg)`);
+    if (re.test(md) && !md.includes(`(${screenshotRelPath})`)) {
+      md = md.replace(re, `$1\n\n![${slug}](${screenshotRelPath})`);
     }
   }
 

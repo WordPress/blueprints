@@ -7,7 +7,6 @@ const REPO = 'WordPress/blueprints';
 const BRANCH = 'trunk';
 const ROOT = path.resolve(process.cwd());
 const BLUEPRINTS_DIR = path.join(ROOT, 'blueprints');
-const OUT_DIR = path.join(ROOT, 'docs', 'screenshots');
 
 type BlueprintJson = {
   meta?: {
@@ -98,7 +97,6 @@ async function readTitle(slug: string) {
 }
 
 async function main() {
-  await ensureDir(OUT_DIR);
   const slugs = await listBlueprintSlugs();
 
   // Filter: only those without a repo-backed screenshot
@@ -128,13 +126,12 @@ async function main() {
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 180_000 });
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.waitForLoadState('networkidle', { timeout: 120_000 });
-    await page.waitForTimeout(2000);
 
     // Wait for the top-level Playground iframe
     const playgroundFrame = page.locator('iframe.playground-viewport');
     await playgroundFrame.waitFor({ state: 'visible', timeout: 120_000 });
 
-    // Get the frame content and find the WordPress iframe inside
+    // Get the frame content
     const frameElement = await playgroundFrame.elementHandle();
     const frame = await frameElement?.contentFrame();
     if (!frame) {
@@ -143,11 +140,24 @@ async function main() {
       continue;
     }
 
+    // Wait for the progress bar to disappear
+    const progressBar = frame.locator('.progress-bar');
+    try {
+      await progressBar.waitFor({ state: 'hidden', timeout: 120_000 });
+    } catch (e) {
+      console.log(`Progress bar wait timed out for ${slug}, continuing anyway`);
+    }
+
     // Wait for the WordPress iframe inside
     const wpFrame = frame.locator('iframe#wp');
     await wpFrame.waitFor({ state: 'visible', timeout: 120_000 });
 
-    const out = path.join(OUT_DIR, `${slug}.jpg`);
+    // Additional wait to ensure content is loaded in the WordPress iframe
+    await page.waitForTimeout(3000);
+
+    // Screenshot the WordPress iframe
+    const blueprintDir = path.join(BLUEPRINTS_DIR, slug);
+    const out = path.join(blueprintDir, 'screenshot.jpg');
     await wpFrame.screenshot({ path: out, type: 'jpeg', quality: 70 });
 
     console.log(`Shot: ${slug} -> ${path.relative(ROOT, out)}`);

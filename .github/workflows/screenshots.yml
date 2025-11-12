@@ -66,7 +66,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/screenshots/ GALLERY.md
+          git add blueprints/*/screenshot.jpg GALLERY.md
           git commit -m "chore: add missing Blueprint screenshots"
           git push
 

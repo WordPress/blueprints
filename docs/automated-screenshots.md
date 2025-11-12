@@ -15,17 +15,21 @@ This script:
 - For each blueprint, checks if it has a `meta.screenshot` property in its `blueprint.json`
 - If a screenshot property exists, verifies if the file exists in the repository
 - For blueprints without existing screenshots, uses Playwright to:
-  - Load the Blueprint via `?blueprint-url=` on playground.wordpress.net
-  - Wait for the Playground to fully load and settle
-  - Capture a screenshot of just the WordPress iframe (`#wp-playground`)
-  - Save as JPEG at 70% quality to `docs/screenshots/<slug>.jpg`
+  - Load the Blueprint via `?blueprint-url=` on playground.wordpress.net with `?mode=seamless`
+  - Wait for the top-level `.playground-viewport` iframe to be visible
+  - Wait for the progress bar (`.progress-bar`) to disappear
+  - Wait for the WordPress iframe (`iframe#wp`) to be visible
+  - Wait for content to load (additional 3 second delay)
+  - Capture a screenshot of just the WordPress iframe
+  - Save as JPEG at 70% quality to `blueprints/<slug>/screenshot.jpg`
 
 ### 2. Gallery Injection (`scripts/inject-screenshots.ts`)
 
 This script:
-- Reads all generated screenshot files from `docs/screenshots/`
-- For each screenshot, checks if the corresponding blueprint has a repo-backed screenshot
+- Scans all blueprint folders for `screenshot.jpg` files
+- For each blueprint with a screenshot file, checks if it already declares a screenshot in `meta`
 - If not, finds the matching row in GALLERY.md and injects the screenshot image below it
+- Uses the relative path `blueprints/<slug>/screenshot.jpg` for the image reference
 - Preserves the existing table structure while adding visual previews
 
 ### 3. GitHub Actions Workflow (`.github/workflows/screenshots.yml`)

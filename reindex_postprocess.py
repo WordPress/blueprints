@@ -93,13 +93,13 @@ def build_markdown_table():
         description = meta.get('description', '')
         description_html = f'<p>{description}</p>' if description else ''
 
-        preview_button = f'<p><a href="{preview}"><img align="right" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>'
+        preview_button = f'<p><a href="{preview}"><img align="right" src="playground-preview-button.svg" alt="Try it in Playground" width="200"></a></p>'
         edit_url = build_edit_url(path)
         author = meta.get('author', '').strip()
         if author:
             author_link = f'<a href="https://github.com/{author}">@{author}</a>'
             meta_line = (
-                '<br><br><p><small>'
+                '<p><small>'
                 f'By {author_link} • <a href="https://github.com/wordpress/blueprints/blob/trunk/{path}">View source</a> '
                 f'• <a href="{edit_url}">Edit</a>'
                 '</small></p>'
@@ -117,8 +117,8 @@ def build_markdown_table():
             f'<h2>{display_title}</h2>\n'
             f'{preview_button}\n'
             f'{screenshot_html}\n'
-            f'<div>{description_html}\n'
-            f'{meta_line}</div>\n'
+            f'{description_html}\n'
+            f'{meta_line}\n'
             '<div style="clear:both;"></div>\n'
             '</div>'
         )

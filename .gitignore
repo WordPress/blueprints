@@ -32,3 +32,8 @@ yarn-error.log*
 # Screenshot generation temporary files
 **/screenshots/_capture_temp.js
 .github/workflows/screenshots/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo

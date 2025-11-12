@@ -1,0 +1,26 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Screenshot Demo Blueprint",
+		"description": "A demonstration blueprint showing how automatic screenshots work",
+		"author": "WordPress",
+		"categories": ["demo", "documentation"]
+	},
+	"landingPage": "/",
+	"login": true,
+	"plugins": ["gutenberg"],
+	"steps": [
+		{
+			"step": "wp-cli",
+			"command": "wp option update blogname 'Screenshot Demo Site'"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp option update blogdescription 'Automatically generated screenshots showcase this blueprint'"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp post create --post_title='Welcome to Screenshot Generation' --post_content='<p>This blueprint demonstrates the automatic screenshot generation feature. When you submit a blueprint via PR, screenshots are automatically captured and added to your branch!</p><p>The gallery then displays these screenshots to help users visualize what your blueprint creates.</p>' --post_status='publish'"
+		}
+	]
+}

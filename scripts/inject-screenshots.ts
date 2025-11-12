@@ -56,7 +56,8 @@ async function main() {
     // Skip injecting if blueprint declares a repo-backed screenshot.
     if (await hasRepoScreenshot(slug)) continue;
 
-    const re = new RegExp(`(^.*blueprints\\/${slug}\\/(?:[^)]+)\\).*?$)`, 'm');
+    // Match the entire table row that contains a link to this blueprint
+    const re = new RegExp(`(^\\|.*blueprints\\/${slug}\\/blueprint\\.json.*\\|)$`, 'm');
     if (re.test(md) && !md.includes(`(${SHOTS_DIR}/${slug}.jpg)`)) {
       md = md.replace(re, `$1\n\n![${slug}](${SHOTS_DIR}/${slug}.jpg)`);
     }

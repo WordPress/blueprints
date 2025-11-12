@@ -31,11 +31,13 @@ This script:
 ### 3. GitHub Actions Workflow (`.github/workflows/screenshots.yml`)
 
 The workflow:
+- Runs automatically on pull requests that modify blueprint.json files
 - Runs weekly on Mondays at 3 AM UTC
 - Can be manually triggered via workflow_dispatch
 - Installs dependencies and Playwright browsers
 - Executes both scripts in sequence
-- Creates a pull request with any changes
+- For PRs: Commits screenshots directly to the PR branch (same-repo PRs only)
+- For scheduled/manual runs: Creates a new pull request with any changes
 
 ## Screenshot Resolution Logic
 

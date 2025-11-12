@@ -9,7 +9,10 @@ The `screenshots.yml` GitHub Actions workflow automatically generates screenshot
 - Screenshots are taken using Playwright by loading each Blueprint via `?blueprint-url=` on playground.wordpress.net
 - Only the WordPress iframe (`#wp-playground`) is captured, not the entire Playground UI
 - Images are saved as JPEG files with 70% quality to balance file size and visual quality
-- The workflow runs weekly on Mondays at 3 AM UTC, or can be triggered manually via workflow_dispatch
+- The workflow runs automatically on pull requests that modify blueprint.json files
+- The workflow also runs weekly on Mondays at 3 AM UTC, or can be triggered manually via workflow_dispatch
+- For pull requests from the same repository, screenshots are committed directly to the PR branch
+- Existing screenshots are never replaced
 
 ## Directory structure
 

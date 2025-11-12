@@ -4,20 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 3 * * 1" # weekly, Mondays 03:00 UTC
-  pull_request:
-    types: [opened, synchronize, reopened]
-    paths:
-      - 'blueprints/**/blueprint.json'
-      - '.github/workflows/screenshots.yml'
-      - 'scripts/screenshot-blueprints.ts'
-      - 'scripts/inject-screenshots.ts'
   pull_request_target:
     types: [opened, synchronize, reopened]
     paths:
       - 'blueprints/**/blueprint.json'
       - '.github/workflows/screenshots.yml'
       - 'scripts/screenshot-blueprints.ts'
-      - 'scripts/inject-screenshots.ts'
 
 permissions:
   contents: write

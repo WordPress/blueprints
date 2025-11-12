@@ -84,7 +84,7 @@ def build_markdown_table():
 
         preview = build_preview_url(path)
         screenshot_path = resolve_screenshot_path(meta, path)
-        screenshot_html = '<a href="{preview}"><img src="{src}" alt="{alt} screenshot" width="200" align="right" style="margin:0 1rem 1rem 0;"></a>'.format(
+        screenshot_html = '<a href="{preview}"><img src="{src}" alt="{alt} screenshot" width="200" align="left" style="margin:0 1rem 1rem 0;"></a>'.format(
             preview=preview,
             src=screenshot_path,
             alt=title or 'Blueprint'
@@ -93,7 +93,7 @@ def build_markdown_table():
         description = meta.get('description', '')
         description_html = f'<p>{description}</p>' if description else ''
 
-        preview_button = f'<p><a href="{preview}"><img align="left" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>'
+        preview_button = f'<p><a href="{preview}"><img align="right" src="playground-preview-button.svg" alt="Try it in Playground" width="150"></a></p>'
         edit_url = build_edit_url(path)
         author = meta.get('author', '').strip()
         if author:
@@ -115,10 +115,10 @@ def build_markdown_table():
         entry = (
             '<div class="blueprint-entry">\n'
             f'<h2>{display_title}</h2>\n'
-            f'{screenshot_html}\n'
-            f'{description_html}\n'
             f'{preview_button}\n'
-            f'{meta_line}\n'
+            f'{screenshot_html}\n'
+            f'<div>{description_html}\n'
+            f'{meta_line}</div>\n'
             '<div style="clear:both;"></div>\n'
             '</div>'
         )

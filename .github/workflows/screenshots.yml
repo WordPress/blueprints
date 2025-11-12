@@ -1,0 +1,38 @@
+name: Update Gallery Screenshots
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * 1" # weekly, Mondays 03:00 UTC
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm i
+      - run: npx playwright install --with-deps
+
+      - name: Take screenshots
+        run: npm run shots
+
+      - name: Inject screenshots into GALLERY.md
+        run: npm run inject
+
+      - name: Create PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh Blueprint screenshots"
+          title: "Refresh Blueprint screenshots"
+          body: "Automated update of gallery screenshots."
+          branch: ci/update-screenshots
+          delete-branch: true

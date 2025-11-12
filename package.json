@@ -1,0 +1,13 @@
+{
+  "name": "blueprints-screenshots",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "shots": "tsx scripts/screenshot-blueprints.ts",
+    "inject": "tsx scripts/inject-screenshots.ts"
+  },
+  "devDependencies": {
+    "playwright": "^1.48.0",
+    "tsx": "^4.19.0"
+  }
+}

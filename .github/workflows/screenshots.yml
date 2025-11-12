@@ -4,6 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 3 * * 1" # weekly, Mondays 03:00 UTC
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'blueprints/**/blueprint.json'
+      - '.github/workflows/screenshots.yml'
+      - 'scripts/screenshot-blueprints.ts'
+      - 'scripts/inject-screenshots.ts'
   pull_request_target:
     types: [opened, synchronize, reopened]
     paths:
@@ -20,12 +27,16 @@ jobs:
   render:
     runs-on: ubuntu-latest
     # Only run for PRs from the same repository (not forks)
-    if: github.event_name != 'pull_request_target' || github.event.pull_request.head.repo.full_name == github.repository
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
+      github.event_name == 'pull_request' ||
+      (github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name == github.repository)
     steps:
       - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'pull_request_target' && github.event.pull_request.head.ref || github.ref }}
+          ref: ${{ (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.head.ref || github.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
@@ -51,7 +62,7 @@ jobs:
           fi
 
       - name: Commit and push to PR
-        if: github.event_name == 'pull_request_target' && steps.check_changes.outputs.has_changes == 'true'
+        if: (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && steps.check_changes.outputs.has_changes == 'true'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
@@ -60,7 +71,7 @@ jobs:
           git push
 
       - name: Create PR for scheduled/manual runs
-        if: github.event_name != 'pull_request_target' && steps.check_changes.outputs.has_changes == 'true'
+        if: (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule') && steps.check_changes.outputs.has_changes == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: refresh Blueprint screenshots"

@@ -122,7 +122,7 @@ async function main() {
 
   for (const slug of toShoot) {
     const page = await context.newPage();
-    const url = `https://playground.wordpress.net/?blueprint-url=${encodeURIComponent(
+    const url = `https://playground.wordpress.net/?mode=seamless&blueprint-url=${encodeURIComponent(
       rawBlueprintUrl(slug)
     )}`;
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 180_000 });
@@ -130,11 +130,25 @@ async function main() {
     await page.waitForLoadState('networkidle', { timeout: 120_000 });
     await page.waitForTimeout(2000);
 
-    const frame = page.locator('iframe#wp-playground');
-    await frame.waitFor({ state: 'visible', timeout: 120_000 });
+    // Wait for the top-level Playground iframe
+    const playgroundFrame = page.locator('iframe.playground-viewport');
+    await playgroundFrame.waitFor({ state: 'visible', timeout: 120_000 });
+
+    // Get the frame content and find the WordPress iframe inside
+    const frameElement = await playgroundFrame.elementHandle();
+    const frame = await frameElement?.contentFrame();
+    if (!frame) {
+      console.error(`Failed to get frame content for ${slug}`);
+      await page.close();
+      continue;
+    }
+
+    // Wait for the WordPress iframe inside
+    const wpFrame = frame.locator('iframe#wp');
+    await wpFrame.waitFor({ state: 'visible', timeout: 120_000 });
 
     const out = path.join(OUT_DIR, `${slug}.jpg`);
-    await frame.screenshot({ path: out, type: 'jpeg', quality: 70 });
+    await wpFrame.screenshot({ path: out, type: 'jpeg', quality: 70 });
 
     console.log(`Shot: ${slug} -> ${path.relative(ROOT, out)}`);
     await page.close();

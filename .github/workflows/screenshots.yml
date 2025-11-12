@@ -8,6 +8,9 @@ on:
     types: [opened, synchronize, reopened]
     paths:
       - 'blueprints/**/blueprint.json'
+      - '.github/workflows/screenshots.yml'
+      - 'scripts/screenshot-blueprints.ts'
+      - 'scripts/inject-screenshots.ts'
 
 permissions:
   contents: write

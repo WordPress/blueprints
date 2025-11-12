@@ -115,7 +115,7 @@ async function main() {
   const context = await browser.newContext({
     ...devices['Desktop Chrome'],
     deviceScaleFactor: 1,
-    viewport: { width: 1280, height: 800 },
+    viewport: { width: 1920, height: 1080 },
   });
 
   for (const slug of toShoot) {
@@ -194,6 +194,17 @@ async function main() {
 
     // Additional wait to ensure visual rendering is complete
     await page.waitForTimeout(2000);
+
+    // Set zoom to 150% on the WordPress content frame
+    try {
+      await wpContentFrame.evaluate(() => {
+        (document.body.style as any).zoom = '150%';
+      });
+      // Wait a bit for zoom to apply
+      await page.waitForTimeout(500);
+    } catch (e) {
+      console.log(`Failed to set zoom for ${slug}, continuing anyway`);
+    }
 
     // Screenshot the WordPress iframe
     const blueprintDir = path.join(BLUEPRINTS_DIR, slug);

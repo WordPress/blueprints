@@ -123,9 +123,10 @@ async function main() {
     const url = `https://playground.wordpress.net/?mode=seamless&blueprint-url=${encodeURIComponent(
       rawBlueprintUrl(slug)
     )}`;
-    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 180_000 });
+    
+    // Wait for full load, not just domcontentloaded
+    await page.goto(url, { waitUntil: 'load', timeout: 180_000 });
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.waitForLoadState('networkidle', { timeout: 120_000 });
 
     // Wait for the top-level Playground iframe
     const playgroundFrame = page.locator('iframe.playground-viewport');
@@ -140,10 +141,11 @@ async function main() {
       continue;
     }
 
-    // Wait for the progress bar to disappear
+    // Wait for the progress bar to NOT exist (not just be hidden) - 5 minute timeout
     const progressBar = frame.locator('.progress-bar');
     try {
-      await progressBar.waitFor({ state: 'hidden', timeout: 120_000 });
+      await progressBar.waitFor({ state: 'detached', timeout: 300_000 });
+      console.log(`Progress bar disappeared for ${slug}`);
     } catch (e) {
       console.log(`Progress bar wait timed out for ${slug}, continuing anyway`);
     }
@@ -152,8 +154,46 @@ async function main() {
     const wpFrame = frame.locator('iframe#wp');
     await wpFrame.waitFor({ state: 'visible', timeout: 120_000 });
 
-    // Additional wait to ensure content is loaded in the WordPress iframe
-    await page.waitForTimeout(3000);
+    // Get the WordPress iframe's content frame
+    const wpFrameElement = await wpFrame.elementHandle();
+    const wpContentFrame = await wpFrameElement?.contentFrame();
+    
+    if (!wpContentFrame) {
+      console.error(`Failed to get WordPress frame content for ${slug}`);
+      await page.close();
+      continue;
+    }
+
+    // Wait for WordPress content to be loaded by checking for WordPress-specific indicators
+    // Check for canonical link, wp-content in scripts/styles, or give it time to load
+    try {
+      await wpContentFrame.waitForFunction(
+        () => {
+          // Check for canonical URL
+          const canonical = document.querySelector('link[rel="canonical"]');
+          if (canonical) return true;
+          
+          // Check for wp-content in any script or link tags
+          const scripts = Array.from(document.querySelectorAll('script[src], link[href]'));
+          const hasWpContent = scripts.some(el => {
+            const src = (el as HTMLScriptElement).src || (el as HTMLLinkElement).href;
+            return src && src.includes('/wp-content/');
+          });
+          if (hasWpContent) return true;
+          
+          // Check if body has meaningful content
+          const body = document.body;
+          return body && body.children.length > 0;
+        },
+        { timeout: 60_000 }
+      );
+      console.log(`WordPress content detected for ${slug}`);
+    } catch (e) {
+      console.log(`WordPress content detection timed out for ${slug}, taking screenshot anyway`);
+    }
+
+    // Additional wait to ensure visual rendering is complete
+    await page.waitForTimeout(2000);
 
     // Screenshot the WordPress iframe
     const blueprintDir = path.join(BLUEPRINTS_DIR, slug);

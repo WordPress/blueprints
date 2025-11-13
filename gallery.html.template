@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Blueprints Gallery</title>
+    <script type="module">
+        import { h, render, Component } from 'https://esm.sh/preact@10.19.3';
+        import { useState, useEffect } from 'https://esm.sh/preact@10.19.3/hooks';
+        window.h = h;
+        window.Component = Component;
+        window.useState = useState;
+        window.useEffect = useEffect;
+        window.render = render;
+    </script>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f3f4f6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f3f4f6;
+        }
+
+
+        .hero {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 3rem 0 2.75rem;
+            box-shadow: 0 12px 40px rgba(15, 23, 42, 0.35);
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .hero-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero-logo {
+            width: 48px;
+            height: 48px;
+        }
+
+        .hero-title {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .hero-subtitle {
+            font-size: 1.05rem;
+            color: #d1d5db;
+            max-width: 820px;
+            line-height: 1.7;
+        }
+
+        .hero-link {
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero-link:hover {
+            text-decoration: underline;
+        }
+
+        .filters-section {
+            background: #f9fafb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .filters-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.75rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .tab-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .tab {
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            color: #1f2937;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab:hover {
+            border-color: #94a3b8;
+        }
+
+        .tab.active {
+            background: #0f172a;
+            border-color: #0f172a;
+            color: #f9fafb;
+            box-shadow: 0 6px 16px rgba(15, 23, 42, 0.25);
+        }
+
+        .toolbar {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-block {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .search-field {
+            position: relative;
+        }
+
+        .search-field input {
+            width: 100%;
+            padding: 0.7rem 1rem 0.7rem 2.6rem;
+            border-radius: 12px;
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            font-size: 0.95rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .search-field input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            left: 0.9rem;
+            transform: translateY(-50%);
+            color: #9ca3af;
+            font-size: 1.35rem;
+            pointer-events: none;
+        }
+
+        .gallery-section {
+            flex: 1;
+        }
+
+        .gallery-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 2rem 3rem;
+        }
+
+        .results-summary {
+            margin-bottom: 1.5rem;
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .pattern-card {
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pattern-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 22px 45px rgba(15, 23, 42, 0.15);
+        }
+
+        .pattern-card-image {
+            display: block;
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            object-position: center top;
+            background: #f3f4f6;
+        }
+
+        .pattern-card-image.placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 230px;
+            font-size: 0.95rem;
+            color: #9ca3af;
+        }
+
+        .pattern-card-body {
+            padding: 1.25rem 1.5rem 1.4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            flex: 1;
+        }
+
+        .pattern-card-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            flex-wrap: nowrap;
+        }
+
+        .pattern-card-title {
+            margin: 0;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #111827;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .pattern-card-description {
+            margin: 0;
+            font-size: 0.9rem;
+            color: #6b7280;
+            min-height: 2.4rem;
+        }
+
+        .pattern-card-meta {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        .pattern-card-meta a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .pattern-card-meta a:hover {
+            text-decoration: underline;
+        }
+
+        .pattern-card-meta .meta-separator {
+            color: #d1d5db;
+            margin: 0 0.25rem;
+            font-weight: 600;
+        }
+
+        .btn-try-it {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.65rem 1.25rem;
+            background: #3858e9;
+            color: #ffffff;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.2s ease, transform 0.1s ease;
+            flex-shrink: 0;
+        }
+
+        .pattern-card-header .btn-try-it {
+            margin-left: auto;
+        }
+
+        .btn-try-it:hover {
+            background: #2a44d0;
+            transform: translateY(-1px);
+        }
+
+        .btn-try-it .btn-icon {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-view-source {
+            color: #6b7280;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .btn-view-source:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .no-results {
+            margin-top: 3rem;
+            text-align: center;
+            padding: 3rem;
+            background: #ffffff;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            color: #6b7280;
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        .no-results h2 {
+            font-size: 1.6rem;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer {
+            background: #f9fafb;
+            padding: 3rem 2rem 3.5rem;
+            color: #6b7280;
+            font-size: 0.9rem;
+            text-align: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 960px) {
+            .global-nav-inner {
+                gap: 1rem;
+            }
+
+            .hero-title {
+                font-size: 2.4rem;
+            }
+
+            .toolbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dropdown-group {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .search-block {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .global-nav-inner {
+                padding: 0.65rem 1.25rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+
+            .hero-inner {
+                padding: 0 1.25rem;
+            }
+
+            .filters-inner {
+                padding: 1.5rem 1.25rem;
+            }
+
+            .gallery-inner {
+                padding: 1.5rem 1.25rem 2.5rem;
+            }
+
+            .tab {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .pattern-card-body {
+                padding: 1rem 1.1rem 1.1rem;
+            }
+
+            .pattern-card-header {
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script type="module">
+        const { h, render, useState, useEffect } = window;
+
+        const highlightedBlueprints = [
+            'Stylish Press',
+            'Feed Reader with the Friends Plugin',
+            'Gaming News',
+            'Skincare Blog',
+            'Non-profit Organization',
+            'Personal Resume',
+            'Personal Blog',
+            'University Website',
+            'Photography Portfolio',
+            'Art Gallery'
+        ];
+
+        function buildPreviewUrl(path) {
+            return `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/${path}`;
+        }
+
+        function buildEditUrl(path) {
+            return `https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/${path}`;
+        }
+
+        function buildSourceUrl(path) {
+            return `https://github.com/wordpress/blueprints/blob/trunk/${path}`;
+        }
+
+        function computeFavoriteCount(blueprint) {
+            const seed = `${blueprint.title}|${blueprint.path}`;
+            const hash = Array.from(seed).reduce((total, char) => total + char.charCodeAt(0), 0);
+            return 40 + (hash % 160);
+        }
+
+        function formatNumber(value) {
+            return value.toLocaleString('en-US');
+        }
+
+        function normalizeScreenshotSrc(blueprint) {
+            const rawPrefix = 'https://raw.githubusercontent.com/wordpress/blueprints/';
+            const { screenshot_url: originalSrc = '', path = '' } = blueprint;
+
+            if (originalSrc.startsWith(rawPrefix)) {
+                return originalSrc.replace(/^https:\/\/raw\.githubusercontent\.com\/wordpress\/blueprints\/[^/]+\//, '');
+            }
+
+            if (originalSrc) {
+                return originalSrc;
+            }
+
+            if (path) {
+                return path.replace(/blueprint\.json$/, 'screenshot.jpg');
+            }
+
+            return '';
+        }
+
+        function BlueprintCard({ blueprint }) {
+            const previewUrl = buildPreviewUrl(blueprint.path);
+            const sourceUrl = buildSourceUrl(blueprint.path);
+            const editUrl = buildEditUrl(blueprint.path);
+            const screenshotSrc = normalizeScreenshotSrc(blueprint);
+
+            const metaChildren = [];
+
+            if (blueprint.author) {
+                metaChildren.push('By ');
+                metaChildren.push(h('a', {
+                    href: `https://github.com/${encodeURIComponent(blueprint.author)}`,
+                    target: '_blank',
+                    rel: 'noreferrer noopener'
+                }, `@${blueprint.author}`));
+            }
+
+            const sourceLink = h('a', {
+                href: sourceUrl,
+                target: '_blank',
+                rel: 'noreferrer noopener'
+            }, 'View source');
+
+            const editLink = h('a', {
+                href: editUrl,
+                target: '_blank',
+                rel: 'noreferrer noopener'
+            }, 'Edit');
+
+            const addSeparatorIfNeeded = () => {
+                if (metaChildren.length > 0) {
+                    metaChildren.push(' ');
+                    metaChildren.push(h('span', { className: 'meta-separator' }, '•'));
+                    metaChildren.push(' ');
+                }
+            };
+
+            addSeparatorIfNeeded();
+            metaChildren.push(sourceLink);
+            addSeparatorIfNeeded();
+            metaChildren.push(editLink);
+
+            const metaLine = h('p', { className: 'pattern-card-meta' }, metaChildren);
+
+            return h('article', { className: 'pattern-card' },
+                screenshotSrc
+                    ? h('img', {
+                        className: 'pattern-card-image',
+                        src: screenshotSrc,
+                        alt: `${blueprint.title} screenshot`,
+                        onError: (event) => {
+                            event.target.parentElement.innerHTML = '<div class="pattern-card-image placeholder">No screenshot available</div>';
+                        }
+                    })
+                    : h('div', { className: 'pattern-card-image placeholder' }, 'No screenshot available'),
+                h('div', { className: 'pattern-card-body' },
+                    h('div', { className: 'pattern-card-header' },
+                        h('h2', { className: 'pattern-card-title' }, blueprint.title),
+                        h('a', {
+                            href: previewUrl,
+                            className: 'btn-try-it',
+                            target: '_blank',
+                            rel: 'noreferrer noopener'
+                        },
+                            h('img', {
+                                src: 'playground-icon.png',
+                                className: 'btn-icon',
+                                alt: ''
+                            }),
+                            'Run'
+                        )
+                    ),
+                    blueprint.description && h('p', { className: 'pattern-card-description' }, blueprint.description),
+                    metaLine
+                )
+            );
+        }
+
+        function App() {
+            const [blueprints, setBlueprints] = useState([]);
+            const [filteredBlueprints, setFilteredBlueprints] = useState([]);
+            const [searchTerm, setSearchTerm] = useState('');
+            const [activeCategories, setActiveCategories] = useState(new Set());
+            const [topCategories, setTopCategories] = useState([]);
+            const [allCategories, setAllCategories] = useState([]);
+            const [stats, setStats] = useState({
+                totalBlueprints: 0,
+                uniqueCategories: 0,
+                uniqueAuthors: 0,
+                highlighted: 0
+            });
+            const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
+            const [sortMode, setSortMode] = useState('gallery');
+            const [selectedFilter, setSelectedFilter] = useState('all');
+
+            useEffect(() => {
+                const params = new URLSearchParams(window.location.search);
+                const searchParam = params.get('search');
+                const categoriesParam = params.get('categories');
+                const featuredParam = params.get('featured');
+                const sortParam = params.get('sort');
+                const filterParam = params.get('filter');
+
+                if (searchParam) {
+                    setSearchTerm(searchParam);
+                }
+
+                if (categoriesParam) {
+                    const categoryList = categoriesParam.split(',').filter(Boolean);
+                    if (categoryList.length > 0) {
+                        setActiveCategories(new Set(categoryList));
+                        setSelectedFilter(categoryList[0]);
+                    }
+                }
+
+                if (featuredParam === 'true') {
+                    setShowFeaturedOnly(true);
+                    setSelectedFilter('featured');
+                }
+
+                if (sortParam) {
+                    setSortMode(sortParam);
+                }
+
+                if (filterParam) {
+                    setSelectedFilter(filterParam === 'curated' ? 'all' : filterParam);
+                }
+            }, []);
+
+            useEffect(() => {
+                fetch('index.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const categoryCount = {};
+                        const authors = new Set();
+                        let highlightedTotal = 0;
+
+                        const entries = Object.entries(data).map(([path, meta], index) => {
+                            const categories = meta.categories || [];
+
+                            categories.forEach(cat => {
+                                categoryCount[cat] = (categoryCount[cat] || 0) + 1;
+                            });
+
+                            if (meta.author) {
+                                authors.add(meta.author);
+                            }
+
+                            const isHighlighted = highlightedBlueprints.includes(meta.title);
+                            if (isHighlighted) {
+                                highlightedTotal += 1;
+                            }
+
+                            return {
+                                path,
+                                title: meta.title || 'Untitled Blueprint',
+                                description: meta.description || '',
+                                author: meta.author || '',
+                                categories,
+                                screenshot_url: meta.screenshot_url || '',
+                                highlighted: isHighlighted,
+                                order: index
+                            };
+                        });
+
+                        setBlueprints(entries);
+                        setFilteredBlueprints(entries);
+
+                        const sortedCategories = Object.entries(categoryCount)
+                            .sort((a, b) => b[1] - a[1])
+                            .map(([name]) => name);
+
+                        setTopCategories(sortedCategories.slice(0, 8));
+                        setAllCategories(sortedCategories);
+                        setStats({
+                            totalBlueprints: entries.length,
+                            uniqueCategories: Object.keys(categoryCount).length,
+                            uniqueAuthors: authors.size,
+                            highlighted: highlightedTotal
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error loading blueprints:', error);
+                    });
+            }, []);
+
+            useEffect(() => {
+                const params = new URLSearchParams();
+
+                if (searchTerm) {
+                    params.set('search', searchTerm);
+                }
+
+                if (activeCategories.size > 0) {
+                    params.set('categories', Array.from(activeCategories).join(','));
+                }
+
+                if (showFeaturedOnly) {
+                    params.set('featured', 'true');
+                }
+
+                if (sortMode && sortMode !== 'gallery') {
+                    params.set('sort', sortMode);
+                }
+
+                if (selectedFilter && selectedFilter !== 'all') {
+                    params.set('filter', selectedFilter);
+                }
+
+                const newUrl = params.toString()
+                    ? `${window.location.pathname}?${params.toString()}`
+                    : window.location.pathname;
+
+                window.history.replaceState({}, '', newUrl);
+            }, [searchTerm, activeCategories, showFeaturedOnly, sortMode, selectedFilter]);
+
+            useEffect(() => {
+                const term = searchTerm.trim().toLowerCase();
+
+                const filtered = blueprints.filter(bp => {
+                    const matchesSearch = !term ||
+                        bp.title.toLowerCase().includes(term) ||
+                        bp.description.toLowerCase().includes(term) ||
+                        bp.author.toLowerCase().includes(term);
+
+                    const matchesCategory = activeCategories.size === 0 ||
+                        bp.categories.some(cat => activeCategories.has(cat));
+
+                    const matchesFeatured = !showFeaturedOnly || bp.highlighted;
+
+                    return matchesSearch && matchesCategory && matchesFeatured;
+                });
+
+                const sorted = [...filtered];
+
+                if (sortMode === 'alphabetical') {
+                    sorted.sort((a, b) => a.title.localeCompare(b.title));
+                } else if (sortMode === 'author') {
+                    sorted.sort((a, b) =>
+                        (a.author || '').localeCompare(b.author || '') || a.title.localeCompare(b.title)
+                    );
+                } else if (sortMode === 'newest') {
+                    sorted.sort((a, b) => b.path.localeCompare(a.path));
+                } else {
+                    sorted.sort((a, b) => a.order - b.order);
+                }
+
+                setFilteredBlueprints(sorted);
+            }, [searchTerm, activeCategories, blueprints, showFeaturedOnly, sortMode]);
+
+            const navItems = ['News', 'Showcase', 'Hosting', 'Extend', 'Learn', 'Community', 'About'];
+            const baseTabs = ['All', 'Featured'];
+            const tabItems = Array.from(new Set([...baseTabs, ...topCategories.slice(0, 6)]));
+
+            const handleTabClick = (tab) => {
+                if (tab === 'All') {
+                    setActiveCategories(new Set());
+                    setShowFeaturedOnly(false);
+                    setSelectedFilter('all');
+                    return;
+                }
+
+                if (tab === 'Featured') {
+                    setActiveCategories(new Set());
+                    setShowFeaturedOnly(true);
+                    setSelectedFilter('featured');
+                    return;
+                }
+
+                setActiveCategories(new Set([tab]));
+                setShowFeaturedOnly(false);
+                setSelectedFilter(tab);
+            };
+
+            const handleFilterChange = (value) => {
+                if (value === 'curated' || value === 'all') {
+                    setSelectedFilter('all');
+                    setActiveCategories(new Set());
+                    setShowFeaturedOnly(false);
+                    return;
+                }
+
+                if (value === 'featured') {
+                    setSelectedFilter('featured');
+                    setActiveCategories(new Set());
+                    setShowFeaturedOnly(true);
+                    return;
+                }
+
+                setSelectedFilter(value);
+                setActiveCategories(new Set([value]));
+                setShowFeaturedOnly(false);
+            };
+
+            const handleFeaturedToggle = (event) => {
+                const checked = event.target.checked;
+                setShowFeaturedOnly(checked);
+
+                if (checked) {
+                    setSelectedFilter('featured');
+                    setActiveCategories(new Set());
+                } else if (selectedFilter === 'featured') {
+                    setSelectedFilter('all');
+                }
+            };
+
+            const showingAll = selectedFilter === 'all' &&
+                filteredBlueprints.length === blueprints.length &&
+                activeCategories.size === 0 &&
+                !searchTerm &&
+                !showFeaturedOnly;
+
+            const isTabActive = (tab) => {
+                if (tab === 'All') {
+                    return selectedFilter === 'all';
+                }
+                if (tab === 'Featured') {
+                    return selectedFilter === 'featured';
+                }
+                return activeCategories.has(tab);
+            };
+
+            const resultsMessage = showingAll
+                ? `Showing all ${formatNumber(blueprints.length)} blueprints`
+                : `Showing ${formatNumber(filteredBlueprints.length)} of ${formatNumber(blueprints.length)} blueprints`;
+
+            const patternCountLabel = `${formatNumber(filteredBlueprints.length)} patterns`;
+
+            const filterOptions = [
+                { value: 'all', label: 'All blueprints' },
+                { value: 'featured', label: 'Featured' },
+                ...allCategories.map(cat => ({ value: cat, label: cat }))
+            ];
+
+            return h('div', { className: 'page' },
+                h('section', { className: 'hero' },
+                    h('div', { className: 'hero-inner' },
+                        h('div', { className: 'hero-header' },
+                            h('img', { 
+                                src: 'playground-icon.png', 
+                                alt: 'WordPress Playground',
+                                className: 'hero-logo'
+                            }),
+                            h('h1', { className: 'hero-title' }, 'WordPress Blueprints Gallery')
+                        ),
+                        h('p', { className: 'hero-subtitle' }, 
+                            'Launch ready-made WordPress environments in seconds. Browse community-created ',
+                            h('a', {
+                                href: 'https://wordpress.github.io/wordpress-playground/',
+                                target: '_blank',
+                                rel: 'noreferrer noopener',
+                                className: 'hero-link'
+                            }, 'WordPress Playground'),
+                            ' blueprints and discover pre-configured setups. Learn how to ',
+                            h('a', {
+                                href: 'https://github.com/wordpress/blueprints',
+                                target: '_blank',
+                                rel: 'noreferrer noopener',
+                                className: 'hero-link'
+                            }, 'create your own')
+                        )
+                    )
+                ),
+                h('section', { className: 'filters-section' },
+                    h('div', { className: 'filters-inner' },
+                        h('div', { className: 'tab-list' },
+                            tabItems.map(tab =>
+                                h('button', {
+                                    key: tab,
+                                    className: `tab ${isTabActive(tab) ? 'active' : ''}`,
+                                    onClick: () => handleTabClick(tab)
+                                }, tab)
+                            )
+                        ),
+                        h('div', { className: 'toolbar' },
+                            h('div', { className: 'search-block' },
+                                h('div', { className: 'search-field' },
+                                    h('span', { className: 'search-icon' }, '⌕'),
+                                    h('input', {
+                                        type: 'search',
+                                        placeholder: 'Search blueprints',
+                                        value: searchTerm,
+                                        onInput: (event) => setSearchTerm(event.target.value)
+                                    })
+                                )
+                            )
+                        )
+                    )
+                ),
+                h('main', { className: 'gallery-section' },
+                    h('div', { className: 'gallery-inner' },
+                        h('div', { className: 'results-summary' }, resultsMessage),
+                    filteredBlueprints.length === 0
+                        ? h('div', { className: 'no-results' },
+                                h('h2', null, 'No patterns found'),
+                                h('p', null, 'Try adjusting your search terms or selecting a different filter.')
+                        )
+                            : h('div', { className: 'gallery-grid' },
+                            filteredBlueprints.map(bp =>
+                                h(BlueprintCard, {
+                                    blueprint: bp,
+                                    key: bp.path
+                                })
+                                )
+                            )
+                        )
+                ),
+                h('footer', { className: 'footer' },
+                    h('p', null,
+                        'Want to contribute your own blueprint? Check out the ',
+                        h('a', {
+                            href: 'https://github.com/wordpress/blueprints/blob/trunk/README.md#contributing-your-blueprint',
+                            target: '_blank',
+                            rel: 'noreferrer noopener'
+                        }, 'contribution guidelines')
+                    ),
+                    h('p', { style: { marginTop: '1rem' } },
+                        h('a', { href: 'https://github.com/wordpress/blueprints', target: '_blank', rel: 'noreferrer noopener' }, 'View on GitHub'),
+                        ' • ',
+                        h('a', { href: 'https://github.com/wordpress/blueprints/blob/trunk/GALLERY.md' }, 'View as Markdown')
+                    )
+                )
+            );
+        }
+
+        setTimeout(() => {
+            if (window.h && window.render) {
+                render(h(App), document.getElementById('app'));
+            }
+        }, 100);
+    </script>
+</body>
+</html>

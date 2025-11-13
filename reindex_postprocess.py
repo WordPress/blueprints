@@ -19,27 +19,18 @@ highlighted_blueprints = [
 ]
 
 
-@lru_cache(maxsize=512)
-def get_last_commit_for_file(path):
-    """
-    Get the commit hash where this specific file was last changed.
-    This ensures URLs are stable and only change when the file itself changes.
-    """
+@lru_cache(maxsize=1)
+def get_repo_revision():
     try:
-        result = subprocess.check_output(
-            ['git', 'log', '-1', '--format=%H', '--', path],
-            text=True
-        ).strip()
-        return result if result else 'trunk'
+        return subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
     except Exception:
         return 'trunk'
 
 
 def build_raw_repo_url(path):
     rel = path.lstrip('./').replace('\\', '/')
-    commit_hash = get_last_commit_for_file(path)
     return 'https://raw.githubusercontent.com/wordpress/blueprints/{rev}/{path}'.format(
-        rev=commit_hash,
+        rev=get_repo_revision(),
         path=rel
     )
 
@@ -128,6 +119,21 @@ def get_dot_template_files():
                 path = os.path.join(root, file)
                 dot_template_files.append(path)
     return dot_template_files
+
+
+def build_gallery_html():
+    """
+    Generate gallery.html from gallery.html.template.
+    The template doesn't need any replacements, just copy it.
+    """
+    template_file = 'gallery.html.template'
+    output_file = 'gallery.html'
+
+    if os.path.exists(template_file):
+        with open(template_file, 'r') as f:
+            content = f.read()
+        with open(output_file, 'w') as f:
+            f.write(content)
 
 
 def build_markdown_table():
@@ -240,4 +246,5 @@ else:
     print("Reindexing")
     build_json_index()
     build_markdown_table()
+    build_gallery_html()
     rewrite_branch_urls_to_trunk()

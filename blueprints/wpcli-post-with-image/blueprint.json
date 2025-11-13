@@ -4,7 +4,10 @@
 		"title": "Use wp-cli to add a post with image",
 		"description": "Use wp-cli to create a post from text file with block markup and a featured image",
 		"author": "bph",
-		"categories": ["Content", "wpcli"]
+		"categories": [
+			"Content",
+			"wpcli"
+		]
 	},
 	"landingPage": "/?p=4",
 	"login": true,

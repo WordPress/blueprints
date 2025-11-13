@@ -4,10 +4,15 @@
 		"title": "Enable all three Dataview Experiments in Gutenberg",
 		"author": "bph",
 		"description": "Blueprint example to enable multiple Experiments within the Gutenberg plugin ",
-		"categories": ["Gutenberg", "Experiments"]
+		"categories": [
+			"Gutenberg",
+			"Experiments"
+		]
 	},
 	"landingPage": "/wp-admin/site-editor.php",
-	"plugins": ["gutenberg"],
+	"plugins": [
+		"gutenberg"
+	],
 	"login": true,
 	"steps": [
 		{

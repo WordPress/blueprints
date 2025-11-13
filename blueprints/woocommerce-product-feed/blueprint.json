@@ -4,7 +4,10 @@
 		"title": "WooCommerce product feed",
 		"description": "Blueprint to create a WooCommerce product and export an XML/CSV product feed",
 		"author": "mujuonly",
-		"categories": ["WooCommerce", "Content"]
+		"categories": [
+			"WooCommerce",
+			"Content"
+		]
 	},
 	"landingPage": "/wp-admin/admin.php?page=webtoffee_product_feed_main_export",
 	"preferredVersions": {
@@ -12,7 +15,10 @@
 		"wp": "latest"
 	},
 	"login": true,
-	"plugins": ["woocommerce", "webtoffee-product-feed"],
+	"plugins": [
+		"woocommerce",
+		"webtoffee-product-feed"
+	],
 	"steps": [
 		{
 			"step": "runPHP",

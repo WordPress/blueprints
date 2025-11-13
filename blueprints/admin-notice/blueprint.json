@@ -1,10 +1,13 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Display Admin Notice",
+		"title": "Display Admin Notice ",
 		"description": "Blueprint to add a tiny mu-plugin and display an admin notice",
 		"author": "bph",
-		"categories": ["Admin", "notices"]
+		"categories": [
+			"Admin",
+			"notices"
+		]
 	},
 	"landingPage": "/wp-admin/plugins.php",
 	"login": true,

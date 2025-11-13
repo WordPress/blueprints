@@ -35,7 +35,7 @@ Blueprints can help you
 
 This community space allows you to
 
-* [Browse the Blueprints Gallery](./GALLERY.md) and explore diverse WordPress sites and different configurations. 
+* [Browse the Interactive Gallery](https://wordpress.github.io/blueprints/gallery.html) with search and filtering, or view the [Markdown Gallery](./GALLERY.md) to explore diverse WordPress sites and different configurations.
 * [Submit your own Blueprint](./CONTRIBUTING.md) and share your WordPress setup with the community.
 
 ## How to contribute your Blueprint

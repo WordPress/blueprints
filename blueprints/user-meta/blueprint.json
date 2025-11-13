@@ -4,7 +4,9 @@
 		"title": "Creating a new user for the blog",
 		"description": "This is a simple example to update user meta data",
 		"author": "fellyph",
-		"categories": ["meta"]
+		"categories": [
+			"meta"
+		]
 	},
 	"landingPage": "/wp-admin/users.php",
 	"login": true,

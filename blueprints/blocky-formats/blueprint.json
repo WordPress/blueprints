@@ -4,7 +4,9 @@
 		"title": "Markdown and Trac Syntax Editor",
 		"description": "Edit Markdown and Trac formatting in the block editor thanks to the blocky-formats plugin!",
 		"author": "adamziel",
-		"categories": ["block-editor"]
+		"categories": [
+			"block-editor"
+		]
 	},
 	"login": true,
 	"landingPage": "/wp-admin/post-new.php",

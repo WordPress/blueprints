@@ -1,7 +1,9 @@
 import json
 import os
 import re
+import subprocess
 import sys
+from functools import lru_cache
 
 highlighted_blueprints = [
     'Stylish Press',
@@ -17,8 +19,20 @@ highlighted_blueprints = [
 ]
 
 
+@lru_cache(maxsize=1)
+def get_repo_revision():
+    try:
+        return subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
+    except Exception:
+        return 'trunk'
+
+
 def build_raw_repo_url(path):
-    return 'https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0}'.format(path)
+    rel = path.lstrip('./').replace('\\', '/')
+    return 'https://raw.githubusercontent.com/wordpress/blueprints/{rev}/{path}'.format(
+        rev=get_repo_revision(),
+        path=rel
+    )
 
 
 def build_raw_blueprint_url(path):

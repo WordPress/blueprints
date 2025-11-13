@@ -109,6 +109,7 @@ def build_json_index():
     )))
     with open('index.json', 'w') as f:
         json.dump(index, f, indent=2)
+    return index
 
 
 def get_dot_template_files():
@@ -121,10 +122,10 @@ def get_dot_template_files():
     return dot_template_files
 
 
-def build_gallery_html():
+def build_gallery_html(index_data=None):
     """
-    Generate gallery.html from gallery.html.template.
-    The template doesn't need any replacements, just copy it.
+    Generate gallery.html from gallery.html.template and embed the blueprint index JSON
+    so the front-end can render without additional network requests.
     """
     template_file = 'gallery.html.template'
     output_file = 'gallery.html'
@@ -132,6 +133,20 @@ def build_gallery_html():
     if os.path.exists(template_file):
         with open(template_file, 'r') as f:
             content = f.read()
+
+        placeholder = '{BLUEPRINT_INDEX_JSON}'
+        if placeholder in content:
+            if index_data is None:
+                if os.path.exists('index.json'):
+                    with open('index.json', 'r') as index_file:
+                        index_data = json.load(index_file)
+                else:
+                    index_data = {}
+
+            serialized_index = json.dumps(index_data or {}, ensure_ascii=False, separators=(',', ':'))
+            serialized_index = serialized_index.replace('</script', '<\\/script')
+            content = content.replace(placeholder, serialized_index)
+
         with open(output_file, 'w') as f:
             f.write(content)
 
@@ -244,7 +259,7 @@ if '--test' in sys.argv:
     doctest.testmod()
 else:
     print("Reindexing")
-    build_json_index()
+    index_data = build_json_index()
     build_markdown_table()
-    build_gallery_html()
+    build_gallery_html(index_data)
     rewrite_branch_urls_to_trunk()

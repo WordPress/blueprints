@@ -13,6 +13,7 @@
         window.useEffect = useEffect;
         window.render = render;
     </script>
+    <script id="blueprint-data" type="application/json">{BLUEPRINT_INDEX_JSON}</script>
     <style>
         :root {
             color-scheme: light;
@@ -203,6 +204,10 @@
             gap: 1.75rem;
         }
 
+        .skeleton-grid {
+            opacity: 0.9;
+        }
+
         .pattern-card {
             background: #ffffff;
             border-radius: 4px;
@@ -272,6 +277,7 @@
             margin: 0;
             font-size: 0.85rem;
             color: #6b7280;
+            margin-top: auto;
         }
 
         .pattern-card-meta a {
@@ -331,7 +337,7 @@
             text-decoration: underline;
         }
 
-        .no-results {
+        .empty-state {
             margin-top: 3rem;
             text-align: center;
             padding: 3rem;
@@ -340,6 +346,73 @@
             border: 1px solid #e5e7eb;
             color: #6b7280;
             box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+        }
+
+        .empty-state h2 {
+            font-size: 1.6rem;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+
+        .placeholder-card {
+            background: #ffffff;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+            padding-bottom: 1.25rem;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .placeholder-thumb {
+            height: 230px;
+            background: #e5e7eb;
+        }
+
+        .placeholder-body {
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+
+        .placeholder-line {
+            height: 12px;
+            border-radius: 999px;
+            background: #e5e7eb;
+        }
+
+        .placeholder-line.wide {
+            width: 70%;
+        }
+
+        .placeholder-line.medium {
+            width: 55%;
+        }
+
+        .placeholder-line.short {
+            width: 40%;
+        }
+
+        .skeleton-animate {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skeleton-animate::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 100%);
+            transform: translateX(-100%);
+            animation: shimmer 1.4s infinite;
+        }
+
+        @keyframes shimmer {
+            100% {
+                transform: translateX(100%);
+            }
         }
 
         .no-results h2 {
@@ -431,6 +504,16 @@
 
     <script type="module">
         const { h, render, useState, useEffect } = window;
+        const dataElement = document.getElementById('blueprint-data');
+        let embeddedIndex = null;
+        if (dataElement) {
+            try {
+                embeddedIndex = JSON.parse(dataElement.textContent || '{}');
+            } catch (error) {
+                console.error('Failed to parse embedded blueprint data.', error);
+            }
+        }
+        window.__EMBEDDED_BLUEPRINT_INDEX__ = embeddedIndex;
 
         const highlightedBlueprints = [
             'Stylish Press',
@@ -444,6 +527,62 @@
             'Photography Portfolio',
             'Art Gallery'
         ];
+
+        function deriveBlueprintData(indexData) {
+            if (!indexData) {
+                return null;
+            }
+
+            const categoryCount = {};
+            const authors = new Set();
+            let highlightedTotal = 0;
+
+            const entries = Object.entries(indexData).map(([path, meta], index) => {
+                const categories = meta.categories || [];
+
+                categories.forEach(cat => {
+                    categoryCount[cat] = (categoryCount[cat] || 0) + 1;
+                });
+
+                if (meta.author) {
+                    authors.add(meta.author);
+                }
+
+                const isHighlighted = highlightedBlueprints.includes(meta.title);
+                if (isHighlighted) {
+                    highlightedTotal += 1;
+                }
+
+                return {
+                    path,
+                    title: meta.title || 'Untitled Blueprint',
+                    description: meta.description || '',
+                    author: meta.author || '',
+                    categories,
+                    screenshot_url: meta.screenshot_url || '',
+                    highlighted: isHighlighted,
+                    order: index
+                };
+            });
+
+            const sortedCategories = Object.entries(categoryCount)
+                .sort((a, b) => b[1] - a[1])
+                .map(([name]) => name);
+
+            return {
+                entries,
+                topCategories: sortedCategories.slice(0, 8),
+                allCategories: sortedCategories,
+                stats: {
+                    totalBlueprints: entries.length,
+                    uniqueCategories: Object.keys(categoryCount).length,
+                    uniqueAuthors: authors.size,
+                    highlighted: highlightedTotal
+                }
+            };
+        }
+
+        const initialBlueprintData = deriveBlueprintData(embeddedIndex);
 
         function buildPreviewUrl(path) {
             return `https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/${path}`;
@@ -564,22 +703,36 @@
             );
         }
 
+        function PlaceholderCard() {
+            return h('article', { className: 'placeholder-card' },
+                h('div', { className: 'placeholder-thumb skeleton-animate' }),
+                h('div', { className: 'placeholder-body' },
+                    h('div', { className: 'placeholder-line wide skeleton-animate' }),
+                    h('div', { className: 'placeholder-line medium skeleton-animate' }),
+                    h('div', { className: 'placeholder-line short skeleton-animate' })
+                )
+            );
+        }
+
         function App() {
-            const [blueprints, setBlueprints] = useState([]);
-            const [filteredBlueprints, setFilteredBlueprints] = useState([]);
-            const [searchTerm, setSearchTerm] = useState('');
-            const [activeCategories, setActiveCategories] = useState(new Set());
-            const [topCategories, setTopCategories] = useState([]);
-            const [allCategories, setAllCategories] = useState([]);
-            const [stats, setStats] = useState({
+            const blueprintEntries = initialBlueprintData ? initialBlueprintData.entries : [];
+            const blueprints = blueprintEntries;
+            const topCategories = initialBlueprintData ? initialBlueprintData.topCategories : [];
+            const allCategories = initialBlueprintData ? initialBlueprintData.allCategories : [];
+            const stats = initialBlueprintData ? initialBlueprintData.stats : {
                 totalBlueprints: 0,
                 uniqueCategories: 0,
                 uniqueAuthors: 0,
                 highlighted: 0
-            });
+            };
+
+            const [filteredBlueprints, setFilteredBlueprints] = useState(blueprintEntries);
+            const [searchTerm, setSearchTerm] = useState('');
+            const [activeCategories, setActiveCategories] = useState(new Set());
             const [showFeaturedOnly, setShowFeaturedOnly] = useState(false);
             const [sortMode, setSortMode] = useState('gallery');
             const [selectedFilter, setSelectedFilter] = useState('all');
+            const isLoaded = Boolean(initialBlueprintData);
 
             useEffect(() => {
                 const params = new URLSearchParams(window.location.search);
@@ -616,60 +769,9 @@
             }, []);
 
             useEffect(() => {
-                fetch('index.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        const categoryCount = {};
-                        const authors = new Set();
-                        let highlightedTotal = 0;
-
-                        const entries = Object.entries(data).map(([path, meta], index) => {
-                            const categories = meta.categories || [];
-
-                            categories.forEach(cat => {
-                                categoryCount[cat] = (categoryCount[cat] || 0) + 1;
-                            });
-
-                            if (meta.author) {
-                                authors.add(meta.author);
-                            }
-
-                            const isHighlighted = highlightedBlueprints.includes(meta.title);
-                            if (isHighlighted) {
-                                highlightedTotal += 1;
-                            }
-
-                            return {
-                                path,
-                                title: meta.title || 'Untitled Blueprint',
-                                description: meta.description || '',
-                                author: meta.author || '',
-                                categories,
-                                screenshot_url: meta.screenshot_url || '',
-                                highlighted: isHighlighted,
-                                order: index
-                            };
-                        });
-
-                        setBlueprints(entries);
-                        setFilteredBlueprints(entries);
-
-                        const sortedCategories = Object.entries(categoryCount)
-                            .sort((a, b) => b[1] - a[1])
-                            .map(([name]) => name);
-
-                        setTopCategories(sortedCategories.slice(0, 8));
-                        setAllCategories(sortedCategories);
-                        setStats({
-                            totalBlueprints: entries.length,
-                            uniqueCategories: Object.keys(categoryCount).length,
-                            uniqueAuthors: authors.size,
-                            highlighted: highlightedTotal
-                        });
-                    })
-                    .catch(error => {
-                        console.error('Error loading blueprints:', error);
-                    });
+                if (!initialBlueprintData) {
+                    console.error('Blueprint index data missing. Rebuild gallery.html to embed it.');
+                }
             }, []);
 
             useEffect(() => {
@@ -808,17 +910,42 @@
                 return activeCategories.has(tab);
             };
 
-            const resultsMessage = showingAll
-                ? `Showing all ${formatNumber(blueprints.length)} blueprints`
-                : `Showing ${formatNumber(filteredBlueprints.length)} of ${formatNumber(blueprints.length)} blueprints`;
-
-            const patternCountLabel = `${formatNumber(filteredBlueprints.length)} patterns`;
+            const resultsMessage = !isLoaded
+                ? 'Loading blueprints...'
+                : showingAll
+                    ? `Showing all ${formatNumber(blueprints.length)} blueprints`
+                    : `Showing ${formatNumber(filteredBlueprints.length)} of ${formatNumber(blueprints.length)} blueprints`;
 
             const filterOptions = [
                 { value: 'all', label: 'All blueprints' },
                 { value: 'featured', label: 'Featured' },
                 ...allCategories.map(cat => ({ value: cat, label: cat }))
             ];
+
+            const placeholderCards = Array.from({ length: 6 }).map((_, index) =>
+                h(PlaceholderCard, { key: `placeholder-${index}` })
+            );
+
+            const shouldShowSkeletons = !isLoaded;
+            const showEmptyState = isLoaded && filteredBlueprints.length === 0;
+
+            const emptyState = h('div', { className: 'empty-state' },
+                h('h2', null, 'No blueprints match your filters'),
+                h('p', null, 'Try adjusting your search terms or selecting a different category.')
+            );
+
+            const galleryContent = shouldShowSkeletons
+                ? h('div', { className: 'gallery-grid skeleton-grid' }, placeholderCards)
+                : showEmptyState
+                    ? emptyState
+                    : h('div', { className: 'gallery-grid' },
+                        filteredBlueprints.map(bp =>
+                            h(BlueprintCard, {
+                                blueprint: bp,
+                                key: bp.path
+                            })
+                        )
+                    );
 
             return h('div', { className: 'page' },
                 h('section', { className: 'hero' },
@@ -878,20 +1005,8 @@
                 h('main', { className: 'gallery-section' },
                     h('div', { className: 'gallery-inner' },
                         h('div', { className: 'results-summary' }, resultsMessage),
-                    filteredBlueprints.length === 0
-                        ? h('div', { className: 'no-results' },
-                                h('h2', null, 'No patterns found'),
-                                h('p', null, 'Try adjusting your search terms or selecting a different filter.')
-                        )
-                            : h('div', { className: 'gallery-grid' },
-                            filteredBlueprints.map(bp =>
-                                h(BlueprintCard, {
-                                    blueprint: bp,
-                                    key: bp.path
-                                })
-                                )
-                            )
-                        )
+                        galleryContent
+                    )
                 ),
                 h('footer', { className: 'footer' },
                     h('p', null,

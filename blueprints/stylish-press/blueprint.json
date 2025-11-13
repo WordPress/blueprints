@@ -4,10 +4,7 @@
 		"title": "Stylish Press",
 		"description": "A Woo store with custom theme, content, and products.",
 		"author": "adamziel",
-		"categories": [
-			"Woocommerce",
-			"Site"
-		]
+		"categories": ["Woocommerce", "Site"]
 	},
 	"landingPage": "/contact-us/",
 	"preferredVersions": {
@@ -18,9 +15,7 @@
 		"intl": true
 	},
 	"login": true,
-	"plugins": [
-		"woocommerce"
-	],
+	"plugins": ["woocommerce"],
 	"steps": [
 		{
 			"step": "resetData"

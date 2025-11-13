@@ -4,10 +4,7 @@
 		"title": "Personal Resume",
 		"description": "A resume site created with the Readymade theme.",
 		"author": "WordPress.com",
-		"categories": [
-			"Website",
-			"Personal"
-		]
+		"categories": ["Website", "Personal"]
 	},
 	"login": true,
 	"siteOptions": {

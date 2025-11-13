@@ -4,10 +4,7 @@
 		"title": "Demo of Twenty-Twenty-Five theme",
 		"description": "Blueprint with demo content for the Twenty-Twenty-Five default theme",
 		"author": "bph",
-		"categories": [
-			"Themes",
-			"default"
-		]
+		"categories": ["Themes", "default"]
 	},
 	"landingPage": "/",
 	"login": true,

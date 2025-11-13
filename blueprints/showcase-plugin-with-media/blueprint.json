@@ -4,12 +4,7 @@
 		"title": "Showcase plugin",
 		"description": "Showcase custom plugin from own server with media files and content imported as WXR. There is a readme file in github repository (https://github.com/Lovor01/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/readme.md) which explains all steps.",
 		"author": "Lovor01",
-		"categories": [
-			"plugin",
-			"demo",
-			"media",
-			"images"
-		]
+		"categories": ["plugin", "demo", "media", "images"]
 	},
 	"preferredVersions": {
 		"php": "8.3",

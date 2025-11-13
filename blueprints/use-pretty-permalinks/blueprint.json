@@ -4,9 +4,7 @@
 		"title": "Pretty permalinks",
 		"description": "Set the permalink structure to use pretty permalinks.",
 		"author": "bgrgicak",
-		"categories": [
-			"Settings"
-		]
+		"categories": ["Settings"]
 	},
 	"landingPage": "/category/uncategorized/",
 	"login": true,

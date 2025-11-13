@@ -4,11 +4,7 @@
 		"title": "Skincare Blog",
 		"description": "A skincare blog created with the Piel theme.",
 		"author": "WordPress.com",
-		"categories": [
-			"Website",
-			"News",
-			"Blog"
-		]
+		"categories": ["Website", "News", "Blog"]
 	},
 	"login": true,
 	"siteOptions": {

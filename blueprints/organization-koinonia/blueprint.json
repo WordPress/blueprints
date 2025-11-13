@@ -4,10 +4,7 @@
 		"title": "Non-profit Organization",
 		"description": "A non-profit organization site created with the Koinonia theme.",
 		"author": "WordPress.com",
-		"categories": [
-			"Website",
-			"Organization"
-		]
+		"categories": ["Website", "Organization"]
 	},
 	"login": true,
 	"siteOptions": {

@@ -7,10 +7,12 @@ on:
 
 jobs:
     build:
-        if: ${{ github.actor != 'github-actions[bot]' }}
+        if: ${{ github.actor != 'deployment_bot' }}
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
             - name: Set up Python 3.8
               uses: actions/setup-python@v2
               with:
@@ -35,7 +37,7 @@ jobs:
               uses: webfactory/ssh-agent@v0.5.3
               with:
                   ssh-private-key: ${{ secrets.GH_DEPLOY_KEY }}
-            - name: Push rebuilt Blueprints to GitHub
+            - name: Push rebuilt WordPress to GitHub
               if: steps.changes.outputs.CHANGES == '1'
               run: |
                   git config --global user.name "deployment_bot"
@@ -46,3 +48,4 @@ jobs:
                   if [ $? -eq 0 ]; then
                     git push git@github.com:${{ github.repository }}.git --follow-tags
                   fi;
+

@@ -4,16 +4,10 @@
 		"title": "Feed Reader with the Friends Plugin",
 		"description": "By using the Friends plugin, you can read feeds from the web in Playground, and even via ActivityPub",
 		"author": "akirk",
-		"categories": [
-			"rss",
-			"social web"
-		]
+		"categories": ["rss", "social web"]
 	},
 	"landingPage": "/friends/?refresh&welcome",
-	"plugins": [
-		"friends",
-		"activitypub"
-	],
+	"plugins": ["friends", "activitypub"],
 	"siteOptions": {
 		"permalink_structure": "/%postname%/"
 	},

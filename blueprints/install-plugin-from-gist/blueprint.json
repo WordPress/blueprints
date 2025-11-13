@@ -3,9 +3,7 @@
 		"title": "Install plugin from a gist",
 		"author": "zieladam",
 		"description": "Install and activate a WordPress plugin from a .php file stored in a gist.",
-		"categories": [
-			"plugins"
-		]
+		"categories": ["plugins"]
 	},
 	"landingPage": "/wp-admin/plugins.php",
 	"preferredVersions": {

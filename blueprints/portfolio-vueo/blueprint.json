@@ -4,10 +4,7 @@
 		"title": "Art Gallery",
 		"description": "An art gallery created with the Vueo theme.",
 		"author": "WordPress.com",
-		"categories": [
-			"Website",
-			"Personal"
-		]
+		"categories": ["Website", "Personal"]
 	},
 	"login": true,
 	"siteOptions": {

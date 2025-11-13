@@ -4,11 +4,7 @@
 		"title": "Personal Blog",
 		"description": "A personal blog site created with the Substrata theme.",
 		"author": "WordPress.com",
-		"categories": [
-			"Website",
-			"Personal",
-			"Blog"
-		]
+		"categories": ["Website", "Personal", "Blog"]
 	},
 	"login": true,
 	"siteOptions": {

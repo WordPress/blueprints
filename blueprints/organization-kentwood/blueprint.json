@@ -4,11 +4,7 @@
 		"title": "University Website",
 		"description": "A university website created with the Kentwood theme.",
 		"author": "WordPress.com",
-		"categories": [
-			"Website",
-			"Organization",
-			"Education"
-		]
+		"categories": ["Website", "Organization", "Education"]
 	},
 	"login": true,
 	"siteOptions": {

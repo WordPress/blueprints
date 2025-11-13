@@ -118,7 +118,7 @@ def build_markdown_table():
             f'{screenshot_html}\n'
             f'{description_html}\n'
             f'{meta_line}\n'
-            '<br clear="all"><br>\n'
+            '<br clear="all">\n'
         )
 
         entries.append(entry)

@@ -56,12 +56,12 @@ def screenshot_source_exists(path):
 def build_screenshot_html(preview, screenshot_path, title):
     label = title or 'Blueprint'
     if screenshot_source_exists(screenshot_path):
-        return '<p align="left"><a href="{preview}"><img src="{src}" alt="{alt} screenshot" width="400"></a></p>'.format(
+        return '<p align="left"><img src="{src}" alt="{alt} screenshot" width="400"></p>'.format(
             preview=preview,
             src=screenshot_path,
             alt=label
         )
-    return '<p align="left"><em>No screenshot yet for {name}. <a href="{preview}">Open it in Playground</a>.</em></p>'.format(
+    return '<p align="left"><em>No screenshot yet for {name}. Open it in Playground.</em></p>'.format(
         name=label,
         preview=preview
     )

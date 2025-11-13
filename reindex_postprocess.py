@@ -119,7 +119,7 @@ def build_markdown_table():
             f'{screenshot_html}\n'
             f'{description_html}\n'
             f'{meta_line}\n'
-            '<p align="right">text</p>\n'
+            '<br clear="all">\n'
             '</div>'
         )
 

@@ -43,6 +43,29 @@ def resolve_screenshot_path(meta, blueprint_path):
     blueprint_dir = os.path.dirname(blueprint_path)
     return os.path.join(blueprint_dir, 'screenshot.jpg').replace('\\', '/')
 
+
+def screenshot_source_exists(path):
+    if not path:
+        return False
+    if re.match(r'^[a-z]+://', path):
+        return True
+    absolute = os.path.abspath(path)
+    return os.path.exists(absolute)
+
+
+def build_screenshot_html(preview, screenshot_path, title):
+    label = title or 'Blueprint'
+    if screenshot_source_exists(screenshot_path):
+        return '<p align="left"><a href="{preview}"><img src="{src}" alt="{alt} screenshot" width="400"></a></p>'.format(
+            preview=preview,
+            src=screenshot_path,
+            alt=label
+        )
+    return '<p align="left"><em>No screenshot yet for {name}. <a href="{preview}">Open it in Playground</a>.</em></p>'.format(
+        name=label,
+        preview=preview
+    )
+
 def build_json_index():
     index = {}
     for root, dirs, files in os.walk('blueprints'):
@@ -84,15 +107,12 @@ def build_markdown_table():
 
         preview = build_preview_url(path)
         screenshot_path = resolve_screenshot_path(meta, path)
-        screenshot_html = '<img src="{src}" alt="{alt} screenshot" width="300" align="left" style="margin:0 1rem 1rem 0;">'.format(
-            src=screenshot_path,
-            alt=title or 'Blueprint'
-        )
+        screenshot_html = build_screenshot_html(preview, screenshot_path, title)
 
         description = meta.get('description', '')
         description_html = f'<p>{description}</p>' if description else ''
 
-        preview_button = f'<p><a href="{preview}"><img align="right" src="playground-preview-button.svg" alt="Try it in Playground" width="200"></a></p>'
+        preview_button = f'<p><a href="{preview}"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>'
         edit_url = build_edit_url(path)
         author = meta.get('author', '').strip()
         if author:
@@ -113,10 +133,10 @@ def build_markdown_table():
 
         entry = (
             f'<h2>{display_title}</h2>\n'
-            f'{screenshot_html}\n'
-            f'{preview_button}\n'
             f'{description_html}\n'
             f'{meta_line}\n'
+            f'{preview_button}\n'
+            f'{screenshot_html}\n'
             '<br clear="all">\n'
         )
 

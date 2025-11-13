@@ -84,8 +84,7 @@ def build_markdown_table():
 
         preview = build_preview_url(path)
         screenshot_path = resolve_screenshot_path(meta, path)
-        screenshot_html = '<a href="{preview}"><img src="{src}" alt="{alt} screenshot" width="300" align="left" style="margin:0 1rem 1rem 0;"></a>'.format(
-            preview=preview,
+        screenshot_html = '<img src="{src}" alt="{alt} screenshot" width="300" align="left" style="margin:0 1rem 1rem 0;">'.format(
             src=screenshot_path,
             alt=title or 'Blueprint'
         )

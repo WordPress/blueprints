@@ -1,7 +1,7 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "Playground Welcome Landing Page",
+		"title": "Playground Welcome Landing Page (test update)",
 		"description": "Landing page for the WordPress Playground giving a quick overview of the features and capabilities of the platform.",
 		"author": "fellyph",
 		"categories": ["meta"]

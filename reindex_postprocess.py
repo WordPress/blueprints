@@ -113,14 +113,12 @@ def build_markdown_table():
             )
 
         entry = (
-            '<div class="blueprint-entry">\n'
             f'<h2>{display_title}</h2>\n'
             f'{preview_button}\n'
             f'{screenshot_html}\n'
             f'{description_html}\n'
             f'{meta_line}\n'
-            '<br clear="all">\n'
-            '</div>'
+            '<br clear="all"><br>\n'
         )
 
         entries.append(entry)

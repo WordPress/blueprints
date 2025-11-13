@@ -17,8 +17,12 @@ highlighted_blueprints = [
 ]
 
 
-def build_raw_blueprint_url(path):
+def build_raw_repo_url(path):
     return 'https://raw.githubusercontent.com/wordpress/blueprints/trunk/{0}'.format(path)
+
+
+def build_raw_blueprint_url(path):
+    return build_raw_repo_url(path)
 
 
 def build_preview_url(path):
@@ -75,7 +79,15 @@ def build_json_index():
                 with open(path, 'r') as f:
                     data = json.load(f)
                     meta = data.get('meta', {})
-                    index[path] = meta
+                    meta_with_media = dict(meta)
+                    screenshot_path = resolve_screenshot_path(meta, path)
+                    if screenshot_source_exists(screenshot_path):
+                        if screenshot_path.startswith('http://') or screenshot_path.startswith('https://'):
+                            screenshot_url = screenshot_path
+                        else:
+                            screenshot_url = build_raw_repo_url(screenshot_path)
+                        meta_with_media['screenshot_url'] = screenshot_url
+                    index[path] = meta_with_media
     # Sort index alphabetically by title
     index = dict(sorted(index.items(), key=lambda item: (
         item[1].get('title', '') not in highlighted_blueprints, 

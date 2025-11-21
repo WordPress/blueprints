@@ -1,0 +1,48 @@
+{
+  "steps": [
+    {
+      "step": "setSiteLanguage",
+      "language": "ja"
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "WP Multibyte Patch",
+        "blogdescription": "Excerpt Demo - Notice how the Japanese text is truncated cleanly"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n$theme_slug = '';\nif ( empty( $theme_slug ) ) {\n$theme_slug = get_stylesheet();\n}\n$term = get_term_by( 'slug', $theme_slug, 'wp_theme' );\nif ( ! $term ) {\n$term = wp_insert_term( $theme_slug, 'wp_theme' );\n$term_id = $term['term_id'];\n} else {\n$term_id = $term->term_id;\n}\n$post_id = wp_insert_post( array(\n'post_title'   => 'Blog Home with Excerpts',\n'post_name'    => 'home',\n'post_type'    => 'wp_template',\n'post_status'  => 'publish',\n'post_content' => '<!-- wp:template-part {\"slug\":\"header\",\"tagName\":\"header\"} /-->  <!-- wp:group {\"tagName\":\"main\",\"style\":{\"spacing\":{\"margin\":{\"top\":\"var:preset|spacing|50\"}}},\"layout\":{\"type\":\"constrained\"}} --> <main class=\"wp-block-group\" style=\"margin-top:var(--wp--preset--spacing--50)\">  <!-- wp:query {\"queryId\":1,\"query\":{\"perPage\":10,\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":true}} --> <div class=\"wp-block-query\">  <!-- wp:post-template --> <!-- wp:group {\"style\":{\"spacing\":{\"blockGap\":\"var:preset|spacing|20\",\"padding\":{\"bottom\":\"var:preset|spacing|40\"}}},\"layout\":{\"type\":\"default\"}} --> <div class=\"wp-block-group\" style=\"padding-bottom:var(--wp--preset--spacing--40)\">  <!-- wp:post-title {\"isLink\":true} /-->  <!-- wp:post-excerpt {\"moreText\":\"続きを読む\",\"excerptLength\":110} /-->  <!-- wp:post-date /-->  </div> <!-- /wp:group --> <!-- /wp:post-template -->  <!-- wp:query-pagination {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"space-between\"}} --> <!-- wp:query-pagination-previous /--> <!-- wp:query-pagination-next /--> <!-- /wp:query-pagination -->  </div> <!-- /wp:query -->  </main> <!-- /wp:group -->  <!-- wp:template-part {\"slug\":\"footer\",\"tagName\":\"footer\"} /-->',\n'tax_input'    => array(\n'wp_theme' => array( $term_id )\n),\n) );\nif ( ! is_wp_error( $post_id ) ) {\nwp_set_object_terms( $post_id, $term_id, 'wp_theme' );\n}",
+      "progress": {
+        "caption": "addTemplate: home"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php';\nforeach ( array( 'post', 'page', 'attachment', 'revision', 'nav_menu_item' ) as $post_type ) {\n$posts = get_posts( array('posts_per_page' => -1, 'post_type' => $post_type ) );\nforeach ($posts as $post) wp_delete_post($post->ID, true);\n}",
+      "progress": {
+        "caption": "Deleting all posts and pages"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php';\n$page_args = array(\n'post_type'    => 'post',\n'post_status'  => 'publish',\n'post_title'   => 'Clean Excerpt Truncation Demo',\n'post_content' => '<!-- wp:paragraph --> <p>This post demonstrates WP Multibyte Patch\\'s excerpt handling. The excerpt below contains Japanese text that will be truncated. With the plugin active, the text cuts cleanly at character boundaries instead of breaking mid-character (which would cause garbled text called \"mojibake\").</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>日本語の文章がここから始まります。WordPress は通常、抜粋を作成する際にバイト数で文字列を切り取ります。これはASCII文字では問題ありませんが、日本語のようなマルチバイト文字では、文字の途中で切られてしまい、文字化けが発生します。WP Multibyte Patch はこの問題を解決し、文字の境界で正しく切り取るようにします。</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>このプラグインがないと、抜粋の最後が「?」や意味不明な記号になることがあります。プラグインを有効にすると、きれいに「...」で終わります。</p> <!-- /wp:paragraph -->',\n'post_date'    => date( 'Y-m-d H:i:s', strtotime( '2025-01-02 12:00:00' ) ),\n);\n$page_id = wp_insert_post( $page_args, true );\nif ( is_wp_error( $page_id ) ) {\nerror_log( 'addPost error: ' . $page_id->get_error_message() );\n}",
+      "progress": {
+        "caption": "addPost: Clean Excerpt Truncation Demo"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php';\n$page_args = array(\n'post_type'    => 'post',\n'post_status'  => 'publish',\n'post_title'   => '日本の四季について',\n'post_content' => '<!-- wp:paragraph --> <p>日本には美しい四季があります。春には桜が咲き、多くの人々が花見を楽しみます。夏は暑く、花火大会や夏祭りが各地で開催されます。秋になると紅葉が山々を彩り、観光客で賑わいます。冬は雪が降り、スキーやスノーボードを楽しむことができます。</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>それぞれの季節には独特の食べ物や行事があり、日本文化の豊かさを感じることができます。春は新生活の始まりでもあり、入学式や入社式が行われます。夏休みには多くの家族が旅行に出かけ、海や山で過ごします。秋は食欲の秋とも呼ばれ、新米や秋刀魚など美味しい食材が豊富です。冬にはクリスマスや正月など、大きなイベントが続きます。</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>日本を訪れる際は、季節に合わせた旅行計画を立てることをお勧めします。</p> <!-- /wp:paragraph -->',\n'post_date'    => date( 'Y-m-d H:i:s', strtotime( '2025-01-01 12:00:00' ) ),\n);\n$page_id = wp_insert_post( $page_args, true );\nif ( is_wp_error( $page_id ) ) {\nerror_log( 'addPost error: ' . $page_id->get_error_message() );\n}",
+      "progress": {
+        "caption": "addPost: 日本の四季について"
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "6 more steps",
+    "author": "https://github.com/akirk/playground-step-library"
+  }
+}

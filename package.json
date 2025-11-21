@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "shots": "tsx scripts/screenshot-blueprints.ts",
-    "inject": "tsx scripts/inject-screenshots.ts"
+    "inject": "tsx scripts/inject-screenshots.ts",
+    "build-plugins": "tsx scripts/build-plugins-gallery.ts",
+    "shots-plugins": "tsx scripts/screenshot-plugins.ts"
   },
   "devDependencies": {
     "playwright": "^1.48.0",

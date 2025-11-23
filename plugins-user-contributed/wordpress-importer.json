@@ -1,0 +1,20 @@
+{
+  "landingPage": "/wp-admin/admin.php?import=wordpress",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wordpress-importer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Plugin (wordpress importer) + setLandingPage",
+    "author": "https://github.com/akirk/playground-step-library"
+  }
+}

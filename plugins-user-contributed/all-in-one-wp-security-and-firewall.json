@@ -1,0 +1,15 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=aiowpsec",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "all-in-one-wp-security-and-firewall"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}

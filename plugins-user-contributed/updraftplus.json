@@ -1,0 +1,20 @@
+{
+  "landingPage": "/wp-admin/options-general.php?page=updraftplus",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "updraftplus"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "UpdraftPlus: WP Backup & Migration Plugin",
+    "author": "Alex Kirk"
+  }
+}

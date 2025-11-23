@@ -1,0 +1,31 @@
+{
+  "landingPage": "/using-breadcrumbs-in-wordpress/",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "breadcrumb-navxt"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n// Rename Sample Page to Home\n$sample = get_page_by_path('sample-page');\nif (!$sample) {\n$sample = get_page_by_title('Sample Page');\n}\nif ($sample) {\nwp_update_post([\n'ID'         => $sample->ID,\n'post_title' => 'Home',\n'post_name'  => 'home'\n]);\n}"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n// Step 1: Ensure Home is the front page and create Guides page\n$home = get_page_by_path('home');\nif (!$home) {\n$home = get_page_by_title('Home');\n}\nif ($home) {\nupdate_option('show_on_front', 'page');\nupdate_option('page_on_front', $home->ID);\n}\n// Create Guides page if missing\n$guides = get_page_by_path('guides');\nif (!$guides) {\n$guides = get_page_by_title('Guides');\n}\nif (!$guides) {\nwp_insert_post([\n'post_title'   => 'Guides',\n'post_name'    => 'guides',\n'post_type'    => 'page',\n'post_status'  => 'publish'\n]);\n}"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n// Step 2: Create subpage under Guides and update all page contents\n$guides = get_page_by_path('guides');\nif (!$guides) {\n$guides = get_page_by_title('Guides');\n}\n$parent_id = $guides ? $guides->ID : 0;\n// Subpage content (intro paragraph removed, plugin name linked)\n$child_content = \"<!-- wp:bcn/breadcrumb-trail /-->\\n\\n<!-- wp:paragraph -->\\n<p>This is a demo showing how breadcrumb navigation works in WordPress using the <a href=\\\"https://wordpress.org/plugins/breadcrumb-navxt/\\\"><strong>Breadcrumb NavXT</strong></a> plugin. Breadcrumb NavXT generates flexible and fully customizable breadcrumb trails, making it easy to improve navigation and overall site structure.</p>\\n<!-- /wp:paragraph -->\\n\\n<!-- wp:paragraph -->\\n<p>The plugin features include RDFa format Schema.org BreadcrumbList-compatible breadcrumb generation, extensive customization options for controlling breadcrumb structure and appearance, and compatibility with plugins such as WPML, Polylang, bbPress, BuddyPress, and more.</p>\\n<!-- /wp:paragraph -->\\n\\n<!-- wp:paragraph -->\\n<p>For more information, see:</p>\\n<!-- /wp:paragraph -->\\n\\n<!-- wp:list -->\\n<ul>\\n    <li>Official website: <a href=\\\"https://mtekk.us/code/breadcrumb-navxt/\\\">https://mtekk.us/code/breadcrumb-navxt/</a></li>\\n    <li>WordPress.org repository: <a href=\\\"https://wordpress.org/plugins/breadcrumb-navxt/\\\">https://wordpress.org/plugins/breadcrumb-navxt/</a></li>\\n</ul>\\n<!-- /wp:list -->\";\n$child_id = 0;\nif ($parent_id) {\n$child_id = wp_insert_post([\n'post_title'   => 'Using Breadcrumbs in WordPress',\n'post_name'    => 'using-breadcrumbs-in-wordpress',\n'post_type'    => 'page',\n'post_status'  => 'publish',\n'post_parent'  => $parent_id,\n'post_content' => $child_content\n]);\n}\nif ($parent_id && $child_id && !is_wp_error($child_id)) {\n$child_link = esc_url(get_permalink($child_id));\n// Guides page: breadcrumb + plugin intro + list of its subpages\n$parent_content = \"<!-- wp:bcn/breadcrumb-trail /-->\\n\\n<!-- wp:paragraph -->\\n<p>This is a demo of a WordPress site with the <a href=\\\"https://wordpress.org/plugins/breadcrumb-navxt/\\\"><strong>Breadcrumb NavXT</strong></a> plugin.</p>\\n<!-- /wp:paragraph -->\\n\\n<!-- wp:paragraph -->\\n<p>Try navigating the subpages below:</p>\\n<!-- /wp:paragraph -->\\n\\n<!-- wp:list -->\\n<ul>\\n    <li><a href=\\\"$child_link\\\">Using Breadcrumbs in WordPress</a></li>\\n</ul>\\n<!-- /wp:list -->\";\nwp_update_post([\n'ID'           => $parent_id,\n'post_content' => $parent_content\n]);\n// Home page: breadcrumb + intro (with linked plugin) + separate line for pages + link to Guides\n$home = get_page_by_path('home');\nif (!$home) {\n$home = get_page_by_title('Home');\n}\nif ($home) {\n$guides_link = esc_url(get_permalink($parent_id));\n$home_content = \"<!-- wp:bcn/breadcrumb-trail /-->\\n\\n<!-- wp:paragraph -->\\n<p>This is a demo of a WordPress site with the <a href=\\\"https://wordpress.org/plugins/breadcrumb-navxt/\\\"><strong>Breadcrumb NavXT</strong></a> plugin.</p>\\n<!-- /wp:paragraph -->\\n\\n<!-- wp:paragraph -->\\n<p>Try navigating the pages below:</p>\\n<!-- /wp:paragraph -->\\n\\n<!-- wp:list -->\\n<ul>\\n    <li><a href=\\\"$guides_link\\\">Guides</a></li>\\n</ul>\\n<!-- /wp:list -->\";\nwp_update_post([\n'ID'           => $home->ID,\n'post_content' => $home_content\n]);\n}\n}"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n// Make the page wider in default block themes\n$css = ':root {\n--wp--style--global--content-size: 1200px;\n--wp--style--global--wide-size: 1400px;\n}';\nwp_update_custom_css_post( $css );"
+    }
+  ]
+}

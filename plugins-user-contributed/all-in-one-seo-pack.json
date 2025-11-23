@@ -1,0 +1,26 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=aioseo",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "all-in-one-seo-pack"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "aioseo_activation_redirect": "__return_true"
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "All in One SEO – Powerful SEO Plugin to Boost SEO Rankings & Increase Traffic",
+    "author": "Jan Jakes"
+  }
+}

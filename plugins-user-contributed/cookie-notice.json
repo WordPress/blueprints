@@ -1,0 +1,29 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/admin.php?page=cookie-notice&tab=settings",
+  "login": true,
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "siteOptions": {
+    "blogname": "Cookie Notice Playground Demo",
+    "blogdescription": "Showcasing Cookie Notice & Compliance for GDPR / CCPA"
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "cookie-notice"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\n\n// Create a simple front page that explicitly mentions the banner\n$demo_page_id = wp_insert_post([\n    'post_title'   => 'Cookie Notice Demo Page',\n    'post_name'    => 'cookie-notice-demo',\n    'post_content' => \"This page is part of a Cookie Notice Playground demo.\\n\\nYou should see a cookie banner on the front‑end of this site. Try changing the banner text in <strong>Cookies → Settings → Cookie Consent</strong> and then refresh this page to see the changes.\",\n    'post_status'  => 'publish',\n    'post_type'    => 'page'\n]);\n\nif ($demo_page_id && !is_wp_error($demo_page_id)) {\n    update_option('show_on_front', 'page');\n    update_option('page_on_front', $demo_page_id);\n}\n\n// Create / assign a Privacy Policy page, which Cookie Notice can link to\n$privacy_page = get_page_by_path('privacy-policy');\nif (!$privacy_page) {\n    $privacy_page_id = wp_insert_post([\n        'post_title'   => 'Privacy Policy',\n        'post_name'    => 'privacy-policy',\n        'post_content' => \"This is a demo privacy policy page for the Cookie Notice Playground setup.\\n\\nBelow is an example of the [cookies_revoke] shortcode so you can demonstrate revoking consent:\\n\\n[cookies_revoke]\",\n        'post_status'  => 'publish',\n        'post_type'    => 'page'\n    ]);\n} else {\n    $privacy_page_id = $privacy_page->ID;\n}\n\nif (!empty($privacy_page_id) && !is_wp_error($privacy_page_id)) {\n    update_option('wp_page_for_privacy_policy', $privacy_page_id);\n}\n\n// Configure Cookie Notice banner text + buttons in a version‑agnostic way\n$options = get_option('cookie_notice_options', []);\n\nif (function_exists('Cookie_Notice')) {\n    $cn = Cookie_Notice();\n    if (is_array($cn->options)) {\n        $options = $cn->options; // Use the plugin's normalized options array if available\n    }\n}\n\nif (!is_array($options)) {\n    $options = [];\n}\n\n// Many modern versions nest options under a `general` key; older ones are flat.\n$targets = [];\nif (isset($options['general']) && is_array($options['general'])) {\n    $targets[] = &$options['general'];\n} else {\n    $targets[] = &$options;\n}\n\nforeach ($targets as &$target) {\n    if (!is_array($target)) {\n        continue;\n    }\n\n    foreach ($target as $key => $value) {\n        if (is_string($value)) {\n            $lower = strtolower($value);\n\n            // Heuristically replace the main banner copy (usually the long string mentioning cookies)\n            if (strpos($lower, 'cookie') !== false && strlen($value) > 30) {\n                $target[$key] = 'This is a Cookie Notice Playground demo. These texts come from Cookies → Settings and were preconfigured by the blueprint.';\n            }\n        }\n\n        // Button labels across various historical keys\n        if (in_array($key, ['accept', 'accept_text', 'accept_text_cookie'], true)) {\n            $target[$key] = 'Accept demo cookies';\n        }\n\n        if (in_array($key, ['refuse', 'refuse_text', 'refuse_text_cookie'], true)) {\n            $target[$key] = 'Reject non‑essential cookies';\n        }\n\n        if (in_array($key, ['revoke', 'revoke_text'], true)) {\n            $target[$key] = 'Change your cookie settings';\n        }\n    }\n\n    // Make sure the refuse / revoke flows are actually enabled when this flag exists.\n    if (isset($target['refuse_opt'])) {\n        // Plugin casts this to int, so 1 works across versions\n        $target['refuse_opt'] = 1;\n    }\n}\n\nupdate_option('cookie_notice_options', $options);\n\nif (function_exists('Cookie_Notice')) {\n    // Keep the in‑memory copy in sync so the current request uses our values too\n    Cookie_Notice()->options = $options;\n}\n"
+    }
+  ]
+}

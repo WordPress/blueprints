@@ -1,0 +1,20 @@
+{
+  "landingPage": "/wp-admin/themes.php?page=starter-templates&ci=2",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "astra-sites"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Starter Templates – AI-Powered Templates for Elementor & Gutenberg",
+    "author": "Berislav Grgicak"
+  }
+}

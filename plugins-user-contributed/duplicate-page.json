@@ -1,0 +1,20 @@
+{
+  "landingPage": "/wp-admin/options-general.php?page=duplicate_page_settings",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "duplicate-page"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Duplicate Page",
+    "author": "Alex Kirk"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "6.7"
+  },
+  "features": {
+    "networking": true
+  },
+  "login": true,
+  "landingPage": "/wp-admin/admin.php?page=wpcode-headers-footers",
+
+  "plugins": [
+    "insert-headers-and-footers"
+  ],
+
+  "siteOptions": {
+    "blogname": "WPCode Headers & Footers Demo",
+    "blogdescription": "Playground demo for Insert Headers and Footers",
+
+    "ihaf_insert_header": "<!--\n  Demo: Global Header via WPCode\n\n  This entire block is injected into the <head> of every page via\n  Code Snippets → Header & Footer → \"Header\".\n\n  What to check:\n  - View Source and search for \"wpcode-header\" to see the meta tag.\n  - Check <head> for the <style> block and <script>.\n  - Open DevTools → Console to see the log from this script.\n-->\n\n<!-- Marker so you can spot this quickly in View Source -->\n<meta name=\"demo\" content=\"wpcode-header\" />\n\n<!--\n  Simple visual cue: when the header script runs, it adds the \"wpcode-demo\"\n  class to <body>, which triggers this top border.\n-->\n<style>\n  body.wpcode-demo {\n    border-top: 4px solid #2271b1;\n    margin-top: 0;\n  }\n</style>\n\n<!--\n  This script runs on every front-end page load because it's in the global header.\n  It:\n  - Adds the \"wpcode-demo\" class to <body> (see CSS above).\n  - Logs to the console so you can confirm execution.\n  Replace this with your analytics tag, pixel loader, etc.\n-->\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    document.body.classList.add('wpcode-demo');\n    console.log('WPCode demo: header script ran (global header)');\n  });\n</script>",
+
+    "ihaf_insert_body": "<!--\n  Demo: Body tracking pixel placeholder\n\n  This block is injected right after the opening <body> tag via the\n  \"Body\" field. This is typically where you’d drop tracking pixels\n  that need to live near the top of <body>.\n\n  What to check:\n  - Inspect <body> in DevTools; you should see this <noscript> block\n    immediately after the opening <body>.\n  - This is a placeholder URL; replace it with your real pixel / tag.\n-->\n\n<!-- Example of a noscript tracking pixel -->\n<noscript>\n  <img src=\"https://example.com/wpcode-demo-pixel.gif\" alt=\"\" />\n</noscript>",
+
+    "ihaf_insert_footer": "<!--\n  Demo: Global Footer script\n\n  This script is injected just before </body> on every page via the\n  \"Footer\" field. Use this area for scripts that should run after the\n  page has loaded (e.g. chat widgets, A/B testing, extra tracking).\n\n  What to check:\n  - Open DevTools → Console and reload a front-end page to see the log.\n  - Confirm in View Source that this script appears near </body>.\n-->\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    console.log('WPCode demo: footer script ran (global footer)');\n\n    // If the body snippet created the #wpcode-demo-banner element,\n    // tweak its text so you can see header+body+footer all working together.\n    var banner = document.getElementById('ihaf-demo-banner');\n    if (banner) {\n      banner.textContent += ' — modified by footer script';\n    }\n  });\n</script>"
+  },
+
+  "steps": [
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php';\n\n// Create a simple demo page that will clearly load the global scripts.\nwp_insert_post([\n  'post_title'   => 'WPCode Global Scripts Demo',\n  'post_name'    => 'wpcode-global-scripts-demo',\n  'post_status'  => 'publish',\n  'post_type'    => 'page',\n  'post_content' => '<!-- wp:paragraph --><p>This page is rendered with a custom top border and console logs injected by <strong>Code Snippets → Header &amp; Footer</strong>. Visit the browser console and view source to see the header / body / footer snippets added by WPCode.</p><!-- /wp:paragraph -->'\n]);\n"
+    }
+  ]
+}

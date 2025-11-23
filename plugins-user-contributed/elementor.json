@@ -1,33 +1,33 @@
 {
-  "landingPage": "/wp-admin/admin.php?page=elementor-app#/kit-library",
-  "steps": [
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "elementor"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "installTheme",
-      "themeData": {
-        "resource": "wordpress.org/themes",
-        "slug": "hello-biz"
-      },
-      "options": {
-        "activate": true
-      },
-      "progress": {
-        "caption": "Installing theme: hello-biz"
-      }
-    }
-  ],
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-  "meta": {
-    "title": "Plugin (elementor) + Theme (hello biz) + setLandingPage",
-    "author": "https://github.com/akirk/playground-step-library"
-  }
+	"landingPage": "/wp-admin/admin.php?page=elementor-app#/kit-library",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "elementor"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "hello-biz"
+			},
+			"options": {
+				"activate": true
+			},
+			"progress": {
+				"caption": "Installing theme: hello-biz"
+			}
+		}
+	],
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Elementor Website Builder – More Than Just a Page Builder",
+		"author": "Alex Kirk"
+	}
 }

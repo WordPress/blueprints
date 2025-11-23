@@ -1,0 +1,15 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=smart-slider3",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "smart-slider-3"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=rank-math",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "seo-by-rank-math"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "defineWpConfigConsts",
+      "consts": {
+        "RANK_MATH_REGISTRATION_SKIP": true
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Rank Math SEO – AI SEO Tools to Dominate SEO Rankings",
+    "author": "https://github.com/akirk/playground-step-library"
+  }
+}

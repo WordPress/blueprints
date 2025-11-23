@@ -1,0 +1,42 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/options-general.php?page=limit-login-attempts&tab=settings",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "limit-login-attempts-reloaded"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Limit Login Attempts Reloaded Demo",
+        "blogdescription": "Configured login rate limiting (3 retries, short lockouts)",
+
+        "limit_login_gdpr": "1",
+        "limit_login_allowed_retries": "3",
+        "limit_login_lockout_duration": "300",
+        "limit_login_allowed_lockouts": "2",
+        "limit_login_valid_duration": "3600",
+        "limit_login_long_duration": "86400",
+        "limit_login_admin_notify_email": "demo@example.com",
+
+        "limit_login_active_app": "local",
+        "limit_login_onboarding_popup_shown": "1"
+      }
+    }
+  ]
+}

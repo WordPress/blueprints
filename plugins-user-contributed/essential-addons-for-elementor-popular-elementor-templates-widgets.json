@@ -1,0 +1,48 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=eael-settings",
+  "preferredVersions": {
+    "wp": "latest",
+    "php": "latest"
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "elementor"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "hello-biz"
+      },
+      "options": {
+        "activate": true
+      },
+      "progress": {
+        "caption": "Installing theme: hello-biz"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "essential-addons-for-elementor-lite"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "elementor_onboarded": "true"
+      }
+    }
+  ]
+}

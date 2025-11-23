@@ -1,0 +1,15 @@
+{
+  "landingPage": "/wp-admin/themes.php?page=starter-templates",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "astra-sites"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}

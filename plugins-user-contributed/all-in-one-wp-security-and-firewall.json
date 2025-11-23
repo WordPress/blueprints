@@ -1,15 +1,21 @@
 {
-  "landingPage": "/wp-admin/admin.php?page=aiowpsec",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "all-in-one-wp-security-and-firewall"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2FsbC1pbi1vbmUtd3Atc2VjdXJpdHktYW5kLWZpcmV3YWxsLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9YWlvd3BzZWMifX1dfQ=="
       },
       "options": {
         "activate": true
+      },
+      "progress": {
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "All-In-One Security (AIOS) \u2013 Security and Firewall",
+    "author": "Jan Jakes"
+  }
 }

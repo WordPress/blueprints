@@ -1,0 +1,24 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=wp_file_manager",
+  "steps": [
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/wp-file-manager---playground-compatibility-0.php",
+      "data": "<?php  /**  * Plugin Name: WP File Manager - Playground Compatibility  * Description: Fixes WP File Manager for WordPress Playground by blocking procExec()  * Version: 1.0  */  // Define constants (values don't matter since procExec is disabled) foreach (array('TAR', 'GZIP', 'BZIP2', 'XZ', 'ZIP', 'UNZIP', 'RAR', 'UNRAR', '7Z', 'CONVERT', 'IDENTIFY', 'EXIFTRAN', 'JPEGTRAN', 'FFMPEG') as $tool) {     if (!defined(\"ELFINDER_{$tool}_PATH\")) define(\"ELFINDER_{$tool}_PATH\", ''); } if (!defined('ELFINDER_IMAGEMAGICK_PS')) define('ELFINDER_IMAGEMAGICK_PS', false);  add_action('wp_ajax_mk_file_folder_manager', function() {     remove_all_actions('wp_ajax_mk_file_folder_manager');      $nonce = sanitize_text_field($_REQUEST['_wpnonce']);     if (!wp_verify_nonce($nonce, 'wp-file-manager')) {         wp_die('Security check failed');     }      require_once WP_CONTENT_DIR . '/plugins/wp-file-manager/lib/php/autoload.php';      class elFinderVolumeLocalFileSystem_Playground extends elFinderVolumeLocalFileSystem {         protected function procExec($command,"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-file-manager"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}

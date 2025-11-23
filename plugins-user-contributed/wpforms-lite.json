@@ -1,20 +1,7 @@
 {
   "landingPage": "/wp-admin/admin.php?page=wpforms-builder",
-  "steps": [
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "wpforms-lite"
-      },
-      "options": {
-        "activate": true
-      }
-    }
-  ],
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "WPForms – Easy Form Builder for WordPress",
-    "author": "https://wordpress.org/plugins/wpforms-lite/"
+    "title": "WPForms \u2013 Easy Form Builder for WordPress \u2013 Contact Forms, Payment Forms, Surveys, &amp; More",
+    "author": "Alex Kirk"
   }
 }

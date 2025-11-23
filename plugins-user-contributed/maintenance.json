@@ -1,15 +1,21 @@
 {
-  "landingPage": "/?maintenance-preview",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "maintenance"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL21haW50ZW5hbmNlLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvP21haW50ZW5hbmNlLXByZXZpZXcifX1dfQ=="
       },
       "options": {
         "activate": true
+      },
+      "progress": {
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "Maintenance",
+    "author": "Jan Jakes"
+  }
 }

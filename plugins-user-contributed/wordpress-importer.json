@@ -1,20 +1,21 @@
 {
-  "landingPage": "/wp-admin/admin.php?import=wordpress",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "wordpress-importer"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dvcmRwcmVzcy1pbXBvcnRlci8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9pbXBvcnQ9d29yZHByZXNzIn19XX0="
       },
       "options": {
         "activate": true
+      },
+      "progress": {
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
   ],
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Plugin (wordpress importer) + setLandingPage",
-    "author": "https://github.com/akirk/playground-step-library"
+    "title": "WordPress Importer",
+    "author": "Jan Jakes"
   }
 }

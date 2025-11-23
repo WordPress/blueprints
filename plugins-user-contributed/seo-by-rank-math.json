@@ -1,26 +1,21 @@
 {
-  "landingPage": "/wp-admin/admin.php?page=rank-math",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "seo-by-rank-math"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3Nlby1ieS1yYW5rLW1hdGgvIiwicHJzIjpmYWxzZX19LHsic3RlcCI6ImRlZmluZVdwQ29uZmlnQ29uc3QiLCJ2YXJzIjp7Im5hbWUiOiJSQU5LX01BVEhfUkVHSVNUUkFUSU9OX1NLSVAiLCJ2YWx1ZSI6InRydWUifX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9wYWdlPXJhbmstbWF0aCJ9fV19"
       },
       "options": {
         "activate": true
-      }
-    },
-    {
-      "step": "defineWpConfigConsts",
-      "consts": {
-        "RANK_MATH_REGISTRATION_SKIP": true
+      },
+      "progress": {
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
   ],
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Rank Math SEO – AI SEO Tools to Dominate SEO Rankings",
-    "author": "https://github.com/akirk/playground-step-library"
+    "title": "Rank Math SEO \u2013 AI SEO Tools to Dominate SEO Rankings",
+    "author": "Jan Jakes"
   }
 }

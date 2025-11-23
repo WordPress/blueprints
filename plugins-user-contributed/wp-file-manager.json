@@ -20,5 +20,9 @@
         "activate": true
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "File Manager",
+    "author": "Alex Kirk"
+  }
 }

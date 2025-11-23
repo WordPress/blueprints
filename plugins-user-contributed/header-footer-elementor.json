@@ -1,50 +1,21 @@
 {
-  "landingPage": "/wp-admin/admin.php?page=hfe#dashboard",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "elementor"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "header-footer-elementor"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "installTheme",
-      "themeData": {
-        "resource": "wordpress.org/themes",
-        "slug": "hello-biz"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6ImVsZW1lbnRvciIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJpbnN0YWxsUGx1Z2luIiwidmFycyI6eyJ1cmwiOiJoZWFkZXItZm9vdGVyLWVsZW1lbnRvciIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJpbnN0YWxsVGhlbWUiLCJ2YXJzIjp7InVybCI6ImhlbGxvLWJpeiIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjpbImVsZW1lbnRvcl9vbmJvYXJkZWQiLCJoZmVfb25ib2FyZGluZ190cmlnZ2VyZWQiXSwidmFsdWUiOlsidHJ1ZSIsInllcyJdfX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9wYWdlPWhmZSNkYXNoYm9hcmQifX1dfQ=="
       },
       "options": {
         "activate": true
       },
       "progress": {
-        "caption": "Installing theme: hello-biz"
-      }
-    },
-    {
-      "step": "setSiteOptions",
-      "options": {
-        "elementor_onboarded": "true",
-        "hfe_onboarding_triggered": "yes"
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
   ],
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Ultimate Addons for Elementor (Formerly Elementor Header & Footer Builder)",
+    "title": "Ultimate Addons for Elementor (Formerly Elementor Header &amp; Footer Builder)",
     "author": "Berislav Grgicak"
   }
 }

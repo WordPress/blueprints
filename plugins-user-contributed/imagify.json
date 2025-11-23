@@ -1,21 +1,21 @@
 {
-  "landingPage": "/wp-admin/admin.php?page=imagify",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "imagify"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2ltYWdpZnkvIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT1pbWFnaWZ5In19LHsic3RlcCI6ImRlZmluZVdwQ29uZmlnQ29uc3QiLCJ2YXJzIjp7Im5hbWUiOiJJTUFHSUZZX0FQSV9LRVkiLCJ2YWx1ZSI6IjFmNTY2NTFmYjIxNTdjMWUyM2U5ZGNjZmFmYTNkZDc4Yjc4MmRjNTYifX1dfQ=="
       },
       "options": {
         "activate": true
-      }
-    },
-    {
-      "step": "defineWpConfigConsts",
-      "consts": {
-        "IMAGIFY_API_KEY": "1f56651fb2157c1e23e9dccfafa3dd78b782dc56"
+      },
+      "progress": {
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "Imagify Image Optimization \u2013 Optimize Images | Compress Images | Convert WebP | Convert AVIF",
+    "author": "Berislav Grgicak"
+  }
 }

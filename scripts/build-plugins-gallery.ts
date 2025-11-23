@@ -23,7 +23,6 @@ type IndexEntry = {
 	title: string;
 	author: string;
 	screenshot_url: string;
-	blueprint: object;
 };
 
 const REPO = 'WordPress/blueprints';
@@ -72,14 +71,10 @@ async function buildIndex(): Promise<Record<string, IndexEntry>> {
 		const meta = blueprint.meta || {};
 		const screenshotExists = await hasScreenshot( slug );
 
-		// Remove meta from blueprint for the embedded version (we have title etc separately)
-		const { meta: _, ...blueprintWithoutMeta } = blueprint;
-
 		index[relativePath] = {
 			title: meta.title || slug,
 			author: meta.author || '',
 			screenshot_url: screenshotExists ? buildScreenshotUrl( slug ) : '',
-			blueprint: blueprintWithoutMeta,
 		};
 	}
 

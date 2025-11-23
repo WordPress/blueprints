@@ -44,5 +44,9 @@
         "elementor_onboarded": "true"
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "Essential Addons for Elementor \u2013 Popular Elementor Templates &amp; Widgets",
+    "author": "Berislav Grgicak"
+  }
 }

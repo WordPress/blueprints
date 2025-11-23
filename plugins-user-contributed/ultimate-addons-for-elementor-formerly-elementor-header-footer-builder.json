@@ -1,0 +1,45 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=hfe#dashboard",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "elementor"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "header-footer-elementor"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "hello-biz"
+      },
+      "options": {
+        "activate": true
+      },
+      "progress": {
+        "caption": "Installing theme: hello-biz"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "elementor_onboarded": "true",
+        "hfe_onboarding_triggered": "yes"
+      }
+    }
+  ]
+}

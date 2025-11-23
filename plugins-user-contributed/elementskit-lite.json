@@ -1,44 +1,21 @@
 {
-  "landingPage": "/wp-admin/admin.php?page=elementskit&ekit-onboard-steps=loaded",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "elementor"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "elementskit-lite"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "installTheme",
-      "themeData": {
-        "resource": "wordpress.org/themes",
-        "slug": "hello-biz"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6ImVsZW1lbnRvciIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJpbnN0YWxsUGx1Z2luIiwidmFycyI6eyJ1cmwiOiJlbGVtZW50c2tpdC1saXRlIiwicHJzIjpmYWxzZX19LHsic3RlcCI6Imluc3RhbGxUaGVtZSIsInZhcnMiOnsidXJsIjoiaGVsbG8tYml6IiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldFNpdGVPcHRpb24iLCJ2YXJzIjp7Im5hbWUiOlsiZWxlbWVudG9yX29uYm9hcmRlZCIsIiJdLCJ2YWx1ZSI6WyJ0cnVlIiwiIl19fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9ZWxlbWVudHNraXQmZWtpdC1vbmJvYXJkLXN0ZXBzPWxvYWRlZCJ9fV19"
       },
       "options": {
         "activate": true
       },
       "progress": {
-        "caption": "Installing theme: hello-biz"
-      }
-    },
-    {
-      "step": "setSiteOptions",
-      "options": {
-        "elementor_onboarded": "true"
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "ElementsKit Elementor Addons and Templates",
+    "author": "Berislav Grgicak"
+  }
 }

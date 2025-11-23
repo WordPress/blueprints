@@ -1,0 +1,950 @@
+[
+  {
+    "name": "Classic Editor",
+    "slug": "classic-editor",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/classic-editor/blueprint.json"
+  },
+  {
+    "name": "Contact Form 7",
+    "slug": "contact-form-7",
+    "assigned": "Berislav Grgicak",
+    "url": "https://playground.wordpress.net/#eyJsYW5kaW5nUGFnZSI6Ii8iLCJzdGVwcyI6W3sic3RlcCI6ImxvZ2luIiwidXNlcm5hbWUiOiJhZG1pbiJ9LHsic3RlcCI6Im1rZGlyIiwicGF0aCI6Ii93b3JkcHJlc3Mvd3AtY29udGVudC9tdS1wbHVnaW5zIn0seyJzdGVwIjoid3JpdGVGaWxlIiwicGF0aCI6Ii93b3JkcHJlc3Mvd3AtY29udGVudC9tdS1wbHVnaW5zL2Rpc2FibGUtd3AtbWFpbC5waHAiLCJkYXRhIjoiPD9waHAgYWRkX2ZpbHRlcigncHJlX3dwX21haWwnLCAnX19yZXR1cm5fdHJ1ZScpOyA/PiJ9LHsic3RlcCI6IndyaXRlRmlsZSIsInBhdGgiOiIvd29yZHByZXNzL3dwLWNvbnRlbnQvbXUtcGx1Z2lucy9jZjcuY3NzIiwiZGF0YSI6Ii53cGNmNyBpbnB1dFt0eXBlPVwidGV4dFwiXSwgLndwY2Y3IGlucHV0W3R5cGU9XCJlbWFpbFwiXSwgLndwY2Y3IHRleHRhcmVhIHsgYmFja2dyb3VuZDogI2ZmZjsgY29sb21yOiAjMmMzMzM4OyBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCBcIlNlZ29lIFVJXCIsIFJvYm90bywgT3h5Z2VuLVNhbnMsIFVidW50dSwgQ2FudGFyZWxsLCBcIkhlbHZldGljYSBOZXVlXCIsIHNhbnMtc2VyaWY7IGZvbnQtc2l6ZTogMTRweDsgbGluZS1oZWlnaHQ6IDI7IHBhZGRpbmc6IDAgOHB4OyBib3JkZXI6IDFweCBzb2xpZCAjOGM4Zjk0OyBib3JkZXItcmFkaXVzOiA0cHg7IH0gLndwY2Y3IGlucHV0LCAud3BjZjcgdGV4dGFyZWEsIC53cGNmNyBmb3JtIC53cGNmNy1yZXNwb25zZS1vdXRwdXQgeyBtYXJnaW46IDAgIWltcG9ydGFudDsgd2lkdGg6IDEwMCU7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IG1heC13aWR0aDogNDAwcHg7IH0gIC53cGNmNyBpbnB1dFt0eXBlPVwidGV4dFwiXTpmb2N1cywgLndwY2Y3IGlucHV0W3R5cGU9XCJlbWFpbFwiXTpmb2N1cywgLndwY2Y3IHRleHRhcmVhOmZvY3VzIHsgYm9yZGVyLWNvbG9yOiAjMjI3MWIxOyBvdXRsaW5lOiAycHggc29saWQgdHJhbnNwYXJlbnQ7IGJveC1zaGFkb3c6IDAgMCAwIDFweCAjMjI3MWIxOyB9ICAud3BjZjcgaW5wdXRbdHlwZT1cInN1Ym1pdFwiXSwgLndwY2Y3IGlucHV0W3R5cGU9XCJidXR0b25cIl0geyBiYWNrZ3JvdW5kLWNvbG9yOiAjMjI3MWIxOyBjb2xvcjogI2ZmZjsgYm9yZGVyOiAxcHggc29saWQgIzIyNzFiMTsgYm9yZGVyLXJhZGl1czogM3B4OyBwYWRkaW5nOiA4cHggMTJweDsgZm9udC1zaXplOiAxNHB4OyBsaW5lLWhlaWdodDogMS41OyB0ZXh0LWFsaWduOiBjZW50ZXI7IHRleHQtdHJhbnNmb3JtOiBub25lOyBjdXJzb3I6IHBvaW50ZXI7IH0gIC53cGNmNyBpbnB1dFt0eXBlPVwic3VibWl0XCJdOmhvdmVyLCAud3BjZjcgaW5wdXRbdHlwZT1cImJ1dHRvblwiXTpob3ZlciB7IGJhY2tncm91bmQtY29sb3I6ICMxMzVlOTY7IGJvcmRlci1jb2xvcjogIzEzNWU5NjsgfSAgLndwY2Y3IGlucHV0W3R5cGU9XCJzdWJtaXRcIl06Zm9jdXMsIC53cGNmNyBpbnB1dFt0eXBlPVwiYnV0dG9uXCJdOmZvY3VzIHsgYmFja2dyb3VuZC1jb2xvcjogIzEzNWU5NjsgYm9yZGVyLWNvbG9yOiAjMGE0Yjc4OyBib3gtc2hhZG93OiAwIDAgMCAxcHggI2ZmZiwgMCAwIDAgM3B4ICMyMjcxYjE7IG91dGxpbmU6IDJweCBzb2xpZCB0cmFuc3BhcmVudDsgfSJ9LHsic3RlcCI6IndyaXRlRmlsZSIsInBhdGgiOiIvd29yZHByZXNzL3dwLWNvbnRlbnQvbXUtcGx1Z2lucy9jZjctY3NzLnBocCIsImRhdGEiOiI8P3BocCAgYWRkX2FjdGlvbiggJ3dwX2VucXVldWVfc2NyaXB0cycsIGZ1bmN0aW9uKCkgeyB3cF9lbnF1ZXVlX3N0eWxlKCAnY2Y3LWN1c3RvbS1zdHlsZXMnLCBXUE1VX1BMVUdJTl9VUkwgLiAnL2NmNy5jc3MnLCApOyB9ICk7ID8+In0seyJzdGVwIjoid3JpdGVGaWxlIiwicGF0aCI6Ii93b3JkcHJlc3Mvd3AtY29udGVudC9tdS1wbHVnaW5zL2Rpc2FibGUtd3AtbWFpbC5waHAiLCJkYXRhIjoiPD9waHAgYWRkX2ZpbHRlcigncHJlX3dwX21haWwnLCAnX19yZXR1cm5fdHJ1ZScpOyA/PiJ9LHsic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJwbHVnaW5EYXRhIjp7InJlc291cmNlIjoid29yZHByZXNzLm9yZy9wbHVnaW5zIiwic2x1ZyI6ImNvbnRhY3QtZm9ybS03In0sIm9wdGlvbnMiOnsiYWN0aXZhdGUiOnRydWV9fSx7InN0ZXAiOiJydW5QSFAiLCJjb2RlIjoiPD9waHAgcmVxdWlyZV9vbmNlICcvd29yZHByZXNzL3dwLWxvYWQucGhwJzsgJGZvcm1zID0gV1BDRjdfQ29udGFjdEZvcm06OmZpbmQoIGFycmF5KCAncG9zdF9zdGF0dXMnID0+ICdhbnknLCAncG9zdHNfcGVyX3BhZ2UnID0+IC0xLCAnb2Zmc2V0JyA9PiAwLCAnb3JkZXJieScgPT4gJ0lEJywgJ29yZGVyJyA9PiAnQVNDJywgKSApOyBpZiAoIWVtcHR5KCRmb3JtcykpIHsgJGZvcm0gPSAkZm9ybXNbMF07ICRwYWdlX2FyZ3MgPSBhcnJheSggJ3Bvc3RfdHlwZScgICAgPT4gJ3BhZ2UnLCAncG9zdF9zdGF0dXMnICA9PiAncHVibGlzaCcsICdwb3N0X3RpdGxlJyAgID0+ICdDb250YWN0IEZvcm0gNycsICdwb3N0X2NvbnRlbnQnID0+ICRmb3JtLT5zaG9ydGNvZGUoKSwgKTsgJHBhZ2VfaWQgPSB3cF9pbnNlcnRfcG9zdCggJHBhZ2VfYXJncyApOyAgdXBkYXRlX29wdGlvbiggJ3BhZ2Vfb25fZnJvbnQnLCAkcGFnZV9pZCApOyB1cGRhdGVfb3B0aW9uKCAnc2hvd19vbl9mcm9udCcsICdwYWdlJyApOyB9In1dfQ=="
+  },
+  {
+    "name": "Elementor Website Builder \u2013 More Than Just a Page Builder",
+    "slug": "elementor",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/?step[0]=installPlugin&url[0]=wordpress.org/plugins/elementor/&step[1]=installTheme&url[1]=wordpress.org/themes/hello-biz/&step[2]=setLandingPage&landingPage[2]=/wp-admin/admin.php?page=elementor-app%23/kit-library"
+  },
+  {
+    "name": "Yoast SEO \u2013 Advanced SEO with real-time guidance and built-in AI",
+    "slug": "wordpress-seo",
+    "assigned": "Berislav Grgicak",
+    "url": "https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/bgrgicak/wordpress-seo/997676ddb504989efa504bf6af4830b2a29e5680/svn-assets/blueprints/blueprint.json"
+  },
+  {
+    "name": "LiteSpeed Cache",
+    "slug": "litespeed-cache",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/?step[0]=installPlugin&url[0]=wordpress.org/plugins/litespeed-cache/&step[1]=setLandingPage&landingPage[1]=/wp-admin/admin.php?page=litespeed"
+  },
+  {
+    "name": "Akismet Anti-spam: Spam Protection",
+    "slug": "akismet",
+    "assigned": "Akismet Team",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/akismet/blueprint.json"
+  },
+  {
+    "name": "WPForms \u2013 Easy Form Builder for WordPress \u2013 Contact Forms, Payment Forms, Surveys, & More",
+    "slug": "wpforms-lite",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/?step[0]=installPlugin&url[0]=wordpress.org/plugins/wpforms-lite/&step[1]=setLandingPage&landingPage[1]=/wp-admin/admin.php?page=wpforms-builder"
+  },
+  {
+    "name": "All-in-One WP Migration and Backup",
+    "slug": "all-in-one-wp-migration",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/all-in-one-wp-migration/blueprint.json"
+  },
+  {
+    "name": "Site Kit by Google \u2013 Analytics, Search Console, AdSense, Speed",
+    "slug": "google-site-kit",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2dvb2dsZS1zaXRlLWtpdC8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoibXVQbHVnaW4iLCJ2YXJzIjp7Im5hbWUiOiJteS1wbHVnaW4iLCJjb2RlIjoiPD9waHBcbi8qKlxuICogUGx1Z2luIE5hbWU6IFNpdGUgS2l0IFByZXZpZXcgTW9kZVxuICogRGVzY3JpcHRpb246IEJ5cGFzc2VzIFNpdGUgS2l0IHNldHVwIGZvciBwcmV2aWV3L2RlbW8gcHVycG9zZXNcbiAqL1xuXG4vLyBGb3JjZSBzZXR1cCBhcyBjb21wbGV0ZVxuYWRkX2ZpbHRlciggJ2dvb2dsZXNpdGVraXRfc2V0dXBfY29tcGxldGUnLCAnX19yZXR1cm5fdHJ1ZScsIDk5OSApO1xuXG4vLyBPdmVycmlkZSBTaXRlIEtpdCdzIGNhcGFiaWxpdHkgbWFwcGluZyB0byBhbGxvdyBkYXNoYm9hcmQgYWNjZXNzIGluIHByZXZpZXcgbW9kZVxuYWRkX2ZpbHRlciggJ21hcF9tZXRhX2NhcCcsIGZ1bmN0aW9uKCAkY2FwcywgJGNhcCwgJHVzZXJfaWQsICRhcmdzICkge1xuXHQvLyBPbmx5IGZvciBhZG1pbiB1c2Vyc1xuXHQkdXNlciA9IGdldF91c2VyZGF0YSggJHVzZXJfaWQgKTtcblx0aWYgKCAhICR1c2VyIHx8ICEgaW5fYXJyYXkoICdhZG1pbmlzdHJhdG9yJywgJHVzZXItPnJvbGVzLCB0cnVlICkgKSB7XG5cdFx0cmV0dXJuICRjYXBzO1xuXHR9XG5cblx0Ly8gT3ZlcnJpZGUgU2l0ZSBLaXQgbWV0YSBjYXBhYmlsaXRpZXMgdG8gYWxsb3cgYWNjZXNzXG5cdCRhbGxvd2VkX2NhcHMgPSBhcnJheShcblx0XHQnZ29vZ2xlc2l0ZWtpdF92aWV3X2Rhc2hib2FyZCcsXG5cdFx0J2dvb2dsZXNpdGVraXRfdmlld19hdXRoZW50aWNhdGVkX2Rhc2hib2FyZCcsXG5cdFx0J2dvb2dsZXNpdGVraXRfdmlld19zcGxhc2gnLFxuXHRcdCdnb29nbGVzaXRla2l0X21hbmFnZV9vcHRpb25zJyxcblx0XHQnZ29vZ2xlc2l0ZWtpdF92aWV3X3Bvc3RzX2luc2lnaHRzJyxcblx0XHQnZ29vZ2xlc2l0ZWtpdF9zZXR1cCcsXG5cdFx0J2dvb2dsZXNpdGVraXRfYXV0aGVudGljYXRlJyxcblx0KTtcblxuXHRpZiAoIGluX2FycmF5KCAkY2FwLCAkYWxsb3dlZF9jYXBzLCB0cnVlICkgKSB7XG5cdFx0cmV0dXJuIGFycmF5KCk7XG5cdH1cblxuXHRyZXR1cm4gJGNhcHM7XG59LCA5OTksIDQgKTtcblxuLy8gUHJvdmlkZSBtb2NrIGNyZWRlbnRpYWxzXG5hZGRfZmlsdGVyKCAnb3B0aW9uX2dvb2dsZXNpdGVraXRfY3JlZGVudGlhbHMnLCBmdW5jdGlvbiggJHZhbHVlICkge1xuXHRpZiAoIGVtcHR5KCAkdmFsdWUgKSApIHtcblx0XHRyZXR1cm4gYXJyYXkoXG5cdFx0XHQnb2F1dGgyX2NsaWVudF9pZCcgPT4gJ3ByZXZpZXctY2xpZW50LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tJyxcblx0XHRcdCdvYXV0aDJfY2xpZW50X3NlY3JldCcgPT4gJ3ByZXZpZXctc2VjcmV0LWtleScsXG5cdFx0KTtcblx0fVxuXHRyZXR1cm4gJHZhbHVlO1xufSwgMSApO1xuXG4vLyBQcm92aWRlIG1vY2sgU2VhcmNoIENvbnNvbGUgcHJvcGVydHkgKHJlcXVpcmVkIGZvciBzZXR1cCBjb21wbGV0aW9uKVxuYWRkX2ZpbHRlciggJ29wdGlvbl9nb29nbGVzaXRla2l0X3NlYXJjaC1jb25zb2xlX3NldHRpbmdzJywgZnVuY3Rpb24oICR2YWx1ZSApIHtcblx0aWYgKCBlbXB0eSggJHZhbHVlICkgfHwgISBpc3NldCggJHZhbHVlWydwcm9wZXJ0eUlEJ10gKSApIHtcblx0XHRyZXR1cm4gYXJyYXkoXG5cdFx0XHQncHJvcGVydHlJRCcgPT4gJ3NjLWRvbWFpbjonIC4gcGFyc2VfdXJsKCBob21lX3VybCgpLCBQSFBfVVJMX0hPU1QgKSxcblx0XHRcdCdvd25lcklEJyA9PiAxLFxuXHRcdCk7XG5cdH1cblx0cmV0dXJuICR2YWx1ZTtcbn0sIDEgKTtcblxuLy8gU2V0IG93bmVyIElEIHRvIGN1cnJlbnQgdXNlclxuYWRkX2ZpbHRlciggJ29wdGlvbl9nb29nbGVzaXRla2l0X293bmVyX2lkJywgZnVuY3Rpb24oICR2YWx1ZSApIHtcblx0aWYgKCBlbXB0eSggJHZhbHVlICkgKSB7XG5cdFx0JGN1cnJlbnRfdXNlciA9IHdwX2dldF9jdXJyZW50X3VzZXIoKTtcblx0XHRyZXR1cm4gJGN1cnJlbnRfdXNlci0+SUQ7XG5cdH1cblx0cmV0dXJuICR2YWx1ZTtcbn0sIDEgKTtcblxuLy8gU2V0IGhhcyBjb25uZWN0ZWQgYWRtaW5zXG5hZGRfZmlsdGVyKCAnb3B0aW9uX2dvb2dsZXNpdGVraXRfaGFzX2Nvbm5lY3RlZF9hZG1pbnMnLCBmdW5jdGlvbiggJHZhbHVlICkge1xuXHRyZXR1cm4gZW1wdHkoICR2YWx1ZSApID8gMSA6ICR2YWx1ZTtcbn0sIDEgKTtcblxuLy8gTW9jayB1c2VyIGFzIGF1dGhlbnRpY2F0ZWQgYW5kIHZlcmlmaWVkXG5hZGRfZmlsdGVyKCAnZ2V0X3VzZXJfbWV0YWRhdGEnLCBmdW5jdGlvbiggJHZhbHVlLCAkb2JqZWN0X2lkLCAkbWV0YV9rZXksICRzaW5nbGUgKSB7XG5cdC8vIE9ubHkgcHJvY2VzcyBTaXRlIEtpdCBtZXRhIGtleXMgdG8gYXZvaWQgaW5maW5pdGUgbG9vcHNcblx0aWYgKCBzdHJwb3MoICRtZXRhX2tleSwgJ2dvb2dsZXNpdGVraXQnICkgPT09IGZhbHNlICkge1xuXHRcdHJldHVybiBudWxsO1xuXHR9XG5cblx0Ly8gT25seSBmb3IgYWRtaW4gdXNlcnMgLSBjaGVjayBpZiB0aGlzIHVzZXIgaXMgYW4gYWRtaW5cblx0JGN1cnJlbnRfdXNlciA9IHdwX2dldF9jdXJyZW50X3VzZXIoKTtcblx0aWYgKCAkb2JqZWN0X2lkICE9PSAkY3VycmVudF91c2VyLT5JRCB8fCAhIGluX2FycmF5KCAnYWRtaW5pc3RyYXRvcicsICRjdXJyZW50X3VzZXItPnJvbGVzLCB0cnVlICkgKSB7XG5cdFx0cmV0dXJuIG51bGw7XG5cdH1cblxuXHQvLyBTdHJpcCB3cF8gcHJlZml4IGlmIHByZXNlbnRcblx0JGNsZWFuX2tleSA9IHN0cl9yZXBsYWNlKCAnd3BfJywgJycsICRtZXRhX2tleSApO1xuXG5cdCRtb2NrX21ldGEgPSBhcnJheShcblx0XHQnZ29vZ2xlc2l0ZWtpdF9zaXRlX3ZlcmlmaWVkX21ldGEnID0+ICcxJyxcblx0XHQnZ29vZ2xlc2l0ZWtpdF9hY2Nlc3NfdG9rZW4nID0+ICd5YTI5Lm1vY2tfYWNjZXNzX3Rva2VuJyxcblx0XHQnZ29vZ2xlc2l0ZWtpdF9hY2Nlc3NfdG9rZW5fZXhwaXJlc19pbicgPT4gMzYwMCxcblx0XHQnZ29vZ2xlc2l0ZWtpdF9hY2Nlc3NfdG9rZW5fY3JlYXRlZF9hdCcgPT4gdGltZSgpLFxuXHRcdCdnb29nbGVzaXRla2l0X3JlZnJlc2hfdG9rZW4nID0+ICcxLy9tb2NrX3JlZnJlc2hfdG9rZW4nLFxuXHRcdCdnb29nbGVzaXRla2l0X2F1dGhfc2NvcGVzJyA9PiBhcnJheShcblx0XHRcdCdvcGVuaWQnLFxuXHRcdFx0J2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXNlcmluZm8ucHJvZmlsZScsXG5cdFx0XHQnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC91c2VyaW5mby5lbWFpbCcsXG5cdFx0XHQnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9zaXRldmVyaWZpY2F0aW9uJyxcblx0XHRcdCdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3dlYm1hc3RlcnMnLFxuXHRcdCksXG5cdFx0J2dvb2dsZXNpdGVraXRwZXJzaXN0ZW50X2luaXRpYWxfdmVyc2lvbicgPT4gJzEuMC4wJyxcblx0XHQnZ29vZ2xlc2l0ZWtpdHBlcnNpc3RlbnRfZGlzbWlzc2VkX2l0ZW1zJyA9PiBhcnJheSgpLFxuXHQpO1xuXG5cdC8vIEhhbmRsZSBwcm9maWxlIHNwZWNpYWxseSAtIG11c3QgYmUgd3JhcHBlZCBpbiBhcnJheSB3aXRoIG51bWVyaWMgaW5kZXhcblx0aWYgKCAkY2xlYW5fa2V5ID09PSAnZ29vZ2xlc2l0ZWtpdF9wcm9maWxlJyApIHtcblx0XHQkcHJvZmlsZSA9IGFycmF5KFxuXHRcdFx0J2VtYWlsJyA9PiAnYWRtaW5AZXhhbXBsZS5jb20nLFxuXHRcdFx0J3Bob3RvJyA9PiAnJyxcblx0XHRcdCdmdWxsX25hbWUnID0+ICdBZG1pbiBVc2VyJyxcblx0XHQpO1xuXHRcdC8vIEFsd2F5cyByZXR1cm4gd3JhcHBlZCBpbiBbMCA9PiB2YWx1ZV0gZm9ybWF0XG5cdFx0Ly8gV29yZFByZXNzIHdpbGwgZXh0cmFjdCBbMF0gaWYgJHNpbmdsZSA9IHRydWVcblx0XHRyZXR1cm4gYXJyYXkoIDAgPT4gJHByb2ZpbGUgKTtcblx0fVxuXG5cdGlmICggaXNzZXQoICRtb2NrX21ldGFbICRjbGVhbl9rZXkgXSApICkge1xuXHRcdC8vIEZvciBhcnJheXMgbGlrZSBkaXNtaXNzZWRfaXRlbXMsIHdyYXAgaW4gWzAgPT4gdmFsdWVdXG5cdFx0Ly8gRm9yIHNjYWxhciB2YWx1ZXMsIFdvcmRQcmVzcyBleHBlY3RzIFswID0+IHZhbHVlXSBmb3JtYXQgdG9vXG5cdFx0JHZhbHVlID0gJG1vY2tfbWV0YVsgJGNsZWFuX2tleSBdO1xuXHRcdHJldHVybiBhcnJheSggMCA9PiAkdmFsdWUgKTtcblx0fVxuXG5cdC8vIFJldHVybiBudWxsIHRvIGFsbG93IFdvcmRQcmVzcyB0byBjb250aW51ZSB3aXRoIGRlZmF1bHQgYmVoYXZpb3Jcblx0cmV0dXJuIG51bGw7XG59LCAxLCA0ICk7XG5cbi8vIE1vY2sgUkVTVCBBUEkgcmVzcG9uc2VzIC0gdXNlIHJlc3RfcHJlX2Rpc3BhdGNoIHRvIHByZXZlbnQgYWN0dWFsIEFQSSBjYWxsc1xuYWRkX2ZpbHRlciggJ3Jlc3RfcHJlX2Rpc3BhdGNoJywgZnVuY3Rpb24oICRyZXN1bHQsICRzZXJ2ZXIsICRyZXF1ZXN0ICkge1xuXHQkcm91dGUgPSAkcmVxdWVzdC0+Z2V0X3JvdXRlKCk7XG5cblx0Ly8gTW9jayBTZWFyY2ggQ29uc29sZSBkYXRhIC0gaW50ZXJjZXB0IGJlZm9yZSBBUEkgY2FsbFxuXHRpZiAoIHN0cnBvcyggJHJvdXRlLCAnL2dvb2dsZS1zaXRlLWtpdC92MS9tb2R1bGVzL3NlYXJjaC1jb25zb2xlL2RhdGEvJyApICE9PSBmYWxzZSApIHtcblx0XHQvLyBNb2NrIHNlYXJjaCBhbmFseXRpY3MgZGF0YSB3aXRoIHdlZWtlbmQgZmx1Y3R1YXRpb25cblx0XHRpZiAoIHN0cnBvcyggJHJvdXRlLCAnc2VhcmNoYW5hbHl0aWNzJyApICE9PSBmYWxzZSApIHtcblx0XHRcdCRtb2NrX2RhdGEgPSBhcnJheSgpO1xuXHRcdFx0JHN0YXJ0X2RhdGUgPSBzdHJ0b3RpbWUoICctMjcgZGF5cycgKTtcblxuXHRcdFx0Zm9yICggJGkgPSAwOyAkaSA8IDI4OyAkaSsrICkge1xuXHRcdFx0XHQkZGF0ZSA9IHN0cnRvdGltZSggXCIreyRpfSBkYXlzXCIsICRzdGFydF9kYXRlICk7XG5cdFx0XHRcdCRkYXlfb2Zfd2VlayA9IChpbnQpIGRhdGUoICd3JywgJGRhdGUgKTtcblx0XHRcdFx0JGlzX3dlZWtlbmQgPSAoICRkYXlfb2Zfd2VlayA9PT0gMCB8fCAkZGF5X29mX3dlZWsgPT09IDYgKTtcblxuXHRcdFx0XHQkYmFzZV9jbGlja3MgPSAxNDUgKyAoICRpICogMi41ICk7XG5cdFx0XHRcdCRiYXNlX2ltcHJlc3Npb25zID0gMzQwMCArICggJGkgKiA0MCApO1xuXG5cdFx0XHRcdGlmICggJGlzX3dlZWtlbmQgKSB7XG5cdFx0XHRcdFx0JGNsaWNrcyA9IChpbnQpICggJGJhc2VfY2xpY2tzICogMC42NSApO1xuXHRcdFx0XHRcdCRpbXByZXNzaW9ucyA9IChpbnQpICggJGJhc2VfaW1wcmVzc2lvbnMgKiAwLjcgKTtcblx0XHRcdFx0XHQkcG9zaXRpb24gPSAxMS41ICsgKCByYW5kKCAwLCA2ICkgLyAxMCApO1xuXHRcdFx0XHR9IGVsc2Uge1xuXHRcdFx0XHRcdCRjbGlja3MgPSAoaW50KSAoICRiYXNlX2NsaWNrcyArIHJhbmQoIC0xNSwgMTUgKSApO1xuXHRcdFx0XHRcdCRpbXByZXNzaW9ucyA9IChpbnQpICggJGJhc2VfaW1wcmVzc2lvbnMgKyByYW5kKCAtMjAwLCAyMDAgKSApO1xuXHRcdFx0XHRcdCRwb3NpdGlvbiA9IDEwLjAgKyAoIHJhbmQoIDAsIDggKSAvIDEwICk7XG5cdFx0XHRcdH1cblxuXHRcdFx0XHQkbW9ja19kYXRhW10gPSBhcnJheShcblx0XHRcdFx0XHQna2V5cycgPT4gYXJyYXkoIGRhdGUoICdZLW0tZCcsICRkYXRlICkgKSxcblx0XHRcdFx0XHQnY2xpY2tzJyA9PiAkY2xpY2tzLFxuXHRcdFx0XHRcdCdpbXByZXNzaW9ucycgPT4gJGltcHJlc3Npb25zLFxuXHRcdFx0XHRcdCdjdHInID0+IHJvdW5kKCAkY2xpY2tzIC8gJGltcHJlc3Npb25zLCAzICksXG5cdFx0XHRcdFx0J3Bvc2l0aW9uJyA9PiAkcG9zaXRpb24sXG5cdFx0XHRcdCk7XG5cdFx0XHR9XG5cblx0XHRcdHJldHVybiByZXN0X2Vuc3VyZV9yZXNwb25zZSggJG1vY2tfZGF0YSApO1xuXHRcdH1cblx0fVxuXG5cdC8vIE1vY2sgUGFnZVNwZWVkIEluc2lnaHRzIGRhdGFcblx0aWYgKCBzdHJwb3MoICRyb3V0ZSwgJy9nb29nbGUtc2l0ZS1raXQvdjEvbW9kdWxlcy9wYWdlc3BlZWQtaW5zaWdodHMvZGF0YS8nICkgIT09IGZhbHNlICkge1xuXHRcdHJldHVybiByZXN0X2Vuc3VyZV9yZXNwb25zZSggYXJyYXkoXG5cdFx0XHQnbG9hZGluZ0V4cGVyaWVuY2UnID0+IGFycmF5KFxuXHRcdFx0XHQnbWV0cmljcycgPT4gYXJyYXkoXG5cdFx0XHRcdFx0J0NVTVVMQVRJVkVfTEFZT1VUX1NISUZUX1NDT1JFJyA9PiBhcnJheSggJ3BlcmNlbnRpbGUnID0+IDAuMDUsICdjYXRlZ29yeScgPT4gJ0ZBU1QnICksXG5cdFx0XHRcdFx0J0ZJUlNUX0NPTlRFTlRGVUxfUEFJTlRfTVMnID0+IGFycmF5KCAncGVyY2VudGlsZScgPT4gMTgwMCwgJ2NhdGVnb3J5JyA9PiAnRkFTVCcgKSxcblx0XHRcdFx0XHQnRklSU1RfSU5QVVRfREVMQVlfTVMnID0+IGFycmF5KCAncGVyY2VudGlsZScgPT4gMTMsICdjYXRlZ29yeScgPT4gJ0ZBU1QnICksXG5cdFx0XHRcdFx0J0xBUkdFU1RfQ09OVEVOVEZVTF9QQUlOVF9NUycgPT4gYXJyYXkoICdwZXJjZW50aWxlJyA9PiAyNDAwLCAnY2F0ZWdvcnknID0+ICdGQVNUJyApLFxuXHRcdFx0XHRcdCdJTlRFUkFDVElPTl9UT19ORVhUX1BBSU5UJyA9PiBhcnJheSggJ3BlcmNlbnRpbGUnID0+IDE1MCwgJ2NhdGVnb3J5JyA9PiAnRkFTVCcgKSxcblx0XHRcdFx0KSxcblx0XHRcdFx0J292ZXJhbGxfY2F0ZWdvcnknID0+ICdGQVNUJyxcblx0XHRcdCksXG5cdFx0XHQnbGlnaHRob3VzZVJlc3VsdCcgPT4gYXJyYXkoXG5cdFx0XHRcdCdjYXRlZ29yaWVzJyA9PiBhcnJheShcblx0XHRcdFx0XHQncGVyZm9ybWFuY2UnID0+IGFycmF5KCAnc2NvcmUnID0+IDAuOTIgKSxcblx0XHRcdFx0XHQnYWNjZXNzaWJpbGl0eScgPT4gYXJyYXkoICdzY29yZScgPT4gMC45NSApLFxuXHRcdFx0XHRcdCdiZXN0LXByYWN0aWNlcycgPT4gYXJyYXkoICdzY29yZScgPT4gMC44OCApLFxuXHRcdFx0XHRcdCdzZW8nID0+IGFycmF5KCAnc2NvcmUnID0+IDAuOTcgKSxcblx0XHRcdFx0KSxcblx0XHRcdFx0J2F1ZGl0cycgPT4gYXJyYXkoXG5cdFx0XHRcdFx0J2ZpcnN0LWNvbnRlbnRmdWwtcGFpbnQnID0+IGFycmF5KCAnZGlzcGxheVZhbHVlJyA9PiAnMS44IHMnLCAnc2NvcmUnID0+IDAuOTUgKSxcblx0XHRcdFx0XHQnbGFyZ2VzdC1jb250ZW50ZnVsLXBhaW50JyA9PiBhcnJheSggJ2Rpc3BsYXlWYWx1ZScgPT4gJzIuNCBzJywgJ3Njb3JlJyA9PiAwLjkwICksXG5cdFx0XHRcdFx0J3RvdGFsLWJsb2NraW5nLXRpbWUnID0+IGFycmF5KCAnZGlzcGxheVZhbHVlJyA9PiAnMTUwIG1zJywgJ3Njb3JlJyA9PiAwLjkyICksXG5cdFx0XHRcdFx0J2N1bXVsYXRpdmUtbGF5b3V0LXNoaWZ0JyA9PiBhcnJheSggJ2Rpc3BsYXlWYWx1ZScgPT4gJzAuMDUnLCAnc2NvcmUnID0+IDAuOTcgKSxcblx0XHRcdFx0XHQnc3BlZWQtaW5kZXgnID0+IGFycmF5KCAnZGlzcGxheVZhbHVlJyA9PiAnMy4yIHMnLCAnc2NvcmUnID0+IDAuODkgKSxcblx0XHRcdFx0KSxcblx0XHRcdCksXG5cdFx0KSApO1xuXHR9XG5cblx0cmV0dXJuICRyZXN1bHQ7XG59LCAxMCwgMyApO1xuXG4vLyBNb2NrIFJFU1QgQVBJIHJlc3BvbnNlcyAtIHVzZSByZXN0X3Bvc3RfZGlzcGF0Y2ggdG8gb3ZlcnJpZGUgYWN0dWFsIHJlc3BvbnNlc1xuYWRkX2ZpbHRlciggJ3Jlc3RfcG9zdF9kaXNwYXRjaCcsIGZ1bmN0aW9uKCAkcmVzcG9uc2UsICRzZXJ2ZXIsICRyZXF1ZXN0ICkge1xuXHQkcm91dGUgPSAkcmVxdWVzdC0+Z2V0X3JvdXRlKCk7XG5cblx0Ly8gTW9jayBjb25uZWN0aW9uIHN0YXR1c1xuXHRpZiAoICRyb3V0ZSA9PT0gJy9nb29nbGUtc2l0ZS1raXQvdjEvY29yZS9zaXRlL2RhdGEvY29ubmVjdGlvbicgKSB7XG5cdFx0JGN1cnJlbnRfdXNlciA9IHdwX2dldF9jdXJyZW50X3VzZXIoKTtcblx0XHQkZGF0YSA9IGFycmF5KFxuXHRcdFx0J2Nvbm5lY3RlZCcgPT4gdHJ1ZSxcblx0XHRcdCdyZXNldHRhYmxlJyA9PiBmYWxzZSxcblx0XHRcdCdzZXR1cENvbXBsZXRlZCcgPT4gdHJ1ZSxcblx0XHRcdCdoYXNDb25uZWN0ZWRBZG1pbnMnID0+IHRydWUsXG5cdFx0XHQnaGFzTXVsdGlwbGVBZG1pbnMnID0+IGZhbHNlLFxuXHRcdFx0J293bmVySUQnID0+ICRjdXJyZW50X3VzZXItPklELFxuXHRcdCk7XG5cdFx0JHJlc3BvbnNlLT5zZXRfZGF0YSggJGRhdGEgKTtcblx0XHRyZXR1cm4gJHJlc3BvbnNlO1xuXHR9XG5cblx0Ly8gTW9jayB1c2VyIGF1dGhlbnRpY2F0aW9uIHN0YXR1c1xuXHRpZiAoICRyb3V0ZSA9PT0gJy9nb29nbGUtc2l0ZS1raXQvdjEvY29yZS91c2VyL2RhdGEvYXV0aGVudGljYXRpb24nICkge1xuXHRcdCR1c2VyID0gd3BfZ2V0X2N1cnJlbnRfdXNlcigpO1xuXHRcdGlmICggJHVzZXIgJiYgaW5fYXJyYXkoICdhZG1pbmlzdHJhdG9yJywgJHVzZXItPnJvbGVzLCB0cnVlICkgKSB7XG5cdFx0XHQkZGF0YSA9IGFycmF5KFxuXHRcdFx0XHQnYXV0aGVudGljYXRlZCcgPT4gdHJ1ZSxcblx0XHRcdFx0J3JlcXVpcmVkU2NvcGVzJyA9PiBhcnJheSgpLFxuXHRcdFx0XHQnZ3JhbnRlZFNjb3BlcycgPT4gYXJyYXkoXG5cdFx0XHRcdFx0J29wZW5pZCcsXG5cdFx0XHRcdFx0J2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXNlcmluZm8ucHJvZmlsZScsXG5cdFx0XHRcdFx0J2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXNlcmluZm8uZW1haWwnLFxuXHRcdFx0XHRcdCdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3NpdGV2ZXJpZmljYXRpb24nLFxuXHRcdFx0XHRcdCdodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL3dlYm1hc3RlcnMnLFxuXHRcdFx0XHQpLFxuXHRcdFx0XHQndW5zYXRpc2ZpZWRTY29wZXMnID0+IGFycmF5KCksXG5cdFx0XHRcdCduZWVkc1JlYXV0aGVudGljYXRpb24nID0+IGZhbHNlLFxuXHRcdFx0XHQnZGlzY29ubmVjdGVkUmVhc29uJyA9PiAnJyxcblx0XHRcdFx0J2Nvbm5lY3RlZFByb3h5VVJMJyA9PiBob21lX3VybCgpLFxuXHRcdFx0KTtcblx0XHRcdCRyZXNwb25zZS0+c2V0X2RhdGEoICRkYXRhICk7XG5cdFx0XHRyZXR1cm4gJHJlc3BvbnNlO1xuXHRcdH1cblx0fVxuXG5cdC8vIE1vY2sgdXNlciBwZXJtaXNzaW9uc1xuXHRpZiAoICRyb3V0ZSA9PT0gJy9nb29nbGUtc2l0ZS1raXQvdjEvY29yZS91c2VyL2RhdGEvcGVybWlzc2lvbnMnICkge1xuXHRcdCR1c2VyID0gd3BfZ2V0X2N1cnJlbnRfdXNlcigpO1xuXHRcdGlmICggJHVzZXIgJiYgaW5fYXJyYXkoICdhZG1pbmlzdHJhdG9yJywgJHVzZXItPnJvbGVzLCB0cnVlICkgKSB7XG5cdFx0XHQkZGF0YSA9ICRyZXNwb25zZS0+Z2V0X2RhdGEoKTtcblx0XHRcdC8vIE92ZXJyaWRlIHNwZWNpZmljIHBlcm1pc3Npb25zXG5cdFx0XHQkZGF0YVsnZ29vZ2xlc2l0ZWtpdF92aWV3X2Rhc2hib2FyZCddID0gdHJ1ZTtcblx0XHRcdCRkYXRhWydnb29nbGVzaXRla2l0X3ZpZXdfYXV0aGVudGljYXRlZF9kYXNoYm9hcmQnXSA9IHRydWU7XG5cdFx0XHQkZGF0YVsnZ29vZ2xlc2l0ZWtpdF9tYW5hZ2Vfb3B0aW9ucyddID0gdHJ1ZTtcblx0XHRcdCRyZXNwb25zZS0+c2V0X2RhdGEoICRkYXRhICk7XG5cdFx0XHRyZXR1cm4gJHJlc3BvbnNlO1xuXHRcdH1cblx0fVxuXG5cdHJldHVybiAkcmVzcG9uc2U7XG59LCA5OTksIDMgKTtcbiJ9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9Z29vZ2xlc2l0ZWtpdC1kYXNoYm9hcmQifX1dLCJ0aXRsZSI6IlBsdWdpbiAoZ29vZ2xlIHNpdGUga2l0KSArIG11UGx1Z2luLCBzZXRMYW5kaW5nUGFnZSJ9"
+  },
+  {
+    "name": "Yoast Duplicate Post",
+    "slug": "duplicate-post",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/duplicate-post/blueprint.json"
+  },
+  {
+    "name": "Really Simple Security \u2013 Simple and Performant Security (formerly Really Simple SSL)",
+    "slug": "really-simple-ssl",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/really-simple-ssl/blueprint.json"
+  },
+  {
+    "name": "WP Mail SMTP by WPForms \u2013 The Most Popular SMTP and Email Log Plugin",
+    "slug": "wp-mail-smtp",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dwLW1haWwtc210cC8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoiYWRkRmlsdGVyIiwidmFycyI6eyJmaWx0ZXIiOiJ3cF9tYWlsX3NtdHBfYWRtaW5fc2V0dXBfd2l6YXJkX2xvYWRfd2l6YXJkIiwiY29kZSI6IidfX3JldHVybl9mYWxzZSciLCJwcmlvcml0eSI6IjEwIn19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT13cC1tYWlsLXNtdHAifX1dfQ=="
+  },
+  {
+    "name": "All in One SEO \u2013 Powerful SEO Plugin to Boost SEO Rankings & Increase Traffic",
+    "slug": "all-in-one-seo-pack",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2FsbC1pbi1vbmUtc2VvLXBhY2svIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldFNpdGVPcHRpb24iLCJ2YXJzIjp7Im5hbWUiOiJhaW9zZW9fYWN0aXZhdGlvbl9yZWRpcmVjdCIsInZhbHVlIjoiX19yZXR1cm5fdHJ1ZSJ9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9YWlvc2VvIn19XX0="
+  },
+  {
+    "name": "Duplicate Page",
+    "slug": "duplicate-page",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/?step[0]=installPlugin&url[0]=wordpress.org/plugins/duplicate-page/&step[1]=setLandingPage&landingPage[1]=/wp-admin/options-general.php?page=duplicate_page_settings"
+  },
+  {
+    "name": "Rank Math SEO \u2013 AI SEO Tools to Dominate SEO Rankings",
+    "slug": "seo-by-rank-math",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3Nlby1ieS1yYW5rLW1hdGgvIiwicHJzIjpmYWxzZX19LHsic3RlcCI6ImRlZmluZVdwQ29uZmlnQ29uc3QiLCJ2YXJzIjp7Im5hbWUiOiJSQU5LX01BVEhfUkVHSVNUUkFUSU9OX1NLSVAiLCJ2YWx1ZSI6InRydWUifX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9wYWdlPXJhbmstbWF0aCJ9fV19"
+  },
+  {
+    "name": "UpdraftPlus: WP Backup & Migration Plugin",
+    "slug": "updraftplus",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/?step[0]=installPlugin&url[0]=wordpress.org/plugins/updraftplus/&step[1]=setLandingPage&landingPage[1]=/wp-admin/options-general.php?page=updraftplus"
+  },
+  {
+    "name": "WordPress Importer",
+    "slug": "wordpress-importer",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dvcmRwcmVzcy1pbXBvcnRlci8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9pbXBvcnQ9d29yZHByZXNzIn19XX0="
+  },
+  {
+    "name": "Starter Templates \u2013 AI-Powered Templates for Elementor & Gutenberg",
+    "slug": "astra-sites",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6ImFzdHJhLXNpdGVzIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi90aGVtZXMucGhwP3BhZ2U9c3RhcnRlci10ZW1wbGF0ZXMifX1dfQ=="
+  },
+  {
+    "name": "Classic Widgets",
+    "slug": "classic-widgets",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/classic-widgets/blueprint.json"
+  },
+  {
+    "name": "Essential Addons for Elementor \u2013 Popular Elementor Templates & Widgets",
+    "slug": "essential-addons-for-elementor-lite",
+    "assigned": "Berislav Grgicak",
+    "url": "https://raw.githubusercontent.com/bgrgicak/essential-addons-for-elementor-lite/08b988d440f0544ce4224fe041b9af3563b2176e/.wordpress-org/blueprints/blueprint.json"
+  },
+  {
+    "name": "MonsterInsights \u2013 Google Analytics Dashboard for WordPress (Website Stats Made Easy)",
+    "slug": "google-analytics-for-wordpress",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Ultimate Addons for Elementor (Formerly Elementor Header & Footer Builder)",
+    "slug": "header-footer-elementor",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6ImVsZW1lbnRvciIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJpbnN0YWxsUGx1Z2luIiwidmFycyI6eyJ1cmwiOiJoZWFkZXItZm9vdGVyLWVsZW1lbnRvciIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJpbnN0YWxsVGhlbWUiLCJ2YXJzIjp7InVybCI6ImhlbGxvLWJpeiIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjpbImVsZW1lbnRvcl9vbmJvYXJkZWQiLCJoZmVfb25ib2FyZGluZ190cmlnZ2VyZWQiXSwidmFsdWUiOlsidHJ1ZSIsInllcyJdfX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9wYWdlPWhmZSNkYXNoYm9hcmQifX1dfQ=="
+  },
+  {
+    "name": "WPCode \u2013 Insert Headers and Footers + Custom Code Snippets \u2013 WordPress Code Manager",
+    "slug": "insert-headers-and-footers",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Limit Login Attempts Reloaded \u2013 Login Security, Brute Force Protection, Firewall",
+    "slug": "limit-login-attempts-reloaded",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "MC4WP: Mailchimp for WordPress",
+    "slug": "mailchimp-for-wp",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/mailchimp-for-wp/blueprint.json"
+  },
+  {
+    "name": "Redirection",
+    "slug": "redirection",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Advanced Editor Tools",
+    "slug": "tinymce-advanced",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "All-In-One Security (AIOS) \u2013 Security and Firewall",
+    "slug": "all-in-one-wp-security-and-firewall",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2FsbC1pbi1vbmUtd3Atc2VjdXJpdHktYW5kLWZpcmV3YWxsLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9YWlvd3BzZWMifX1dfQ=="
+  },
+  {
+    "name": "Autoptimize",
+    "slug": "autoptimize",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2F1dG9wdGltaXplLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vb3B0aW9ucy1nZW5lcmFsLnBocD9wYWdlPWF1dG9wdGltaXplIn19XX0="
+  },
+  {
+    "name": "Code Snippets",
+    "slug": "code-snippets",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/code-snippets/blueprint.json"
+  },
+  {
+    "name": "Complianz \u2013 GDPR/CCPA Cookie Consent",
+    "slug": "complianz-gdpr",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "CookieYes \u2013 Cookie Banner for Cookie Consent (Easy to setup GDPR/CCPA Compliant Cookie Notice)",
+    "slug": "cookie-law-info",
+    "assigned": "Berislav Grgicak",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/cookie-law-info/blueprint.json"
+  },
+  {
+    "name": "Cookie Notice & Compliance for GDPR / CCPA",
+    "slug": "cookie-notice",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Custom Post Type UI",
+    "slug": "custom-post-type-ui",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/custom-post-type-ui/blueprint.json"
+  },
+  {
+    "name": "Disable Comments \u2013 Remove Comments & Stop Spam [Multi-Site Support]",
+    "slug": "disable-comments",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Duplicator \u2013 Backups & Migration Plugin \u2013 Cloud Backups, Scheduled Backups, & More",
+    "slug": "duplicator",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "ElementsKit Elementor Addons and Templates",
+    "slug": "elementskit-lite",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6ImVsZW1lbnRvciIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJpbnN0YWxsUGx1Z2luIiwidmFycyI6eyJ1cmwiOiJlbGVtZW50c2tpdC1saXRlIiwicHJzIjpmYWxzZX19LHsic3RlcCI6Imluc3RhbGxUaGVtZSIsInZhcnMiOnsidXJsIjoiaGVsbG8tYml6IiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldFNpdGVPcHRpb24iLCJ2YXJzIjp7Im5hbWUiOlsiZWxlbWVudG9yX29uYm9hcmRlZCIsIiJdLCJ2YWx1ZSI6WyJ0cnVlIiwiIl19fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9ZWxlbWVudHNraXQmZWtpdC1vbmJvYXJkLXN0ZXBzPWxvYWRlZCJ9fV19"
+  },
+  {
+    "name": "EWWW Image Optimizer",
+    "slug": "ewww-image-optimizer",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "XML Sitemap Generator for Google",
+    "slug": "google-sitemap-generator",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Image Optimizer \u2013 Optimize Images and Convert to WebP or AVIF",
+    "slug": "image-optimization",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Loco Translate",
+    "slug": "loco-translate",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/loco-translate/blueprint.json"
+  },
+  {
+    "name": "Loginizer",
+    "slug": "loginizer",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2xvZ2luaXplci8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9wYWdlPWxvZ2luaXplciJ9fV19"
+  },
+  {
+    "name": "Maintenance",
+    "slug": "maintenance",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL21haW50ZW5hbmNlLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvP21haW50ZW5hbmNlLXByZXZpZXcifX1dfQ=="
+  },
+  {
+    "name": "One Click Demo Import",
+    "slug": "one-click-demo-import",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Redux Framework",
+    "slug": "redux-framework",
+    "assigned": "Adam Zielinski",
+    "url": "https://gist.github.com/adamziel/c5762e66806fef777d38fb48a0d719b8"
+  },
+  {
+    "name": "Safe SVG",
+    "slug": "safe-svg",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/safe-svg/blueprint.json"
+  },
+  {
+    "name": "SVG Support",
+    "slug": "svg-support",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/svg-support/blueprint.json"
+  },
+  {
+    "name": "WP Fastest Cache",
+    "slug": "wp-fastest-cache",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-fastest-cache/blueprint.json"
+  },
+  {
+    "name": "File Manager",
+    "slug": "wp-file-manager",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/?step[0]=muPlugin&name[0]=wp-file-manager---playground-compatibility&code[0]=<?php /**  * Plugin Name: WP File Manager - Playground Compatibility  * Description: Fixes WP File Manager for WordPress Playground by blocking procExec()  * Version: 1.0  */  // Define constants (values don't matter since procExec is disabled) foreach (array('TAR', 'GZIP', 'BZIP2', 'XZ', 'ZIP', 'UNZIP', 'RAR', 'UNRAR', '7Z', 'CONVERT', 'IDENTIFY', 'EXIFTRAN', 'JPEGTRAN', 'FFMPEG') as $tool) {     if (!defined(\"ELFINDER_{$tool}_PATH\")) define(\"ELFINDER_{$tool}_PATH\", ''); } if (!defined('ELFINDER_IMAGEMAGICK_PS')) define('ELFINDER_IMAGEMAGICK_PS', false);  add_action('wp_ajax_mk_file_folder_manager', function() {     remove_all_actions('wp_ajax_mk_file_folder_manager');      $nonce = sanitize_text_field($_REQUEST['_wpnonce']);     if (!wp_verify_nonce($nonce, 'wp-file-manager')) {         wp_die('Security check failed');     }      require_once WP_CONTENT_DIR . '/plugins/wp-file-manager/lib/php/autoload.php';      class elFinderVolumeLocalFileSystem_Playground extends elFinderVolumeLocalFileSystem {         protected function procExec($command, &$output = '', &$return_var = -1, &$error_output = '', $cwd = null) {             $output = '';             $error_output = '';             $return_var = 1;             return 1;         }     }      $settings = get_option('wp_file_manager_settings');     $path = isset($settings['public_path']) && !empty($settings['public_path']) ? $settings['public_path'] : ABSPATH;      $mk_restrictions = array(         array('pattern' => '/.tmb/', 'read' => false, 'write' => false, 'hidden' => true, 'locked' => false),         array('pattern' => '/.quarantine/', 'read' => false, 'write' => false, 'hidden' => true, 'locked' => false),     );      $path_url = is_multisite() ? network_home_url() : site_url();     if (isset($settings['public_path']) && !empty($settings['public_path'])) {         $absolute_path = str_replace('\\\\', '/', ABSPATH);         $access_folder = substr($settings['public_path'], strlen($absolute_path));         $path_url .= '/' . ltrim($access_folder, '/');     }      $opts = array(         'debug' => false,         'roots' => array(             array(                 'driver' => 'LocalFileSystem_Playground',                 'path' => $path,                 'URL' => $path_url,                 'uploadDeny' => array(),                 'uploadAllow' => array('image', 'text/plain'),                 'uploadOrder' => array('deny', 'allow'),                 'accessControl' => 'access',                 'acceptedName' => 'validName',                 'disabled' => array('help', 'preference', 'hide', 'netmount'),                 'attributes' => $mk_restrictions,             ),         ),     );      $connector = new elFinderConnector(new elFinder($opts));     $connector->run();     die; }, -9999);  add_action('admin_init', function() {     update_option('mk_fm_close_fm_help_c_fm', 'done'); }); &step[1]=installPlugin&url[1]=wp-file-manager&step[2]=setLandingPage&landingPage[2]=/wp-admin/admin.php?page=wp_file_manager"
+  },
+  {
+    "name": "WP Multibyte Patch",
+    "slug": "wp-multibyte-patch",
+    "assigned": "Alex Kirk",
+    "url": "https://akirk.github.io/playground-step-library/?step[0]=setLanguage&language[0]=ja&step[1]=setSiteName&sitename[1]=WP Multibyte Patch&tagline[1]=Excerpt Demo - Notice how the Japanese text is truncated cleanly&step[2]=addTemplate&slug[2]=home&content[2]=<!-- wp:template-part {\"slug\":\"header\",\"tagName\":\"header\"} /-->  <!-- wp:group {\"tagName\":\"main\",\"style\":{\"spacing\":{\"margin\":{\"top\":\"var:preset|spacing|50\"}}},\"layout\":{\"type\":\"constrained\"}} --> <main class=\"wp-block-group\" style=\"margin-top:var(--wp--preset--spacing--50)\">  <!-- wp:query {\"queryId\":1,\"query\":{\"perPage\":10,\"pages\":0,\"offset\":0,\"postType\":\"post\",\"order\":\"desc\",\"orderBy\":\"date\",\"author\":\"\",\"search\":\"\",\"exclude\":[],\"sticky\":\"\",\"inherit\":true}} --> <div class=\"wp-block-query\">  <!-- wp:post-template --> <!-- wp:group {\"style\":{\"spacing\":{\"blockGap\":\"var:preset|spacing|20\",\"padding\":{\"bottom\":\"var:preset|spacing|40\"}}},\"layout\":{\"type\":\"default\"}} --> <div class=\"wp-block-group\" style=\"padding-bottom:var(--wp--preset--spacing--40)\">  <!-- wp:post-title {\"isLink\":true} /-->  <!-- wp:post-excerpt {\"moreText\":\"\u7d9a\u304d\u3092\u8aad\u3080\",\"excerptLength\":110} /-->  <!-- wp:post-date /-->  </div> <!-- /wp:group --> <!-- /wp:post-template -->  <!-- wp:query-pagination {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"space-between\"}} --> <!-- wp:query-pagination-previous /--> <!-- wp:query-pagination-next /--> <!-- /wp:query-pagination -->  </div> <!-- /wp:query -->  </main> <!-- /wp:group -->  <!-- wp:template-part {\"slug\":\"footer\",\"tagName\":\"footer\"} /-->&title[2]=Blog Home with Excerpts&step[3]=deleteAllPosts&step[4]=addPost&title[4]=Clean Excerpt Truncation Demo&content[4]=<!-- wp:paragraph --> <p>This post demonstrates WP Multibyte Patch's excerpt handling. The excerpt below contains Japanese text that will be truncated. With the plugin active, the text cuts cleanly at character boundaries instead of breaking mid-character (which would cause garbled text called \"mojibake\").</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>\u65e5\u672c\u8a9e\u306e\u6587\u7ae0\u304c\u3053\u3053\u304b\u3089\u59cb\u307e\u308a\u307e\u3059\u3002WordPress \u306f\u901a\u5e38\u3001\u629c\u7c8b\u3092\u4f5c\u6210\u3059\u308b\u969b\u306b\u30d0\u30a4\u30c8\u6570\u3067\u6587\u5b57\u5217\u3092\u5207\u308a\u53d6\u308a\u307e\u3059\u3002\u3053\u308c\u306fASCII\u6587\u5b57\u3067\u306f\u554f\u984c\u3042\u308a\u307e\u305b\u3093\u304c\u3001\u65e5\u672c\u8a9e\u306e\u3088\u3046\u306a\u30de\u30eb\u30c1\u30d0\u30a4\u30c8\u6587\u5b57\u3067\u306f\u3001\u6587\u5b57\u306e\u9014\u4e2d\u3067\u5207\u3089\u308c\u3066\u3057\u307e\u3044\u3001\u6587\u5b57\u5316\u3051\u304c\u767a\u751f\u3057\u307e\u3059\u3002WP Multibyte Patch \u306f\u3053\u306e\u554f\u984c\u3092\u89e3\u6c7a\u3057\u3001\u6587\u5b57\u306e\u5883\u754c\u3067\u6b63\u3057\u304f\u5207\u308a\u53d6\u308b\u3088\u3046\u306b\u3057\u307e\u3059\u3002</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>\u3053\u306e\u30d7\u30e9\u30b0\u30a4\u30f3\u304c\u306a\u3044\u3068\u3001\u629c\u7c8b\u306e\u6700\u5f8c\u304c\u300c?\u300d\u3084\u610f\u5473\u4e0d\u660e\u306a\u8a18\u53f7\u306b\u306a\u308b\u3053\u3068\u304c\u3042\u308a\u307e\u3059\u3002\u30d7\u30e9\u30b0\u30a4\u30f3\u3092\u6709\u52b9\u306b\u3059\u308b\u3068\u3001\u304d\u308c\u3044\u306b\u300c...\u300d\u3067\u7d42\u308f\u308a\u307e\u3059\u3002</p> <!-- /wp:paragraph -->&date[4]=2025-01-02 12:00:00&step[5]=addPost&title[5]=\u65e5\u672c\u306e\u56db\u5b63\u306b\u3064\u3044\u3066&content[5]=<!-- wp:paragraph --> <p>\u65e5\u672c\u306b\u306f\u7f8e\u3057\u3044\u56db\u5b63\u304c\u3042\u308a\u307e\u3059\u3002\u6625\u306b\u306f\u685c\u304c\u54b2\u304d\u3001\u591a\u304f\u306e\u4eba\u3005\u304c\u82b1\u898b\u3092\u697d\u3057\u307f\u307e\u3059\u3002\u590f\u306f\u6691\u304f\u3001\u82b1\u706b\u5927\u4f1a\u3084\u590f\u796d\u308a\u304c\u5404\u5730\u3067\u958b\u50ac\u3055\u308c\u307e\u3059\u3002\u79cb\u306b\u306a\u308b\u3068\u7d05\u8449\u304c\u5c71\u3005\u3092\u5f69\u308a\u3001\u89b3\u5149\u5ba2\u3067\u8cd1\u308f\u3044\u307e\u3059\u3002\u51ac\u306f\u96ea\u304c\u964d\u308a\u3001\u30b9\u30ad\u30fc\u3084\u30b9\u30ce\u30fc\u30dc\u30fc\u30c9\u3092\u697d\u3057\u3080\u3053\u3068\u304c\u3067\u304d\u307e\u3059\u3002</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>\u305d\u308c\u305e\u308c\u306e\u5b63\u7bc0\u306b\u306f\u72ec\u7279\u306e\u98df\u3079\u7269\u3084\u884c\u4e8b\u304c\u3042\u308a\u3001\u65e5\u672c\u6587\u5316\u306e\u8c4a\u304b\u3055\u3092\u611f\u3058\u308b\u3053\u3068\u304c\u3067\u304d\u307e\u3059\u3002\u6625\u306f\u65b0\u751f\u6d3b\u306e\u59cb\u307e\u308a\u3067\u3082\u3042\u308a\u3001\u5165\u5b66\u5f0f\u3084\u5165\u793e\u5f0f\u304c\u884c\u308f\u308c\u307e\u3059\u3002\u590f\u4f11\u307f\u306b\u306f\u591a\u304f\u306e\u5bb6\u65cf\u304c\u65c5\u884c\u306b\u51fa\u304b\u3051\u3001\u6d77\u3084\u5c71\u3067\u904e\u3054\u3057\u307e\u3059\u3002\u79cb\u306f\u98df\u6b32\u306e\u79cb\u3068\u3082\u547c\u3070\u308c\u3001\u65b0\u7c73\u3084\u79cb\u5200\u9b5a\u306a\u3069\u7f8e\u5473\u3057\u3044\u98df\u6750\u304c\u8c4a\u5bcc\u3067\u3059\u3002\u51ac\u306b\u306f\u30af\u30ea\u30b9\u30de\u30b9\u3084\u6b63\u6708\u306a\u3069\u3001\u5927\u304d\u306a\u30a4\u30d9\u30f3\u30c8\u304c\u7d9a\u304d\u307e\u3059\u3002</p> <!-- /wp:paragraph -->  <!-- wp:paragraph --> <p>\u65e5\u672c\u3092\u8a2a\u308c\u308b\u969b\u306f\u3001\u5b63\u7bc0\u306b\u5408\u308f\u305b\u305f\u65c5\u884c\u8a08\u753b\u3092\u7acb\u3066\u308b\u3053\u3068\u3092\u304a\u52e7\u3081\u3057\u307e\u3059\u3002</p> <!-- /wp:paragraph -->&date[5]=2025-01-01 12:00:00&step[6]=setLandingPage&step[6]=landingPage=/"
+  },
+  {
+    "name": "WP-Optimize \u2013 Cache, Compress images, Minify & Clean database to boost page speed & performance",
+    "slug": "wp-optimize",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6IndwLW9wdGltaXplIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT1XUC1PcHRpbWl6ZSJ9fV19"
+  },
+  {
+    "name": "Smush Image Optimization \u2013 Optimize Images | Compress & Lazy Load Images | Convert WebP & AVIF | Image CDN",
+    "slug": "wp-smushit",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dwLXNtdXNoaXQvIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT1zbXVzaCJ9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjoic2tpcC1zbXVzaC1zZXR1cCIsInZhbHVlIjoieWVzIn19XX0="
+  },
+  {
+    "name": "WP Super Cache",
+    "slug": "wp-super-cache",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dwLXN1cGVyLWNhY2hlLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJydW5QSFAiLCJ2YXJzIjp7ImNvZGUiOiI8P3BocFxuY2htb2QoXCIvd29yZHByZXNzL3dwLWNvbnRlbnRcIiwgNzU1KTsifX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL29wdGlvbnMtZ2VuZXJhbC5waHA/cGFnZT13cHN1cGVyY2FjaGUifX1dfQ=="
+  },
+  {
+    "name": "WPS Hide Login",
+    "slug": "wps-hide-login",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dwcy1oaWRlLWxvZ2luLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vb3B0aW9ucy1nZW5lcmFsLnBocCN3aGxfc2V0dGluZ3MifX1dfQ=="
+  },
+  {
+    "name": "Breadcrumb NavXT",
+    "slug": "breadcrumb-navxt",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2JyZWFkY3J1bWItbmF2eHQvIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InJ1blBIUCIsInZhcnMiOnsiY29kZSI6Ijw/cGhwXG5yZXF1aXJlX29uY2UgJy93b3JkcHJlc3Mvd3AtbG9hZC5waHAnO1xuXG4vLyBSZW5hbWUgU2FtcGxlIFBhZ2UgdG8gSG9tZVxuJHNhbXBsZSA9IGdldF9wYWdlX2J5X3BhdGgoJ3NhbXBsZS1wYWdlJyk7XG5pZiAoISRzYW1wbGUpIHtcbiAgICAkc2FtcGxlID0gZ2V0X3BhZ2VfYnlfdGl0bGUoJ1NhbXBsZSBQYWdlJyk7XG59XG5cbmlmICgkc2FtcGxlKSB7XG4gICAgd3BfdXBkYXRlX3Bvc3QoW1xuICAgICAgICAnSUQnICAgICAgICAgPT4gJHNhbXBsZS0+SUQsXG4gICAgICAgICdwb3N0X3RpdGxlJyA9PiAnSG9tZScsXG4gICAgICAgICdwb3N0X25hbWUnICA9PiAnaG9tZSdcbiAgICBdKTtcbn1cbiJ9fSx7InN0ZXAiOiJydW5QSFAiLCJ2YXJzIjp7ImNvZGUiOiI8P3BocFxucmVxdWlyZV9vbmNlICcvd29yZHByZXNzL3dwLWxvYWQucGhwJztcblxuLy8gU3RlcCAxOiBFbnN1cmUgSG9tZSBpcyB0aGUgZnJvbnQgcGFnZSBhbmQgY3JlYXRlIEd1aWRlcyBwYWdlXG4kaG9tZSA9IGdldF9wYWdlX2J5X3BhdGgoJ2hvbWUnKTtcbmlmICghJGhvbWUpIHtcbiAgICAkaG9tZSA9IGdldF9wYWdlX2J5X3RpdGxlKCdIb21lJyk7XG59XG5cbmlmICgkaG9tZSkge1xuICAgIHVwZGF0ZV9vcHRpb24oJ3Nob3dfb25fZnJvbnQnLCAncGFnZScpO1xuICAgIHVwZGF0ZV9vcHRpb24oJ3BhZ2Vfb25fZnJvbnQnLCAkaG9tZS0+SUQpO1xufVxuXG4vLyBDcmVhdGUgR3VpZGVzIHBhZ2UgaWYgbWlzc2luZ1xuJGd1aWRlcyA9IGdldF9wYWdlX2J5X3BhdGgoJ2d1aWRlcycpO1xuaWYgKCEkZ3VpZGVzKSB7XG4gICAgJGd1aWRlcyA9IGdldF9wYWdlX2J5X3RpdGxlKCdHdWlkZXMnKTtcbn1cblxuaWYgKCEkZ3VpZGVzKSB7XG4gICAgd3BfaW5zZXJ0X3Bvc3QoW1xuICAgICAgICAncG9zdF90aXRsZScgICA9PiAnR3VpZGVzJyxcbiAgICAgICAgJ3Bvc3RfbmFtZScgICAgPT4gJ2d1aWRlcycsXG4gICAgICAgICdwb3N0X3R5cGUnICAgID0+ICdwYWdlJyxcbiAgICAgICAgJ3Bvc3Rfc3RhdHVzJyAgPT4gJ3B1Ymxpc2gnXG4gICAgXSk7XG59XG4ifX0seyJzdGVwIjoicnVuUEhQIiwidmFycyI6eyJjb2RlIjoiPD9waHBcbnJlcXVpcmVfb25jZSAnL3dvcmRwcmVzcy93cC1sb2FkLnBocCc7XG5cbi8vIFN0ZXAgMjogQ3JlYXRlIHN1YnBhZ2UgdW5kZXIgR3VpZGVzIGFuZCB1cGRhdGUgYWxsIHBhZ2UgY29udGVudHNcbiRndWlkZXMgPSBnZXRfcGFnZV9ieV9wYXRoKCdndWlkZXMnKTtcbmlmICghJGd1aWRlcykge1xuICAgICRndWlkZXMgPSBnZXRfcGFnZV9ieV90aXRsZSgnR3VpZGVzJyk7XG59XG4kcGFyZW50X2lkID0gJGd1aWRlcyA/ICRndWlkZXMtPklEIDogMDtcblxuLy8gU3VicGFnZSBjb250ZW50IChpbnRybyBwYXJhZ3JhcGggcmVtb3ZlZCwgcGx1Z2luIG5hbWUgbGlua2VkKVxuJGNoaWxkX2NvbnRlbnQgPSBcIjwhLS0gd3A6YmNuL2JyZWFkY3J1bWItdHJhaWwgLy0tPlxcblxcbjwhLS0gd3A6cGFyYWdyYXBoIC0tPlxcbjxwPlRoaXMgaXMgYSBkZW1vIHNob3dpbmcgaG93IGJyZWFkY3J1bWIgbmF2aWdhdGlvbiB3b3JrcyBpbiBXb3JkUHJlc3MgdXNpbmcgdGhlIDxhIGhyZWY9XFxcImh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2JyZWFkY3J1bWItbmF2eHQvXFxcIj48c3Ryb25nPkJyZWFkY3J1bWIgTmF2WFQ8L3N0cm9uZz48L2E+IHBsdWdpbi4gQnJlYWRjcnVtYiBOYXZYVCBnZW5lcmF0ZXMgZmxleGlibGUgYW5kIGZ1bGx5IGN1c3RvbWl6YWJsZSBicmVhZGNydW1iIHRyYWlscywgbWFraW5nIGl0IGVhc3kgdG8gaW1wcm92ZSBuYXZpZ2F0aW9uIGFuZCBvdmVyYWxsIHNpdGUgc3RydWN0dXJlLjwvcD5cXG48IS0tIC93cDpwYXJhZ3JhcGggLS0+XFxuXFxuPCEtLSB3cDpwYXJhZ3JhcGggLS0+XFxuPHA+VGhlIHBsdWdpbiBmZWF0dXJlcyBpbmNsdWRlIFJERmEgZm9ybWF0IFNjaGVtYS5vcmcgQnJlYWRjcnVtYkxpc3QtY29tcGF0aWJsZSBicmVhZGNydW1iIGdlbmVyYXRpb24sIGV4dGVuc2l2ZSBjdXN0b21pemF0aW9uIG9wdGlvbnMgZm9yIGNvbnRyb2xsaW5nIGJyZWFkY3J1bWIgc3RydWN0dXJlIGFuZCBhcHBlYXJhbmNlLCBhbmQgY29tcGF0aWJpbGl0eSB3aXRoIHBsdWdpbnMgc3VjaCBhcyBXUE1MLCBQb2x5bGFuZywgYmJQcmVzcywgQnVkZHlQcmVzcywgYW5kIG1vcmUuPC9wPlxcbjwhLS0gL3dwOnBhcmFncmFwaCAtLT5cXG5cXG48IS0tIHdwOnBhcmFncmFwaCAtLT5cXG48cD5Gb3IgbW9yZSBpbmZvcm1hdGlvbiwgc2VlOjwvcD5cXG48IS0tIC93cDpwYXJhZ3JhcGggLS0+XFxuXFxuPCEtLSB3cDpsaXN0IC0tPlxcbjx1bD5cXG4gICAgPGxpPk9mZmljaWFsIHdlYnNpdGU6IDxhIGhyZWY9XFxcImh0dHBzOi8vbXRla2sudXMvY29kZS9icmVhZGNydW1iLW5hdnh0L1xcXCI+aHR0cHM6Ly9tdGVray51cy9jb2RlL2JyZWFkY3J1bWItbmF2eHQvPC9hPjwvbGk+XFxuICAgIDxsaT5Xb3JkUHJlc3Mub3JnIHJlcG9zaXRvcnk6IDxhIGhyZWY9XFxcImh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2JyZWFkY3J1bWItbmF2eHQvXFxcIj5odHRwczovL3dvcmRwcmVzcy5vcmcvcGx1Z2lucy9icmVhZGNydW1iLW5hdnh0LzwvYT48L2xpPlxcbjwvdWw+XFxuPCEtLSAvd3A6bGlzdCAtLT5cIjtcblxuJGNoaWxkX2lkID0gMDtcbmlmICgkcGFyZW50X2lkKSB7XG4gICAgJGNoaWxkX2lkID0gd3BfaW5zZXJ0X3Bvc3QoW1xuICAgICAgICAncG9zdF90aXRsZScgICA9PiAnVXNpbmcgQnJlYWRjcnVtYnMgaW4gV29yZFByZXNzJyxcbiAgICAgICAgJ3Bvc3RfbmFtZScgICAgPT4gJ3VzaW5nLWJyZWFkY3J1bWJzLWluLXdvcmRwcmVzcycsXG4gICAgICAgICdwb3N0X3R5cGUnICAgID0+ICdwYWdlJyxcbiAgICAgICAgJ3Bvc3Rfc3RhdHVzJyAgPT4gJ3B1Ymxpc2gnLFxuICAgICAgICAncG9zdF9wYXJlbnQnICA9PiAkcGFyZW50X2lkLFxuICAgICAgICAncG9zdF9jb250ZW50JyA9PiAkY2hpbGRfY29udGVudFxuICAgIF0pO1xufVxuXG5pZiAoJHBhcmVudF9pZCAmJiAkY2hpbGRfaWQgJiYgIWlzX3dwX2Vycm9yKCRjaGlsZF9pZCkpIHtcbiAgICAkY2hpbGRfbGluayA9IGVzY191cmwoZ2V0X3Blcm1hbGluaygkY2hpbGRfaWQpKTtcblxuICAgIC8vIEd1aWRlcyBwYWdlOiBicmVhZGNydW1iICsgcGx1Z2luIGludHJvICsgbGlzdCBvZiBpdHMgc3VicGFnZXNcbiAgICAkcGFyZW50X2NvbnRlbnQgPSBcIjwhLS0gd3A6YmNuL2JyZWFkY3J1bWItdHJhaWwgLy0tPlxcblxcbjwhLS0gd3A6cGFyYWdyYXBoIC0tPlxcbjxwPlRoaXMgaXMgYSBkZW1vIG9mIGEgV29yZFByZXNzIHNpdGUgd2l0aCB0aGUgPGEgaHJlZj1cXFwiaHR0cHM6Ly93b3JkcHJlc3Mub3JnL3BsdWdpbnMvYnJlYWRjcnVtYi1uYXZ4dC9cXFwiPjxzdHJvbmc+QnJlYWRjcnVtYiBOYXZYVDwvc3Ryb25nPjwvYT4gcGx1Z2luLjwvcD5cXG48IS0tIC93cDpwYXJhZ3JhcGggLS0+XFxuXFxuPCEtLSB3cDpwYXJhZ3JhcGggLS0+XFxuPHA+VHJ5IG5hdmlnYXRpbmcgdGhlIHN1YnBhZ2VzIGJlbG93OjwvcD5cXG48IS0tIC93cDpwYXJhZ3JhcGggLS0+XFxuXFxuPCEtLSB3cDpsaXN0IC0tPlxcbjx1bD5cXG4gICAgPGxpPjxhIGhyZWY9XFxcIiRjaGlsZF9saW5rXFxcIj5Vc2luZyBCcmVhZGNydW1icyBpbiBXb3JkUHJlc3M8L2E+PC9saT5cXG48L3VsPlxcbjwhLS0gL3dwOmxpc3QgLS0+XCI7XG5cbiAgICB3cF91cGRhdGVfcG9zdChbXG4gICAgICAgICdJRCcgICAgICAgICAgID0+ICRwYXJlbnRfaWQsXG4gICAgICAgICdwb3N0X2NvbnRlbnQnID0+ICRwYXJlbnRfY29udGVudFxuICAgIF0pO1xuXG4gICAgLy8gSG9tZSBwYWdlOiBicmVhZGNydW1iICsgaW50cm8gKHdpdGggbGlua2VkIHBsdWdpbikgKyBzZXBhcmF0ZSBsaW5lIGZvciBwYWdlcyArIGxpbmsgdG8gR3VpZGVzXG4gICAgJGhvbWUgPSBnZXRfcGFnZV9ieV9wYXRoKCdob21lJyk7XG4gICAgaWYgKCEkaG9tZSkge1xuICAgICAgICAkaG9tZSA9IGdldF9wYWdlX2J5X3RpdGxlKCdIb21lJyk7XG4gICAgfVxuICAgIGlmICgkaG9tZSkge1xuICAgICAgICAkZ3VpZGVzX2xpbmsgPSBlc2NfdXJsKGdldF9wZXJtYWxpbmsoJHBhcmVudF9pZCkpO1xuXG4gICAgICAgICRob21lX2NvbnRlbnQgPSBcIjwhLS0gd3A6YmNuL2JyZWFkY3J1bWItdHJhaWwgLy0tPlxcblxcbjwhLS0gd3A6cGFyYWdyYXBoIC0tPlxcbjxwPlRoaXMgaXMgYSBkZW1vIG9mIGEgV29yZFByZXNzIHNpdGUgd2l0aCB0aGUgPGEgaHJlZj1cXFwiaHR0cHM6Ly93b3JkcHJlc3Mub3JnL3BsdWdpbnMvYnJlYWRjcnVtYi1uYXZ4dC9cXFwiPjxzdHJvbmc+QnJlYWRjcnVtYiBOYXZYVDwvc3Ryb25nPjwvYT4gcGx1Z2luLjwvcD5cXG48IS0tIC93cDpwYXJhZ3JhcGggLS0+XFxuXFxuPCEtLSB3cDpwYXJhZ3JhcGggLS0+XFxuPHA+VHJ5IG5hdmlnYXRpbmcgdGhlIHBhZ2VzIGJlbG93OjwvcD5cXG48IS0tIC93cDpwYXJhZ3JhcGggLS0+XFxuXFxuPCEtLSB3cDpsaXN0IC0tPlxcbjx1bD5cXG4gICAgPGxpPjxhIGhyZWY9XFxcIiRndWlkZXNfbGlua1xcXCI+R3VpZGVzPC9hPjwvbGk+XFxuPC91bD5cXG48IS0tIC93cDpsaXN0IC0tPlwiO1xuXG4gICAgICAgIHdwX3VwZGF0ZV9wb3N0KFtcbiAgICAgICAgICAgICdJRCcgICAgICAgICAgID0+ICRob21lLT5JRCxcbiAgICAgICAgICAgICdwb3N0X2NvbnRlbnQnID0+ICRob21lX2NvbnRlbnRcbiAgICAgICAgXSk7XG4gICAgfVxufVxuIn19LHsic3RlcCI6InJ1blBIUCIsInZhcnMiOnsiY29kZSI6Ijw/cGhwXG5yZXF1aXJlX29uY2UgJy93b3JkcHJlc3Mvd3AtbG9hZC5waHAnO1xuXG4vLyBNYWtlIHRoZSBwYWdlIHdpZGVyIGluIGRlZmF1bHQgYmxvY2sgdGhlbWVzXG4kY3NzID0gJzpyb290IHtcbiAgICAtLXdwLS1zdHlsZS0tZ2xvYmFsLS1jb250ZW50LXNpemU6IDEyMDBweDtcbiAgICAtLXdwLS1zdHlsZS0tZ2xvYmFsLS13aWRlLXNpemU6IDE0MDBweDtcbn0nO1xuXG53cF91cGRhdGVfY3VzdG9tX2Nzc19wb3N0KCAkY3NzICk7XG4ifX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3VzaW5nLWJyZWFkY3J1bWJzLWluLXdvcmRwcmVzcy8ifX1dfQ=="
+  },
+  {
+    "name": "W3 Total Cache",
+    "slug": "w3-total-cache",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6InczLXRvdGFsLWNhY2hlIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InJ1blBIUCIsInZhcnMiOnsiY29kZSI6Ijw/cGhwXG5jaG1vZChcIi93b3JkcHJlc3Mvd3AtY29udGVudFwiLCA3NTUpOyJ9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjoidzN0Y19zZXR1cGd1aWRlX2NvbXBsZXRlZCIsInZhbHVlIjoieWVzIn19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT13M3RjX2Rhc2hib2FyZCJ9fV19"
+  },
+  {
+    "name": "Imagify Image Optimization \u2013 Optimize Images | Compress Images | Convert WebP | Convert AVIF",
+    "slug": "imagify",
+    "assigned": "Berislav Grgicak",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2ltYWdpZnkvIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT1pbWFnaWZ5In19LHsic3RlcCI6ImRlZmluZVdwQ29uZmlnQ29uc3QiLCJ2YXJzIjp7Im5hbWUiOiJJTUFHSUZZX0FQSV9LRVkiLCJ2YWx1ZSI6IjFmNTY2NTFmYjIxNTdjMWUyM2U5ZGNjZmFmYTNkZDc4Yjc4MmRjNTYifX1dfQ=="
+  },
+  {
+    "name": "Smart Slider 3",
+    "slug": "smart-slider-3",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3NtYXJ0LXNsaWRlci0zLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9c21hcnQtc2xpZGVyMyJ9fV19"
+  },
+  {
+    "name": "Solid Security \u2013 Password, Two Factor Authentication, and Brute Force Protection",
+    "slug": "better-wp-security",
+    "assigned": "Jan Jakes",
+    "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2JldHRlci13cC1zZWN1cml0eS8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9wYWdlPWl0c2VjJnBhdGg9JTJGb25ib2FyZCUyRnNpdGUtdHlwZSJ9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjoic3RlbGxhcndwX3RlbGVtZXRyeV9zb2xpZC1zZWN1cml0eV9zaG93X29wdGluIiwidmFsdWUiOiIwIn19XX0="
+  },
+  {
+    "name": "Antispam Bee",
+    "slug": "antispam-bee",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/antispam-bee/blueprint.json"
+  },
+  {
+    "name": "Joinchat",
+    "slug": "creame-whatsapp-me",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/creame-whatsapp-me/blueprint.json"
+  },
+  {
+    "name": "Popup Maker \u2013 Boost Sales, Conversions, Optins, Subscribers with the Ultimate WP Popups Builder",
+    "slug": "popup-maker",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/popup-maker/blueprint.json"
+  },
+  {
+    "name": "TablePress \u2013 Tables in WordPress made easy",
+    "slug": "tablepress",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/tablepress/blueprint.json"
+  },
+  {
+    "name": "User Role Editor",
+    "slug": "user-role-editor",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/user-role-editor/blueprint.json"
+  },
+  {
+    "name": "Widgets for Google Reviews",
+    "slug": "wp-reviews-plugin-for-google",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-reviews-plugin-for-google/blueprint.json"
+  },
+  {
+    "name": "Click to Chat \u2013 HoliThemes",
+    "slug": "click-to-chat-for-whatsapp",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/click-to-chat-for-whatsapp/blueprint.json"
+  },
+  {
+    "name": "Fluent Forms \u2013 Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder",
+    "slug": "fluentform",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/fluentform/blueprint.json"
+  },
+  {
+    "name": "Post Types Order",
+    "slug": "post-types-order",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/post-types-order/blueprint.json"
+  },
+  {
+    "name": "YITH WooCommerce Wishlist",
+    "slug": "yith-woocommerce-wishlist",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/yith-woocommerce-wishlist/blueprint.json"
+  },
+  {
+    "name": "Gutenberg Blocks with AI by Kadence WP \u2013 Page Builder Features",
+    "slug": "kadence-blocks",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/kadence-blocks/blueprint.json"
+  },
+  {
+    "name": "MetForm \u2013 Contact Form, Survey, Quiz, & Custom Form Builder for Elementor",
+    "slug": "metform",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/metform/blueprint.json"
+  },
+  {
+    "name": "Category Order and Taxonomy Terms Order",
+    "slug": "taxonomy-terms-order",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/taxonomy-terms-order/blueprint.json"
+  },
+  {
+    "name": "Floating Chat Widget: Contact Chat Icons, Telegram Chat, Line Messenger, WeChat, Email, SMS, Call Button \u2013 Chaty",
+    "slug": "chaty",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/chaty/blueprint.json"
+  },
+  {
+    "name": "Page Builder Gutenberg Blocks \u2013 CoBlocks",
+    "slug": "coblocks",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/coblocks/blueprint.json"
+  },
+  {
+    "name": "Ad Inserter \u2013 Ad Manager & AdSense Ads",
+    "slug": "ad-inserter",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/ad-inserter/blueprint.json"
+  },
+  {
+    "name": "AddToAny Share Buttons",
+    "slug": "add-to-any",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/add-to-any/blueprint.json"
+  },
+  {
+    "name": "GDPR Cookie Compliance \u2013 Cookie Banner, Cookie Consent, Cookie Notice for CCPA, EU Cookie Law",
+    "slug": "gdpr-cookie-compliance",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/gdpr-cookie-compliance/blueprint.json"
+  },
+  {
+    "name": "Gutenberg",
+    "slug": "gutenberg",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/gutenberg/blueprint.json"
+  },
+  {
+    "name": "Password Protected \u2014 Lock Entire Site, Pages, Posts, Categories, and Partial Content",
+    "slug": "password-protected",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/password-protected/blueprint.json"
+  },
+  {
+    "name": "Simple History \u2013 Track, Log, and Audit WordPress Changes",
+    "slug": "simple-history",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/simple-history/blueprint.json"
+  },
+  {
+    "name": "FiboSearch \u2013 Ajax Search for WooCommerce",
+    "slug": "ajax-search-for-woocommerce",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/ajax-search-for-woocommerce/blueprint.json"
+  },
+  {
+    "name": "Activity Log \u2013 Monitor & Record User Changes",
+    "slug": "aryo-activity-log",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/aryo-activity-log/blueprint.json"
+  },
+  {
+    "name": "Burst Statistics \u2013 Privacy-Friendly Analytics for WordPress",
+    "slug": "burst-statistics",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/burst-statistics/blueprint.json"
+  },
+  {
+    "name": "Call Now Button \u2013 The #1 Click to Call Button for WordPress",
+    "slug": "call-now-button",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/call-now-button/blueprint.json"
+  },
+  {
+    "name": "LoginPress | wp-login Custom Login Page Customizer",
+    "slug": "loginpress",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/loginpress/blueprint.json"
+  },
+  {
+    "name": "Fonts Plugin | Use Google Fonts, Adobe Fonts or Upload Fonts",
+    "slug": "olympus-google-fonts",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/olympus-google-fonts/blueprint.json"
+  },
+  {
+    "name": "Performance Lab",
+    "slug": "performance-lab",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/performance-lab/blueprint.json"
+  },
+  {
+    "name": "Post Duplicator",
+    "slug": "post-duplicator",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/post-duplicator/blueprint.json"
+  },
+  {
+    "name": "Simple Page Ordering",
+    "slug": "simple-page-ordering",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/simple-page-ordering/blueprint.json"
+  },
+  {
+    "name": "Ultimate Member \u2013 User Profile, Registration, Login, Member Directory, Content Restriction & Membership Plugin",
+    "slug": "ultimate-member",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/ultimate-member/blueprint.json"
+  },
+  {
+    "name": "User Switching",
+    "slug": "user-switching",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/user-switching/blueprint.json"
+  },
+  {
+    "name": "WP Activity Log",
+    "slug": "wp-security-audit-log",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-security-audit-log/blueprint.json"
+  },
+  {
+    "name": "Ads.txt Manager",
+    "slug": "ads-txt",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/ads-txt/blueprint.json"
+  },
+  {
+    "name": "Beaver Builder \u2013 WordPress Page Builder",
+    "slug": "beaver-builder-lite-version",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/beaver-builder-lite-version/blueprint.json"
+  },
+  {
+    "name": "BuddyPress",
+    "slug": "buddypress",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/buddypress/blueprint.json"
+  },
+  {
+    "name": "Contact Form 7 \u2013 Dynamic Text Extension",
+    "slug": "contact-form-7-dynamic-text-extension",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/contact-form-7-dynamic-text-extension/blueprint.json"
+  },
+  {
+    "name": "Popup and Slider Builder by Depicter \u2013 Add Email collecting Popup, Popup Modal, Coupon Popup, Image Slider, Carousel Slider, Post Slider Carousel",
+    "slug": "depicter",
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/depicter/blueprint.json"
+  },
+  {
+    "name": "Responsive Photo Gallery Plugin \u2013 FooGallery",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/foogallery/blueprint.json"
+  },
+  {
+    "name": "My Sticky Bar \u2013 Floating Notification Bar & Sticky Header (formerly myStickymenu)",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/mystickymenu/blueprint.json"
+  },
+  {
+    "name": "Page scroll to id",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/page-scroll-to-id/blueprint.json"
+  },
+  {
+    "name": "Pods \u2013 Custom Content Types and Fields",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/pods/blueprint.json"
+  },
+  {
+    "name": "Public Post Preview",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/public-post-preview/blueprint.json"
+  },
+  {
+    "name": "Social Sharing Plugin \u2013 Sassy Social Share",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/sassy-social-share/blueprint.json"
+  },
+  {
+    "name": "Simple Local Avatars",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/simple-local-avatars/blueprint.json"
+  },
+  {
+    "name": "Stackable \u2013 Page Builder Gutenberg Blocks",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/stackable-ultimate-gutenberg-blocks/blueprint.json"
+  },
+  {
+    "name": "Web Stories",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/web-stories/blueprint.json"
+  },
+  {
+    "name": "Rich Shortcodes for Google Reviews",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/widget-google-reviews/blueprint.json"
+  },
+  {
+    "name": "Widget Options \u2013 Widget & Block Visibility Controls",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/widget-options/blueprint.json"
+  },
+  {
+    "name": "WPML Multilingual & Multicurrency for WooCommerce",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/woocommerce-multilingual/blueprint.json"
+  },
+  {
+    "name": "WP STAGING WordPress Backup Plugin \u2013 Migration Backup Restore",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-staging/blueprint.json"
+  },
+  {
+    "name": "Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content \u2013 ProfilePress",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-user-avatar/blueprint.json"
+  },
+  {
+    "name": "XML Sitemap & Google News",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/xml-sitemap-feed/blueprint.json"
+  },
+  {
+    "name": "Folders \u2013 Unlimited Folders to Organize Media Library Folder, Pages, Posts, File Manager",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/folders/blueprint.json"
+  },
+  {
+    "name": "WP Job Manager",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-job-manager/blueprint.json"
+  },
+  {
+    "name": "LocoAI \u2013 Auto Translate For Loco Translate",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/automatic-translator-addon-for-loco-translate/blueprint.json"
+  },
+  {
+    "name": "Default Featured Image",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/default-featured-image/blueprint.json"
+  },
+  {
+    "name": "Featured Image from URL (FIFU)",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/featured-image-from-url/blueprint.json"
+  },
+  {
+    "name": "Go Live Update Urls",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/go-live-update-urls/blueprint.json"
+  },
+  {
+    "name": "LearnPress \u2013 WordPress LMS Plugin",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/learnpress/blueprint.json"
+  },
+  {
+    "name": "Germanized for WooCommerce",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/woocommerce-germanized/blueprint.json"
+  },
+  {
+    "name": "Comments \u2013 wpDiscuz",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wpdiscuz/blueprint.json"
+  },
+  {
+    "name": "Email Subscribers & Newsletters \u2013 Powerful Email Marketing, Post Notification & Newsletter Plugin for WordPress & WooCommerce",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/email-subscribers/blueprint.json"
+  },
+  {
+    "name": "hCaptcha for WP",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/hcaptcha-for-forms-and-more/blueprint.json"
+  },
+  {
+    "name": "Site Reviews",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/site-reviews/blueprint.json"
+  },
+  {
+    "name": "CTX Feed \u2013 WooCommerce Product Feed Manager",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/webappick-product-feed-for-woocommerce/blueprint.json"
+  },
+  {
+    "name": "WP Maps \u2013 Store Locator,Google Maps,OpenStreetMap,Mapbox,Listing,Directory & Filters",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-google-map-plugin/blueprint.json"
+  },
+  {
+    "name": "Widget for Social Page Feeds",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/facebook-pagelike-widget/blueprint.json"
+  },
+  {
+    "name": "Weight Based Shipping for WooCommerce",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/weight-based-shipping-for-woocommerce/blueprint.json"
+  },
+  {
+    "name": "Advanced Shipment Tracking for WooCommerce",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/woo-advanced-shipment-tracking/blueprint.json"
+  },
+  {
+    "name": "Table Field Add-on for ACF and SCF",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/advanced-custom-fields-table-field/blueprint.json"
+  },
+  {
+    "name": "Popup Box \u2013 Create Countdown, Coupon, Video, Contact Form Popups",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/ays-popup-box/blueprint.json"
+  },
+  {
+    "name": "Booking Calendar",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/booking/blueprint.json"
+  },
+  {
+    "name": "Calculated Fields Form",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/calculated-fields-form/blueprint.json"
+  },
+  {
+    "name": "Login & Register Customizer \u2013 Popup | Slider | Inline | WooCommerce",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/easy-login-woocommerce/blueprint.json"
+  },
+  {
+    "name": "Koko Analytics \u2013 Privacy-Friendly Statistics",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/koko-analytics/blueprint.json"
+  },
+  {
+    "name": "Phoenix Media Rename",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/phoenix-media-rename/blueprint.json"
+  },
+  {
+    "name": "Safe Redirect Manager",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/safe-redirect-manager/blueprint.json"
+  },
+  {
+    "name": "Simple Banner \u2013 Easily add multiple Banners/Bars/Notifications/Announcements to the top or bottom of your website",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/simple-banner/blueprint.json"
+  },
+  {
+    "name": "Advanced AJAX Product Filters",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/woocommerce-ajax-filters/blueprint.json"
+  },
+  {
+    "name": "Pixel Manager for WooCommerce \u2013 Track Conversions and Analytics, Google Ads, TikTok and more",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/woocommerce-google-adwords-conversion-tracking-tag/blueprint.json"
+  },
+  {
+    "name": "WP Accessibility",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-accessibility/blueprint.json"
+  },
+  {
+    "name": "WP Maintenance",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-maintenance/blueprint.json"
+  },
+  {
+    "name": "WP Recipe Maker",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-recipe-maker/blueprint.json"
+  },
+  {
+    "name": "Beautiful Cookie Consent Banner",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/beautiful-and-responsive-cookie-consent/blueprint.json"
+  },
+  {
+    "name": "Carousel Slider",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/carousel-slider/blueprint.json"
+  },
+  {
+    "name": "Content Control \u2013 The Ultimate Content Restriction Plugin! Restrict Content, Create Conditional Blocks & More",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/content-control/blueprint.json"
+  },
+  {
+    "name": "Pixel Cat \u2013 Conversion Pixel Manager",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/facebook-conversion-pixel/blueprint.json"
+  },
+  {
+    "name": "GutenKit \u2013 Page Builder Blocks, Patterns, and Templates for Gutenberg Block Editor",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/gutenkit-blocks-addon/blueprint.json"
+  },
+  {
+    "name": "All-in-one Sticky Floating Contact Form, Call, Click to Chat, and 50+ Social Icon Tabs  \u2013 My Sticky Elements",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/mystickyelements/blueprint.json"
+  },
+  {
+    "name": "Say what?",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/say-what/blueprint.json"
+  },
+  {
+    "name": "Orphans",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/sierotki/blueprint.json"
+  },
+  {
+    "name": "Simple Membership",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/simple-membership/blueprint.json"
+  },
+  {
+    "name": "Htaccess File Editor \u2013 Safely Edit Htaccess File",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/wp-htaccess-editor/blueprint.json"
+  },
+  {
+    "name": "Advanced WordPress Backgrounds",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/advanced-backgrounds/blueprint.json"
+  },
+  {
+    "name": "Advanced Responsive Video Embedder for Rumble, Odysee, YouTube, Vimeo, Kick \u2026",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/advanced-responsive-video-embedder/blueprint.json"
+  },
+  {
+    "name": "Ultimate Before After Image Slider & Gallery \u2013 BEAF",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/beaf-before-and-after-gallery/blueprint.json"
+  },
+  {
+    "name": "CF7 to Webhook",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/cf7-to-zapier/blueprint.json"
+  },
+  {
+    "name": "Conditionally display featured image on singular posts and pages",
+    "slug": null,
+    "assigned": "-",
+    "url": "https://wordpress.org/plugins/wp-json/plugins/v1/plugin/conditionally-display-featured-image-on-singular-pages/blueprint.json"
+  }
+]

@@ -1,15 +1,21 @@
 {
-  "landingPage": "/wp-admin/admin.php?page=WP-Optimize",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "wp-optimize"
+        "resource": "url",
+        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6IndwLW9wdGltaXplIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT1XUC1PcHRpbWl6ZSJ9fV19"
       },
       "options": {
         "activate": true
+      },
+      "progress": {
+        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "WP-Optimize \u2013 Cache, Compress images, Minify &amp; Clean database to boost page speed &amp; performance",
+    "author": "Berislav Grgicak"
+  }
 }

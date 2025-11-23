@@ -1,52 +1,54 @@
 {
-	"landingPage": "/",
-	"steps": [
-		{
-			"step": "login",
-			"username": "admin"
-		},
-		{
-			"step": "mkdir",
-			"path": "/wordpress/wp-content/mu-plugins"
-		},
-		{
-			"step": "writeFile",
-			"path": "/wordpress/wp-content/mu-plugins/disable-wp-mail.php",
-			"data": "<?php add_filter('pre_wp_mail', '__return_true'); ?>"
-		},
-		{
-			"step": "writeFile",
-			"path": "/wordpress/wp-content/mu-plugins/cf7.css",
-			"data": ".wpcf7 input[type=\"text\"], .wpcf7 input[type=\"email\"], .wpcf7 textarea { background: #fff; colomr: #2c3338; font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif; font-size: 14px; line-height: 2; padding: 0 8px; border: 1px solid #8c8f94; border-radius: 4px; } .wpcf7 input, .wpcf7 textarea, .wpcf7 form .wpcf7-response-output { margin: 0 !important; width: 100%; box-sizing: border-box; max-width: 400px; }  .wpcf7 input[type=\"text\"]:focus, .wpcf7 input[type=\"email\"]:focus, .wpcf7 textarea:focus { border-color: #2271b1; outline: 2px solid transparent; box-shadow: 0 0 0 1px #2271b1; }  .wpcf7 input[type=\"submit\"], .wpcf7 input[type=\"button\"] { background-color: #2271b1; color: #fff; border: 1px solid #2271b1; border-radius: 3px; padding: 8px 12px; font-size: 14px; line-height: 1.5; text-align: center; text-transform: none; cursor: pointer; }  .wpcf7 input[type=\"submit\"]:hover, .wpcf7 input[type=\"button\"]:hover { background-color: #135e96; border-color: #135e96; }  .wpcf7 input[type=\"submit\"]:focus, .wpcf7 input[type=\"button\"]:focus { background-color: #135e96; border-color: #0a4b78; box-shadow: 0 0 0 1px #fff, 0 0 0 3px #2271b1; outline: 2px solid transparent; }"
-		},
-		{
-			"step": "writeFile",
-			"path": "/wordpress/wp-content/mu-plugins/cf7-css.php",
-			"data": "<?php  add_action( 'wp_enqueue_scripts', function() { wp_enqueue_style( 'cf7-custom-styles', WPMU_PLUGIN_URL . '/cf7.css', ); } ); ?>"
-		},
-		{
-			"step": "writeFile",
-			"path": "/wordpress/wp-content/mu-plugins/disable-wp-mail.php",
-			"data": "<?php add_filter('pre_wp_mail', '__return_true'); ?>"
-		},
-		{
-			"step": "installPlugin",
-			"pluginData": {
-				"resource": "wordpress.org/plugins",
-				"slug": "contact-form-7"
-			},
-			"options": {
-				"activate": true
-			}
-		},
-		{
-			"step": "runPHP",
-			"code": "<?php require_once '/wordpress/wp-load.php'; $forms = WPCF7_ContactForm::find( array( 'post_status' => 'any', 'posts_per_page' => -1, 'offset' => 0, 'orderby' => 'ID', 'order' => 'ASC', ) ); if (!empty($forms)) { $form = $forms[0]; $page_args = array( 'post_type'    => 'page', 'post_status'  => 'publish', 'post_title'   => 'Contact Form 7', 'post_content' => $form->shortcode(), ); $page_id = wp_insert_post( $page_args );  update_option( 'page_on_front', $page_id ); update_option( 'show_on_front', 'page' ); }"
-		}
-	],
-	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
-	"meta": {
-		"title": "Contact Form 7",
-		"author": "Berislav Grgicak"
-	}
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/disable-wp-mail-1.php",
+      "data": "<?php  add_filter('pre_wp_mail', '__return_true'); ?>"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/cf7.css-2.php",
+      "data": "<?php .wpcf7 input[type=\"text\"], .wpcf7 input[type=\"email\"], .wpcf7 textarea { background: #fff; colomr: #2c3338; font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen-Sans, Ubuntu, Cantarell, \"Helvetica Neue\", sans-serif; font-size: 14px; line-height: 2; padding: 0 8px; border: 1px solid #8c8f94; border-radius: 4px; } .wpcf7 input, .wpcf7 textarea, .wpcf7 form .wpcf7-response-output { margin: 0 !important; width: 100%; box-sizing: border-box; max-width: 400px; }  .wpcf7 input[type=\"text\"]:focus, .wpcf7 input[type=\"email\"]:focus, .wpcf7 textarea:focus { border-color: #2271b1; outline: 2px solid transparent; box-shadow: 0 0 0 1px #2271b1; }  .wpcf7 input[type=\"submit\"], .wpcf7 input[type=\"button\"] { background-color: #2271b1; color: #fff; border: 1px solid #2271b1; border-radius: 3px; padding: 8px 12px; font-size: 14px; line-height: 1.5; text-align: center; text-transform: none; cursor: pointer; }  .wpcf7 input[type=\"submit\"]:hover, .wpcf7 input[type=\"button\"]:hover { background-color: #135e96; border-color: #135e96; }  .wpcf7 input[type=\"submit\"]:focus, .wpcf7 input[type=\"button\"]:focus { background-color: #135e96; border-color: #0a4b78; box-shadow: 0 0 0 1px #fff, 0 0 0 3px #2271b1; outline: 2px solid transparent; }"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/cf7-css-3.php",
+      "data": "<?php   add_action( 'wp_enqueue_scripts', function() { wp_enqueue_style( 'cf7-custom-styles', WPMU_PLUGIN_URL . '/cf7.css', ); } ); ?>"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/disable-wp-mail-4.php",
+      "data": "<?php  add_filter('pre_wp_mail', '__return_true'); ?>"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "contact-form-7"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php';\n$page_args = array(\n'post_type'    => 'page',\n'post_status'  => 'publish',\n'post_title'   => 'Contact Form 7',\n'post_content' => '',\n);\n$page_id = wp_insert_post( $page_args, true );\nif ( is_wp_error( $page_id ) ) {\nerror_log( 'addPage error: ' . $page_id->get_error_message() );\n}",
+      "progress": {
+        "caption": "addPage: Contact Form 7"
+      }
+    }
+  ],
+  "meta": {
+    "title": "Contact Form 7",
+    "author": "Berislav Grgicak"
+  }
 }

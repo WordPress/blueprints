@@ -1,6 +1,38 @@
 {
+  "landingPage": "/wp-admin/post.php?post=1&action=edit",
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/disable-welcome-guides-1.php",
+      "data": "<?php \nfunction my_disable_welcome_guides() {\nwp_add_inline_script( 'wp-data', \"window.onload = function() {\nwindow.wp.data.dispatch( 'core/preferences' ).set( 'core/edit-site', 'welcomeGuide', false );\nwindow.wp.data.dispatch( 'core/preferences' ).set( 'core/edit-site', 'welcomeGuideStyles', false );\nwindow.wp.data.dispatch( 'core/preferences' ).set( 'core/edit-site', 'welcomeGuidePage', false );\nwindow.wp.data.dispatch( 'core/preferences' ).set( 'core/edit-site', 'welcomeGuideTemplate', false );\n}\" );\n}\nadd_action( 'enqueue_block_editor_assets', 'my_disable_welcome_guides', 20 );"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wordpress-seo"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php'; \nWPSEO_Options::set( 'should_redirect_after_install_free', false );"
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Yoast SEO \u2013 Advanced SEO with real-time guidance and built-in AI",
+    "title": "Yoast SEO",
     "author": "Berislav Grgicak"
   }
 }

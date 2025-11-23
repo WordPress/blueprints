@@ -55,7 +55,7 @@ async function buildIndex(): Promise<Record<string, IndexEntry>> {
 	const entries = await fs.readdir( PLUGINS_DIR );
 	const jsonFiles = entries.filter( ( e ) => e.endsWith( '.json' ) );
 
-	const index: Record<string, IndexEntry> = {};
+	const unsortedEntries: Array<{ path: string; entry: IndexEntry }> = [];
 
 	for ( const file of jsonFiles ) {
 		const filepath = path.join( PLUGINS_DIR, file );
@@ -71,11 +71,23 @@ async function buildIndex(): Promise<Record<string, IndexEntry>> {
 		const meta = blueprint.meta || {};
 		const screenshotExists = await hasScreenshot( slug );
 
-		index[relativePath] = {
-			title: meta.title || slug,
-			author: meta.author || '',
-			screenshot_url: screenshotExists ? buildScreenshotUrl( slug ) : '',
-		};
+		unsortedEntries.push( {
+			path: relativePath,
+			entry: {
+				title: meta.title || slug,
+				author: meta.author || '',
+				screenshot_url: screenshotExists ? buildScreenshotUrl( slug ) : '',
+			},
+		} );
+	}
+
+	unsortedEntries.sort( ( a, b ) =>
+		a.entry.title.localeCompare( b.entry.title, undefined, { sensitivity: 'base' } )
+	);
+
+	const index: Record<string, IndexEntry> = {};
+	for ( const { path, entry } of unsortedEntries ) {
+		index[path] = entry;
 	}
 
 	return index;

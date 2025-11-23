@@ -1,21 +1,19 @@
 {
+  "landingPage": "/wp-admin/themes.php?page=starter-templates",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "url",
-        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6ImFzdHJhLXNpdGVzIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi90aGVtZXMucGhwP3BhZ2U9c3RhcnRlci10ZW1wbGF0ZXMifX1dfQ=="
+        "resource": "wordpress.org/plugins",
+        "slug": "astra-sites"
       },
       "options": {
         "activate": true
-      },
-      "progress": {
-        "caption": "Installing plugin: plugin from akirk.github.io"
       }
     }
   ],
   "meta": {
-    "title": "Starter Templates \u2013 AI-Powered Templates for Elementor &amp; Gutenberg",
+    "title": "Starter Templates",
     "author": "Berislav Grgicak"
   }
 }

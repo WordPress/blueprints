@@ -30,5 +30,9 @@
       "step": "runPHP",
       "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n\n// Suppress the usage-data consent modal\nupdate_option( 'sm_user_consent', 'no' );\n// Hide beta & auto-update banners for clean demo\nupdate_option( 'sm_show_beta_banner', 'false' );\nif ( ! get_option( 'sm_beta_banner_discarded_on' ) ) {\n    update_option( 'sm_beta_banner_discarded_on', gmdate( 'Y/m/d' ) );\n}\nupdate_option( 'sm_beta_banner_discarded_count', 2 );\nupdate_option( 'sm_hide_auto_update_banner', 'yes' );\n\n// Seed demo content to verify sitemap generation\n$cat = wp_insert_term( 'Sitemap Demo Category', 'category' );\n$tag = wp_insert_term( 'Sitemap Demo Tag', 'post_tag' );\n$post_id = wp_insert_post( array(\n    'post_title'   => 'Post included in XML sitemap',\n    'post_content' => 'This post was created by the Playground blueprint to populate the sitemap.',\n    'post_status'  => 'publish',\n    'post_category'=> array( is_wp_error($cat) ? get_cat_ID('Sitemap Demo Category') : $cat['term_id'] ),\n    'tags_input'   => array( 'Sitemap Demo Tag' )\n) );\n\n// Configure plugin options to show HTML sitemap, include categories & tags\n$opts = (array) get_option( 'sm_options', array() );\n$opts['sm_b_html']   = true;\n$opts['sm_in_cats']  = true;\n$opts['sm_in_tags']  = true;\nupdate_option( 'sm_options', $opts );\n?>"
     }
-  ]
+  ],
+  "meta": {
+    "title": "XML Sitemap Generator for Google",
+    "author": "Adam Zielinski"
+  }
 }

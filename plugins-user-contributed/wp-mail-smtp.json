@@ -1,21 +1,28 @@
 {
+  "landingPage": "/wp-admin/admin.php?page=wp-mail-smtp",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "url",
-        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dwLW1haWwtc210cC8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoiYWRkRmlsdGVyIiwidmFycyI6eyJmaWx0ZXIiOiJ3cF9tYWlsX3NtdHBfYWRtaW5fc2V0dXBfd2l6YXJkX2xvYWRfd2l6YXJkIiwiY29kZSI6IidfX3JldHVybl9mYWxzZSciLCJwcmlvcml0eSI6IjEwIn19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT13cC1tYWlsLXNtdHAifX1dfQ=="
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-mail-smtp"
       },
       "options": {
         "activate": true
-      },
-      "progress": {
-        "caption": "Installing plugin: plugin from akirk.github.io"
       }
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/addFilter-1.php",
+      "data": "<?php add_filter( 'wp_mail_smtp_admin_setup_wizard_load_wizard', '__return_false' );"
     }
   ],
   "meta": {
-    "title": "WP Mail SMTP by WPForms \u2013 The Most Popular SMTP and Email Log Plugin",
+    "title": "WP Mail SMTP by WPForms",
     "author": "Jan Jakes"
   }
 }

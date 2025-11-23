@@ -38,9 +38,6 @@
       "progress": {
         "caption": "addPost: \u65e5\u672c\u306e\u56db\u5b63\u306b\u3064\u3044\u3066"
       }
-    },
-    {
-      "step": "landingPage=/"
     }
   ],
   "meta": {

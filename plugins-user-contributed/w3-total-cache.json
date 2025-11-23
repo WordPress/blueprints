@@ -1,16 +1,24 @@
 {
+  "landingPage": "/wp-admin/admin.php?page=w3tc_dashboard",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "url",
-        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6InczLXRvdGFsLWNhY2hlIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InJ1blBIUCIsInZhcnMiOnsiY29kZSI6Ijw/cGhwXG5jaG1vZChcIi93b3JkcHJlc3Mvd3AtY29udGVudFwiLCA3NTUpOyJ9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjoidzN0Y19zZXR1cGd1aWRlX2NvbXBsZXRlZCIsInZhbHVlIjoieWVzIn19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT13M3RjX2Rhc2hib2FyZCJ9fV19"
+        "resource": "wordpress.org/plugins",
+        "slug": "w3-total-cache"
       },
       "options": {
         "activate": true
-      },
-      "progress": {
-        "caption": "Installing plugin: plugin from akirk.github.io"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nchmod(\"/wordpress/wp-content\", 755);"
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "w3tc_setupguide_completed": "yes"
       }
     }
   ],

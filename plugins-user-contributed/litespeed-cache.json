@@ -1,5 +1,17 @@
 {
   "landingPage": "/wp-admin/admin.php?page=litespeed",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "litespeed-cache"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
   "meta": {
     "title": "LiteSpeed Cache",
     "author": "Alex Kirk"

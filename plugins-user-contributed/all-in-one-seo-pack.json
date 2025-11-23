@@ -1,21 +1,25 @@
 {
+  "landingPage": "/wp-admin/admin.php?page=aioseo",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "url",
-        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2FsbC1pbi1vbmUtc2VvLXBhY2svIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldFNpdGVPcHRpb24iLCJ2YXJzIjp7Im5hbWUiOiJhaW9zZW9fYWN0aXZhdGlvbl9yZWRpcmVjdCIsInZhbHVlIjoiX19yZXR1cm5fdHJ1ZSJ9fSx7InN0ZXAiOiJzZXRMYW5kaW5nUGFnZSIsInZhcnMiOnsibGFuZGluZ1BhZ2UiOiIvd3AtYWRtaW4vYWRtaW4ucGhwP3BhZ2U9YWlvc2VvIn19XX0="
+        "resource": "wordpress.org/plugins",
+        "slug": "all-in-one-seo-pack"
       },
       "options": {
         "activate": true
-      },
-      "progress": {
-        "caption": "Installing plugin: plugin from akirk.github.io"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "aioseo_activation_redirect": "__return_true"
       }
     }
   ],
   "meta": {
-    "title": "All in One SEO \u2013 Powerful SEO Plugin to Boost SEO Rankings &amp; Increase Traffic",
+    "title": "All in One SEO",
     "author": "Jan Jakes"
   }
 }

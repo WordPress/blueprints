@@ -1,17 +1,19 @@
 {
+  "landingPage": "/wp-admin/options-general.php?page=wpsupercache",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "url",
-        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dwLXN1cGVyLWNhY2hlLyIsInBycyI6ZmFsc2V9fSx7InN0ZXAiOiJydW5QSFAiLCJ2YXJzIjp7ImNvZGUiOiI8P3BocFxuY2htb2QoXCIvd29yZHByZXNzL3dwLWNvbnRlbnRcIiwgNzU1KTsifX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL29wdGlvbnMtZ2VuZXJhbC5waHA/cGFnZT13cHN1cGVyY2FjaGUifX1dfQ=="
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-super-cache"
       },
       "options": {
         "activate": true
-      },
-      "progress": {
-        "caption": "Installing plugin: plugin from akirk.github.io"
       }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nchmod(\"/wordpress/wp-content\", 755);"
     }
   ],
   "meta": {

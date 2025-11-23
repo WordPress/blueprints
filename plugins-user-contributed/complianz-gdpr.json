@@ -28,10 +28,13 @@
       "step": "setSiteOptions",
       "options": {
         "blogname": "Complianz GDPR Demo",
-
         "cmplz_onboarding_dismissed": true,
         "cmplz_wizard_completed_once": true
       }
     }
-  ]
+  ],
+  "meta": {
+    "title": "Complianz",
+    "author": "Adam Zielinski"
+  }
 }

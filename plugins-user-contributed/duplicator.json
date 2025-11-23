@@ -1,16 +1,15 @@
 {
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "landingPage": "/wp-admin/admin.php?page=duplicator",
-  "login": true,
   "preferredVersions": {
-    "php": "8.3",
-    "wp": "latest"
-  },
-  "siteOptions": {
-    "blogname": "Duplicator Demo Site",
-    "blogdescription": "Playground demo for Duplicator – Backups & Migration Plugin"
+    "wp": "latest",
+    "php": "8.3"
   },
   "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
     {
       "step": "installPlugin",
       "pluginData": {
@@ -23,7 +22,22 @@
     },
     {
       "step": "runPHP",
-      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n\n// 0) MU plugin: intercept Duplicator's welcome redirect and send to Packages instead.\n// MU plugins load before normal plugins and can hook earlier. :contentReference[oaicite:1]{index=1}\nif ( defined( 'WPMU_PLUGIN_DIR' ) ) {\n    if ( ! is_dir( WPMU_PLUGIN_DIR ) ) {\n        wp_mkdir_p( WPMU_PLUGIN_DIR );\n    }\n    $helper_path = WPMU_PLUGIN_DIR . '/duplicator-playground-helper.php';\n    if ( ! file_exists( $helper_path ) ) {\n        $helper_code  = \"<?php\\n\";\n        $helper_code .= \"/*\\n\";\n        $helper_code .= \"Plugin Name: Duplicator Playground Helper\\n\";\n        $helper_code .= \"Description: Skip Duplicator's email opt-in welcome screen in Playground demos.\\n\";\n        $helper_code .= \"*/\\n\";\n        $helper_code .= \"add_filter('wp_redirect', function (\\\\$location, \\\\$status) {\\n\";\n        $helper_code .= \"    if (strpos(\\\\$location, 'page=duplicator-getting-started') !== false) {\\n\";\n        $helper_code .= \"        return admin_url('admin.php?page=duplicator');\\n\";\n        $helper_code .= \"    }\\n\";\n        $helper_code .= \"    return \\\\$location;\\n\";\n        $helper_code .= \"}, 1, 2);\\n\";\n        file_put_contents( $helper_path, $helper_code );\n    }\n}\n\n// 1) Create a simple site to back up / migrate.\n$home_id = wp_insert_post([\n  'post_title'   => 'Duplicator demo homepage',\n  'post_name'    => 'duplicator-demo-home',\n  'post_status'  => 'publish',\n  'post_type'    => 'page',\n  'post_content' => 'This is a WordPress Playground demo site for the Duplicator plugin. In a real workflow, this would be your source site. Use Duplicator → Packages → Create New to build a backup/migration package of this site.'\n]);\n\nif ( $home_id && ! is_wp_error( $home_id ) ) {\n  update_option( 'show_on_front', 'page' );\n  update_option( 'page_on_front', $home_id );\n}\n\nwp_insert_post([\n  'post_title'   => 'Demo article: Before migration',\n  'post_status'  => 'publish',\n  'post_type'    => 'post',\n  'post_content' => 'Sample post for the Duplicator Playground demo. When you build a package, this content is included in the archive.'\n]);\n\nwp_insert_post([\n  'post_title'   => 'Demo article: After migration checklist',\n  'post_status'  => 'publish',\n  'post_type'    => 'post',\n  'post_content' => 'After restoring a Duplicator package on another host, you would verify pages, menus, and permalinks. This post just makes the package slightly more realistic.'\n]);\n\n// 2) Make sure the default storage dir exists and looks intentional.\n// Duplicator Lite stores packages under wp-content/wp-snapshots by default. :contentReference[oaicite:2]{index=2}\n$storage_dir = trailingslashit( WP_CONTENT_DIR ) . 'wp-snapshots';\nif ( ! file_exists( $storage_dir ) ) {\n  wp_mkdir_p( $storage_dir );\n}\n\n$readme_path = $storage_dir . '/README-playground-demo.txt';\nif ( ! file_exists( $readme_path ) ) {\n  file_put_contents(\n    $readme_path,\n    \"This is a WordPress Playground demo for the Duplicator plugin.\\n\" .\n    \"When you create a package from Duplicator → Packages, the archive and installer\\n\" .\n    \"will be written into this wp-snapshots directory.\\n\"\n  );\n}\n\n// 3) Light-touch duplicator_settings note (harmless if the plugin ignores it).\n$settings = get_option( 'duplicator_settings', [] );\n$settings['playground_snapshots_path_note'] = $storage_dir;\nupdate_option( 'duplicator_settings', $settings );\n"
+      "code": "<?php require_once '/wordpress/wp-load.php';\n$page_args = array(\n'post_type'    => 'page',\n'post_status'  => 'publish',\n'post_title'   => 'Duplicator demo homepage',\n'post_content' => 'This is a WordPress Playground demo site for the Duplicator plugin. In a real workflow, this would be your source site. Use Duplicator → Packages → Create New to build a backup/migration package of this site.',\n);\n$page_id = wp_insert_post( $page_args, true );\nif ( is_wp_error( $page_id ) ) {\nerror_log( 'addPage error: ' . $page_id->get_error_message() );\n}",
+      "progress": {
+        "caption": "addPage: Duplicator demo homepage"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Duplicator Demo Site",
+        "blogdescription": "Playground demo for Duplicator – Backups & Migration Plugin"
+      }
     }
-  ]
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Duplicator",
+    "author": "Adam Zielinski"
+  }
 }

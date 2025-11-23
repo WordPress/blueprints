@@ -51,5 +51,9 @@
       "step": "wp-cli",
       "command": "wp post create --post_type=page --post_status=publish --post_name=docs --post_title='Docs landing (Redirection demo)' --post_content='This page is the 302 target for /out-of-stock/, configured via the Redirection plugin.'"
     }
-  ]
+  ],
+  "meta": {
+    "title": "Redirection",
+    "author": "Adam Zielinski"
+  }
 }

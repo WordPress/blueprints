@@ -1,21 +1,25 @@
 {
+  "landingPage": "/wp-admin/admin.php?page=itsec&path=%2Fonboard%2Fsite-type",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "url",
-        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL2JldHRlci13cC1zZWN1cml0eS8iLCJwcnMiOmZhbHNlfX0seyJzdGVwIjoic2V0TGFuZGluZ1BhZ2UiLCJ2YXJzIjp7ImxhbmRpbmdQYWdlIjoiL3dwLWFkbWluL2FkbWluLnBocD9wYWdlPWl0c2VjJnBhdGg9JTJGb25ib2FyZCUyRnNpdGUtdHlwZSJ9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjoic3RlbGxhcndwX3RlbGVtZXRyeV9zb2xpZC1zZWN1cml0eV9zaG93X29wdGluIiwidmFsdWUiOiIwIn19XX0="
+        "resource": "wordpress.org/plugins",
+        "slug": "better-wp-security"
       },
       "options": {
         "activate": true
-      },
-      "progress": {
-        "caption": "Installing plugin: plugin from akirk.github.io"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "stellarwp_telemetry_solid-security_show_optin": "0"
       }
     }
   ],
   "meta": {
-    "title": "Solid Security \u2013 Password, Two Factor Authentication, and Brute Force Protection",
+    "title": "Solid Security",
     "author": "Jan Jakes"
   }
 }

@@ -1,21 +1,25 @@
 {
+  "landingPage": "/wp-admin/admin.php?page=smush",
   "steps": [
     {
       "step": "installPlugin",
       "pluginData": {
-        "resource": "url",
-        "url": "https://akirk.github.io/playground-step-library/#eyJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJ2YXJzIjp7InVybCI6Imh0dHBzOi8vd29yZHByZXNzLm9yZy9wbHVnaW5zL3dwLXNtdXNoaXQvIiwicHJzIjpmYWxzZX19LHsic3RlcCI6InNldExhbmRpbmdQYWdlIiwidmFycyI6eyJsYW5kaW5nUGFnZSI6Ii93cC1hZG1pbi9hZG1pbi5waHA/cGFnZT1zbXVzaCJ9fSx7InN0ZXAiOiJzZXRTaXRlT3B0aW9uIiwidmFycyI6eyJuYW1lIjoic2tpcC1zbXVzaC1zZXR1cCIsInZhbHVlIjoieWVzIn19XX0="
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-smushit"
       },
       "options": {
         "activate": true
-      },
-      "progress": {
-        "caption": "Installing plugin: plugin from akirk.github.io"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "skip-smush-setup": "yes"
       }
     }
   ],
   "meta": {
-    "title": "Smush Image Optimization \u2013 Optimize Images | Compress &amp; Lazy Load Images | Convert WebP &amp; AVIF | Image CDN",
+    "title": "Smush Image Optimization",
     "author": "Berislav Grgicak"
   }
 }

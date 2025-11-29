@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "Weather Shortcode Plugin",
-		"description": "A blueprint to connetc weather API and show data as shortcode on a WordPress site.",
+		"description": "A blueprint to connect weather API and show data as shortcode on a WordPress site.",
 		"author": "muryamsultana"
 	},
 	"steps": [

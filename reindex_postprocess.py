@@ -5,7 +5,7 @@ import subprocess
 import sys
 from functools import lru_cache
 
-highlighted_blueprints = [
+highlighted_blueprints = {
     'Stylish Press',
     'Feed Reader with the Friends Plugin',
     'Gaming News',
@@ -16,7 +16,7 @@ highlighted_blueprints = [
     'University Website',
     'Photography Portfolio',
     'Art Gallery',
-]
+}
 
 
 @lru_cache(maxsize=512)

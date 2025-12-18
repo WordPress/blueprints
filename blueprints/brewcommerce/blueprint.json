@@ -6,7 +6,7 @@
     "author": "adamziel",
     "categories": ["WooCommerce", "Store"]
   },
-  "landingPage": "/wp-admin/",
+  "landingPage": "/",
   "features": {
     "networking": true,
     "intl": true

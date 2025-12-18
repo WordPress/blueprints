@@ -1,0 +1,84 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Coffee Shop",
+    "description": "A stylish WooCommerce coffee shop storefront with custom theme, products, and content.",
+    "author": "nicogaldo",
+    "categories": ["WooCommerce", "Store"]
+  },
+  "landingPage": "/wp-admin/",
+  "features": {
+    "networking": true,
+    "intl": true
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "bundled",
+        "path": "./theme.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "woocommerce"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "unzip",
+      "zipFile": {
+        "resource": "bundled",
+        "path": "./uploads.zip"
+      },
+      "extractToPath": "/wordpress/wp-content"
+    },
+    {"step": "resetData"},
+    {
+      "step": "runSql",
+      "sql": {
+        "resource": "bundled",
+        "path": "./database.sql"
+      }
+    },
+    {
+      "step": "importWxr",
+      "file": {
+        "resource": "bundled",
+        "path": "./content.xml"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blog_public": "1",
+        "woocommerce_coming_soon": "no",
+        "woocommerce_coming_soon_enabled": "no"
+      }
+    },
+    {
+      "step": "writeFile",
+      "data": {
+        "resource": "bundled",
+        "path": "./ensure-media.php"
+      },
+      "path": "/wordpress/ensure-media.php"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/ensure-media.php'; ?>"
+    }
+  ]
+}

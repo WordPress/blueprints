@@ -1,4 +1,15 @@
 {
+  "blueprints/brewcommerce/blueprint.json": {
+    "title": "Coffee Shop",
+    "description": "A stylish WooCommerce coffee shop storefront with custom theme, products, and content.",
+    "author": "nicogaldo",
+    "categories": [
+      "WooCommerce",
+      "Store"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/brewcommerce/screenshot.jpg",
+    "featured": false
+  },
   "blueprints/portfolio-vueo/blueprint.json": {
     "title": "Art Gallery",
     "description": "An art gallery created with the Vueo theme.",

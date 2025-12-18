@@ -39,9 +39,6 @@ jobs:
             - name: Take screenshots
               run: npm run shots
 
-            - name: Inject screenshots into GALLERY.md
-              run: npm run inject
-
             - name: Check for changes
               id: check_changes
               run: |
@@ -56,7 +53,7 @@ jobs:
               run: |
                   git config --global user.name "github-actions[bot]"
                   git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git add blueprints/*/screenshot.jpg GALLERY.md
+                  git add blueprints/*/screenshot.jpg
                   git commit -m "chore: add missing Blueprint screenshots"
                   git push
 

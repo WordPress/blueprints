@@ -3,8 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "shots": "tsx scripts/screenshot-blueprints.ts",
-    "inject": "tsx scripts/inject-screenshots.ts"
+    "shots": "tsx scripts/screenshot-blueprints.ts"
   },
   "devDependencies": {
     "playwright": "^1.48.0",

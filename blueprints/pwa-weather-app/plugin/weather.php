@@ -19,7 +19,100 @@ if ( ! class_exists( 'OWS_Weather_Shortcode' ) ) {
 
         public function __construct() {
             add_action( 'admin_menu', [ $this, 'add_settings_page' ] );
+            add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_styles' ] );
             add_shortcode( 'ows_weather', [ $this, 'shortcode_handler' ] );
+        }
+
+        // Enqueue styles
+        public function enqueue_styles() {
+            $css = "
+                .ows-error {
+                    background: linear-gradient(135deg, #fff5f5 0%, #ffe5e5 100%);
+                    border-radius: 8px;
+                    padding: 16px 20px;
+                    margin: 20px 0;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    color: #721c24;
+                    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.15);
+                    position: relative;
+                    overflow: hidden;
+                }
+                .ows-error::before {
+                    content: '⚠️';
+                    font-size: 20px;
+                    margin-right: 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .ows-error code {
+                    background: rgba(220, 53, 69, 0.1);
+                    padding: 2px 6px;
+                    border-radius: 4px;
+                    font-family: 'Courier New', monospace;
+                    font-size: 13px;
+                    color: #a71d2a;
+                }
+                .ows-card {
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    border-radius: 16px;
+                    padding: 24px;
+                    max-width: 400px;
+                    margin: 20px auto;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                    color: #fff;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+                }
+                .ows-title {
+                    margin: 0 0 16px;
+                    font-size: 24px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+                .ows-main {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 20px 0;
+                }
+                .ows-icon {
+                    width: 80px;
+                    height: 80px;
+                }
+                .ows-temp {
+                    font-size: 48px;
+                    font-weight: bold;
+                    margin-left: 16px;
+                }
+                .ows-condition {
+                    text-align: center;
+                    font-size: 18px;
+                    margin: 12px 0;
+                    opacity: 0.95;
+                }
+                .ows-details {
+                    background: rgba(255,255,255,0.15);
+                    border-radius: 12px;
+                    padding: 16px;
+                    margin: 16px 0;
+                }
+                .ows-details p {
+                    margin: 8px 0;
+                    font-size: 14px;
+                }
+                .ows-label {
+                    font-weight: 600;
+                    opacity: 0.9;
+                }
+                .ows-updated {
+                    display: block;
+                    text-align: center;
+                    opacity: 0.8;
+                    font-size: 12px;
+                }
+            ";
+            wp_add_inline_style( 'wp-block-library', $css );
         }
 
         // Add settings page
@@ -88,7 +181,21 @@ if ( ! class_exists( 'OWS_Weather_Shortcode' ) ) {
                 : get_option( $this->api_key_option, '' );
 
             if ( empty( $key ) ) {
-                return '<p class="ows-error">' . esc_html__( 'OpenWeatherAPI Error: Please provide an API key via shortcode [ows_weather city="YourCity" api_key="your-key"] or in Settings > OpenWeatherAPI.', 'openweather-shortcode' ) . '</p>';
+                $error_msg = esc_html__( 'OpenWeatherAPI Error: Please provide an API key via shortcode', 'openweather-shortcode' );
+                $error_msg .= ' <code>[ows_weather city="YourCity" api_key="your-key"]</code>';
+                
+                // Add settings link if user is logged in and can manage options
+                if ( current_user_can( 'manage_options' ) ) {
+                    $settings_url = admin_url( 'options-general.php?page=ows-settings' );
+                    $error_msg .= ' ' . sprintf( 
+                        esc_html__( 'or in %s.', 'openweather-shortcode' ),
+                        '<a href="' . esc_url( $settings_url ) . '">' . esc_html__( 'Settings &gt; OpenWeatherAPI', 'openweather-shortcode' ) . '</a>'
+                    );
+                } else {
+                    $error_msg .= ' ' . esc_html__( 'or in Settings > OpenWeatherAPI.', 'openweather-shortcode' );
+                }
+                
+                return '<p class="ows-error">' . $error_msg . '</p>';
             }
 
             $transient_key = 'ows_weather_' . md5( $city );

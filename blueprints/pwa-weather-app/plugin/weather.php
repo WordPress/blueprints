@@ -54,6 +54,16 @@ if ( ! class_exists( 'OWS_Weather_Shortcode' ) ) {
                     font-size: 13px;
                     color: #a71d2a;
                 }
+                .ows-error a {
+                    color: #a71d2a;
+                    font-weight: 600;
+                    text-decoration: underline;
+                    transition: color 0.2s ease;
+                }
+                .ows-error a:hover {
+                    color: #dc3545;
+                    text-decoration: none;
+                }
                 .ows-card {
                     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
                     border-radius: 16px;

@@ -1,0 +1,35 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Personal Blog",
+		"description": "A personal blog site created with the Substrata theme.",
+		"author": "WordPress.com",
+		"categories": ["Website", "Personal", "Blog"]
+	},
+	"login": true,
+	"siteOptions": {
+		"blogname": "Substrata"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "bundled",
+				"path": "./substrata.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "bundled",
+				"path": "./content.xml"
+			}
+		}
+	]
+}

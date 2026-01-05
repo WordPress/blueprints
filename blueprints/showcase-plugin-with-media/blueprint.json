@@ -1,0 +1,99 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Showcase plugin",
+		"description": "Showcase custom plugin from own server with media files and content imported as WXR. There is a readme file in github repository (https://github.com/Lovor01/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/readme.md) which explains all steps.",
+		"author": "Lovor01",
+		"categories": ["plugin", "demo", "media", "images"]
+	},
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "6.7"
+	},
+	"landingPage": "/",
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin"
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "makeiteasy-back-to-top"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "makeiteasy-popup"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfour"
+			}
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/twentytwentyfour-child.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "MakeITeasy popup demo",
+				"blogdescription": "Popup demo",
+				"page_on_front": "4",
+				"users_can_register": "0",
+				"posts_per_page": "10",
+				"default_role": "subscriber",
+				"uploads_use_yearmonth_folders": "1",
+				"blog_public": "1",
+				"show_on_front": "page"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"thumbnail_size_w": "150",
+				"thumbnail_size_h": "150",
+				"thumbnail_crop": "1",
+				"medium_size_w": "300",
+				"medium_size_h": "300",
+				"avatar_default": "mystery",
+				"large_size_w": "1024",
+				"large_size_h": "1024"
+			}
+		},
+		{
+			"step": "unzip",
+			"zipFile": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/2024.zip"
+			},
+			"extractToPath": "/wordpress/wp-content/uploads"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/makeiteasypopupblock.WordPress.2024-06-20.xml"
+			}
+		}
+	]
+}

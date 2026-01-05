@@ -7,9 +7,12 @@ on:
 
 jobs:
     build:
+        if: ${{ github.actor != 'deployment_bot' }}
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
             - name: Set up Python 3.8
               uses: actions/setup-python@v2
               with:
@@ -45,3 +48,4 @@ jobs:
                   if [ $? -eq 0 ]; then
                     git push git@github.com:${{ github.repository }}.git --follow-tags
                   fi;
+

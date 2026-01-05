@@ -10,6 +10,25 @@
 	"landingPage": "/wp-admin/post-new.php",
 	"steps": [
 		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Blocky Formats Demo"
+			}
+		},
+		{
+			"step": "setUserMeta",
+			"meta": {
+				"wp_persisted_preferences": {
+					"core/edit-post": {
+						"welcomeGuide": false
+					},
+					"core/edit-site": {
+						"welcomeGuide": false
+					}
+				}
+			}
+		},
+		{
 			"step": "installPlugin",
 			"options": {
 				"activate": true,
@@ -18,8 +37,8 @@
 			"pluginData": {
 				"resource": "git:directory",
 				"url": "https://github.com/dmsnell/blocky-formats.git",
-				"ref": "trunk",
-				"path": ""
+				"ref": "HEAD",
+				"path": "/"
 			}
 		}
 	]

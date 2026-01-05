@@ -1,0 +1,35 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "University Website",
+		"description": "A university website created with the Kentwood theme.",
+		"author": "WordPress.com",
+		"categories": ["Website", "Organization", "Education"]
+	},
+	"login": true,
+	"siteOptions": {
+		"blogname": "Kentwood"
+	},
+	"steps": [
+		{
+			"step": "resetData"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "bundled",
+				"path": "./kentwood.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "bundled",
+				"path": "./content.xml"
+			}
+		}
+	]
+}

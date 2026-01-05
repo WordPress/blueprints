@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name: OpenWeather Shortcode
- * Description: Displays current weather via shortcode [weather city="YourCity"] with beautiful styling.
- * Version: 1.0
+ * Description: Displays current weather via shortcode [weather city="YourCity" api_key="your-key"] with beautiful styling.
+ * Version: 1.1
  * Author: Muryam
  * Text Domain: openweather-shortcode
  */
@@ -14,19 +14,10 @@ if (!defined('ABSPATH')) {
 
 class OpenWeather_Shortcode {
     private $api_key_option = 'openweather_api_key';
-    private $key =  'bdabe763ab4c3757cd2754c5af5148ec';
 
     public function __construct() {
-        add_action('after_setup_theme', [$this, 'add_key']);
         add_action('admin_menu', [$this, 'add_settings_page']);
         add_shortcode('weather', [$this, 'shortcode_handler']);
-
-    }
-    //add default key
-    public function add_key(){
-        if (!get_option($this->api_key_option)) {
-            add_option($this->api_key_option, $this->key);
-        }
     }
     
     // Add settings page
@@ -57,6 +48,7 @@ class OpenWeather_Shortcode {
                         <td>
                             <input type="text" name="openweather_api_key" value="<?php echo esc_attr($key); ?>" class="regular-text" />
                             <p class="description">Enter your OpenWeatherMap API key (get one at <a href="https://openweathermap.org" target="_blank">openweathermap.org</a>).</p>
+                            <p class="description">Alternatively, you can pass the API key directly in the shortcode: <code>[weather city="London" api_key="your-key"]</code></p>
                         </td>
                     </tr>
                 </table>
@@ -67,12 +59,20 @@ class OpenWeather_Shortcode {
     }
     // Shortcode handler
     public function shortcode_handler($atts) {
-        $atts = shortcode_atts(['city' => 'London'], $atts);
+        $atts = shortcode_atts([
+            'city' => 'London',
+            'api_key' => ''
+        ], $atts);
+        
         $city = sanitize_text_field($atts['city']);
-        $key = get_option($this->api_key_option, '');
+        
+        // Prioritize shortcode api_key, fallback to stored option
+        $key = !empty($atts['api_key']) 
+            ? sanitize_text_field($atts['api_key']) 
+            : get_option($this->api_key_option, '');
 
         if (empty($key)) {
-            return '<p class="openweather-error">OpenWeatherAPI Error: Please enter your API key in Settings > OpenWeatherAPI.</p>';
+            return '<p class="openweather-error">OpenWeatherAPI Error: Please provide an API key via shortcode [weather city="YourCity" api_key="your-key"] or in Settings > OpenWeatherAPI.</p>';
         }
 
         $transient_key = 'openweather_' . md5($city);

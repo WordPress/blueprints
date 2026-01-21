@@ -14,3 +14,7 @@ fi
 
 cp "$SOURCE_FILE" "$TARGET_FILE"
 echo "Synced $(grep -c '"name":' "$TARGET_FILE") plugins to $TARGET_FILE"
+
+# Rebuild JSON files to add screenshot URLs
+cd "$ROOT_DIR"
+npm run build-plugins

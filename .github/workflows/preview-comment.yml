@@ -44,7 +44,7 @@ jobs:
                       if ( !blueprintFile ) {
                         return '';
                       }
-                      return blueprintFile.raw_url;
+                      return decodeURIComponent(blueprintFile.raw_url);
 
             - name: Leave a comment about testing with Playground
               uses: WordPress/action-wp-playground-pr-preview@v2

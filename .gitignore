@@ -28,3 +28,7 @@ yarn-error.log*
 *.swp
 *.bak
 *.tmp
+
+# Python cache
+__pycache__/
+*.pyc

@@ -69,7 +69,7 @@ function resolveScreenshotLocalPath(screenshot: string, slug: string): string | 
     return path.resolve(ROOT, 'blueprints', slug, screenshot);
   }
 
-  // External URL → not a repo file; treat as "missing" so we'll generate one.
+  // External URL → not a repo file; can't resolve to a local path.
   return null;
 }
 
@@ -83,10 +83,22 @@ async function fileExists(p: string | null): Promise<boolean> {
   }
 }
 
-async function hasRepoScreenshot(slug: string): Promise<boolean> {
+async function hasScreenshot(slug: string): Promise<boolean> {
+  // Default gallery behavior: if meta.screenshot isn't set, it expects `screenshot.jpg`
+  // next to `blueprint.json`.
+  const defaultScreenshot = path.join(BLUEPRINTS_DIR, slug, 'screenshot.jpg');
+  if (await fileExists(defaultScreenshot)) return true;
+
   const bp = await readBlueprint(slug);
   const scr = bp?.meta?.screenshot;
   if (!scr || typeof scr !== 'string') return false;
+
+  // Any URL counts as "has a screenshot" (even if it's not stored in-repo).
+  if (/^[a-z]+:\/\//i.test(scr)) {
+    const local = resolveScreenshotLocalPath(scr, slug);
+    return local ? fileExists(local) : true;
+  }
+
   const local = resolveScreenshotLocalPath(scr, slug);
   return fileExists(local);
 }
@@ -99,15 +111,15 @@ async function readTitle(slug: string) {
 async function main() {
   const slugs = await listBlueprintSlugs();
 
-  // Filter: only those without a repo-backed screenshot
+  // Filter: only those without any screenshot yet
   const toShoot: string[] = [];
   for (const slug of slugs) {
-    if (!(await hasRepoScreenshot(slug))) {
+    if (!(await hasScreenshot(slug))) {
       toShoot.push(slug);
     }
   }
   if (toShoot.length === 0) {
-    console.log('All Blueprints already have repo screenshots. Nothing to do.');
+    console.log('All Blueprints already have screenshots. Nothing to do.');
     return;
   }
 

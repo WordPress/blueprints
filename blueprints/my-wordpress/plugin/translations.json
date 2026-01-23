@@ -1,0 +1,14 @@
+{
+	"available": {
+		"de_DE": {
+			"contentDir": "de"
+		},
+		"pl_PL": {
+			"contentDir": "pl"
+		}
+	},
+	"fallbacks": {
+		"de_AT": "de_DE",
+		"de_CH": "de_DE"
+	}
+}

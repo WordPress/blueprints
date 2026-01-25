@@ -111,7 +111,7 @@
 
 .playground-welcome-overlay .button-primary,
 .playground-welcome-overlay .button-secondary {
-	padding: 14px 28px;
+	padding: 2px 20px;
 	border-radius: 8px;
 	font-size: 16px;
 	font-weight: 500;
@@ -125,7 +125,6 @@
 .playground-welcome-overlay .button-primary {
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	color: #fff;
-	flex: 1;
 }
 
 .playground-welcome-overlay .button-primary:hover:not(:disabled) {

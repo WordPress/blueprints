@@ -72,16 +72,16 @@ msgid "50 posts"
 msgstr "50 Beiträge"
 
 #: playground-welcome.php
-msgid "Get Started"
-msgstr "Los geht's"
+msgid "Continue"
+msgstr "Weiter"
 
 #: playground-welcome.php
 msgid "Importing..."
 msgstr "Importiere..."
 
 #: playground-welcome.php
-msgid "Skip & Go to Site"
-msgstr "Überspringen & zur Seite"
+msgid "Not now"
+msgstr "Nicht jetzt"
 
 #: playground-welcome.php
 msgid "Security check failed."

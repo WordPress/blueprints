@@ -19,7 +19,8 @@
 				"refType": "branch"
 			},
 			"options": {
-				"activate": true
+				"activate": true,
+				"targetFolderName": "playground-ai-assistant"
 			}
 		}
 	]

@@ -193,10 +193,10 @@ class Playground_Welcome {
 
                     <div class="button-group">
                         <button type="submit" class="button-primary" id="save-button">
-                            <span class="button-text"><?php echo esc_html__('Get Started', 'playground-welcome'); ?></span>
+                            <span class="button-text"><?php echo esc_html__('Continue', 'playground-welcome'); ?></span>
                             <span class="button-loading" style="display: none;"><?php echo esc_html__('Importing...', 'playground-welcome'); ?></span>
                         </button>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="button-secondary"><?php echo esc_html__('Skip & Go to Site', 'playground-welcome'); ?></a>
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="button-secondary"><?php echo esc_html__('Not now', 'playground-welcome'); ?></a>
                     </div>
                 </form>
             </div>

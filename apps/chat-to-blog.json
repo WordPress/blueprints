@@ -3,7 +3,7 @@
 	"meta": {
 		"title": "Chat to Blog",
 		"description": "Import media from Beeper chats and create blog posts. Requires Beeper Desktop running.",
-		"author": "akirk",
+		"author": "Alex Kirk",
 		"categories": ["Apps", "Media"]
 	},
 	"landingPage": "/wp-admin/admin.php?page=chat-to-blog",

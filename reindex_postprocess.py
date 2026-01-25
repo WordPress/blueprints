@@ -93,6 +93,22 @@ def build_screenshot_html(preview, screenshot_path, title):
         preview=preview
     )
 
+def build_apps_index():
+    index = {}
+    for root, dirs, files in os.walk('apps'):
+        for file in files:
+            if file.endswith('.json'):
+                path = os.path.join(root, file)
+                with open(path, 'r') as f:
+                    data = json.load(f)
+                    meta = data.get('meta', {})
+                    index[path] = dict(meta)
+    index = dict(sorted(index.items(), key=lambda item: item[1].get('title', '')))
+    with open('apps.json', 'w') as f:
+        json.dump(index, f, indent=2)
+    return index
+
+
 def build_json_index():
     index = {}
     for root, dirs, files in os.walk('blueprints'):
@@ -271,6 +287,7 @@ if '--test' in sys.argv:
 else:
     print("Reindexing")
     index_data = build_json_index()
+    build_apps_index()
     build_markdown_table()
     build_gallery_html(index_data)
     rewrite_branch_urls_to_trunk()

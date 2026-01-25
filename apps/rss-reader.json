@@ -3,7 +3,7 @@
 	"meta": {
 		"title": "RSS Reader",
 		"description": "Follow friends and consume their content in your WordPress",
-		"author": "akirk",
+		"author": "Alex Kirk",
 		"categories": ["Apps", "Social"]
 	},
 	"landingPage": "/friends/?refresh&welcome",

@@ -3,7 +3,7 @@
 	"meta": {
 		"title": "App Launcher",
 		"description": "Adds an app launcher to your WordPress",
-		"author": "akirk",
+		"author": "Alex Kirk",
 		"categories": ["Apps", "Utility"]
 	},
 	"landingPage": "/wp-admin/options-general.php?page=my-apps",

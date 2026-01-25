@@ -109,8 +109,8 @@
 	margin-top: 32px;
 }
 
-.button-primary,
-.button-secondary {
+.playground-welcome-overlay .button-primary,
+.playground-welcome-overlay .button-secondary {
 	padding: 14px 28px;
 	border-radius: 8px;
 	font-size: 16px;
@@ -122,29 +122,29 @@
 	border: none;
 }
 
-.button-primary {
+.playground-welcome-overlay .button-primary {
 	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 	color: #fff;
 	flex: 1;
 }
 
-.button-primary:hover:not(:disabled) {
+.playground-welcome-overlay .button-primary:hover:not(:disabled) {
 	transform: translateY(-1px);
 	box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
-.button-primary:disabled {
+.playground-welcome-overlay .button-primary:disabled {
 	opacity: 0.7;
 	cursor: not-allowed;
 }
 
-.button-secondary {
+.playground-welcome-overlay .button-secondary {
 	background: #f1f5f9;
 	color: #475569;
 	border: 2px solid #e2e8f0;
 }
 
-.button-secondary:hover {
+.playground-welcome-overlay .button-secondary:hover {
 	background: #e2e8f0;
 	color: #334155;
 }

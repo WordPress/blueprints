@@ -104,8 +104,6 @@
 }
 
 .button-group {
-	display: flex;
-	gap: 24px;
 	margin-top: 32px;
 }
 
@@ -142,6 +140,7 @@
 	background: #f1f5f9;
 	color: #475569;
 	border: 2px solid #e2e8f0;
+	margin-left: 16px;
 }
 
 .button-secondary:hover {

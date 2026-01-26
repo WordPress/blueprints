@@ -290,6 +290,9 @@ class Playground_Welcome {
                 $feed_url = 'https://' . $feed_url;
             }
             $feed_url = esc_url_raw($feed_url);
+            if (empty($feed_url)) {
+                wp_send_json_error(['message' => __('Please enter a valid website URL.', 'playground-welcome')]);
+            }
             $import_result = $this->import_feed($feed_url, $max_items);
             if ($import_result['success']) {
                 $messages[] = $import_result['message'];

@@ -158,13 +158,13 @@
 .welcome-message.success {
 	background: #ecfdf5;
 	color: #065f46;
-	border: 1px solid #a7f3d0;
+	border: 2px solid #34d399;
 }
 
 .welcome-message.error {
 	background: #fef2f2;
 	color: #991b1b;
-	border: 1px solid #fecaca;
+	border: 2px solid #f87171;
 }
 
 .import-details {

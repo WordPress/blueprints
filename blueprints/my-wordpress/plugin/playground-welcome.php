@@ -157,10 +157,17 @@ class Playground_Welcome {
 
                     <div class="field-group">
                         <label for="display_name"><?php echo esc_html__("What's your name?", 'playground-welcome'); ?></label>
+                        <?php
+                        $prefill_name = '';
+                        if ($current_user->display_name && strtolower($current_user->display_name) !== 'admin') {
+                            $prefill_name = $current_user->display_name;
+                        }
+                        ?>
                         <input
                             type="text"
                             id="display_name"
                             name="display_name"
+                            value="<?php echo esc_attr($prefill_name); ?>"
                             autofocus
                         >
                     </div>
@@ -224,8 +231,15 @@ class Playground_Welcome {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
-            .then(data => {
+            .then(response => response.text())
+            .then(text => {
+                let data;
+                try {
+                    data = JSON.parse(text);
+                } catch (e) {
+                    throw new Error(text || 'Invalid response from server');
+                }
+
                 if (data.success) {
                     messageEl.className = 'welcome-message success';
                     messageEl.textContent = data.data.message;
@@ -235,18 +249,12 @@ class Playground_Welcome {
                         window.location.href = '<?php echo esc_url(home_url('/')); ?>';
                     }, 1500);
                 } else {
-                    messageEl.className = 'welcome-message error';
-                    messageEl.textContent = data.data.message || 'An error occurred.';
-                    messageEl.style.display = 'block';
-
-                    button.disabled = false;
-                    buttonText.style.display = 'inline';
-                    buttonLoading.style.display = 'none';
+                    throw new Error(data.data?.message || 'An error occurred.');
                 }
             })
             .catch(error => {
                 messageEl.className = 'welcome-message error';
-                messageEl.textContent = 'An error occurred. Please try again.';
+                messageEl.textContent = error.message || 'An error occurred. Please try again.';
                 messageEl.style.display = 'block';
 
                 button.disabled = false;
@@ -335,6 +343,9 @@ class Playground_Welcome {
         $imported = 0;
         $current_user_id = get_current_user_id();
 
+        remove_action('do_pings', 'do_all_pings', 10);
+        remove_action('publish_post', '_publish_post_hook', 5);
+
         foreach ($items as $item) {
             $title = $item->get_title();
             $content = $item->get_content();
@@ -361,6 +372,8 @@ class Playground_Welcome {
                 'post_status' => 'publish',
                 'post_author' => $current_user_id,
                 'post_date' => $date ?: current_time('mysql'),
+                'ping_status' => 'closed',
+                'to_ping' => '',
             ]);
 
             if ($post_id && !is_wp_error($post_id)) {
@@ -368,6 +381,9 @@ class Playground_Welcome {
                 $imported++;
             }
         }
+
+        add_action('do_pings', 'do_all_pings', 10);
+        add_action('publish_post', '_publish_post_hook', 5);
 
         return [
             'success' => true,

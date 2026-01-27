@@ -17,7 +17,7 @@
 			"pluginData": {
 				"resource": "git:directory",
 				"url": "https://github.com/WordPress/blueprints",
-				"ref": "my-wordpress",
+				"ref": "trunk",
 				"refType": "branch",
 				"path": "blueprints/my-wordpress/plugin"
 			},

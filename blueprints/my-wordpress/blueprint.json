@@ -19,7 +19,8 @@
 				"path": "blueprints/my-wordpress/plugin"
 			},
 			"options": {
-				"activate": true
+				"activate": true,
+				"targetFolderName": "playground-welcome"
 			}
 		}
 	]

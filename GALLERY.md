@@ -4,7 +4,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>Art Gallery</strong></h2>
 <p>An art gallery created with the Vueo theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-vueo/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/portfolio-vueo/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-vueo/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/portfolio-vueo/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/portfolio-vueo/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/portfolio-vueo/screenshot.jpg" alt="Art Gallery screenshot" width="400"></p>
 <br clear="all">
@@ -28,7 +28,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>Gaming News</strong></h2>
 <p>A gaming news site created with the Spiel theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-spiel/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/news-spiel/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-spiel/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/news-spiel/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/news-spiel/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/news-spiel/screenshot.jpg" alt="Gaming News screenshot" width="400"></p>
 <br clear="all">
@@ -36,7 +36,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>Non-profit Organization</strong></h2>
 <p>A non-profit organization site created with the Koinonia theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-koinonia/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/organization-koinonia/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-koinonia/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/organization-koinonia/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/organization-koinonia/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/organization-koinonia/screenshot.jpg" alt="Non-profit Organization screenshot" width="400"></p>
 <br clear="all">
@@ -44,7 +44,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>Personal Blog</strong></h2>
 <p>A personal blog site created with the Substrata theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-substrata/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/personal-substrata/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-substrata/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/personal-substrata/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/personal-substrata/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/personal-substrata/screenshot.jpg" alt="Personal Blog screenshot" width="400"></p>
 <br clear="all">
@@ -52,7 +52,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>Personal Resume</strong></h2>
 <p>A resume site created with the Readymade theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-readymade/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/personal-readymade/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/personal-readymade/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/personal-readymade/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/personal-readymade/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/personal-readymade/screenshot.jpg" alt="Personal Resume screenshot" width="400"></p>
 <br clear="all">
@@ -60,7 +60,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>Photography Portfolio</strong></h2>
 <p>A photography portfolio created with the Grammer theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-grammer/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/portfolio-grammer/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/portfolio-grammer/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/portfolio-grammer/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/portfolio-grammer/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/portfolio-grammer/screenshot.jpg" alt="Photography Portfolio screenshot" width="400"></p>
 <br clear="all">
@@ -68,7 +68,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>Skincare Blog</strong></h2>
 <p>A skincare blog created with the Piel theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-piel/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/news-piel/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/news-piel/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/news-piel/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/news-piel/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/news-piel/screenshot.jpg" alt="Skincare Blog screenshot" width="400"></p>
 <br clear="all">
@@ -76,7 +76,7 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2><strong>University Website</strong></h2>
 <p>A university website created with the Kentwood theme.</p>
-<p><small>By <a href="https://github.com/WordPress.com">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-kentwood/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/organization-kentwood/blueprint.json">Edit</a></small></p>
+<p><small>By <a href="https://github.com/Automattic">@WordPress.com</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/organization-kentwood/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/organization-kentwood/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/organization-kentwood/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/organization-kentwood/screenshot.jpg" alt="University Website screenshot" width="400"></p>
 <br clear="all">

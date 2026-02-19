@@ -14,7 +14,7 @@
 			"step": "installPlugin",
 			"pluginData": {
 				"resource": "git:directory",
-				"url": "https://github.com/akirk/playground-ai-assistant",
+				"url": "https://github.com/bgrgicak/playground-ai-assistant",
 				"ref": "main",
 				"refType": "branch"
 			},

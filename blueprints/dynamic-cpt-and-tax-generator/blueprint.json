@@ -20,7 +20,7 @@
 				"url": "https://github.com/WordPress/blueprints",
 				"ref": "trunk",
 				"refType": "branch",
-				"path": "blueprints/blueprints/dynamic-cpt-and-tax-generator"
+				"path": "blueprints/dynamic-cpt-and-tax-generator"
 			},
 			"options": {
 				"activate": true

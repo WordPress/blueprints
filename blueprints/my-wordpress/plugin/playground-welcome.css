@@ -1,0 +1,237 @@
+/* Hide the default admin UI when showing welcome */
+#wpcontent,
+#wpfooter {
+	margin-left: 0 !important;
+}
+
+#adminmenumain,
+#wpadminbar {
+	display: none !important;
+}
+
+.playground-welcome-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	z-index: 999999;
+	padding: 20px;
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+
+.playground-welcome-dialog {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	padding: 40px 48px;
+	max-width: 520px;
+	width: 100%;
+	animation: slideUp 0.4s ease-out;
+	margin: auto;
+}
+
+@keyframes slideUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.playground-welcome-dialog h1 {
+	margin: 0 0 8px 0;
+	font-size: 28px;
+	font-weight: 600;
+	color: #1e293b;
+	text-wrap: balance;
+	line-height: 1.3;
+}
+
+.playground-welcome-dialog .intro {
+	margin: 0 0 32px 0;
+	color: #64748b;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.field-group {
+	margin-bottom: 24px;
+}
+
+.field-group label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: 500;
+	color: #334155;
+	font-size: 14px;
+}
+
+.field-group input[type='text'],
+.field-group input[type='url'],
+.field-group select {
+	width: 100%;
+	padding: 12px 16px;
+	border: 2px solid #e2e8f0;
+	border-radius: 8px;
+	font-size: 16px;
+	transition:
+		border-color 0.2s,
+		box-shadow 0.2s;
+	box-sizing: border-box;
+}
+
+.field-group input[type='text']:focus,
+.field-group input[type='url']:focus,
+.field-group select:focus {
+	outline: none;
+	border-color: #667eea;
+	box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.field-group .field-hint {
+	margin: 8px 0 0 0;
+	font-size: 13px;
+	color: #94a3b8;
+}
+
+.playground-welcome-overlay .button-group {
+	display: flex;
+	gap: 24px;
+	margin-top: 32px;
+}
+
+.playground-welcome-overlay .button-primary,
+.playground-welcome-overlay .button-secondary {
+	padding: 2px 20px;
+	border-radius: 8px;
+	font-size: 16px;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.2s;
+	text-decoration: none;
+	text-align: center;
+	border: none;
+}
+
+.playground-welcome-overlay .button-primary {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: #fff;
+}
+
+.playground-welcome-overlay .button-primary:hover:not(:disabled) {
+	transform: translateY(-1px);
+	box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.playground-welcome-overlay .button-primary:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+.playground-welcome-overlay .button-secondary {
+	background: #f1f5f9;
+	color: #475569;
+	border: 2px solid #e2e8f0;
+}
+
+.playground-welcome-overlay .button-secondary:hover {
+	background: #e2e8f0;
+	color: #334155;
+}
+
+.welcome-message {
+	padding: 12px 16px;
+	border-radius: 8px;
+	font-size: 14px;
+	margin-top: 16px;
+}
+
+.welcome-message.success {
+	background: #ecfdf5;
+	color: #065f46;
+	border: 2px solid #34d399;
+}
+
+.welcome-message.error {
+	background: #fef2f2;
+	color: #991b1b;
+	border: 2px solid #f87171;
+}
+
+.import-details {
+	margin-bottom: 24px;
+	border: 2px solid #e2e8f0;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.import-details summary {
+	padding: 14px 16px;
+	font-weight: 500;
+	color: #334155;
+	font-size: 14px;
+	cursor: pointer;
+	background: #f8fafc;
+	transition: background 0.2s;
+	list-style: none;
+}
+
+.import-details summary::-webkit-details-marker {
+	display: none;
+}
+
+.import-details summary::before {
+	content: '+';
+	display: inline-block;
+	width: 20px;
+	font-weight: 600;
+	color: #64748b;
+}
+
+.import-details[open] summary::before {
+	content: '−';
+}
+
+.import-details summary:hover {
+	background: #f1f5f9;
+}
+
+.import-details[open] summary {
+	border-bottom: 2px solid #e2e8f0;
+}
+
+.import-details .field-group {
+	padding: 16px;
+	margin-bottom: 0;
+}
+
+.import-details .field-group:first-of-type {
+	padding-top: 20px;
+}
+
+.import-details .field-group:last-of-type {
+	padding-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+	.playground-welcome-dialog {
+		padding: 24px;
+	}
+
+	.playground-welcome-dialog h1 {
+		font-size: 22px;
+	}
+
+	.playground-welcome-overlay .button-group {
+		flex-direction: column;
+	}
+}

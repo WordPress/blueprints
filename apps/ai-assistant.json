@@ -1,0 +1,27 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "AI Assistant",
+		"description": "AI-powered chat interface to modify your WordPress to your liking. Bring your own key or use a local LLM",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"AI"
+		]
+	},
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/playground-ai-assistant",
+				"ref": "main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "playground-ai-assistant"
+			}
+		}
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Personal CRM",
+		"description": "Manage your contacts and relationships directly from WordPress",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"Productivity"
+		]
+	},
+	"landingPage": "/crm/welcome",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://github.com/akirk/personal-crm/releases/latest/download/personal-crm.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://github.com/akirk/keeping-contact/releases/latest/download/keeping-contact.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
+}

@@ -1,0 +1,131 @@
+# Brazilian Portuguese translation for Playground Welcome
+# Copyright (C) Playground
+# This file is distributed under the GPL-2.0+.
+msgid ""
+msgstr ""
+"Project-Id-Version: Playground Welcome 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-07 00:00+0000\n"
+"PO-Revision-Date: 2026-01-07 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Brazilian Portuguese\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: playground-welcome.php
+msgid "Welcome"
+msgstr "Bem-vindo"
+
+#: playground-welcome.php
+msgid "The Vision"
+msgstr "A Visão"
+
+#: playground-welcome.php
+msgid "👋 Welcome to Your WordPress"
+msgstr "👋 Bem-vindo ao seu WordPress"
+
+#: playground-welcome.php
+msgid "Welcome to Your WordPress"
+msgstr "Bem-vindo ao seu WordPress"
+
+#: playground-welcome.php
+msgid "This is a private WordPress that's free and needs no account. It's stored in your browser and will be here when you come back."
+msgstr "Este é um WordPress privado, gratuito e que não requer conta. Ele é armazenado no seu navegador e estará aqui quando você voltar."
+
+#: playground-welcome.php
+msgid "What's your name?"
+msgstr "Qual é o seu nome?"
+
+#: playground-welcome.php
+msgid "Import content from a website"
+msgstr "Importar conteúdo de um site"
+
+#: playground-welcome.php
+msgid "Website URL"
+msgstr "URL do site"
+
+#: playground-welcome.php
+msgid "Enter a site URL and we'll find and import its RSS feed."
+msgstr "Digite a URL de um site e nós encontraremos e importaremos seu feed RSS."
+
+#: playground-welcome.php
+msgid "Maximum posts to import"
+msgstr "Máximo de posts a importar"
+
+#: playground-welcome.php
+msgid "5 posts"
+msgstr "5 posts"
+
+#: playground-welcome.php
+msgid "10 posts"
+msgstr "10 posts"
+
+#: playground-welcome.php
+msgid "20 posts"
+msgstr "20 posts"
+
+#: playground-welcome.php
+msgid "50 posts"
+msgstr "50 posts"
+
+#: playground-welcome.php
+msgid "Continue"
+msgstr "Continuar"
+
+#: playground-welcome.php
+msgid "Importing..."
+msgstr "Importando..."
+
+#: playground-welcome.php
+msgid "Not now"
+msgstr "Agora não"
+
+#: playground-welcome.php
+msgid "Security check failed."
+msgstr "A verificação de segurança falhou."
+
+#: playground-welcome.php
+msgid "Permission denied."
+msgstr "Permissão negada."
+
+#. translators: %s: user's display name
+#: playground-welcome.php
+msgid "%s's WordPress"
+msgstr "WordPress de %s"
+
+#. translators: %s: user's display name
+#: playground-welcome.php
+msgid "Name updated to \"%s\""
+msgstr "Nome atualizado para \"%s\""
+
+#: playground-welcome.php
+msgid "Redirecting to your site..."
+msgstr "Redirecionando para o seu site..."
+
+#: playground-welcome.php
+msgid "Setup complete! Redirecting to your site..."
+msgstr "Configuração concluída! Redirecionando para o seu site..."
+
+#. translators: %s: error message
+#: playground-welcome.php
+msgid "Could not fetch feed: %s"
+msgstr "Não foi possível buscar o feed: %s"
+
+#: playground-welcome.php
+msgid "No items found in the feed."
+msgstr "Nenhum item encontrado no feed."
+
+#. translators: %s: URL of the original article
+#: playground-welcome.php
+msgid "Originally published at <a href=\"%1$s\">%2$s</a>"
+msgstr "Originalmente publicado em <a href=\"%1$s\">%2$s</a>"
+
+#. translators: %d: number of imported posts
+#: playground-welcome.php
+msgid "Imported %d post from feed"
+msgid_plural "Imported %d posts from feed"
+msgstr[0] "%d post importado do feed"
+msgstr[1] "%d posts importados do feed"

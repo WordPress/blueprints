@@ -1,0 +1,41 @@
+{
+	"meta": {
+		"title": "Weather Shortcode Plugin",
+		"description": "A blueprint to connect weather API and show data as shortcode on a WordPress site. Requires your own OpenWeatherMap API key.",
+		"author": "muryamsultana"
+	},
+	"steps": [
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/weather-app"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/weather-app/weather.php",
+			"data": {
+				"resource": "bundled",
+				"path": "/plugin/weather.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "weather-app/weather.php"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require_once '/wordpress/wp-load.php';\n$page_args = array(\n'post_type'    => 'post',\n'post_status'  => 'publish',\n'post_title'   => 'The Weather Today',\n'post_content' => '<!-- wp:columns {\"align\":\"wide\"} -->\n<div class=\"wp-block-columns alignwide\"><!-- wp:column {\"className\":\"is-style-section-1 has-background\",\"style\":{\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"}},\"border\":{\"radius\":{\"topLeft\":\"8px\",\"topRight\":\"8px\",\"bottomLeft\":\"8px\",\"bottomRight\":\"8px\"}}}} -->\n<div class=\"wp-block-column is-style-section-1 has-background\" style=\"border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-left-radius:8px;border-bottom-right-radius:8px;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:paragraph -->\n<p>Check out the current weather conditions in London below. Make sure to dress accordingly!</p>\n<!-- /wp:paragraph -->\n<!-- wp:shortcode -->\n[ows_weather]\n<!-- /wp:shortcode --></div>\n<!-- /wp:column -->\n<!-- wp:column {\"style\":{\"color\":{\"background\":\"#ffee594f\"},\"spacing\":{\"padding\":{\"top\":\"var:preset|spacing|30\",\"bottom\":\"var:preset|spacing|30\",\"left\":\"var:preset|spacing|30\",\"right\":\"var:preset|spacing|30\"}},\"border\":{\"radius\":\"8px\"}}} -->\n<div class=\"wp-block-column has-background\" style=\"border-radius:8px;background-color:#ffee594f;padding-top:var(--wp--preset--spacing--30);padding-right:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);padding-left:var(--wp--preset--spacing--30)\"><!-- wp:paragraph -->\n<p>You can use this shortcode for any city, e.g., adding the property <code>city=Islamabad</code>.</p>\n<!-- /wp:paragraph -->\n<!-- wp:shortcode -->\n[ows_weather city=Islamabad]\n<!-- /wp:shortcode --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns -->\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph -->',\n);\n$page_id = wp_insert_post( $page_args, true );\nif ( is_wp_error( $page_id ) ) {\nerror_log( 'addPost error: ' . $page_id->get_error_message() );\n}",
+			"progress": {
+				"caption": "addPost: The Weather Today"
+			}
+		},
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		}
+	],
+	"siteOptions": {
+		"permalink_structure": "/%postname%/"
+	},
+	"landingPage": "/the-weather-today"
+}

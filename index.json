@@ -1,21 +1,117 @@
 {
+  "blueprints/portfolio-vueo/blueprint.json": {
+    "title": "Art Gallery",
+    "description": "An art gallery created with the Vueo theme.",
+    "author": "WordPress.com",
+    "categories": [
+      "Website",
+      "Personal"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/portfolio-vueo/screenshot.jpg",
+    "featured": true
+  },
+  "blueprints/brewcommerce/blueprint.json": {
+    "title": "Coffee Shop",
+    "description": "A stylish WooCommerce coffee shop storefront with custom theme, products, and content.",
+    "author": "adamziel",
+    "categories": [
+      "WooCommerce",
+      "Store"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/e3183200f04bac17b650ef303be934a0be5fe957/blueprints/brewcommerce/screenshot.jpg",
+    "featured": true
+  },
   "blueprints/friends-cors/blueprint.json": {
     "title": "Feed Reader with the Friends Plugin",
-    "description": "By using the Friends plugin and a CORS proxy, you can read feeds from the web in Playground, and even via ActivityPub",
+    "description": "By using the Friends plugin, you can read feeds from the web in Playground, and even via ActivityPub",
     "author": "akirk",
     "categories": [
       "rss",
       "social web"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/friends-cors/screenshot.jpg",
+    "featured": true
   },
-  "blueprints/stylish-press/blueprint.json": {
-    "title": "Stylish Press",
-    "description": "A Woo store with custom theme, content, and products.",
-    "author": "adamziel",
+  "blueprints/news-spiel/blueprint.json": {
+    "title": "Gaming News",
+    "description": "A gaming news site created with the Spiel theme.",
+    "author": "WordPress.com",
     "categories": [
-      "Woocommerce",
-      "Site"
-    ]
+      "Website",
+      "News"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/news-spiel/screenshot.jpg",
+    "featured": true
+  },
+  "blueprints/organization-koinonia/blueprint.json": {
+    "title": "Non-profit Organization",
+    "description": "A non-profit organization site created with the Koinonia theme.",
+    "author": "WordPress.com",
+    "categories": [
+      "Website",
+      "Organization"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/organization-koinonia/screenshot.jpg",
+    "featured": true
+  },
+  "blueprints/personal-substrata/blueprint.json": {
+    "title": "Personal Blog",
+    "description": "A personal blog site created with the Substrata theme.",
+    "author": "WordPress.com",
+    "categories": [
+      "Website",
+      "Personal",
+      "Blog"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/personal-substrata/screenshot.jpg",
+    "featured": true
+  },
+  "blueprints/personal-readymade/blueprint.json": {
+    "title": "Personal Resume",
+    "description": "A resume site created with the Readymade theme.",
+    "author": "WordPress.com",
+    "categories": [
+      "Website",
+      "Personal"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/personal-readymade/screenshot.jpg",
+    "featured": true
+  },
+  "blueprints/portfolio-grammer/blueprint.json": {
+    "title": "Photography Portfolio",
+    "description": "A photography portfolio created with the Grammer theme.",
+    "author": "WordPress.com",
+    "categories": [
+      "Website",
+      "Personal",
+      "Photography"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/portfolio-grammer/screenshot.jpg",
+    "featured": true
+  },
+  "blueprints/news-piel/blueprint.json": {
+    "title": "Skincare Blog",
+    "description": "A skincare blog created with the Piel theme.",
+    "author": "WordPress.com",
+    "categories": [
+      "Website",
+      "News",
+      "Blog"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/news-piel/screenshot.jpg",
+    "featured": true
+  },
+  "blueprints/organization-kentwood/blueprint.json": {
+    "title": "University Website",
+    "description": "A university website created with the Kentwood theme.",
+    "author": "WordPress.com",
+    "categories": [
+      "Website",
+      "Organization",
+      "Education"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/organization-kentwood/screenshot.jpg",
+    "featured": true
   },
   "blueprints/create-block-theme/blueprint.json": {
     "title": "Create Block Theme",
@@ -24,7 +120,19 @@
     "categories": [
       "Editor",
       "theme"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/create-block-theme/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/user-meta/blueprint.json": {
+    "title": "Creating a new user for the blog",
+    "description": "This is a simple example to update user meta data",
+    "author": "fellyph",
+    "categories": [
+      "meta"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/user-meta/screenshot.jpg",
+    "featured": false
   },
   "blueprints/custom-post/blueprint.json": {
     "title": "Custom Post Type: Books",
@@ -33,7 +141,9 @@
     "categories": [
       "Content",
       "CPT"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/custom-post/screenshot.jpg",
+    "featured": false
   },
   "blueprints/tt5-demo/blueprint.json": {
     "title": "Demo of Twenty-Twenty-Five theme",
@@ -42,16 +152,38 @@
     "categories": [
       "Themes",
       "default"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/tt5-demo/screenshot.jpg",
+    "featured": false
   },
   "blueprints/admin-notice/blueprint.json": {
-    "title": "Display Admin Notice ",
+    "title": "Display Admin Notice",
     "description": "Blueprint to add a tiny mu-plugin and display an admin notice",
     "author": "bph",
     "categories": [
       "Admin",
       "notices"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/admin-notice/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/gb-more-experiments/blueprint.json": {
+    "title": "Enable all three Dataview Experiments in Gutenberg",
+    "author": "bph",
+    "description": "Blueprint example to enable multiple Experiments within the Gutenberg plugin ",
+    "categories": [
+      "Gutenberg",
+      "Experiments"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/gb-more-experiments/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/fancy-dashboard_widget/blueprint.json": {
+    "title": "Fancy Dashboard Widget",
+    "description": "A blueprint to display statistics about users, posts and comments on a WordPress site.",
+    "author": "muryamsultana",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/fancy-dashboard_widget/screenshot.jpg",
+    "featured": false
   },
   "blueprints/grid-variations/blueprint.json": {
     "title": "Grid Variations Experiments enabled",
@@ -60,7 +192,9 @@
     "categories": [
       "Gutenberg",
       "Experiments"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/grid-variations/screenshot.jpg",
+    "featured": false
   },
   "blueprints/theme-starter-content/blueprint.json": {
     "title": "Import Theme Starter Content",
@@ -69,7 +203,9 @@
     "categories": [
       "Themes",
       "Starter Content"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/theme-starter-content/screenshot.jpg",
+    "featured": false
   },
   "blueprints/file-starter-content/blueprint.json": {
     "title": "Import a standalone starter content via a blueprint step",
@@ -78,7 +214,9 @@
     "categories": [
       "Themes",
       "Starter Content"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/file-starter-content/screenshot.jpg",
+    "featured": false
   },
   "blueprints/translations/blueprint.json": {
     "title": "Install WordPress language packs",
@@ -86,7 +224,9 @@
     "description": "Installs and activates the latest WordPress Japanese translation pack from https://translate.wordpress.org/ \u2013 both for WordPress core and for the friends plugin.",
     "categories": [
       "core"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/translations/screenshot.jpg",
+    "featured": false
   },
   "blueprints/install-plugin-from-gist/blueprint.json": {
     "title": "Install plugin from a gist",
@@ -94,7 +234,9 @@
     "description": "Install and activate a WordPress plugin from a .php file stored in a gist.",
     "categories": [
       "plugins"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/install-plugin-from-gist/screenshot.jpg",
+    "featured": false
   },
   "blueprints/latest-gutenberg/blueprint.json": {
     "title": "Latest Gutenberg plugin",
@@ -102,7 +244,9 @@
     "description": "A preview of the latest version of the Gutenberg plugin.",
     "categories": [
       "plugins"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/latest-gutenberg/screenshot.jpg",
+    "featured": false
   },
   "blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json": {
     "title": "Loading, activating, and configuring a theme from a GitHub repository.",
@@ -110,7 +254,9 @@
     "author": "richtabor",
     "categories": [
       "theme"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/install-activate-setup-theme-from-gh-repo/screenshot.jpg",
+    "featured": false
   },
   "blueprints/login-as-editor/blueprint.json": {
     "title": "Login as an editor",
@@ -119,7 +265,9 @@
     "categories": [
       "User",
       "Role"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/login-as-editor/screenshot.jpg",
+    "featured": false
   },
   "blueprints/blocky-formats/blueprint.json": {
     "title": "Markdown and Trac Syntax Editor",
@@ -127,7 +275,9 @@
     "author": "adamziel",
     "categories": [
       "block-editor"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/blocky-formats/screenshot.jpg",
+    "featured": false
   },
   "blueprints/woo-shipping/blueprint.json": {
     "title": "Minimal WooCommerce Setup with Sample Products, Shipping, and Payment Method",
@@ -137,7 +287,30 @@
       "woocommerce",
       "shipping",
       "flat_rate"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/woo-shipping/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/my-wordpress/blueprint.json": {
+    "title": "My WordPress",
+    "description": "A welcome experience for persistent WordPress Playground instances. Lets you personalize your site name and optionally import content from an RSS feed.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Playground",
+      "Onboarding"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/caa7ea840c3e6707ee9f70deae73a7c37aa885ae/blueprints/my-wordpress/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/welcome/blueprint.json": {
+    "title": "Playground Welcome Landing Page",
+    "description": "Landing page for the WordPress Playground giving a quick overview of the features and capabilities of the platform.",
+    "author": "fellyph",
+    "categories": [
+      "meta"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/welcome/screenshot.jpg",
+    "featured": false
   },
   "blueprints/use-pretty-permalinks/blueprint.json": {
     "title": "Pretty permalinks",
@@ -145,7 +318,9 @@
     "author": "bgrgicak",
     "categories": [
       "Settings"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/use-pretty-permalinks/screenshot.jpg",
+    "featured": false
   },
   "blueprints/reset-data-and-import-content/blueprint.json": {
     "title": "Reset data and import content (with logs)",
@@ -158,7 +333,9 @@
       "debug",
       "import",
       "content"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/reset-data-and-import-content/screenshot.jpg",
+    "featured": false
   },
   "blueprints/redirect-upload-requests/blueprint.json": {
     "title": "Serve media files from another host",
@@ -166,7 +343,9 @@
     "author": "ivanblagdan",
     "categories": [
       "Settings"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/redirect-upload-requests/screenshot.jpg",
+    "featured": false
   },
   "blueprints/set-admin-color-scheme/blueprint.json": {
     "title": "Set the admin color scheme",
@@ -174,7 +353,33 @@
     "author": "ndiego",
     "categories": [
       "user meta"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/set-admin-color-scheme/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/showcase-plugin-with-media/blueprint.json": {
+    "title": "Showcase plugin",
+    "description": "Showcase custom plugin from own server with media files and content imported as WXR. There is a readme file in github repository (https://github.com/Lovor01/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/readme.md) which explains all steps.",
+    "author": "Lovor01",
+    "categories": [
+      "plugin",
+      "demo",
+      "media",
+      "images"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/showcase-plugin-with-media/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/stylish-press/blueprint.json": {
+    "title": "Stylish Press",
+    "description": "A Woo store with custom theme, content, and products.",
+    "author": "adamziel",
+    "categories": [
+      "Woocommerce",
+      "Site"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/stylish-press/screenshot.jpg",
+    "featured": false
   },
   "blueprints/theme-a11y-test/blueprint.json": {
     "title": "Theme Tester",
@@ -183,7 +388,9 @@
     "categories": [
       "themes",
       "content"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/theme-a11y-test/screenshot.jpg",
+    "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {
     "title": "Use WPGraphQL to query WordPress",
@@ -192,7 +399,9 @@
     "categories": [
       "API",
       "wpgraphql"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/wpgraphql/screenshot.jpg",
+    "featured": false
   },
   "blueprints/posts-via-wp-cli/blueprint.json": {
     "title": "Use wp-cli command to add posts",
@@ -201,7 +410,9 @@
     "categories": [
       "Content",
       "wpcli"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/posts-via-wp-cli/screenshot.jpg",
+    "featured": false
   },
   "blueprints/wpcli-post-with-image/blueprint.json": {
     "title": "Use wp-cli to add a post with image",
@@ -210,7 +421,16 @@
     "categories": [
       "Content",
       "wpcli"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/wpcli-post-with-image/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/pwa-weather-app/blueprint.json": {
+    "title": "Weather Shortcode Plugin",
+    "description": "A blueprint to connect weather API and show data as shortcode on a WordPress site. Requires your own OpenWeatherMap API key.",
+    "author": "muryamsultana",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/pwa-weather-app/screenshot.jpg",
+    "featured": false
   },
   "blueprints/woocommerce-product-feed/blueprint.json": {
     "title": "WooCommerce product feed",
@@ -219,7 +439,9 @@
     "categories": [
       "WooCommerce",
       "Content"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/woocommerce-product-feed/screenshot.jpg",
+    "featured": false
   },
   "blueprints/beta-rc/blueprint.json": {
     "title": "WordPress Beta",
@@ -227,6 +449,8 @@
     "author": "courtneyr-dev",
     "categories": [
       "Testing"
-    ]
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/beta-rc/screenshot.jpg",
+    "featured": false
   }
 }

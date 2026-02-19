@@ -10,17 +10,17 @@ Not sure how? Check out the [Blueprints 101](./docs/index.md).
 
 To keep the submission process smooth, please follow these guidelines:
 
-Submit [a Pull Request (PR)](https://github.com/adamziel/blueprints/pulls) with your Blueprint. Consult this page [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) if you need a refresher on the process. 
+Submit [a Pull Request (PR)](https://github.com/adamziel/blueprints/pulls) with your Blueprint. Consult this page [Creating a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) if you need a refresher on the process.
 
 The PR should contain:
 
-* A single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/wordpress/blueprints/tree/trunk/blueprints)).
-* All the static files (WXR, ZIP, JPG, etc.) your Blueprint references. The static files must be loaded via the `https://raw.githubusercontent.com` URL pointing to your branch. `raw.githubusercontent.com` is a service that allows you to serve files directly from your GitHub repository. This is useful for loading static files in Blueprints. The URLs follow the `raw.githubusercontent.com/${user}/${repo}/${branch}/${path}` pattern.
+-   A single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/wordpress/blueprints/tree/trunk/blueprints)).
+-   All the static files (WXR, ZIP, JPG, etc.) your Blueprint references. The static files must be loaded via the `https://raw.githubusercontent.com` URL pointing to your branch. `raw.githubusercontent.com` is a service that allows you to serve files directly from your GitHub repository. This is useful for loading static files in Blueprints. The URLs follow the `raw.githubusercontent.com/${user}/${repo}/${branch}/${path}` pattern.
 
 For example, if you want to load a content-export.xml file, you create a new folder in the blueprints directory, /woocommerce-subscription (the name should correpond to the name of the blueprint). The folder must hold two files:
 
-* A `blueprints/woocommerce-subscriptions/blueprint.json` file
-* A `blueprints/woocommerce-subscription/content-export.xml` file
+-   A `blueprints/woocommerce-subscriptions/blueprint.json` file
+-   A `blueprints/woocommerce-subscription/content-export.xml` file
 
 Assuming your branch is named `/woo-subscription/`, the Blueprint should reference as follows:
 
@@ -68,6 +68,14 @@ Here's an example:
 	}
 }
 ```
+
+## Blueprint screenshots
+
+To help your Blueprint stand out in the gallery, include a screenshot alongside `blueprint.json`:
+
+-   Add a JPEG named `screenshot.jpg` inside your Blueprint directory (for example, `blueprints/my-blueprint/screenshot.jpg`). JPEG keeps file sizes small and matches the automation that builds the site.
+-   Shoot in a landscape aspect ratio (≈16:9) at about 1600–2000px wide so the preview stays sharp on Retina displays, and try to keep it under ~500 KB.
+-   If you don't provide a screenshot, a CI job will generate one for you automatically.
 
 ## Need help?
 

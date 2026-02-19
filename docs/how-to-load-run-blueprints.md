@@ -2,7 +2,7 @@
 
 ## URL fragment
 
-The fastest way to run Blueprints is to paste one into the URL "fragment" of a WordPress Playground website. Just add a `#` after the `.net/`.
+The fastest way to run Blueprints is to paste one into the URL "fragment" of a WordPress Playground website. Just add a `#` after the `playground.wordpress.net/`.
 
 Let's say you want to create a Playground with specific versions of WordPress and PHP using the following Blueprint:
 
@@ -44,6 +44,6 @@ Access-Control-Allow-Origin: *
 
 **Table of contents**
 1. [What are Blueprints, and what can you do with them?](./what-are-blueprints-what-you-can-do-with-them.md)
-2. How to load and run Blueprints?
+2. 👉 How to load and run Blueprints?
 3. [Build your first Blueprint](./build-your-first-blueprint.md)
 4. [Troubleshoot and debug Blueprints](./troubleshoot-debug-blueprints.md)

@@ -8,10 +8,5 @@
 	},
 	"landingPage": "/wp-admin/admin.php?page=graphiql-ide&query=I4VwpgTgngBA4mALgBQPYGdHpgbwFAwwAOGWuBhMAdqgCZjb6WUCWtFziLiANmB5VoBDRP2YBfCpPFA",
 	"plugins": ["wp-graphql"],
-	"steps": [
-		{
-			"step": "login",
-			"username": "admin"
-		}
-	]
+	"login": true
 }

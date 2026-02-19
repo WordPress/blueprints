@@ -1,0 +1,32 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Collect Posts from the Web",
+		"description": "Use the Post Collection Plugin to save articles from around the web",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "Productivity"]
+	},
+	"landingPage": "/wp-admin/admin.php?page=post-collection-settings",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://github.com/akirk/post-collection/releases/latest/download/post-collection.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://github.com/akirk/send-to-e-reader/releases/latest/download/send-to-e-reader.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
+}

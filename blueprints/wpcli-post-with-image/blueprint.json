@@ -7,10 +7,8 @@
 		"categories": ["Content", "wpcli"]
 	},
 	"landingPage": "/?p=4",
+	"login": true,
 	"steps": [
-		{
-			"step": "login"
-		},
 		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/postcontent.md",
@@ -20,16 +18,16 @@
 			}
 		},
 		{
-			"step": "wp-cli",
-			"command": "wp post create --post_title='Welcome to Playground' --post_status='published' /wordpress/wp-content/postcontent.md"
-		},
-		{
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/Select-storage-method.png",
 			"data": {
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/wpcli-post-with-image/Select-storage-method.png"
 			}
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp post create --post_title='Welcome to Playground' --post_status='published' /wordpress/wp-content/postcontent.md"
 		},
 		{
 			"step": "wp-cli",

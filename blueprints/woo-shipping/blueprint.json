@@ -6,25 +6,17 @@
 		"author": "calvinrodrigues500",
 		"categories": ["woocommerce", "shipping", "flat_rate"]
 	},
+	"plugins": ["woocommerce"],
+	"features": {
+		"intl": true
+	},
+	"landingPage": "/wp-admin/admin.php?page=wc-settings&tab=shipping",
 	"steps": [
-		{
-			"step": "setSiteOptions",
-			"options": {
-				"blogName": "Woo Shipping Method"
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "woocommerce"
-			}
-		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/sample_products.xml"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/sample_products.xml"
 			}
 		},
 		{
@@ -36,13 +28,20 @@
 			"path": "/wordpress/wp-content/plugins/woo-shipping-method/woo-shipping-method.php",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/calvinrodrigues500/blueprints/woo-shipping/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/woo-shipping-method/woo-shipping-method.php"
 			}
 		},
 		{
 			"step": "activatePlugin",
 			"pluginName": "woo-shipping-method",
 			"pluginPath": "woo-shipping-method/woo-shipping-method.php"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php include '/wordpress/wp-load.php'; delete_transient( '_wc_activation_redirect' ); wp_insert_post(array( 'import_id' => 5, 'post_title' => 'Sample Product', 'post_content' => '<!-- wp:paragraph --><p>Sample product description</p><!-- /wp:paragraph -->','post_status' => 'publish','post_type' => 'product','post_author' => 1, 'meta_input' => array('_sku' => 'WEBTOFFEE-FEED-ITEM', '_regular_price' => 25.00, '_sale_price' => 22.00, '_price' => 22.00, '_wt_feed_brand' => 'WebToffee', '_wt_feed_gtin' => 'WEBTOFFEE123', '_wt_feed_mpn' => 'WebToffee123', '_wt_feed_color' => 'Red', '_wt_feed_gender' => 'Male' ) ) );"
 		}
-	]
+	],
+	"siteOptions": {
+		"blogName": "Woo Shipping Method"
+	}
 }

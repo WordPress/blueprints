@@ -1,0 +1,56 @@
+{
+  "apps/ai-assistant.json": {
+    "title": "AI Assistant",
+    "description": "AI-powered chat interface to modify your WordPress to your liking. Bring your own key or use a local LLM",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "AI"
+    ]
+  },
+  "apps/app-launcher.json": {
+    "title": "App Launcher",
+    "description": "Adds an app launcher to your WordPress",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Utility"
+    ]
+  },
+  "apps/chat-to-blog.json": {
+    "title": "Chat to Blog",
+    "description": "Import media from Beeper chats and create blog posts. Requires Beeper Desktop running.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Media"
+    ]
+  },
+  "apps/post-collection.json": {
+    "title": "Collect Posts from the Web",
+    "description": "Use the Post Collection Plugin to save articles from around the web",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
+  "apps/personal-crm.json": {
+    "title": "Personal CRM",
+    "description": "Manage your contacts and relationships directly from WordPress",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
+  "apps/rss-reader.json": {
+    "title": "RSS Reader",
+    "description": "Follow friends and consume their content in your WordPress",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Social"
+    ]
+  }
+}

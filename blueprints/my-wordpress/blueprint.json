@@ -1,0 +1,26 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "My WordPress",
+		"description": "A welcome experience for persistent WordPress Playground instances. Lets you personalize your site name and optionally import content from an RSS feed.",
+		"author": "Alex Kirk",
+		"categories": ["Playground", "Onboarding"]
+	},
+	"login": true,
+	"landingPage": "/wp-admin/tools.php?page=playground-welcome",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/blueprints",
+				"ref": "trunk",
+				"refType": "branch",
+				"path": "blueprints/my-wordpress/plugin"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+	]
+}

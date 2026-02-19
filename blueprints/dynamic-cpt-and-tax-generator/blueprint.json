@@ -1,0 +1,35 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Dynamic CPT & Taxonomy Generator",
+    "description": "Create new CPTs with optional taxonomy or add taxonomy to existing CPTs. All managed from a single plugin.",
+    "author": "Rima Prajapati",
+    "categories": [
+      "Content",
+      "CPT",
+      "Admin"
+    ]
+  },
+  "landingPage": "/wp-admin/admin.php?page=dynamic-cpt-generator",
+  "login": true,
+  "steps": [
+    {
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/blueprints",
+				"ref": "trunk",
+				"refType": "branch",
+				"path": "blueprints/blueprints/dynamic-cpt-and-tax-generator"
+			},
+			"options": {
+				"activate": true
+			}
+		}
+  ],
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {}
+}

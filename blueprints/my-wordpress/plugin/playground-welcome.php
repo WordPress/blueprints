@@ -149,7 +149,10 @@ class Playground_Welcome {
         ?>
         <div class="playground-welcome-overlay">
             <div class="playground-welcome-dialog">
-                <h1><?php echo esc_html__('👋 Welcome to Your WordPress', 'playground-welcome'); ?></h1>
+                <header>
+                    <span class="dashicons dashicons-wordpress" aria-hidden="true"></span>
+                    <h1 class="playground-welcome-dialog-title"><?php echo esc_html__('Welcome to Your WordPress', 'playground-welcome'); ?></h1>
+                </header>
                 <p class="intro"><?php echo esc_html__("This is a private WordPress that's free and needs no account. It's stored in your browser and will be here when you come back.", 'playground-welcome'); ?></p>
 
                 <form id="playground-welcome-form" method="post">
@@ -191,7 +194,9 @@ class Playground_Welcome {
                         </div>
                     </details>
 
-                    <div id="welcome-message" class="components-notice" style="display: none;"></div>
+                    <div id="welcome-message" class="components-notice" role="alert" style="display: none;">
+                        <div class="components-notice__content"></div>
+                    </div>
 
                     <div class="button-group">
                         <button type="submit" class="components-button is-primary" id="save-button">
@@ -213,6 +218,7 @@ class Playground_Welcome {
             const buttonText = button.querySelector('.button-text');
             const buttonLoading = button.querySelector('.button-loading');
             const messageEl = document.getElementById('welcome-message');
+            const messageContent = messageEl.querySelector('.components-notice__content');
 
             button.disabled = true;
             buttonText.style.display = 'none';
@@ -230,16 +236,16 @@ class Playground_Welcome {
             .then(data => {
                 if (data.success) {
                     messageEl.className = 'components-notice is-success';
-                    messageEl.textContent = data.data.message;
-                    messageEl.style.display = 'block';
+                    messageContent.textContent = data.data.message;
+                    messageEl.style.display = 'flex';
 
                     setTimeout(() => {
                         window.location.href = '<?php echo esc_url(home_url('/')); ?>';
                     }, 1500);
                 } else {
                     messageEl.className = 'components-notice is-error';
-                    messageEl.textContent = data.data.message || 'An error occurred.';
-                    messageEl.style.display = 'block';
+                    messageContent.textContent = data.data.message || 'An error occurred.';
+                    messageEl.style.display = 'flex';
 
                     button.disabled = false;
                     buttonText.style.display = 'inline';
@@ -248,8 +254,8 @@ class Playground_Welcome {
             })
             .catch(error => {
                 messageEl.className = 'components-notice is-error';
-                messageEl.textContent = 'An error occurred. Please try again.';
-                messageEl.style.display = 'block';
+                messageContent.textContent = 'An error occurred. Please try again.';
+                messageEl.style.display = 'flex';
 
                 button.disabled = false;
                 buttonText.style.display = 'inline';

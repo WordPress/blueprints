@@ -210,6 +210,12 @@ class Playground_Welcome {
         </div>
 
         <script>
+        document.getElementById('feed_url').addEventListener('input', function() {
+            const messageEl = document.getElementById('welcome-message');
+            messageEl.style.display = 'none';
+            messageEl.querySelector('.components-notice__content').textContent = '';
+        });
+
         document.getElementById('playground-welcome-form').addEventListener('submit', function(e) {
             e.preventDefault();
 

@@ -102,6 +102,7 @@
 
 .playground-welcome-overlay .button-group {
 	display: flex;
+	justify-content: flex-end;
 	gap: 16px;
 	margin-top: 32px;
 }

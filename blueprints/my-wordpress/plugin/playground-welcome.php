@@ -199,11 +199,11 @@ class Playground_Welcome {
                     </div>
 
                     <div class="button-group">
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="components-button is-secondary"><?php echo esc_html__('Not now', 'playground-welcome'); ?></a>
                         <button type="submit" class="components-button is-primary" id="save-button">
                             <span class="button-text"><?php echo esc_html__('Continue', 'playground-welcome'); ?></span>
                             <span class="button-loading" style="display: none;"><?php echo esc_html__('Importing...', 'playground-welcome'); ?></span>
                         </button>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="components-button is-secondary"><?php echo esc_html__('Not now', 'playground-welcome'); ?></a>
                     </div>
                 </form>
             </div>

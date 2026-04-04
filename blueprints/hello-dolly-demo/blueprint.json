@@ -1,0 +1,46 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "meta": {
+		"title": "Hello Dolly Demo",
+		"description": "Blueprint with demo for Hello Dolly plugin",
+		"author": "noahmobes",
+		"categories": ["Pulgins", "default"]
+	},
+	"login": true,
+	"landingPage": "/wp-admin/",
+	"siteOptions": {
+		"blogname": "Hello Dolly Demo",
+        "blogdescription": "A demo for the Hello Dolly plugin"
+	},
+	"steps": [
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "twentytwentyfive"
+			}
+		},
+		{
+            "step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "hello-dolly"
+			},
+			"options": {
+				"activate": true
+			}
+        },
+		{
+			"step": "wp-cli",
+      		"command": "wp post update 1 --post_title='Hello Dolly' --post_content='' --post_name='hello-dolly'"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp user update admin --display_name='Louis Armstrong'"
+		},
+		{
+			"step": "wp-cli",
+			"command": "wp comment delete 1 --force"
+		}
+	]
+}

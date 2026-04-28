@@ -8,15 +8,6 @@
       "AI"
     ]
   },
-  "apps/app-launcher.json": {
-    "title": "App Launcher",
-    "description": "Adds an app launcher to your WordPress",
-    "author": "Alex Kirk",
-    "categories": [
-      "Apps",
-      "Utility"
-    ]
-  },
   "apps/chat-to-blog.json": {
     "title": "Chat to Blog",
     "description": "Import media from Beeper chats and create blog posts. Requires Beeper Desktop running.",

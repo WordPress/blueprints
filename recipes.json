@@ -1,0 +1,224 @@
+{
+	"family-blog": {
+		"title": "Build a Family Blog",
+		"tagline": "Memories worth keeping, kept where they belong",
+		"description": "A private blog for your family — stories, milestones, and photos pulled in from group chats. Anyone in the family can post from their phone, and the whole archive is preserved by the same backups that keep your WordPress alive.",
+		"icon": "👨‍👩‍👧",
+		"gradient": "linear-gradient(135deg, #fa709a 0%, #fee140 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "note",
+				"title": "Write the first post",
+				"description": "Don't overthink the setup — write something. Even just \"hello, this is where we'll keep things\" sets the tone. Once one post exists, everything else makes more sense.",
+				"url": "/wp-admin/post-new.php",
+				"url_label": "Open New Post"
+			},
+			{
+				"type": "plugin",
+				"slug": "network-privacy",
+				"title": "Make the site private",
+				"description": "Network Privacy adds a \"visible only to subscribers\" option in Settings → Reading. Invite family members as subscribers and the rest of the internet can't see in.",
+				"optional": true,
+				"context": "self-hosted"
+			},
+			{
+				"type": "plugin",
+				"slug": "enable-mastodon-apps",
+				"title": "Let everyone post from their phone",
+				"description": "Enable Mastodon Apps turns your WordPress into a Mastodon-compatible server. Family members can use any Mastodon app to post photos and short notes — no learning WordPress required.",
+				"optional": true
+			},
+			{
+				"type": "app",
+				"path": "apps/chat-to-blog.json",
+				"title": "Save photos before chats forget them",
+				"description": "Chat to Blog imports photos from your group chats directly into posts — no forwarding, no downloading. The memories outlive the messaging service.",
+				"optional": true
+			},
+			{
+				"type": "github",
+				"repo": "akirk/static-archive",
+				"title": "Make it last with a static archive",
+				"description": "Static Archive writes an HTML copy of every post into your uploads folder, right next to the photos, and regenerates automatically on every change. On my.wordpress.net the platform's automatic site backups already include the uploads folder, so the static archive rides along — even a future restore without a running WordPress is a browsable archive.",
+				"optional": true
+			}
+		]
+	},
+	"family-history": {
+		"title": "Document Family History",
+		"tagline": "A private Wikipedia for your family",
+		"description": "Build your own Wikipedia about the people in your family — who they were, where they lived, how they connect. The Family Wiki plugin ships with a pre-defined set of Person fields (dates, relations, places), so once you install it the Wikipedia-style structure is already there. You just write.",
+		"icon": "🌳",
+		"gradient": "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "plugin",
+				"slug": "family-wiki",
+				"title": "Turn your site into a wiki",
+				"description": "Family Wiki adds nested pages, cross-linking, and shared editing — the structure you need to write about people who connect to each other."
+			},
+			{
+				"type": "plugin",
+				"slug": "secure-custom-fields",
+				"title": "Add the Person fields engine",
+				"description": "Family Wiki bundles a ready-made set of Person fields (alive, born, died, parents, children, places). Secure Custom Fields is the engine that loads them — once it's active, every wiki page gets the fields automatically. ACF works the same way if you already use it."
+			},
+			{
+				"type": "note",
+				"title": "Set a static homepage as your family tree",
+				"description": "Settings → Reading → \"A static page\" → create a new page that lists the closest relatives you want to write about first. Don't aim for completeness — start with the handful you have stories for, link each name to their wiki entry, and grow it from there. This page becomes the index everyone navigates from.",
+				"url": "/wp-admin/options-reading.php",
+				"url_label": "Open Reading Settings"
+			},
+			{
+				"type": "note",
+				"title": "Write the first profile",
+				"description": "Pick one relative — probably the one with the most stories — and write their page. Fill in the structured fields, link to anyone they connect to. Drop the [name_with_bio] shortcode at the top of the page to auto-generate a one-liner from the fields. The next profiles get easier once the pattern is set.",
+				"url": "/wp-admin/post-new.php?post_type=page",
+				"url_label": "Add Wiki Page"
+			},
+			{
+				"type": "note",
+				"title": "Make it private (recommended)",
+				"description": "Family Wiki adds its own option in Settings → Reading: \"I would like my site to be private, visible only to myself and users I choose.\" Turn it on and family history stays in the family — only logged-in users you've invited can read or edit.",
+				"url": "/wp-admin/options-reading.php",
+				"url_label": "Open Reading Settings",
+				"optional": true,
+				"context": "self-hosted"
+			},
+			{
+				"type": "note",
+				"title": "Add a family calendar",
+				"description": "Family Wiki includes a Family Calendar block (and a Birthday Calendar block for living relatives) — drop one onto a page and it surfaces every date stored in the wiki. A nice way to remember the next birthday or anniversary.",
+				"url": "/wp-admin/post-new.php?post_type=page",
+				"url_label": "Add Calendar Page",
+				"optional": true
+			}
+		]
+	},
+	"reading-hub": {
+		"title": "Personal Reading Hub",
+		"tagline": "Follow friends, save articles, read on your terms",
+		"description": "Subscribe to RSS, Atom, and ActivityPub feeds in one place. Clip articles from around the web to read later, and send the long ones to your e-reader.",
+		"icon": "📚",
+		"gradient": "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/rss-reader.json",
+				"title": "Install the reader",
+				"description": "The Friends plugin is your private feed reader. It handles RSS, Atom, and ActivityPub — including following Mastodon accounts."
+			},
+			{
+				"type": "note",
+				"title": "Subscribe to your first feeds",
+				"description": "Paste a few feed URLs, or follow a Mastodon handle like @alex@kirk.at. Your timeline lives on your site, not a third-party app."
+			},
+			{
+				"type": "app",
+				"path": "apps/post-collection.json",
+				"title": "Save articles to read later",
+				"description": "Post Collection clips any web article into your WordPress so you keep a copy, even if the original goes away.",
+				"optional": true
+			},
+			{
+				"type": "github",
+				"repo": "akirk/send-to-e-reader",
+				"title": "Send long reads to your e-reader",
+				"description": "Push posts to your Kindle or Kobo as ePub or by email. Read in peace, away from the browser.",
+				"optional": true
+			}
+		]
+	},
+	"bring-your-data": {
+		"title": "Bring Your Data In",
+		"tagline": "Move old posts, notes, and exports onto your WordPress",
+		"description": "Years of writing scattered across old blogs, journaling apps, and screenshotted notes? WordPress ships with importers for the standard formats — and for the messy stuff, the AI Assistant can take pasted text or files and turn them into draft posts you can clean up.",
+		"icon": "📥",
+		"gradient": "linear-gradient(135deg, #b993d6 0%, #8ca6db 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "note",
+				"title": "Try the built-in importers first",
+				"description": "Tools → Import ships with plug-and-play importers for WordPress XML exports, RSS feeds, Blogger, Tumblr, LiveJournal, and a few more. If your old platform exports any of these formats, this is the cleanest path — structure, dates, and authors come across intact.",
+				"url": "/wp-admin/import.php",
+				"url_label": "Open Importers"
+			},
+			{
+				"type": "app",
+				"path": "apps/ai-assistant.json",
+				"title": "Install the AI Assistant for messier sources",
+				"description": "When the source doesn't have a tidy export — emails, Notes app dumps, photos of a paper journal, a Google Doc — the AI Assistant can read pasted content and create draft posts from it.",
+				"optional": true
+			},
+			{
+				"type": "note",
+				"title": "Connect a model",
+				"description": "Add an API key for Claude, OpenAI, or Gemini, or point the AI Assistant at LM Studio / Ollama running locally. The catch for now: the AI Assistant doesn't ship with a built-in model, so you bring your own. A local LLM is free but slower; cloud APIs cost a few cents per import session.",
+				"optional": true
+			},
+			{
+				"type": "note",
+				"title": "Paste in your stuff",
+				"description": "Paste a chunk of text, drop a file, or describe what you have. Ask the assistant to create posts from it — it'll show you what it's about to write before saving anything, so you end up with drafts you can tweak instead of a surprise.",
+				"optional": true
+			}
+		]
+	},
+	"stay-in-touch": {
+		"title": "Stay in Touch",
+		"tagline": "A private contact directory with reminders",
+		"description": "Track the people who matter to you and get nudges to reach out before too much time passes. Your relationships, your data — never sold, never mined.",
+		"icon": "🤝",
+		"gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/personal-crm.json",
+				"title": "Install Personal CRM",
+				"description": "Adds a contacts directory inside your WordPress. Name, notes, last contact date, custom fields — all yours."
+			},
+			{
+				"type": "note",
+				"title": "Add the people who matter",
+				"description": "Start with the ten or twenty you actually want to keep up with. The point isn't a complete address book — it's the ones you'd hate to drift away from."
+			},
+			{
+				"type": "note",
+				"title": "Set a check-in cadence",
+				"description": "Pick a reminder interval per contact (a month, a quarter, a year). When the date comes around, you'll see them on the dashboard with a nudge to reach out."
+			}
+		]
+	},
+	"customize-with-ai": {
+		"title": "Customize with AI",
+		"tagline": "Modify your WordPress through chat",
+		"description": "Add features, change layouts, and tweak your site without touching code. Bring your own API key or run a local model — the AI works on your WordPress, not on someone's training data.",
+		"icon": "✨",
+		"gradient": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/ai-assistant.json",
+				"title": "Install the AI Assistant",
+				"description": "Adds a chat panel where you can ask the model to change things on your site."
+			},
+			{
+				"type": "note",
+				"title": "Connect a model",
+				"description": "Add an API key for Claude, OpenAI, or Gemini — or point it at LM Studio / Ollama running on your laptop for fully local AI."
+			},
+			{
+				"type": "note",
+				"title": "Try a prompt",
+				"description": "Start small: \"Add a dark mode toggle to my blog\" or \"Make my homepage feel like a magazine cover.\" The assistant explains what it's about to change before doing it."
+			}
+		]
+	}
+}

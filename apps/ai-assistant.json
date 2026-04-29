@@ -14,13 +14,13 @@
 			"step": "installPlugin",
 			"pluginData": {
 				"resource": "git:directory",
-				"url": "https://github.com/akirk/playground-ai-assistant",
+				"url": "https://github.com/akirk/ai-assistant",
 				"ref": "main",
 				"refType": "branch"
 			},
 			"options": {
 				"activate": true,
-				"targetFolderName": "playground-ai-assistant"
+				"targetFolderName": "ai-assistant"
 			}
 		}
 	]

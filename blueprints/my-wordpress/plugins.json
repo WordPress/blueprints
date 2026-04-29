@@ -60,13 +60,6 @@
 		"categories": ["Utility"],
 		"landing_page": "/wp-admin/tools.php?page=static-archive"
 	},
-	"playground-ai-assistant": {
-		"github": "akirk/playground-ai-assistant",
-		"title": "Playground AI Assistant",
-		"author": "Alex Kirk",
-		"note": "AI-powered chat panel inside WordPress — bring your own API key (Claude, OpenAI, Gemini) or run a local model with LM Studio / Ollama.",
-		"categories": ["AI"]
-	},
 	"chat-to-blog": {
 		"github": "akirk/chat-to-blog",
 		"title": "Chat to Blog",

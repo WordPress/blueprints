@@ -136,7 +136,7 @@
 	"bring-your-data": {
 		"title": "Bring Your Data In",
 		"tagline": "Move existing data onto your WordPress, in the right shape for each app",
-		"description": "Old contacts, family trees, RSS subscriptions, bookmarks, journal entries — get them into the apps that handle them, not just dumped as blog posts. WordPress has built-in importers for the standard formats; the AI Assistant handles everything messier by reading what you paste in and writing it as the right kind of record for the right app.",
+		"description": "Do you already have content elsewhere and managed to get them exported?. WordPress has built-in importers for the standard formats; the AI Assistant handles everything messier by reading what you paste in and writing it as the right kind of record for the right app.",
 		"icon": "📥",
 		"gradient": "linear-gradient(135deg, #b993d6 0%, #8ca6db 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",

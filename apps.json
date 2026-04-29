@@ -43,5 +43,14 @@
       "Apps",
       "Social"
     ]
+  },
+  "apps/recipes.json": {
+    "title": "Recipes",
+    "description": "Store and organize your recipes inside WordPress, with ingredients, steps, and prep/cook times as first-class fields. Paste a URL to pull a recipe in from the web.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
   }
 }

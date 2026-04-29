@@ -135,8 +135,8 @@
 	},
 	"bring-your-data": {
 		"title": "Bring Your Data In",
-		"tagline": "Move old posts, notes, and exports onto your WordPress",
-		"description": "Years of writing scattered across old blogs, journaling apps, and screenshotted notes? WordPress ships with importers for the standard formats — and for the messy stuff, the AI Assistant can take pasted text or files and turn them into draft posts you can clean up.",
+		"tagline": "Move existing data onto your WordPress, in the right shape for each app",
+		"description": "Old contacts, family trees, RSS subscriptions, bookmarks, journal entries — get them into the apps that handle them, not just dumped as blog posts. WordPress has built-in importers for the standard formats; the AI Assistant handles everything messier by reading what you paste in and writing it as the right kind of record for the right app.",
 		"icon": "📥",
 		"gradient": "linear-gradient(135deg, #b993d6 0%, #8ca6db 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
@@ -152,7 +152,7 @@
 				"type": "app",
 				"path": "apps/ai-assistant.json",
 				"title": "Install the AI Assistant for messier sources",
-				"description": "When the source doesn't have a tidy export — emails, Notes app dumps, photos of a paper journal, a Google Doc — the AI Assistant can read pasted content and create draft posts from it.",
+				"description": "The AI Assistant doesn't just dump pasted text into draft posts — it reads the data shape of every app you've installed and writes records in the right format. A pasted contact list becomes Personal CRM entries with phone numbers, addresses, and check-in cadences set. A family tree text dump becomes Family Wiki pages with the Person fields (born, died, relations) populated. An OPML file becomes feeds the Friends reader subscribes to. A bookmarks export becomes Post Collection clippings. The same prompt-and-go workflow, ending in the right kind of record.",
 				"optional": true
 			},
 			{
@@ -163,8 +163,8 @@
 			},
 			{
 				"type": "note",
-				"title": "Paste in your stuff",
-				"description": "Paste a chunk of text, drop a file, or describe what you have. Ask the assistant to create posts from it — it'll show you what it's about to write before saving anything, so you end up with drafts you can tweak instead of a surprise.",
+				"title": "Paste in your stuff and tell it where to land",
+				"description": "Paste a chunk of text, drop a file, or describe what you have — then tell the assistant which app it belongs in. \"Add these to my CRM.\" \"Make wiki pages for these relatives.\" \"Subscribe my reader to these feeds.\" It shows you what it's about to write before saving anything, so you end up with reviewed drafts in the right app rather than a generic pile of blog posts.",
 				"optional": true
 			}
 		]

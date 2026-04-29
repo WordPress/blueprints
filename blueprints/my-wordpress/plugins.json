@@ -59,5 +59,45 @@
 		"note": "Export your blog as static HTML so you keep a self-contained archive even if your site changes.",
 		"categories": ["Utility"],
 		"landing_page": "/wp-admin/tools.php?page=static-archive"
+	},
+	"playground-ai-assistant": {
+		"github": "akirk/playground-ai-assistant",
+		"title": "Playground AI Assistant",
+		"author": "Alex Kirk",
+		"note": "AI-powered chat panel inside WordPress — bring your own API key (Claude, OpenAI, Gemini) or run a local model with LM Studio / Ollama.",
+		"categories": ["AI"]
+	},
+	"chat-to-blog": {
+		"github": "akirk/chat-to-blog",
+		"title": "Chat to Blog",
+		"author": "Alex Kirk",
+		"note": "Import photos and media from Beeper chats directly into WordPress posts. Requires Beeper Desktop running.",
+		"categories": ["Media"]
+	},
+	"post-collection": {
+		"github": "akirk/post-collection",
+		"title": "Post Collection",
+		"author": "Alex Kirk",
+		"note": "Clip articles from around the web into your WordPress as their own post type — handy with the Friends reader.",
+		"categories": ["Productivity"]
+	},
+	"personal-crm": {
+		"github": "akirk/personal-crm",
+		"title": "Personal CRM",
+		"author": "Alex Kirk",
+		"note": "A private contact directory inside your WordPress — names, notes, last-contact dates, custom fields. Works great alongside Keeping Contact.",
+		"categories": ["Productivity"]
+	},
+	"keeping-contact": {
+		"github": "akirk/keeping-contact",
+		"title": "Keeping Contact",
+		"author": "Alex Kirk",
+		"note": "Reminder companion for Personal CRM — set a check-in cadence per contact and get nudged when it's been too long.",
+		"categories": ["Productivity"]
+	},
+	"friends": {
+		"title": "Friends",
+		"note": "Subscribe to RSS, Atom, and ActivityPub feeds — your private feed reader, with following / follower model and Mastodon support.",
+		"categories": ["Social"]
 	}
 }

@@ -1,0 +1,25 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Memex",
+		"description": "Turn WordPress into a note-taking platform with bi-directional [[wiki-links]], automatic backlinks, daily notes, and tags. Import notes from Obsidian, Notion, Evernote, or Roam Research with one click.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "Productivity"]
+	},
+	"landingPage": "/memex/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/memex",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "memex"
+			}
+		}
+	]
+}

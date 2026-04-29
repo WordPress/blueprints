@@ -100,5 +100,13 @@
 		"note": "Store your recipes in WordPress as a first-class app, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
 		"categories": ["Productivity"],
 		"landing_page": "/recipes/"
+	},
+	"memex": {
+		"github": "akirk/memex",
+		"title": "Memex",
+		"author": "Alex Kirk",
+		"note": "A note-taking app inside WordPress with [[wiki-links]], automatic backlinks, daily notes, and tags. One-click import from Obsidian, Notion, Evernote, or Roam Research.",
+		"categories": ["Productivity"],
+		"landing_page": "/memex/"
 	}
 }

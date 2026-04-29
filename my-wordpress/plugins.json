@@ -1,0 +1,63 @@
+{
+	"network-privacy": {
+		"note": "Adds a \"visible only to subscribers\" option in Settings → Reading. Pair with subscriber accounts to make a site private to invited users on multisite hosts like my.wordpress.net.",
+		"categories": ["Privacy"],
+		"landing_page": "/wp-admin/options-reading.php"
+	},
+	"password-protected": {
+		"note": "Lock your entire site behind a single shared password — perfect for a private family blog on a self-hosted WordPress.",
+		"categories": ["Privacy"],
+		"landing_page": "/wp-admin/options-general.php?page=password-protected"
+	},
+	"enable-mastodon-apps": {
+		"note": "Turn your WordPress into a Mastodon-compatible server so anyone can post via any Mastodon app.",
+		"categories": ["Social"],
+		"landing_page": "/wp-admin/options-general.php?page=enable-mastodon-apps"
+	},
+	"send-to-e-reader": {
+		"github": "akirk/send-to-e-reader",
+		"title": "Send to E-Reader",
+		"author": "Alex Kirk",
+		"note": "Push articles to your Kindle or Kobo as ePub or by email — read long-form away from the browser.",
+		"categories": ["Productivity"],
+		"landing_page": "/wp-admin/options-general.php?page=send-to-e-reader"
+	},
+	"pro-mime-types": {
+		"note": "Lets you upload file types WordPress blocks by default (SVG, WebP variants, etc.) without editing code.",
+		"categories": ["Utility"],
+		"landing_page": "/wp-admin/options-general.php?page=pro-mime-types"
+	},
+	"duplicate-page": {
+		"note": "Adds a one-click \"Duplicate\" action to posts and pages — great for reusing a layout you like.",
+		"categories": ["Productivity"],
+		"landing_page": "/wp-admin/options-general.php?page=duplicate_page_settings"
+	},
+	"family-wiki": {
+		"note": "Turn your site into a private family wiki with nested pages and shared editing.",
+		"categories": ["Productivity"],
+		"landing_page": "/wp-admin/edit.php?post_type=page"
+	},
+	"secure-custom-fields": {
+		"note": "Add structured fields (dates, relations, places) to pages so facts stay consistent and searchable. A WordPress-maintained fork of ACF.",
+		"categories": ["Productivity"],
+		"landing_page": "/wp-admin/edit.php?post_type=acf-field-group"
+	},
+	"wp-dashboard-notes": {
+		"note": "Pin sticky notes to your WordPress dashboard — handy for to-dos and reminders you'll actually see.",
+		"categories": ["Productivity"],
+		"landing_page": "/wp-admin/index.php"
+	},
+	"wordpress-beta-tester": {
+		"note": "Opt into WordPress beta and release-candidate builds to try new features before they ship.",
+		"categories": ["Utility"],
+		"landing_page": "/wp-admin/tools.php?page=wp-beta-tester"
+	},
+	"static-archive": {
+		"github": "akirk/static-archive",
+		"title": "Static Archive",
+		"author": "Alex Kirk",
+		"note": "Export your blog as static HTML so you keep a self-contained archive even if your site changes.",
+		"categories": ["Utility"],
+		"landing_page": "/wp-admin/tools.php?page=static-archive"
+	}
+}

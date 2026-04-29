@@ -152,7 +152,7 @@
 				"type": "app",
 				"path": "apps/ai-assistant.json",
 				"title": "Install the AI Assistant for messier sources",
-				"description": "The AI Assistant doesn't just dump pasted text into draft posts — it reads the data shape of every app you've installed and writes records in the right format. A pasted contact list becomes Personal CRM entries with phone numbers, addresses, and check-in cadences set. A family tree text dump becomes Family Wiki pages with the Person fields (born, died, relations) populated. An OPML file becomes feeds the Friends reader subscribes to. A bookmarks export becomes Post Collection clippings. The same prompt-and-go workflow, ending in the right kind of record.",
+				"description": "The AI Assistant reads the data shape of every app you've installed and writes records in their native format — CRM contacts, wiki Person pages, feed subscriptions, post clippings — not generic blog posts.",
 				"optional": true
 			},
 			{

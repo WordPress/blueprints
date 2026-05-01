@@ -1,0 +1,18 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Gutenberg Guidelines Experiment enabled",
+		"author": "smithjw1",
+		"description": "Enables the Gutenberg Guidelines experiment from the Gutenberg Experiments page",
+		"categories": ["Gutenberg", "Experiments"]
+	},
+	"landingPage": "/wp-admin/admin.php?page=guidelines-wp-admin",
+	"login": true,
+	"plugins": ["gutenberg"],
+	"steps": [
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; update_option( 'gutenberg-experiments', array( 'gutenberg-guidelines' => true ) );"
+		}
+	]
+}

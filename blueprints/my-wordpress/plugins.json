@@ -101,7 +101,7 @@
 		"author": "Alex Kirk",
 		"note": "Store your recipes in WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
 		"categories": ["Productivity"],
-		"landing_page": "/recipes/"
+		"landing_page": "/cookbook/"
 	},
 	"memex": {
 		"github": "akirk/memex",

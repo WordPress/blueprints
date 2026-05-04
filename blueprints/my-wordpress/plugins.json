@@ -97,9 +97,9 @@
 	"cookbook": {
 		"github": "akirk/cookbook",
 		"branch": "dist/main",
-		"title": "Recipes",
+		"title": "Cookbook",
 		"author": "Alex Kirk",
-		"note": "Store your recipes in WordPress as a first-class app, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
+		"note": "Store your recipes in WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
 		"categories": ["Productivity"],
 		"landing_page": "/recipes/"
 	},

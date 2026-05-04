@@ -110,9 +110,6 @@
 		"landing_page": "/memex/"
 	},
 	"my-apps": {
-		"github": "akirk/my-apps",
-		"title": "My Apps",
-		"author": "Alex Kirk",
 		"note": "A home-screen-style launcher for the apps and admin links you actually use — drag-to-reorder, a built-in app store for one-click blueprint installs, and a mobile-friendly layout.",
 		"categories": ["Productivity"],
 		"landing_page": "/my-apps/"

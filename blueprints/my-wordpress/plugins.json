@@ -99,7 +99,7 @@
 		"branch": "dist/main",
 		"title": "Cookbook",
 		"author": "Alex Kirk",
-		"note": "Store your recipes in WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
+		"note": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
 		"categories": ["Productivity"],
 		"landing_page": "/cookbook/"
 	},

@@ -94,8 +94,8 @@
 		"note": "Subscribe to RSS, Atom, and ActivityPub feeds — your private feed reader, with following / follower model and Mastodon support.",
 		"categories": ["Social"]
 	},
-	"recipes": {
-		"github": "akirk/recipes",
+	"cookbook": {
+		"github": "akirk/cookbook",
 		"branch": "dist/main",
 		"title": "Recipes",
 		"author": "Alex Kirk",

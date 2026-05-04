@@ -139,7 +139,7 @@ class Playground_Welcome {
         wp_enqueue_style(
             'playground-welcome',
             plugin_dir_url(__FILE__) . 'playground-welcome.css',
-            [],
+            ['wp-components'],
             '1.0.0'
         );
     }
@@ -149,7 +149,10 @@ class Playground_Welcome {
         ?>
         <div class="playground-welcome-overlay">
             <div class="playground-welcome-dialog">
-                <h1><?php echo esc_html__('👋 Welcome to Your WordPress', 'playground-welcome'); ?></h1>
+                <header>
+                    <span class="dashicons dashicons-wordpress" aria-hidden="true"></span>
+                    <h1 class="playground-welcome-dialog-title"><?php echo esc_html__('Welcome to Your WordPress', 'playground-welcome'); ?></h1>
+                </header>
                 <p class="intro"><?php echo esc_html__("This is a private WordPress that's free and needs no account. It's stored in your browser and will be here when you come back.", 'playground-welcome'); ?></p>
 
                 <form id="playground-welcome-form" method="post">
@@ -161,6 +164,7 @@ class Playground_Welcome {
                             type="text"
                             id="display_name"
                             name="display_name"
+                            class="components-text-control__input"
                             autofocus
                         >
                     </div>
@@ -173,14 +177,15 @@ class Playground_Welcome {
                                 type="text"
                                 id="feed_url"
                                 name="feed_url"
+                                class="components-text-control__input"
                                 placeholder="example.com"
                             >
-                            <p class="field-hint"><?php echo esc_html__("Enter a site URL and we'll find and import its RSS feed.", 'playground-welcome'); ?></p>
+                            <p class="components-base-control__help"><?php echo esc_html__("Enter a site URL and we'll find and import its RSS feed.", 'playground-welcome'); ?></p>
                         </div>
 
                         <div class="field-group">
                             <label for="max_items"><?php echo esc_html__('Maximum posts to import', 'playground-welcome'); ?></label>
-                            <select id="max_items" name="max_items">
+                            <select id="max_items" name="max_items" class="components-select-control__input">
                                 <option value="5"><?php echo esc_html__('5 posts', 'playground-welcome'); ?></option>
                                 <option value="10" selected><?php echo esc_html__('10 posts', 'playground-welcome'); ?></option>
                                 <option value="20"><?php echo esc_html__('20 posts', 'playground-welcome'); ?></option>
@@ -189,20 +194,28 @@ class Playground_Welcome {
                         </div>
                     </details>
 
-                    <div id="welcome-message" class="welcome-message" style="display: none;"></div>
+                    <div id="welcome-message" class="components-notice" role="alert" style="display: none;">
+                        <div class="components-notice__content"></div>
+                    </div>
 
                     <div class="button-group">
-                        <button type="submit" class="button-primary" id="save-button">
+                        <a href="<?php echo esc_url(home_url('/')); ?>" class="components-button is-secondary"><?php echo esc_html__('Not now', 'playground-welcome'); ?></a>
+                        <button type="submit" class="components-button is-primary" id="save-button">
                             <span class="button-text"><?php echo esc_html__('Continue', 'playground-welcome'); ?></span>
                             <span class="button-loading" style="display: none;"><?php echo esc_html__('Importing...', 'playground-welcome'); ?></span>
                         </button>
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="button-secondary"><?php echo esc_html__('Not now', 'playground-welcome'); ?></a>
                     </div>
                 </form>
             </div>
         </div>
 
         <script>
+        document.getElementById('feed_url').addEventListener('input', function() {
+            const messageEl = document.getElementById('welcome-message');
+            messageEl.style.display = 'none';
+            messageEl.querySelector('.components-notice__content').textContent = '';
+        });
+
         document.getElementById('playground-welcome-form').addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -211,6 +224,7 @@ class Playground_Welcome {
             const buttonText = button.querySelector('.button-text');
             const buttonLoading = button.querySelector('.button-loading');
             const messageEl = document.getElementById('welcome-message');
+            const messageContent = messageEl.querySelector('.components-notice__content');
 
             button.disabled = true;
             buttonText.style.display = 'none';
@@ -227,17 +241,17 @@ class Playground_Welcome {
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    messageEl.className = 'welcome-message success';
-                    messageEl.textContent = data.data.message;
-                    messageEl.style.display = 'block';
+                    messageEl.className = 'components-notice is-success';
+                    messageContent.textContent = data.data.message;
+                    messageEl.style.display = 'flex';
 
                     setTimeout(() => {
                         window.location.href = '<?php echo esc_url(home_url('/')); ?>';
                     }, 1500);
                 } else {
-                    messageEl.className = 'welcome-message error';
-                    messageEl.textContent = data.data.message || 'An error occurred.';
-                    messageEl.style.display = 'block';
+                    messageEl.className = 'components-notice is-error';
+                    messageContent.textContent = data.data.message || 'An error occurred.';
+                    messageEl.style.display = 'flex';
 
                     button.disabled = false;
                     buttonText.style.display = 'inline';
@@ -245,9 +259,9 @@ class Playground_Welcome {
                 }
             })
             .catch(error => {
-                messageEl.className = 'welcome-message error';
-                messageEl.textContent = 'An error occurred. Please try again.';
-                messageEl.style.display = 'block';
+                messageEl.className = 'components-notice is-error';
+                messageContent.textContent = 'An error occurred. Please try again.';
+                messageEl.style.display = 'flex';
 
                 button.disabled = false;
                 buttonText.style.display = 'inline';

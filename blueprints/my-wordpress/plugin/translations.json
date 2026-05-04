@@ -5,10 +5,27 @@
 		},
 		"pl_PL": {
 			"contentDir": "pl"
+		},
+		"es_ES": {
+			"contentDir": "es"
 		}
 	},
 	"fallbacks": {
 		"de_AT": "de_DE",
-		"de_CH": "de_DE"
+		"de_CH": "de_DE",
+
+		"es_AR": "es_ES",
+		"es_CL": "es_ES",
+		"es_CO": "es_ES",
+		"es_CR": "es_ES",
+		"es_DO": "es_ES",
+		"es_EC": "es_ES",
+		"es_GT": "es_ES",
+		"es_HN": "es_ES",
+		"es_MX": "es_ES",
+		"es_PE": "es_ES",
+		"es_PR": "es_ES",
+		"es_UY": "es_ES",
+		"es_VE": "es_ES"
 	}
 }

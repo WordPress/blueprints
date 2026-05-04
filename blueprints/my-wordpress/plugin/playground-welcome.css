@@ -15,7 +15,11 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	background: linear-gradient(
+		135deg,
+		#1e1e1e 0%,
+		#2f2f2f 100%
+	);
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -26,8 +30,8 @@
 }
 
 .playground-welcome-dialog {
-	background: #fff;
-	border-radius: 12px;
+	background: var(--wp-components-color-background, #fff);
+	border-radius: 2px;
 	box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 	padding: 40px 48px;
 	max-width: 520px;
@@ -47,18 +51,32 @@
 	}
 }
 
-.playground-welcome-dialog h1 {
+.playground-welcome-dialog header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
 	margin: 0 0 8px 0;
+}
+
+.playground-welcome-dialog header .dashicons {
+	font-size: 28px;
+	width: 28px;
+	height: 28px;
+	color: var(--wp-admin-theme-color, #3858e9);
+}
+
+.playground-welcome-dialog .playground-welcome-dialog-title {
+	margin: 0;
 	font-size: 28px;
 	font-weight: 600;
-	color: #1e293b;
+	color: var(--wp-components-color-foreground, #1e1e1e);
 	text-wrap: balance;
 	line-height: 1.3;
 }
 
 .playground-welcome-dialog .intro {
 	margin: 0 0 32px 0;
-	color: #64748b;
+	color: var(--wp-components-color-gray-700, #757575);
 	font-size: 16px;
 	line-height: 1.5;
 }
@@ -71,116 +89,47 @@
 	display: block;
 	margin-bottom: 8px;
 	font-weight: 500;
-	color: #334155;
+	color: var(--wp-components-color-foreground, #1e1e1e);
 	font-size: 14px;
 }
 
-.field-group input[type='text'],
-.field-group input[type='url'],
-.field-group select {
+/* Ensure inputs fill the form width */
+.field-group .components-text-control__input,
+.field-group .components-select-control__input {
 	width: 100%;
-	padding: 12px 16px;
-	border: 2px solid #e2e8f0;
-	border-radius: 8px;
-	font-size: 16px;
-	transition:
-		border-color 0.2s,
-		box-shadow 0.2s;
 	box-sizing: border-box;
-}
-
-.field-group input[type='text']:focus,
-.field-group input[type='url']:focus,
-.field-group select:focus {
-	outline: none;
-	border-color: #667eea;
-	box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-}
-
-.field-group .field-hint {
-	margin: 8px 0 0 0;
-	font-size: 13px;
-	color: #94a3b8;
 }
 
 .playground-welcome-overlay .button-group {
 	display: flex;
-	gap: 24px;
+	justify-content: flex-end;
+	gap: 16px;
 	margin-top: 32px;
 }
 
-.playground-welcome-overlay .button-primary,
-.playground-welcome-overlay .button-secondary {
-	padding: 2px 20px;
-	border-radius: 8px;
+.playground-welcome-overlay .components-button {
+	padding: 8px 20px;
 	font-size: 16px;
-	font-weight: 500;
-	cursor: pointer;
-	transition: all 0.2s;
-	text-decoration: none;
-	text-align: center;
-	border: none;
 }
 
-.playground-welcome-overlay .button-primary {
-	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-	color: #fff;
-}
-
-.playground-welcome-overlay .button-primary:hover:not(:disabled) {
-	transform: translateY(-1px);
-	box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-}
-
-.playground-welcome-overlay .button-primary:disabled {
-	opacity: 0.7;
-	cursor: not-allowed;
-}
-
-.playground-welcome-overlay .button-secondary {
-	background: #f1f5f9;
-	color: #475569;
-	border: 2px solid #e2e8f0;
-}
-
-.playground-welcome-overlay .button-secondary:hover {
-	background: #e2e8f0;
-	color: #334155;
-}
-
-.welcome-message {
-	padding: 12px 16px;
-	border-radius: 8px;
-	font-size: 14px;
+.playground-welcome-overlay .components-notice {
 	margin-top: 16px;
-}
-
-.welcome-message.success {
-	background: #ecfdf5;
-	color: #065f46;
-	border: 2px solid #34d399;
-}
-
-.welcome-message.error {
-	background: #fef2f2;
-	color: #991b1b;
-	border: 2px solid #f87171;
 }
 
 .import-details {
 	margin-bottom: 24px;
-	border: 2px solid #e2e8f0;
-	border-radius: 8px;
+	border: 1px solid var(--wp-components-color-gray-300, #ddd);
+	border-radius: var(--wp-components-border-radius, 2px);
 	overflow: hidden;
 }
 
 .import-details summary {
 	padding: 14px 16px;
 	font-weight: 500;
-	color: #334155;
+	color: var(--wp-components-color-foreground, #1e1e1e);
 	font-size: 14px;
 	cursor: pointer;
-	background: #f8fafc;
+	background: var(--wp-components-color-gray-100, #f0f0f0);
 	transition: background 0.2s;
 	list-style: none;
 }
@@ -194,19 +143,19 @@
 	display: inline-block;
 	width: 20px;
 	font-weight: 600;
-	color: #64748b;
+	color: var(--wp-components-color-gray-700, #757575);
 }
 
 .import-details[open] summary::before {
-	content: '−';
+	content: '\2212';
 }
 
 .import-details summary:hover {
-	background: #f1f5f9;
+	background: var(--wp-components-color-gray-200, #e0e0e0);
 }
 
 .import-details[open] summary {
-	border-bottom: 2px solid #e2e8f0;
+	border-bottom: 1px solid var(--wp-components-color-gray-300, #ddd);
 }
 
 .import-details .field-group {
@@ -227,7 +176,7 @@
 		padding: 24px;
 	}
 
-	.playground-welcome-dialog h1 {
+	.playground-welcome-dialog .playground-welcome-dialog-title {
 		font-size: 22px;
 	}
 

@@ -44,15 +44,6 @@
       "Social"
     ]
   },
-  "apps/recipes.json": {
-    "title": "Recipes",
-    "description": "Store and organize your recipes inside WordPress, with ingredients, steps, and prep/cook times as first-class fields. Paste a URL to pull a recipe in from the web.",
-    "author": "Alex Kirk",
-    "categories": [
-      "Apps",
-      "Productivity"
-    ]
-  },
   "apps/memex.json": {
     "title": "Memex",
     "description": "Turn WordPress into a note-taking platform with bi-directional [[wiki-links]], automatic backlinks, daily notes, and tags. Import notes from Obsidian, Notion, Evernote, or Roam Research with one click.",

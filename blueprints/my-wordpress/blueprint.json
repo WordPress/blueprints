@@ -7,7 +7,7 @@
 		"categories": ["Playground", "Onboarding"]
 	},
 	"login": true,
-	"landingPage": "/wp-admin/tools.php?page=playground-welcome",
+	"landingPage": "/my-apps/",
 	"steps": [
 		{
 			"step": "installPlugin",
@@ -20,6 +20,25 @@
 			},
 			"options": {
 				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/my-apps",
+				"ref": "main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "my-apps"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "My WordPress"
 			}
 		}
 	]

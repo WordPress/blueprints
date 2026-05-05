@@ -118,7 +118,7 @@
 		"landing_page": "/my-apps/"
 	},
 	"desktop-mode": {
-		"github": "WordPress/desktop-mode",
+		"url": "https://github.com/WordPress/desktop-mode/releases/latest/download/desktop-mode.zip",
 		"title": "Desktop Mode",
 		"author": "WordPress",
 		"note": "Reimagines /wp-admin as a desktop OS — admin screens open as draggable, resizable windows on a wallpaper, with a dock built from the admin menu. Per-user opt-in, fully reverts on deactivation.",

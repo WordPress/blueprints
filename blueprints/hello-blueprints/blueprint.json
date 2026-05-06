@@ -1,15 +1,15 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Hello WordPress: A Learning Sandbox",
+    "title": "Hello Blueprints: A Learning Sandbox",
     "author": "supernovia",
-    "description": "A starter blueprint for exploring Playground. Installs Hello Dolly and Twenty Twenty-Five, clears default content, and adds a friendly welcome post to get students started.",
+    "description": "A starter blueprint. Installs a plugin, a theme, clears default content, and imports a wxr.",
     "categories": ["Learning", "Demo"]
   },
   "login": true,
   "landingPage": "/",
   "siteOptions": {
-    "blogname": "Hello WordPress"
+    "blogname": "Hello Blueprints"
   },
   "steps": [
     {
@@ -27,20 +27,14 @@
       }
     },
     {
-      "step": "runPHP",
-      "code": "<?php require_once '/wordpress/wp-load.php'; foreach (get_posts(['post_type' => 'any', 'numberposts' => -1, 'post_status' => 'any']) as $p) { wp_delete_post($p->ID, true); }"
+      "step": "resetData"
     },
     {
-      "step": "writeFile",
-      "path": "/wordpress/wp-content/uploads/welcome.jpg",
-      "data": {
+      "step": "importWxr",
+      "file": {
         "resource": "url",
-        "url": "https://REPLACE-WITH-YOUR-IMAGE-URL/welcome.jpg"
+        "url": "https://raw.githubusercontent.com/supernovia/blueprints/trunk/blueprints/hello-blueprints/welcome.wxr"
       }
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php require_once '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/image.php'; $file = '/wordpress/wp-content/uploads/welcome.jpg'; $attachment_id = wp_insert_attachment(['post_mime_type' => 'image/jpeg', 'post_title' => 'Welcome', 'post_status' => 'inherit'], $file); wp_update_attachment_metadata($attachment_id, wp_generate_attachment_metadata($attachment_id, $file)); $content = '<!-- wp:image {\"id\":' . $attachment_id . '} --><figure class=\"wp-block-image\"><img src=\"' . wp_get_attachment_url($attachment_id) . '\" alt=\"Welcome\"/></figure><!-- /wp:image --><!-- wp:paragraph --><p>You\\'ve just opened a blueprint! You can review information on blueprints <a href=\"https://wordpress.github.io/wordpress-playground/blueprints\">here</a>, or experiment by changing lines in the blueprint builder and running again. When you\\'ve made a blueprint you like, save it!</p><!-- /wp:paragraph -->'; wp_insert_post(['post_title' => 'Welcome to your blueprint!', 'post_content' => $content, 'post_status' => 'publish', 'post_type' => 'post']);"
     }
   ]
 }

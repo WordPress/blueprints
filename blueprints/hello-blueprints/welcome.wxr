@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wp="http://wordpress.org/export/1.2/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+  <wp:wxr_version>1.2</wp:wxr_version>
+
+  <item>
+    <title>Blueprint Illustration</title>
+    <wp:post_id>100</wp:post_id>
+    <wp:post_type>attachment</wp:post_type>
+    <wp:status>inherit</wp:status>
+    <wp:attachment_url>http://localhost/wp-content/uploads/2026/05/blueprint-illustration.jpg</wp:attachment_url>
+  </item>
+
+  <item>
+    <title>Welcome to your blueprint!</title>
+    <wp:post_id>101</wp:post_id>
+    <wp:post_type>post</wp:post_type>
+    <wp:status>publish</wp:status>
+    <content:encoded><![CDATA[
+<!-- wp:paragraph -->
+<p>You've just opened a blueprint! You can review information on blueprints <a href="https://wordpress.github.io/wordpress-playground/blueprints">here</a>, or experiment by changing lines in the blueprint builder and running again. When you've made a blueprint you like, save it!</p>
+<!-- /wp:paragraph -->
+    ]]></content:encoded>
+    <wp:postmeta>
+      <wp:meta_key>_thumbnail_id</wp:meta_key>
+      <wp:meta_value>100</wp:meta_value>
+    </wp:postmeta>
+  </item>
+</channel>
+</rss>

@@ -11,7 +11,7 @@
     <wp:post_id>100</wp:post_id>
     <wp:post_type>attachment</wp:post_type>
     <wp:status>inherit</wp:status>
-    <wp:attachment_url>http://localhost/wp-content/uploads/2026/05/blueprint-illustration.jpg</wp:attachment_url>
+    <wp:attachment_url>https://raw.githubusercontent.com/supernovia/blueprints/trunk/blueprints/hello-blueprints/blueprint-illustration.jpg</wp:attachment_url>
   </item>
 
   <item>

@@ -21,7 +21,7 @@
     <wp:status>publish</wp:status>
     <content:encoded><![CDATA[
 <!-- wp:paragraph -->
-<p><b>You've just opened a blueprint!</b> You can review information on blueprints <a href="https://wordpress.github.io/wordpress-playground/blueprints">here</a>, or experiment by changing lines in the blueprint builder and running again.</p>
+<p>You've just opened a blueprint! You can review information on blueprints <a href="https://wordpress.github.io/wordpress-playground/blueprints">here</a>, or experiment by changing lines in the blueprint builder and running again.</p>
 <!-- /wp:paragraph -->
     ]]></content:encoded>
     <wp:postmeta>

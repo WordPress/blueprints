@@ -1,7 +1,7 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Hello WordPress: A Learning Sandbox",
+    "title": "Hello Blueprints: A Learning Sandbox",
     "author": "supernovia",
     "description": "A starter blueprint for exploring Playground. Installs Hello Dolly and Twenty Twenty-Five, clears default content, and imports a friendly welcome post to get students started.",
     "categories": ["Learning", "Demo"]

@@ -8,6 +8,8 @@ My WordPress uses the [My Apps](https://github.com/akirk/my-apps) plugin for its
 - **Plugin entry:** a single WordPress plugin listed in `blueprints/my-wordpress/plugins.json` for the curated app store.
 - **Permanent app:** a complete Playground Blueprint in `apps/*.json`, usually installing one or more plugins and opening a useful landing page after setup.
 
+Recipes are guided workflows rather than app-store entries. To contribute one, see [Contributing Recipes](./contributing-recipes.md).
+
 If you want to submit a full Blueprint to the public Blueprints gallery instead, follow the repository-wide [Contribution Guidelines](../../CONTRIBUTING.md).
 
 ## First: Test in My Apps
@@ -62,7 +64,12 @@ Make sure the plugin or app is ready for a fresh WordPress Playground site:
 - The first screen after installation gives users a clear next step.
 - The pasted My Apps test flow works before you create a pull request in this repository.
 
-For plugins that need build steps such as `composer install`, `npm install`, or `npm run build`, a `dist` branch can be the easiest target. During development, a Blueprint can use a `git:directory` resource, as in the [My Apps Blueprint](https://github.com/akirk/my-apps/blob/main/blueprint.json), with `refType` set to `branch` and `ref` pointing at any GitHub branch you want to test. For example, [Personal CRM's build-dist workflow](https://github.com/akirk/personal-crm/blob/main/.github/workflows/build-dist.yml) installs Composer dependencies, commits `vendor/`, and pushes the result to `dist/<branch>`, so a Blueprint can point `ref` at a built branch such as `dist/main`. Use `targetFolderName` when the plugin folder name should stay stable.
+### Tips
+
+- For plugins with build steps such as `composer install`, `npm install`, or `npm run build`, test the built copy rather than the raw source.
+- A `dist` branch can be a good target for built files. For example, [Personal CRM's build-dist workflow](https://github.com/akirk/personal-crm/blob/main/.github/workflows/build-dist.yml) installs Composer dependencies, commits `vendor/`, and pushes the result to `dist/<branch>`.
+- During development, a Blueprint can use a `git:directory` resource, as in the [My Apps Blueprint](https://github.com/akirk/my-apps/blob/main/blueprint.json), with `refType` set to `branch` and `ref` pointing at any GitHub branch you want to test.
+- Use `targetFolderName` when the plugin folder name should stay stable.
 
 If the plugin should be installed from the WordPress.org Plugin Directory, submit it there first. WordPress.org expects a complete plugin ZIP, a valid WordPress.org account, a checked email address, and compliance with the Plugin Directory guidelines. Once the plugin has an approved directory slug, My WordPress can install it with the `wordpress.org/plugins` resource.
 
@@ -180,36 +187,6 @@ If the GitHub repository contains extra build files or the plugin folder name sh
 }
 ```
 
-## Option 3: Add It to a Recipe
-
-Recipes are guided workflows shown by My WordPress. If the plugin or app fits an existing workflow, add a step to `blueprints/my-wordpress/recipes.json`.
-
-For a plugin:
-
-```json
-{
-	"type": "plugin",
-	"slug": "example-plugin",
-	"title": "Install Example Plugin",
-	"description": "Explain why this belongs in the workflow.",
-	"optional": true
-}
-```
-
-For an app:
-
-```json
-{
-	"type": "app",
-	"path": "apps/example-app.json",
-	"title": "Install Example App",
-	"description": "Explain what this app unlocks for the workflow.",
-	"optional": true
-}
-```
-
-Only add a recipe entry when the plugin or app has a clear role in that recipe. Do not use recipes as a general catalog.
-
 ## Test the Submission
 
 Before opening a pull request:
@@ -217,16 +194,15 @@ Before opening a pull request:
 1. Validate every edited JSON file:
 
 	```bash
-	python -m json.tool blueprints/my-wordpress/plugins.json >/dev/null
-	python -m json.tool blueprints/my-wordpress/recipes.json >/dev/null
-	python -m json.tool apps/example-app.json >/dev/null
-	python -m json.tool apps.json >/dev/null
+	python3 -m json.tool blueprints/my-wordpress/plugins.json >/dev/null
+	python3 -m json.tool apps/example-app.json >/dev/null
+	python3 -m json.tool apps.json >/dev/null
 	```
 
 2. Format JSON with the repository's Prettier settings if available:
 
 	```bash
-	npx prettier --write blueprints/my-wordpress/plugins.json blueprints/my-wordpress/recipes.json apps/example-app.json apps.json
+	npx prettier --write blueprints/my-wordpress/plugins.json apps/example-app.json apps.json
 	```
 
 3. Try the app Blueprint in WordPress Playground. For a branch on GitHub, use a URL like:
@@ -258,7 +234,7 @@ Include:
 - Notes about external services, API keys, paid features, tracking, or privacy-sensitive behavior.
 - Confirmation that the code is GPL-compatible or already approved in the WordPress.org Plugin Directory.
 
-Keep the pull request focused. A plugin-only submission should usually touch `blueprints/my-wordpress/plugins.json` and, if appropriate, `blueprints/my-wordpress/recipes.json`. An app submission should usually add one file under `apps/`, update `apps.json`, and optionally update `recipes.json`.
+Keep the pull request focused. A plugin-only submission should usually touch `blueprints/my-wordpress/plugins.json`. An app submission should usually add one file under `apps/` and update `apps.json`.
 
 ## Review Checklist
 
@@ -270,7 +246,6 @@ Reviewers should be able to answer yes to these questions:
 - Is the landing page useful immediately after installation?
 - Are dependencies and external services disclosed?
 - Is the submitted app broader than a single plugin entry, or should it be simplified?
-- Does the recipe placement help users complete a real workflow?
 - Are JSON files valid and consistently formatted?
 
 If something is uncertain, open an issue or draft pull request first and describe the intended user flow.

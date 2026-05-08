@@ -5,7 +5,7 @@ This guide explains how to test and propose a plugin or app for the My WordPress
 My WordPress uses the [My Apps](https://github.com/akirk/my-apps) plugin for its launcher and app store. There are three related paths:
 
 - **Temporary app:** a complete WordPress Playground `blueprint.json` pasted into My Apps for local testing.
-- **Plugin entry:** a single WordPress plugin listed in `blueprints/my-wordpress/plugins.json` for the curated app store.
+- **Plugin entry:** a single WordPress plugin listed in [blueprints/my-wordpress/plugins.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/plugins.json) for the curated app store.
 - **Permanent app:** a complete Playground Blueprint in `apps/*.json`, usually installing one or more plugins and opening a useful landing page after setup.
 
 Recipes are guided workflows rather than app-store entries. To contribute one, see [Contributing Recipes](./contributing-recipes.md).
@@ -77,7 +77,7 @@ If the plugin should be installed from the WordPress.org Plugin Directory, submi
 
 Use this path when one existing plugin is enough and no custom setup Blueprint is needed. If the plugin itself should create a launcher icon after installation, it can register with My Apps by filtering `my_apps_plugins` in the plugin code.
 
-Add an object to `blueprints/my-wordpress/plugins.json` using the plugin slug as the key:
+Add an object to [blueprints/my-wordpress/plugins.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/plugins.json) using the plugin slug as the key:
 
 ```json
 {
@@ -134,7 +134,7 @@ Create a new Blueprint file in `apps/`, for example `apps/example-app.json`:
 }
 ```
 
-Then register the app in `apps.json`:
+Then register the app in [apps.json](https://github.com/WordPress/blueprints/blob/trunk/apps.json):
 
 ```json
 {
@@ -228,7 +228,7 @@ Include:
 - Notes about external services, API keys, paid features, tracking, or privacy-sensitive behavior.
 - Confirmation that the code is GPL-compatible or already approved in the WordPress.org Plugin Directory.
 
-Keep the pull request focused. A plugin-only submission should usually touch `blueprints/my-wordpress/plugins.json`. An app submission should usually add one file under `apps/` and update `apps.json`.
+Keep the pull request focused. A plugin-only submission should usually touch [blueprints/my-wordpress/plugins.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/plugins.json). An app submission should usually add one file under `apps/` and update [apps.json](https://github.com/WordPress/blueprints/blob/trunk/apps.json).
 
 ## Review Checklist
 

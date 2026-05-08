@@ -2,7 +2,7 @@
 
 Recipes are guided workflows shown by My WordPress. They are not a general plugin or app catalog. A good recipe helps someone complete a real task, explains why each step matters, and points to the exact app, plugin, or admin screen needed next.
 
-Recipe contributions live in `blueprints/my-wordpress/recipes.json`. If a recipe depends on a new plugin or app, contribute that entry first or include it in the same pull request with a clear explanation. For app and plugin submissions, see [Submitting Plugins and Apps](./submitting-plugins-and-apps.md).
+Recipe contributions live in [blueprints/my-wordpress/recipes.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/recipes.json). If a recipe depends on a new plugin or app, contribute that entry first or include it in the same pull request with a clear explanation. For app and plugin submissions, see [Submitting Plugins and Apps](./submitting-plugins-and-apps.md).
 
 ## When to Add a Recipe
 
@@ -19,7 +19,7 @@ Avoid recipe changes when the contribution is only a single app listing, a plugi
 
 ## Recipe Structure
 
-Each top-level key in `recipes.json` is a stable recipe slug. A recipe should include:
+Each top-level key in [recipes.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/recipes.json) is a stable recipe slug. A recipe should include:
 
 - `title`: short action-oriented name.
 - `tagline`: one-line promise shown with the recipe.
@@ -61,7 +61,7 @@ Use a `note` step for instructions or admin screens:
 }
 ```
 
-Use a `plugin` step for an entry from `blueprints/my-wordpress/plugins.json`:
+Use a `plugin` step for an entry from [blueprints/my-wordpress/plugins.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/plugins.json):
 
 ```json
 {
@@ -73,7 +73,7 @@ Use a `plugin` step for an entry from `blueprints/my-wordpress/plugins.json`:
 }
 ```
 
-Use an `app` step for a Blueprint registered in `apps.json`:
+Use an `app` step for a Blueprint registered in [apps.json](https://github.com/WordPress/blueprints/blob/trunk/apps.json):
 
 ```json
 {
@@ -112,7 +112,7 @@ Keep recipes practical and specific:
 
 Before opening a pull request:
 
-1. Format `recipes.json` with the repository's Prettier settings if available:
+1. Format [recipes.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/recipes.json) with the repository's Prettier settings if available:
 
 	```bash
 	npx prettier --write blueprints/my-wordpress/recipes.json
@@ -120,8 +120,8 @@ Before opening a pull request:
 
 2. Check every referenced dependency:
 
-	- `plugin` steps use slugs that exist in `blueprints/my-wordpress/plugins.json`.
-	- `app` steps use paths that exist in `apps.json`.
+	- `plugin` steps use slugs that exist in [blueprints/my-wordpress/plugins.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/plugins.json).
+	- `app` steps use paths that exist in [apps.json](https://github.com/WordPress/blueprints/blob/trunk/apps.json).
 	- `github` steps use reachable `owner/repo` values.
 	- `note` steps with URLs open a useful screen.
 
@@ -140,7 +140,7 @@ Include:
 - Notes about external services, API keys, paid features, tracking, or privacy-sensitive behavior.
 - A short explanation of why each required step belongs in the sequence.
 
-Keep the pull request focused. A recipe-only submission should usually touch `blueprints/my-wordpress/recipes.json` and, if needed, the plugin or app files required by the recipe.
+Keep the pull request focused. A recipe-only submission should usually touch [blueprints/my-wordpress/recipes.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/recipes.json) and, if needed, the plugin or app files required by the recipe.
 
 ## Review Checklist
 
@@ -152,4 +152,4 @@ Reviewers should be able to answer yes to these questions:
 - Do plugin, app, and GitHub references resolve?
 - Are dependencies and external services disclosed?
 - Is the writing clear enough for someone who has not seen the pull request?
-- Is `recipes.json` valid and consistently formatted?
+- Is [recipes.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/recipes.json) valid and consistently formatted?

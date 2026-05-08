@@ -62,24 +62,7 @@ Make sure the plugin or app is ready for a fresh WordPress Playground site:
 - The first screen after installation gives users a clear next step.
 - The pasted My Apps test flow works before you create a pull request in this repository.
 
-During development, it can be useful to install directly from a GitHub branch with a `git:directory` resource, as in the [My Apps Blueprint](https://github.com/akirk/my-apps/blob/main/blueprint.json). Point `ref` at the branch you want to test, and use `targetFolderName` when the plugin folder name should stay stable:
-
-```json
-{
-	"step": "installPlugin",
-	"pluginData": {
-		"resource": "git:directory",
-		"url": "https://github.com/akirk/my-apps",
-		"ref": "main",
-		"refType": "branch"
-	},
-	"options": {
-		"targetFolderName": "my-apps"
-	}
-}
-```
-
-For plugins that need build steps such as `composer install`, `npm install`, or `npm run build`, a `dist` branch can be the easiest target. For example, [Personal CRM's build-dist workflow](https://github.com/akirk/personal-crm/blob/main/.github/workflows/build-dist.yml) installs Composer dependencies, commits `vendor/`, and pushes the result to `dist/<branch>`. A Blueprint can then point `ref` at a built branch such as `dist/main`.
+For plugins that need build steps such as `composer install`, `npm install`, or `npm run build`, a `dist` branch can be the easiest target. During development, a Blueprint can use a `git:directory` resource, as in the [My Apps Blueprint](https://github.com/akirk/my-apps/blob/main/blueprint.json), with `refType` set to `branch` and `ref` pointing at any GitHub branch you want to test. For example, [Personal CRM's build-dist workflow](https://github.com/akirk/personal-crm/blob/main/.github/workflows/build-dist.yml) installs Composer dependencies, commits `vendor/`, and pushes the result to `dist/<branch>`, so a Blueprint can point `ref` at a built branch such as `dist/main`. Use `targetFolderName` when the plugin folder name should stay stable.
 
 If the plugin should be installed from the WordPress.org Plugin Directory, submit it there first. WordPress.org expects a complete plugin ZIP, a valid WordPress.org account, a checked email address, and compliance with the Plugin Directory guidelines. Once the plugin has an approved directory slug, My WordPress can install it with the `wordpress.org/plugins` resource.
 

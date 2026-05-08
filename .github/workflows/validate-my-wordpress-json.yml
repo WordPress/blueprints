@@ -16,6 +16,9 @@ on:
             - "apps/*.json"
             - "blueprints/my-wordpress/**/*.json"
 
+env:
+    BLUEPRINT_SCHEMA_URL: "https://raw.githubusercontent.com/WordPress/wordpress-playground/trunk/packages/playground/blueprints/public/blueprint-schema.json"
+
 jobs:
     validate_json:
         runs-on: ubuntu-latest
@@ -23,6 +26,9 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
+
+            - name: Install JSON Schema validator
+              run: python -m pip install jsonschema
 
             - name: Validate JSON syntax
               run: |
@@ -44,4 +50,50 @@ jobs:
                       with path.open(encoding='utf-8') as file:
                           json.load(file)
                       print(f'Valid JSON: {path}')
+                  PY
+
+            - name: Validate Blueprint schemas
+              run: |
+                  python - <<'PY'
+                  import json
+                  import os
+                  import sys
+                  import urllib.request
+                  from pathlib import Path
+
+                  from jsonschema import Draft7Validator
+
+                  schema_url = os.environ['BLUEPRINT_SCHEMA_URL']
+                  with urllib.request.urlopen(schema_url) as response:
+                      schema = json.load(response)
+
+                  Draft7Validator.check_schema(schema)
+                  validator = Draft7Validator(schema)
+
+                  blueprint_files = [
+                      Path('blueprints/my-wordpress/blueprint.json'),
+                      *Path('apps').glob('*.json'),
+                  ]
+
+                  failed = False
+                  for path in sorted(blueprint_files):
+                      with path.open(encoding='utf-8') as file:
+                          data = json.load(file)
+
+                      errors = sorted(
+                          validator.iter_errors(data),
+                          key=lambda error: list(error.absolute_path),
+                      )
+
+                      if not errors:
+                          print(f'Valid Blueprint schema: {path}')
+                          continue
+
+                      failed = True
+                      for error in errors:
+                          location = '/'.join(str(part) for part in error.absolute_path) or '<root>'
+                          print(f'::error file={path}::{location}: {error.message}')
+
+                  if failed:
+                      sys.exit(1)
                   PY

@@ -55,12 +55,12 @@ If your Blueprint's title matches an existing app, My Apps can temporarily overr
 
 Make sure the plugin or app is ready for a fresh WordPress Playground site:
 
-- It installs a built version of the plugin or app and activates cleanly on a new site. Run required build steps before testing or submitting, such as `composer install`, `npm install`, or `npm run build`, so the installed copy already includes its runtime dependencies and compiled assets.
+- It installs and activates cleanly from a built copy, including runtime dependencies and compiled assets.
 - It does not require secrets, private API keys, or credentials to run its basic flow.
 - Any paid service, external account, tracking, or network dependency is clearly disclosed.
 - The code is GPL-compatible if it is submitted to this repository or distributed through WordPress.org.
 - The first screen after installation gives users a clear next step.
-- The pasted My Apps test flow works before you ask for permanent inclusion.
+- The pasted My Apps test flow works before you create a pull request in this repository.
 
 During development, it can be useful to install directly from a GitHub branch with a `git:directory` resource, as in the [My Apps Blueprint](https://github.com/akirk/my-apps/blob/main/blueprint.json). Point `ref` at the branch you want to test, and use `targetFolderName` when the plugin folder name should stay stable:
 
@@ -79,7 +79,7 @@ During development, it can be useful to install directly from a GitHub branch wi
 }
 ```
 
-Use the branch workflow for testing and review, but make sure the referenced branch contains the built files needed for activation.
+For plugins that need build steps such as `composer install`, `npm install`, or `npm run build`, a `dist` branch can be the easiest target. For example, [Personal CRM's build-dist workflow](https://github.com/akirk/personal-crm/blob/main/.github/workflows/build-dist.yml) installs Composer dependencies, commits `vendor/`, and pushes the result to `dist/<branch>`. A Blueprint can then point `ref` at a built branch such as `dist/main`.
 
 If the plugin should be installed from the WordPress.org Plugin Directory, submit it there first. WordPress.org expects a complete plugin ZIP, a valid WordPress.org account, a checked email address, and compliance with the Plugin Directory guidelines. Once the plugin has an approved directory slug, My WordPress can install it with the `wordpress.org/plugins` resource.
 
@@ -115,7 +115,7 @@ Prefer a WordPress.org slug for broadly distributed plugins. Use `github`, `bran
 
 ## Option 2: Submit an App
 
-Use this path when the My Apps pasted-Blueprint test works and the experience needs permanent inclusion in the curated app store. This is most useful for companion plugins, setup code, imported starter data, custom options, or a specific landing page.
+Use this path when the My Apps pasted-Blueprint test works and you want to create a pull request for permanent inclusion in the curated app store. This is most useful for companion plugins, setup code, imported starter data, custom options, or a specific landing page.
 
 Create a new Blueprint file in `apps/`, for example `apps/example-app.json`:
 

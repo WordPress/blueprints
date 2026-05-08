@@ -17,54 +17,89 @@ jobs:
             issues: write
             pull-requests: write
         steps:
-            - name: Checkout pull request head
-              uses: actions/checkout@v4
-              with:
-                  repository: ${{ github.event.pull_request.head.repo.full_name }}
-                  ref: ${{ github.event.pull_request.head.sha }}
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  fetch-depth: 1
-            - name: Resolve the Blueprint file
+            - name: Update Playground preview comment
               uses: actions/github-script@v7
-              id: blueprint
               with:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
-                  result-encoding: string
                   script: |
                       const issue_number = context.payload.pull_request.number;
+                      const marker = '<!-- wp-playground-preview-comment -->';
 
                       const prInfo = {
                         owner: context.repo.owner,
                         repo: context.repo.repo,
                         pull_number: issue_number,
+                        per_page: 100,
                       };
 
-                      // First, find a blueprint.json file in the pull request
-                      const blueprintFile = ( await github.rest.pulls.listFiles( prInfo ) ).data.filter( file => file.filename.endsWith( '/blueprint.json' ) )[0];
-                      if ( !blueprintFile ) {
-                        return '';
+                      const files = await github.paginate( github.rest.pulls.listFiles, prInfo );
+                      const blueprintFiles = files
+                        .filter( ( file ) => file.status !== 'removed' && file.filename.endsWith( '/blueprint.json' ) )
+                        .sort( ( a, b ) => a.filename.localeCompare( b.filename ) );
+
+                      const comments = await github.paginate(
+                        github.rest.issues.listComments,
+                        {
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          issue_number,
+                          per_page: 100,
+                        }
+                      );
+
+                      const existingComment = comments.find( ( comment ) => comment.body?.includes( marker ) );
+
+                      if ( blueprintFiles.length === 0 ) {
+                        if ( existingComment ) {
+                          await github.rest.issues.deleteComment( {
+                            owner: context.repo.owner,
+                            repo: context.repo.repo,
+                            comment_id: existingComment.id,
+                          } );
+                        }
+                        return;
                       }
-                      return decodeURIComponent(blueprintFile.raw_url);
 
-            - name: Leave a comment about testing with Playground
-              uses: WordPress/action-wp-playground-pr-preview@v2
-              if: steps.blueprint.outputs.result != ''
-              with:
-                  mode: comment
-                  github-token: ${{ secrets.GITHUB_TOKEN }}
-                  blueprint-url: ${{ steps.blueprint.outputs.result }}
-                  comment-template: |
-                      ## Test using WordPress Playground
-                      The changes in this pull request can previewed and tested using a [WordPress Playground](https://developer.wordpress.org/playground/) instance.
+                      const previewLinks = blueprintFiles.map( ( file ) => {
+                        const rawPath = file.filename.split( '/' ).map( encodeURIComponent ).join( '/' );
+                        const blueprintUrl = `https://raw.githubusercontent.com/${ context.payload.pull_request.head.repo.full_name }/${ context.payload.pull_request.head.sha }/${ rawPath }`;
+                        const playgroundUrl = `https://playground.wordpress.net?blueprint-url=${ encodeURIComponent( blueprintUrl ) }`;
+                        const label = file.filename.match( /(?:^|\/)([^/]+)\/blueprint\.json$/ )?.[1] || file.filename;
 
-                      [WordPress Playground](https://developer.wordpress.org/playground/) is an experimental project that creates a full WordPress instance entirely within the browser.
+                        return `- [Open \`${ label }\` in WordPress Playground](${ playgroundUrl })`;
+                      } );
 
-                      ### Some things to be aware of
-                      - All changes will be lost when closing a tab with a Playground instance.
-                      - All changes will be lost when refreshing the page.
-                      - A fresh instance is created each time the link below is clicked.
+                      const body = [
+                        marker,
+                        '## Test using WordPress Playground',
+                        'The changes in this pull request can be previewed and tested using a [WordPress Playground](https://developer.wordpress.org/playground/) instance.',
+                        '',
+                        '[WordPress Playground](https://developer.wordpress.org/playground/) is an experimental project that creates a full WordPress instance entirely within the browser.',
+                        '',
+                        '### Some things to be aware of',
+                        '- All changes will be lost when closing a tab with a Playground instance.',
+                        '- All changes will be lost when refreshing the page.',
+                        '- A fresh instance is created each time one of the links below is clicked.',
+                        '',
+                        'For more details about these limitations and more, check out the [Limitations page](https://wordpress.github.io/wordpress-playground/limitations/) in the WordPress Playground documentation.',
+                        '',
+                        '### Blueprint previews',
+                        ...previewLinks,
+                      ].join( '\n' );
 
-                      For more details about these limitations and more, check out the [Limitations page](https://wordpress.github.io/wordpress-playground/limitations/) in the WordPress Playground documentation.
+                      if ( existingComment ) {
+                        await github.rest.issues.updateComment( {
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          comment_id: existingComment.id,
+                          body,
+                        } );
+                        return;
+                      }
 
-                      {{PLAYGROUND_BUTTON}}
-
+                      await github.rest.issues.createComment( {
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        issue_number,
+                        body,
+                      } );

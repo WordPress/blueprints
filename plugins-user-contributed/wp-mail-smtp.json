@@ -1,0 +1,28 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=wp-mail-smtp",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-mail-smtp"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/addFilter-1.php",
+      "data": "<?php add_filter( 'wp_mail_smtp_admin_setup_wizard_load_wizard', '__return_false' );"
+    }
+  ],
+  "meta": {
+    "title": "WP Mail SMTP by WPForms",
+    "author": "Jan Jakes"
+  }
+}

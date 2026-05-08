@@ -1,0 +1,44 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/admin.php?page=monsterinsights_settings",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "google-analytics-for-wordpress"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/uploads"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/monsterinsights-demo.pdf",
+      "data": "MonsterInsights Playground demo file for download tracking.\n"
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire_once '/wordpress/wp-load.php';\n\n// Preconfigure MonsterInsights core settings (monsterinsights_settings option)\n// Based on a real-world option structure: affiliate links, demographics, link attribution,\n// file download extensions, events/tracking mode, email summaries, Popular Posts config, etc.\n// Source: serialized monsterinsights_settings sample inspected via wpsnoop.\n\n$email = get_option( 'admin_email', 'admin@example.com' );\n\n$settings = array(\n    'enable_affiliate_links' => true,\n    'affiliate_links'        => array(\n        array( 'path' => '/go/',        'label' => 'affiliate' ),\n        array( 'path' => '/recommend/', 'label' => 'affiliate' ),\n    ),\n    'demographics'           => 1,\n    'ignore_users'           => array( 'administrator', 'editor' ),\n    'dashboards_disabled'    => 0,\n    'anonymize_ips'          => 1,\n    'extensions_of_files'    => 'doc,pdf,ppt,zip,xls,docx,pptx,xlsx',\n    'subdomain_tracking'     => '',\n    'link_attribution'       => true,\n    'tag_links_in_rss'       => true,\n    'allow_anchor'           => 0,\n    'add_allow_linker'       => 0,\n    'save_settings'          => array( 'administrator' ),\n    'view_reports'           => array( 'administrator', 'editor' ),\n    'events_mode'            => 'js',\n    'tracking_mode'          => 'gtag',\n    'email_summaries'        => 'on',\n    'summaries_html_template'=> 'yes',\n    'summaries_email_addresses' => array(\n        array( 'email' => $email ),\n    ),\n    'automatic_updates'      => 'none',\n\n    // Popular Posts (inline + widget) demo configuration\n    'popular_posts_inline_theme'               => 'alpha',\n    'popular_posts_widget_theme'              => 'alpha',\n    'popular_posts_products_theme'            => 'alpha',\n    'popular_posts_inline_placement'          => 'manual',\n    'popular_posts_widget_theme_columns'      => '2',\n    'popular_posts_products_theme_columns'    => '2',\n    'popular_posts_widget_count'              => '4',\n    'popular_posts_products_count'            => '4',\n    'popular_posts_widget_theme_meta_author'  => 'on',\n    'popular_posts_widget_theme_meta_date'    => 'on',\n    'popular_posts_widget_theme_meta_comments'=> 'on',\n    'popular_posts_products_theme_meta_price' => 'on',\n    'popular_posts_products_theme_meta_rating'=> 'on',\n    'popular_posts_products_theme_meta_image' => 'on',\n    'popular_posts_inline_after_count'        => '150',\n    'popular_posts_inline_multiple_number'    => '3',\n    'popular_posts_inline_multiple_distance'  => '250',\n    'popular_posts_inline_multiple_min_words' => '100',\n    'popular_posts_inline_post_types'         => array( 'post' ),\n    'popular_posts_widget_post_types'         => array( 'post' ),\n);\n\nupdate_option( 'monsterinsights_settings', $settings );\n\n// Create a front-end demo page whose links will be tracked once GA is connected\n$demo_content = '<p>This page is prepared for MonsterInsights (Google Analytics for WordPress). After you connect the plugin to a Google Analytics property under <strong>Insights \u2192 Settings</strong>, outbound link clicks, affiliate links, and file downloads on this page will be tracked as events automatically.</p><ul><li><a href=\"https://example.com/?source=monsterinsights-demo\">Visit example outbound link</a></li><li><a href=\"/go/example-affiliate\">Click tracked affiliate link</a></li><li><a href=\"/wp-content/uploads/monsterinsights-demo.pdf\">Download demo PDF</a></li></ul>';\n\nwp_insert_post( array(\n    'post_title'   => 'MonsterInsights tracking demo',\n    'post_name'    => 'monsterinsights-tracking-demo',\n    'post_status'  => 'publish',\n    'post_type'    => 'page',\n    'post_content' => $demo_content,\n) );\n"
+    }
+  ],
+  "meta": {
+    "title": "MonsterInsights",
+    "author": "Adam Zielinski"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=WP-Optimize",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-optimize"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "meta": {
+    "title": "WP-Optimize",
+    "author": "Berislav Grgicak"
+  }
+}

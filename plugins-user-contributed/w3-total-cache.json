@@ -1,0 +1,29 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=w3tc_dashboard",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "w3-total-cache"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nchmod(\"/wordpress/wp-content\", 755);"
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "w3tc_setupguide_completed": "yes"
+      }
+    }
+  ],
+  "meta": {
+    "title": "W3 Total Cache",
+    "author": "Berislav Grgicak"
+  }
+}

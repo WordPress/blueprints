@@ -1,0 +1,25 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=aioseo",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "all-in-one-seo-pack"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "aioseo_activation_redirect": "__return_true"
+      }
+    }
+  ],
+  "meta": {
+    "title": "All in One SEO",
+    "author": "Jan Jakes"
+  }
+}

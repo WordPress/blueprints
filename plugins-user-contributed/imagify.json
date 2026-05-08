@@ -1,0 +1,25 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=imagify",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "imagify"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "defineWpConfigConsts",
+      "consts": {
+        "IMAGIFY_API_KEY": "1f56651fb2157c1e23e9dccfafa3dd78b782dc56"
+      }
+    }
+  ],
+  "meta": {
+    "title": "Imagify Image Optimization",
+    "author": "Berislav Grgicak"
+  }
+}

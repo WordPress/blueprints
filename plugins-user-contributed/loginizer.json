@@ -1,0 +1,19 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=loginizer",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "loginizer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "meta": {
+    "title": "Loginizer",
+    "author": "Jan Jakes"
+  }
+}

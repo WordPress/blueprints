@@ -1,0 +1,25 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=smush",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wp-smushit"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "skip-smush-setup": "yes"
+      }
+    }
+  ],
+  "meta": {
+    "title": "Smush Image Optimization",
+    "author": "Berislav Grgicak"
+  }
+}

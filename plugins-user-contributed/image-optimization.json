@@ -1,0 +1,37 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/wp-admin/upload.php?page=image-optimization-settings",
+  "login": true,
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "features": {
+    "networking": true
+  },
+  "plugins": [
+    "image-optimization"
+  ],
+  "steps": [
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Image Optimizer Demo",
+        "image_optimizer_compression_level": "lossy",
+        "image_optimizer_optimize_on_upload": true,
+        "image_optimizer_resize_larger_images": true,
+        "image_optimizer_resize_larger_images_size": 1920,
+        "image_optimizer_exif_metadata": true,
+        "image_optimizer_original_images": true,
+        "image_optimizer_convert_to_format": "webp"
+      }
+    }
+  ],
+  "meta": {
+    "title": "Image Optimizer",
+    "author": "Adam Zielinski"
+  }
+}

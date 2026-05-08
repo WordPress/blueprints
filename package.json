@@ -3,7 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "shots": "tsx scripts/screenshot-blueprints.ts"
+    "shots": "tsx scripts/screenshot-blueprints.ts",
+    "inject": "tsx scripts/inject-screenshots.ts",
+    "build-plugins": "tsx scripts/build-plugins-gallery.ts",
+    "shots-plugins": "tsx scripts/screenshot-plugins.ts",
+    "shots-plugins:wporg": "tsx scripts/screenshot-plugins.ts --source=wporg",
+    "shots-plugins:user": "tsx scripts/screenshot-plugins.ts --source=user-contributed",
+    "sync-wporg": "./scripts/sync-wporg-data.sh"
   },
   "devDependencies": {
     "playwright": "^1.48.0",

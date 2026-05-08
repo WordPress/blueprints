@@ -1,0 +1,19 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=wpforms-builder",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wpforms-lite"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "meta": {
+    "title": "WPForms",
+    "author": "Alex Kirk"
+  }
+}

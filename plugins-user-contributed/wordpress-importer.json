@@ -1,0 +1,19 @@
+{
+  "landingPage": "/wp-admin/admin.php?import=wordpress",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wordpress-importer"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "meta": {
+    "title": "WordPress Importer",
+    "author": "Jan Jakes"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=elementskit&ekit-onboard-steps=loaded",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "elementor"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "elementskit-lite"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "hello-biz"
+      },
+      "options": {
+        "activate": true
+      },
+      "progress": {
+        "caption": "Installing theme: hello-biz"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "elementor_onboarded": "true"
+      }
+    }
+  ],
+  "meta": {
+    "title": "ElementsKit Elementor Addons and Templates",
+    "author": "Berislav Grgicak"
+  }
+}

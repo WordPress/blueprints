@@ -1,0 +1,19 @@
+{
+  "landingPage": "/wp-admin/options-general.php#whl_settings",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "wps-hide-login"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "meta": {
+    "title": "WPS Hide Login",
+    "author": "Jan Jakes"
+  }
+}

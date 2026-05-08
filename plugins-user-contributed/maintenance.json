@@ -1,0 +1,19 @@
+{
+  "landingPage": "/?maintenance-preview",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "maintenance"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ],
+  "meta": {
+    "title": "Maintenance",
+    "author": "Jan Jakes"
+  }
+}

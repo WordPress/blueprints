@@ -1,0 +1,43 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=duplicator",
+  "preferredVersions": {
+    "wp": "latest",
+    "php": "8.3"
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "duplicator"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php';\n$page_args = array(\n'post_type'    => 'page',\n'post_status'  => 'publish',\n'post_title'   => 'Duplicator demo homepage',\n'post_content' => 'This is a WordPress Playground demo site for the Duplicator plugin. In a real workflow, this would be your source site. Use Duplicator → Packages → Create New to build a backup/migration package of this site.',\n);\n$page_id = wp_insert_post( $page_args, true );\nif ( is_wp_error( $page_id ) ) {\nerror_log( 'addPage error: ' . $page_id->get_error_message() );\n}",
+      "progress": {
+        "caption": "addPage: Duplicator demo homepage"
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Duplicator Demo Site",
+        "blogdescription": "Playground demo for Duplicator – Backups & Migration Plugin"
+      }
+    }
+  ],
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Duplicator",
+    "author": "Adam Zielinski"
+  }
+}

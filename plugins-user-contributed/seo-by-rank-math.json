@@ -1,0 +1,25 @@
+{
+  "landingPage": "/wp-admin/admin.php?page=rank-math",
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "seo-by-rank-math"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "defineWpConfigConsts",
+      "consts": {
+        "RANK_MATH_REGISTRATION_SKIP": true
+      }
+    }
+  ],
+  "meta": {
+    "title": "Rank Math SEO",
+    "author": "Jan Jakes"
+  }
+}

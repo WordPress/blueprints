@@ -1,0 +1,11 @@
+{
+    "plugins": [ "akismet", "gutenberg" ],
+    "themes": [ "twentynineteen" ],
+    "settings": {
+      "blogname": "My Custom Site",
+      "blogdescription": "Just another WordPress site"
+    },
+    "constants": {
+      "WP_DEBUG": true
+    }
+  }

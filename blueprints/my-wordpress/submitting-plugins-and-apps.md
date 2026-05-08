@@ -55,13 +55,31 @@ If your Blueprint's title matches an existing app, My Apps can temporarily overr
 
 Make sure the plugin or app is ready for a fresh WordPress Playground site:
 
-- It installs without manual file uploads.
-- It activates cleanly on a new site.
+- It installs a built version of the plugin or app and activates cleanly on a new site. Run required build steps before testing or submitting, such as `composer install`, `npm install`, or `npm run build`, so the installed copy already includes its runtime dependencies and compiled assets.
 - It does not require secrets, private API keys, or credentials to run its basic flow.
 - Any paid service, external account, tracking, or network dependency is clearly disclosed.
 - The code is GPL-compatible if it is submitted to this repository or distributed through WordPress.org.
 - The first screen after installation gives users a clear next step.
 - The pasted My Apps test flow works before you ask for permanent inclusion.
+
+During development, it can be useful to install directly from a GitHub branch with a `git:directory` resource, as in the [My Apps Blueprint](https://github.com/akirk/my-apps/blob/main/blueprint.json). Point `ref` at the branch you want to test, and use `targetFolderName` when the plugin folder name should stay stable:
+
+```json
+{
+	"step": "installPlugin",
+	"pluginData": {
+		"resource": "git:directory",
+		"url": "https://github.com/akirk/my-apps",
+		"ref": "main",
+		"refType": "branch"
+	},
+	"options": {
+		"targetFolderName": "my-apps"
+	}
+}
+```
+
+Use the branch workflow for testing and review, but make sure the referenced branch contains the built files needed for activation.
 
 If the plugin should be installed from the WordPress.org Plugin Directory, submit it there first. WordPress.org expects a complete plugin ZIP, a valid WordPress.org account, a checked email address, and compliance with the Plugin Directory guidelines. Once the plugin has an approved directory slug, My WordPress can install it with the `wordpress.org/plugins` resource.
 

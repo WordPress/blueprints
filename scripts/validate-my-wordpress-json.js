@@ -11,6 +11,10 @@ const BLUEPRINT_SCHEMA_URL =
 const MY_APPS_SCHEMA_BASE_URL =
 	process.env.MY_APPS_SCHEMA_BASE_URL ||
 	'https://raw.githubusercontent.com/akirk/my-apps/main/schemas';
+const SCHEMA_FETCH_TIMEOUT_MS = Number.parseInt(
+	process.env.SCHEMA_FETCH_TIMEOUT_MS || '15000',
+	10
+);
 
 function listJsonFiles(dir, recursive = false) {
 	if (!fs.existsSync(dir)) {
@@ -47,10 +51,26 @@ function ajvPath(instancePath) {
 }
 
 async function fetchJson(url) {
-	const response = await fetch(url);
-	if (!response.ok) {
-		throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+	let response;
+	try {
+		response = await fetch(url, {
+			signal: AbortSignal.timeout(SCHEMA_FETCH_TIMEOUT_MS),
+		});
+	} catch (error) {
+		if (error.name === 'TimeoutError' || error.name === 'AbortError') {
+			throw new Error(
+				`Timed out fetching ${url} after ${SCHEMA_FETCH_TIMEOUT_MS}ms`
+			);
+		}
+		throw error;
 	}
+
+	if (!response.ok) {
+		throw new Error(
+			`Failed to fetch ${url}: ${response.status} ${response.statusText}`
+		);
+	}
+
 	return response.json();
 }
 
@@ -120,14 +140,24 @@ function validateJsonSyntax() {
 		...listJsonFiles('blueprints/my-wordpress', true),
 	].sort();
 
+	let failed = false;
 	for (const filePath of jsonFiles) {
-		readJson(filePath);
-		console.log(`Valid JSON: ${filePath}`);
+		try {
+			readJson(filePath);
+			console.log(`Valid JSON: ${filePath}`);
+		} catch (error) {
+			failed = true;
+			reportError(filePath, `Invalid JSON: ${error.message}`);
+		}
 	}
+
+	return !failed;
 }
 
 async function main() {
-	validateJsonSyntax();
+	if (!validateJsonSyntax()) {
+		process.exit(1);
+	}
 
 	const blueprintsValid = await validateBlueprints();
 	const catalogsValid = await validateCatalogs();

@@ -16,6 +16,8 @@ Before opening a pull request, test the app through the My Apps flow for [tempor
 
 Create a complete WordPress Playground `blueprint.json` with `meta.title`, `meta.description`, and `meta.author`. My Apps reads those fields to create the app-store entry.
 
+If you do not want to write the Blueprint by hand, use the [WordPress Playground Step Library](https://akirk.github.io/playground-step-library/) to build it interactively. The Step Library can launch the Blueprint in Playground and copy the generated Blueprint JSON to your clipboard, ready to paste into My Apps.
+
 ```json
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",

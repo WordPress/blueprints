@@ -18,6 +18,7 @@ on:
 
 env:
     BLUEPRINT_SCHEMA_URL: "https://raw.githubusercontent.com/WordPress/wordpress-playground/trunk/packages/playground/blueprints/public/blueprint-schema.json"
+    MY_APPS_SCHEMA_BASE_URL: "https://raw.githubusercontent.com/akirk/my-apps/main/schemas"
 
 jobs:
     validate_json:
@@ -27,73 +28,126 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
 
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
             - name: Install JSON Schema validator
-              run: python -m pip install jsonschema
+              run: npm install --no-save --package-lock=false ajv ajv-formats
 
-            - name: Validate JSON syntax
+            - name: Validate JSON and schemas
               run: |
-                  python - <<'PY'
-                  import json
-                  from pathlib import Path
+                  node <<'JS'
+                  const fs = require('fs');
+                  const path = require('path');
+                  const Ajv = require('ajv');
+                  const Ajv2020 = require('ajv/dist/2020');
+                  const addFormats = require('ajv-formats');
 
-                  patterns = [
+                  function listJsonFiles(dir, recursive = false) {
+                    if (!fs.existsSync(dir)) {
+                      return [];
+                    }
+
+                    const files = [];
+                    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+                      const entryPath = path.join(dir, entry.name);
+                      if (entry.isDirectory() && recursive) {
+                        files.push(...listJsonFiles(entryPath, true));
+                      } else if (entry.isFile() && entry.name.endsWith('.json')) {
+                        files.push(entryPath);
+                      }
+                    }
+                    return files;
+                  }
+
+                  function readJson(filePath) {
+                    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                  }
+
+                  function githubError(filePath, message) {
+                    console.log(`::error file=${filePath}::${message}`);
+                  }
+
+                  function ajvPath(instancePath) {
+                    return instancePath ? instancePath.slice(1).replaceAll('/', '.') : '<root>';
+                  }
+
+                  async function fetchJson(url) {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                      throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+                    }
+                    return response.json();
+                  }
+
+                  async function main() {
+                    const jsonFiles = [
                       'apps.json',
-                      'apps/*.json',
-                      'blueprints/my-wordpress/**/*.json',
-                  ]
+                      ...listJsonFiles('apps'),
+                      ...listJsonFiles('blueprints/my-wordpress', true),
+                    ].sort();
 
-                  files = []
-                  for pattern in patterns:
-                      files.extend(Path('.').glob(pattern))
+                    for (const filePath of jsonFiles) {
+                      readJson(filePath);
+                      console.log(`Valid JSON: ${filePath}`);
+                    }
 
-                  for path in sorted(set(files)):
-                      with path.open(encoding='utf-8') as file:
-                          json.load(file)
-                      print(f'Valid JSON: {path}')
-                  PY
+                    let failed = false;
 
-            - name: Validate Blueprint schemas
-              run: |
-                  python - <<'PY'
-                  import json
-                  import os
-                  import sys
-                  import urllib.request
-                  from pathlib import Path
+                    const blueprintSchema = await fetchJson(process.env.BLUEPRINT_SCHEMA_URL);
+                    const blueprintAjv = new Ajv({ allErrors: true, strict: false, validateSchema: false });
+                    const validateBlueprint = blueprintAjv.compile(blueprintSchema);
+                    const blueprintFiles = [
+                      'blueprints/my-wordpress/blueprint.json',
+                      ...listJsonFiles('apps'),
+                    ].sort();
 
-                  from jsonschema import Draft7Validator
+                    for (const filePath of blueprintFiles) {
+                      const valid = validateBlueprint(readJson(filePath));
+                      if (valid) {
+                        console.log(`Valid Blueprint schema: ${filePath}`);
+                        continue;
+                      }
 
-                  schema_url = os.environ['BLUEPRINT_SCHEMA_URL']
-                  with urllib.request.urlopen(schema_url) as response:
-                      schema = json.load(response)
+                      failed = true;
+                      for (const error of validateBlueprint.errors || []) {
+                        githubError(filePath, `${ajvPath(error.instancePath)}: ${error.message}`);
+                      }
+                    }
 
-                  Draft7Validator.check_schema(schema)
-                  validator = Draft7Validator(schema)
+                    const catalogAjv = new Ajv2020({ allErrors: true, strict: false });
+                    addFormats(catalogAjv);
+                    const schemaBaseUrl = process.env.MY_APPS_SCHEMA_BASE_URL;
+                    const catalogChecks = {
+                      'apps.json': `${schemaBaseUrl}/apps.schema.json`,
+                      'blueprints/my-wordpress/plugins.json': `${schemaBaseUrl}/plugins.schema.json`,
+                      'blueprints/my-wordpress/recipes.json': `${schemaBaseUrl}/recipes.schema.json`,
+                    };
 
-                  blueprint_files = [
-                      Path('blueprints/my-wordpress/blueprint.json'),
-                      *Path('apps').glob('*.json'),
-                  ]
+                    for (const [filePath, schemaUrl] of Object.entries(catalogChecks)) {
+                      const schema = await fetchJson(schemaUrl);
+                      const validateCatalog = catalogAjv.compile(schema);
+                      const valid = validateCatalog(readJson(filePath));
+                      if (valid) {
+                        console.log(`Valid My Apps catalog schema: ${filePath}`);
+                        continue;
+                      }
 
-                  failed = False
-                  for path in sorted(blueprint_files):
-                      with path.open(encoding='utf-8') as file:
-                          data = json.load(file)
+                      failed = true;
+                      for (const error of validateCatalog.errors || []) {
+                        githubError(filePath, `${ajvPath(error.instancePath)}: ${error.message}`);
+                      }
+                    }
 
-                      errors = sorted(
-                          validator.iter_errors(data),
-                          key=lambda error: list(error.absolute_path),
-                      )
+                    if (failed) {
+                      process.exit(1);
+                    }
+                  }
 
-                      if not errors:
-                          print(f'Valid Blueprint schema: {path}')
-                          continue
-
-                      failed = True
-                      for error in errors:
-                          location = '/'.join(str(part) for part in error.absolute_path) or '<root>'
-                          print(f'::error file={path}::{location}: {error.message}')
-
-                  if failed:
-                      sys.exit(1)
-                  PY
+                  main().catch((error) => {
+                    console.error(error);
+                    process.exit(1);
+                  });
+                  JS

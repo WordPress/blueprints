@@ -212,7 +212,7 @@ Before opening a pull request:
 	- Any optional external service requirement is visible to the user.
 	- The uninstall/deactivate path does not leave the site broken.
 
-The pull request will run a GitHub Action that validates JSON syntax and checks app and My WordPress Blueprint files against the WordPress Playground Blueprint schema.
+The pull request will run a GitHub Action that validates JSON syntax, checks app and My WordPress Blueprint files against the WordPress Playground Blueprint schema, and checks catalog files against the My Apps schemas.
 
 ## Open the Pull Request
 

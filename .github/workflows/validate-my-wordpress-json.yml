@@ -1,0 +1,47 @@
+name: Validate My WordPress JSON
+
+on:
+    pull_request:
+        paths:
+            - ".github/workflows/validate-my-wordpress-json.yml"
+            - "apps.json"
+            - "apps/*.json"
+            - "blueprints/my-wordpress/**/*.json"
+    push:
+        branches:
+            - trunk
+        paths:
+            - ".github/workflows/validate-my-wordpress-json.yml"
+            - "apps.json"
+            - "apps/*.json"
+            - "blueprints/my-wordpress/**/*.json"
+
+jobs:
+    validate_json:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Validate JSON syntax
+              run: |
+                  python - <<'PY'
+                  import json
+                  from pathlib import Path
+
+                  patterns = [
+                      'apps.json',
+                      'apps/*.json',
+                      'blueprints/my-wordpress/**/*.json',
+                  ]
+
+                  files = []
+                  for pattern in patterns:
+                      files.extend(Path('.').glob(pattern))
+
+                  for path in sorted(set(files)):
+                      with path.open(encoding='utf-8') as file:
+                          json.load(file)
+                      print(f'Valid JSON: {path}')
+                  PY

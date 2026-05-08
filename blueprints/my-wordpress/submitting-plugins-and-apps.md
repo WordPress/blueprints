@@ -69,7 +69,7 @@ Make sure the plugin or app is ready for a fresh WordPress Playground site:
 - For plugins with build steps such as `composer install`, `npm install`, or `npm run build`, test the built copy rather than the raw source.
 - A `dist` branch can be a good target for built files. For example, [Personal CRM's build-dist workflow](https://github.com/akirk/personal-crm/blob/main/.github/workflows/build-dist.yml) installs Composer dependencies, commits `vendor/`, and pushes the result to `dist/<branch>`.
 - During development, a Blueprint can use a `git:directory` resource, as in the [My Apps Blueprint](https://github.com/akirk/my-apps/blob/main/blueprint.json), with `refType` set to `branch` and `ref` pointing at any GitHub branch you want to test.
-- Use `targetFolderName` when the plugin folder name should stay stable.
+- We recommend setting `targetFolderName` for `git:directory` installs so updates from different branches replace the same plugin folder instead of creating multiple copies of the same plugin.
 
 If the plugin should be installed from the WordPress.org Plugin Directory, submit it there first. WordPress.org expects a complete plugin ZIP, a valid WordPress.org account, a checked email address, and compliance with the Plugin Directory guidelines. Once the plugin has an approved directory slug, My WordPress can install it with the `wordpress.org/plugins` resource.
 
@@ -191,27 +191,19 @@ If the GitHub repository contains extra build files or the plugin folder name sh
 
 Before opening a pull request:
 
-1. Validate every edited JSON file:
-
-	```bash
-	python3 -m json.tool blueprints/my-wordpress/plugins.json >/dev/null
-	python3 -m json.tool apps/example-app.json >/dev/null
-	python3 -m json.tool apps.json >/dev/null
-	```
-
-2. Format JSON with the repository's Prettier settings if available:
+1. Format JSON with the repository's Prettier settings if available:
 
 	```bash
 	npx prettier --write blueprints/my-wordpress/plugins.json apps/example-app.json apps.json
 	```
 
-3. Try the app Blueprint in WordPress Playground. For a branch on GitHub, use a URL like:
+2. Try the app Blueprint in WordPress Playground. For a branch on GitHub, use a URL like:
 
 	```text
 	https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/YOUR-BRANCH/apps/example-app.json
 	```
 
-4. Confirm the install flow:
+3. Confirm the install flow:
 
 	- Pasting the complete Blueprint into My Apps creates the expected temporary app-store entry.
 	- The plugin or app installs without errors.
@@ -220,9 +212,11 @@ Before opening a pull request:
 	- Any optional external service requirement is visible to the user.
 	- The uninstall/deactivate path does not leave the site broken.
 
+The pull request will run a GitHub Action that validates the My WordPress and app catalog JSON files.
+
 ## Open the Pull Request
 
-Submit a pull request against the `wordpress/blueprints` repository.
+[Open a pull request](https://github.com/WordPress/blueprints/compare) against the `wordpress/blueprints` repository.
 
 Include:
 

@@ -112,30 +112,26 @@ Keep recipes practical and specific:
 
 Before opening a pull request:
 
-1. Validate `recipes.json`:
-
-	```bash
-	python3 -m json.tool blueprints/my-wordpress/recipes.json >/dev/null
-	```
-
-2. Format it with the repository's Prettier settings if available:
+1. Format `recipes.json` with the repository's Prettier settings if available:
 
 	```bash
 	npx prettier --write blueprints/my-wordpress/recipes.json
 	```
 
-3. Check every referenced dependency:
+2. Check every referenced dependency:
 
 	- `plugin` steps use slugs that exist in `blueprints/my-wordpress/plugins.json`.
 	- `app` steps use paths that exist in `apps.json`.
 	- `github` steps use reachable `owner/repo` values.
 	- `note` steps with URLs open a useful screen.
 
-4. Read the recipe as a user flow from top to bottom. The sequence should still make sense if optional steps are skipped.
+3. Read the recipe as a user flow from top to bottom. The sequence should still make sense if optional steps are skipped.
+
+The pull request will run a GitHub Action that validates the My WordPress and app catalog JSON files.
 
 ## Open the Pull Request
 
-Submit a pull request against the `wordpress/blueprints` repository.
+[Open a pull request](https://github.com/WordPress/blueprints/compare) against the `wordpress/blueprints` repository.
 
 Include:
 

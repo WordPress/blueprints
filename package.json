@@ -3,9 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "shots": "tsx scripts/screenshot-blueprints.ts"
+    "shots": "tsx scripts/screenshot-blueprints.ts",
+    "validate:my-wordpress-json": "node scripts/validate-my-wordpress-json.js"
   },
   "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "playwright": "^1.48.0",
     "tsx": "^4.19.0"
   }

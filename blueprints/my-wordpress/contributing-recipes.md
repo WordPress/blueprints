@@ -127,7 +127,7 @@ Before opening a pull request:
 
 3. Read the recipe as a user flow from top to bottom. The sequence should still make sense if optional steps are skipped.
 
-The pull request will run a GitHub Action that validates JSON syntax, checks app and My WordPress Blueprint files against the WordPress Playground Blueprint schema, and checks catalog files against the My Apps schemas.
+The pull request will run a GitHub Action that validates JSON syntax, checks app and My WordPress Blueprint files against the WordPress Playground Blueprint schema, and checks catalog files against the My Apps schemas. You can run the same check locally with `npm run validate:my-wordpress-json`.
 
 ## Open the Pull Request
 

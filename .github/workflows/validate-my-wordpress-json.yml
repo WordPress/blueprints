@@ -4,6 +4,9 @@ on:
     pull_request:
         paths:
             - ".github/workflows/validate-my-wordpress-json.yml"
+            - "package-lock.json"
+            - "package.json"
+            - "scripts/validate-my-wordpress-json.js"
             - "apps.json"
             - "apps/*.json"
             - "blueprints/my-wordpress/**/*.json"
@@ -12,6 +15,9 @@ on:
             - trunk
         paths:
             - ".github/workflows/validate-my-wordpress-json.yml"
+            - "package-lock.json"
+            - "package.json"
+            - "scripts/validate-my-wordpress-json.js"
             - "apps.json"
             - "apps/*.json"
             - "blueprints/my-wordpress/**/*.json"
@@ -33,121 +39,8 @@ jobs:
               with:
                   node-version: 20
 
-            - name: Install JSON Schema validator
-              run: npm install --no-save --package-lock=false ajv ajv-formats
+            - name: Install dependencies
+              run: npm ci
 
             - name: Validate JSON and schemas
-              run: |
-                  node <<'JS'
-                  const fs = require('fs');
-                  const path = require('path');
-                  const Ajv = require('ajv');
-                  const Ajv2020 = require('ajv/dist/2020');
-                  const addFormats = require('ajv-formats');
-
-                  function listJsonFiles(dir, recursive = false) {
-                    if (!fs.existsSync(dir)) {
-                      return [];
-                    }
-
-                    const files = [];
-                    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-                      const entryPath = path.join(dir, entry.name);
-                      if (entry.isDirectory() && recursive) {
-                        files.push(...listJsonFiles(entryPath, true));
-                      } else if (entry.isFile() && entry.name.endsWith('.json')) {
-                        files.push(entryPath);
-                      }
-                    }
-                    return files;
-                  }
-
-                  function readJson(filePath) {
-                    return JSON.parse(fs.readFileSync(filePath, 'utf8'));
-                  }
-
-                  function githubError(filePath, message) {
-                    console.log(`::error file=${filePath}::${message}`);
-                  }
-
-                  function ajvPath(instancePath) {
-                    return instancePath ? instancePath.slice(1).replaceAll('/', '.') : '<root>';
-                  }
-
-                  async function fetchJson(url) {
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                      throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
-                    }
-                    return response.json();
-                  }
-
-                  async function main() {
-                    const jsonFiles = [
-                      'apps.json',
-                      ...listJsonFiles('apps'),
-                      ...listJsonFiles('blueprints/my-wordpress', true),
-                    ].sort();
-
-                    for (const filePath of jsonFiles) {
-                      readJson(filePath);
-                      console.log(`Valid JSON: ${filePath}`);
-                    }
-
-                    let failed = false;
-
-                    const blueprintSchema = await fetchJson(process.env.BLUEPRINT_SCHEMA_URL);
-                    const blueprintAjv = new Ajv({ allErrors: true, strict: false, validateSchema: false });
-                    const validateBlueprint = blueprintAjv.compile(blueprintSchema);
-                    const blueprintFiles = [
-                      'blueprints/my-wordpress/blueprint.json',
-                      ...listJsonFiles('apps'),
-                    ].sort();
-
-                    for (const filePath of blueprintFiles) {
-                      const valid = validateBlueprint(readJson(filePath));
-                      if (valid) {
-                        console.log(`Valid Blueprint schema: ${filePath}`);
-                        continue;
-                      }
-
-                      failed = true;
-                      for (const error of validateBlueprint.errors || []) {
-                        githubError(filePath, `${ajvPath(error.instancePath)}: ${error.message}`);
-                      }
-                    }
-
-                    const catalogAjv = new Ajv2020({ allErrors: true, strict: false });
-                    addFormats(catalogAjv);
-                    const schemaBaseUrl = process.env.MY_APPS_SCHEMA_BASE_URL;
-                    const catalogChecks = {
-                      'apps.json': `${schemaBaseUrl}/apps.schema.json`,
-                      'blueprints/my-wordpress/plugins.json': `${schemaBaseUrl}/plugins.schema.json`,
-                      'blueprints/my-wordpress/recipes.json': `${schemaBaseUrl}/recipes.schema.json`,
-                    };
-
-                    for (const [filePath, schemaUrl] of Object.entries(catalogChecks)) {
-                      const schema = await fetchJson(schemaUrl);
-                      const validateCatalog = catalogAjv.compile(schema);
-                      const valid = validateCatalog(readJson(filePath));
-                      if (valid) {
-                        console.log(`Valid My Apps catalog schema: ${filePath}`);
-                        continue;
-                      }
-
-                      failed = true;
-                      for (const error of validateCatalog.errors || []) {
-                        githubError(filePath, `${ajvPath(error.instancePath)}: ${error.message}`);
-                      }
-                    }
-
-                    if (failed) {
-                      process.exit(1);
-                    }
-                  }
-
-                  main().catch((error) => {
-                    console.error(error);
-                    process.exit(1);
-                  });
-                  JS
+              run: npm run validate:my-wordpress-json

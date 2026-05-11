@@ -1,0 +1,67 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Personal RAG",
+		"description": "A private local RAG app for WordPress Playground using Ollama, EmbeddingGemma, Gemma 4, and SQLite-backed WordPress data.",
+		"author": "Playground",
+		"categories": [
+			"Apps",
+			"AI"
+		]
+	},
+	"login": true,
+	"landingPage": "/wp-admin/tools.php?page=personal-rag",
+	"steps": [
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/personal-rag"
+		},
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/personal-rag/assets"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/personal-rag/personal-rag.php",
+			"data": {
+				"resource": "bundled",
+				"path": "./plugin/personal-rag.php"
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/personal-rag/uninstall.php",
+			"data": {
+				"resource": "bundled",
+				"path": "./plugin/uninstall.php"
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/personal-rag/assets/personal-rag.js",
+			"data": {
+				"resource": "bundled",
+				"path": "./plugin/assets/personal-rag.js"
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/personal-rag/assets/personal-rag.css",
+			"data": {
+				"resource": "bundled",
+				"path": "./plugin/assets/personal-rag.css"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "personal-rag/personal-rag.php"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "bundled",
+				"path": "./content.xml"
+			}
+		}
+	]
+}

@@ -1,0 +1,37 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Personal RAG",
+		"description": "Private local search and answers over your WordPress content using Ollama, EmbeddingGemma, and Gemma 4",
+		"author": "Playground",
+		"categories": [
+			"Apps",
+			"AI",
+			"Productivity"
+		]
+	},
+	"landingPage": "/wp-admin/tools.php?page=personal-rag",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/WordPress/blueprints",
+				"ref": "trunk",
+				"refType": "branch",
+				"path": "blueprints/personal-rag/plugin"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "personal-rag"
+			}
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-rag/content.xml"
+			}
+		}
+	]
+}

@@ -41,7 +41,7 @@ class Playground_Welcome {
         if ($post) {
             wp_update_post([
                 'ID' => $post->ID,
-                'post_title' => __('Welcome to Your WordPress', 'playground-welcome'),
+                'post_title' => __('Welcome to your WordPress', 'playground-welcome'),
                 'post_content' => self::get_welcome_post_content(),
                 'post_name' => 'welcome-to-your-wordpress',
             ]);
@@ -108,12 +108,14 @@ class Playground_Welcome {
             'xmlns' => true,
             'width' => true,
             'height' => true,
+            'fill' => true,
             'aria-hidden' => true,
             'focusable' => true,
             'style' => true,
         ];
         $tags['path'] = [
             'd' => true,
+            'fill' => true,
             'fill-rule' => true,
             'clip-rule' => true,
         ];
@@ -142,133 +144,46 @@ class Playground_Welcome {
             ['wp-components'],
             '1.0.0'
         );
+
+        wp_enqueue_script(
+            'playground-welcome',
+            plugin_dir_url(__FILE__) . 'playground-welcome.js',
+            ['wp-components', 'wp-dom-ready', 'wp-element'],
+            '1.0.0',
+            true
+        );
+
+        wp_localize_script(
+            'playground-welcome',
+            'playgroundWelcomeSettings',
+            [
+                'ajaxUrl' => admin_url('admin-ajax.php'),
+                'homeUrl' => home_url('/'),
+                'nonce' => wp_create_nonce('playground_welcome_nonce'),
+                'strings' => [
+                    'title' => __('Welcome to your WordPress', 'playground-welcome'),
+                    'intro' => __("This is a private WordPress that's free and needs no account. It's stored in your browser and will be here when you come back.", 'playground-welcome'),
+                    'displayNameLabel' => __("What's your name?", 'playground-welcome'),
+                    'importTitle' => __('Import content from a website', 'playground-welcome'),
+                    'feedUrlLabel' => __('Website URL', 'playground-welcome'),
+                    'feedUrlHelp' => __("Enter a site URL and we'll find and import its RSS feed.", 'playground-welcome'),
+                    'maxItemsLabel' => __('Maximum posts to import', 'playground-welcome'),
+                    'fivePosts' => __('5 posts', 'playground-welcome'),
+                    'tenPosts' => __('10 posts', 'playground-welcome'),
+                    'twentyPosts' => __('20 posts', 'playground-welcome'),
+                    'fiftyPosts' => __('50 posts', 'playground-welcome'),
+                    'continue' => __('Continue', 'playground-welcome'),
+                    'importing' => __('Importing...', 'playground-welcome'),
+                    'notNow' => __('Not now', 'playground-welcome'),
+                    'errorMessage' => __('An error occurred. Please try again.', 'playground-welcome'),
+                ],
+            ]
+        );
     }
 
     public function render_page() {
-        $current_user = wp_get_current_user();
         ?>
-        <div class="playground-welcome-overlay">
-            <div class="playground-welcome-dialog">
-                <header>
-                    <span class="dashicons dashicons-wordpress" aria-hidden="true"></span>
-                    <h1 class="playground-welcome-dialog-title"><?php echo esc_html__('Welcome to Your WordPress', 'playground-welcome'); ?></h1>
-                </header>
-                <p class="intro"><?php echo esc_html__("This is a private WordPress that's free and needs no account. It's stored in your browser and will be here when you come back.", 'playground-welcome'); ?></p>
-
-                <form id="playground-welcome-form" method="post">
-                    <?php wp_nonce_field('playground_welcome_nonce', 'nonce'); ?>
-
-                    <div class="field-group">
-                        <label for="display_name"><?php echo esc_html__("What's your name?", 'playground-welcome'); ?></label>
-                        <input
-                            type="text"
-                            id="display_name"
-                            name="display_name"
-                            class="components-text-control__input"
-                            autofocus
-                        >
-                    </div>
-
-                    <details class="import-details">
-                        <summary><?php echo esc_html__('Import content from a website', 'playground-welcome'); ?></summary>
-                        <div class="field-group">
-                            <label for="feed_url"><?php echo esc_html__('Website URL', 'playground-welcome'); ?></label>
-                            <input
-                                type="text"
-                                id="feed_url"
-                                name="feed_url"
-                                class="components-text-control__input"
-                                placeholder="example.com"
-                            >
-                            <p class="components-base-control__help"><?php echo esc_html__("Enter a site URL and we'll find and import its RSS feed.", 'playground-welcome'); ?></p>
-                        </div>
-
-                        <div class="field-group">
-                            <label for="max_items"><?php echo esc_html__('Maximum posts to import', 'playground-welcome'); ?></label>
-                            <select id="max_items" name="max_items" class="components-select-control__input">
-                                <option value="5"><?php echo esc_html__('5 posts', 'playground-welcome'); ?></option>
-                                <option value="10" selected><?php echo esc_html__('10 posts', 'playground-welcome'); ?></option>
-                                <option value="20"><?php echo esc_html__('20 posts', 'playground-welcome'); ?></option>
-                                <option value="50"><?php echo esc_html__('50 posts', 'playground-welcome'); ?></option>
-                            </select>
-                        </div>
-                    </details>
-
-                    <div id="welcome-message" class="components-notice" role="alert" style="display: none;">
-                        <div class="components-notice__content"></div>
-                    </div>
-
-                    <div class="button-group">
-                        <a href="<?php echo esc_url(home_url('/')); ?>" class="components-button is-secondary"><?php echo esc_html__('Not now', 'playground-welcome'); ?></a>
-                        <button type="submit" class="components-button is-primary" id="save-button">
-                            <span class="button-text"><?php echo esc_html__('Continue', 'playground-welcome'); ?></span>
-                            <span class="button-loading" style="display: none;"><?php echo esc_html__('Importing...', 'playground-welcome'); ?></span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <script>
-        document.getElementById('feed_url').addEventListener('input', function() {
-            const messageEl = document.getElementById('welcome-message');
-            messageEl.style.display = 'none';
-            messageEl.querySelector('.components-notice__content').textContent = '';
-        });
-
-        document.getElementById('playground-welcome-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const form = this;
-            const button = document.getElementById('save-button');
-            const buttonText = button.querySelector('.button-text');
-            const buttonLoading = button.querySelector('.button-loading');
-            const messageEl = document.getElementById('welcome-message');
-            const messageContent = messageEl.querySelector('.components-notice__content');
-
-            button.disabled = true;
-            buttonText.style.display = 'none';
-            buttonLoading.style.display = 'inline';
-            messageEl.style.display = 'none';
-
-            const formData = new FormData(form);
-            formData.append('action', 'playground_welcome_save');
-
-            fetch(ajaxurl, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    messageEl.className = 'components-notice is-success';
-                    messageContent.textContent = data.data.message;
-                    messageEl.style.display = 'flex';
-
-                    setTimeout(() => {
-                        window.location.href = '<?php echo esc_url(home_url('/')); ?>';
-                    }, 1500);
-                } else {
-                    messageEl.className = 'components-notice is-error';
-                    messageContent.textContent = data.data.message || 'An error occurred.';
-                    messageEl.style.display = 'flex';
-
-                    button.disabled = false;
-                    buttonText.style.display = 'inline';
-                    buttonLoading.style.display = 'none';
-                }
-            })
-            .catch(error => {
-                messageEl.className = 'components-notice is-error';
-                messageContent.textContent = 'An error occurred. Please try again.';
-                messageEl.style.display = 'flex';
-
-                button.disabled = false;
-                buttonText.style.display = 'inline';
-                buttonLoading.style.display = 'none';
-            });
-        });
-        </script>
+        <div id="playground-welcome-root"></div>
         <?php
     }
 

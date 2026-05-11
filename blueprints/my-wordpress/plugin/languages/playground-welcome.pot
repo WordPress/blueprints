@@ -21,7 +21,7 @@ msgid "👋 Welcome to Your WordPress"
 msgstr ""
 
 #: playground-welcome.php
-msgid "Welcome to Your WordPress"
+msgid "Welcome to your WordPress"
 msgstr ""
 
 #: playground-welcome.php
@@ -74,6 +74,10 @@ msgstr ""
 
 #: playground-welcome.php
 msgid "Not now"
+msgstr ""
+
+#: playground-welcome.php
+msgid "An error occurred. Please try again."
 msgstr ""
 
 #: playground-welcome.php

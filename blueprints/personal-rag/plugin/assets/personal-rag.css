@@ -1,0 +1,289 @@
+.personal-rag-wrap {
+	max-width: 1180px;
+}
+
+.personal-rag-shell {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.personal-rag-header {
+	align-items: flex-start;
+	display: flex;
+	gap: 16px;
+	justify-content: space-between;
+	padding: 10px 0 4px;
+}
+
+.personal-rag-header h1,
+.personal-rag-band h2 {
+	margin: 0;
+}
+
+.personal-rag-header p {
+	color: #50575e;
+	font-size: 14px;
+	margin: 6px 0 0;
+	max-width: 620px;
+}
+
+.personal-rag-band {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	padding: 18px;
+}
+
+.personal-rag-grid {
+	display: grid;
+	gap: 14px;
+	grid-template-columns: repeat(4, minmax(150px, 1fr));
+	margin-top: 16px;
+}
+
+.personal-rag-field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	min-width: 0;
+}
+
+.personal-rag-field span {
+	color: #1d2327;
+	font-weight: 600;
+}
+
+.personal-rag-field input,
+#personal-rag-question {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.personal-rag-actions {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.personal-rag-help {
+	color: #646970;
+}
+
+.personal-rag-index-head,
+.personal-rag-chat-header {
+	align-items: center;
+	display: flex;
+	gap: 16px;
+	justify-content: space-between;
+}
+
+.personal-rag-status {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.personal-rag-status span {
+	align-items: baseline;
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	display: inline-flex;
+	gap: 5px;
+	min-height: 30px;
+	padding: 4px 9px;
+}
+
+.personal-rag-status strong {
+	color: #135e96;
+	font-size: 18px;
+}
+
+.personal-rag-notice {
+	border-left: 4px solid #72aee6;
+	padding: 11px 14px;
+}
+
+.personal-rag-notice-info {
+	background: #f0f6fc;
+	border-left-color: #72aee6;
+}
+
+.personal-rag-notice-success {
+	background: #edfaef;
+	border-left-color: #00a32a;
+}
+
+.personal-rag-notice-warning {
+	background: #fcf9e8;
+	border-left-color: #dba617;
+}
+
+.personal-rag-notice-error,
+.personal-rag-error {
+	background: #fcf0f1;
+	border-left-color: #d63638;
+}
+
+#personal-rag-progress {
+	height: 12px;
+	margin-top: 16px;
+	width: 100%;
+}
+
+#personal-rag-question {
+	margin-top: 14px;
+	min-height: 110px;
+	resize: vertical;
+}
+
+.personal-rag-answer {
+	border-top: 1px solid #dcdcde;
+	margin-top: 18px;
+	padding-top: 16px;
+}
+
+.personal-rag-answer-text {
+	font-size: 15px;
+	line-height: 1.6;
+	max-width: 820px;
+}
+
+.personal-rag-markdown > *:first-child {
+	margin-top: 0;
+}
+
+.personal-rag-markdown > *:last-child {
+	margin-bottom: 0;
+}
+
+.personal-rag-markdown h2,
+.personal-rag-markdown h3,
+.personal-rag-markdown h4 {
+	color: #1d2327;
+	font-weight: 600;
+	line-height: 1.25;
+	margin: 22px 0 8px;
+}
+
+.personal-rag-markdown h2 {
+	font-size: 20px;
+}
+
+.personal-rag-markdown h3 {
+	font-size: 18px;
+}
+
+.personal-rag-markdown h4 {
+	font-size: 16px;
+}
+
+.personal-rag-markdown p {
+	margin: 0 0 14px;
+}
+
+.personal-rag-markdown ul,
+.personal-rag-markdown ol {
+	margin: 0 0 16px 22px;
+	padding: 0;
+}
+
+.personal-rag-markdown li {
+	margin: 5px 0;
+	padding-left: 2px;
+}
+
+.personal-rag-markdown strong {
+	color: #1d2327;
+	font-weight: 700;
+}
+
+.personal-rag-markdown code {
+	background: #f6f7f7;
+	border: 1px solid #dcdcde;
+	border-radius: 3px;
+	color: #1d2327;
+	font-size: 13px;
+	padding: 1px 4px;
+}
+
+.personal-rag-markdown pre {
+	background: #101517;
+	border-radius: 4px;
+	color: #f6f7f7;
+	overflow-x: auto;
+	padding: 14px;
+	white-space: pre;
+}
+
+.personal-rag-markdown pre code {
+	background: transparent;
+	border: 0;
+	color: inherit;
+	padding: 0;
+}
+
+.personal-rag-markdown blockquote {
+	border-left: 4px solid #72aee6;
+	color: #3c434a;
+	margin: 0 0 16px;
+	padding: 1px 0 1px 14px;
+}
+
+.personal-rag-markdown a {
+	color: #135e96;
+}
+
+.personal-rag-loading {
+	color: #50575e;
+}
+
+.personal-rag-error {
+	border-left: 4px solid #d63638;
+	padding: 10px 12px;
+}
+
+.personal-rag-sources {
+	margin-top: 18px;
+}
+
+.personal-rag-sources h3 {
+	font-size: 14px;
+	margin: 0 0 8px;
+}
+
+.personal-rag-sources ol {
+	margin: 0;
+	padding-left: 22px;
+}
+
+.personal-rag-sources li {
+	margin-bottom: 7px;
+}
+
+.personal-rag-sources span {
+	color: #646970;
+	display: inline-block;
+	font-size: 12px;
+	margin-left: 8px;
+}
+
+@media (max-width: 960px) {
+	.personal-rag-grid {
+		grid-template-columns: repeat(2, minmax(160px, 1fr));
+	}
+}
+
+@media (max-width: 640px) {
+	.personal-rag-header,
+	.personal-rag-index-head,
+	.personal-rag-chat-header {
+		align-items: stretch;
+		flex-direction: column;
+	}
+
+	.personal-rag-grid {
+		grid-template-columns: 1fr;
+	}
+}

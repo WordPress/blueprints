@@ -44,6 +44,16 @@
       "Productivity"
     ]
   },
+  "apps/personal-rag.json": {
+    "title": "Personal RAG",
+    "description": "Private local search and answers over your WordPress content using Ollama, EmbeddingGemma, and Gemma 4",
+    "author": "Playground",
+    "categories": [
+      "Apps",
+      "AI",
+      "Productivity"
+    ]
+  },
   "apps/rss-reader.json": {
     "title": "RSS Reader",
     "description": "Follow friends and consume their content in your WordPress",

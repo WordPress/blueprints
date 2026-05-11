@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "generate:personal-rag-docs": "node scripts/generate-personal-rag-docs-wxr.js",
     "shots": "tsx scripts/screenshot-blueprints.ts"
   },
   "devDependencies": {

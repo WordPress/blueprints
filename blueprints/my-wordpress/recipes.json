@@ -98,6 +98,90 @@
 			}
 		]
 	},
+	"personal-cookbook": {
+		"title": "Build a Personal Cookbook",
+		"tagline": "Keep the recipes you actually cook",
+		"description": "Turn your WordPress into a recipe box for weeknight staples, family favorites, and dishes you want to repeat. Cookbook stores ingredients, steps, prep and cook times, and can pull a recipe in from a URL so you can keep the good version on your own site.",
+		"icon": "🍳",
+		"gradient": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/cookbook.json",
+				"title": "Install Cookbook",
+				"description": "Cookbook adds a dedicated recipe app to your WordPress with fields for ingredients, instructions, and timing."
+			},
+			{
+				"type": "note",
+				"title": "Add one trusted recipe",
+				"description": "Start with something you already cook from memory. Writing down the ingredients, steps, prep time, and cook time gives the rest of your cookbook a useful template.",
+				"url": "/cookbook/",
+				"url_label": "Open Cookbook"
+			},
+			{
+				"type": "note",
+				"title": "Import the recipes you keep searching for",
+				"description": "Paste a recipe URL into Cookbook to bring it into your WordPress. Once it's saved, you can adjust the wording, timing, and ingredients to match how you actually make it.",
+				"url": "/cookbook/",
+				"url_label": "Import Recipe"
+			},
+			{
+				"type": "note",
+				"title": "Write kitchen notes after you cook",
+				"description": "After making a recipe, update it with the substitutions, serving notes, or timing changes that worked. The value grows when the recipe reflects your kitchen, not the original page."
+			}
+		]
+	},
+	"take-notes": {
+		"title": "Take Notes in WordPress",
+		"tagline": "Capture notes in the shape that fits",
+		"description": "There are many ways to take notes in WordPress: a plain post, a page, or a dedicated note app. On my.wordpress.net, your WordPress is private, so even a regular post can work as a personal note; add Memex when you want linked notes, backlinks, daily notes, tags, or reminders.",
+		"icon": "📝",
+		"gradient": "linear-gradient(135deg, #43cea2 0%, #185a9d 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "note",
+				"title": "Start with a regular post",
+				"description": "Write a post for today's notes, a meeting, a link dump, or a running project log. On my.wordpress.net your WordPress is private, so a normal post can work as a personal note without extra setup.",
+				"url": "/wp-admin/post-new.php",
+				"url_label": "Write a Post"
+			},
+			{
+				"type": "app",
+				"path": "apps/memex.json",
+				"title": "Use Memex for linked notes",
+				"description": "Memex is optional. Install it if you want a dedicated note-taking app with daily notes, tags, reminders, bi-directional links, and automatic backlinks.",
+				"optional": true
+			},
+			{
+				"type": "note",
+				"title": "Link related ideas as you write",
+				"description": "In Memex, use [[wiki-links]] for people, projects, topics, and recurring questions. Memex creates backlinks automatically, so each note becomes an entry point into the notes around it.",
+				"optional": true
+			},
+			{
+				"type": "note",
+				"title": "Add reminders where follow-up matters",
+				"description": "Turn notes into future prompts when a thought needs action later. Reminders keep follow-up close to the context that created it.",
+				"optional": true
+			},
+			{
+				"type": "note",
+				"title": "Import notes from another app",
+				"description": "Bring in existing notes from Obsidian, Notion, Evernote, or Roam Research when you're ready. Start with a small import first so you can review how the notes land before moving everything.",
+				"optional": true
+			},
+			{
+				"type": "plugin",
+				"slug": "static-archive",
+				"title": "Preserve notes as a static archive",
+				"description": "Static Archive writes HTML copies of your posts into uploads, so your notes stay browsable from a backup even if WordPress is not running.",
+				"optional": true
+			}
+		]
+	},
 	"reading-hub": {
 		"title": "Personal Reading Hub",
 		"tagline": "Follow friends, save articles, read on your terms",

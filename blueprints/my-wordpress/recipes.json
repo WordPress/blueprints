@@ -174,8 +174,8 @@
 				"optional": true
 			},
 			{
-				"type": "plugin",
-				"slug": "static-archive",
+				"type": "github",
+				"repo": "akirk/static-archive",
 				"title": "Preserve notes as a static archive",
 				"description": "Static Archive writes HTML copies of your posts into uploads, so your notes stay browsable from a backup even if WordPress is not running.",
 				"optional": true

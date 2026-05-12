@@ -50,9 +50,9 @@
     {
       "step": "importWxr",
       "file": {
-        "resource": "url",
-        "url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/themeunittestdata.wordpress.xml"
+        "resource": "bundled",
+        "path": "./themeunittestdata.wordpress.xml"
       }
-    }
+		}
   ]
 }

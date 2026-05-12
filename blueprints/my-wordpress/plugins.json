@@ -94,15 +94,6 @@
 		"note": "Subscribe to RSS, Atom, and ActivityPub feeds — your private feed reader, with following / follower model and Mastodon support.",
 		"categories": ["Social"]
 	},
-	"cookbook": {
-		"github": "akirk/cookbook",
-		"branch": "dist/main",
-		"title": "Cookbook",
-		"author": "Alex Kirk",
-		"note": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
-		"categories": ["Productivity"],
-		"landing_page": "/cookbook/"
-	},
 	"memex": {
 		"github": "akirk/memex",
 		"branch": "dist/main",

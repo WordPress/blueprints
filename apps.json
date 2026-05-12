@@ -17,6 +17,15 @@
       "Media"
     ]
   },
+  "apps/cookbook.json": {
+    "title": "Cookbook",
+    "description": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
   "apps/post-collection.json": {
     "title": "Collect Posts from the Web",
     "description": "Use the Post Collection Plugin to save articles from around the web",

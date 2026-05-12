@@ -46,19 +46,27 @@ function getTouchedBlueprintDirectories() {
 	return [...blueprintDirs].sort();
 }
 
-function findUrls(value) {
+function findUrlsRequiringBranchPrefix(value) {
 	if (Array.isArray(value)) {
-		return value.flatMap(findUrls);
+		return value.flatMap(findUrlsRequiringBranchPrefix);
 	}
 
 	if (!value || typeof value !== 'object') {
 		return [];
 	}
 
-	return Object.entries(value).flatMap(([key, child]) => [
-		...(key === 'url' && typeof child === 'string' ? [child] : []),
-		...findUrls(child),
-	]);
+	const urls = [];
+	const validatesOwnUrl = value.resource !== 'git:directory';
+
+	for (const [key, child] of Object.entries(value)) {
+		if (key === 'url' && typeof child === 'string' && validatesOwnUrl) {
+			urls.push(child);
+		}
+
+		urls.push(...findUrlsRequiringBranchPrefix(child));
+	}
+
+	return urls;
 }
 
 async function main() {
@@ -99,7 +107,7 @@ async function main() {
 			continue;
 		}
 
-		const invalidUrls = findUrls(blueprint).filter(
+		const invalidUrls = findUrlsRequiringBranchPrefix(blueprint).filter(
 			(url) =>
 				(url.startsWith('https://') || url.startsWith('http://')) &&
 				!url.startsWith(

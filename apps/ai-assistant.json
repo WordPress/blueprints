@@ -15,7 +15,7 @@
 			"pluginData": {
 				"resource": "git:directory",
 				"url": "https://github.com/akirk/ai-assistant",
-				"ref": "main",
+				"ref": "dist/main",
 				"refType": "branch"
 			},
 			"options": {

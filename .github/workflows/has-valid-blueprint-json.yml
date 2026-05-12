@@ -9,19 +9,33 @@ jobs:
 
         env:
             GITHUB_BRANCH: ${{ github.event.pull_request.head.ref }}
+            GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
+            BLUEPRINT_SCHEMA_URL: "https://raw.githubusercontent.com/WordPress/wordpress-playground/trunk/packages/playground/blueprints/public/blueprint-schema.json"
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v2
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
 
-            - name: Fetch trunk
+            - name: Fetch base branch
               run: |
-                  git fetch origin trunk
+                  git fetch origin "${GITHUB_BASE_REF}:refs/remotes/origin/${GITHUB_BASE_REF}"
 
-            - name: Install pre-requisites
+            - name: Collect changed files
               run: |
-                  pip install -r requirements.txt
+                  set -euo pipefail
+                  merge_base="$(git merge-base "origin/${GITHUB_BASE_REF}" HEAD)"
+                  git diff --name-only "${merge_base}" HEAD > "${RUNNER_TEMP}/changed-files.txt"
+                  echo "CHANGED_FILES_PATH=${RUNNER_TEMP}/changed-files.txt" >> "${GITHUB_ENV}"
 
-            - name: Run validate_pr.py
-              run: |
-                  python validate_pr.py
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Validate Blueprint JSON
+              run: npm run validate:pr-blueprints

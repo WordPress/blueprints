@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "shots": "tsx scripts/screenshot-blueprints.ts",
+    "validate:pr-blueprints": "node scripts/validate-pr-blueprints.js",
     "validate:my-wordpress-json": "node scripts/validate-my-wordpress-json.js"
   },
   "devDependencies": {

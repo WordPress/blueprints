@@ -217,6 +217,42 @@
 			}
 		]
 	},
+	"research-tool": {
+		"title": "Build a Research Tool",
+		"tagline": "Look up sources, keep the useful parts",
+		"description": "Turn your WordPress into a focused research workspace. Search Wikipedia from your own site, save the articles you want to return to, and clip web sources into your archive so project notes and references stay together.",
+		"icon": "🔎",
+		"gradient": "linear-gradient(135deg, #0f766e 0%, #84cc16 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/wikipedia-app.json",
+				"title": "Install Wikipedia App",
+				"description": "Wikipedia App lets you search, browse, and save Wikipedia articles without leaving your WordPress."
+			},
+			{
+				"type": "note",
+				"title": "Save a starting set of articles",
+				"description": "Search for the people, places, concepts, or events around your research topic and save the articles you expect to revisit.",
+				"url": "/wikipedia/",
+				"url_label": "Open Wikipedia"
+			},
+			{
+				"type": "app",
+				"path": "apps/post-collection.json",
+				"title": "Collect supporting sources",
+				"description": "Post Collection saves articles from the wider web into your WordPress, so sources outside Wikipedia can sit beside the reference material you are building."
+			},
+			{
+				"type": "note",
+				"title": "Write notes around the sources",
+				"description": "Create a post for the research question or project and link to the saved articles and collected sources as you work. The value comes from keeping the source list close to your own notes.",
+				"url": "/wp-admin/post-new.php",
+				"url_label": "Write a Post"
+			}
+		]
+	},
 	"bring-your-data": {
 		"title": "Bring Your Data In",
 		"tagline": "Move existing data onto your WordPress, in the right shape for each app",

@@ -26,6 +26,15 @@
       "Productivity"
     ]
   },
+  "apps/wikipedia-app.json": {
+    "title": "Wikipedia App",
+    "description": "Search, browse, and save Wikipedia articles.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
   "apps/cookbook.json": {
     "title": "Cookbook",
     "description": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",

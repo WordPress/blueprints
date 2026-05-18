@@ -218,9 +218,9 @@
 		]
 	},
 	"research-tool": {
-		"title": "Build a Research Tool",
+		"title": "Use WordPress for Research",
 		"tagline": "Look up sources, keep the useful parts",
-		"description": "Turn your WordPress into a focused research workspace. Search Wikipedia from your own site, save the articles you want to return to, and clip web sources into your archive so project notes and references stay together.",
+		"description": "Use your WordPress as a focused research workspace. Search Wikipedia from your own site, save the articles you want to return to, and clip web sources into your archive so project notes and references stay together.",
 		"icon": "🔎",
 		"gradient": "linear-gradient(135deg, #0f766e 0%, #84cc16 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
@@ -242,7 +242,7 @@
 				"type": "app",
 				"path": "apps/post-collection.json",
 				"title": "Collect supporting sources",
-				"description": "Post Collection saves articles from the wider web into your WordPress, so sources outside Wikipedia can sit beside the reference material you are building."
+				"description": "Post Collection saves articles from the wider web into your WordPress, so sources outside Wikipedia can sit beside your saved reference material."
 			},
 			{
 				"type": "note",

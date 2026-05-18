@@ -26,8 +26,8 @@
       "Productivity"
     ]
   },
-  "apps/wikipedia-app.json": {
-    "title": "Wikipedia App",
+  "apps/wordopedia.json": {
+    "title": "Wordopedia",
     "description": "Search, browse, and save Wikipedia articles and snippets.",
     "author": "Alex Kirk",
     "categories": [

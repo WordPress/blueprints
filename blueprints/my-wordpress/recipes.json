@@ -227,16 +227,16 @@
 		"steps": [
 			{
 				"type": "app",
-				"path": "apps/wikipedia-app.json",
-				"title": "Install Wikipedia App",
-				"description": "Wikipedia App lets you search, browse, and save Wikipedia articles and snippets without leaving your WordPress."
+				"path": "apps/wordopedia.json",
+				"title": "Install Wordopedia",
+				"description": "Wordopedia lets you search, browse, and save Wikipedia articles and snippets without leaving your WordPress."
 			},
 			{
 				"type": "note",
 				"title": "Save a starting set of articles",
 				"description": "Search for the people, places, concepts, or events around your research topic and save the articles or snippets you expect to revisit.",
-				"url": "/wikipedia/",
-				"url_label": "Open Wikipedia"
+				"url": "/wordopedia/",
+				"url_label": "Open Wordopedia"
 			},
 			{
 				"type": "app",

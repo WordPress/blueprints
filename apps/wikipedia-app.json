@@ -2,7 +2,7 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Wikipedia App",
-		"description": "Search, browse, and save Wikipedia articles.",
+		"description": "Search, browse, and save Wikipedia articles and snippets.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"]
 	},

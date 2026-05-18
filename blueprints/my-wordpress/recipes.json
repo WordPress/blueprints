@@ -220,7 +220,7 @@
 	"research-tool": {
 		"title": "Research Tool",
 		"tagline": "Look up sources, keep the useful parts",
-		"description": "Use your WordPress as a focused research workspace. Search Wikipedia from your own site, save the articles you want to return to, and clip web sources into your archive so project notes and references stay together.",
+		"description": "Use your WordPress as a focused research workspace. Search Wikipedia from your own site, save the articles and snippets you want to return to, and clip web sources into your archive so project notes and references stay together.",
 		"icon": "🔎",
 		"gradient": "linear-gradient(135deg, #0f766e 0%, #84cc16 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
@@ -229,12 +229,12 @@
 				"type": "app",
 				"path": "apps/wikipedia-app.json",
 				"title": "Install Wikipedia App",
-				"description": "Wikipedia App lets you search, browse, and save Wikipedia articles without leaving your WordPress."
+				"description": "Wikipedia App lets you search, browse, and save Wikipedia articles and snippets without leaving your WordPress."
 			},
 			{
 				"type": "note",
 				"title": "Save a starting set of articles",
-				"description": "Search for the people, places, concepts, or events around your research topic and save the articles you expect to revisit.",
+				"description": "Search for the people, places, concepts, or events around your research topic and save the articles or snippets you expect to revisit.",
 				"url": "/wikipedia/",
 				"url_label": "Open Wikipedia"
 			},

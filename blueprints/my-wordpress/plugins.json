@@ -115,5 +115,12 @@
 		"note": "Reimagines /wp-admin as a desktop OS — admin screens open as draggable, resizable windows on a wallpaper, with a dock built from the admin menu. Per-user opt-in, fully reverts on deactivation.",
 		"categories": ["Productivity"],
 		"landing_page": "/desktop-mode/"
+	},
+	"woopop-electronic-invoice-free": {
+		"title": "POP",
+		"author": "POP",
+		"note": "Generate XML and PDF e-invoices for WooCommerce and other WordPress payment flows. Requires a POP account; the free plan includes 20 API credits per month.",
+		"categories": ["Utility"],
+		"landing_page": "/wp-admin/admin.php?page=wc_el_inv-options-page&tab=wizard&wizard=init"
 	}
 }

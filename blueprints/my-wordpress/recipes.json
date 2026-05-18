@@ -1,4 +1,111 @@
 {
+	"personal-cookbook": {
+		"title": "Build a Personal Cookbook",
+		"tagline": "Keep the recipes you actually cook",
+		"description": "Turn your WordPress into a recipe box for weeknight staples, family favorites, and dishes you want to repeat. Cookbook stores ingredients, steps, prep and cook times, and can pull a recipe in from a URL so you can keep the good version on your own site.",
+		"icon": "🍳",
+		"gradient": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/cookbook.json",
+				"title": "Install Cookbook",
+				"description": "Cookbook adds a dedicated recipe app to your WordPress with fields for ingredients, instructions, and timing."
+			},
+			{
+				"type": "note",
+				"title": "Add one trusted recipe",
+				"description": "Start with something you already cook from memory. Writing down the ingredients, steps, prep time, and cook time gives the rest of your cookbook a useful template.",
+				"url": "/cookbook/",
+				"url_label": "Open Cookbook"
+			},
+			{
+				"type": "note",
+				"title": "Import the recipes you keep searching for",
+				"description": "Paste a recipe URL into Cookbook to bring it into your WordPress. Once it's saved, you can adjust the wording, timing, and ingredients to match how you actually make it.",
+				"url": "/cookbook/",
+				"url_label": "Import Recipe"
+			},
+			{
+				"type": "note",
+				"title": "Write kitchen notes after you cook",
+				"description": "After making a recipe, update it with the substitutions, serving notes, or timing changes that worked. The value grows when the recipe reflects your kitchen, not the original page."
+			}
+		]
+	},
+	"customize-with-ai": {
+		"title": "Build Your Own App",
+		"tagline": "Use your WordPress data as the base",
+		"description": "A strong point of WordPress as your personal base is that your data already lives in one place. Build a small app around that shared data: a tracker, directory, checklist, calculator, archive, or dashboard that can combine recipes, notes, contacts, saved articles, and posts without moving them between services. The AI Assistant can help wire the pieces together when you describe the workflow you want.",
+		"icon": "✨",
+		"gradient": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/ai-assistant.json",
+				"title": "Install the AI Assistant",
+				"description": "Adds a chat panel where you can ask the model to create custom WordPress features that work with the data already on your site."
+			},
+			{
+				"type": "note",
+				"title": "Connect a model",
+				"description": "Add an API key for Claude, OpenAI, or Gemini, or point it at LM Studio / Ollama running locally. Building custom features needs a model connected before the assistant can make changes."
+			},
+			{
+				"type": "note",
+				"title": "Start from the data you have",
+				"description": "Look at the records already in your WordPress: recipes, contacts, notes, saved articles, wiki pages, posts, or media. The useful app is often the one that combines two or three of these sources instead of making you export, import, or maintain another silo."
+			},
+			{
+				"type": "note",
+				"title": "Describe the app and the connections",
+				"description": "Pick a narrow workflow and tell the assistant which data it should use. For example: \"Build a meal planner from my Cookbook recipes with a shopping list\" or \"Show my research notes next to the saved articles they cite.\""
+			},
+			{
+				"type": "note",
+				"title": "Test and refine it",
+				"description": "Use the first version with real entries, then ask the assistant for the missing pieces: a better list view, filters, custom fields, import support, or a dashboard widget. The app gets useful when it connects your data in the way you actually work."
+			}
+		]
+	},
+	"research-tool": {
+		"title": "Research Tool",
+		"tagline": "Look up sources, keep the useful parts",
+		"description": "Use your WordPress as a focused research workspace. Search Wikipedia from your own site, save the articles and snippets you want to return to, and clip web sources into your archive so project notes and references stay together.",
+		"icon": "🔎",
+		"gradient": "linear-gradient(135deg, #0f766e 0%, #84cc16 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/wordopedia.json",
+				"title": "Install Wordopedia",
+				"description": "Wordopedia lets you search, browse, and save Wikipedia articles and snippets without leaving your WordPress."
+			},
+			{
+				"type": "note",
+				"title": "Save a starting set of articles",
+				"description": "Search for the people, places, concepts, or events around your research topic and save the articles or snippets you expect to revisit.",
+				"url": "/wordopedia/",
+				"url_label": "Open Wordopedia"
+			},
+			{
+				"type": "app",
+				"path": "apps/post-collection.json",
+				"title": "Collect supporting sources",
+				"description": "Post Collection saves articles from the wider web into your WordPress, so sources outside Wikipedia can sit beside your saved reference material."
+			},
+			{
+				"type": "note",
+				"title": "Write notes around the sources",
+				"description": "Create a post for the research question or project and link to the saved articles and collected sources as you work. The value comes from keeping the source list close to your own notes.",
+				"url": "/wp-admin/post-new.php",
+				"url_label": "Write a Post"
+			}
+		]
+	},
 	"family-blog": {
 		"title": "Build a Family Blog",
 		"tagline": "Memories worth keeping, kept where they belong",
@@ -98,41 +205,6 @@
 			}
 		]
 	},
-	"personal-cookbook": {
-		"title": "Build a Personal Cookbook",
-		"tagline": "Keep the recipes you actually cook",
-		"description": "Turn your WordPress into a recipe box for weeknight staples, family favorites, and dishes you want to repeat. Cookbook stores ingredients, steps, prep and cook times, and can pull a recipe in from a URL so you can keep the good version on your own site.",
-		"icon": "🍳",
-		"gradient": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
-		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
-		"steps": [
-			{
-				"type": "app",
-				"path": "apps/cookbook.json",
-				"title": "Install Cookbook",
-				"description": "Cookbook adds a dedicated recipe app to your WordPress with fields for ingredients, instructions, and timing."
-			},
-			{
-				"type": "note",
-				"title": "Add one trusted recipe",
-				"description": "Start with something you already cook from memory. Writing down the ingredients, steps, prep time, and cook time gives the rest of your cookbook a useful template.",
-				"url": "/cookbook/",
-				"url_label": "Open Cookbook"
-			},
-			{
-				"type": "note",
-				"title": "Import the recipes you keep searching for",
-				"description": "Paste a recipe URL into Cookbook to bring it into your WordPress. Once it's saved, you can adjust the wording, timing, and ingredients to match how you actually make it.",
-				"url": "/cookbook/",
-				"url_label": "Import Recipe"
-			},
-			{
-				"type": "note",
-				"title": "Write kitchen notes after you cook",
-				"description": "After making a recipe, update it with the substitutions, serving notes, or timing changes that worked. The value grows when the recipe reflects your kitchen, not the original page."
-			}
-		]
-	},
 	"take-notes": {
 		"title": "Take Notes in WordPress",
 		"tagline": "Capture notes in the shape that fits",
@@ -217,42 +289,6 @@
 			}
 		]
 	},
-	"research-tool": {
-		"title": "Research Tool",
-		"tagline": "Look up sources, keep the useful parts",
-		"description": "Use your WordPress as a focused research workspace. Search Wikipedia from your own site, save the articles and snippets you want to return to, and clip web sources into your archive so project notes and references stay together.",
-		"icon": "🔎",
-		"gradient": "linear-gradient(135deg, #0f766e 0%, #84cc16 100%)",
-		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
-		"steps": [
-			{
-				"type": "app",
-				"path": "apps/wordopedia.json",
-				"title": "Install Wordopedia",
-				"description": "Wordopedia lets you search, browse, and save Wikipedia articles and snippets without leaving your WordPress."
-			},
-			{
-				"type": "note",
-				"title": "Save a starting set of articles",
-				"description": "Search for the people, places, concepts, or events around your research topic and save the articles or snippets you expect to revisit.",
-				"url": "/wordopedia/",
-				"url_label": "Open Wordopedia"
-			},
-			{
-				"type": "app",
-				"path": "apps/post-collection.json",
-				"title": "Collect supporting sources",
-				"description": "Post Collection saves articles from the wider web into your WordPress, so sources outside Wikipedia can sit beside your saved reference material."
-			},
-			{
-				"type": "note",
-				"title": "Write notes around the sources",
-				"description": "Create a post for the research question or project and link to the saved articles and collected sources as you work. The value comes from keeping the source list close to your own notes.",
-				"url": "/wp-admin/post-new.php",
-				"url_label": "Write a Post"
-			}
-		]
-	},
 	"bring-your-data": {
 		"title": "Bring Your Data In",
 		"tagline": "Move existing data onto your WordPress, in the right shape for each app",
@@ -312,32 +348,6 @@
 				"type": "note",
 				"title": "Set a check-in cadence",
 				"description": "Pick a reminder interval per contact (a month, a quarter, a year). When the date comes around, you'll see them on the dashboard with a nudge to reach out."
-			}
-		]
-	},
-	"customize-with-ai": {
-		"title": "Customize with AI",
-		"tagline": "Modify your WordPress through chat",
-		"description": "Add features, change layouts, and tweak your site without touching code. Bring your own API key or run a local model — the AI works on your WordPress, not on someone's training data.",
-		"icon": "✨",
-		"gradient": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
-		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
-		"steps": [
-			{
-				"type": "app",
-				"path": "apps/ai-assistant.json",
-				"title": "Install the AI Assistant",
-				"description": "Adds a chat panel where you can ask the model to change things on your site."
-			},
-			{
-				"type": "note",
-				"title": "Connect a model",
-				"description": "Add an API key for Claude, OpenAI, or Gemini — or point it at LM Studio / Ollama running on your laptop for fully local AI."
-			},
-			{
-				"type": "note",
-				"title": "Try a prompt",
-				"description": "Start small: \"Add a dark mode toggle to my blog\" or \"Make my homepage feel like a magazine cover.\" The assistant explains what it's about to change before doing it."
 			}
 		]
 	}

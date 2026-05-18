@@ -218,7 +218,7 @@
 		]
 	},
 	"research-tool": {
-		"title": "Use WordPress for Research",
+		"title": "Research Tool",
 		"tagline": "Look up sources, keep the useful parts",
 		"description": "Use your WordPress as a focused research workspace. Search Wikipedia from your own site, save the articles you want to return to, and clip web sources into your archive so project notes and references stay together.",
 		"icon": "🔎",

@@ -35,7 +35,7 @@
 		]
 	},
 	"customize-with-ai": {
-		"title": "Build Your Own App",
+		"title": "Build Your Dream App",
 		"tagline": "Use your WordPress data as the base",
 		"description": "A strong point of WordPress as your personal base is that your data already lives in one place. Build a small app around that shared data: a tracker, directory, checklist, calculator, archive, or dashboard that can combine recipes, notes, contacts, saved articles, and posts without moving them between services. The AI Assistant can help wire the pieces together when you describe the workflow you want.",
 		"icon": "✨",

@@ -67,6 +67,11 @@
 				"type": "note",
 				"title": "Test and refine it",
 				"description": "Use the first version with real entries, then ask the assistant for the missing pieces: a better list view, filters, custom fields, import support, or a dashboard widget. The app gets useful when it fits the way you actually work."
+			},
+			{
+				"type": "note",
+				"title": "Share the app",
+				"description": "When the app feels ready, download it as a ZIP file so someone else can install it on their own WordPress. Keep refining your copy and share a fresh ZIP whenever you make a better version."
 			}
 		]
 	},

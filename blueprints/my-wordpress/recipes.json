@@ -36,8 +36,8 @@
 	},
 	"customize-with-ai": {
 		"title": "Build Your Dream App",
-		"tagline": "Use your WordPress data as the base",
-		"description": "A strong point of WordPress as your personal base is that your data already lives in one place. Build a small app around that shared data: a tracker, directory, checklist, calculator, archive, or dashboard that can combine recipes, notes, contacts, saved articles, and posts without moving them between services. The AI Assistant can help wire the pieces together when you describe the workflow you want.",
+		"tagline": "Describe the app you wish existed",
+		"description": "Use the AI Assistant to turn a specific workflow into a small WordPress app: a tracker, directory, checklist, calculator, archive, dashboard, or something entirely custom. It can start from scratch or, when useful, connect to recipes, notes, contacts, saved articles, posts, or other data already on your site.",
 		"icon": "✨",
 		"gradient": "linear-gradient(135deg, #6a11cb 0%, #2575fc 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
@@ -46,7 +46,7 @@
 				"type": "app",
 				"path": "apps/ai-assistant.json",
 				"title": "Install the AI Assistant",
-				"description": "Adds a chat panel where you can ask the model to create custom WordPress features that work with the data already on your site."
+				"description": "Adds a chat panel where you can ask the model to create custom WordPress features and apps."
 			},
 			{
 				"type": "note",
@@ -55,18 +55,18 @@
 			},
 			{
 				"type": "note",
-				"title": "Start from the data you have",
-				"description": "Look at the records already in your WordPress: recipes, contacts, notes, saved articles, wiki pages, posts, or media. The useful app is often the one that combines two or three of these sources instead of making you export, import, or maintain another silo."
+				"title": "Pick one useful workflow",
+				"description": "Choose a small, concrete app you would actually use: a packing list, gift tracker, habit log, garden planner, invoice helper, research board, or dashboard. It does not need existing site data to be worthwhile."
 			},
 			{
 				"type": "note",
-				"title": "Describe the app and the connections",
-				"description": "Pick a narrow workflow and tell the assistant which data it should use. For example: \"Build a meal planner from my Cookbook recipes with a shopping list\" or \"Show my research notes next to the saved articles they cite.\""
+				"title": "Describe what it should do",
+				"description": "Tell the assistant the screens, fields, and actions you want. If the app should use data already in WordPress, say which data; otherwise ask it to create the structure it needs."
 			},
 			{
 				"type": "note",
 				"title": "Test and refine it",
-				"description": "Use the first version with real entries, then ask the assistant for the missing pieces: a better list view, filters, custom fields, import support, or a dashboard widget. The app gets useful when it connects your data in the way you actually work."
+				"description": "Use the first version with real entries, then ask the assistant for the missing pieces: a better list view, filters, custom fields, import support, or a dashboard widget. The app gets useful when it fits the way you actually work."
 			}
 		]
 	},

@@ -17,50 +17,53 @@
       "pluginZipFile": {
         "resource": "url",
         "url": "https://downloads.wordpress.org/plugin/query-monitor.latest-stable.zip"
-      }
+      },
+      "pluginData": {}
     },
     {
       "step": "installPlugin",
       "pluginZipFile": {
         "resource": "url",
         "url": "https://downloads.wordpress.org/plugin/health-check.latest-stable.zip"
-      }
+      },
+      "pluginData": {}
     },
     {
       "step": "installPlugin",
       "pluginZipFile": {
         "resource": "url",
         "url": "https://downloads.wordpress.org/plugin/code-snippets.latest-stable.zip"
-      }
+      },
+      "pluginData": {}
     },
     {
       "step": "installPlugin",
       "pluginZipFile": {
         "resource": "url",
         "url": "https://downloads.wordpress.org/plugin/user-switching.latest-stable.zip"
-      }
+      },
+      "pluginData": {}
     },
     {
       "step": "installPlugin",
       "pluginZipFile": {
         "resource": "url",
         "url": "https://downloads.wordpress.org/plugin/wp-crontrol.latest-stable.zip"
-      }
+      },
+      "pluginData": {}
     },
-
     {
       "step": "installTheme",
       "themeZipFile": {
         "resource": "url",
         "url": "https://downloads.wordpress.org/theme/twentytwentyfour.latest-stable.zip"
-      }
+      },
+      "themeData": {}
     },
-
     {
       "step": "activateTheme",
       "themeFolderName": "twentytwentyfour"
     },
-
     {
       "step": "activatePlugin",
       "pluginPath": "query-monitor/query-monitor.php"
@@ -77,7 +80,6 @@
       "step": "activatePlugin",
       "pluginPath": "wp-crontrol/wp-crontrol.php"
     },
-
     {
       "step": "mkdir",
       "path": "/wordpress/wp-content/plugins/dark-neon-customizer"
@@ -96,7 +98,6 @@
       "step": "activatePlugin",
       "pluginPath": "dark-neon-customizer/dark-neon-customizer.php"
     },
-
     {
       "step": "defineWpConfigConsts",
       "consts": {
@@ -105,7 +106,6 @@
         "WP_DEBUG_DISPLAY": true
       }
     },
-
     {
       "step": "setSiteOptions",
       "options": {

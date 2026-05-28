@@ -1,11 +1,9 @@
 {
   "landingPage": "/wp-admin",
-
   "preferredVersions": {
     "php": "8.2",
     "wp": "latest"
   },
-
   "meta": {
     "title": "Dark Neon Developer Playground",
     "author": "MaksimDev",
@@ -55,11 +53,8 @@
     {
       "step": "installTheme",
       "themeZipFile": {
-        "resource": "url",
-        "url": "https://downloads.wordpress.org/theme/twentytwentyfour.latest-stable.zip"
-      },
-      "themeData": {
-        "themeFolderName": "twentytwentyfour"
+        "resource": "wordpress.org/themes",
+        "slug": "twentytwentyfour"
       }
     },
     {

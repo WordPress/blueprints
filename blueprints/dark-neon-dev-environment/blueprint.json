@@ -58,7 +58,9 @@
         "resource": "url",
         "url": "https://downloads.wordpress.org/theme/twentytwentyfour.latest-stable.zip"
       },
-      "themeData": {}
+      "themeData": {
+        "themeFolderName": "twentytwentyfour"
+      }
     },
     {
       "step": "activateTheme",

@@ -75,10 +75,6 @@
     },
     {
       "step": "activatePlugin",
-      "pluginPath": "user-switching/user-switching.php"
-    },
-    {
-      "step": "activatePlugin",
       "pluginPath": "wp-crontrol/wp-crontrol.php"
     },
 

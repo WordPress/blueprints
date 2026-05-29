@@ -1,0 +1,28 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "WordCamp Companion",
+		"description": "A tool to help you plan your WordCamp attendance.",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"WordPress"
+		]
+	},
+	"landingPage": "/wordcamp-companion/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/wordcamp-companion",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "wordcamp-companion"
+			}
+		}
+	]
+}

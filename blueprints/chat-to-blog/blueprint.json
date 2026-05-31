@@ -11,11 +11,14 @@
 		{
 			"step": "installPlugin",
 			"pluginData": {
-				"resource": "url",
-				"url": "https://github.com/akirk/chat-to-blog/releases/latest/download/chat-to-blog.zip"
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/chat-to-blog",
+				"ref": "dist/main",
+				"refType": "branch"
 			},
 			"options": {
-				"activate": true
+				"activate": true,
+				"targetFolderName": "chat-to-blog"
 			}
 		}
 	]

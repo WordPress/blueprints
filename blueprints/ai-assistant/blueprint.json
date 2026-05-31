@@ -4,8 +4,12 @@
 		"title": "AI Assistant",
 		"description": "AI-powered chat interface to modify your WordPress to your liking. Bring your own key or use a local LLM",
 		"author": "Alex Kirk",
-		"categories": ["Apps", "AI"]
+		"categories": [
+			"Apps",
+			"AI"
+		]
 	},
+	"landingPage": "/ai-assistant/conversations/",
 	"steps": [
 		{
 			"step": "installPlugin",

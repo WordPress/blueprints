@@ -93,16 +93,21 @@ def build_screenshot_html(preview, screenshot_path, title):
         preview=preview
     )
 
+def is_app_blueprint(meta):
+    return 'Apps' in (meta.get('categories') or [])
+
+
 def build_apps_index():
     index = {}
-    for root, dirs, files in os.walk('apps'):
+    for root, dirs, files in os.walk('blueprints'):
         for file in files:
-            if file.endswith('.json'):
+            if file == 'blueprint.json':
                 path = os.path.join(root, file)
                 with open(path, 'r') as f:
                     data = json.load(f)
                     meta = data.get('meta', {})
-                    index[path] = dict(meta)
+                    if is_app_blueprint(meta):
+                        index[path] = dict(meta)
     index = dict(sorted(index.items(), key=lambda item: item[1].get('title', '')))
     with open('apps.json', 'w') as f:
         json.dump(index, f, indent=2)

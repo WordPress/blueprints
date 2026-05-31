@@ -1,1 +1,83 @@
-{}
+{
+  "blueprints/ai-assistant/blueprint.json": {
+    "title": "AI Assistant",
+    "description": "AI-powered chat interface to modify your WordPress to your liking. Bring your own key or use a local LLM",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "AI"
+    ]
+  },
+  "blueprints/chat-to-blog/blueprint.json": {
+    "title": "Chat to Blog",
+    "description": "Import media from Beeper chats and create blog posts. Requires Beeper Desktop running.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Media"
+    ]
+  },
+  "blueprints/post-collection/blueprint.json": {
+    "title": "Collect Posts from the Web",
+    "description": "Use the Post Collection Plugin to save articles from around the web",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
+  "blueprints/cookbook/blueprint.json": {
+    "title": "Cookbook",
+    "description": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
+  "blueprints/memex/blueprint.json": {
+    "title": "Memex",
+    "description": "Turn WordPress into a note-taking app with bi-directional links, automatic backlinks, daily notes, tags, and reminders. Import notes from Obsidian, Notion, Evernote, or Roam Research with one click.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
+  "blueprints/personal-crm/blueprint.json": {
+    "title": "Personal CRM",
+    "description": "Manage your contacts and relationships directly from WordPress",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  },
+  "blueprints/rss-reader/blueprint.json": {
+    "title": "RSS Reader",
+    "description": "Follow friends and consume their content in your WordPress",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Social"
+    ]
+  },
+  "blueprints/wordcamp-companion/blueprint.json": {
+    "title": "WordCamp Companion",
+    "description": "A tool to help you plan your WordCamp attendance.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "WordPress"
+    ]
+  },
+  "blueprints/wordopedia/blueprint.json": {
+    "title": "Wordopedia",
+    "description": "Search, browse, and save Wikipedia articles and snippets.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ]
+  }
+}

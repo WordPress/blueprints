@@ -1,10 +1,10 @@
 // scripts/screenshot-blueprints.ts
 import { chromium, devices } from 'playwright';
-import { promises as fs } from 'node:fs';
+import { promises as fs, readFileSync } from 'node:fs';
 import path from 'node:path';
 
 const REPO = 'WordPress/blueprints';
-const BRANCH = 'trunk';
+const REF = 'trunk';
 const ROOT = path.resolve(process.cwd());
 const BLUEPRINTS_DIR = path.join(ROOT, 'blueprints');
 
@@ -14,6 +14,38 @@ type BlueprintJson = {
     screenshot?: string; // may be relative path, repo-absolute, or raw.githubusercontent URL
   };
 };
+
+type BlueprintSource = {
+  repo: string;
+  ref: string;
+};
+
+function readPullRequestBlueprintSource(): BlueprintSource | null {
+  if (!process.env.GITHUB_EVENT_PATH) {
+    return null;
+  }
+
+  try {
+    const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+    const head = event?.pull_request?.head;
+    const repo = head?.repo?.full_name;
+    const ref = head?.sha;
+
+    if (typeof repo === 'string' && typeof ref === 'string') {
+      return { repo, ref };
+    }
+  } catch {
+    // Fall back to the configured defaults outside GitHub pull request events.
+  }
+
+  return null;
+}
+
+const pullRequestBlueprintSource = readPullRequestBlueprintSource();
+const RAW_REPO =
+  process.env.BLUEPRINTS_RAW_REPO || pullRequestBlueprintSource?.repo || REPO;
+const RAW_REF =
+  process.env.BLUEPRINTS_RAW_REF || pullRequestBlueprintSource?.ref || REF;
 
 async function ensureDir(p: string) {
   await fs.mkdir(p, { recursive: true });
@@ -46,7 +78,7 @@ async function readBlueprint(slug: string): Promise<BlueprintJson | null> {
 }
 
 function rawBlueprintUrl(slug: string) {
-  return `https://raw.githubusercontent.com/${REPO}/${BRANCH}/blueprints/${slug}/blueprint.json`;
+  return `https://raw.githubusercontent.com/${RAW_REPO}/${RAW_REF}/blueprints/${slug}/blueprint.json`;
 }
 
 function resolveScreenshotLocalPath(screenshot: string, slug: string): string | null {
@@ -110,6 +142,7 @@ async function readTitle(slug: string) {
 
 async function main() {
   const slugs = await listBlueprintSlugs();
+  console.log(`Using Blueprint source: ${RAW_REPO}@${RAW_REF}`);
 
   // Filter: only those without any screenshot yet
   const toShoot: string[] = [];

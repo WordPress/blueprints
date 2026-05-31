@@ -37,6 +37,9 @@ jobs:
             - run: npx playwright install --with-deps
 
             - name: Take screenshots
+              env:
+                  BLUEPRINTS_RAW_REPO: ${{ (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.head.repo.full_name || github.repository }}
+                  BLUEPRINTS_RAW_REF: ${{ (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.head.sha || github.sha }}
               run: npm run shots
 
             - name: Check for changes

@@ -3,7 +3,7 @@
 	"meta": {
 		"title": "Symfony Package Radar",
 		"description": "A PHP-only Symfony app that demonstrates attribute routing, autowiring, Twig, and HttpClient without downloading WordPress, Node.js, Sass, or an asset build step.",
-		"author": "WordPress",
+		"author": "adamziel",
 		"categories": ["Development", "Demo"]
 	},
 	"landingPage": "/symfony-package-radar/public/index.php",

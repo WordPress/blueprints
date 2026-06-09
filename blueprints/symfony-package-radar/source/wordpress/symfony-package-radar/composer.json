@@ -6,7 +6,7 @@
 		"symfony/framework-bundle": "8.1.*",
 		"symfony/http-client": "8.1.*",
 		"symfony/twig-bundle": "8.1.*",
-		"playground/wordpress-html-api": "*"
+		"wp-php-toolkit/html": "^0.8.1"
 	},
 	"autoload": {
 		"psr-4": {
@@ -15,14 +15,5 @@
 	},
 	"config": {
 		"sort-packages": true
-	},
-	"repositories": [
-		{
-			"type": "path",
-			"url": "composer-packages/wordpress-html-api",
-			"options": {
-				"symlink": false
-			}
-		}
-	]
+	}
 }

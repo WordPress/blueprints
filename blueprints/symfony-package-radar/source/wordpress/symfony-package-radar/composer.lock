@@ -4,45 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "83a8d335f8dd6b2adc0d0b8714a3fdc8",
+    "content-hash": "af502b1946da0a5da6606d5ff0a5deeb",
     "packages": [
-        {
-            "name": "playground/wordpress-html-api",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "composer-packages/wordpress-html-api",
-                "reference": "cf338b2bd486beaae3431f360dffea2ca112ea5f"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/class-wp-token-map.php",
-                    "src/html-api/class-wp-html-attribute-token.php",
-                    "src/html-api/class-wp-html-span.php",
-                    "src/html-api/class-wp-html-text-replacement.php",
-                    "src/html-api/class-wp-html-token.php",
-                    "src/html-api/class-wp-html-unsupported-exception.php",
-                    "src/html-api/class-wp-html-active-formatting-elements.php",
-                    "src/html-api/class-wp-html-open-elements.php",
-                    "src/html-api/class-wp-html-processor-state.php",
-                    "src/html-api/class-wp-html-stack-event.php",
-                    "src/html-api/class-wp-html-doctype-info.php",
-                    "src/html-api/html5-named-character-references.php",
-                    "src/html-api/class-wp-html-decoder.php",
-                    "src/html-api/class-wp-html-tag-processor.php",
-                    "src/html-api/class-wp-html-processor.php"
-                ]
-            },
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "description": "WordPress HTML API classes bundled for the Symfony Playground demo.",
-            "transport-options": {
-                "symlink": false,
-                "relative": true
-            }
-        },
         {
             "name": "psr/cache",
             "version": "3.0.0",
@@ -2577,6 +2540,63 @@
                 }
             ],
             "time": "2026-05-30T17:09:26+00:00"
+        },
+        {
+            "name": "wp-php-toolkit/html",
+            "version": "v0.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-php-toolkit/html.git",
+                "reference": "6c845f71340cec388fac1dfabe7694712b94190a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-php-toolkit/html/zipball/6c845f71340cec388fac1dfabe7694712b94190a",
+                "reference": "6c845f71340cec388fac1dfabe7694712b94190a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "./"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/",
+                    "/html5-named-character-references.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Zielinski",
+                    "email": "adam@adamziel.com"
+                },
+                {
+                    "name": "WordPress Team",
+                    "email": "wordpress@wordpress.org"
+                }
+            ],
+            "description": "HTML component for WordPress.",
+            "homepage": "https://wordpress.github.io/php-toolkit/reference/html.html",
+            "keywords": [
+                "php-toolkit",
+                "wordpress"
+            ],
+            "support": {
+                "docs": "https://wordpress.github.io/php-toolkit/reference/html.html",
+                "issues": "https://github.com/WordPress/php-toolkit/issues",
+                "source": "https://github.com/WordPress/php-toolkit"
+            },
+            "time": "2026-05-18T15:06:45+00:00"
         }
     ],
     "packages-dev": [],

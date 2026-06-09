@@ -17,6 +17,7 @@ cp -R blueprints/symfony-package-radar/source/wordpress/. \
   cd .context/symfony-package-radar-build/symfony-package-radar
   composer install --no-dev --no-interaction --no-progress --prefer-dist --optimize-autoloader
 )
+rm -f blueprints/symfony-package-radar/symfony-package-radar.zip
 (
   cd .context/symfony-package-radar-build
   zip -X -qr ../../blueprints/symfony-package-radar/symfony-package-radar.zip \

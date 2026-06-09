@@ -1,0 +1,28 @@
+{
+	"name": "playground/symfony-package-radar",
+	"type": "project",
+	"require": {
+		"php": ">=8.4.1",
+		"symfony/framework-bundle": "8.1.*",
+		"symfony/http-client": "8.1.*",
+		"symfony/twig-bundle": "8.1.*",
+		"playground/wordpress-html-api": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"App\\": "src/"
+		}
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"repositories": [
+		{
+			"type": "path",
+			"url": "composer-packages/wordpress-html-api",
+			"options": {
+				"symlink": false
+			}
+		}
+	]
+}

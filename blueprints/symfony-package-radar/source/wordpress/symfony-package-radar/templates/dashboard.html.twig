@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Symfony Playground</title>
+    <style>
+        :root { color-scheme: dark; }
+        body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; background: #111827; color: #f9fafb; }
+        main { max-width: 960px; margin: 0 auto; padding: 52px 24px 72px; }
+        h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: .95; margin: 12px 0 18px; }
+        h2 { margin: 42px 0 14px; font-size: 1.6rem; }
+        p { margin: 0; }
+        p + p { margin-top: 16px; }
+        .lead { color: #d1d5db; font-size: 1.15rem; line-height: 1.7; }
+        .hint { color: #9ca3af; line-height: 1.7; }
+        .packages { display: grid; gap: 10px; margin-top: 24px; }
+        .package { color: #d1d5db; }
+        .package-name { color: #93c5fd; font-weight: 700; }
+        .version { border-radius: 999px; background: #065f46; color: #d1fae5; margin-left: 4px; padding: 2px 8px; font-size: .85rem; }
+        .downloads { color: #9ca3af; margin-left: 8px; }
+        .source { overflow: auto; max-height: 560px; background: #282a36; border: 1px solid #44475a; border-radius: 18px; padding: 20px; }
+        .source code { background: transparent; border-radius: 0; color: #f8f8f2; padding: 0; white-space: pre; font-size: .95rem; line-height: 1.6; }
+        .source span[style="color: #000000"] { color: #f8f8f2 !important; }
+        .source span[style="color: #0000BB"] { color: #8be9fd !important; }
+        .source span[style="color: #007700"] { color: #ff79c6 !important; }
+        .source span[style="color: #DD0000"] { color: #f1fa8c !important; }
+        a { color: #93c5fd; }
+        code { background: #0f172a; border-radius: 8px; overflow-wrap: anywhere; padding: 2px 6px; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Symfony Playground</h1>
+    <p class="lead">
+        This is a Symfony app running in your browser. The controller handles
+        <code>/</code> requests, asks the autowired <code>SymfonyPackageRadar</code> service
+        to fetch Packagist metadata through Symfony HttpClient, and renders the
+        result below:
+    </p>
+    <p class="packages" aria-label="Symfony package versions and Packagist downloads">
+    {% for package in packages %}
+        <span class="package">
+            <span class="package-name">{{ package.name }}</span>
+            <span class="version">{{ package.version }}</span>
+            <span class="downloads">{{ package.monthlyDownloads|number_format }} monthly downloads</span>
+        </span>
+    {% endfor %}
+    </p>
+    <p class="hint">
+        To edit it, open the file browser and change
+        <code>src/Controller/DashboardController.php</code>. Open the Blueprint tab
+        to see how the app is unzipped and served. See the controller class below:
+    </p>
+
+    <h2>DashboardController.php</h2>
+    <div class="source">{{ controllerSource|raw }}</div>
+</main>
+</body>
+</html>

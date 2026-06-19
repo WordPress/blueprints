@@ -6,7 +6,8 @@
     "categories": [
       "Apps",
       "AI"
-    ]
+    ],
+    "icon": "dashicons-format-chat"
   },
   "blueprints/apiary-press/blueprint.json": {
     "title": "Apiary Press",
@@ -14,8 +15,9 @@
     "author": "Francesco Bigiarini",
     "categories": [
       "Apps",
-      "WordPress"
-    ]
+      "Productivity"
+    ],
+    "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/apiary-press/icon.svg"
   },
   "blueprints/chat-to-blog/blueprint.json": {
     "title": "Chat to Blog",
@@ -24,7 +26,8 @@
     "categories": [
       "Apps",
       "Media"
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/chat-to-blog/icon.svg"
   },
   "blueprints/post-collection/blueprint.json": {
     "title": "Collect Posts from the Web",
@@ -33,7 +36,8 @@
     "categories": [
       "Apps",
       "Productivity"
-    ]
+    ],
+    "icon": "dashicons-book"
   },
   "blueprints/cookbook/blueprint.json": {
     "title": "Cookbook",
@@ -51,7 +55,8 @@
     "categories": [
       "Apps",
       "Productivity"
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/memex/icon.svg"
   },
   "blueprints/personal-crm/blueprint.json": {
     "title": "Personal CRM",
@@ -60,7 +65,8 @@
     "categories": [
       "Apps",
       "Productivity"
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-crm/icon.svg"
   },
   "blueprints/rss-reader/blueprint.json": {
     "title": "RSS Reader",
@@ -69,7 +75,8 @@
     "categories": [
       "Apps",
       "Social"
-    ]
+    ],
+    "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/rss-reader/icon.png"
   },
   "blueprints/wordcamp-companion/blueprint.json": {
     "title": "WordCamp Companion",
@@ -87,7 +94,8 @@
     "categories": [
       "Apps",
       "Education"
-    ]
+    ],
+    "icon": "dashicons-welcome-learn-more"
   },
   "blueprints/wordopedia/blueprint.json": {
     "title": "Wordopedia",

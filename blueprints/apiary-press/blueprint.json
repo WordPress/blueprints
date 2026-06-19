@@ -1,0 +1,25 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Apiary Press",
+		"description": "Track beehives and record hive visits.",
+		"author": "Francesco Bigiarini",
+		"categories": ["Apps", "WordPress"]
+	},
+	"landingPage": "/apiary-press/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/zaerl/apiary-press",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "apiary-press"
+			}
+		}
+	]
+}

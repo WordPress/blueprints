@@ -16,7 +16,7 @@
     "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/apiary-press/icon.svg",
     "categories": [
       "Apps",
-      "WordPress"
+      "Productivity"
     ]
   },
   "blueprints/chat-to-blog/blueprint.json": {

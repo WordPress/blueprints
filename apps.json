@@ -91,6 +91,7 @@
     "title": "WordPress Courses",
     "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
     "author": "Alex Kirk",
+    "icon": "dashicons-welcome-learn-more",
     "categories": [
       "Apps",
       "Education"

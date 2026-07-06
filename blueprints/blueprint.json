@@ -1,0 +1,44 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Schema and SEO Testing Starter",
+    "description": "A simple WordPress Playground setup for testing SEO and schema-related plugin workflows in a temporary WordPress site.",
+    "author": "snehgohil"
+  },
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "features": {
+    "networking": true
+  },
+  "landingPage": "/wp-admin/plugin-install.php?s=schema&tab=search&type=term",
+  "login": true,
+  "steps": [
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Schema and SEO Testing Starter",
+        "blogdescription": "A temporary WordPress site for testing schema and SEO workflows."
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "plugin-check"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/schema-sample.csv",
+      "data": "url,schema_type,name,description\nhttps://example.com/sample-page,Article,Sample Article,Example schema data for testing\nhttps://example.com/contact,LocalBusiness,Example Business,Example local business schema data"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Playground Builder",
+		"description": "Compose WordPress Playground blueprints from plugins, themes, versions, language settings, and launch URLs.",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"Development"
+		]
+	},
+	"landingPage": "/playground-builder/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/playground-builder",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "playground-builder"
+			}
+		}
+	]
+}

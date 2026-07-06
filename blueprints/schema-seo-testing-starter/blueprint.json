@@ -36,6 +36,10 @@
       }
     },
     {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/uploads"
+    },
+    {
       "step": "writeFile",
       "path": "/wordpress/wp-content/uploads/schema-sample.csv",
       "data": "url,schema_type,name,description\nhttps://example.com/sample-page,Article,Sample Article,Example schema data for testing\nhttps://example.com/contact,LocalBusiness,Example Business,Example local business schema data"

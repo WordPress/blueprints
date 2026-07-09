@@ -4,10 +4,7 @@
 		"title": "Playground Builder",
 		"description": "Compose WordPress Playground blueprints from plugins, themes, versions, language settings, and launch URLs.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Development"
-		]
+		"categories": ["Apps", "Development"]
 	},
 	"landingPage": "/playground-builder/",
 	"steps": [

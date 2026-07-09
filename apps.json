@@ -48,6 +48,16 @@
       "Productivity"
     ]
   },
+  "blueprints/learn-app/blueprint.json": {
+    "title": "Learn WordPress",
+    "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
+    "author": "WordPress",
+    "categories": [
+      "Apps",
+      "Education"
+    ],
+    "icon": "dashicons-welcome-learn-more"
+  },
   "blueprints/memex/blueprint.json": {
     "title": "Memex",
     "description": "Turn WordPress into a note-taking app with bi-directional links, automatic backlinks, daily notes, tags, and reminders. Import notes from Obsidian, Notion, Evernote, or Roam Research with one click.",
@@ -96,16 +106,6 @@
       "Apps",
       "WordPress"
     ]
-  },
-  "blueprints/learn-app/blueprint.json": {
-    "title": "Learn WordPress",
-    "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
-    "author": "WordPress",
-    "categories": [
-      "Apps",
-      "Education"
-    ],
-    "icon": "dashicons-welcome-learn-more"
   },
   "blueprints/wordopedia/blueprint.json": {
     "title": "Wordopedia",

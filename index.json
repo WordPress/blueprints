@@ -314,6 +314,17 @@
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/latest-gutenberg/screenshot.jpg",
     "featured": false
   },
+  "blueprints/learn-app/blueprint.json": {
+    "title": "Learn WordPress",
+    "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
+    "author": "WordPress",
+    "categories": [
+      "Apps",
+      "Education"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/e2c00fbaedfa72a344457eac1c548b8cef91ff50/blueprints/learn-app/screenshot.jpg",
+    "featured": false
+  },
   "blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json": {
     "title": "Loading, activating, and configuring a theme from a GitHub repository.",
     "description": "This is a good example of typical steps used on a theme's loading, activation and configuration",
@@ -388,6 +399,17 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/personal-crm/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/playground-builder/blueprint.json": {
+    "title": "Playground Builder",
+    "description": "Compose WordPress Playground blueprints from plugins, themes, versions, language settings, and launch URLs.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Development"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/e2c00fbaedfa72a344457eac1c548b8cef91ff50/blueprints/playground-builder/screenshot.jpg",
     "featured": false
   },
   "blueprints/welcome/blueprint.json": {
@@ -583,17 +605,6 @@
       "Testing"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/beta-rc/screenshot.jpg",
-    "featured": false
-  },
-  "blueprints/wordpress-courses/blueprint.json": {
-    "title": "WordPress Courses",
-    "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
-    "author": "Alex Kirk",
-    "categories": [
-      "Apps",
-      "Education"
-    ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/09339ae48bdd513626734bbc4294ba82554f9bda/blueprints/wordpress-courses/screenshot.jpg",
     "featured": false
   },
   "blueprints/wordopedia/blueprint.json": {

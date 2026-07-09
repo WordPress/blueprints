@@ -6,7 +6,7 @@
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"]
 	},
-	"landingPage": "/wp-admin/admin.php?page=post-collection-settings",
+	"landingPage": "/post-collection/",
 	"steps": [
 		{
 			"step": "installPlugin",

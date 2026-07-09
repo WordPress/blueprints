@@ -68,6 +68,16 @@
     ],
     "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-crm/icon.svg"
   },
+  "blueprints/playground-builder/blueprint.json": {
+    "title": "Playground Builder",
+    "description": "Compose WordPress Playground blueprints from plugins, themes, versions, language settings, and launch URLs.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Development"
+    ],
+    "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/playground-builder/icon.png"
+  },
   "blueprints/rss-reader/blueprint.json": {
     "title": "RSS Reader",
     "description": "Follow friends and consume their content in your WordPress",
@@ -87,10 +97,10 @@
       "WordPress"
     ]
   },
-  "blueprints/wordpress-courses/blueprint.json": {
-    "title": "WordPress Courses",
+  "blueprints/learn-app/blueprint.json": {
+    "title": "Learn WordPress",
     "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
-    "author": "Alex Kirk",
+    "author": "WordPress",
     "categories": [
       "Apps",
       "Education"

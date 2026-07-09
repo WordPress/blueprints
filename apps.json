@@ -97,8 +97,8 @@
       "WordPress"
     ]
   },
-  "blueprints/wordpress-courses/blueprint.json": {
-    "title": "WordPress Courses",
+  "blueprints/learn-app/blueprint.json": {
+    "title": "Learn WordPress",
     "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
     "author": "WordPress",
     "categories": [

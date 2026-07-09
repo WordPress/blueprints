@@ -12,7 +12,7 @@
 			"step": "installPlugin",
 			"pluginData": {
 				"resource": "git:directory",
-				"url": "https://github.com/akirk/learn-app",
+				"url": "https://github.com/WordPress/learn-app",
 				"ref": "dist/main",
 				"refType": "branch"
 			},

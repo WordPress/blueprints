@@ -300,8 +300,8 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Playground Builder</h2>
 <p>Compose WordPress Playground blueprints from plugins, themes, versions, language settings, and launch URLs.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/playground-builder/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/e2c00fbaedfa72a344457eac1c548b8cef91ff50/blueprints/playground-builder/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/e2c00fbaedfa72a344457eac1c548b8cef91ff50/blueprints/playground-builder/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/playground-builder/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1357ad4e63bc52487d3a70ad4a13d4a07420d8b8/blueprints/playground-builder/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1357ad4e63bc52487d3a70ad4a13d4a07420d8b8/blueprints/playground-builder/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/playground-builder/screenshot.jpg" alt="Playground Builder screenshot" width="400"></p>
 <br clear="all">
 

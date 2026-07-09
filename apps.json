@@ -100,7 +100,7 @@
   "blueprints/wordpress-courses/blueprint.json": {
     "title": "WordPress Courses",
     "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
-    "author": "Alex Kirk",
+    "author": "WordPress",
     "categories": [
       "Apps",
       "Education"

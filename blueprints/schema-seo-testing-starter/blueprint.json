@@ -43,6 +43,11 @@
       "step": "writeFile",
       "path": "/wordpress/wp-content/uploads/schema-sample.csv",
       "data": "url,schema_type,name,description\nhttps://example.com/sample-page,Article,Sample Article,Example schema data for testing\nhttps://example.com/contact,LocalBusiness,Example Business,Example local business schema data"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/schema-seo-guide.php",
+      "data": "<?php add_action('admin_notices', function() { echo '<div class=\"notice notice-info\"><h2>Schema and SEO Testing Starter</h2><p>Use this Playground site to test a CSV-based schema workflow.</p><ol><li>Download the sample CSV file from <code>/wp-content/uploads/schema-sample.csv</code>.</li><li>Add a page URL and its schema data to the CSV.</li><li>Install a schema-related plugin from this screen.</li><li>Import the CSV and review any URLs reported as not found.</li><li>Save the valid schema and verify it on the website.</li><li>If supported by the plugin, generate PHP code to keep the schema after removing the plugin.</li></ol></div>'; });"
     }
   ]
 }

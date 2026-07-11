@@ -35,11 +35,14 @@
 			"step": "installTheme",
 			"ifAlreadyInstalled": "skip",
 			"themeData": {
-				"resource": "git:directory",
-				"url": "https://github.com/fellyph/learn-creator-lab",
-				"ref": "main",
-				"refType": "branch",
-				"path": "/"
+				"resource": "zip",
+				"inner": {
+					"resource": "git:directory",
+					"url": "https://github.com/fellyph/learn-creator-lab",
+					"ref": "main",
+					"refType": "branch",
+					"path": "/"
+				}
 			},
 			"options": {
 				"activate": true,

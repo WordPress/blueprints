@@ -2,7 +2,7 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Block Editor Creator Lab",
-		"description": "Laboratorio guiado en espanol para practicar estructura de informacion, bloques, patrones, plantillas y estilos globales en WordPress.",
+		"description": "Laboratorio guiado en español para practicar estructura de información, bloques, patrones, plantillas y estilos globales en WordPress.",
 		"author": "fellyph",
 		"categories": ["Education", "Content", "Block Editor"]
 	},
@@ -11,8 +11,19 @@
 		"php": "8.3",
 		"wp": "6.9"
 	},
-	"login": true,
+	"features": {
+		"networking": true,
+		"intl": true
+	},
 	"steps": [
+		{
+			"step": "setSiteLanguage",
+			"language": "es_ES",
+			"progress": {
+				"weight": 1,
+				"caption": "Configurando WordPress en español"
+			}
+		},
 		{
 			"step": "setSiteOptions",
 			"options": {
@@ -22,7 +33,7 @@
 		},
 		{
 			"step": "installTheme",
-			"ifAlreadyInstalled": "overwrite",
+			"ifAlreadyInstalled": "skip",
 			"themeData": {
 				"resource": "git:directory",
 				"url": "https://github.com/fellyph/learn-creator-lab",
@@ -36,7 +47,15 @@
 			},
 			"progress": {
 				"weight": 2,
-				"caption": "Installing the Learn Creator Lab block theme"
+				"caption": "Instalando el tema de bloques Learn Creator Lab"
+			}
+		},
+		{
+			"step": "activateTheme",
+			"themeFolderName": "learn-creator-lab",
+			"progress": {
+				"weight": 1,
+				"caption": "Activando el tema del laboratorio"
 			}
 		},
 		{
@@ -44,11 +63,11 @@
 			"path": "/tmp/creator-lab-setup.php",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/codex/block-editor-creator-lab/blueprints/block-editor-creator-lab/setup.php"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/49bc027ec85f0c1c1241d8b58faeee7187850a4f/blueprints/block-editor-creator-lab/setup.php"
 			},
 			"progress": {
 				"weight": 1,
-				"caption": "Downloading the Creator Lab exercise setup"
+				"caption": "Descargando la configuración de los ejercicios"
 			}
 		},
 		{
@@ -56,8 +75,11 @@
 			"code": "<?php require '/tmp/creator-lab-setup.php';",
 			"progress": {
 				"weight": 4,
-				"caption": "Publishing the exercise hub and editable starter drafts"
+				"caption": "Publicando las guías y los borradores editables"
 			}
+		},
+		{
+			"step": "login"
 		}
 	]
 }

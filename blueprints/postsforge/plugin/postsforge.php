@@ -1,23 +1,23 @@
 <?php
 /**
- * Plugin Name: PlanForge
- * Plugin URI: https://github.com/WordPress/blueprints/tree/trunk/blueprints/planforge
+ * Plugin Name: PostsForge
+ * Plugin URI: https://github.com/WordPress/blueprints/tree/trunk/blueprints/postsforge
  * Description: An editorial calendar for your posts. See your publishing month at a glance, quick-add draft ideas on any day, and drag posts to reschedule.
  * Version: 1.0.0
  * Author: Muryam Sultana
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: planforge
+ * Text Domain: postsforge
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class PlanForge {
+class PostsForge {
 
 	const PAGE_SLUG = 'calendar';
-	const NONCE     = 'planforge_action';
+	const NONCE     = 'postsforge_action';
 
 	private static $statuses = array( 'publish', 'future', 'draft', 'pending' );
 
@@ -35,7 +35,7 @@ class PlanForge {
 				array(
 					'post_type'    => 'page',
 					'post_status'  => 'publish',
-					'post_title'   => __( 'Calendar', 'planforge' ),
+					'post_title'   => __( 'Calendar', 'postsforge' ),
 					'post_name'    => self::PAGE_SLUG,
 					'post_content' => '',
 				)
@@ -46,10 +46,10 @@ class PlanForge {
 
 	public static function admin_menu() {
 		add_menu_page(
-			__( 'Calendar', 'planforge' ),
-			__( 'Calendar', 'planforge' ),
+			__( 'Calendar', 'postsforge' ),
+			__( 'Calendar', 'postsforge' ),
 			'edit_posts',
-			'planforge',
+			'postsforge',
 			function () {
 				wp_safe_redirect( home_url( '/' . self::PAGE_SLUG . '/' ) );
 				exit;
@@ -181,10 +181,10 @@ class PlanForge {
 		}
 
 		$labels = array(
-			'publish' => __( 'Published', 'planforge' ),
-			'future'  => __( 'Scheduled', 'planforge' ),
-			'draft'   => __( 'Draft', 'planforge' ),
-			'pending' => __( 'Pending', 'planforge' ),
+			'publish' => __( 'Published', 'postsforge' ),
+			'future'  => __( 'Scheduled', 'postsforge' ),
+			'draft'   => __( 'Draft', 'postsforge' ),
+			'pending' => __( 'Pending', 'postsforge' ),
 		);
 
 		header( 'Content-Type: text/html; charset=utf-8' );
@@ -194,7 +194,7 @@ class PlanForge {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php esc_html_e( 'PlanForge', 'planforge' ); ?></title>
+<title><?php esc_html_e( 'PostsForge', 'postsforge' ); ?></title>
 <style>
 :root {
 	--bg: #f6f7f9; --card: #ffffff; --text: #1a202c; --muted: #64748b;
@@ -244,7 +244,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 <body>
 <div class="pf-wrap">
 	<div class="pf-top">
-		<h1>🗓️ Plan<span>Forge</span></h1>
+		<h1>🗓️ Posts<span>Forge</span></h1>
 		<div class="pf-nav">
 			<a href="<?php echo esc_url( add_query_arg( 'pf_month', $prev, $app_url ) ); ?>">←</a>
 			<span class="pf-month"><?php echo esc_html( wp_date( 'F Y', $first_ts ) ); ?></span>
@@ -260,7 +260,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 
 	<div class="pf-grid">
 		<?php
-		$dow_names = array( __( 'Sun', 'planforge' ), __( 'Mon', 'planforge' ), __( 'Tue', 'planforge' ), __( 'Wed', 'planforge' ), __( 'Thu', 'planforge' ), __( 'Fri', 'planforge' ), __( 'Sat', 'planforge' ) );
+		$dow_names = array( __( 'Sun', 'postsforge' ), __( 'Mon', 'postsforge' ), __( 'Tue', 'postsforge' ), __( 'Wed', 'postsforge' ), __( 'Thu', 'postsforge' ), __( 'Fri', 'postsforge' ), __( 'Sat', 'postsforge' ) );
 		foreach ( $dow_names as $dow ) {
 			echo '<div class="pf-dow">' . esc_html( $dow ) . '</div>';
 		}
@@ -277,7 +277,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 				$date === $today ? ' pf-today' : '',
 				esc_attr( $date ),
 				(int) $day_num,
-				esc_attr__( 'Quick-add a draft on this day', 'planforge' )
+				esc_attr__( 'Quick-add a draft on this day', 'postsforge' )
 			);
 			foreach ( $by_day[ $date ] ?? array() as $p ) {
 				printf(
@@ -286,9 +286,9 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 					(int) $p->ID,
 					esc_attr( $labels[ $p->post_status ] ?? $p->post_status ),
 					esc_attr( gmdate( 'H:i', strtotime( $p->post_date ) ) ),
-					esc_html( $p->post_title ? $p->post_title : __( '(no title)', 'planforge' ) ),
+					esc_html( $p->post_title ? $p->post_title : __( '(no title)', 'postsforge' ) ),
 					esc_url( admin_url( 'post.php?post=' . $p->ID . '&action=edit' ) ),
-					esc_attr__( 'Edit post', 'planforge' )
+					esc_attr__( 'Edit post', 'postsforge' )
 				);
 			}
 			echo '</div>';
@@ -296,7 +296,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 		?>
 	</div>
 
-	<p class="pf-hint"><?php esc_html_e( 'Hover a day and click ＋ to quick-add a draft · drag a post to another day to move it · ✎ opens the editor.', 'planforge' ); ?></p>
+	<p class="pf-hint"><?php esc_html_e( 'Hover a day and click ＋ to quick-add a draft · drag a post to another day to move it · ✎ opens the editor.', 'postsforge' ); ?></p>
 </div>
 <script>
 (function () {
@@ -318,7 +318,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 		if (day.querySelector('.pf-quick')) return;
 		var input = document.createElement('input');
 		input.className = 'pf-quick';
-		input.placeholder = '<?php echo esc_js( __( 'Post title…', 'planforge' ) ); ?>';
+		input.placeholder = '<?php echo esc_js( __( 'Post title…', 'postsforge' ) ); ?>';
 		day.appendChild(input);
 		input.focus();
 		input.addEventListener('keydown', function (ev) {
@@ -351,7 +351,7 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 		e.preventDefault();
 		day.classList.remove('pf-over');
 		if (dragged.classList.contains('s-publish') &&
-			!confirm('<?php echo esc_js( __( 'This post is already published — moving it changes its publish date. Continue?', 'planforge' ) ); ?>')) {
+			!confirm('<?php echo esc_js( __( 'This post is already published — moving it changes its publish date. Continue?', 'postsforge' ) ); ?>')) {
 			dragged = null;
 			return;
 		}
@@ -367,4 +367,4 @@ body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 -ap
 	}
 }
 
-PlanForge::init();
+PostsForge::init();

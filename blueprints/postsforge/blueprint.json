@@ -1,7 +1,7 @@
 {
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
-		"title": "PlanForge",
+		"title": "PostsForge",
 		"description": "An editorial calendar for your posts. See your publishing month at a glance, quick-add draft ideas on any day, and drag posts between days to reschedule.",
 		"author": "muryamsultana",
 		"categories": [
@@ -18,24 +18,24 @@
 	"steps": [
 		{
 			"step": "mkdir",
-			"path": "/wordpress/wp-content/plugins/planforge"
+			"path": "/wordpress/wp-content/plugins/postsforge"
 		},
 		{
 			"step": "writeFile",
-			"path": "/wordpress/wp-content/plugins/planforge/planforge.php",
+			"path": "/wordpress/wp-content/plugins/postsforge/postsforge.php",
 			"data": {
 				"resource": "bundled",
-				"path": "/plugin/planforge.php"
+				"path": "/plugin/postsforge.php"
 			}
 		},
 		{
 			"step": "activatePlugin",
-			"pluginPath": "planforge/planforge.php"
+			"pluginPath": "postsforge/postsforge.php"
 		},
 		{
 			"step": "setSiteOptions",
 			"options": {
-				"blogname": "PlanForge",
+				"blogname": "PostsForge",
 				"blogdescription": "Plan your publishing month"
 			}
 		}

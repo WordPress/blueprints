@@ -21,13 +21,13 @@
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/plugins/habitforge/habitforge.php",
 			"data": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/blueprints/trunk/blueprints/habitforge/habitforge.php"
+				"resource": "bundled",
+				"path": "/plugin/plugin.php"
 			}
 		},
 		{
 			"step": "activatePlugin",
-			"pluginPath": "/plugin/habitforge.php"
+			"pluginPath": "habitforge/habitforge.php"
 		},
 		{
 			"step": "setSiteOptions",

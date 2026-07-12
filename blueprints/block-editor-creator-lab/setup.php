@@ -91,21 +91,184 @@ if ( ! function_exists( 'creator_lab_editor_url' ) ) {
 	}
 }
 
+if ( ! function_exists( 'creator_lab_core_block' ) ) {
+	/**
+	 * Serialize one native WordPress block.
+	 *
+	 * @param string $name       Core block name without the core/ prefix.
+	 * @param array  $attributes Block attributes.
+	 * @param string $html       Saved block markup.
+	 * @return string Serialized block.
+	 */
+	function creator_lab_core_block( $name, $attributes, $html ) {
+		return get_comment_delimited_block_content( 'core/' . $name, $attributes, $html );
+	}
+}
+
+if ( ! function_exists( 'creator_lab_paragraph' ) ) {
+	/**
+	 * Render a native Paragraph block.
+	 *
+	 * @param string $text  Paragraph text.
+	 * @param string $class Optional CSS class.
+	 * @return string Serialized block.
+	 */
+	function creator_lab_paragraph( $text, $class = '' ) {
+		$attributes = $class ? array( 'className' => $class ) : array();
+		$class_name = $class ? ' class="' . esc_attr( $class ) . '"' : '';
+
+		return creator_lab_core_block(
+			'paragraph',
+			$attributes,
+			'<p' . $class_name . '>' . esc_html( $text ) . '</p>'
+		);
+	}
+}
+
+if ( ! function_exists( 'creator_lab_heading' ) ) {
+	/**
+	 * Render a native Heading block.
+	 *
+	 * @param string $text  Heading text.
+	 * @param int    $level Heading level.
+	 * @param string $class Optional CSS class.
+	 * @param string $url   Optional heading link.
+	 * @return string Serialized block.
+	 */
+	function creator_lab_heading( $text, $level = 2, $class = '', $url = '' ) {
+		$attributes = array();
+		if ( 2 !== $level ) {
+			$attributes['level'] = $level;
+		}
+		if ( $class ) {
+			$attributes['className'] = $class;
+		}
+
+		$content = esc_html( $text );
+		if ( $url ) {
+			$content = '<a href="' . esc_url( $url ) . '">' . $content . '</a>';
+		}
+
+		$class_name = trim( 'wp-block-heading ' . $class );
+		return creator_lab_core_block(
+			'heading',
+			$attributes,
+			sprintf( '<h%1$d class="%2$s">%3$s</h%1$d>', $level, esc_attr( $class_name ), $content )
+		);
+	}
+}
+
+if ( ! function_exists( 'creator_lab_group' ) ) {
+	/**
+	 * Render a native Group block with an optional semantic element.
+	 *
+	 * @param string $content Inner blocks.
+	 * @param string $class   Optional CSS class.
+	 * @param string $tag     Wrapper element.
+	 * @return string Serialized block.
+	 */
+	function creator_lab_group( $content, $class = '', $tag = 'div' ) {
+		if ( ! in_array( $tag, array( 'article', 'div', 'section' ), true ) ) {
+			$tag = 'div';
+		}
+
+		$attributes = array();
+		if ( $class ) {
+			$attributes['className'] = $class;
+		}
+		if ( 'div' !== $tag ) {
+			$attributes['tagName'] = $tag;
+		}
+
+		$class_name = trim( 'wp-block-group ' . $class );
+		$html       = sprintf(
+			'<%1$s class="%2$s">%3$s</%1$s>',
+			$tag,
+			esc_attr( $class_name ),
+			$content
+		);
+
+		return creator_lab_core_block( 'group', $attributes, $html );
+	}
+}
+
+if ( ! function_exists( 'creator_lab_list' ) ) {
+	/**
+	 * Render a native List block and native List Item children.
+	 *
+	 * @param array  $items        List item text.
+	 * @param bool   $ordered      Whether the list is ordered.
+	 * @param string $class        Optional CSS class.
+	 * @param bool   $number_steps Prefix items with numbered step labels.
+	 * @return string Serialized block.
+	 */
+	function creator_lab_list( $items, $ordered = false, $class = '', $number_steps = false ) {
+		$list_items = '';
+		foreach ( $items as $index => $item ) {
+			$content = esc_html( $item );
+			if ( $number_steps ) {
+				$content = sprintf( '<strong>Paso %1$02d</strong><br>%2$s', $index + 1, $content );
+			}
+
+			$list_items .= creator_lab_core_block( 'list-item', array(), '<li>' . $content . '</li>' );
+		}
+
+		$attributes = array();
+		if ( $ordered ) {
+			$attributes['ordered'] = true;
+		}
+		if ( $class ) {
+			$attributes['className'] = $class;
+		}
+
+		$tag        = $ordered ? 'ol' : 'ul';
+		$class_name = trim( 'wp-block-list ' . $class );
+		$html       = sprintf( '<%1$s class="%2$s">%3$s</%1$s>', $tag, esc_attr( $class_name ), $list_items );
+
+		return creator_lab_core_block( 'list', $attributes, $html );
+	}
+}
+
+if ( ! function_exists( 'creator_lab_buttons' ) ) {
+	/**
+	 * Wrap native Button blocks in a native Buttons block.
+	 *
+	 * @param string $buttons Inner Button blocks.
+	 * @param string $class   Optional CSS class.
+	 * @return string Serialized block.
+	 */
+	function creator_lab_buttons( $buttons, $class = '' ) {
+		$attributes = $class ? array( 'className' => $class ) : array();
+		$class_name = trim( 'wp-block-buttons ' . $class );
+
+		return creator_lab_core_block(
+			'buttons',
+			$attributes,
+			'<div class="' . esc_attr( $class_name ) . '">' . $buttons . '</div>'
+		);
+	}
+}
+
 if ( ! function_exists( 'creator_lab_button' ) ) {
 	/**
-	 * Render a button-style link.
+	 * Render a native Button block.
 	 *
 	 * @param string $url   URL.
 	 * @param string $label Link label.
 	 * @param string $class Extra class.
-	 * @return string HTML.
+	 * @return string Serialized block.
 	 */
 	function creator_lab_button( $url, $label, $class = '' ) {
-		return sprintf(
-			'<a class="lab-button %1$s" href="%2$s">%3$s</a>',
-			esc_attr( $class ),
-			esc_url( $url ),
-			esc_html( $label )
+		$class_name = trim( 'lab-button ' . $class );
+		return creator_lab_core_block(
+			'button',
+			array( 'className' => $class_name ),
+			sprintf(
+				'<div class="wp-block-button %1$s"><a class="wp-block-button__link wp-element-button" href="%2$s">%3$s</a></div>',
+				esc_attr( $class_name ),
+				esc_url( $url ),
+				esc_html( $label )
+			)
 		);
 	}
 }
@@ -119,20 +282,6 @@ if ( ! function_exists( 'creator_lab_guide_content' ) ) {
 	 * @return string Post content.
 	 */
 	function creator_lab_guide_content( $exercise, $work_id ) {
-		$steps = '';
-		foreach ( $exercise['steps'] as $index => $step ) {
-			$steps .= sprintf(
-				'<li><span>Paso %1$02d</span><p>%2$s</p></li>',
-				$index + 1,
-				esc_html( $step )
-			);
-		}
-
-		$checklist = '';
-		foreach ( $exercise['checklist'] as $item ) {
-			$checklist .= '<li>' . esc_html( $item ) . '</li>';
-		}
-
 		$actions = creator_lab_button( creator_lab_editor_url( $exercise, $work_id ), $exercise['primary_action'], 'primary' );
 		if ( empty( $exercise['editor_path'] ) ) {
 			$actions .= creator_lab_button( get_preview_post_link( $work_id ), 'Previsualizar borrador', 'page' );
@@ -141,32 +290,57 @@ if ( ! function_exists( 'creator_lab_guide_content' ) ) {
 		}
 		$actions .= creator_lab_button( $exercise['source'], 'Recurso Learn WordPress' );
 
-		return '<!-- wp:html -->' . "\n" .
-			'<article class="creator-lab exercise-guide">' .
-			'<section class="lab-hero exercise-hero">' .
-			'<p class="lab-kicker">' . esc_html( $exercise['module'] ) . '</p>' .
-			'<h1>' . esc_html( $exercise['title'] ) . '</h1>' .
-			'<p class="lab-lede">' . esc_html( $exercise['story'] ) . '</p>' .
-			'<div class="lab-actions">' . $actions . '</div>' .
-			'</section>' .
-			'<section class="lab-section exercise-overview">' .
-			'<div class="exercise-meta">' .
-			'<span>' . esc_html( $exercise['duration'] ) . '</span>' .
-			'<span>' . esc_html( $exercise['surface'] ) . '</span>' .
-			'<span>' . esc_html( $exercise['difficulty'] ) . '</span>' .
-			'</div>' .
-			'<div class="lab-callout exercise-objective"><div><p class="lab-tag">Objetivo</p><h2>Resultado esperado</h2></div><p>' . esc_html( $exercise['objective'] ) . '</p></div>' .
-			'</section>' .
-			'<section class="lab-section exercise-step-panel">' .
-			'<div class="lab-section-header"><div><p class="lab-tag">Guion de práctica</p><h2>Sigue los pasos</h2><p class="lab-section-intro">Lee esta página, abre el editor y completa cada acción dentro de WordPress. El borrador ya contiene la estructura inicial.</p></div></div>' .
-			'<ol class="exercise-steps">' . $steps . '</ol>' .
-			'</section>' .
-			'<section class="lab-section creator-panel exercise-finish">' .
-			'<h3>Checklist de entrega</h3>' .
-			'<ul class="checklist">' . $checklist . '</ul>' .
-			'</section>' .
-			'</article>' . "\n" .
-			'<!-- /wp:html -->';
+		$hero = creator_lab_group(
+			creator_lab_paragraph( $exercise['module'], 'lab-kicker' ) .
+			creator_lab_heading( $exercise['title'], 1 ) .
+			creator_lab_paragraph( $exercise['story'], 'lab-lede' ) .
+			creator_lab_buttons( $actions, 'lab-actions' ),
+			'lab-hero exercise-hero',
+			'section'
+		);
+
+		$meta = creator_lab_group(
+			creator_lab_paragraph( $exercise['duration'], 'exercise-meta-item' ) .
+			creator_lab_paragraph( $exercise['surface'], 'exercise-meta-item' ) .
+			creator_lab_paragraph( $exercise['difficulty'], 'exercise-meta-item' ),
+			'exercise-meta'
+		);
+
+		$objective = creator_lab_group(
+			creator_lab_group(
+				creator_lab_paragraph( 'Objetivo', 'lab-tag' ) .
+				creator_lab_heading( 'Resultado esperado' )
+			) .
+			creator_lab_paragraph( $exercise['objective'] ),
+			'lab-callout exercise-objective'
+		);
+
+		$overview = creator_lab_group( $meta . $objective, 'lab-section exercise-overview', 'section' );
+		$step_header = creator_lab_group(
+			creator_lab_paragraph( 'Guion de práctica', 'lab-tag' ) .
+			creator_lab_heading( 'Sigue los pasos' ) .
+			creator_lab_paragraph(
+				'Lee esta página, abre el editor y completa cada acción dentro de WordPress. El borrador ya contiene la estructura inicial.',
+				'lab-section-intro'
+			),
+			'lab-section-copy'
+		);
+
+		$step_panel = creator_lab_group(
+			creator_lab_group( $step_header, 'lab-section-header' ) .
+			creator_lab_list( $exercise['steps'], true, 'exercise-steps', true ),
+			'lab-section exercise-step-panel',
+			'section'
+		);
+
+		$finish = creator_lab_group(
+			creator_lab_heading( 'Checklist de entrega', 3 ) .
+			creator_lab_list( $exercise['checklist'], false, 'checklist' ),
+			'lab-section creator-panel exercise-finish',
+			'section'
+		);
+
+		return creator_lab_group( $hero . $overview . $step_panel . $finish, 'creator-lab exercise-guide', 'article' );
 	}
 }
 
@@ -181,31 +355,52 @@ if ( ! function_exists( 'creator_lab_hub_content' ) ) {
 		$cards = '';
 		foreach ( $records as $record ) {
 			$exercise = $record['exercise'];
-			$cards   .= sprintf(
-				'<a class="exercise-card" href="%1$s"><span>%2$s</span><h3>%3$s</h3><p>%4$s</p><small>%5$s · %6$s</small></a>',
-				esc_url( get_permalink( $record['guide_id'] ) ),
-				esc_html( $exercise['module'] ),
-				esc_html( $exercise['title'] ),
-				esc_html( $exercise['objective'] ),
-				esc_html( $exercise['duration'] ),
-				esc_html( $exercise['surface'] )
+			$guide_url = get_permalink( $record['guide_id'] );
+			$cards    .= creator_lab_group(
+				creator_lab_paragraph( $exercise['module'], 'exercise-card-module' ) .
+				creator_lab_heading( $exercise['title'], 3, '', $guide_url ) .
+				creator_lab_paragraph( $exercise['objective'] ) .
+				creator_lab_paragraph( $exercise['duration'] . ' · ' . $exercise['surface'], 'exercise-card-meta' ) .
+				creator_lab_buttons(
+					creator_lab_button( $guide_url, 'Abrir ejercicio', 'card-action' ),
+					'exercise-card-actions'
+				),
+				'exercise-card'
 			);
 		}
 
-		return '<!-- wp:html -->' . "\n" .
-			'<article class="creator-lab lab-hub">' .
-			'<section class="lab-hero">' .
-			'<p class="lab-kicker">Estructura · 30h</p>' .
-			'<h1>Laboratorio de creación con bloques</h1>' .
-			'<p class="lab-lede">Ocho misiones guiadas para practicar estructura de información, bloques, patrones, plantillas y estilos globales dentro de WordPress.</p>' .
-			'<div class="lab-actions">' . creator_lab_button( admin_url( 'edit.php?post_type=page' ), 'Ver páginas del laboratorio', 'primary' ) . creator_lab_button( admin_url( 'site-editor.php' ), 'Abrir el Editor del sitio', 'page' ) . '</div>' .
-			'</section>' .
-			'<section class="lab-section">' .
-			'<div class="lab-section-header"><div><p class="lab-tag">Misiones</p><h2>Elige un ejercicio</h2><p class="lab-section-intro">Cada página explica la historia, el objetivo, los pasos y el borrador que debes editar.</p></div></div>' .
-			'<div class="exercise-grid">' . $cards . '</div>' .
-			'</section>' .
-			'</article>' . "\n" .
-			'<!-- /wp:html -->';
+		$actions = creator_lab_button( admin_url( 'edit.php?post_type=page' ), 'Ver páginas del laboratorio', 'primary' ) .
+			creator_lab_button( admin_url( 'site-editor.php' ), 'Abrir el Editor del sitio', 'page' );
+		$hero = creator_lab_group(
+			creator_lab_paragraph( 'Estructura · 30h', 'lab-kicker' ) .
+			creator_lab_heading( 'Laboratorio de creación con bloques', 1 ) .
+			creator_lab_paragraph(
+				'Ocho misiones guiadas para practicar estructura de información, bloques, patrones, plantillas y estilos globales dentro de WordPress.',
+				'lab-lede'
+			) .
+			creator_lab_buttons( $actions, 'lab-actions' ),
+			'lab-hero',
+			'section'
+		);
+		$section_header = creator_lab_group(
+			creator_lab_group(
+				creator_lab_paragraph( 'Misiones', 'lab-tag' ) .
+				creator_lab_heading( 'Elige un ejercicio' ) .
+				creator_lab_paragraph(
+					'Cada página explica la historia, el objetivo, los pasos y el borrador que debes editar.',
+					'lab-section-intro'
+				),
+				'lab-section-copy'
+			),
+			'lab-section-header'
+		);
+		$missions = creator_lab_group(
+			$section_header . creator_lab_group( $cards, 'exercise-grid' ),
+			'lab-section',
+			'section'
+		);
+
+		return creator_lab_group( $hero . $missions, 'creator-lab lab-hub', 'article' );
 	}
 }
 
@@ -219,10 +414,15 @@ if ( ! function_exists( 'creator_lab_work_note' ) ) {
 	 * @return string Post content.
 	 */
 	function creator_lab_work_note( $title, $description, $body ) {
-		return '<!-- wp:html -->' .
-			'<section class="work-brief"><p class="lab-tag">Borrador de trabajo</p><h2>' . esc_html( $title ) . '</h2><p>' . esc_html( $description ) . '</p></section>' .
-			'<!-- /wp:html -->' . "\n\n" .
-			$body;
+		$brief = creator_lab_group(
+			creator_lab_paragraph( 'Borrador de trabajo', 'lab-tag' ) .
+			creator_lab_heading( $title ) .
+			creator_lab_paragraph( $description ),
+			'work-brief',
+			'section'
+		);
+
+		return $brief . "\n\n" . $body;
 	}
 }
 
@@ -408,7 +608,13 @@ $exercises = array(
 <!-- /wp:heading -->
 
 <!-- wp:list -->
-<ul><li>Agrega una página para información que no cambia con frecuencia.</li><li>Describe por qué esta información debe estar siempre accesible.</li></ul>
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Agrega una página para información que no cambia con frecuencia.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Describe por qué esta información debe estar siempre accesible.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 
 <!-- wp:heading -->
@@ -416,7 +622,13 @@ $exercises = array(
 <!-- /wp:heading -->
 
 <!-- wp:list -->
-<ul><li>Agrega tres ideas de entradas para noticias, anuncios o reflexiones.</li><li>Explica cómo ayudarán las categorías o etiquetas.</li></ul>
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Agrega tres ideas de entradas para noticias, anuncios o reflexiones.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Explica cómo ayudarán las categorías o etiquetas.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 HTML,
 		'steps'          => array(
@@ -498,7 +710,17 @@ HTML,
 <!-- /wp:paragraph -->
 
 <!-- wp:list -->
-<ul><li>Agrega una categoría relacionada con la clase.</li><li>Agrega tres etiquetas útiles.</li><li>Escribe un extracto de una frase.</li></ul>
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Agrega una categoría relacionada con la clase.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Agrega tres etiquetas útiles.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Escribe un extracto de una frase.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 HTML,
 		'steps'          => array(
@@ -580,7 +802,7 @@ HTML,
 		'work_content'   => <<<'HTML'
 <!-- wp:group {"className":"creator-panel","layout":{"type":"constrained"}} -->
 <div class="wp-block-group creator-panel"><!-- wp:heading -->
-<h2 class="wp-block-heading">Unete al laboratorio</h2>
+<h2 class="wp-block-heading">Únete al laboratorio</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
@@ -630,7 +852,17 @@ HTML,
 <!-- /wp:heading -->
 
 <!-- wp:list -->
-<ul><li>Describe qué cambiaste en la cabecera.</li><li>Describe qué cambiaste en el pie.</li><li>Explica en qué páginas se puede ver el cambio.</li></ul>
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Describe qué cambiaste en la cabecera.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Describe qué cambiaste en el pie.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Explica en qué páginas se puede ver el cambio.</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 HTML,
 		'steps'          => array(
@@ -707,7 +939,17 @@ HTML,
 <!-- /wp:heading -->
 
 <!-- wp:list -->
-<ul><li>Color principal elegido:</li><li>Cambio de tipografía:</li><li>Elemento que mejoró con el ajuste:</li></ul>
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Color principal elegido:</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Cambio de tipografía:</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Elemento que mejoró con el ajuste:</li>
+<!-- /wp:list-item --></ul>
 <!-- /wp:list -->
 HTML,
 		'steps'          => array(

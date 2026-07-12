@@ -27,7 +27,7 @@
 		},
 		{
 			"step": "activatePlugin",
-			"pluginPath": "habitforge/habitforge.php"
+			"pluginPath": "/plugin/habitforge.php"
 		},
 		{
 			"step": "setSiteOptions",

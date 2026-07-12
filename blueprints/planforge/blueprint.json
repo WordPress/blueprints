@@ -24,8 +24,8 @@
 			"step": "writeFile",
 			"path": "/wordpress/wp-content/plugins/planforge/planforge.php",
 			"data": {
-				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/PlanForge/blueprints/planforge/planforge.php"
+				"resource": "bundled",
+				"path": "/plugin/planforge.php"
 			}
 		},
 		{

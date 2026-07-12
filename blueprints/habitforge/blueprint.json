@@ -22,7 +22,7 @@
 			"path": "/wordpress/wp-content/plugins/habitforge/habitforge.php",
 			"data": {
 				"resource": "bundled",
-				"path": "/plugin/plugin.php"
+				"path": "/plugin/habitforge.php"
 			}
 		},
 		{

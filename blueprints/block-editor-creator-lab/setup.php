@@ -426,6 +426,83 @@ if ( ! function_exists( 'creator_lab_work_note' ) ) {
 	}
 }
 
+if ( ! function_exists( 'creator_lab_check_native_blocks' ) ) {
+	/**
+	 * Recursively verify that parsed content uses registered core blocks only.
+	 *
+	 * @param array $blocks      Parsed blocks.
+	 * @param int   $post_id     Post ID being checked.
+	 * @param array $block_types Block type counts.
+	 * @param int   $block_count  Total block count.
+	 * @return true|WP_Error Validation result.
+	 */
+	function creator_lab_check_native_blocks( $blocks, $post_id, &$block_types, &$block_count ) {
+		$disallowed = array( 'core/freeform', 'core/html', 'core/missing', 'core/shortcode' );
+		$registry   = WP_Block_Type_Registry::get_instance();
+
+		foreach ( $blocks as $block ) {
+			$block_name = $block['blockName'];
+			if ( null === $block_name ) {
+				if ( '' !== trim( $block['innerHTML'] ) ) {
+					return new WP_Error( 'creator_lab_unwrapped_html', 'La entrada ' . $post_id . ' contiene HTML fuera de un bloque.' );
+				}
+				continue;
+			}
+
+			if ( 0 !== strpos( $block_name, 'core/' ) || in_array( $block_name, $disallowed, true ) ) {
+				return new WP_Error( 'creator_lab_non_native_block', 'La entrada ' . $post_id . ' contiene el bloque no permitido ' . $block_name . '.' );
+			}
+
+			if ( ! $registry->is_registered( $block_name ) ) {
+				return new WP_Error( 'creator_lab_unregistered_block', 'La entrada ' . $post_id . ' contiene el bloque no registrado ' . $block_name . '.' );
+			}
+
+			++$block_count;
+			$block_types[ $block_name ] = isset( $block_types[ $block_name ] ) ? $block_types[ $block_name ] + 1 : 1;
+
+			if ( ! empty( $block['innerBlocks'] ) ) {
+				$result = creator_lab_check_native_blocks( $block['innerBlocks'], $post_id, $block_types, $block_count );
+				if ( is_wp_error( $result ) ) {
+					return $result;
+				}
+			}
+		}
+
+		return true;
+	}
+}
+
+if ( ! function_exists( 'creator_lab_audit_native_content' ) ) {
+	/**
+	 * Audit generated posts and return a stored compatibility summary.
+	 *
+	 * @param array $post_ids Generated post IDs.
+	 * @return array|WP_Error Audit summary or validation error.
+	 */
+	function creator_lab_audit_native_content( $post_ids ) {
+		$post_ids    = array_values( array_unique( array_filter( array_map( 'intval', $post_ids ) ) ) );
+		$block_types = array();
+		$block_count = 0;
+
+		sort( $post_ids );
+		foreach ( $post_ids as $post_id ) {
+			$content = get_post_field( 'post_content', $post_id );
+			$result  = creator_lab_check_native_blocks( parse_blocks( $content ), $post_id, $block_types, $block_count );
+			if ( is_wp_error( $result ) ) {
+				return $result;
+			}
+		}
+
+		ksort( $block_types );
+		return array(
+			'checked_at'  => gmdate( 'c' ),
+			'post_count'  => count( $post_ids ),
+			'block_count' => $block_count,
+			'block_types' => $block_types,
+		);
+	}
+}
+
 if ( ! function_exists( 'creator_lab_seed_media' ) ) {
 	/**
 	 * Add one bundled WordPress image to the Media Library.
@@ -563,6 +640,7 @@ $sample_news = array(
 	),
 );
 
+$sample_post_ids = array();
 foreach ( $sample_news as $index => $item ) {
 	$post_id = creator_lab_upsert_post(
 		array(
@@ -579,6 +657,7 @@ foreach ( $sample_news as $index => $item ) {
 	);
 
 	if ( $post_id ) {
+		$sample_post_ids[] = $post_id;
 		wp_set_post_terms( $post_id, array( 'estructura', 'bloques' ), 'post_tag', false );
 		if ( $featured_image_id ) {
 			set_post_thumbnail( $post_id, $featured_image_id );
@@ -1026,14 +1105,23 @@ $hub_data['post_content'] = creator_lab_hub_content( $records );
 $hub_id                   = creator_lab_upsert_post( $hub_data );
 
 $exercise_ids = array();
+$content_ids  = array_merge( $sample_post_ids, array( $hub_id ) );
 foreach ( $records as $slug => $record ) {
 	$exercise_ids[ $slug ] = array(
 		'guide_id' => (int) $record['guide_id'],
 		'work_id'  => (int) $record['work_id'],
 	);
+	$content_ids[] = (int) $record['guide_id'];
+	$content_ids[] = (int) $record['work_id'];
+}
+
+$native_block_audit = creator_lab_audit_native_content( $content_ids );
+if ( is_wp_error( $native_block_audit ) ) {
+	throw new RuntimeException( $native_block_audit->get_error_message() );
 }
 
 update_option( 'creator_lab_exercise_ids', $exercise_ids );
+update_option( 'creator_lab_native_block_audit', $native_block_audit );
 update_option( 'creator_lab_entry_page_id', (int) $hub_id );
 update_option( 'creator_lab_challenge_post_id', (int) reset( $exercise_ids )['work_id'] );
 update_option( 'show_on_front', 'page' );

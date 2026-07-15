@@ -146,7 +146,8 @@ async function main() {
 					blueprintJsonPath,
 					[
 						`URL is not allowed or could not be fetched: ${url}`,
-						'URLs in blueprint.json must use the current branch or trunk.',
+						'URLs in blueprint.json must be fetchable and use the current branch or trunk.',
+						'Example: https://raw.githubusercontent.com/wordpress/blueprints/CURRENT_BRANCH_OR_TRUNK/blueprints/BLUEPRINT_DIRECTORY/FILE_NAME',
 					].join('\n')
 				);
 			}

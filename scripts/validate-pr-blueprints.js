@@ -46,6 +46,26 @@ function getTouchedBlueprintDirectories() {
 	return [...blueprintDirs].sort();
 }
 
+async function isUrlValid(url, allowedPrefixes) {
+	if (!url.startsWith('https://') && !url.startsWith('http://')) {
+		return true;
+	}
+
+	if (!allowedPrefixes.some((prefix) => url.startsWith(prefix))) {
+		return false;
+	}
+
+	try {
+		const response = await fetch(url, {
+			method: 'HEAD',
+			signal: AbortSignal.timeout(10_000),
+		});
+		return response.ok;
+	} catch {
+		return false;
+	}
+}
+
 function findUrlsRequiringBranchPrefix(value) {
 	if (Array.isArray(value)) {
 		return value.flatMap(findUrlsRequiringBranchPrefix);
@@ -77,6 +97,10 @@ async function main() {
 	}
 
 	const currentBranch = getCurrentBranch();
+	const allowedUrlPrefixes = [currentBranch, 'trunk'].map(
+		(branch) =>
+			`https://raw.githubusercontent.com/wordpress/blueprints/${branch}/`
+	);
 	let validateBlueprint;
 	let failed = false;
 
@@ -107,13 +131,13 @@ async function main() {
 			continue;
 		}
 
-		const invalidUrls = findUrlsRequiringBranchPrefix(blueprint).filter(
-			(url) =>
-				(url.startsWith('https://') || url.startsWith('http://')) &&
-				!url.startsWith(
-					`https://raw.githubusercontent.com/wordpress/blueprints/${currentBranch}/`
+		const invalidUrls = (
+			await Promise.all(
+				findUrlsRequiringBranchPrefix(blueprint).map(async (url) =>
+					(await isUrlValid(url, allowedUrlPrefixes)) ? null : url
 				)
-		);
+			)
+		).filter(Boolean);
 
 		if (invalidUrls.length > 0) {
 			failed = true;
@@ -121,8 +145,8 @@ async function main() {
 				reportError(
 					blueprintJsonPath,
 					[
-						`URL is not allowed: ${url}`,
-						`URLs in blueprint.json must start with https://raw.githubusercontent.com/wordpress/blueprints/${currentBranch}/`,
+						`URL is not allowed or could not be fetched: ${url}`,
+						'URLs in blueprint.json must use the current branch or trunk.',
 					].join('\n')
 				);
 			}

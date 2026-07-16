@@ -38,5 +38,8 @@ jobs:
             - name: Install dependencies
               run: npm ci
 
+            - name: Test Blueprint URL handling
+              run: npm run test:pr-blueprint-urls
+
             - name: Validate Blueprint JSON
               run: npm run validate:pr-blueprints

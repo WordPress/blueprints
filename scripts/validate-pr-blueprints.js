@@ -7,6 +7,7 @@ import {
 	readJson,
 	reportError,
 } from './lib/json-validation.js';
+import { isAllowedRawGitHubUrl } from './lib/raw-github-url.js';
 
 function getPullRequestSource() {
 	const repository = process.env.PR_HEAD_REPOSITORY;
@@ -49,12 +50,12 @@ function getTouchedBlueprintDirectories() {
 	return [...blueprintDirs].sort();
 }
 
-async function isUrlValid(url, allowedPrefixes) {
-	if (!url.startsWith('https://') && !url.startsWith('http://')) {
+async function isUrlValid(url, allowedSources) {
+	if (!/^https?:\/\//i.test(url)) {
 		return true;
 	}
 
-	if (!allowedPrefixes.some((prefix) => url.startsWith(prefix))) {
+	if (!isAllowedRawGitHubUrl(url, allowedSources)) {
 		return false;
 	}
 
@@ -100,10 +101,14 @@ async function main() {
 	}
 
 	const { repository, ref } = getPullRequestSource();
-	const allowedUrlPrefixes = [
-		`https://raw.githubusercontent.com/${repository}/${ref}/`,
-		'https://raw.githubusercontent.com/wordpress/blueprints/trunk/',
+	const allowedUrlSources = [
+		{ repository, ref },
+		{ repository: 'wordpress/blueprints', ref: 'trunk' },
 	];
+	const allowedUrlPrefixes = allowedUrlSources.map(
+		(source) =>
+			`https://raw.githubusercontent.com/${source.repository}/${source.ref}/`
+	);
 	let validateBlueprint;
 	let failed = false;
 
@@ -137,7 +142,7 @@ async function main() {
 		const invalidUrls = (
 			await Promise.all(
 				findUrlsRequiringBranchPrefix(blueprint).map(async (url) =>
-					(await isUrlValid(url, allowedUrlPrefixes)) ? null : url
+					(await isUrlValid(url, allowedUrlSources)) ? null : url
 				)
 			)
 		).filter(Boolean);

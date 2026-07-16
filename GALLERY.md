@@ -356,16 +356,16 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Showcase plugin</h2>
 <p>Showcase custom plugin from own server with media files and content imported as WXR. There is a readme file in github repository (https://github.com/Lovor01/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/readme.md) which explains all steps.</p>
-<p><small>By <a href="https://github.com/Lovor01">@Lovor01</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/showcase-plugin-with-media/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/showcase-plugin-with-media/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/Lovor01">@Lovor01</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/showcase-plugin-with-media/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/6393b4974e88ce09d0253068d8fcf0eacbc3ff9a/blueprints/showcase-plugin-with-media/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/6393b4974e88ce09d0253068d8fcf0eacbc3ff9a/blueprints/showcase-plugin-with-media/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/showcase-plugin-with-media/screenshot.jpg" alt="Showcase plugin screenshot" width="400"></p>
 <br clear="all">
 
 
 <h2>Stylish Press</h2>
 <p>A Woo store with custom theme, content, and products.</p>
-<p><small>By <a href="https://github.com/adamziel">@adamziel</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/stylish-press/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/stylish-press/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/stylish-press/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/adamziel">@adamziel</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/stylish-press/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/6393b4974e88ce09d0253068d8fcf0eacbc3ff9a/blueprints/stylish-press/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/6393b4974e88ce09d0253068d8fcf0eacbc3ff9a/blueprints/stylish-press/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/stylish-press/screenshot.jpg" alt="Stylish Press screenshot" width="400"></p>
 <br clear="all">
 

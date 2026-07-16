@@ -14,8 +14,8 @@
 		},
 		{
 			"step": "writeFile",
-			"path": "/wordpress/wp-content/mu-plugins/rewrite.php",
-			"data": "<?php /* Use pretty permalinks */ add_action( 'after_setup_theme', function() { global $wp_rewrite; $wp_rewrite->set_permalink_structure('/%postname%/'); $wp_rewrite->flush_rules(); } );"
+			"path": "/wordpress/wp-content/mu-plugins/demo-body-class.php",
+			"data": "<?php add_filter( 'body_class', function ( $classes ) { $classes[] = 'playground-demo'; return $classes; } );"
 		},
 		{
 			"step": "updateUserMeta",
@@ -29,18 +29,22 @@
 		{
 			"step": "installTheme",
 			"themeData": {
-				"resource": "url",
-				"url": "https://github.com/richtabor/kanso/archive/refs/heads/main.zip"
+				"resource": "git:directory",
+				"url": "https://github.com/richtabor/kanso.git",
+				"ref": "main",
+				"refType": "branch",
+				"path": "/"
 			},
 			"options": {
-				"activate": true
+				"activate": true,
+				"targetFolderName": "kanso-main"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://github.com/WordPress/blueprints/blob/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint-content.xml"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint-content.xml"
 			}
 		}
 	],

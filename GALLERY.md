@@ -244,8 +244,8 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Loading, activating, and configuring a theme from a GitHub repository.</h2>
 <p>This is a good example of typical steps used on a theme's loading, activation and configuration</p>
-<p><small>By <a href="https://github.com/richtabor">@richtabor</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/richtabor">@richtabor</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/6697215b708d80382aa04fef6598f217a6db8bee/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/6697215b708d80382aa04fef6598f217a6db8bee/blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/install-activate-setup-theme-from-gh-repo/screenshot.jpg" alt="Loading, activating, and configuring a theme from a GitHub repository. screenshot" width="400"></p>
 <br clear="all">
 

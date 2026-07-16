@@ -15,14 +15,14 @@ Submit [a Pull Request (PR)](https://github.com/adamziel/blueprints/pulls) with 
 The PR should contain:
 
 -   A single `blueprint.json` file under the path `blueprints/your-blueprint-name/blueprint.json` (like [the examples here](https://github.com/wordpress/blueprints/tree/trunk/blueprints)).
--   All the static files (WXR, ZIP, JPG, etc.) your Blueprint references. The static files must be loaded via the `https://raw.githubusercontent.com` URL pointing to your branch. `raw.githubusercontent.com` is a service that allows you to serve files directly from your GitHub repository. This is useful for loading static files in Blueprints. The URLs follow the `raw.githubusercontent.com/${user}/${repo}/${branch}/${path}` pattern.
+-   All the static files (WXR, ZIP, JPG, etc.) your Blueprint references. Load each file from the pull request's repository and branch with a URL following the `https://raw.githubusercontent.com/${user}/${repo}/${branch}/${path}` pattern. For a pull request from a fork, `${user}/${repo}` is the fork—not `WordPress/blueprints`—because the branch and file do not exist upstream until the pull request is merged. Use `raw.githubusercontent.com`, not a `github.com/.../blob/...` page, which returns HTML instead of the file.
 
-For example, if you want to load a content-export.xml file, you create a new folder in the blueprints directory, /woocommerce-subscription (the name should correpond to the name of the blueprint). The folder must hold two files:
+For example, to load `content-export.xml`, create a `blueprints/woocommerce-subscriptions` directory containing:
 
 -   A `blueprints/woocommerce-subscriptions/blueprint.json` file
--   A `blueprints/woocommerce-subscription/content-export.xml` file
+-   A `blueprints/woocommerce-subscriptions/content-export.xml` file
 
-Assuming your branch is named `/woo-subscription/`, the Blueprint should reference as follows:
+If the pull request comes from `example-contributor/blueprints` on the `feature/woo-subscription` branch, reference the file as follows:
 
 ```json
 {
@@ -31,12 +31,14 @@ Assuming your branch is named `/woo-subscription/`, the Blueprint should referen
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wordpress/blueprints/woo-subscriptions/blueprints/woocommerce-subscriptions/content-export.xml"
+				"url": "https://raw.githubusercontent.com/example-contributor/blueprints/feature/woo-subscription/blueprints/woocommerce-subscriptions/content-export.xml"
 			}
 		}
 	]
 }
 ```
+
+Pull request validation checks that raw URLs use the exact head repository and branch, or upstream `trunk`, and can be fetched. URLs from the pull request branch must point to files inside the same Blueprint directory. After a pull request is merged, repository automation rewrites fork and feature-branch attachment URLs to the upstream `trunk` form.
 
 By submitting a Blueprint, you agree to license it under [GPLv2 or later license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 

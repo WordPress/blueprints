@@ -7,15 +7,19 @@ import {
 	readJson,
 	reportError,
 } from './lib/json-validation.js';
+import { isAllowedBlueprintResourceUrl } from './lib/raw-github-url.js';
 
-function getCurrentBranch() {
-	const currentBranch = process.env.GITHUB_BRANCH || process.env.GITHUB_HEAD_REF;
+function getPullRequestSource() {
+	const repository = process.env.PR_HEAD_REPOSITORY;
+	const ref = process.env.PR_HEAD_REF;
 
-	if (!currentBranch) {
-		throw new Error('Could not determine the current branch for URL validation.');
+	if (!repository || !ref) {
+		throw new Error(
+			'PR_HEAD_REPOSITORY and PR_HEAD_REF must be provided for URL validation.'
+		);
 	}
 
-	return currentBranch;
+	return { repository, ref };
 }
 
 function getChangedFiles() {
@@ -44,6 +48,41 @@ function getTouchedBlueprintDirectories() {
 	}
 
 	return [...blueprintDirs].sort();
+}
+
+function isLocalFile(filePath) {
+	try {
+		return fs.statSync(filePath).isFile();
+	} catch {
+		return false;
+	}
+}
+
+async function isUrlValid(url, allowedSources, blueprintDir) {
+	if (!/^https?:\/\//i.test(url)) {
+		return true;
+	}
+
+	if (
+		!isAllowedBlueprintResourceUrl(
+			url,
+			allowedSources,
+			blueprintDir,
+			isLocalFile
+		)
+	) {
+		return false;
+	}
+
+	try {
+		const response = await fetch(url, {
+			method: 'HEAD',
+			signal: AbortSignal.timeout(10_000),
+		});
+		return response.ok;
+	} catch {
+		return false;
+	}
 }
 
 function findUrlsRequiringBranchPrefix(value) {
@@ -76,7 +115,15 @@ async function main() {
 		return;
 	}
 
-	const currentBranch = getCurrentBranch();
+	const { repository, ref } = getPullRequestSource();
+	const allowedUrlSources = [
+		{ kind: 'head', repository, ref },
+		{ kind: 'trunk', repository: 'wordpress/blueprints', ref: 'trunk' },
+	];
+	const allowedUrlPrefixes = allowedUrlSources.map(
+		(source) =>
+			`https://raw.githubusercontent.com/${source.repository}/${source.ref}/`
+	);
 	let validateBlueprint;
 	let failed = false;
 
@@ -107,13 +154,15 @@ async function main() {
 			continue;
 		}
 
-		const invalidUrls = findUrlsRequiringBranchPrefix(blueprint).filter(
-			(url) =>
-				(url.startsWith('https://') || url.startsWith('http://')) &&
-				!url.startsWith(
-					`https://raw.githubusercontent.com/wordpress/blueprints/${currentBranch}/`
+		const invalidUrls = (
+			await Promise.all(
+				findUrlsRequiringBranchPrefix(blueprint).map(async (url) =>
+					(await isUrlValid(url, allowedUrlSources, blueprintDir))
+						? null
+						: url
 				)
-		);
+			)
+		).filter(Boolean);
 
 		if (invalidUrls.length > 0) {
 			failed = true;
@@ -121,8 +170,10 @@ async function main() {
 				reportError(
 					blueprintJsonPath,
 					[
-						`URL is not allowed: ${url}`,
-						`URLs in blueprint.json must start with https://raw.githubusercontent.com/wordpress/blueprints/${currentBranch}/`,
+						`URL is not allowed or could not be fetched: ${url}`,
+						'URLs must be fetchable and use the pull request repository and ref, or upstream trunk.',
+						'Pull request URLs must point to files inside the current Blueprint directory.',
+						`Expected: ${allowedUrlPrefixes.join(' or ')}`,
 					].join('\n')
 				);
 			}

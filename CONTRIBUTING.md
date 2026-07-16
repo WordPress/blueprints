@@ -38,7 +38,7 @@ If the pull request comes from `example-contributor/blueprints` on the `feature/
 }
 ```
 
-Pull request validation checks that raw URLs use the exact head repository and branch, or upstream `trunk`, and can be fetched. After a pull request is merged, repository automation rewrites fork and feature-branch attachment URLs to the upstream `trunk` form.
+Pull request validation checks that raw URLs use the exact head repository and branch, or upstream `trunk`, and can be fetched. URLs from the pull request branch must point to files inside the same Blueprint directory. After a pull request is merged, repository automation rewrites fork and feature-branch attachment URLs to the upstream `trunk` form.
 
 By submitting a Blueprint, you agree to license it under [GPLv2 or later license](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html).
 

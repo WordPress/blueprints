@@ -1,9 +1,11 @@
 import json
 import os
+import posixpath
 import re
 import subprocess
 import sys
 from functools import lru_cache
+from urllib.parse import quote, unquote, urlsplit
 
 highlighted_blueprints = {
     'Feed Reader with the Friends Plugin',
@@ -291,30 +293,61 @@ def branch_url_mapper(url, blueprint_dir):
     """
     Rewrite a local raw GitHub Blueprint attachment URL to upstream trunk.
 
-    >>> branch_url_mapper('HTTPS://RAW.GITHUBUSERCONTENT.COM/contributor/blueprints/user/feature/blueprints/woo-shipping/sample_products.xml', 'blueprints/woo-shipping')
+    >>> branch_url_mapper('HTTPS://RAW.GITHUBUSERCONTENT.COM/contributor/blueprints/feature/blueprints/fix/blueprints/woo-shipping/sample_products.xml', 'blueprints/woo-shipping')
     'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/sample_products.xml'
+    >>> branch_url_mapper('https://raw.githubusercontent.com/contributor/blueprints/feature/blueprints/woo-shipping/sample_products.xml?cache=1', 'blueprints/woo-shipping')
+    'https://raw.githubusercontent.com/contributor/blueprints/feature/blueprints/woo-shipping/sample_products.xml?cache=1'
+    >>> branch_url_mapper('https://raw.githubusercontent.com/contributor/blueprints/feature/blueprints/tt5-demo/tt5-demo-content.xml', 'blueprints/woo-shipping')
+    'https://raw.githubusercontent.com/contributor/blueprints/feature/blueprints/tt5-demo/tt5-demo-content.xml'
     >>> branch_url_mapper('https://raw.githubusercontent.com/example/external/main/data.xml', 'blueprints/woo-shipping')
     'https://raw.githubusercontent.com/example/external/main/data.xml'
     >>> branch_url_mapper('https://raw.githubusercontent.com/example/external/main/blueprints/not-in-this-repository.xml', 'blueprints/woo-shipping')
     'https://raw.githubusercontent.com/example/external/main/blueprints/not-in-this-repository.xml'
     """
-    match = re.match(
-        r'(?i:^https://raw\.githubusercontent\.com/)[^/]+/[^/]+/.+?/(blueprints/.+)$',
-        url
-    )
-    if not match:
+    try:
+        parsed = urlsplit(url)
+        port = parsed.port
+    except ValueError:
         return url
-    resource_path = match.group(1)
+
+    if (
+        parsed.scheme.lower() != 'https'
+        or (parsed.hostname or '').lower() != 'raw.githubusercontent.com'
+        or parsed.username
+        or parsed.password
+        or port not in (None, 443)
+        or parsed.query
+        or parsed.fragment
+    ):
+        return url
+
+    try:
+        normalized_path = posixpath.normpath(unquote(parsed.path, errors='strict'))
+    except UnicodeDecodeError:
+        return url
+
     # A fork URL is a repository attachment only when the referenced file is
     # present beside this Blueprint in the checkout. Preserve external URLs.
-    blueprint_prefix = blueprint_dir.rstrip('/') + '/'
+    blueprint_dir = blueprint_dir.replace('\\', '/').strip('/')
+    blueprint_prefix = blueprint_dir + '/'
+    marker = '/' + blueprint_prefix
+    marker_position = normalized_path.rfind(marker)
+    if marker_position < 0:
+        return url
+
+    resource_path = normalized_path[marker_position + 1:]
     if (
-        not resource_path.startswith(blueprint_prefix)
-        or os.path.normpath(resource_path).replace('\\', '/') != resource_path
+        not blueprint_dir
+        or posixpath.normpath(blueprint_dir) != blueprint_dir
+        or not resource_path.startswith(blueprint_prefix)
+        or posixpath.normpath(resource_path) != resource_path
         or not os.path.isfile(resource_path)
     ):
         return url
-    return 'https://raw.githubusercontent.com/wordpress/blueprints/trunk/' + resource_path
+    return (
+        'https://raw.githubusercontent.com/wordpress/blueprints/trunk/'
+        + quote(resource_path, safe='/')
+    )
 
 if '--test' in sys.argv:
     print("Running doctests")

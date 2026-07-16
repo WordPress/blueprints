@@ -7,7 +7,7 @@ import {
 	readJson,
 	reportError,
 } from './lib/json-validation.js';
-import { isAllowedRawGitHubUrl } from './lib/raw-github-url.js';
+import { isAllowedBlueprintResourceUrl } from './lib/raw-github-url.js';
 
 function getPullRequestSource() {
 	const repository = process.env.PR_HEAD_REPOSITORY;
@@ -50,12 +50,27 @@ function getTouchedBlueprintDirectories() {
 	return [...blueprintDirs].sort();
 }
 
-async function isUrlValid(url, allowedSources) {
+function isLocalFile(filePath) {
+	try {
+		return fs.statSync(filePath).isFile();
+	} catch {
+		return false;
+	}
+}
+
+async function isUrlValid(url, allowedSources, blueprintDir) {
 	if (!/^https?:\/\//i.test(url)) {
 		return true;
 	}
 
-	if (!isAllowedRawGitHubUrl(url, allowedSources)) {
+	if (
+		!isAllowedBlueprintResourceUrl(
+			url,
+			allowedSources,
+			blueprintDir,
+			isLocalFile
+		)
+	) {
 		return false;
 	}
 
@@ -102,8 +117,8 @@ async function main() {
 
 	const { repository, ref } = getPullRequestSource();
 	const allowedUrlSources = [
-		{ repository, ref },
-		{ repository: 'wordpress/blueprints', ref: 'trunk' },
+		{ kind: 'head', repository, ref },
+		{ kind: 'trunk', repository: 'wordpress/blueprints', ref: 'trunk' },
 	];
 	const allowedUrlPrefixes = allowedUrlSources.map(
 		(source) =>
@@ -142,7 +157,9 @@ async function main() {
 		const invalidUrls = (
 			await Promise.all(
 				findUrlsRequiringBranchPrefix(blueprint).map(async (url) =>
-					(await isUrlValid(url, allowedUrlSources)) ? null : url
+					(await isUrlValid(url, allowedUrlSources, blueprintDir))
+						? null
+						: url
 				)
 			)
 		).filter(Boolean);
@@ -155,6 +172,7 @@ async function main() {
 					[
 						`URL is not allowed or could not be fetched: ${url}`,
 						'URLs must be fetchable and use the pull request repository and ref, or upstream trunk.',
+						'Pull request URLs must point to files inside the current Blueprint directory.',
 						`Expected: ${allowedUrlPrefixes.join(' or ')}`,
 					].join('\n')
 				);

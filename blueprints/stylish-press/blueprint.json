@@ -48,7 +48,7 @@
 			"path": "/wordpress/wp-content/themes/stylish-press-theme/style.css",
 			"data": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/blueprints/stylish-press/blueprints/stylish-press/stylish-press-theme/style.css"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/stylish-press/stylish-press-theme/style.css"
 			}
 		},
 		{

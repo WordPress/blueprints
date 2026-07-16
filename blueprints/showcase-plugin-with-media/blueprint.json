@@ -47,7 +47,7 @@
 			"step": "installTheme",
 			"themeData": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/twentytwentyfour-child.zip"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/twentytwentyfour-child.zip"
 			},
 			"options": {
 				"activate": true
@@ -84,7 +84,7 @@
 			"step": "unzip",
 			"zipFile": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/2024.zip"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/2024.zip"
 			},
 			"extractToPath": "/wordpress/wp-content/uploads"
 		},
@@ -92,7 +92,7 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/Lovor01/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/makeiteasypopupblock.WordPress.2024-06-20.xml"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/showcase-plugin-with-media/assets/makeiteasypopupblock.WordPress.2024-06-20.xml"
 			}
 		}
 	]

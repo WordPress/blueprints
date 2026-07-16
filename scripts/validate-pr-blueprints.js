@@ -8,14 +8,17 @@ import {
 	reportError,
 } from './lib/json-validation.js';
 
-function getCurrentBranch() {
-	const currentBranch = process.env.GITHUB_BRANCH || process.env.GITHUB_HEAD_REF;
+function getPullRequestSource() {
+	const repository = process.env.PR_HEAD_REPOSITORY;
+	const ref = process.env.PR_HEAD_REF;
 
-	if (!currentBranch) {
-		throw new Error('Could not determine the current branch for URL validation.');
+	if (!repository || !ref) {
+		throw new Error(
+			'PR_HEAD_REPOSITORY and PR_HEAD_REF must be provided for URL validation.'
+		);
 	}
 
-	return currentBranch;
+	return { repository, ref };
 }
 
 function getChangedFiles() {
@@ -96,11 +99,11 @@ async function main() {
 		return;
 	}
 
-	const currentBranch = getCurrentBranch();
-	const allowedUrlPrefixes = [currentBranch, 'trunk'].map(
-		(branch) =>
-			`https://raw.githubusercontent.com/wordpress/blueprints/${branch}/`
-	);
+	const { repository, ref } = getPullRequestSource();
+	const allowedUrlPrefixes = [
+		`https://raw.githubusercontent.com/${repository}/${ref}/`,
+		'https://raw.githubusercontent.com/wordpress/blueprints/trunk/',
+	];
 	let validateBlueprint;
 	let failed = false;
 
@@ -146,8 +149,8 @@ async function main() {
 					blueprintJsonPath,
 					[
 						`URL is not allowed or could not be fetched: ${url}`,
-						'URLs in blueprint.json must be fetchable and use the current branch or trunk.',
-						'Example: https://raw.githubusercontent.com/wordpress/blueprints/CURRENT_BRANCH_OR_TRUNK/blueprints/BLUEPRINT_DIRECTORY/FILE_NAME',
+						'URLs must be fetchable and use the pull request repository and ref, or upstream trunk.',
+						`Expected: ${allowedUrlPrefixes.join(' or ')}`,
 					].join('\n')
 				);
 			}

@@ -285,16 +285,20 @@ def map_url_resources(blueprint_fragment, mapper):
 
 def branch_url_mapper(url):
     """
-    Rewrite a raw.githubusercontent.com URL to point to the trunk branch.
+    Rewrite a raw GitHub Blueprint attachment URL to upstream trunk.
 
-    >>> branch_url_mapper('https://raw.githubusercontent.com/wordpress/blueprints/my-branch/blueprint.json')
-    'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprint.json'
-    >>> branch_url_mapper('https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprint.json')
-    'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprint.json'
+    >>> branch_url_mapper('https://raw.githubusercontent.com/contributor/blueprints/user/feature/blueprints/woo-shipping/sample_products.xml')
+    'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/woo-shipping/sample_products.xml'
+    >>> branch_url_mapper('https://raw.githubusercontent.com/example/external/main/data.xml')
+    'https://raw.githubusercontent.com/example/external/main/data.xml'
     """
-    if not url.startswith("https://raw.githubusercontent.com"):
+    match = re.match(
+        r'^https://raw\.githubusercontent\.com/[^/]+/[^/]+/.+?/(blueprints/.+)$',
+        url
+    )
+    if not match:
         return url
-    return re.sub(r'https://raw.githubusercontent.com/wordpress/blueprints/([^/]+)', r'https://raw.githubusercontent.com/wordpress/blueprints/trunk', url)
+    return 'https://raw.githubusercontent.com/wordpress/blueprints/trunk/' + match.group(1)
 
 if '--test' in sys.argv:
     print("Running doctests")

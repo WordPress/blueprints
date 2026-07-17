@@ -128,7 +128,7 @@
 				"app": "apps/memex.json"
 			},
 			{
-				"known": ["Feedly", "Inoreader", "NewsBlur", "NetNewsWire", "Reeder", "FreshRSS"],
+				"known": ["Google Reader", "Feedly", "Inoreader", "NewsBlur", "NetNewsWire", "Reeder", "FreshRSS"],
 				"app": "apps/rss-reader.json"
 			},
 			{

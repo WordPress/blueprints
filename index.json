@@ -240,6 +240,16 @@
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/fancy-dashboard_widget/screenshot.jpg",
     "featured": false
   },
+  "blueprints/flight-log/blueprint.json": {
+    "title": "Flight Log",
+    "description": "A private flight log and statistics app for WordPress.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Travel"
+    ],
+    "featured": false
+  },
   "blueprints/grid-variations/blueprint.json": {
     "title": "Grid Variations Experiments enabled",
     "author": "bph",
@@ -533,6 +543,16 @@
       "content"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/theme-a11y-test/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/travel-app/blueprint.json": {
+    "title": "Travel App",
+    "description": "A private travel organizer for WordPress.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Travel"
+    ],
     "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {

@@ -1,0 +1,28 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Flight Log",
+		"description": "A private flight log and statistics app for WordPress.",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"Travel"
+		]
+	},
+	"landingPage": "/flight-log/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/flight-log",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "flight-log"
+			}
+		}
+	]
+}

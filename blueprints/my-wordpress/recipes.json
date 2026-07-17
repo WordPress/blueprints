@@ -128,14 +128,6 @@
 				"app": "apps/memex.json"
 			},
 			{
-				"known": ["Notion", "Coda", "Tana"],
-				"app": "apps/ai-assistant.json"
-			},
-			{
-				"known": ["Airtable", "SmartSuite", "Google Sheets"],
-				"app": "apps/ai-assistant.json"
-			},
-			{
 				"known": ["Feedly", "Inoreader", "NewsBlur"],
 				"app": "apps/rss-reader.json"
 			},
@@ -176,7 +168,11 @@
 				"app": "apps/wordopedia.json"
 			},
 			{
-				"known": ["Perplexity", "ChatGPT", "Claude"],
+				"known": ["Codex", "Claude Code", "Cursor"],
+				"app": "apps/ai-assistant.json"
+			},
+			{
+				"known": ["Claude", "ChatGPT", "Grok"],
 				"app": "apps/ai-assistant.json"
 			}
 		],

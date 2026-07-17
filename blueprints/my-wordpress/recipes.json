@@ -120,7 +120,7 @@
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
 		"alternatives": [
 			{
-				"known": ["Obsidian", "Notion", "Logseq"],
+				"known": ["Obsidian", "Notion", "Roam Research"],
 				"app": "apps/memex.json"
 			},
 			{

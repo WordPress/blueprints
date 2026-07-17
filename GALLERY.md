@@ -180,9 +180,9 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Flight Log</h2>
 <p>A private flight log and statistics app for WordPress.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/flight-log/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/flight-log/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/flight-log/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
-<p align="left"><em>No screenshot yet for Flight Log. Open it in Playground.</em></p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/flight-log/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/flight-log/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/flight-log/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/flight-log/screenshot.jpg" alt="Flight Log screenshot" width="400"></p>
 <br clear="all">
 
 
@@ -404,9 +404,9 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Travel App</h2>
 <p>A private travel organizer for WordPress.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/travel-app/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/travel-app/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
-<p align="left"><em>No screenshot yet for Travel App. Open it in Playground.</em></p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/travel-app/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/travel-app/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/travel-app/screenshot.jpg" alt="Travel App screenshot" width="400"></p>
 <br clear="all">
 
 

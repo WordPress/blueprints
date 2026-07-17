@@ -4,10 +4,7 @@
 		"title": "Flight Log",
 		"description": "A private flight log and statistics app for WordPress.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Travel"
-		]
+		"categories": ["Apps", "Travel"]
 	},
 	"landingPage": "/flight-log/",
 	"steps": [

@@ -4,10 +4,7 @@
 		"title": "Travel App",
 		"description": "A private travel organizer for WordPress.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Travel"
-		]
+		"categories": ["Apps", "Travel"]
 	},
 	"landingPage": "/travel-app/",
 	"steps": [

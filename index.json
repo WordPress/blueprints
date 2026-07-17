@@ -248,6 +248,7 @@
       "Apps",
       "Travel"
     ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/flight-log/screenshot.jpg",
     "featured": false
   },
   "blueprints/grid-variations/blueprint.json": {
@@ -553,6 +554,7 @@
       "Apps",
       "Travel"
     ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/travel-app/screenshot.jpg",
     "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {

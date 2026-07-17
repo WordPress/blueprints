@@ -132,7 +132,7 @@
 				"app": "apps/rss-reader.json"
 			},
 			{
-				"known": ["Pocket", "Instapaper", "Matter"],
+				"known": ["Pocket", "Instapaper", "Matter", "Readwise"],
 				"app": "apps/post-collection.json"
 			},
 			{

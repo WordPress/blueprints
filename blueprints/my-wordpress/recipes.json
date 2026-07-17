@@ -124,7 +124,15 @@
 				"app": "apps/memex.json"
 			},
 			{
-				"known": ["Notion", "Airtable", "Coda"],
+				"known": ["Evernote", "Bear", "Apple Notes"],
+				"app": "apps/memex.json"
+			},
+			{
+				"known": ["Notion", "Coda", "Tana"],
+				"app": "apps/ai-assistant.json"
+			},
+			{
+				"known": ["Airtable", "SmartSuite", "Google Sheets"],
 				"app": "apps/ai-assistant.json"
 			},
 			{
@@ -132,19 +140,27 @@
 				"app": "apps/rss-reader.json"
 			},
 			{
-				"known": ["Pocket", "Instapaper", "Raindrop.io"],
+				"known": ["Pocket", "Instapaper", "Matter"],
 				"app": "apps/post-collection.json"
 			},
 			{
-				"known": ["Paprika", "Mela", "AnyList"],
+				"known": ["Raindrop.io", "Pinboard", "Diigo"],
+				"app": "apps/post-collection.json"
+			},
+			{
+				"known": ["Paprika", "Mela", "Recipe Keeper"],
 				"app": "apps/cookbook.json"
 			},
 			{
-				"known": ["TripIt", "Wanderlog", "Google Travel"],
+				"known": ["TripIt", "TripCase", "Tripsy"],
 				"app": "apps/travel-app.json"
 			},
 			{
-				"known": ["Flighty", "MyFlightRadar24", "App in the Air"],
+				"known": ["Wanderlog", "Google Travel", "Polarsteps"],
+				"app": "apps/travel-app.json"
+			},
+			{
+				"known": ["Flighty", "MyFlightRadar24", "OpenFlights"],
 				"app": "apps/flight-log.json"
 			},
 			{
@@ -152,8 +168,16 @@
 				"app": "apps/personal-crm.json"
 			},
 			{
-				"known": ["Wikipedia", "Kagi Assistant", "Perplexity"],
+				"known": ["Google Contacts", "Apple Contacts", "People"],
+				"app": "apps/personal-crm.json"
+			},
+			{
+				"known": ["Wikipedia", "Wikiwand", "Kiwix"],
 				"app": "apps/wordopedia.json"
+			},
+			{
+				"known": ["Perplexity", "ChatGPT", "Claude"],
+				"app": "apps/ai-assistant.json"
 			}
 		],
 		"steps": [

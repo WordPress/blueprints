@@ -111,6 +111,59 @@
 			}
 		]
 	},
+	"familiar-app-alternatives": {
+		"title": "Install Familiar App Alternatives",
+		"tagline": "Find the WordPress app for tools you already know",
+		"description": "Start with an app name you recognize, then install the My WordPress app that covers the same kind of personal workflow. Each row is meant to be a fast path from a familiar tool to an app you can own inside WordPress.",
+		"icon": "🧭",
+		"gradient": "linear-gradient(135deg, #0f766e 0%, #f59e0b 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"alternatives": [
+			{
+				"known": ["Obsidian", "Roam Research", "Logseq"],
+				"app": "apps/memex.json"
+			},
+			{
+				"known": ["Notion", "Airtable", "Coda"],
+				"app": "apps/ai-assistant.json"
+			},
+			{
+				"known": ["Feedly", "Inoreader", "NewsBlur"],
+				"app": "apps/rss-reader.json"
+			},
+			{
+				"known": ["Pocket", "Instapaper", "Raindrop.io"],
+				"app": "apps/post-collection.json"
+			},
+			{
+				"known": ["Paprika", "Mela", "AnyList"],
+				"app": "apps/cookbook.json"
+			},
+			{
+				"known": ["TripIt", "Wanderlog", "Google Travel"],
+				"app": "apps/travel-app.json"
+			},
+			{
+				"known": ["Flighty", "MyFlightRadar24", "App in the Air"],
+				"app": "apps/flight-log.json"
+			},
+			{
+				"known": ["Monica", "Clay", "Dex"],
+				"app": "apps/personal-crm.json"
+			},
+			{
+				"known": ["Wikipedia", "Kagi Assistant", "Perplexity"],
+				"app": "apps/wordopedia.json"
+			}
+		],
+		"steps": [
+			{
+				"type": "note",
+				"title": "Start with the app name you already know",
+				"description": "Scan the left column for a familiar tool, then use the install button beside the matching WordPress app. You can come back and add more apps whenever another workflow is ready to move into WordPress."
+			}
+		]
+	},
 	"travel-planner": {
 		"title": "Plan Personal Travel",
 		"tagline": "Keep trips, bookings, and flight history together",

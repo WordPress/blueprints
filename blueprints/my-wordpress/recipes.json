@@ -111,6 +111,119 @@
 			}
 		]
 	},
+	"familiar-app-alternatives": {
+		"title": "App Alternatives for WordPress",
+		"tagline": "Find the WordPress app for tools you already know",
+		"description": "WordPress can replace more online services than you might expect. Find an app you already know, then install a WordPress app that keeps the same kind of work on your own site.",
+		"icon": "🧭",
+		"gradient": "linear-gradient(135deg, #0f766e 0%, #f59e0b 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"alternatives": [
+			{
+				"known": ["Obsidian", "Notion", "Roam Research"],
+				"app": "apps/memex.json"
+			},
+			{
+				"known": ["Evernote", "Bear", "Apple Notes", "Simplenote"],
+				"app": "apps/memex.json"
+			},
+			{
+				"known": ["Google Reader", "Feedly", "Inoreader", "NewsBlur", "NetNewsWire", "Reeder", "FreshRSS"],
+				"app": "apps/rss-reader.json"
+			},
+			{
+				"known": ["Pocket", "Instapaper", "Matter", "Readwise"],
+				"app": "apps/post-collection.json"
+			},
+			{
+				"known": ["Raindrop.io", "Pinboard", "Diigo"],
+				"app": "apps/post-collection.json"
+			},
+			{
+				"known": ["Paprika", "Mela", "Recipe Keeper"],
+				"app": "apps/cookbook.json"
+			},
+			{
+				"known": ["TripIt", "TripCase", "Tripsy"],
+				"app": "apps/travel-app.json"
+			},
+			{
+				"known": ["Wanderlog", "Google Travel", "Polarsteps"],
+				"app": "apps/travel-app.json"
+			},
+			{
+				"known": ["Flighty", "MyFlightRadar24", "OpenFlights"],
+				"app": "apps/flight-log.json"
+			},
+			{
+				"known": ["Monica", "Clay/Mesh", "Dex"],
+				"app": "apps/personal-crm.json"
+			},
+			{
+				"known": ["Google Contacts", "Apple Contacts", "People"],
+				"app": "apps/personal-crm.json"
+			},
+			{
+				"known": ["Wikipedia", "Wikiwand", "Kiwix"],
+				"app": "apps/wordopedia.json"
+			},
+			{
+				"known": ["Claude", "ChatGPT/Codex", "Grok"],
+				"app": "apps/ai-assistant.json"
+			}
+		],
+		"steps": [
+			{
+				"type": "note",
+				"title": "Start with the app name you already know",
+				"description": "Scan the left column for a familiar tool, then use the install button beside the matching WordPress app. You can come back and add more apps whenever another workflow is ready to move into WordPress."
+			}
+		]
+	},
+	"travel-planner": {
+		"title": "Plan Personal Travel",
+		"tagline": "Keep trips, bookings, and flight history together",
+		"description": "Turn your WordPress into a private travel desk. Save booking confirmations and itinerary notes as structured trip timelines, then keep a flight log that builds into useful route, airline, aircraft, and travel statistics over time.",
+		"icon": "✈️",
+		"gradient": "linear-gradient(135deg, #0891b2 0%, #f59e0b 100%)",
+		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/travel-app.json",
+				"title": "Install Travel App",
+				"description": "Travel App gives each trip its own timeline for flights, lodging, trains, rental cars, activities, and other itinerary details."
+			},
+			{
+				"type": "note",
+				"title": "Import your next trip",
+				"description": "Paste a booking confirmation, upload a calendar export, or add itinerary notes so the trip starts with the details you already have.",
+				"url": "/travel-app/",
+				"url_label": "Open Travel App"
+			},
+			{
+				"type": "note",
+				"title": "Review and edit the timeline",
+				"description": "Check dates, times, places, confirmation numbers, and notes before the trip. The organizer is most useful when the saved timeline matches how you actually travel.",
+				"url": "/travel-app/",
+				"url_label": "Review Trips"
+			},
+			{
+				"type": "app",
+				"path": "apps/flight-log.json",
+				"title": "Log flights after you travel",
+				"description": "Flight Log keeps a private record of routes, airlines, aircraft, seats, and notes so your trip history becomes searchable instead of disappearing into old confirmations."
+			},
+			{
+				"type": "note",
+				"title": "Build your travel statistics",
+				"description": "After a few logged flights, use Flight Log to review summaries by airport, airline, aircraft type, route, year, and other dimensions.",
+				"url": "/flight-log/",
+				"url_label": "Open Flight Log",
+				"optional": true
+			}
+		]
+	},
 	"family-blog": {
 		"title": "Build a Family Blog",
 		"tagline": "Memories worth keeping, kept where they belong",

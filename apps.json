@@ -48,6 +48,16 @@
       "Productivity"
     ]
   },
+  "blueprints/flight-log/blueprint.json": {
+    "title": "Flight Log",
+    "description": "A private flight log and statistics app for WordPress.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Travel"
+    ],
+    "icon": "dashicons-airplane"
+  },
   "blueprints/learn-app/blueprint.json": {
     "title": "Learn WordPress",
     "description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
@@ -97,6 +107,16 @@
       "Social"
     ],
     "icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/rss-reader/icon.png"
+  },
+  "blueprints/travel-app/blueprint.json": {
+    "title": "Travel App",
+    "description": "A private travel organizer for WordPress.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Travel"
+    ],
+    "icon": "dashicons-location-alt"
   },
   "blueprints/wordcamp-companion/blueprint.json": {
     "title": "WordCamp Companion",

@@ -1,0 +1,28 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Travel App",
+		"description": "A private travel organizer for WordPress.",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"Travel"
+		]
+	},
+	"landingPage": "/travel-app/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/travel-app",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "travel-app"
+			}
+		}
+	]
+}

@@ -27,6 +27,7 @@ Each top-level key in [recipes.json](https://github.com/WordPress/blueprints/blo
 - `icon`: short visual marker for the recipe card.
 - `gradient`: CSS gradient used by the recipe card.
 - `learn_more`: optional URL for deeper background.
+- `alternatives`: optional two-column app comparison rows for guides that map familiar external apps to installable My WordPress apps.
 - `steps`: ordered list of actions.
 
 Example:
@@ -48,6 +49,19 @@ Example:
 ## Step Types
 
 Every step should have a `type`, `title`, and `description`. Use `optional: true` for useful additions that are not required for the core workflow. Use `context` when a step only applies in a specific environment, such as `self-hosted`.
+
+Use `alternatives` when the recipe is mostly a discovery table rather than a linear setup flow. Each row groups familiar app names on the left and points to one app registered in [apps.json](https://github.com/WordPress/blueprints/blob/trunk/apps.json):
+
+```json
+{
+	"alternatives": [
+		{
+			"known": ["Obsidian", "Roam Research", "Logseq"],
+			"app": "apps/memex.json"
+		}
+	]
+}
+```
 
 Use a `note` step for instructions or admin screens:
 

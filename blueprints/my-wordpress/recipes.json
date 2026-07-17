@@ -124,7 +124,7 @@
 				"app": "apps/memex.json"
 			},
 			{
-				"known": ["Evernote", "Bear", "Apple Notes"],
+				"known": ["Evernote", "Bear", "Apple Notes", "Simplenote"],
 				"app": "apps/memex.json"
 			},
 			{
@@ -156,7 +156,7 @@
 				"app": "apps/flight-log.json"
 			},
 			{
-				"known": ["Monica", "Clay", "Dex"],
+				"known": ["Monica", "Clay/Mesh", "Dex"],
 				"app": "apps/personal-crm.json"
 			},
 			{

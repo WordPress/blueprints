@@ -114,7 +114,7 @@
 	"familiar-app-alternatives": {
 		"title": "App Alternatives for WordPress",
 		"tagline": "Find the WordPress app for tools you already know",
-		"description": "Start with an app name you recognize, then install the My WordPress app that covers the same kind of personal workflow. Each row is meant to be a fast path from a familiar tool to an app you can own inside WordPress.",
+		"description": "WordPress can replace more online services than you might expect. Find an app you already know, then install a WordPress app that keeps the same kind of work on your own site.",
 		"icon": "🧭",
 		"gradient": "linear-gradient(135deg, #0f766e 0%, #f59e0b 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",

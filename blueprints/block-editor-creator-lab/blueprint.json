@@ -1,0 +1,88 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Block Editor Creator Lab",
+		"description": "Laboratorio guiado en español para practicar estructura de información, bloques, patrones, plantillas y estilos globales en WordPress.",
+		"author": "fellyph",
+		"categories": ["Education", "Content", "Block Editor"]
+	},
+	"landingPage": "/creator-lab/",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "6.9"
+	},
+	"features": {
+		"networking": true,
+		"intl": true
+	},
+	"steps": [
+		{
+			"step": "setSiteLanguage",
+			"language": "es_ES",
+			"progress": {
+				"weight": 1,
+				"caption": "Configurando WordPress en español"
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "Block Editor Creator Lab",
+				"blogdescription": "Practica estructura, bloques, patrones y estilos globales."
+			}
+		},
+		{
+			"step": "installTheme",
+			"ifAlreadyInstalled": "skip",
+			"themeData": {
+				"resource": "zip",
+				"inner": {
+					"resource": "git:directory",
+					"url": "https://github.com/fellyph/learn-creator-lab",
+					"ref": "main",
+					"refType": "branch",
+					"path": "/"
+				}
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "learn-creator-lab"
+			},
+			"progress": {
+				"weight": 2,
+				"caption": "Instalando el tema de bloques Learn Creator Lab"
+			}
+		},
+		{
+			"step": "activateTheme",
+			"themeFolderName": "learn-creator-lab",
+			"progress": {
+				"weight": 1,
+				"caption": "Activando el tema del laboratorio"
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/tmp/creator-lab-setup.php",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/codex/block-editor-creator-lab/blueprints/block-editor-creator-lab/setup.php"
+			},
+			"progress": {
+				"weight": 1,
+				"caption": "Descargando la configuración de los ejercicios"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/tmp/creator-lab-setup.php';",
+			"progress": {
+				"weight": 4,
+				"caption": "Publicando las guías y los borradores editables"
+			}
+		},
+		{
+			"step": "login"
+		}
+	]
+}

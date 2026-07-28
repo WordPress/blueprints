@@ -1,246 +1,241 @@
 {
-  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
-  "meta": {
-    "title": "WooCommerce Store (Hello Elementor)",
-    "description": "A WooCommerce store with a common configuration: the Hello Elementor theme with Elementor, a set of widely-used extensions, EUR / German locale, and sample products. A lifelike environment for testing against WooCommerce.",
-    "author": "alopezari",
-    "categories": [
-      "WooCommerce",
-      "Store"
-    ]
-  },
-  "landingPage": "/shop/",
-  "preferredVersions": {
-    "php": "8.3",
-    "wp": "7.0"
-  },
-  "phpExtensionBundles": [
-    "kitchen-sink"
-  ],
-  "features": {
-    "networking": true
-  },
-  "constants": {
-    "WP_DEBUG": true,
-    "WP_DEBUG_LOG": true,
-    "WP_DEBUG_DISPLAY": false,
-    "WP_MEMORY_LIMIT": "512M",
-    "WP_MAX_MEMORY_LIMIT": "512M"
-  },
-  "steps": [
-    {
-      "step": "login",
-      "username": "admin",
-      "password": "password"
-    },
-    {
-      "step": "installTheme",
-      "themeData": {
-        "resource": "wordpress.org/themes",
-        "slug": "hello-elementor"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "woocommerce"
-      },
-      "options": {
-        "activate": true
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "elementor"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "wordpress-seo"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "contact-form-7"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "wp-mail-smtp"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "google-site-kit"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "google-listings-and-ads"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "jetpack"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "woocommerce-paypal-payments"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "woocommerce-gateway-stripe"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "code-snippets"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "loco-translate"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "litespeed-cache"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "woocommerce-payments"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "wpforms-lite"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "installPlugin",
-      "pluginData": {
-        "resource": "wordpress.org/plugins",
-        "slug": "classic-editor"
-      },
-      "options": {
-        "activate": false
-      }
-    },
-    {
-      "step": "setSiteOptions",
-      "options": {
-        "permalink_structure": "/%postname%/",
-        "blogname": "Test Store",
-        "woocommerce_currency": "EUR",
-        "woocommerce_currency_pos": "right_space",
-        "woocommerce_price_thousand_sep": ".",
-        "woocommerce_price_decimal_sep": ",",
-        "woocommerce_price_num_decimals": "2",
-        "woocommerce_default_country": "DE:BE",
-        "woocommerce_store_address": "Torstrasse 1",
-        "woocommerce_store_city": "Berlin",
-        "woocommerce_store_postcode": "10119",
-        "woocommerce_enable_guest_checkout": "yes",
-        "woocommerce_api_enabled": "yes",
-        "woocommerce_calc_taxes": "no",
-        "woocommerce_enable_coupons": "yes",
-        "woocommerce_weight_unit": "kg",
-        "woocommerce_dimension_unit": "cm",
-        "woocommerce_onboarding_profile": {
-          "skipped": true
-        },
-        "woocommerce_task_list_hidden": "yes",
-        "woocommerce_task_list_welcome_modal_dismissed": "yes"
-      }
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; wp_set_current_user(1); if ( ! function_exists('wp_insert_post') ) { exit(11); } if ( ! class_exists('WC_Product_Simple') ) { exit(12); } if ( class_exists('WC_Install') ) { WC_Install::create_pages(); } $mk = function($n,$p,$s,$o=[]){ $x=new WC_Product_Simple(); $x->set_name($n); $x->set_regular_price($p); $x->set_sku($s); $x->set_status('publish'); foreach($o as $k=>$v){$m=\"set_$k\"; if(method_exists($x,$m)){$x->$m($v);}} $x->save(); }; $mk('Cotton T-Shirt','24.99','TSHIRT-01',['manage_stock'=>true,'stock_quantity'=>50]); $mk('Ceramic Mug','12.50','MUG-01',['sale_price'=>'9.99','manage_stock'=>true,'stock_quantity'=>200]); $mk('Digital Guide (PDF)','7.00','GUIDE-01',['virtual'=>true,'downloadable'=>true]);"
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; $n = count( get_posts(['post_type'=>'product','post_status'=>'publish','numberposts'=>-1]) ); $shop = get_option('woocommerce_shop_page_id'); if ( $n !== 3 ) { exit(21); } if ( ! $shop ) { exit(22); } echo \"VERIFIED products=$n shop_page=$shop\";"
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; require_once ABSPATH.'wp-admin/includes/plugin.php'; wp_set_current_user(1); $want=['elementor', 'wordpress-seo', 'contact-form-7', 'wp-mail-smtp', 'google-site-kit', 'google-listings-and-ads', 'jetpack', 'woocommerce-paypal-payments', 'woocommerce-gateway-stripe', 'code-snippets', 'loco-translate', 'woocommerce-payments', 'litespeed-cache', 'wpforms-lite', 'classic-editor']; foreach (get_plugins() as $file=>$d){ $folder = (strpos($file,'/')!==false)?dirname($file):$file; if (in_array($folder,$want,true)){ activate_plugin($file); } } $active = array_filter(array_map(function($f){return (strpos($f,'/')!==false)?dirname($f):$f;}, (array)get_option('active_plugins'))); $missing = array_diff($want,$active); if (!empty($missing)){ echo 'MISSING '.implode(',',$missing); exit(31); } echo 'ACTIVATED '.count($want).' non-woo (active_total='.count((array)get_option('active_plugins')).')';"
-    }
-  ]
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "WooCommerce Store (Hello Elementor)",
+		"description": "A WooCommerce store with a common configuration: the Hello Elementor theme with Elementor, a set of widely-used extensions, EUR / German locale, and sample products. A lifelike environment for testing against WooCommerce.",
+		"author": "alopezari",
+		"categories": ["WooCommerce", "Store"]
+	},
+	"landingPage": "/shop/",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "7.0"
+	},
+	"phpExtensionBundles": ["kitchen-sink"],
+	"features": {
+		"networking": true
+	},
+	"constants": {
+		"WP_DEBUG": true,
+		"WP_DEBUG_LOG": true,
+		"WP_DEBUG_DISPLAY": false,
+		"WP_MEMORY_LIMIT": "512M",
+		"WP_MAX_MEMORY_LIMIT": "512M"
+	},
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installTheme",
+			"themeData": {
+				"resource": "wordpress.org/themes",
+				"slug": "hello-elementor"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "elementor"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "wordpress-seo"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "contact-form-7"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "wp-mail-smtp"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "google-site-kit"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "google-listings-and-ads"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "jetpack"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce-paypal-payments"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce-gateway-stripe"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "code-snippets"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "loco-translate"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "litespeed-cache"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "woocommerce-payments"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "wpforms-lite"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "classic-editor"
+			},
+			"options": {
+				"activate": false
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"permalink_structure": "/%postname%/",
+				"blogname": "Test Store",
+				"woocommerce_currency": "EUR",
+				"woocommerce_currency_pos": "right_space",
+				"woocommerce_price_thousand_sep": ".",
+				"woocommerce_price_decimal_sep": ",",
+				"woocommerce_price_num_decimals": "2",
+				"woocommerce_default_country": "DE:BE",
+				"woocommerce_store_address": "Torstrasse 1",
+				"woocommerce_store_city": "Berlin",
+				"woocommerce_store_postcode": "10119",
+				"woocommerce_enable_guest_checkout": "yes",
+				"woocommerce_api_enabled": "yes",
+				"woocommerce_calc_taxes": "no",
+				"woocommerce_enable_coupons": "yes",
+				"woocommerce_weight_unit": "kg",
+				"woocommerce_dimension_unit": "cm",
+				"woocommerce_onboarding_profile": {
+					"skipped": true
+				},
+				"woocommerce_task_list_hidden": "yes",
+				"woocommerce_task_list_welcome_modal_dismissed": "yes"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; wp_set_current_user(1); if ( ! function_exists('wp_insert_post') ) { exit(11); } if ( ! class_exists('WC_Product_Simple') ) { exit(12); } if ( class_exists('WC_Install') ) { WC_Install::create_pages(); } $mk = function($n,$p,$s,$o=[]){ $x=new WC_Product_Simple(); $x->set_name($n); $x->set_regular_price($p); $x->set_sku($s); $x->set_status('publish'); foreach($o as $k=>$v){$m=\"set_$k\"; if(method_exists($x,$m)){$x->$m($v);}} $x->save(); }; $mk('Cotton T-Shirt','24.99','TSHIRT-01',['manage_stock'=>true,'stock_quantity'=>50]); $mk('Ceramic Mug','12.50','MUG-01',['sale_price'=>'9.99','manage_stock'=>true,'stock_quantity'=>200]); $mk('Digital Guide (PDF)','7.00','GUIDE-01',['virtual'=>true,'downloadable'=>true]);"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; $n = count( get_posts(['post_type'=>'product','post_status'=>'publish','numberposts'=>-1]) ); $shop = get_option('woocommerce_shop_page_id'); if ( $n !== 3 ) { exit(21); } if ( ! $shop ) { exit(22); } echo \"VERIFIED products=$n shop_page=$shop\";"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; require_once ABSPATH.'wp-admin/includes/plugin.php'; wp_set_current_user(1); $want=['elementor', 'wordpress-seo', 'contact-form-7', 'wp-mail-smtp', 'google-site-kit', 'google-listings-and-ads', 'jetpack', 'woocommerce-paypal-payments', 'woocommerce-gateway-stripe', 'code-snippets', 'loco-translate', 'woocommerce-payments', 'litespeed-cache', 'wpforms-lite', 'classic-editor']; foreach (get_plugins() as $file=>$d){ $folder = (strpos($file,'/')!==false)?dirname($file):$file; if (in_array($folder,$want,true)){ activate_plugin($file); } } $active = array_filter(array_map(function($f){return (strpos($f,'/')!==false)?dirname($f):$f;}, (array)get_option('active_plugins'))); $missing = array_diff($want,$active); if (!empty($missing)){ echo 'MISSING '.implode(',',$missing); exit(31); } echo 'ACTIVATED '.count($want).' non-woo (active_total='.count((array)get_option('active_plugins')).')';"
+		}
+	]
 }

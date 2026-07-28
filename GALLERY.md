@@ -442,6 +442,22 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <br clear="all">
 
 
+<h2>WooCommerce Store (Astra)</h2>
+<p>A WooCommerce store with a common configuration: the Astra theme, a set of widely-used extensions, USD / US locale, and sample products. A lifelike environment for testing against WooCommerce.</p>
+<p><small>By <a href="https://github.com/alopezari">@alopezari</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-test-store-astra/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/59cbee285e346be1ecc35295adc3221f0aed0c5f/blueprints/woocommerce-test-store-astra/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/59cbee285e346be1ecc35295adc3221f0aed0c5f/blueprints/woocommerce-test-store-astra/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><em>No screenshot yet for WooCommerce Store (Astra). Open it in Playground.</em></p>
+<br clear="all">
+
+
+<h2>WooCommerce Store (Hello Elementor)</h2>
+<p>A WooCommerce store with a common configuration: the Hello Elementor theme with Elementor, a set of widely-used extensions, EUR / German locale, and sample products. A lifelike environment for testing against WooCommerce.</p>
+<p><small>By <a href="https://github.com/alopezari">@alopezari</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-test-store-hello-elementor/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/59cbee285e346be1ecc35295adc3221f0aed0c5f/blueprints/woocommerce-test-store-hello-elementor/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/59cbee285e346be1ecc35295adc3221f0aed0c5f/blueprints/woocommerce-test-store-hello-elementor/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><em>No screenshot yet for WooCommerce Store (Hello Elementor). Open it in Playground.</em></p>
+<br clear="all">
+
+
 <h2>WooCommerce product feed</h2>
 <p>Blueprint to create a WooCommerce product and export an XML/CSV product feed</p>
 <p><small>By <a href="https://github.com/mujuonly">@mujuonly</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-product-feed/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/woocommerce-product-feed/blueprint.json">Edit</a></small></p>

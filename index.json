@@ -597,6 +597,26 @@
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/pwa-weather-app/screenshot.jpg",
     "featured": false
   },
+  "blueprints/woocommerce-test-store-astra/blueprint.json": {
+    "title": "WooCommerce Store (Astra)",
+    "description": "A WooCommerce store with a common configuration: the Astra theme, a set of widely-used extensions, USD / US locale, and sample products. A lifelike environment for testing against WooCommerce.",
+    "author": "alopezari",
+    "categories": [
+      "WooCommerce",
+      "Store"
+    ],
+    "featured": false
+  },
+  "blueprints/woocommerce-test-store-hello-elementor/blueprint.json": {
+    "title": "WooCommerce Store (Hello Elementor)",
+    "description": "A WooCommerce store with a common configuration: the Hello Elementor theme with Elementor, a set of widely-used extensions, EUR / German locale, and sample products. A lifelike environment for testing against WooCommerce.",
+    "author": "alopezari",
+    "categories": [
+      "WooCommerce",
+      "Store"
+    ],
+    "featured": false
+  },
   "blueprints/woocommerce-product-feed/blueprint.json": {
     "title": "WooCommerce product feed",
     "description": "Blueprint to create a WooCommerce product and export an XML/CSV product feed",

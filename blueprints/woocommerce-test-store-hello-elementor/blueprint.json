@@ -236,6 +236,10 @@
 		{
 			"step": "runPHP",
 			"code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; require_once ABSPATH.'wp-admin/includes/plugin.php'; wp_set_current_user(1); $want=['elementor', 'wordpress-seo', 'contact-form-7', 'wp-mail-smtp', 'google-site-kit', 'google-listings-and-ads', 'jetpack', 'woocommerce-paypal-payments', 'woocommerce-gateway-stripe', 'code-snippets', 'loco-translate', 'woocommerce-payments', 'litespeed-cache', 'wpforms-lite', 'classic-editor']; foreach (get_plugins() as $file=>$d){ $folder = (strpos($file,'/')!==false)?dirname($file):$file; if (in_array($folder,$want,true)){ activate_plugin($file); } } $active = array_filter(array_map(function($f){return (strpos($f,'/')!==false)?dirname($f):$f;}, (array)get_option('active_plugins'))); $missing = array_diff($want,$active); if (!empty($missing)){ echo 'MISSING '.implode(',',$missing); exit(31); } echo 'ACTIVATED '.count($want).' non-woo (active_total='.count((array)get_option('active_plugins')).')';"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php ini_set('memory_limit','512M'); require_once '/wordpress/wp-load.php'; update_option('elementor_onboarded','2.0.0'); delete_transient('elementor_activation_redirect'); $v = defined('WPFORMS_VERSION') ? WPFORMS_VERSION : ''; if ($v === '') { require_once ABSPATH.'wp-admin/includes/plugin.php'; foreach (get_plugins() as $file=>$d) { if (strpos($file,'wpforms')===0) { $v = $d['Version']; break; } } } update_option('wpforms_setup_wizard_completed', ['version'=>$v,'edition'=>'lite']); delete_transient('wpforms_activation_redirect'); update_option('wp_mail_smtp_activation_prevent_redirect', true); delete_transient('wp_mail_smtp_activation_redirect'); echo 'ONBOARDING SKIPPED elementor + wpforms ('.$v.') + wp-mail-smtp';"
 		}
 	]
 }

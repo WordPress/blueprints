@@ -605,6 +605,7 @@
       "WooCommerce",
       "Store"
     ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-astra/screenshot.jpg",
     "featured": false
   },
   "blueprints/woocommerce-test-store-hello-elementor/blueprint.json": {
@@ -615,6 +616,7 @@
       "WooCommerce",
       "Store"
     ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-hello-elementor/screenshot.jpg",
     "featured": false
   },
   "blueprints/woocommerce-product-feed/blueprint.json": {

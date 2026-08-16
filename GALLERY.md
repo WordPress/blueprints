@@ -444,17 +444,17 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>WooCommerce Store (Astra)</h2>
 <p>A WooCommerce store with a common configuration: the Astra theme, a set of widely-used extensions, USD / US locale, and sample products. A lifelike environment for testing against WooCommerce.</p>
-<p><small>By <a href="https://github.com/alopezari">@alopezari</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-test-store-astra/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/3e949740af385fdc4dc6b41b0d812cb6aff8fcc7/blueprints/woocommerce-test-store-astra/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/3e949740af385fdc4dc6b41b0d812cb6aff8fcc7/blueprints/woocommerce-test-store-astra/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
-<p align="left"><em>No screenshot yet for WooCommerce Store (Astra). Open it in Playground.</em></p>
+<p><small>By <a href="https://github.com/alopezari">@alopezari</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-test-store-astra/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-astra/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-astra/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/woocommerce-test-store-astra/screenshot.jpg" alt="WooCommerce Store (Astra) screenshot" width="400"></p>
 <br clear="all">
 
 
 <h2>WooCommerce Store (Hello Elementor)</h2>
 <p>A WooCommerce store with a common configuration: the Hello Elementor theme with Elementor, a set of widely-used extensions, EUR / German locale, and sample products. A lifelike environment for testing against WooCommerce.</p>
-<p><small>By <a href="https://github.com/alopezari">@alopezari</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-test-store-hello-elementor/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/3e949740af385fdc4dc6b41b0d812cb6aff8fcc7/blueprints/woocommerce-test-store-hello-elementor/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/3e949740af385fdc4dc6b41b0d812cb6aff8fcc7/blueprints/woocommerce-test-store-hello-elementor/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
-<p align="left"><em>No screenshot yet for WooCommerce Store (Hello Elementor). Open it in Playground.</em></p>
+<p><small>By <a href="https://github.com/alopezari">@alopezari</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-test-store-hello-elementor/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-hello-elementor/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-hello-elementor/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/woocommerce-test-store-hello-elementor/screenshot.jpg" alt="WooCommerce Store (Hello Elementor) screenshot" width="400"></p>
 <br clear="all">
 
 

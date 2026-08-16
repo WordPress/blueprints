@@ -65,7 +65,7 @@ WordPress stores the site title in the `blogname` option. Add your first step an
 }
 ```
 
-[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwic3RlcHMiOlt7InN0ZXAiOiJzZXRTaXRlT3B0aW9ucyIsIm9wdGlvbnMiOnsiYmxvZ25hbWUiOiJNeSBmaXJzdCBCbHVlcHJpbnQifX1dfQ==)
+[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwic3RlcHMiOlt7InN0ZXAiOiJzZXRTaXRlT3B0aW9ucyIsIm9wdGlvbnMiOnsiYmxvZ25hbWUiOiJNeSBmaXJzdCBCbHVlcHJpbnQifX1dfQ==)
 
 The [`setSiteOptions` step](https://wordpress.github.io/wordpress-playground/blueprints-api/steps#SetSiteOptionsStep) specifies the site options in the WordPress database. The `options` object contains the key-value pairs to set. In this case, you changed the value of the `blogname` key to "My first Blueprint". You can read more about all available steps in the [Blueprint Steps API Reference](https://wordpress.github.io/wordpress-playground/blueprints-api/steps).
 
@@ -96,7 +96,7 @@ Adventurer is an open-source theme [available in the WordPress theme directory](
     "steps": [
         {
             "step": "installTheme",
-            "themeZipFile": {
+            "themeData": {
                 "resource": "wordpress.org/themes",
                 "slug": "adventurer"
             }
@@ -105,7 +105,7 @@ Adventurer is an open-source theme [available in the WordPress theme directory](
 }
 ```
 
-[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwib3B0aW9ucyI6eyJibG9nbmFtZSI6Ik15IGZpcnN0IEJsdWVwcmludCJ9LCJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxUaGVtZSIsInRoZW1lWmlwRmlsZSI6eyJyZXNvdXJjZSI6IndvcmRwcmVzcy5vcmcvdGhlbWVzIiwic2x1ZyI6ImFkdmVudHVyZXIifX1dfQ==)
+[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyJzaXRlT3B0aW9ucyI6eyJibG9nbmFtZSI6Ik15IGZpcnN0IEJsdWVwcmludCJ9LCJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxUaGVtZSIsInRoZW1lRGF0YSI6eyJyZXNvdXJjZSI6IndvcmRwcmVzcy5vcmcvdGhlbWVzIiwic2x1ZyI6ImFkdmVudHVyZXIifX1dfQ==)
 
 The site should now look like the screenshot below:
 
@@ -113,7 +113,7 @@ The site should now look like the screenshot below:
 
 ### Resources
 
-The `themeZipFile` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/) and references an external file required to complete the step. Playground supports different types of resources, including
+The `themeData` defines a [resource](https://wordpress.github.io/wordpress-playground/blueprints-api/resources/) and references an external file required to complete the step. Playground supports different types of resources, including
 - `url`,
 - `wordpress.org/themes`,
 - `wordpress.org/plugins`,
@@ -139,14 +139,14 @@ A classic WordPress plugin that displays random lyrics from the song "Hello, Dol
     "steps": [
         {
             "step": "installTheme",
-            "themeZipFile": {
+            "themeData": {
                 "resource": "wordpress.org/themes",
                 "slug": "adventurer"
             }
         },
         {
             "step": "installPlugin",
-            "pluginZipFile": {
+            "pluginData": {
                 "resource": "wordpress.org/plugins",
                 "slug": "hello-dolly"
             }
@@ -155,11 +155,11 @@ A classic WordPress plugin that displays random lyrics from the song "Hello, Dol
 }
 ```
 
-[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyJzaXRlT3B0aW9ucyI6eyJibG9nbmFtZSI6Ik15IGZpcnN0IEJsdWVwcmludCJ9LCJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxUaGVtZSIsInRoZW1lWmlwRmlsZSI6eyJyZXNvdXJjZSI6IndvcmRwcmVzcy5vcmcvdGhlbWVzIiwic2x1ZyI6ImFkdmVudHVyZXIifX0seyJzdGVwIjoiaW5zdGFsbFBsdWdpbiIsInBsdWdpblppcEZpbGUiOnsicmVzb3VyY2UiOiJ3b3JkcHJlc3Mub3JnL3BsdWdpbnMiLCJzbHVnIjoiaGVsbG8tZG9sbHkifX1dfQ==)
+[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyJzaXRlT3B0aW9ucyI6eyJibG9nbmFtZSI6Ik15IGZpcnN0IEJsdWVwcmludCJ9LCJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxUaGVtZSIsInRoZW1lRGF0YSI6eyJyZXNvdXJjZSI6IndvcmRwcmVzcy5vcmcvdGhlbWVzIiwic2x1ZyI6ImFkdmVudHVyZXIifX0seyJzdGVwIjoiaW5zdGFsbFBsdWdpbiIsInBsdWdpbkRhdGEiOnsicmVzb3VyY2UiOiJ3b3JkcHJlc3Mub3JnL3BsdWdpbnMiLCJzbHVnIjoiaGVsbG8tZG9sbHkifX1dfQ==)
 
 The Hello Dolly plugin is now installed and activated.
 
-Like the `themeZipFile`, the `pluginZipFile` defines a reference to an external file required for the step. The example uses the `wordpress.org/plugins` resource to install the plugin with the matching `slug` from the WordPress plugin directory.
+Like the `themeData`, the `pluginData` defines a reference to an external file required for the step. The example uses the `wordpress.org/plugins` resource to install the plugin with the matching `slug` from the WordPress plugin directory.
 
 ### 5. Install a custom plugin
 
@@ -216,9 +216,9 @@ The last thing to do is log the user in as an admin. You can do that with a shor
 ```json
 {
     "login": true,
-    "steps": {
+    "steps": [
         // ...
-    }
+    ]
 }
 ```
 
@@ -234,14 +234,14 @@ Here's the complete Blueprint:
     "steps": [
         {
             "step": "installTheme",
-            "themeZipFile": {
+            "themeData": {
                 "resource": "wordpress.org/themes",
                 "slug": "adventurer"
             }
         },
         {
             "step": "installPlugin",
-            "pluginZipFile": {
+            "pluginData": {
                 "resource": "wordpress.org/plugins",
                 "slug": "hello-dolly"
             }
@@ -263,7 +263,7 @@ Here's the complete Blueprint:
 }
 ```
 
-[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyJsb2dpbiI6dHJ1ZSwic2l0ZU9wdGlvbnMiOnsiYmxvZ25hbWUiOiJNeSBmaXJzdCBCbHVlcHJpbnQifSwic3RlcHMiOlt7InN0ZXAiOiJpbnN0YWxsVGhlbWUiLCJ0aGVtZVppcEZpbGUiOnsicmVzb3VyY2UiOiJ3b3JkcHJlc3Mub3JnL3RoZW1lcyIsInNsdWciOiJhZHZlbnR1cmVyIn19LHsic3RlcCI6Imluc3RhbGxQbHVnaW4iLCJwbHVnaW5aaXBGaWxlIjp7InJlc291cmNlIjoid29yZHByZXNzLm9yZy9wbHVnaW5zIiwic2x1ZyI6ImhlbGxvLWRvbGx5In19LHsic3RlcCI6Im1rZGlyIiwicGF0aCI6Ii93b3JkcHJlc3Mvd3AtY29udGVudC9wbHVnaW5zL2hlbGxvLW9uLXRoZS1kYXNoYm9hcmQifSx7InN0ZXAiOiJ3cml0ZUZpbGUiLCJwYXRoIjoiL3dvcmRwcmVzcy93cC1jb250ZW50L3BsdWdpbnMvaGVsbG8tb24tdGhlLWRhc2hib2FyZC9wbHVnaW4ucGhwIiwiZGF0YSI6Ijw/cGhwXG4vKlxuUGx1Z2luIE5hbWU6IFwiSGVsbG9cIiBvbiB0aGUgRGFzaGJvYXJkXG5EZXNjcmlwdGlvbjogQSBjdXN0b20gcGx1Z2luIHRvIHNob3djYXNlIFdvcmRQcmVzcyBCbHVlcHJpbnRzXG5WZXJzaW9uOiAxLjBcbkF1dGhvcjogV29yZFByZXNzIENvbnRyaWJ1dG9yc1xuKi9cblxuZnVuY3Rpb24gbXlfY3VzdG9tX3BsdWdpbigpIHtcbiAgICBlY2hvICc8aDE+SGVsbG8gZnJvbSBNeSBDdXN0b20gUGx1Z2luITwvaDE+Jztcbn1cblxuYWRkX2FjdGlvbignYWRtaW5fbm90aWNlcycsICdteV9jdXN0b21fcGx1Z2luJyk7In0seyJzdGVwIjoiYWN0aXZhdGVQbHVnaW4iLCJwbHVnaW5QYXRoIjoiaGVsbG8tb24tdGhlLWRhc2hib2FyZC9wbHVnaW4ucGhwIn1dfQ==)
+[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwibG9naW4iOnRydWUsInNpdGVPcHRpb25zIjp7ImJsb2duYW1lIjoiTXkgZmlyc3QgQmx1ZXByaW50In0sInN0ZXBzIjpbeyJzdGVwIjoiaW5zdGFsbFRoZW1lIiwidGhlbWVEYXRhIjp7InJlc291cmNlIjoid29yZHByZXNzLm9yZy90aGVtZXMiLCJzbHVnIjoiYWR2ZW50dXJlciJ9fSx7InN0ZXAiOiJpbnN0YWxsUGx1Z2luIiwicGx1Z2luRGF0YSI6eyJyZXNvdXJjZSI6IndvcmRwcmVzcy5vcmcvcGx1Z2lucyIsInNsdWciOiJoZWxsby1kb2xseSJ9fSx7InN0ZXAiOiJta2RpciIsInBhdGgiOiIvd29yZHByZXNzL3dwLWNvbnRlbnQvcGx1Z2lucy9oZWxsby1mcm9tLXRoZS1kYXNoYm9hcmQifSx7InN0ZXAiOiJ3cml0ZUZpbGUiLCJwYXRoIjoiL3dvcmRwcmVzcy93cC1jb250ZW50L3BsdWdpbnMvaGVsbG8tZnJvbS10aGUtZGFzaGJvYXJkL3BsdWdpbi5waHAiLCJkYXRhIjoiPD9waHBcbi8qXG5QbHVnaW4gTmFtZTogXCJIZWxsb1wiIG9uIHRoZSBEYXNoYm9hcmRcbkRlc2NyaXB0aW9uOiBBIGN1c3RvbSBwbHVnaW4gdG8gc2hvd2Nhc2UgV29yZFByZXNzIEJsdWVwcmludHNcblZlcnNpb246IDEuMFxuQXV0aG9yOiBXb3JkUHJlc3MgQ29udHJpYnV0b3JzXG4qL1xuXG5mdW5jdGlvbiBteV9jdXN0b21fcGx1Z2luKCkge1xuICAgIGVjaG8gJzxoMT5IZWxsbyBmcm9tIE15IEN1c3RvbSBQbHVnaW4hPC9oMT4nO1xufVxuXG5hZGRfYWN0aW9uKCdhZG1pbl9ub3RpY2VzJywgJ215X2N1c3RvbV9wbHVnaW4nKTsifSx7InN0ZXAiOiJhY3RpdmF0ZVBsdWdpbiIsInBsdWdpblBhdGgiOiJoZWxsby1mcm9tLXRoZS1kYXNoYm9hcmQvcGx1Z2luLnBocCJ9XX0=)
 
 That's what it looks like when you navigate to the dashboard:
 
@@ -284,21 +284,21 @@ Encoding PHP files as `JSON` can be useful for quick testing, but it's inconveni
     "steps": [
         {
             "step": "installTheme",
-            "themeZipFile": {
+            "themeData": {
                 "resource": "wordpress.org/themes",
                 "slug": "adventurer"
             }
         },
         {
             "step": "installPlugin",
-            "pluginZipFile": {
+            "pluginData": {
                 "resource": "wordpress.org/plugins",
                 "slug": "hello-dolly"
             }
         },
         {
             "step": "installPlugin",
-            "pluginZipFile": {
+            "pluginData": {
                 "resource": "url",
                 "url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/docs/assets/hello-from-the-dashboard.zip"
             }
@@ -323,7 +323,7 @@ You can shorten that Blueprint even more using the shorthand syntax:
     "steps": [
         {
             "step": "installTheme",
-            "themeZipFile": {
+            "themeData": {
                 "resource": "wordpress.org/themes",
                 "slug": "adventurer"
             }
@@ -332,7 +332,7 @@ You can shorten that Blueprint even more using the shorthand syntax:
 }
 ```
 
-[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwibG9naW4iOnRydWUsInNpdGVPcHRpb25zIjp7ImJsb2duYW1lIjoiTXkgZmlyc3QgQmx1ZXByaW50In0sInBsdWdpbnMiOlsiaGVsbG8tZG9sbHkiLCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYWRhbXppZWwvYmx1ZXByaW50cy90cnVuay9kb2NzL2hlbGxvLW9uLXRoZS1kYXNoYm9hcmQuemlwIl0sInN0ZXBzIjpbeyJzdGVwIjoiaW5zdGFsbFRoZW1lIiwidGhlbWVaaXBGaWxlIjp7InJlc291cmNlIjoid29yZHByZXNzLm9yZy90aGVtZXMiLCJzbHVnIjoiYWR2ZW50dXJlciJ9fV19)
+[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwibG9naW4iOnRydWUsInNpdGVPcHRpb25zIjp7ImJsb2duYW1lIjoiTXkgZmlyc3QgQmx1ZXByaW50In0sInBsdWdpbnMiOlsiaGVsbG8tZG9sbHkiLCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vd29yZHByZXNzL2JsdWVwcmludHMvdHJ1bmsvZG9jcy9hc3NldHMvaGVsbG8tZnJvbS10aGUtZGFzaGJvYXJkLnppcCJdLCJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxUaGVtZSIsInRoZW1lRGF0YSI6eyJyZXNvdXJjZSI6IndvcmRwcmVzcy5vcmcvdGhlbWVzIiwic2x1ZyI6ImFkdmVudHVyZXIifX1dfQ==)
 
 ### 6. Change the site content
 
@@ -394,7 +394,7 @@ Here's what the final Blueprint looks like:
     "steps": [
         {
             "step": "installTheme",
-            "themeZipFile": {
+            "themeData": {
                 "resource": "wordpress.org/themes",
                 "slug": "adventurer"
             }
@@ -414,7 +414,7 @@ Here's what the final Blueprint looks like:
 }
 ```
 
-[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwibG9naW4iOnRydWUsInNpdGVPcHRpb25zIjp7ImJsb2duYW1lIjoiTXkgZmlyc3QgQmx1ZXByaW50In0sInBsdWdpbnMiOlsiaGVsbG8tZG9sbHkiLCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYWRhbXppZWwvYmx1ZXByaW50cy90cnVuay9kb2NzL2Fzc2V0cy9oZWxsby1mcm9tLXRoZS1kYXNoYm9hcmQuemlwIl0sInN0ZXBzIjpbeyJzdGVwIjoiaW5zdGFsbFRoZW1lIiwidGhlbWVaaXBGaWxlIjp7InJlc291cmNlIjoid29yZHByZXNzLm9yZy90aGVtZXMiLCJzbHVnIjoiYWR2ZW50dXJlciJ9fSx7InN0ZXAiOiJydW5QSFAiLCJjb2RlIjoiPD9waHBcbnJlcXVpcmUgJy93b3JkcHJlc3Mvd3AtbG9hZC5waHAnO1xuXG4kcG9zdHMgPSBnZXRfcG9zdHMoYXJyYXkoXG4gICAgJ251bWJlcnBvc3RzJyA9PiAtMSxcbiAgICAncG9zdF90eXBlJyA9PiBhcnJheSgncG9zdCcsICdwYWdlJyksXG4gICAgJ3Bvc3Rfc3RhdHVzJyA9PiAnYW55J1xuKSk7XG5cbmZvcmVhY2ggKCRwb3N0cyBhcyAkcG9zdCkge1xuICAgIHdwX2RlbGV0ZV9wb3N0KCRwb3N0LT5JRCwgdHJ1ZSk7XG59In0seyJzdGVwIjoiaW1wb3J0V3hyIiwiZmlsZSI6eyJyZXNvdXJjZSI6InVybCIsInVybCI6Imh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9Xb3JkUHJlc3MvdGhlbWUtdGVzdC1kYXRhL21hc3Rlci90aGVtZXVuaXR0ZXN0ZGF0YS53b3JkcHJlc3MueG1sIn19XX0=)
+[<kbd> <br>Run Blueprint<br> </kbd>](https://playground.wordpress.net/#eyIkc2NoZW1hIjoiaHR0cHM6Ly9wbGF5Z3JvdW5kLndvcmRwcmVzcy5uZXQvYmx1ZXByaW50LXNjaGVtYS5qc29uIiwibG9naW4iOnRydWUsInNpdGVPcHRpb25zIjp7ImJsb2duYW1lIjoiTXkgZmlyc3QgQmx1ZXByaW50In0sInBsdWdpbnMiOlsiaGVsbG8tZG9sbHkiLCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vd29yZHByZXNzL2JsdWVwcmludHMvdHJ1bmsvZG9jcy9hc3NldHMvaGVsbG8tZnJvbS10aGUtZGFzaGJvYXJkLnppcCJdLCJzdGVwcyI6W3sic3RlcCI6Imluc3RhbGxUaGVtZSIsInRoZW1lRGF0YSI6eyJyZXNvdXJjZSI6IndvcmRwcmVzcy5vcmcvdGhlbWVzIiwic2x1ZyI6ImFkdmVudHVyZXIifX0seyJzdGVwIjoicnVuUEhQIiwiY29kZSI6Ijw/cGhwXG5yZXF1aXJlICcvd29yZHByZXNzL3dwLWxvYWQucGhwJztcblxuJHBvc3RzID0gZ2V0X3Bvc3RzKGFycmF5KFxuICAgICdudW1iZXJwb3N0cycgPT4gLTEsXG4gICAgJ3Bvc3RfdHlwZScgPT4gYXJyYXkoJ3Bvc3QnLCAncGFnZScpLFxuICAgICdwb3N0X3N0YXR1cycgPT4gJ2FueSdcbikpO1xuXG5mb3JlYWNoICgkcG9zdHMgYXMgJHBvc3QpIHtcbiAgICB3cF9kZWxldGVfcG9zdCgkcG9zdC0+SUQsIHRydWUpO1xufSJ9LHsic3RlcCI6ImltcG9ydFd4ciIsImZpbGUiOnsicmVzb3VyY2UiOiJ1cmwiLCJ1cmwiOiJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vV29yZFByZXNzL3RoZW1lLXRlc3QtZGF0YS9tYXN0ZXIvdGhlbWV1bml0dGVzdGRhdGEud29yZHByZXNzLnhtbCJ9fV19)
 
 And that's it. Congratulations on creating your first Blueprint! 🥳
 

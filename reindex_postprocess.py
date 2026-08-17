@@ -108,6 +108,25 @@ def load_app_meta(blueprint_path):
         return json.load(f)
 
 
+APP_META_BUILD_ONLY_KEYS = ('iconSource',)
+
+
+def app_meta_for_index(app_meta):
+    """Drop app-meta.json keys that only drive our own tooling.
+
+    iconSource tells the icon sync workflow where a vendored icon comes from,
+    which is of no use to a catalog consumer reading apps.json.
+
+    >>> app_meta_for_index({'title': 'App', 'icon': 'a.svg', 'iconSource': 'b.svg'})
+    {'title': 'App', 'icon': 'a.svg'}
+    """
+    return {
+        key: value
+        for key, value in app_meta.items()
+        if key not in APP_META_BUILD_ONLY_KEYS
+    }
+
+
 def build_apps_index():
     index = {}
     for root, dirs, files in os.walk('blueprints'):
@@ -120,7 +139,7 @@ def build_apps_index():
                     if is_app_blueprint(meta):
                         app_meta = dict(meta)
                         app_meta.update(load_app_meta(path))
-                        index[path] = app_meta
+                        index[path] = app_meta_for_index(app_meta)
     index = dict(sorted(index.items(), key=lambda item: item[1].get('title', '')))
     with open('apps.json', 'w') as f:
         json.dump(index, f, indent=2)

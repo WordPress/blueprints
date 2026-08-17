@@ -1,3 +1,4 @@
 {
-	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/memex/icon.svg"
+	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/memex/icon.svg",
+	"iconSource": "https://raw.githubusercontent.com/akirk/memex/main/assets/icon.svg"
 }

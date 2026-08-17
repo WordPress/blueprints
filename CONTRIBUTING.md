@@ -71,6 +71,25 @@ Here's an example:
 }
 ```
 
+## App icons
+
+A Blueprint in the `Apps` category can declare an icon for the My Apps App Store in an `app-meta.json` file next to `blueprint.json`. The `icon` is either a Dashicon name (`"dashicons-book"`), a short emoji, or a URL to an image vendored in your Blueprint directory.
+
+When the icon really lives in the plugin's own repository, add `iconSource` so it does not have to be updated in two places by hand:
+
+```json
+{
+	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/my-app/icon.svg",
+	"iconSource": "https://raw.githubusercontent.com/my-org/my-plugin/main/assets/icon.svg"
+}
+```
+
+A weekly workflow refetches every `iconSource` and opens a pull request when the vendored copy has fallen behind, so the plugin repository stays the source of truth while this repository keeps serving the file. Run `npm run sync:app-icons` to do the same locally, or `npm run sync:app-icons -- --check` to report drift without writing.
+
+`iconSource` requires `icon` to point at a file inside your own Blueprint directory on this repository's trunk — the same rule that applies to Blueprint resource URLs. Icons authored here, with no upstream copy, simply omit `iconSource`.
+
+Design the icon with its own padding. Both the launcher and the App Store draw it at the full size of a rounded tile, and the App Store crops with `object-fit: cover`, so artwork that reaches the edge of its canvas loses its corners.
+
 ## Blueprint screenshots
 
 To help your Blueprint stand out in the gallery, include a screenshot alongside `blueprint.json`:

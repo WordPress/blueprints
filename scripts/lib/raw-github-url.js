@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-export function matchAllowedRawGitHubUrl(rawUrl, allowedSources) {
+export function parseRawGitHubUrl(rawUrl) {
 	let url;
 	try {
 		url = new URL(rawUrl);
@@ -34,6 +34,20 @@ export function matchAllowedRawGitHubUrl(rawUrl, allowedSources) {
 
 	const repositoryPathLength = `/${owner}/${repository}/`.length;
 	const refAndPath = pathname.slice(repositoryPathLength);
+	if (!refAndPath) {
+		return null;
+	}
+
+	return { owner, repository, refAndPath };
+}
+
+export function matchAllowedRawGitHubUrl(rawUrl, allowedSources) {
+	const parsed = parseRawGitHubUrl(rawUrl);
+	if (!parsed) {
+		return null;
+	}
+
+	const { owner, repository, refAndPath } = parsed;
 
 	for (const source of allowedSources) {
 		const [allowedOwner, allowedRepository, ...extraParts] =

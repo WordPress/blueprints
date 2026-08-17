@@ -1,3 +1,4 @@
 {
-	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/apiary-press/icon.svg"
+	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/apiary-press/icon.svg",
+	"iconSource": "https://raw.githubusercontent.com/zaerl/apiary-press/main/assets/icon.svg"
 }

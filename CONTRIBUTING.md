@@ -84,7 +84,9 @@ When the icon really lives in the plugin's own repository, add `iconSource` so i
 }
 ```
 
-A weekly workflow refetches every `iconSource` and opens a pull request when the vendored copy has fallen behind, so the plugin repository stays the source of truth while this repository keeps serving the file. Run `npm run sync:app-icons` to do the same locally, or `npm run sync:app-icons -- --check` to report drift without writing.
+You don't have to vendor the file yourself: when your pull request touches a Blueprint declaring an `iconSource`, a CI job fetches the icon and commits it to your branch, the same way missing screenshots are filled in. Only the Blueprints your branch touches are synced.
+
+After that, a weekly workflow refetches every `iconSource` and opens a pull request when a vendored copy has fallen behind, so the plugin repository stays the source of truth while this repository keeps serving the file. Run `npm run sync:app-icons` to do the same locally, or `npm run sync:app-icons -- --check` to report drift without writing.
 
 `iconSource` requires `icon` to point at a file inside your own Blueprint directory on this repository's trunk — the same rule that applies to Blueprint resource URLs. Icons authored here, with no upstream copy, simply omit `iconSource`.
 

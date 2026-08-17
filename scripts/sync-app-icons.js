@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
+import { getTouchedBlueprintDirectories } from './lib/changed-files.js';
 import {
 	isBlueprintAttachmentPath,
 	matchAllowedRawGitHubUrl,
@@ -19,17 +20,27 @@ function reportError(file, message) {
 	console.error(`::error file=${file}::${message}`);
 }
 
-function getAppMetaPaths() {
+/**
+ * List the app-meta.json files to sync.
+ *
+ * On a pull request we only look at the Blueprints the branch actually
+ * touched, so that an unrelated upstream change is never smuggled into
+ * somebody else's pull request.
+ */
+function getAppMetaPaths({ changedOnly }) {
 	if (!fs.existsSync(BLUEPRINTS_DIR)) {
 		return [];
 	}
 
-	return fs
-		.readdirSync(BLUEPRINTS_DIR, { withFileTypes: true })
-		.filter((entry) => entry.isDirectory())
-		.map((entry) =>
-			path.posix.join(BLUEPRINTS_DIR, entry.name, 'app-meta.json')
-		)
+	const blueprintDirs = changedOnly
+		? getTouchedBlueprintDirectories()
+		: fs
+				.readdirSync(BLUEPRINTS_DIR, { withFileTypes: true })
+				.filter((entry) => entry.isDirectory())
+				.map((entry) => path.posix.join(BLUEPRINTS_DIR, entry.name));
+
+	return blueprintDirs
+		.map((blueprintDir) => path.posix.join(blueprintDir, 'app-meta.json'))
 		.filter((appMetaPath) => fs.existsSync(appMetaPath))
 		.sort();
 }
@@ -145,7 +156,8 @@ async function syncBlueprint(appMetaPath, { checkOnly }) {
 
 async function main() {
 	const checkOnly = process.argv.includes('--check');
-	const appMetaPaths = getAppMetaPaths();
+	const changedOnly = process.argv.includes('--changed-only');
+	const appMetaPaths = getAppMetaPaths({ changedOnly });
 	const updated = [];
 	let failed = false;
 

@@ -32,10 +32,14 @@
 		"categories": ["Productivity"],
 		"landing_page": "/wp-admin/options-general.php?page=duplicate_page_settings"
 	},
-	"family-wiki": {
-		"note": "Turn your site into a private family wiki with nested pages and shared editing.",
+	"familypedia": {
+		"github": "akirk/familypedia",
+		"branch": "dist/main",
+		"title": "Familypedia",
+		"author": "Alex Kirk",
+		"note": "Like Wikipedia, but private and just for your family — each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
 		"categories": ["Productivity"],
-		"landing_page": "/wp-admin/edit.php?post_type=page"
+		"landing_page": "/familypedia/"
 	},
 	"secure-custom-fields": {
 		"note": "Add structured fields (dates, relations, places) to pages so facts stay consistent and searchable. A WordPress-maintained fork of ACF.",

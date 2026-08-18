@@ -170,6 +170,14 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <br clear="all">
 
 
+<h2>Familypedia</h2>
+<p>Like Wikipedia, but private and just for your family — each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/familypedia/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/fb48c5f05233f866a683f9c9c8ff947840b76a41/blueprints/familypedia/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/fb48c5f05233f866a683f9c9c8ff947840b76a41/blueprints/familypedia/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/familypedia/screenshot.jpg" alt="Familypedia screenshot" width="400"></p>
+<br clear="all">
+
+
 <h2>Fancy Dashboard Widget</h2>
 <p>A blueprint to display statistics about users, posts and comments on a WordPress site.</p>
 <p><small>By <a href="https://github.com/muryamsultana">@muryamsultana</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/fancy-dashboard_widget/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/fancy-dashboard_widget/blueprint.json">Edit</a></small></p>

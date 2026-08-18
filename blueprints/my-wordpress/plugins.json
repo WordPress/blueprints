@@ -32,11 +32,6 @@
 		"categories": ["Productivity"],
 		"landing_page": "/wp-admin/options-general.php?page=duplicate_page_settings"
 	},
-	"family-wiki": {
-		"note": "Turn your site into a private family wiki with nested pages and shared editing.",
-		"categories": ["Productivity"],
-		"landing_page": "/wp-admin/edit.php?post_type=page"
-	},
 	"secure-custom-fields": {
 		"note": "Add structured fields (dates, relations, places) to pages so facts stay consistent and searchable. A WordPress-maintained fork of ACF.",
 		"categories": ["Productivity"],

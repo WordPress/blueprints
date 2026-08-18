@@ -1,0 +1,25 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Familypedia",
+		"description": "Like Wikipedia, but private and just for your family — each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "Productivity"]
+	},
+	"landingPage": "/familypedia/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/familypedia",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "familypedia"
+			}
+		}
+	]
+}

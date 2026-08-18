@@ -281,52 +281,38 @@
 	"family-history": {
 		"title": "Document Family History",
 		"tagline": "A private Wikipedia for your family",
-		"description": "Build your own Wikipedia about the people in your family — who they were, where they lived, how they connect. The Family Wiki plugin ships with a pre-defined set of Person fields (dates, relations, places), so once you install it the Wikipedia-style structure is already there. You just write.",
+		"description": "Like Wikipedia, but private and just for your family. Each relative gets their own page for their story and photos, and Familypedia builds the family calendar and birthday reminders automatically. It's also compatible with the family tree apps you may already use — import what you have and spend your time on the stories and photos a tree alone can't hold.",
 		"icon": "🌳",
 		"gradient": "linear-gradient(135deg, #134e5e 0%, #71b280 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
 		"steps": [
 			{
-				"type": "plugin",
-				"slug": "family-wiki",
-				"title": "Turn your site into a wiki",
-				"description": "Family Wiki adds nested pages, cross-linking, and shared editing — the structure you need to write about people who connect to each other."
-			},
-			{
-				"type": "plugin",
-				"slug": "secure-custom-fields",
-				"title": "Add the Person fields engine",
-				"description": "Family Wiki bundles a ready-made set of Person fields (alive, born, died, parents, children, places). Secure Custom Fields is the engine that loads them — once it's active, every wiki page gets the fields automatically. ACF works the same way if you already use it."
+				"type": "app",
+				"path": "apps/familypedia.json",
+				"title": "Add a family wiki",
+				"description": "Familypedia adds a private, Wikipedia-style encyclopedia about your family. Each person gets their own page, and pages link to each other automatically — mention a relative by name and it becomes a link to their page."
 			},
 			{
 				"type": "note",
-				"title": "Set a static homepage as your family tree",
-				"description": "Settings → Reading → \"A static page\" → create a new page that lists the closest relatives you want to write about first. Don't aim for completeness — start with the handful you have stories for, link each name to their wiki entry, and grow it from there. This page becomes the index everyone navigates from.",
-				"url": "/wp-admin/options-reading.php",
-				"url_label": "Open Reading Settings"
+				"title": "Already have a family tree elsewhere?",
+				"description": "Familypedia reads and writes GEDCOM files, the format used by Ancestry, MyHeritage, Gramps, and most other family tree apps. Import what you already have and everyone shows up with their relationships intact — the tree becomes the starting point, not the project.",
+				"url": "/familypedia/import-export",
+				"url_label": "Open Import / Export",
+				"optional": true
 			},
 			{
 				"type": "note",
 				"title": "Write the first profile",
-				"description": "Pick one relative — probably the one with the most stories — and write their page. Fill in the structured fields, link to anyone they connect to. Drop the [name_with_bio] shortcode at the top of the page to auto-generate a one-liner from the fields. The next profiles get easier once the pattern is set.",
-				"url": "/wp-admin/post-new.php?post_type=page",
-				"url_label": "Add Wiki Page"
+				"description": "Pick one relative — probably the one with the most stories — and give them a page. Add a photo, write what you know about them, and fill in the basics: born, died, parents, children, where they lived. The next profiles get easier once the pattern is set.",
+				"url": "/familypedia/new/",
+				"url_label": "Add Person"
 			},
 			{
 				"type": "note",
-				"title": "Make it private (recommended)",
-				"description": "Family Wiki adds its own option in Settings → Reading: \"I would like my site to be private, visible only to myself and users I choose.\" Turn it on and family history stays in the family — only logged-in users you've invited can read or edit.",
-				"url": "/wp-admin/options-reading.php",
-				"url_label": "Open Reading Settings",
-				"optional": true,
-				"context": "self-hosted"
-			},
-			{
-				"type": "note",
-				"title": "Add a family calendar",
-				"description": "Family Wiki includes a Family Calendar block (and a Birthday Calendar block for living relatives) — drop one onto a page and it surfaces every date stored in the wiki. A nice way to remember the next birthday or anniversary.",
-				"url": "/wp-admin/post-new.php?post_type=page",
-				"url_label": "Add Calendar Page",
+				"title": "Calendar and birthdays, automatically",
+				"description": "As soon as you've entered a few dates, Familypedia can show a family calendar and a birthday list for living relatives — no extra data entry, it's built from what's already on each person's page.",
+				"url": "/familypedia/birthdays/",
+				"url_label": "Open Birthdays",
 				"optional": true
 			}
 		]

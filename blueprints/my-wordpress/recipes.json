@@ -287,8 +287,8 @@
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
 		"steps": [
 			{
-				"type": "github",
-				"repo": "akirk/familypedia",
+				"type": "app",
+				"path": "apps/familypedia.json",
 				"title": "Add a family wiki",
 				"description": "Familypedia adds a private, Wikipedia-style encyclopedia about your family. Each person gets their own page, and pages link to each other automatically — mention a relative by name and it becomes a link to their page."
 			},

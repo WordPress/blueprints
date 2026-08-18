@@ -37,7 +37,8 @@
 		"title": "Familypedia",
 		"description": "Like Wikipedia, but private and just for your family — each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
 		"author": "Alex Kirk",
-		"categories": ["Apps", "Productivity"]
+		"categories": ["Apps", "Productivity"],
+		"icon": "dashicons-groups"
 	},
 	"blueprints/flight-log/blueprint.json": {
 		"title": "Flight Log",

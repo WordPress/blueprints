@@ -2,14 +2,12 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { listJsonFiles, readJson } from './lib/json-validation.js';
+import { resolveVendoredIconPath } from './lib/raw-github-url.js';
 
 const BLUEPRINTS_DIR = 'blueprints';
 const OUTPUT_PATH = 'apps.json';
-
-// app-meta.json keys that only drive our own tooling (iconSource tells the
-// icon sync workflow where a vendored icon comes from), and are of no use
-// to a catalog consumer reading apps.json.
-const APP_META_BUILD_ONLY_KEYS = new Set(['iconSource']);
+const THIS_REPO_TRUNK_RAW_URL =
+	'https://raw.githubusercontent.com/wordpress/blueprints/trunk';
 
 function isAppBlueprint(meta) {
 	return Array.isArray(meta?.categories) && meta.categories.includes('Apps');
@@ -20,12 +18,18 @@ function loadAppMeta(blueprintDir) {
 	return fs.existsSync(appMetaPath) ? readJson(appMetaPath) : {};
 }
 
-function appMetaForIndex(appMeta) {
-	return Object.fromEntries(
-		Object.entries(appMeta).filter(
-			([key]) => !APP_META_BUILD_ONLY_KEYS.has(key)
-		)
-	);
+/**
+ * A catalog consumer reads apps.json, not app-meta.json — so any `icon`
+ * that names an upstream plugin/theme repository is resolved to the local
+ * vendored copy the icon sync workflow keeps in this Blueprint's directory.
+ */
+function resolveCatalogIcon(appMeta, blueprintDir) {
+	const vendoredPath = resolveVendoredIconPath(appMeta.icon, blueprintDir);
+	if (!vendoredPath) {
+		return appMeta;
+	}
+
+	return { ...appMeta, icon: `${THIS_REPO_TRUNK_RAW_URL}/${vendoredPath}` };
 }
 
 function buildAppsIndex() {
@@ -42,7 +46,7 @@ function buildAppsIndex() {
 
 		const blueprintDir = path.posix.dirname(blueprintPath);
 		const appMeta = { ...meta, ...loadAppMeta(blueprintDir) };
-		index[blueprintPath] = appMetaForIndex(appMeta);
+		index[blueprintPath] = resolveCatalogIcon(appMeta, blueprintDir);
 	}
 
 	const sortedEntries = Object.entries(index).sort(([, a], [, b]) => {

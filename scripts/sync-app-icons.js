@@ -2,18 +2,9 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { getTouchedBlueprintDirectories } from './lib/changed-files.js';
-import {
-	isBlueprintAttachmentPath,
-	matchAllowedRawGitHubUrl,
-	parseRawGitHubUrl,
-} from './lib/raw-github-url.js';
+import { resolveVendoredIconPath } from './lib/raw-github-url.js';
 
 const BLUEPRINTS_DIR = 'blueprints';
-const TRUNK_SOURCE = {
-	kind: 'trunk',
-	repository: 'wordpress/blueprints',
-	ref: 'trunk',
-};
 const MAX_ICON_BYTES = 512 * 1024;
 
 function reportError(file, message) {
@@ -43,26 +34,6 @@ function getAppMetaPaths({ changedOnly }) {
 		.map((blueprintDir) => path.posix.join(blueprintDir, 'app-meta.json'))
 		.filter((appMetaPath) => fs.existsSync(appMetaPath))
 		.sort();
-}
-
-/**
- * Resolve the repository-relative file that an app-meta.json `icon` vendors.
- *
- * The icon must be served from this repository's trunk and live inside the
- * Blueprint's own directory, matching the rule validate-pr-blueprints.js
- * applies to Blueprint resource URLs.
- */
-function resolveVendoredIconPath(icon, blueprintDir) {
-	if (typeof icon !== 'string') {
-		return null;
-	}
-
-	const match = matchAllowedRawGitHubUrl(icon, [TRUNK_SOURCE]);
-	if (!match || !isBlueprintAttachmentPath(match.resourcePath, blueprintDir)) {
-		return null;
-	}
-
-	return match.resourcePath;
 }
 
 async function fetchIcon(iconSource) {
@@ -97,39 +68,19 @@ async function syncBlueprint(appMetaPath, { checkOnly }) {
 		return { failed: true };
 	}
 
-	const { icon, iconSource } = appMeta;
-	if (iconSource === undefined) {
-		return {};
-	}
-
-	if (typeof iconSource !== 'string' || !parseRawGitHubUrl(iconSource)) {
-		reportError(
-			appMetaPath,
-			'iconSource must be an https://raw.githubusercontent.com/ URL without a query string or fragment.'
-		);
-		return { failed: true };
-	}
-
+	const { icon } = appMeta;
 	const iconPath = resolveVendoredIconPath(icon, blueprintDir);
 	if (!iconPath) {
-		reportError(
-			appMetaPath,
-			[
-				'iconSource requires icon to point at a vendored file in this Blueprint directory.',
-				`Expected: https://raw.githubusercontent.com/wordpress/blueprints/trunk/${blueprintDir}/<file>`,
-			].join('\n')
-		);
-		return { failed: true };
+		// A Dashicon/emoji, or a file already vendored with no declared
+		// upstream (authored here) — nothing to sync.
+		return {};
 	}
 
 	let upstream;
 	try {
-		upstream = await fetchIcon(iconSource);
+		upstream = await fetchIcon(icon);
 	} catch (error) {
-		reportError(
-			appMetaPath,
-			`Could not fetch iconSource ${iconSource}: ${error.message}`
-		);
+		reportError(appMetaPath, `Could not fetch icon ${icon}: ${error.message}`);
 		return { failed: true };
 	}
 
@@ -144,13 +95,13 @@ async function syncBlueprint(appMetaPath, { checkOnly }) {
 	if (checkOnly) {
 		reportError(
 			iconPath,
-			`Out of sync with ${iconSource}. Run \`npm run sync:app-icons\` and commit the result.`
+			`Out of sync with ${icon}. Run \`npm run sync:app-icons\` and commit the result.`
 		);
 		return { failed: true };
 	}
 
 	fs.writeFileSync(iconPath, upstream);
-	console.log(`Updated: ${iconPath} from ${iconSource}`);
+	console.log(`Updated: ${iconPath} from ${icon}`);
 	return { updated: iconPath };
 }
 

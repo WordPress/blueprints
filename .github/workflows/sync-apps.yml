@@ -93,7 +93,7 @@ jobs:
               with:
                   node-version: 20
 
-            - name: Sync icons declared with iconSource
+            - name: Sync icons declared with an upstream icon URL
               run: npm run sync:app-icons
 
             - name: Install Prettier
@@ -121,10 +121,10 @@ jobs:
                   title: "Sync app icons and rebuild apps.json"
                   body: |
                       Automated refresh of:
-                      - the vendored app icons whose `app-meta.json` declares an
-                        `iconSource`. The upstream plugin repository stays the source
-                        of truth; this repository keeps serving the file so the catalog
-                        is not exposed to an upstream rename or deletion.
+                      - the vendored app icons whose `app-meta.json` `icon` names an
+                        upstream plugin/theme repository. That repository stays the
+                        source of truth; this repository keeps serving the file so the
+                        catalog is not exposed to an upstream rename or deletion.
                       - `apps.json`, rebuilt from every Blueprint's `blueprint.json` and
                         `app-meta.json`, to catch any drift from a direct-to-trunk change.
 

@@ -73,22 +73,27 @@ Here's an example:
 
 ## App icons
 
-A Blueprint in the `Apps` category can declare an icon for the My Apps App Store in an `app-meta.json` file next to `blueprint.json`. The `icon` is either a Dashicon name (`"dashicons-book"`), a short emoji, or a URL to an image vendored in your Blueprint directory.
+A Blueprint in the `Apps` category can declare an icon for the My Apps App Store in an `app-meta.json` file next to `blueprint.json`. The `icon` is either a Dashicon name (`"dashicons-book"`), a short emoji, or a URL.
 
-When the icon really lives in the plugin's own repository, add `iconSource` so it does not have to be updated in two places by hand:
+When the icon really lives in the plugin's own repository, point `icon` at it there — you don't need to vendor the file yourself:
 
 ```json
 {
-	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/my-app/icon.svg",
-	"iconSource": "https://raw.githubusercontent.com/my-org/my-plugin/main/assets/icon.svg"
+	"icon": "https://raw.githubusercontent.com/my-org/my-plugin/main/assets/icon.svg"
 }
 ```
 
-You don't have to vendor the file yourself: when your pull request touches a Blueprint declaring an `iconSource`, a CI job fetches the icon and commits it to your branch, the same way missing screenshots are filled in. Only the Blueprints your branch touches are synced.
+When your pull request touches a Blueprint whose `icon` names an upstream repository, a CI job fetches it and commits a local copy to your branch, the same way missing screenshots are filled in. Only the Blueprints your branch touches are synced. The catalog (`apps.json`) always serves that local copy, never the upstream URL directly, so the App Store isn't exposed to an upstream rename or deletion.
 
-After that, a weekly workflow refetches every `iconSource` and opens a pull request when a vendored copy has fallen behind, so the plugin repository stays the source of truth while this repository keeps serving the file. Run `npm run sync:app-icons` to do the same locally, or `npm run sync:app-icons -- --check` to report drift without writing.
+After that, a weekly workflow refetches every such `icon` and opens a pull request when the vendored copy has fallen behind, so the plugin repository stays the source of truth while this repository keeps serving the file. Run `npm run sync:app-icons` to do the same locally, or `npm run sync:app-icons -- --check` to report drift without writing.
 
-`iconSource` requires `icon` to point at a file inside your own Blueprint directory on this repository's trunk — the same rule that applies to Blueprint resource URLs. Icons authored here, with no upstream copy, simply omit `iconSource`.
+If the icon has no upstream copy — it was drawn just for this repository — vendor it yourself and point `icon` directly at your own Blueprint directory on this repository's trunk instead:
+
+```json
+{
+	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/my-app/icon.svg"
+}
+```
 
 Design the icon with its own padding. Both the launcher and the App Store draw it at the full size of a rounded tile, and the App Store crops with `object-fit: cover`, so artwork that reaches the edge of its canvas loses its corners.
 

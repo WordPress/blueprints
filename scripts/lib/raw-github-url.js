@@ -79,6 +79,43 @@ export function isAllowedRawGitHubUrl(rawUrl, allowedSources) {
 	return matchAllowedRawGitHubUrl(rawUrl, allowedSources) !== null;
 }
 
+const THIS_REPOSITORY = 'wordpress/blueprints';
+
+/**
+ * Whether a raw.githubusercontent.com URL already points at this
+ * repository (as opposed to an upstream plugin/theme repository).
+ */
+export function isThisRepositoryRawGitHubUrl(rawUrl) {
+	const parsed = parseRawGitHubUrl(rawUrl);
+	return Boolean(
+		parsed &&
+			`${parsed.owner}/${parsed.repository}`.toLowerCase() ===
+				THIS_REPOSITORY
+	);
+}
+
+/**
+ * Resolve the file an upstream `icon` URL should be vendored to inside a
+ * Blueprint's own directory, named after the upstream file itself.
+ *
+ * Returns null when there is nothing to vendor: `icon` isn't a URL at all
+ * (a Dashicon name or emoji), or it already points at a file served from
+ * this repository (authored here, with no declared upstream).
+ */
+export function resolveVendoredIconPath(icon, blueprintDir) {
+	if (typeof icon !== 'string') {
+		return null;
+	}
+
+	const parsed = parseRawGitHubUrl(icon);
+	if (!parsed || isThisRepositoryRawGitHubUrl(icon)) {
+		return null;
+	}
+
+	const basename = path.posix.basename(parsed.refAndPath);
+	return basename ? path.posix.join(blueprintDir, basename) : null;
+}
+
 export function isBlueprintAttachmentPath(resourcePath, blueprintDir) {
 	const normalizedBlueprintDir = blueprintDir
 		.replaceAll('\\', '/')

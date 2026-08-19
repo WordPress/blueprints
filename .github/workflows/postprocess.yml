@@ -20,6 +20,8 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
+            - name: Install dependencies
+              run: npm ci
             - name: Install Prettier
               run: npm install -g prettier
             - name: Run reindex_postprocess.py

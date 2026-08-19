@@ -77,8 +77,21 @@ async function readBlueprint(slug: string): Promise<BlueprintJson | null> {
   }
 }
 
+function rawFileUrl(slug: string, filename: string) {
+  return `https://raw.githubusercontent.com/${RAW_REPO}/${RAW_REF}/blueprints/${slug}/${filename}`;
+}
+
 function rawBlueprintUrl(slug: string) {
-  return `https://raw.githubusercontent.com/${RAW_REPO}/${RAW_REF}/blueprints/${slug}/blueprint.json`;
+  return rawFileUrl(slug, 'blueprint.json');
+}
+
+async function hasDemoJson(slug: string): Promise<boolean> {
+  try {
+    await fs.access(path.join(BLUEPRINTS_DIR, slug, 'demo.json'));
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 function resolveScreenshotLocalPath(screenshot: string, slug: string): string | null {
@@ -165,10 +178,17 @@ async function main() {
 
   for (const slug of toShoot) {
     const page = await context.newPage();
+    // Prefer demo.json when present: it's a blueprint that also seeds sample
+    // content, so the screenshot shows the app in use rather than freshly installed.
+    const useDemo = await hasDemoJson(slug);
+    const sourceUrl = useDemo ? rawFileUrl(slug, 'demo.json') : rawBlueprintUrl(slug);
+    if (useDemo) {
+      console.log(`Using demo.json for ${slug} screenshot`);
+    }
     const url = `https://playground.wordpress.net/?mode=seamless&blueprint-url=${encodeURIComponent(
-      rawBlueprintUrl(slug)
+      sourceUrl
     )}`;
-    
+
     // Wait for full load, not just domcontentloaded
     await page.goto(url, { waitUntil: 'load', timeout: 180_000 });
     await page.emulateMedia({ reducedMotion: 'reduce' });

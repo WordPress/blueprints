@@ -1,0 +1,32 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Cookbook (Demo)",
+		"description": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Pre-loaded with two recipes fetched live from the web so you can explore right away.",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"Productivity"
+		]
+	},
+	"landingPage": "/cookbook/recipe/9001",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/cookbook",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "cookbook"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php\nrequire_once '/wordpress/wp-load.php';\n\nif ( ! post_type_exists( 'cb-recipes' ) || ! class_exists( '\\\\Cookbook\\\\Importer' ) || ! class_exists( '\\\\Cookbook\\\\ServiceContainer' ) ) {\n\treturn;\n}\n\n$owner = get_user_by( 'login', 'admin' );\n$owner_id = $owner ? $owner->ID : 1;\n$recipe_service = \\Cookbook\\ServiceContainer::default()->recipes();\n\n$urls = [\n\t9001 => 'https://www.gutekueche.at/marillenknoedel-mit-topfenteig-rezept-784',\n\t9002 => 'https://www.gutekueche.at/cremige-schinkenfleckerln-rezept-23978',\n];\n\nforeach ( $urls as $import_id => $url ) {\n\t$parsed = \\Cookbook\\Importer::from_url( $url );\n\tif ( ! $parsed ) {\n\t\tcontinue;\n\t}\n\n\t$post_id = wp_insert_post( [\n\t\t'import_id'    => $import_id,\n\t\t'post_type'    => 'cb-recipes',\n\t\t'post_status'  => 'publish',\n\t\t'post_title'   => $parsed['title'] ?: __( 'Imported recipe', 'cookbook' ),\n\t\t'post_content' => $parsed['description'] ?? '',\n\t\t'post_author'  => $owner_id,\n\t], true );\n\n\tif ( is_wp_error( $post_id ) ) {\n\t\tcontinue;\n\t}\n\n\t$recipe_service->apply_parsed_payload( (int) $post_id, $parsed, $url, false );\n}\n"
+		}
+	]
+}

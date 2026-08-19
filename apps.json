@@ -18,7 +18,7 @@
 		"description": "Import media from Beeper chats and create blog posts. Requires Beeper Desktop running.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Media"],
-		"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/chat-to-blog/icon.svg"
+		"icon": "dashicons-format-status"
 	},
 	"blueprints/post-collection/blueprint.json": {
 		"title": "Collect Posts from the Web",

@@ -1,0 +1,32 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Familypedia (Demo)",
+		"description": "Create your own, private Wikipedia about your family. Pre-loaded with a historical Austrian family tree, the House of Habsburg from 1802 to 2011, so you can explore right away.",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"Genealogy"
+		]
+	},
+	"landingPage": "/familypedia/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/familypedia",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "familypedia"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php\nrequire_once '/wordpress/wp-load.php';\n\nif ( ! class_exists( '\\Familypedia\\Gedcom' ) || ! class_exists( '\\Familypedia\\Front_Page' ) || ! post_type_exists( \\Familypedia\\Person::POST_TYPE ) ) {\n\treturn;\n}\n\n$demo_dir = WP_PLUGIN_DIR . '/familypedia/demo';\n$gedcom_file = $demo_dir . '/demo.ged';\nif ( ! is_readable( $gedcom_file ) ) {\n\treturn;\n}\n\n$importer = new \\Familypedia\\Gedcom();\n$result   = $importer->import_string( file_get_contents( $gedcom_file ) );\n\nif ( is_wp_error( $result ) || empty( $result['ids']['FRANZ_KARL'] ) ) {\n\treturn;\n}\n\n$content_file = $demo_dir . '/demo-content.xml';\nif ( is_readable( $content_file ) ) {\n\t$importer->apply_content_string( file_get_contents( $content_file ), true );\n}\n\n\\Familypedia\\Front_Page::add_trees( array( $result['ids']['FRANZ_KARL'] ) );\n"
+		}
+	]
+}

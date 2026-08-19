@@ -6,6 +6,7 @@ on:
         types: [opened, synchronize, reopened]
         paths:
             - "blueprints/**/blueprint.json"
+            - "blueprints/**/demo.json"
             - ".github/workflows/screenshots.yml"
             - "scripts/screenshot-blueprints.ts"
 
@@ -28,6 +29,24 @@ jobs:
               with:
                   ref: ${{ (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.head.ref || github.ref }}
                   token: ${{ secrets.GITHUB_TOKEN }}
+                  fetch-depth: 0
+
+            - name: Fetch base branch
+              if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
+              run: |
+                  git fetch origin "${GITHUB_BASE_REF}:refs/remotes/origin/${GITHUB_BASE_REF}"
+              env:
+                  GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
+
+            - name: Collect changed files
+              if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
+              run: |
+                  set -euo pipefail
+                  merge_base="$(git merge-base "origin/${GITHUB_BASE_REF}" HEAD)"
+                  git diff --name-only "${merge_base}" HEAD > "${RUNNER_TEMP}/changed-files.txt"
+                  echo "CHANGED_FILES_PATH=${RUNNER_TEMP}/changed-files.txt" >> "${GITHUB_ENV}"
+              env:
+                  GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
 
             - uses: actions/setup-node@v4
               with:

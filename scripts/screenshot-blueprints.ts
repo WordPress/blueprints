@@ -2,6 +2,7 @@
 import { chromium, devices } from 'playwright';
 import { promises as fs, readFileSync } from 'node:fs';
 import path from 'node:path';
+import { getChangedFiles } from './lib/changed-files.js';
 
 const REPO = 'WordPress/blueprints';
 const REF = 'trunk';
@@ -77,8 +78,41 @@ async function readBlueprint(slug: string): Promise<BlueprintJson | null> {
   }
 }
 
+function rawFileUrl(slug: string, filename: string) {
+  return `https://raw.githubusercontent.com/${RAW_REPO}/${RAW_REF}/blueprints/${slug}/${filename}`;
+}
+
 function rawBlueprintUrl(slug: string) {
-  return `https://raw.githubusercontent.com/${RAW_REPO}/${RAW_REF}/blueprints/${slug}/blueprint.json`;
+  return rawFileUrl(slug, 'blueprint.json');
+}
+
+async function hasDemoJson(slug: string): Promise<boolean> {
+  try {
+    await fs.access(path.join(BLUEPRINTS_DIR, slug, 'demo.json'));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+// In CI, force a re-shoot for any Blueprint whose blueprint.json or demo.json
+// was touched by the current pull request, even if it already has a
+// screenshot.jpg. Outside CI (no CHANGED_FILES/CHANGED_FILES_PATH set), only
+// Blueprints missing a screenshot get shot.
+function getForceRegenSlugs(): Set<string> {
+  let changedFiles: string[];
+  try {
+    changedFiles = getChangedFiles();
+  } catch {
+    return new Set();
+  }
+
+  const slugs = new Set<string>();
+  for (const file of changedFiles) {
+    const m = file.match(/^blueprints\/([^/]+)\/(blueprint\.json|demo\.json)$/);
+    if (m) slugs.add(m[1]);
+  }
+  return slugs;
 }
 
 function resolveScreenshotLocalPath(screenshot: string, slug: string): string | null {
@@ -144,10 +178,12 @@ async function main() {
   const slugs = await listBlueprintSlugs();
   console.log(`Using Blueprint source: ${RAW_REPO}@${RAW_REF}`);
 
-  // Filter: only those without any screenshot yet
+  // Filter: those without any screenshot yet, plus any this PR touched the
+  // blueprint.json/demo.json of (their existing screenshot may be stale).
+  const forceRegenSlugs = getForceRegenSlugs();
   const toShoot: string[] = [];
   for (const slug of slugs) {
-    if (!(await hasScreenshot(slug))) {
+    if (!(await hasScreenshot(slug)) || forceRegenSlugs.has(slug)) {
       toShoot.push(slug);
     }
   }
@@ -165,10 +201,17 @@ async function main() {
 
   for (const slug of toShoot) {
     const page = await context.newPage();
+    // Prefer demo.json when present: it's a blueprint that also seeds sample
+    // content, so the screenshot shows the app in use rather than freshly installed.
+    const useDemo = await hasDemoJson(slug);
+    const sourceUrl = useDemo ? rawFileUrl(slug, 'demo.json') : rawBlueprintUrl(slug);
+    if (useDemo) {
+      console.log(`Using demo.json for ${slug} screenshot`);
+    }
     const url = `https://playground.wordpress.net/?mode=seamless&blueprint-url=${encodeURIComponent(
-      rawBlueprintUrl(slug)
+      sourceUrl
     )}`;
-    
+
     // Wait for full load, not just domcontentloaded
     await page.goto(url, { waitUntil: 'load', timeout: 180_000 });
     await page.emulateMedia({ reducedMotion: 'reduce' });

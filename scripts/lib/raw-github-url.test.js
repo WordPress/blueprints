@@ -5,7 +5,9 @@ import {
 	isAllowedBlueprintResourceUrl,
 	isAllowedRawGitHubUrl,
 	isBlueprintAttachmentPath,
+	isThisRepositoryRawGitHubUrl,
 	matchAllowedRawGitHubUrl,
+	resolveVendoredIconPath,
 } from './raw-github-url.js';
 
 const allowedSources = [
@@ -164,5 +166,47 @@ test('does not require an upstream trunk URL to exist in the current Blueprint d
 			() => false
 		),
 		true
+	);
+});
+
+test('isThisRepositoryRawGitHubUrl only matches this repository', () => {
+	assert.equal(
+		isThisRepositoryRawGitHubUrl(
+			'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/example/icon.svg'
+		),
+		true
+	);
+	assert.equal(
+		isThisRepositoryRawGitHubUrl(
+			'https://raw.githubusercontent.com/example/blueprints/trunk/blueprints/example/icon.svg'
+		),
+		false
+	);
+	assert.equal(isThisRepositoryRawGitHubUrl('dashicons-book'), false);
+});
+
+test('resolveVendoredIconPath names the vendored file after the upstream file', () => {
+	assert.equal(
+		resolveVendoredIconPath(
+			'https://raw.githubusercontent.com/example/my-plugin/main/assets/icon.svg',
+			'blueprints/example'
+		),
+		'blueprints/example/icon.svg'
+	);
+});
+
+test('resolveVendoredIconPath returns null for a Dashicon or emoji', () => {
+	assert.equal(resolveVendoredIconPath('dashicons-book', 'blueprints/example'), null);
+	assert.equal(resolveVendoredIconPath('📚', 'blueprints/example'), null);
+	assert.equal(resolveVendoredIconPath(undefined, 'blueprints/example'), null);
+});
+
+test('resolveVendoredIconPath returns null for an icon already served from this repository', () => {
+	assert.equal(
+		resolveVendoredIconPath(
+			'https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/example/icon.svg',
+			'blueprints/example'
+		),
+		null
 	);
 });

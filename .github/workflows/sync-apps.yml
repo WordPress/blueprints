@@ -1,0 +1,133 @@
+name: Sync app icons and rebuild apps.json
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 5 * * 1"
+    pull_request_target:
+        types: [opened, synchronize, reopened]
+        paths:
+            - "blueprints/**/app-meta.json"
+            - "blueprints/**/blueprint.json"
+            - ".github/workflows/sync-apps.yml"
+            - "scripts/sync-app-icons.js"
+            - "scripts/build-apps-json.js"
+
+permissions:
+    contents: write
+    pull-requests: write
+
+jobs:
+    # Vendor the icon(s) and refresh apps.json for the Blueprints a pull
+    # request touches, so declaring an app is reflected in the catalog
+    # without waiting for a separate post-merge reindex.
+    sync_pull_request:
+        runs-on: ubuntu-latest
+        # Only run for PRs from the same repository (not forks)
+        if: |
+            github.event_name == 'pull_request_target' &&
+            github.event.pull_request.head.repo.full_name == github.repository
+        env:
+            GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
+        steps:
+            - name: Checkout PR branch
+              uses: actions/checkout@v4
+              with:
+                  ref: ${{ github.event.pull_request.head.ref }}
+                  token: ${{ secrets.GITHUB_TOKEN }}
+                  fetch-depth: 0
+
+            - name: Fetch base branch
+              run: |
+                  git fetch origin "${GITHUB_BASE_REF}:refs/remotes/origin/${GITHUB_BASE_REF}"
+
+            - name: Collect changed files
+              run: |
+                  set -euo pipefail
+                  merge_base="$(git merge-base "origin/${GITHUB_BASE_REF}" HEAD)"
+                  git diff --name-only "${merge_base}" HEAD > "${RUNNER_TEMP}/changed-files.txt"
+                  echo "CHANGED_FILES_PATH=${RUNNER_TEMP}/changed-files.txt" >> "${GITHUB_ENV}"
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Sync icons for the touched Blueprints
+              run: node scripts/sync-app-icons.js --changed-only
+
+            - name: Install Prettier
+              run: npm install -g prettier
+
+            - name: Rebuild apps.json
+              run: |
+                  node scripts/build-apps-json.js
+                  prettier --write apps.json
+
+            - name: Check for changes
+              id: check_changes
+              run: |
+                  if [ -n "$(git status --porcelain)" ]; then
+                    echo "has_changes=true" >> $GITHUB_OUTPUT
+                  else
+                    echo "has_changes=false" >> $GITHUB_OUTPUT
+                  fi
+
+            - name: Commit and push to PR
+              if: steps.check_changes.outputs.has_changes == 'true'
+              run: |
+                  git config --global user.name "github-actions[bot]"
+                  git config --global user.email "github-actions[bot]@users.noreply.github.com"
+                  git add blueprints apps.json
+                  git commit -m "chore: sync app icons and rebuild apps.json"
+                  git push
+
+    # Catch icons that changed upstream after their pull request merged, and
+    # keep apps.json in sync with any direct-to-trunk changes.
+    sync_trunk:
+        runs-on: ubuntu-latest
+        if: github.event_name != 'pull_request_target'
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+
+            - name: Sync icons declared with an upstream icon URL
+              run: npm run sync:app-icons
+
+            - name: Install Prettier
+              run: npm install -g prettier
+
+            - name: Rebuild apps.json
+              run: |
+                  npm run build:apps-json
+                  prettier --write apps.json
+
+            - name: Check for changes
+              id: check_changes
+              run: |
+                  if [ -n "$(git status --porcelain)" ]; then
+                    echo "has_changes=true" >> $GITHUB_OUTPUT
+                  else
+                    echo "has_changes=false" >> $GITHUB_OUTPUT
+                  fi
+
+            - name: Create PR for the refreshed icons and catalog
+              if: steps.check_changes.outputs.has_changes == 'true'
+              uses: peter-evans/create-pull-request@v6
+              with:
+                  commit-message: "chore: sync app icons and rebuild apps.json"
+                  title: "Sync app icons and rebuild apps.json"
+                  body: |
+                      Automated refresh of:
+                      - the vendored app icons whose `app-meta.json` `icon` names an
+                        upstream plugin/theme repository. That repository stays the
+                        source of truth; this repository keeps serving the file so the
+                        catalog is not exposed to an upstream rename or deletion.
+                      - `apps.json`, rebuilt from every Blueprint's `blueprint.json` and
+                        `app-meta.json`, to catch any drift from a direct-to-trunk change.
+
+                      Review before merging.
+                  branch: ci/sync-apps
+                  delete-branch: true

@@ -95,38 +95,6 @@ def build_screenshot_html(preview, screenshot_path, title):
         preview=preview
     )
 
-def is_app_blueprint(meta):
-    return 'Apps' in (meta.get('categories') or [])
-
-
-def load_app_meta(blueprint_path):
-    app_meta_path = os.path.join(os.path.dirname(blueprint_path), 'app-meta.json')
-    if not os.path.exists(app_meta_path):
-        return {}
-
-    with open(app_meta_path, 'r') as f:
-        return json.load(f)
-
-
-def build_apps_index():
-    index = {}
-    for root, dirs, files in os.walk('blueprints'):
-        for file in files:
-            if file == 'blueprint.json':
-                path = os.path.join(root, file)
-                with open(path, 'r') as f:
-                    data = json.load(f)
-                    meta = data.get('meta', {})
-                    if is_app_blueprint(meta):
-                        app_meta = dict(meta)
-                        app_meta.update(load_app_meta(path))
-                        index[path] = app_meta
-    index = dict(sorted(index.items(), key=lambda item: item[1].get('title', '')))
-    with open('apps.json', 'w') as f:
-        json.dump(index, f, indent=2)
-    return index
-
-
 def build_json_index():
     index = {}
     for root, dirs, files in os.walk('blueprints'):
@@ -357,7 +325,6 @@ if '--test' in sys.argv:
 else:
     print("Reindexing")
     index_data = build_json_index()
-    build_apps_index()
     build_markdown_table()
     build_gallery_html(index_data)
     rewrite_branch_urls_to_trunk()

@@ -17,12 +17,17 @@ jobs:
               uses: actions/setup-python@v2
               with:
                   python-version: 3.8
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 20
             - name: Install Prettier
               run: npm install -g prettier
             - name: Run reindex_postprocess.py
               run: python reindex_postprocess.py
+            - name: Rebuild apps.json
+              run: node scripts/build-apps-json.js
             - name: Run Prettier
-              run: prettier --write blueprints/**/*.json
+              run: prettier --write blueprints/**/*.json apps.json
             - name: Check for uncommitted changes
               id: changes
               run: |

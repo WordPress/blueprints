@@ -4,10 +4,7 @@
 		"title": "Cookbook (Demo)",
 		"description": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Pre-loaded with two recipes fetched live from the web so you can explore right away.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Productivity"
-		]
+		"categories": ["Apps", "Productivity"]
 	},
 	"landingPage": "/cookbook/recipe/9001",
 	"steps": [

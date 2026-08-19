@@ -4,10 +4,7 @@
 		"title": "Travel App (Demo)",
 		"description": "A private travel organizer for WordPress, pre-loaded with a sample multi-country trip so you can explore the timeline right away.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Travel"
-		]
+		"categories": ["Apps", "Travel"]
 	},
 	"landingPage": "/travel-app/",
 	"steps": [

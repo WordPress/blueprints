@@ -165,7 +165,7 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/cookbook/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a6a8debc61d15f21c4dc5064b6aaf815c99d509b/blueprints/cookbook/screenshot.jpg",
     "featured": false
   },
   "blueprints/create-block-theme/blueprint.json": {
@@ -241,7 +241,7 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/fb48c5f05233f866a683f9c9c8ff947840b76a41/blueprints/familypedia/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a6a8debc61d15f21c4dc5064b6aaf815c99d509b/blueprints/familypedia/screenshot.jpg",
     "featured": false
   },
   "blueprints/fancy-dashboard_widget/blueprint.json": {
@@ -565,7 +565,7 @@
       "Apps",
       "Travel"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/travel-app/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a6a8debc61d15f21c4dc5064b6aaf815c99d509b/blueprints/travel-app/screenshot.jpg",
     "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {

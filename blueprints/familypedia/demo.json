@@ -4,10 +4,7 @@
 		"title": "Familypedia (Demo)",
 		"description": "Create your own, private Wikipedia about your family. Pre-loaded with a historical Austrian family tree, the House of Habsburg from 1802 to 2011, so you can explore right away.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Genealogy"
-		]
+		"categories": ["Apps", "Genealogy"]
 	},
 	"landingPage": "/familypedia/",
 	"steps": [

@@ -4,10 +4,7 @@
 		"title": "Wordopedia (Demo)",
 		"description": "A personal encyclopedia for searching, browsing, and saving articles. Opens straight into an article so you can explore right away.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Productivity"
-		]
+		"categories": ["Apps", "Productivity"]
 	},
 	"landingPage": "/wordopedia/article/en/?title=Vienna",
 	"login": true,

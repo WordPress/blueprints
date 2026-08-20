@@ -115,9 +115,9 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 
 <h2>Cookbook</h2>
-<p>Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/cookbook/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/cookbook/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/cookbook/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p>Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/cookbook/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/cookbook/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/cookbook/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/cookbook/screenshot.jpg" alt="Cookbook screenshot" width="400"></p>
 <br clear="all">
 
@@ -171,9 +171,9 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 
 <h2>Familypedia</h2>
-<p>Like Wikipedia, but private and just for your family — each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/familypedia/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/0715098ab961629d84a1973a1ac387f104a65d1b/blueprints/familypedia/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/0715098ab961629d84a1973a1ac387f104a65d1b/blueprints/familypedia/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p>Like Wikipedia, but private and just for your family. Each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/familypedia/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/familypedia/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/familypedia/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/familypedia/screenshot.jpg" alt="Familypedia screenshot" width="400"></p>
 <br clear="all">
 
@@ -411,9 +411,9 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 
 <h2>Travel App</h2>
-<p>A private travel organizer for WordPress.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/ef925bd54c647b60e5ed0cfa11b5a3d87d55a52d/blueprints/travel-app/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/ef925bd54c647b60e5ed0cfa11b5a3d87d55a52d/blueprints/travel-app/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p>A private travel organizer for WordPress. Transform your booking confirmations into trips with a timeline view, with sharing options and a journaling function. You can allow other users to manage your trips, too.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/travel-app/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/travel-app/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/travel-app/screenshot.jpg" alt="Travel App screenshot" width="400"></p>
 <br clear="all">
 

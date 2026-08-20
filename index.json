@@ -159,13 +159,13 @@
   },
   "blueprints/cookbook/blueprint.json": {
     "title": "Cookbook",
-    "description": "Store your recipes in your WordPress, with ingredients, steps, and prep/cook times. Paste a URL to pull a recipe in from the web.",
+    "description": "Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.",
     "author": "Alex Kirk",
     "categories": [
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a6a8debc61d15f21c4dc5064b6aaf815c99d509b/blueprints/cookbook/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/cookbook/screenshot.jpg",
     "featured": false
   },
   "blueprints/create-block-theme/blueprint.json": {
@@ -235,13 +235,13 @@
   },
   "blueprints/familypedia/blueprint.json": {
     "title": "Familypedia",
-    "description": "Like Wikipedia, but private and just for your family \u2014 each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
+    "description": "Like Wikipedia, but private and just for your family. Each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
     "author": "Alex Kirk",
     "categories": [
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a6a8debc61d15f21c4dc5064b6aaf815c99d509b/blueprints/familypedia/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/familypedia/screenshot.jpg",
     "featured": false
   },
   "blueprints/fancy-dashboard_widget/blueprint.json": {
@@ -559,13 +559,13 @@
   },
   "blueprints/travel-app/blueprint.json": {
     "title": "Travel App",
-    "description": "A private travel organizer for WordPress.",
+    "description": "A private travel organizer for WordPress. Transform your booking confirmations into trips with a timeline view, with sharing options and a journaling function. You can allow other users to manage your trips, too.",
     "author": "Alex Kirk",
     "categories": [
       "Apps",
       "Travel"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a6a8debc61d15f21c4dc5064b6aaf815c99d509b/blueprints/travel-app/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/travel-app/screenshot.jpg",
     "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {
@@ -670,7 +670,7 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/wordopedia/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/wordopedia/screenshot.jpg",
     "featured": false
   }
 }

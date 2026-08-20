@@ -52,6 +52,9 @@ jobs:
               with:
                   node-version: 20
 
+            - name: Install dependencies
+              run: npm ci
+
             - name: Sync icons for the touched Blueprints
               run: node scripts/sync-app-icons.js --changed-only
 
@@ -92,6 +95,9 @@ jobs:
             - uses: actions/setup-node@v4
               with:
                   node-version: 20
+
+            - name: Install dependencies
+              run: npm ci
 
             - name: Sync icons declared with an upstream icon URL
               run: npm run sync:app-icons

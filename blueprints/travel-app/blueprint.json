@@ -2,7 +2,7 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Travel App",
-		"description": "A private travel organizer for WordPress.",
+		"description": "A private travel organizer for WordPress. Transform your booking confirmations into trips with a timeline view, with sharing options and a journaling function. You can allow other users to manage your trips, too.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Travel"]
 	},

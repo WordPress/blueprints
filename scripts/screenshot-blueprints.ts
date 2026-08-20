@@ -294,6 +294,21 @@ async function main() {
       console.log(`Failed to set zoom for ${slug}, continuing anyway`);
     }
 
+    // The mouse defaults to (0,0), which hovers the WordPress logo in the admin
+    // bar and pops open its dropdown. Move it away and close any open menu.
+    try {
+      await page.mouse.move(1900, 1070);
+      await wpContentFrame.evaluate(() => {
+        document
+          .querySelectorAll('#wpadminbar .hover, #wpadminbar .menupop:focus-within')
+          .forEach((el) => el.classList.remove('hover'));
+        (document.activeElement as HTMLElement | null)?.blur?.();
+      });
+      await page.waitForTimeout(300);
+    } catch (e) {
+      console.log(`Failed to dismiss admin bar menu for ${slug}, continuing anyway`);
+    }
+
     // Screenshot the WordPress iframe
     const blueprintDir = path.join(BLUEPRINTS_DIR, slug);
     const out = path.join(blueprintDir, 'screenshot.jpg');

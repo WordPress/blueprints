@@ -2,7 +2,7 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Familypedia",
-		"description": "Like Wikipedia, but private and just for your family \u2014 each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
+		"description": "Like Wikipedia, but private and just for your family. Each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"]
 	},

@@ -121,7 +121,7 @@
       "Apps",
       "AI"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/046fc153acdecd33f5ff66274b10a2d1cb78fa40/blueprints/ai-assistant/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/ai-assistant/screenshot.jpg",
     "featured": false
   },
   "blueprints/apiary-press/blueprint.json": {
@@ -132,7 +132,7 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/09339ae48bdd513626734bbc4294ba82554f9bda/blueprints/apiary-press/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/apiary-press/screenshot.jpg",
     "featured": false
   },
   "blueprints/chat-to-blog/blueprint.json": {
@@ -259,7 +259,7 @@
       "Apps",
       "Travel"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/b0fd6131ea9e4caf436d50d97ad59642b725b2b1/blueprints/flight-log/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/flight-log/screenshot.jpg",
     "featured": false
   },
   "blueprints/grid-variations/blueprint.json": {
@@ -386,7 +386,7 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/memex/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/memex/screenshot.jpg",
     "featured": false
   },
   "blueprints/woo-shipping/blueprint.json": {
@@ -420,7 +420,7 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/personal-crm/screenshot.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/personal-crm/screenshot.jpg",
     "featured": false
   },
   "blueprints/playground-builder/blueprint.json": {

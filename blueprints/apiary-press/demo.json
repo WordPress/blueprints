@@ -4,10 +4,7 @@
 		"title": "Apiary Press (Demo)",
 		"description": "Track beehives and record hive visits, treatments, feedings and harvests. Pre-loaded with a sample rooftop apiary in Vienna so you can explore right away.",
 		"author": "Francesco Bigiarini",
-		"categories": [
-			"Apps",
-			"Productivity"
-		]
+		"categories": ["Apps", "Productivity"]
 	},
 	"landingPage": "/apiary-press/apiary/9001",
 	"steps": [

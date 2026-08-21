@@ -4,10 +4,7 @@
 		"title": "Memex (Demo)",
 		"description": "Turns WordPress into a note-taking app with bi-directional links, backlinks, daily notes, tags, reminders, and imports. Pre-loaded with a few linked notes and task lists so you can explore right away.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Productivity"
-		]
+		"categories": ["Apps", "Productivity"]
 	},
 	"landingPage": "/memex/note/welcome-to-memex",
 	"login": true,

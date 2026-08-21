@@ -4,10 +4,7 @@
 		"title": "Flight Log (Demo)",
 		"description": "A private flight log and statistics app for WordPress. Pre-loaded with two years of sample flights so you can explore the dashboard, statistics and filters right away.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Travel"
-		]
+		"categories": ["Apps", "Travel"]
 	},
 	"landingPage": "/flight-log/",
 	"steps": [

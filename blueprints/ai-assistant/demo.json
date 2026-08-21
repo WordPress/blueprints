@@ -4,10 +4,7 @@
 		"title": "AI Assistant (demo)",
 		"description": "AI-powered chat interface for WordPress, with sample conversations showing cross-app workflows.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"AI"
-		]
+		"categories": ["Apps", "AI"]
 	},
 	"landingPage": "/ai-assistant/conversations/?conversation=9001",
 	"login": true,

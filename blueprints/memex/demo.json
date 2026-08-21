@@ -1,0 +1,33 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Memex (Demo)",
+		"description": "Turns WordPress into a note-taking app with bi-directional links, backlinks, daily notes, tags, reminders, and imports. Pre-loaded with a few linked notes and task lists so you can explore right away.",
+		"author": "Alex Kirk",
+		"categories": [
+			"Apps",
+			"Productivity"
+		]
+	},
+	"landingPage": "/memex/note/welcome-to-memex",
+	"login": true,
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/memex",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "memex"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php\nrequire_once '/wordpress/wp-load.php';\n\nif ( ! post_type_exists( 'memex_note' ) || ! class_exists( '\\Memex\\Content' ) ) {\n\treturn;\n}\n\n$owner    = get_user_by( 'login', 'admin' );\n$owner_id = $owner ? $owner->ID : 1;\n\n// Nobody is logged in while the blueprint runs; without a user that may post\n// unfiltered HTML, kses would strip the task-list checkboxes from the content.\nwp_set_current_user( $owner_id );\nkses_remove_filters();\n\n$notes = array(\n\t'welcome-to-memex' => array(\n\t\t'title' => 'Welcome to Memex',\n\t\t'tags'  => array( 'memex' ),\n\t\t'body'  => \"Memex turns WordPress into a note-taking app. This demo site comes with a few notes so you can see links, backlinks, tags, daily notes and task lists in action.\\n\\n## Things to try\\n\\n- [x] Open a note from the list on the left\\n- [ ] Tick a checkbox here — it is saved immediately, no editor needed\\n- [ ] Click [[Plan a weekend trip]] and follow the links\\n- [ ] Open [[Markdown cheat sheet]] and switch to the editor to see the source\\n- [ ] Visit today's daily note at `/memex/daily`\\n- [ ] Try `[[` in the editor to link to a note\\n\\n## Where things are\\n\\n- **Notes** live at `/memex/`, daily notes at `/memex/daily`.\\n- **Backlinks** are shown below every note — [[Plan a weekend trip]] links back here.\\n- **Tags** get their own page, for example `/memex/tag/memex`.\\n- **Graph**, orphans and broken links are at `/memex/graph`, `/memex/orphans` and `/memex/broken`.\\n- **Import** your Obsidian, Notion, Evernote or Roam notes at `/memex/import`.\",\n\t),\n\t'plan-a-weekend-trip' => array(\n\t\t'title' => 'Plan a weekend trip',\n\t\t'tags'  => array( 'travel', 'projects' ),\n\t\t'body'  => \"A small project note. Each checkbox below is a live task — tick it off as you go.\\n\\n## Before booking\\n\\n- [x] Pick dates\\n- [x] Agree on a budget\\n- [ ] Compare train and car, see [[Getting there]]\\n- [ ] Book accommodation\\n\\n## Packing list\\n\\n- [ ] Hiking boots\\n- [ ] Rain jacket\\n- [ ] Camera and spare battery\\n- [ ] Book for the train\\n\\n## Ideas\\n\\n- Morning hike, see [[Hiking routes]]\\n- Lunch in the old town\\n- Thermal bath on the rainy day\\n\\nRelated: [[Welcome to Memex]]\",\n\t),\n\t'getting-there' => array(\n\t\t'title' => 'Getting there',\n\t\t'tags'  => array( 'travel' ),\n\t\t'body'  => \"## Train\\n\\n- About 3 hours, one change\\n- Cheapest if booked two weeks ahead\\n\\n## Car\\n\\n- About 2.5 hours without traffic\\n- Parking at the hotel is extra\\n\\n**Decision:** leaning towards the train. Tracked in [[Plan a weekend trip]].\",\n\t),\n\t'hiking-routes' => array(\n\t\t'title' => 'Hiking routes',\n\t\t'tags'  => array( 'travel', 'outdoors' ),\n\t\t'body'  => \"Candidate routes for [[Plan a weekend trip]].\\n\\n| Route | Length | Difficulty |\\n| --- | --- | --- |\\n| Lake loop | 8 km | easy |\\n| Ridge trail | 14 km | moderate |\\n| Summit | 19 km | hard |\\n\\n- [ ] Check the weather the evening before\\n- [ ] Download the offline map\",\n\t),\n\t'markdown-cheat-sheet' => array(\n\t\t'title' => 'Markdown cheat sheet',\n\t\t'tags'  => array( 'memex' ),\n\t\t'body'  => \"Notes are written in Markdown and stored as HTML.\\n\\n## Basics\\n\\n- *italic*, **bold**, `code`\\n- [External link](https://wordpress.org)\\n- [[Welcome to Memex]] links to another note\\n- [[Welcome to Memex|custom text]] for a different link text\\n\\n## Task lists\\n\\nStart a list item with `[ ]` or `[x]`:\\n\\n- [ ] An open task\\n- [x] A finished task\\n\\nCheckboxes can be toggled directly in the note view; the change is written back to the note.\\n\\n## Blocks\\n\\n> Blockquotes work too.\\n\\n```\\nSo do code blocks.\\n```\",\n\t),\n);\n\n// Create every note first so that links resolve to these notes instead of\n// auto-created stubs, then fill in the content.\n$ids = array();\nforeach ( $notes as $slug => $note ) {\n\t$id = wp_insert_post(\n\t\tarray(\n\t\t\t'post_type'   => 'memex_note',\n\t\t\t'post_name'   => $slug,\n\t\t\t'post_title'  => $note['title'],\n\t\t\t'post_status' => 'publish',\n\t\t\t'post_author' => $owner_id,\n\t\t),\n\t\ttrue\n\t);\n\tif ( ! is_wp_error( $id ) ) {\n\t\t$ids[ $slug ] = (int) $id;\n\t}\n}\n\nforeach ( $ids as $slug => $id ) {\n\twp_update_post(\n\t\twp_slash(\n\t\t\tarray(\n\t\t\t\t'ID'           => $id,\n\t\t\t\t'post_content' => \\Memex\\Content::markdown_to_html( $notes[ $slug ]['body'] ),\n\t\t\t)\n\t\t)\n\t);\n\twp_set_object_terms( $id, $notes[ $slug ]['tags'], 'memex_tag' );\n}\n\nif ( class_exists( '\\Memex\\DailyNote' ) ) {\n\t$daily = \\Memex\\DailyNote::get_or_create( \\Memex\\DailyNote::today() );\n\tif ( $daily ) {\n\t\twp_update_post(\n\t\t\twp_slash(\n\t\t\t\tarray(\n\t\t\t\t\t'ID'           => $daily->ID,\n\t\t\t\t\t'post_author'  => $owner_id,\n\t\t\t\t\t'post_content' => \\Memex\\Content::markdown_to_html( \"## Today\\n\\n- [x] Set up Memex\\n- [ ] Read [[Welcome to Memex]]\\n- [ ] Continue with [[Plan a weekend trip]]\\n\\nQuick thoughts go here. Quick-capture at `/memex/quick-capture` appends a timestamped line to this note.\" ),\n\t\t\t\t)\n\t\t\t)\n\t\t);\n\t}\n}\n"
+		}
+	]
+}

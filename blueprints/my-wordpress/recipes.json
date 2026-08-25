@@ -438,7 +438,7 @@
 		]
 	},
 	"move-to-hosting": {
-		"title": "Move to WordPress Hosting",
+		"title": "Make this a hosted WordPress",
 		"tagline": "Take what you built here anywhere",
 		"description": "Your my.wordpress.net site lives in this browser's storage — private, but bound to one device. When you want to reach it from your phone, share it publicly, or invite others, download a full backup and restore it on a WordPress host. Because this site is built on WordPress Playground, the backup is the whole site: database, media, plugins, themes and settings, not just an export of your posts.",
 		"icon": "🚀",

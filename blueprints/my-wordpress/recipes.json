@@ -440,7 +440,7 @@
 	"move-to-hosting": {
 		"title": "Make this a hosted WordPress",
 		"tagline": "Take what you built here anywhere",
-		"description": "Your my.wordpress.net site lives in this browser's storage — private, but bound to one device. When you want to reach it from your phone, share it publicly, or invite others, download a full backup and restore it on a WordPress host. Because this site is built on WordPress Playground, the backup is the whole site: database, media, plugins, themes and settings, not just an export of your posts.",
+		"description": "Your my.wordpress.net site lives in this browser's storage — private, but bound to one device. When you want to reach it from your phone, share it publicly, or invite others, download a full backup and restore it on a WordPress host. Because this site is built on WordPress Playground, the backup is the whole site: database, media, plugins, themes and settings, not just an export of your posts. Along the way you'll pick the web address your site will live at.",
 		"icon": "🚀",
 		"gradient": "linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%)",
 		"context": "my-wordpress-net",
@@ -456,6 +456,11 @@
 				"description": "WordPress.com imports Playground ZIP files directly: start a new site through its migration flow, upload the backup, and it restores content, media, plugins and themes (a full-site import needs a paid plan; content-only import works on free sites). Other hosts often have a similar \"migrate\" or \"restore from backup\" option in their control panel.",
 				"url": "https://wordpress.com/setup/migration-signup",
 				"url_label": "Migrate to WordPress.com"
+			},
+			{
+				"type": "note",
+				"title": "Decide on a web address",
+				"description": "Here your site only has the address in this browser; a hosted site needs one everyone can use. The host offers a free address on its own domain (like yoursite.wordpress.com) that works immediately, or you can register a domain of your own (like yourname.com) — usually the choice you keep for years, so it is worth a moment's thought. Pick a name that fits what the site is about, and be aware that a custom domain costs a small yearly fee and can be changed later; links people already saved will need updating if you do."
 			},
 			{
 				"type": "note",

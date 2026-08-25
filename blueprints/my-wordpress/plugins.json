@@ -118,5 +118,10 @@
 		"note": "Reimagines /wp-admin as a desktop OS — admin screens open as draggable, resizable windows on a wallpaper, with a dock built from the admin menu. Per-user opt-in, fully reverts on deactivation.",
 		"categories": ["Productivity"],
 		"landing_page": "/desktop-mode/"
+	},
+	"export-media-library": {
+		"note": "Download your entire Media Library as one ZIP — handy for backups or for taking your images along when you move to another WordPress.",
+		"categories": ["Utility"],
+		"landing_page": "/wp-admin/upload.php?page=mass-edge-export-media-library"
 	}
 }

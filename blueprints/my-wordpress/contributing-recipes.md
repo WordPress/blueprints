@@ -28,6 +28,7 @@ Each top-level key in [recipes.json](https://github.com/WordPress/blueprints/blo
 - `gradient`: CSS gradient used by the recipe card.
 - `learn_more`: optional URL for deeper background.
 - `alternatives`: optional two-column app comparison rows for guides that map familiar external apps to installable My WordPress apps.
+- `context`: optional environment the whole recipe is limited to. Recipes without it show everywhere.
 - `steps`: ordered list of actions.
 
 Example:
@@ -48,7 +49,15 @@ Example:
 
 ## Step Types
 
-Every step should have a `type`, `title`, and `description`. Use `optional: true` for useful additions that are not required for the core workflow. Use `context` when a step only applies in a specific environment, such as `self-hosted`.
+Every step should have a `type`, `title`, and `description`. Use `optional: true` for useful additions that are not required for the core workflow. Use `context` when a step only applies in a specific environment.
+
+`context` is accepted on a step and on a whole recipe, and takes one of:
+
+- `self-hosted`: a regular WordPress install, not Playground.
+- `playground`: any WordPress Playground instance, including my.wordpress.net.
+- `my-wordpress-net`: only the persistent Playground at my.wordpress.net, for guides about that site itself, such as moving it to hosting.
+
+A recipe with a `context` is hidden entirely — from the guide grid, search and its detail page — where the context does not apply. A step with a `context` is skipped inside an otherwise visible recipe.
 
 Use `alternatives` when the recipe is mostly a discovery table rather than a linear setup flow. Each row groups familiar app names on the left and points to one app registered in [apps.json](https://github.com/WordPress/blueprints/blob/trunk/apps.json):
 

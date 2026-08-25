@@ -440,60 +440,40 @@
 	"move-to-hosting": {
 		"title": "Move to WordPress Hosting",
 		"tagline": "Take what you built here anywhere",
-		"description": "Your my.wordpress.net site lives in this browser's storage — private, but bound to one device. When you want to reach it from your phone, share it publicly, or invite others, export everything and move it to any WordPress host. Nothing you built here is lost: the same posts, pages, media and plugins run on hosted WordPress.",
+		"description": "Your my.wordpress.net site lives in this browser's storage — private, but bound to one device. When you want to reach it from your phone, share it publicly, or invite others, download a full backup and restore it on a WordPress host. Because this site is built on WordPress Playground, the backup is the whole site: database, media, plugins, themes and settings, not just an export of your posts.",
 		"icon": "🚀",
 		"gradient": "linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%)",
 		"context": "my-wordpress-net",
 		"steps": [
 			{
 				"type": "note",
-				"title": "Pick a WordPress host",
-				"description": "Any host that runs WordPress works — a managed WordPress host, a general web host with a one-click WordPress installer, or a server you run yourself. WordPress.org keeps a list of recommended hosts. Set up a fresh, empty WordPress there before you export anything, so you have somewhere to import into.",
-				"url": "https://wordpress.org/hosting/",
-				"url_label": "See recommended hosts"
+				"title": "Download a backup from Site Tools",
+				"description": "Click the Site Tools icon in the bottom-left corner of my.wordpress.net and download a backup. This is a Playground site ZIP containing every file and the database, so nothing needs to be re-exported or reinstalled on the other side. Keep the file somewhere safe — it is also the right thing to do before trying anything risky here."
 			},
 			{
 				"type": "note",
-				"title": "Export your content",
-				"description": "Tools → Export creates a WordPress export file (WXR) with all posts, pages, comments, categories and tags. Choose \"All content\" and download the file. This is the format every WordPress can import, so it is the safest way to carry your writing across.",
-				"url": "/wp-admin/export.php",
-				"url_label": "Open Export"
-			},
-			{
-				"type": "plugin",
-				"slug": "export-media-library",
-				"title": "Download your media",
-				"description": "This site exists only in your browser, so the new host's importer cannot fetch your images from it. Export Media Library packs your whole Media Library into one ZIP you can download. Keep it next to the export file — you upload both on the new site."
-			},
-			{
-				"type": "note",
-				"title": "Import on the new host",
-				"description": "On the new site, go to Tools → Import, install the WordPress importer and upload the export file, assigning the posts to your user there. Then upload the media ZIP's files through its Media Library. Image links in posts still point at this site's address; the new site's Tools → Import screen lists search-and-replace plugins, or fix the handful of posts by hand.",
-				"url": "https://wordpress.org/documentation/article/importing-content/",
-				"url_label": "Read the import guide"
-			},
-			{
-				"type": "note",
-				"title": "Reinstall your plugins and theme",
-				"description": "Plugins and themes aren't part of the export. Note what is active under Plugins and Appearance → Themes, then install the same ones on the new host from the WordPress.org directory. Apps you added from the App Store are ordinary plugins and install the same way.",
-				"url": "/wp-admin/plugins.php",
-				"url_label": "Open Plugins"
-			},
-			{
-				"type": "github",
-				"repo": "akirk/static-archive",
-				"title": "Keep a static copy as a safety net",
-				"description": "Static Archive writes an HTML copy of every post into your uploads folder. Generate it before you move, and you have a browsable, self-contained backup of this site even if something goes wrong during the import.",
-				"optional": true
+				"title": "Restore it on a host that accepts site backups",
+				"description": "WordPress.com imports Playground ZIP files directly: start a new site through its migration flow, upload the backup, and it restores content, media, plugins and themes (a full-site import needs a paid plan; content-only import works on free sites). Other hosts often have a similar \"migrate\" or \"restore from backup\" option in their control panel.",
+				"url": "https://wordpress.com/setup/migration-signup",
+				"url_label": "Migrate to WordPress.com"
 			},
 			{
 				"type": "note",
 				"title": "Check the new site, then let this one go",
-				"description": "Open a few posts on the new host, confirm images load and links point to the new address (Settings → General shows the site URL). Once everything is there, the new site is the one to keep updating — this browser copy won't sync with it.",
+				"description": "Open a few posts on the new host, confirm images load and that Settings → General shows the new address. Once everything is there, the hosted site is the one to keep updating — this browser copy won't sync with it.",
 				"url": "/wp-admin/options-general.php",
 				"url_label": "Open Settings"
+			},
+			{
+				"type": "note",
+				"title": "Prefer a content-only move?",
+				"description": "If your host can't take a full site backup, Tools → Export still gives you a WordPress export file (WXR) with all posts and pages that any WordPress can import. Media and plugins then need to be carried over separately, so use the backup route whenever you can.",
+				"url": "/wp-admin/export.php",
+				"url_label": "Open Export",
+				"optional": true
 			}
-		]
+		],
+		"learn_more": "https://wordpress.com/support/import/#import-from-wordpress-playground"
 	},
 	"stay-in-touch": {
 		"title": "Stay in Touch",

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Canvas UI - Design System Lab",
+    "description": "Interactive component explorer and design system gallery.",
+    "author": "Iker Santos Insua",
+    "categories": [
+      "design-system",
+      "ui-kit",
+      "developer-tools"
+    ]
+  },
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "CanvasUI2026!Lab"
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "twentytwentyfour"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Canvas UI - Design System Lab",
+        "blogdescription": "Interactive component explorer"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/uploads/01-design-tokens.jpg",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/01-design-tokens.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/uploads/02-micro-interactions.jpg",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/02-micro-interactions.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/uploads/03-responsive-layout.jpg",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/03-responsive-layout.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/uploads/04-component-motion.jpg",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/04-component-motion.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/uploads/05-accessibility-patterns.jpg",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/05-accessibility-patterns.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/uploads/06-theme-architecture.jpg",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/06-theme-architecture.jpg"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "wordpress/wp-content/mu-plugins/design-lab.php",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/design-lab.php"
+      }
+    }
+  ]
+}

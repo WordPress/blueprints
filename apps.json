@@ -83,9 +83,9 @@
 		"categories": ["Apps", "Social"],
 		"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/rss-reader/icon.png"
 	},
-	"blueprints/travel-app/blueprint.json": {
-		"title": "Travel App",
-		"description": "A private travel organizer for WordPress. Transform your booking confirmations into trips with a timeline view, with sharing options and a journaling function. You can allow other users to manage your trips, too.",
+	"blueprints/traveler/blueprint.json": {
+		"title": "Traveler",
+		"description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Travel"],
 		"icon": "dashicons-location-alt"

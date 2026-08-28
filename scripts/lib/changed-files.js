@@ -20,7 +20,8 @@ export function getTouchedBlueprintDirectories() {
 
 	for (const changedFile of getChangedFiles()) {
 		const match = changedFile.match(/^(blueprints\/[^/]+)(?:\/|$)/);
-		if (match) {
+		// A directory that was deleted or renamed away has nothing left to validate.
+		if (match && fs.existsSync(match[1])) {
 			blueprintDirs.add(match[1]);
 		}
 	}

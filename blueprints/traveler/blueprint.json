@@ -1,0 +1,29 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Traveler",
+		"description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "Travel"]
+	},
+	"landingPage": "/traveler/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/traveler",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "traveler"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/plugin.php'; $old = 'travel-app/travel-app.php'; if ( file_exists( WP_PLUGIN_DIR . '/' . $old ) ) { deactivate_plugins( $old ); $it = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( WP_PLUGIN_DIR . '/travel-app', FilesystemIterator::SKIP_DOTS ), RecursiveIteratorIterator::CHILD_FIRST ); foreach ( $it as $f ) { $f->isDir() ? rmdir( $f ) : unlink( $f ); } rmdir( WP_PLUGIN_DIR . '/travel-app' ); }"
+		}
+	]
+}

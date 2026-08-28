@@ -187,6 +187,28 @@ If the GitHub repository contains extra build files or the plugin folder name sh
 }
 ```
 
+### Renaming an App
+
+When an app moves to a new plugin directory name, list the former slugs in the Blueprint directory's `app-meta.json` so My Apps can offer the new app as an update to the old one:
+
+```json
+{
+	"icon": "dashicons-location-alt",
+	"replaces": ["travel-app"]
+}
+```
+
+My Apps then treats an installed plugin under an old name as an outdated copy: the old plugin's launcher icon shows "Update", the App Store shows "Update" instead of "Install", and both just run the new Blueprint. The Blueprint is responsible for retiring the old plugin, so add a step after `installPlugin` that deactivates and removes it. Guard it so a fresh install is unaffected:
+
+```json
+{
+	"step": "runPHP",
+	"code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/plugin.php'; $old = 'travel-app/travel-app.php'; if ( file_exists( WP_PLUGIN_DIR . '/' . $old ) ) { deactivate_plugins( $old ); $it = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( WP_PLUGIN_DIR . '/travel-app', FilesystemIterator::SKIP_DOTS ), RecursiveIteratorIterator::CHILD_FIRST ); foreach ( $it as $f ) { $f->isDir() ? rmdir( $f ) : unlink( $f ); } rmdir( WP_PLUGIN_DIR . '/travel-app' ); }"
+}
+```
+
+Deleting the files directly, rather than through `delete_plugins()`, keeps the old plugin's uninstall routine from running, so data the new plugin migrates in its own activation or upgrade routine stays intact. The new plugin activates first, so it can read the old plugin's data before that step runs.
+
 ## Test the Submission
 
 Before opening a pull request:

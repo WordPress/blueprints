@@ -346,11 +346,21 @@ async function main() {
   // Filter: those without a screenshot for the variant yet, plus any this PR
   // touched the blueprint.json/demo.json of (their existing screenshot may be stale).
   const forceRegenSlugs = getForceRegenSlugs();
+  // On a pull request, only shoot the Blueprints that PR is about: those it
+  // touched, and those still missing a desktop screenshot. Backfilling every
+  // Blueprint that lacks a newer variant (e.g. mobile) would turn each PR into
+  // a full catalogue run; that happens on workflow_dispatch instead.
+  const isPullRequest = (process.env.GITHUB_EVENT_NAME ?? '').startsWith('pull_request');
+  const desktop = VARIANTS[0];
   const toShoot = new Map<Variant, string[]>();
   for (const variant of VARIANTS) {
     const list: string[] = [];
     for (const slug of slugs) {
-      if (!(await hasScreenshot(slug, variant)) || forceRegenSlugs.has(slug)) {
+      const missing = !(await hasScreenshot(slug, variant));
+      const inScope =
+        forceRegenSlugs.has(slug) ||
+        (variant === desktop ? missing : !(await hasScreenshot(slug, desktop)));
+      if (isPullRequest ? inScope : missing || forceRegenSlugs.has(slug)) {
         list.push(slug);
       }
     }

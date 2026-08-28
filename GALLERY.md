@@ -410,11 +410,11 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <br clear="all">
 
 
-<h2>Travel App</h2>
-<p>A private travel organizer for WordPress. Transform your booking confirmations into trips with a timeline view, with sharing options and a journaling function. You can allow other users to manage your trips, too.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/travel-app/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/travel-app/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
-<p align="left"><img src="blueprints/travel-app/screenshot.jpg" alt="Travel App screenshot" width="400"></p>
+<h2>Traveler</h2>
+<p>A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/traveler/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d23da0be5f573a6fc96f3aff6ff794bf23b5c3be/blueprints/traveler/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d23da0be5f573a6fc96f3aff6ff794bf23b5c3be/blueprints/traveler/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/traveler/screenshot.jpg" alt="Traveler screenshot" width="400"></p>
 <br clear="all">
 
 

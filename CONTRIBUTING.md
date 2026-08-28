@@ -104,6 +104,7 @@ To help your Blueprint stand out in the gallery, include a screenshot alongside 
 -   Add a JPEG named `screenshot.jpg` inside your Blueprint directory (for example, `blueprints/my-blueprint/screenshot.jpg`). JPEG keeps file sizes small and matches the automation that builds the site.
 -   Shoot in a landscape aspect ratio (≈16:9) at about 1600–2000px wide so the preview stays sharp on Retina displays, and try to keep it under ~500 KB.
 -   If you don't provide a screenshot, a CI job will generate one for you automatically. A blank install often makes for a poor screenshot; if your Blueprint directory also contains a `demo.json` — a Blueprint that installs the app and seeds it with sample content — the CI job runs that instead of `blueprint.json` so the screenshot shows the app in use.
+-   The same CI job also takes a phone-width screenshot (390px wide, 2× scale) and saves it as `screenshot-mobile.jpg`. It's published in `index.json` as `screenshot_mobile_url`. To supply your own, add a JPEG with that name next to `blueprint.json`.
 
 ## Need help?
 

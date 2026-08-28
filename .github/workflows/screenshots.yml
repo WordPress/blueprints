@@ -64,7 +64,7 @@ jobs:
             - name: Check for changes
               id: check_changes
               run: |
-                  git add blueprints/*/screenshot.jpg
+                  git add blueprints/*/screenshot.jpg blueprints/*/screenshot-mobile.jpg
                   if [ -n "$(git status --porcelain)" ]; then
                     echo "has_changes=true" >> $GITHUB_OUTPUT
                   else
@@ -76,7 +76,7 @@ jobs:
               run: |
                   git config --global user.name "github-actions[bot]"
                   git config --global user.email "github-actions[bot]@users.noreply.github.com"
-                  git add blueprints/*/screenshot.jpg
+                  git add blueprints/*/screenshot.jpg blueprints/*/screenshot-mobile.jpg
                   git commit -m "chore: add missing Blueprint screenshots"
                   git push
 

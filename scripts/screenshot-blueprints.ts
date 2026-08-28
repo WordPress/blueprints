@@ -372,6 +372,7 @@ async function main() {
   }
 
   const browser = await chromium.launch({ headless: true });
+  const failures: string[] = [];
 
   // Device emulation (isMobile, touch) is fixed per context, so each variant
   // gets its own context and its own Playground boot per Blueprint.
@@ -379,12 +380,25 @@ async function main() {
     console.log(`Shooting ${list.length} ${variant.name} screenshot(s)`);
     const context = await browser.newContext(variant.context);
     for (const slug of list) {
-      await shootBlueprint(context, slug, variant);
+      // One Blueprint failing (Playground slow, a step timing out) must not
+      // abort the run: that would throw away every screenshot already taken
+      // and the next run would start from scratch. Log it and move on; the
+      // file stays missing, so the next run retries just that one.
+      try {
+        await shootBlueprint(context, slug, variant);
+      } catch (e) {
+        failures.push(`${slug} (${variant.name})`);
+        console.log(`::warning::Failed to shoot ${slug} (${variant.name}): ${(e as Error).message}`);
+      }
     }
     await context.close();
   }
 
   await browser.close();
+
+  if (failures.length > 0) {
+    console.log(`::warning::${failures.length} screenshot(s) failed and will be retried next run: ${failures.join(', ')}`);
+  }
 }
 
 main().catch((e) => {

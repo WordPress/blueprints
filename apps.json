@@ -88,7 +88,8 @@
 		"description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Travel"],
-		"icon": "dashicons-location-alt"
+		"icon": "dashicons-location-alt",
+		"replaces": ["travel-app"]
 	},
 	"blueprints/wordcamp-companion/blueprint.json": {
 		"title": "WordCamp Companion",

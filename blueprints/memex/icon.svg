@@ -6,7 +6,7 @@
 			<stop offset="100%" stop-color="#9333ea"/>
 		</linearGradient>
 	</defs>
-	<rect x="0" y="0" width="128" height="128" rx="28" fill="url(#memex-bg)"/>
+	<rect x="0" y="0" width="128" height="128" rx="0" fill="url(#memex-bg)"/>
 	<!-- Connection graph: three nodes, bi-directional edges — the memex metaphor. -->
 	<g stroke="#ffffff" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.55">
 		<line x1="40" y1="44" x2="88" y2="44"/>

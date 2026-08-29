@@ -1,3 +1,6 @@
 {
-	"icon": "dashicons-food"
+	"icon": "dashicons-food",
+	"icon_background": "linear-gradient(135deg, #f7971e, #ffd200)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

@@ -1,3 +1,6 @@
 {
-	"icon": "dashicons-format-status"
+	"icon": "dashicons-format-status",
+	"icon_background": "linear-gradient(135deg, #00b09b, #96c93d)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

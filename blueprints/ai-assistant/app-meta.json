@@ -1,3 +1,6 @@
 {
-	"icon": "dashicons-format-chat"
+	"icon": "dashicons-format-chat",
+	"icon_background": "linear-gradient(135deg, #8e2de2, #4a00e0)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

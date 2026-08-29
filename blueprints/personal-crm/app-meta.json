@@ -1,3 +1,6 @@
 {
-	"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-crm/icon.svg"
+	"icon": "dashicons-id-alt",
+	"icon_background": "linear-gradient(135deg, #4776e6, #8e54e9)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

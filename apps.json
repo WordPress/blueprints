@@ -4,7 +4,10 @@
 		"description": "AI-powered chat interface to modify your WordPress to your liking. Bring your own key or use a local LLM",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "AI"],
-		"icon": "dashicons-format-chat"
+		"icon": "dashicons-format-chat",
+		"icon_background": "linear-gradient(135deg, #8e2de2, #4a00e0)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/apiary-press/blueprint.json": {
 		"title": "Apiary Press",
@@ -18,42 +21,60 @@
 		"description": "Import media from Beeper chats and create blog posts. Requires Beeper Desktop running.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Media"],
-		"icon": "dashicons-format-status"
+		"icon": "dashicons-format-status",
+		"icon_background": "linear-gradient(135deg, #00b09b, #96c93d)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/post-collection/blueprint.json": {
 		"title": "Collect Posts from the Web",
 		"description": "Use the Post Collection Plugin to save articles from around the web",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],
-		"icon": "dashicons-book"
+		"icon": "dashicons-book",
+		"icon_background": "linear-gradient(135deg, #614385, #516395)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/cookbook/blueprint.json": {
 		"title": "Cookbook",
 		"description": "Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],
-		"icon": "dashicons-food"
+		"icon": "dashicons-food",
+		"icon_background": "linear-gradient(135deg, #f7971e, #ffd200)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/familypedia/blueprint.json": {
 		"title": "Familypedia",
 		"description": "Like Wikipedia, but private and just for your family. Each relative gets a page for their story and photos, with calendar and birthdays generated automatically. Compatible with other family tree apps via GEDCOM import/export.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],
-		"icon": "dashicons-groups"
+		"icon": "dashicons-groups",
+		"icon_background": "linear-gradient(135deg, #11998e, #38ef7d)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/flight-log/blueprint.json": {
 		"title": "Flight Log",
 		"description": "A private flight log and statistics app for WordPress.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Travel"],
-		"icon": "dashicons-airplane"
+		"icon": "dashicons-airplane",
+		"icon_background": "linear-gradient(135deg, #2980b9, #6dd5fa)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/learn-app/blueprint.json": {
 		"title": "Learn WordPress",
 		"description": "A personal study helper for Learn WordPress courses with course plans, lesson checklists, dates, and progress tracking.",
 		"author": "WordPress",
 		"categories": ["Apps", "Education"],
-		"icon": "dashicons-welcome-learn-more"
+		"icon": "dashicons-welcome-learn-more",
+		"icon_background": "linear-gradient(135deg, #1e3c72, #2a5298)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/memex/blueprint.json": {
 		"title": "Memex",
@@ -67,7 +88,10 @@
 		"description": "Manage your contacts and relationships directly from WordPress",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],
-		"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/personal-crm/icon.svg"
+		"icon": "dashicons-id-alt",
+		"icon_background": "linear-gradient(135deg, #4776e6, #8e54e9)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/playground-builder/blueprint.json": {
 		"title": "Playground Builder",
@@ -89,14 +113,20 @@
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Travel"],
 		"icon": "dashicons-location-alt",
-		"replaces": ["travel-app"]
+		"replaces": ["travel-app"],
+		"icon_background": "linear-gradient(135deg, #ee0979, #ff6a00)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/wordcamp-companion/blueprint.json": {
 		"title": "WordCamp Companion",
 		"description": "A tool to help you plan your WordCamp attendance.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "WordPress"],
-		"icon": "dashicons-schedule"
+		"icon": "dashicons-schedule",
+		"icon_background": "linear-gradient(135deg, #0073aa, #00a0d2)",
+		"icon_color": "#fff",
+		"icon_shadow": true
 	},
 	"blueprints/wordopedia/blueprint.json": {
 		"title": "Wordopedia",

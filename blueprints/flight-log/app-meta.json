@@ -1,3 +1,6 @@
 {
-	"icon": "dashicons-airplane"
+	"icon": "dashicons-airplane",
+	"icon_background": "linear-gradient(135deg, #2980b9, #6dd5fa)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

@@ -1,4 +1,9 @@
 {
 	"icon": "dashicons-location-alt",
-	"replaces": ["travel-app"]
+	"replaces": [
+		"travel-app"
+	],
+	"icon_background": "linear-gradient(135deg, #ee0979, #ff6a00)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

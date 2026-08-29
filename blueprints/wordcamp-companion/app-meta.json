@@ -1,3 +1,6 @@
 {
-	"icon": "dashicons-schedule"
+	"icon": "dashicons-schedule",
+	"icon_background": "linear-gradient(135deg, #0073aa, #00a0d2)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

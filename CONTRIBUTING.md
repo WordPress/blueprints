@@ -75,6 +75,19 @@ Here's an example:
 
 A Blueprint in the `Apps` category can declare an icon for the My Apps App Store in an `app-meta.json` file next to `blueprint.json`. The `icon` is either a Dashicon name (`"dashicons-book"`), a short emoji, or a URL.
 
+A Dashicon or emoji on its own sits on a plain white tile. Give it a look of its own with `icon_background` (a CSS colour or gradient), `icon_color` (the glyph colour) and `icon_shadow` (`true` for a soft glyph shadow, or a CSS `text-shadow` value):
+
+```json
+{
+	"icon": "dashicons-food",
+	"icon_background": "linear-gradient(135deg, #f7971e, #ffd200)",
+	"icon_color": "#fff",
+	"icon_shadow": true
+}
+```
+
+Use the same values the plugin passes to the launcher (wp-app's `app_icon_background` / `app_icon_color` / `app_icon_shadow`), so the App Store tile and the installed app's tile match.
+
 When the icon really lives in the plugin's own repository, point `icon` at it there — you don't need to vendor the file yourself:
 
 ```json

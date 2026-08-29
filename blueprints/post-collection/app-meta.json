@@ -1,3 +1,6 @@
 {
-	"icon": "dashicons-book"
+	"icon": "dashicons-book",
+	"icon_background": "linear-gradient(135deg, #614385, #516395)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

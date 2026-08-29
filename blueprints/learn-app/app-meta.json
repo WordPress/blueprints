@@ -1,3 +1,6 @@
 {
-	"icon": "dashicons-welcome-learn-more"
+	"icon": "dashicons-welcome-learn-more",
+	"icon_background": "linear-gradient(135deg, #1e3c72, #2a5298)",
+	"icon_color": "#fff",
+	"icon_shadow": true
 }

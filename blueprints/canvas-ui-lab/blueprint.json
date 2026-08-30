@@ -42,6 +42,10 @@
       }
     },
     {
+      "step": "mkdir",
+      "path": "wordpress/wp-content/uploads"
+    },
+    {
       "step": "writeFile",
       "path": "wordpress/wp-content/uploads/01-design-tokens.jpg",
       "data": {

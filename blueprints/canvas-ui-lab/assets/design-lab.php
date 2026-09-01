@@ -11,47 +11,45 @@ add_action('wp_head', function() {
             -webkit-font-smoothing: antialiased; 
         } 
 
-        /* Forzar header a ocupar el 100% de ancho con alineación opuesta en extremos */
+        /* Header limpio y centrado verticalmente */
         header, 
-        .wp-block-template-part,
-        header .wp-block-group,
-        header .is-layout-flex {
+        .wp-block-template-part {
             background-color: #ffffff !important;
             background: #ffffff !important;
             color: #0f172a !important;
             box-shadow: none !important;
             text-shadow: none !important;
-            max-width: 100% !important;
             width: 100% !important;
-        }
-
-        header {
-            padding: 20px 48px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            min-height: 70px !important;
             box-sizing: border-box !important;
         }
 
-        /* Contenedores internos de WordPress centrados verticalmente */
-        header > div, 
-        header .wp-block-group {
+        header {
+            padding: 18px 48px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            min-height: 65px !important;
+        }
+
+        /* Resetear los contenedores internos del tema */
+        header .wp-block-group,
+        header .is-layout-flex {
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
             width: 100% !important;
             margin: 0 !important;
             padding: 0 !important;
+            background: transparent !important;
         }
 
-        /* Ocultar el enlace repetido */
+        /* Ocultar enlace duplicado a la galería */
         .wp-block-navigation-item:has(a[href*="design-system-gallery"]),
         .wp-block-navigation-item:nth-child(1) {
             display: none !important;
         }
 
-        /* Empujar menú de navegación totalmente a la derecha */
+        /* Navegación al extremo derecho */
         .wp-block-navigation {
             margin-left: auto !important;
             display: flex !important;
@@ -66,8 +64,15 @@ add_action('wp_head', function() {
             list-style: none !important;
         }
 
-        /* Tipografía más grande y alineada verticalmente */
-        .wp-block-site-title,
+        /* Tipografía visible y alineada verticalmente */
+        .wp-block-site-title {
+            margin: 0 !important;
+            padding: 0 !important;
+            line-height: 1 !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
         .wp-block-site-title a,
         .wp-block-navigation .wp-block-navigation-item__label,
         .wp-block-navigation a {
@@ -76,9 +81,8 @@ add_action('wp_head', function() {
             font-weight: 700 !important;
             text-decoration: none !important;
             font-size: 1.15rem !important;
-            line-height: 1 !important;
-            display: inline-flex !important;
-            align-items: center !important;
+            line-height: 1.2 !important;
+            display: inline-block !important;
             margin: 0 !important;
         }
 

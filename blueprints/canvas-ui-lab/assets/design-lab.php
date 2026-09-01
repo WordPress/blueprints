@@ -11,41 +11,63 @@ add_action('wp_head', function() {
             -webkit-font-smoothing: antialiased; 
         } 
 
-        /* Header blanco estructurado con título a la izquierda y menú a la derecha */
+        /* Forzar header a ocupar el 100% de ancho con alineación opuesta en extremos */
         header, 
         .wp-block-template-part,
-        header * {
+        header .wp-block-group,
+        header .is-layout-flex {
             background-color: #ffffff !important;
             background: #ffffff !important;
             color: #0f172a !important;
             box-shadow: none !important;
             text-shadow: none !important;
+            max-width: 100% !important;
+            width: 100% !important;
         }
 
         header {
-            padding: 16px 32px !important;
+            padding: 20px 48px !important;
             display: flex !important;
             align-items: center !important;
             justify-content: space-between !important;
-            min-height: 60px !important;
-            width: 100% !important;
+            min-height: 70px !important;
             box-sizing: border-box !important;
         }
 
-        /* Ocultar el enlace duplicado de la galería en el menú */
+        /* Contenedores internos de WordPress centrados verticalmente */
+        header > div, 
+        header .wp-block-group {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            width: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        /* Ocultar el enlace repetido */
         .wp-block-navigation-item:has(a[href*="design-system-gallery"]),
         .wp-block-navigation-item:nth-child(1) {
             display: none !important;
         }
 
-        /* Empujar la navegación (Sample Page) a la derecha */
-        .wp-block-navigation,
-        .wp-block-navigation__container {
+        /* Empujar menú de navegación totalmente a la derecha */
+        .wp-block-navigation {
             margin-left: auto !important;
             display: flex !important;
-            gap: 20px !important;
+            align-items: center !important;
         }
 
+        .wp-block-navigation__container {
+            display: flex !important;
+            align-items: center !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            list-style: none !important;
+        }
+
+        /* Tipografía más grande y alineada verticalmente */
+        .wp-block-site-title,
         .wp-block-site-title a,
         .wp-block-navigation .wp-block-navigation-item__label,
         .wp-block-navigation a {
@@ -53,7 +75,11 @@ add_action('wp_head', function() {
             background: transparent !important;
             font-weight: 700 !important;
             text-decoration: none !important;
-            font-size: 0.95rem !important;
+            font-size: 1.15rem !important;
+            line-height: 1 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            margin: 0 !important;
         }
 
         .entry-title, 

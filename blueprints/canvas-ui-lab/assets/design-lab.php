@@ -11,7 +11,7 @@ add_action('wp_head', function() {
             -webkit-font-smoothing: antialiased; 
         } 
 
-        /* Header limpio y centrado verticalmente */
+        /* Header blanco con elementos uno al lado del otro */
         header, 
         .wp-block-template-part {
             background-color: #ffffff !important;
@@ -19,60 +19,39 @@ add_action('wp_head', function() {
             color: #0f172a !important;
             box-shadow: none !important;
             text-shadow: none !important;
-            width: 100% !important;
-            box-sizing: border-box !important;
         }
 
         header {
-            padding: 18px 48px !important;
+            padding: 16px 32px !important;
             display: flex !important;
+            flex-direction: row !important;
             align-items: center !important;
-            justify-content: space-between !important;
-            min-height: 65px !important;
+            justify-content: flex-start !important;
+            gap: 32px !important;
+            min-height: 60px !important;
         }
 
-        /* Resetear los contenedores internos del tema */
         header .wp-block-group,
-        header .is-layout-flex {
+        header .is-layout-flex,
+        header nav,
+        header ul {
             display: flex !important;
+            flex-direction: row !important;
             align-items: center !important;
-            justify-content: space-between !important;
-            width: 100% !important;
+            gap: 32px !important;
             margin: 0 !important;
             padding: 0 !important;
             background: transparent !important;
+            list-style: none !important;
         }
 
-        /* Ocultar enlace duplicado a la galería */
+        /* Ocultar solo el enlace duplicado de la galería */
         .wp-block-navigation-item:has(a[href*="design-system-gallery"]),
         .wp-block-navigation-item:nth-child(1) {
             display: none !important;
         }
 
-        /* Navegación al extremo derecho */
-        .wp-block-navigation {
-            margin-left: auto !important;
-            display: flex !important;
-            align-items: center !important;
-        }
-
-        .wp-block-navigation__container {
-            display: flex !important;
-            align-items: center !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            list-style: none !important;
-        }
-
-        /* Tipografía visible y alineada verticalmente */
-        .wp-block-site-title {
-            margin: 0 !important;
-            padding: 0 !important;
-            line-height: 1 !important;
-            display: flex !important;
-            align-items: center !important;
-        }
-
+        .wp-block-site-title,
         .wp-block-site-title a,
         .wp-block-navigation .wp-block-navigation-item__label,
         .wp-block-navigation a {
@@ -80,7 +59,7 @@ add_action('wp_head', function() {
             background: transparent !important;
             font-weight: 700 !important;
             text-decoration: none !important;
-            font-size: 1.15rem !important;
+            font-size: 1rem !important;
             line-height: 1.2 !important;
             display: inline-block !important;
             margin: 0 !important;

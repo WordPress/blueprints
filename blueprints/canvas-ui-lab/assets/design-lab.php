@@ -11,7 +11,7 @@ add_action('wp_head', function() {
             -webkit-font-smoothing: antialiased; 
         } 
 
-        /* Header blanco con elementos uno al lado del otro */
+        /* Header blanco limpio sin navegación secundaria */
         header, 
         .wp-block-template-part {
             background-color: #ffffff !important;
@@ -24,42 +24,25 @@ add_action('wp_head', function() {
         header {
             padding: 16px 32px !important;
             display: flex !important;
-            flex-direction: row !important;
             align-items: center !important;
             justify-content: flex-start !important;
-            gap: 32px !important;
             min-height: 60px !important;
         }
 
-        header .wp-block-group,
-        header .is-layout-flex,
+        /* Ocultar cualquier menú de navegación o enlace secundario */
         header nav,
-        header ul {
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            gap: 32px !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            background: transparent !important;
-            list-style: none !important;
-        }
-
-        /* Ocultar solo el enlace duplicado de la galería */
-        .wp-block-navigation-item:has(a[href*="design-system-gallery"]),
-        .wp-block-navigation-item:nth-child(1) {
+        header .wp-block-navigation,
+        header .wp-block-navigation-item {
             display: none !important;
         }
 
         .wp-block-site-title,
-        .wp-block-site-title a,
-        .wp-block-navigation .wp-block-navigation-item__label,
-        .wp-block-navigation a {
+        .wp-block-site-title a {
             color: #0f172a !important;
             background: transparent !important;
             font-weight: 700 !important;
             text-decoration: none !important;
-            font-size: 1rem !important;
+            font-size: 1.125rem !important;
             line-height: 1.2 !important;
             display: inline-block !important;
             margin: 0 !important;
@@ -158,6 +141,13 @@ add_action('wp_head', function() {
 });
 
 add_action('init', function() {
+    // Eliminar completamente la Sample Page predeterminada de WP si existe
+    $sample_page = get_page_by_path('sample-page');
+    if ($sample_page) {
+        wp_delete_post($sample_page->ID, true);
+    }
+
+    // Reemplazar la página principal
     $existing_id = get_option('design_lab_page_id');
     if ($existing_id && get_post($existing_id)) {
         wp_delete_post($existing_id, true);

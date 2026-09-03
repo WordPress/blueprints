@@ -1,6 +1,3 @@
 {
-	"icon": "dashicons-archive",
-	"icon_background": "linear-gradient(135deg, #5f2c82, #49a09d)",
-	"icon_color": "#fff",
-	"icon_shadow": true
+	"icon": "https://raw.githubusercontent.com/akirk/collectibles/main/assets/icon.svg"
 }

@@ -157,6 +157,17 @@
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/post-collection/screenshot.jpg",
     "featured": false
   },
+  "blueprints/collectibles/blueprint.json": {
+    "title": "Collectibles",
+    "description": "Catalog your collections \u2014 coins, stamps, banknotes, trading cards, records, books, comics, watches, or whatever else you keep in a drawer. Each kind of collection asks for the fields and the grading scale that kind actually uses, and every collection has photos, tags, wishlists and totals.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/collectibles/screenshot.jpg",
+    "featured": false
+  },
   "blueprints/cookbook/blueprint.json": {
     "title": "Cookbook",
     "description": "Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.",
@@ -282,6 +293,17 @@
       "Experiments"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/gutenberg-guidelines/screenshot.jpg",
+    "featured": false
+  },
+  "blueprints/households/blueprint.json": {
+    "title": "Households",
+    "description": "A WordPress app for running a household, or several. A home is a place with its own address: its people, the facts the house needs you to know, the things kept there and what needs doing.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "Productivity"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/households/screenshot.jpg",
     "featured": false
   },
   "blueprints/theme-starter-content/blueprint.json": {

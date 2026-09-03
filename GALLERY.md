@@ -114,6 +114,14 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <br clear="all">
 
 
+<h2>Collectibles</h2>
+<p>Catalog your collections — coins, stamps, banknotes, trading cards, records, books, comics, watches, or whatever else you keep in a drawer. Each kind of collection asks for the fields and the grading scale that kind actually uses, and every collection has photos, tags, wishlists and totals.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/collectibles/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/collectibles/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/collectibles/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/collectibles/screenshot.jpg" alt="Collectibles screenshot" width="400"></p>
+<br clear="all">
+
+
 <h2>Cookbook</h2>
 <p>Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.</p>
 <p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/cookbook/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/cookbook/blueprint.json">Edit</a></small></p>
@@ -207,6 +215,14 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <p><small>By <a href="https://github.com/smithjw1">@smithjw1</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/gutenberg-guidelines/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/7edc4beec9a05bd41b13bc377aa6f6be6fed1552/blueprints/gutenberg-guidelines/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/7edc4beec9a05bd41b13bc377aa6f6be6fed1552/blueprints/gutenberg-guidelines/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/gutenberg-guidelines/screenshot.jpg" alt="Gutenberg Guidelines Experiment enabled screenshot" width="400"></p>
+<br clear="all">
+
+
+<h2>Households</h2>
+<p>A WordPress app for running a household, or several. A home is a place with its own address: its people, the facts the house needs you to know, the things kept there and what needs doing.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/households/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/households/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/households/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/households/screenshot.jpg" alt="Households screenshot" width="400"></p>
 <br clear="all">
 
 

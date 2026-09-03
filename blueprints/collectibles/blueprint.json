@@ -1,0 +1,25 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Collectibles",
+		"description": "Catalog your collections — coins, stamps, banknotes, trading cards, records, books, comics, watches, or whatever else you keep in a drawer. Each kind of collection asks for the fields and the grading scale that kind actually uses, and every collection has photos, tags, wishlists and totals.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "Productivity"]
+	},
+	"landingPage": "/collectibles/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/collectibles",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "collectibles"
+			}
+		}
+	]
+}

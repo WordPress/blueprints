@@ -36,6 +36,16 @@
 		"icon_color": "#fff",
 		"icon_shadow": true
 	},
+	"blueprints/collectibles/blueprint.json": {
+		"title": "Collectibles",
+		"description": "Catalog your collections — coins, stamps, banknotes, trading cards, records, books, comics, watches, or whatever else you keep in a drawer. Each kind of collection asks for the fields and the grading scale that kind actually uses, and every collection has photos, tags, wishlists and totals.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "Productivity"],
+		"icon": "dashicons-archive",
+		"icon_background": "linear-gradient(135deg, #5f2c82, #49a09d)",
+		"icon_color": "#fff",
+		"icon_shadow": true
+	},
 	"blueprints/cookbook/blueprint.json": {
 		"title": "Cookbook",
 		"description": "Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.",
@@ -63,6 +73,16 @@
 		"categories": ["Apps", "Travel"],
 		"icon": "dashicons-airplane",
 		"icon_background": "linear-gradient(135deg, #2980b9, #6dd5fa)",
+		"icon_color": "#fff",
+		"icon_shadow": true
+	},
+	"blueprints/households/blueprint.json": {
+		"title": "Households",
+		"description": "A WordPress app for running a household, or several. A home is a place with its own address: its people, the facts the house needs you to know, the things kept there and what needs doing.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "Productivity"],
+		"icon": "dashicons-admin-home",
+		"icon_background": "linear-gradient(135deg, #c31432, #240b36)",
 		"icon_color": "#fff",
 		"icon_shadow": true
 	},

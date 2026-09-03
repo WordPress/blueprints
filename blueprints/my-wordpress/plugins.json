@@ -101,8 +101,8 @@
 	"webmcp-abilities": {
 		"github": "akirk/webmcp-abilities",
 		"title": "WebMCP Abilities",
-		"author": "Code Atlantic",
-		"note": "Offers the Abilities your site has registered to an AI agent running in the browser, so Chrome 146+ can discover and invoke them on the page you are on.",
+		"author": "Code Atlantic, forked by Alex Kirk",
+		"note": "Offers the Abilities your site has registered to an AI agent running in the browser, so Chrome 146+ can discover and invoke them on the page you are on. Installed from Alex Kirk's fork, which fixes tool discovery, brings the bridge into wp-admin as well as the front end, and packages cleanly for an install from GitHub.",
 		"categories": ["AI"],
 		"landing_page": "/wp-admin/options-general.php?page=webmcp-abilities"
 	},

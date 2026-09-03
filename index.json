@@ -684,6 +684,19 @@
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/beta-rc/screenshot.jpg",
     "featured": false
   },
+  "blueprints/wp-debug-lab/blueprint.json": {
+    "title": "WordPress Debug & Performance Lab",
+    "description": "Custom sandbox blueprint for real-time PHP diagnostics, database stress testing, hooks inspection, and memory limit analysis.",
+    "author": "Damianponte",
+    "categories": [
+      "debugging",
+      "performance",
+      "developer environment"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/b3e429d014eee5c60ebe29741a1d5d5a42a99f27/blueprints/wp-debug-lab/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/b3e429d014eee5c60ebe29741a1d5d5a42a99f27/blueprints/wp-debug-lab/screenshot-mobile.jpg",
+    "featured": false
+  },
   "blueprints/wordopedia/blueprint.json": {
     "title": "Wordopedia",
     "description": "Search, browse, and save Wikipedia articles and snippets.",

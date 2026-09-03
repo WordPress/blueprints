@@ -506,6 +506,14 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <br clear="all">
 
 
+<h2>WordPress Debug & Performance Lab</h2>
+<p>Custom sandbox blueprint for real-time PHP diagnostics, database stress testing, hooks inspection, and memory limit analysis.</p>
+<p><small>By <a href="https://github.com/Damianponte">@Damianponte</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wp-debug-lab/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b3e429d014eee5c60ebe29741a1d5d5a42a99f27/blueprints/wp-debug-lab/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b3e429d014eee5c60ebe29741a1d5d5a42a99f27/blueprints/wp-debug-lab/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/wp-debug-lab/screenshot.jpg" alt="WordPress Debug & Performance Lab screenshot" width="400"></p>
+<br clear="all">
+
+
 <h2>Wordopedia</h2>
 <p>Search, browse, and save Wikipedia articles and snippets.</p>
 <p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wordopedia/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/wordopedia/blueprint.json">Edit</a></small></p>

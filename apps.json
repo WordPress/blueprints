@@ -41,10 +41,7 @@
 		"description": "Catalog your collections — coins, stamps, banknotes, trading cards, records, books, comics, watches, or whatever else you keep in a drawer. Each kind of collection asks for the fields and the grading scale that kind actually uses, and every collection has photos, tags, wishlists and totals.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],
-		"icon": "dashicons-archive",
-		"icon_background": "linear-gradient(135deg, #5f2c82, #49a09d)",
-		"icon_color": "#fff",
-		"icon_shadow": true
+		"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/collectibles/icon.svg"
 	},
 	"blueprints/cookbook/blueprint.json": {
 		"title": "Cookbook",
@@ -82,7 +79,7 @@
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],
 		"icon": "dashicons-admin-home",
-		"icon_background": "linear-gradient(135deg, #c31432, #240b36)",
+		"icon_background": "linear-gradient(135deg, #9b5d2f, #d29561)",
 		"icon_color": "#fff",
 		"icon_shadow": true
 	},

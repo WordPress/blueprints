@@ -1,6 +1,6 @@
 {
 	"icon": "dashicons-admin-home",
-	"icon_background": "linear-gradient(135deg, #c31432, #240b36)",
+	"icon_background": "linear-gradient(135deg, #9b5d2f, #d29561)",
 	"icon_color": "#fff",
 	"icon_shadow": true
 }

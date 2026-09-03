@@ -8,6 +8,7 @@
       "Personal"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/portfolio-vueo/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/portfolio-vueo/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/brewcommerce/blueprint.json": {
@@ -19,6 +20,7 @@
       "Store"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/e3183200f04bac17b650ef303be934a0be5fe957/blueprints/brewcommerce/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/brewcommerce/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/friends-cors/blueprint.json": {
@@ -30,6 +32,7 @@
       "social web"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/friends-cors/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/friends-cors/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/news-spiel/blueprint.json": {
@@ -41,6 +44,7 @@
       "News"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/news-spiel/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/news-spiel/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/organization-koinonia/blueprint.json": {
@@ -52,6 +56,7 @@
       "Organization"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/organization-koinonia/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/organization-koinonia/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/personal-substrata/blueprint.json": {
@@ -64,6 +69,7 @@
       "Blog"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/personal-substrata/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/personal-substrata/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/personal-readymade/blueprint.json": {
@@ -75,6 +81,7 @@
       "Personal"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/personal-readymade/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/personal-readymade/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/portfolio-grammer/blueprint.json": {
@@ -87,6 +94,7 @@
       "Photography"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/portfolio-grammer/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/portfolio-grammer/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/news-piel/blueprint.json": {
@@ -99,6 +107,7 @@
       "Blog"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/news-piel/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/news-piel/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/organization-kentwood/blueprint.json": {
@@ -111,6 +120,7 @@
       "Education"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/organization-kentwood/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/organization-kentwood/screenshot-mobile.jpg",
     "featured": true
   },
   "blueprints/ai-assistant/blueprint.json": {
@@ -122,6 +132,7 @@
       "AI"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/d23da0be5f573a6fc96f3aff6ff794bf23b5c3be/blueprints/ai-assistant/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/ai-assistant/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/apiary-press/blueprint.json": {
@@ -133,6 +144,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/apiary-press/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/apiary-press/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/chat-to-blog/blueprint.json": {
@@ -144,6 +156,7 @@
       "Media"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/chat-to-blog/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/chat-to-blog/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/post-collection/blueprint.json": {
@@ -155,6 +168,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/post-collection/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/post-collection/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/collectibles/blueprint.json": {
@@ -166,6 +180,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/collectibles/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/collectibles/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/cookbook/blueprint.json": {
@@ -177,6 +192,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/cookbook/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/cookbook/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/create-block-theme/blueprint.json": {
@@ -188,6 +204,7 @@
       "theme"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/create-block-theme/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/create-block-theme/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/user-meta/blueprint.json": {
@@ -198,6 +215,7 @@
       "meta"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/user-meta/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/user-meta/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/custom-post/blueprint.json": {
@@ -209,6 +227,7 @@
       "CPT"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/custom-post/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/custom-post/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/tt5-demo/blueprint.json": {
@@ -220,6 +239,7 @@
       "default"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/tt5-demo/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/tt5-demo/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/admin-notice/blueprint.json": {
@@ -231,6 +251,7 @@
       "notices"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/admin-notice/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/admin-notice/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/gb-more-experiments/blueprint.json": {
@@ -242,6 +263,7 @@
       "Experiments"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/gb-more-experiments/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/gb-more-experiments/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/familypedia/blueprint.json": {
@@ -253,6 +275,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/familypedia/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/familypedia/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/fancy-dashboard_widget/blueprint.json": {
@@ -260,6 +283,7 @@
     "description": "A blueprint to display statistics about users, posts and comments on a WordPress site.",
     "author": "muryamsultana",
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/fancy-dashboard_widget/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/fancy-dashboard_widget/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/flight-log/blueprint.json": {
@@ -271,6 +295,7 @@
       "Travel"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/flight-log/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/flight-log/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/grid-variations/blueprint.json": {
@@ -282,6 +307,7 @@
       "Experiments"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/grid-variations/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/grid-variations/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/gutenberg-guidelines/blueprint.json": {
@@ -293,6 +319,7 @@
       "Experiments"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/gutenberg-guidelines/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/gutenberg-guidelines/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/households/blueprint.json": {
@@ -304,6 +331,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/households/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/households/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/theme-starter-content/blueprint.json": {
@@ -315,6 +343,7 @@
       "Starter Content"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/theme-starter-content/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/theme-starter-content/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/file-starter-content/blueprint.json": {
@@ -326,6 +355,7 @@
       "Starter Content"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/file-starter-content/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/file-starter-content/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/translations/blueprint.json": {
@@ -336,6 +366,7 @@
       "core"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/translations/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/translations/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/install-plugin-from-gist/blueprint.json": {
@@ -346,6 +377,7 @@
       "plugins"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/install-plugin-from-gist/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/install-plugin-from-gist/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/latest-gutenberg/blueprint.json": {
@@ -356,6 +388,7 @@
       "plugins"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/latest-gutenberg/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/latest-gutenberg/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/learn-app/blueprint.json": {
@@ -367,6 +400,7 @@
       "Education"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/e2c00fbaedfa72a344457eac1c548b8cef91ff50/blueprints/learn-app/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/learn-app/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/install-activate-setup-theme-from-gh-repo/blueprint.json": {
@@ -377,6 +411,7 @@
       "theme"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/install-activate-setup-theme-from-gh-repo/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/install-activate-setup-theme-from-gh-repo/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/login-as-editor/blueprint.json": {
@@ -388,6 +423,7 @@
       "Role"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/login-as-editor/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/login-as-editor/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/blocky-formats/blueprint.json": {
@@ -398,6 +434,7 @@
       "block-editor"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/blocky-formats/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/blocky-formats/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/memex/blueprint.json": {
@@ -409,6 +446,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/memex/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/memex/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/woo-shipping/blueprint.json": {
@@ -421,6 +459,7 @@
       "flat_rate"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/woo-shipping/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/woo-shipping/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/my-wordpress/blueprint.json": {
@@ -432,6 +471,7 @@
       "Onboarding"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/caa7ea840c3e6707ee9f70deae73a7c37aa885ae/blueprints/my-wordpress/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/my-wordpress/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/personal-crm/blueprint.json": {
@@ -443,6 +483,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8cd702e159bb2db8159446d34ba6e7966211f733/blueprints/personal-crm/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/personal-crm/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/playground-builder/blueprint.json": {
@@ -454,6 +495,7 @@
       "Development"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/e2c00fbaedfa72a344457eac1c548b8cef91ff50/blueprints/playground-builder/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/playground-builder/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/welcome/blueprint.json": {
@@ -464,6 +506,7 @@
       "meta"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/welcome/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/welcome/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/use-pretty-permalinks/blueprint.json": {
@@ -474,6 +517,7 @@
       "Settings"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/use-pretty-permalinks/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/use-pretty-permalinks/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/rss-reader/blueprint.json": {
@@ -485,6 +529,7 @@
       "Social"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/rss-reader/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/rss-reader/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/reset-data-and-import-content/blueprint.json": {
@@ -500,6 +545,7 @@
       "content"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/reset-data-and-import-content/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/reset-data-and-import-content/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/redirect-upload-requests/blueprint.json": {
@@ -510,6 +556,7 @@
       "Settings"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/redirect-upload-requests/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/redirect-upload-requests/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/set-admin-color-scheme/blueprint.json": {
@@ -520,6 +567,7 @@
       "user meta"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/set-admin-color-scheme/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/set-admin-color-scheme/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/showcase-plugin-with-media/blueprint.json": {
@@ -533,6 +581,7 @@
       "images"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/showcase-plugin-with-media/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/showcase-plugin-with-media/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/stylish-press/blueprint.json": {
@@ -544,6 +593,7 @@
       "Site"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/stylish-press/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/stylish-press/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/symfony-package-radar/blueprint.json": {
@@ -555,6 +605,7 @@
       "Demo"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/eac8ac5407ca1762921c6b6ffa1bff9a1fda1d18/blueprints/symfony-package-radar/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/symfony-package-radar/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/theme-review-environment/blueprint.json": {
@@ -566,6 +617,7 @@
       "Test Environment"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/33461e37bffae081be1b1c1dd81e3742111fd933/blueprints/theme-review-environment/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/theme-review-environment/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/theme-a11y-test/blueprint.json": {
@@ -577,6 +629,7 @@
       "content"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/theme-a11y-test/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/theme-a11y-test/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/traveler/blueprint.json": {
@@ -588,6 +641,7 @@
       "Travel"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/d23da0be5f573a6fc96f3aff6ff794bf23b5c3be/blueprints/traveler/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/traveler/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {
@@ -599,6 +653,7 @@
       "wpgraphql"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/wpgraphql/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/wpgraphql/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/posts-via-wp-cli/blueprint.json": {
@@ -610,6 +665,7 @@
       "wpcli"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/posts-via-wp-cli/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/posts-via-wp-cli/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/wpcli-post-with-image/blueprint.json": {
@@ -621,6 +677,7 @@
       "wpcli"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/wpcli-post-with-image/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/wpcli-post-with-image/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/pwa-weather-app/blueprint.json": {
@@ -628,6 +685,7 @@
     "description": "A blueprint to connect weather API and show data as shortcode on a WordPress site. Requires your own OpenWeatherMap API key.",
     "author": "muryamsultana",
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/pwa-weather-app/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/pwa-weather-app/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/woocommerce-test-store-astra/blueprint.json": {
@@ -639,6 +697,7 @@
       "Store"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-astra/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/woocommerce-test-store-astra/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/woocommerce-test-store-hello-elementor/blueprint.json": {
@@ -650,6 +709,7 @@
       "Store"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/8d0b3bc20cf5d919aeff927f5dd6856d357f5058/blueprints/woocommerce-test-store-hello-elementor/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/woocommerce-test-store-hello-elementor/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/woocommerce-product-feed/blueprint.json": {
@@ -661,6 +721,7 @@
       "Content"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/woocommerce-product-feed/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/woocommerce-product-feed/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/wordcamp-companion/blueprint.json": {
@@ -672,6 +733,7 @@
       "WordPress"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/wordcamp-companion/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/wordcamp-companion/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/beta-rc/blueprint.json": {
@@ -682,6 +744,7 @@
       "Testing"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/beta-rc/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/beta-rc/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/wp-debug-lab/blueprint.json": {
@@ -706,6 +769,7 @@
       "Productivity"
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/wordopedia/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/wordopedia/screenshot-mobile.jpg",
     "featured": false
   }
 }

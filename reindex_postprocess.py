@@ -112,6 +112,9 @@ def build_json_index():
                         else:
                             screenshot_url = build_raw_repo_url(screenshot_path)
                         meta_with_media['screenshot_url'] = screenshot_url
+                    mobile_path = os.path.join(os.path.dirname(path), 'screenshot-mobile.jpg').replace('\\', '/')
+                    if os.path.exists(mobile_path):
+                        meta_with_media['screenshot_mobile_url'] = build_raw_repo_url(mobile_path)
                     # Add featured flag based on whether the title is in highlighted_blueprints
                     meta_with_media['featured'] = meta.get('title', '') in highlighted_blueprints
                     index[path] = meta_with_media

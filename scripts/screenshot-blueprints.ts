@@ -48,6 +48,44 @@ const RAW_REPO =
 const RAW_REF =
   process.env.BLUEPRINTS_RAW_REF || pullRequestBlueprintSource?.ref || REF;
 
+// Each Blueprint is shot once per variant. The desktop shot is the classic
+// gallery image; the mobile shot shows the same Blueprint at phone width.
+type Variant = {
+  name: string;
+  filename: string;
+  context: Parameters<import('playwright').Browser['newContext']>[0];
+  // The desktop shot is zoomed so a 1920px page reads as a thumbnail; at phone
+  // width that would crop the layout, so mobile is shot at 1:1.
+  zoom: string | null;
+  // Where to park the mouse so it doesn't hover the admin-bar logo at (0,0).
+  mouseRest: { x: number; y: number };
+};
+
+const VARIANTS: Variant[] = [
+  {
+    name: 'desktop',
+    filename: 'screenshot.jpg',
+    context: {
+      ...devices['Desktop Chrome'],
+      deviceScaleFactor: 1,
+      viewport: { width: 1920, height: 1080 },
+    },
+    zoom: '150%',
+    mouseRest: { x: 1900, y: 1070 },
+  },
+  {
+    name: 'mobile',
+    filename: 'screenshot-mobile.jpg',
+    context: {
+      ...devices['iPhone 13'],
+      deviceScaleFactor: 2,
+      viewport: { width: 390, height: 844 },
+    },
+    zoom: null,
+    mouseRest: { x: 380, y: 830 },
+  },
+];
+
 async function ensureDir(p: string) {
   await fs.mkdir(p, { recursive: true });
 }
@@ -149,11 +187,14 @@ async function fileExists(p: string | null): Promise<boolean> {
   }
 }
 
-async function hasScreenshot(slug: string): Promise<boolean> {
+async function hasScreenshot(slug: string, variant: Variant): Promise<boolean> {
   // Default gallery behavior: if meta.screenshot isn't set, it expects `screenshot.jpg`
-  // next to `blueprint.json`.
-  const defaultScreenshot = path.join(BLUEPRINTS_DIR, slug, 'screenshot.jpg');
+  // next to `blueprint.json`; the mobile variant likewise expects `screenshot-mobile.jpg`.
+  const defaultScreenshot = path.join(BLUEPRINTS_DIR, slug, variant.filename);
   if (await fileExists(defaultScreenshot)) return true;
+
+  // meta.screenshot only overrides the desktop image.
+  if (variant.name !== 'desktop') return false;
 
   const bp = await readBlueprint(slug);
   const scr = bp?.meta?.screenshot;
@@ -174,39 +215,19 @@ async function readTitle(slug: string) {
   return bp?.meta?.title ?? slug;
 }
 
-async function main() {
-  const slugs = await listBlueprintSlugs();
-  console.log(`Using Blueprint source: ${RAW_REPO}@${RAW_REF}`);
-
-  // Filter: those without any screenshot yet, plus any this PR touched the
-  // blueprint.json/demo.json of (their existing screenshot may be stale).
-  const forceRegenSlugs = getForceRegenSlugs();
-  const toShoot: string[] = [];
-  for (const slug of slugs) {
-    if (!(await hasScreenshot(slug)) || forceRegenSlugs.has(slug)) {
-      toShoot.push(slug);
-    }
-  }
-  if (toShoot.length === 0) {
-    console.log('All Blueprints already have screenshots. Nothing to do.');
-    return;
-  }
-
-  const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({
-    ...devices['Desktop Chrome'],
-    deviceScaleFactor: 1,
-    viewport: { width: 1920, height: 1080 },
-  });
-
-  for (const slug of toShoot) {
-    const page = await context.newPage();
+async function shootBlueprint(
+  context: import('playwright').BrowserContext,
+  slug: string,
+  variant: Variant
+) {
+  const page = await context.newPage();
+  try {
     // Prefer demo.json when present: it's a blueprint that also seeds sample
     // content, so the screenshot shows the app in use rather than freshly installed.
     const useDemo = await hasDemoJson(slug);
     const sourceUrl = useDemo ? rawFileUrl(slug, 'demo.json') : rawBlueprintUrl(slug);
     if (useDemo) {
-      console.log(`Using demo.json for ${slug} screenshot`);
+      console.log(`Using demo.json for ${slug} ${variant.name} screenshot`);
     }
     const url = `https://playground.wordpress.net/?mode=seamless&blueprint-url=${encodeURIComponent(
       sourceUrl
@@ -225,8 +246,7 @@ async function main() {
     const frame = await frameElement?.contentFrame();
     if (!frame) {
       console.error(`Failed to get frame content for ${slug}`);
-      await page.close();
-      continue;
+      return;
     }
 
     // Wait for the progress bar to NOT exist (not just be hidden) - 5 minute timeout
@@ -245,11 +265,10 @@ async function main() {
     // Get the WordPress iframe's content frame
     const wpFrameElement = await wpFrame.elementHandle();
     const wpContentFrame = await wpFrameElement?.contentFrame();
-    
+
     if (!wpContentFrame) {
       console.error(`Failed to get WordPress frame content for ${slug}`);
-      await page.close();
-      continue;
+      return;
     }
 
     // Wait for WordPress content to be loaded by checking for WordPress-specific indicators
@@ -260,7 +279,7 @@ async function main() {
           // Check for canonical URL
           const canonical = document.querySelector('link[rel="canonical"]');
           if (canonical) return true;
-          
+
           // Check for wp-content in any script or link tags
           const scripts = Array.from(document.querySelectorAll('script[src], link[href]'));
           const hasWpContent = scripts.some(el => {
@@ -268,7 +287,7 @@ async function main() {
             return src && src.includes('/wp-content/');
           });
           if (hasWpContent) return true;
-          
+
           // Check if body has meaningful content
           const body = document.body;
           return body && body.children.length > 0;
@@ -283,21 +302,22 @@ async function main() {
     // Additional wait to ensure visual rendering is complete
     await page.waitForTimeout(2000);
 
-    // Set zoom to 150% on the WordPress content frame
-    try {
-      await wpContentFrame.evaluate(() => {
-        (document.body.style as any).zoom = '150%';
-      });
-      // Wait a bit for zoom to apply
-      await page.waitForTimeout(500);
-    } catch (e) {
-      console.log(`Failed to set zoom for ${slug}, continuing anyway`);
+    if (variant.zoom) {
+      try {
+        await wpContentFrame.evaluate((zoom) => {
+          (document.body.style as any).zoom = zoom;
+        }, variant.zoom);
+        // Wait a bit for zoom to apply
+        await page.waitForTimeout(500);
+      } catch (e) {
+        console.log(`Failed to set zoom for ${slug}, continuing anyway`);
+      }
     }
 
     // The mouse defaults to (0,0), which hovers the WordPress logo in the admin
     // bar and pops open its dropdown. Move it away and close any open menu.
     try {
-      await page.mouse.move(1900, 1070);
+      await page.mouse.move(variant.mouseRest.x, variant.mouseRest.y);
       await wpContentFrame.evaluate(() => {
         document
           .querySelectorAll('#wpadminbar .hover, #wpadminbar .menupop:focus-within')
@@ -310,15 +330,75 @@ async function main() {
     }
 
     // Screenshot the WordPress iframe
-    const blueprintDir = path.join(BLUEPRINTS_DIR, slug);
-    const out = path.join(blueprintDir, 'screenshot.jpg');
+    const out = path.join(BLUEPRINTS_DIR, slug, variant.filename);
     await wpFrame.screenshot({ path: out, type: 'jpeg', quality: 70 });
 
-    console.log(`Shot: ${slug} -> ${path.relative(ROOT, out)}`);
+    console.log(`Shot: ${slug} (${variant.name}) -> ${path.relative(ROOT, out)}`);
+  } finally {
     await page.close();
+  }
+}
+
+async function main() {
+  const slugs = await listBlueprintSlugs();
+  console.log(`Using Blueprint source: ${RAW_REPO}@${RAW_REF}`);
+
+  // Filter: those without a screenshot for the variant yet, plus any this PR
+  // touched the blueprint.json/demo.json of (their existing screenshot may be stale).
+  const forceRegenSlugs = getForceRegenSlugs();
+  // On a pull request, only shoot the Blueprints that PR is about: those it
+  // touched, and those still missing a desktop screenshot. Backfilling every
+  // Blueprint that lacks a newer variant (e.g. mobile) would turn each PR into
+  // a full catalogue run; that happens on workflow_dispatch instead.
+  const isPullRequest = (process.env.GITHUB_EVENT_NAME ?? '').startsWith('pull_request');
+  const desktop = VARIANTS[0];
+  const toShoot = new Map<Variant, string[]>();
+  for (const variant of VARIANTS) {
+    const list: string[] = [];
+    for (const slug of slugs) {
+      const missing = !(await hasScreenshot(slug, variant));
+      const inScope =
+        forceRegenSlugs.has(slug) ||
+        (variant === desktop ? missing : !(await hasScreenshot(slug, desktop)));
+      if (isPullRequest ? inScope : missing || forceRegenSlugs.has(slug)) {
+        list.push(slug);
+      }
+    }
+    if (list.length > 0) toShoot.set(variant, list);
+  }
+  if (toShoot.size === 0) {
+    console.log('All Blueprints already have screenshots. Nothing to do.');
+    return;
+  }
+
+  const browser = await chromium.launch({ headless: true });
+  const failures: string[] = [];
+
+  // Device emulation (isMobile, touch) is fixed per context, so each variant
+  // gets its own context and its own Playground boot per Blueprint.
+  for (const [variant, list] of toShoot) {
+    console.log(`Shooting ${list.length} ${variant.name} screenshot(s)`);
+    const context = await browser.newContext(variant.context);
+    for (const slug of list) {
+      // One Blueprint failing (Playground slow, a step timing out) must not
+      // abort the run: that would throw away every screenshot already taken
+      // and the next run would start from scratch. Log it and move on; the
+      // file stays missing, so the next run retries just that one.
+      try {
+        await shootBlueprint(context, slug, variant);
+      } catch (e) {
+        failures.push(`${slug} (${variant.name})`);
+        console.log(`::warning::Failed to shoot ${slug} (${variant.name}): ${(e as Error).message}`);
+      }
+    }
+    await context.close();
   }
 
   await browser.close();
+
+  if (failures.length > 0) {
+    console.log(`::warning::${failures.length} screenshot(s) failed and will be retried next run: ${failures.join(', ')}`);
+  }
 }
 
 main().catch((e) => {

@@ -462,5 +462,45 @@
 				"description": "Pick a reminder interval per contact (a month, a quarter, a year). When the date comes around, you'll see them on the dashboard with a nudge to reach out."
 			}
 		]
+	},
+	"own-your-reading-life": {
+		"title": "Own Your Reading Life",
+		"tagline": "Your shelves, your ratings, your quotes — on your own site",
+		"description": "Book platforms know everything you read, rate, and highlight — and they use it to sell to you. This workflow rebuilds the whole experience on your own WordPress: shelves with a yearly goal, a notebook of quotes and thoughts per book, and a reader that follows your favorite authors — private by default.",
+		"icon": "📚",
+		"gradient": "linear-gradient(135deg, #7c3aed 0%, #db2777 100%)",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/readforge.json",
+				"title": "Install ReadForge",
+				"description": "Three shelves — Want to Read, Reading, Finished — with drag-and-drop, progress bars, star ratings, and a yearly reading goal that counts every book you finish."
+			},
+			{
+				"type": "note",
+				"title": "Shelve the books around you",
+				"description": "Start with the pile on your nightstand and the three books everyone keeps recommending. Set a yearly goal you'd be happy with — the counter only ever motivates, never shames.",
+				"url": "/books/",
+				"url_label": "Open your shelves"
+			},
+			{
+				"type": "app",
+				"path": "apps/memex.json",
+				"title": "Keep quotes and thoughts in Memex",
+				"description": "One note per book for the passages worth keeping and what you thought when you read them. Backlinks connect books to the ideas and people they remind you of — your highlights stop belonging to a platform."
+			},
+			{
+				"type": "app",
+				"path": "apps/rss-reader.json",
+				"title": "Follow your favorite authors",
+				"optional": true,
+				"description": "Subscribe to author blogs and book-review sites in your own reader. New-release news comes to you without an algorithm deciding what you see."
+			},
+			{
+				"type": "note",
+				"title": "Log progress when you put the book down",
+				"description": "Click the progress bar when you stop reading — it takes two seconds and keeps the Reading shelf honest. When you finish, drag the book to Finished, rate it, and jot the one-line verdict in its Memex note."
+			}
+		]
 	}
 }

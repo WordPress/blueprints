@@ -116,8 +116,8 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Collectibles</h2>
 <p>Catalog your collections — coins, stamps, banknotes, trading cards, records, books, comics, watches, or whatever else you keep in a drawer. Each kind of collection asks for the fields and the grading scale that kind actually uses, and every collection has photos, tags, wishlists and totals.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/collectibles/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/collectibles/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/1fbc221c937530c9b743a241c9d93c86837bef62/blueprints/collectibles/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/collectibles/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/662ddfdbbf43cb9a4ff95b70d8f510065fcce9e7/blueprints/collectibles/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/662ddfdbbf43cb9a4ff95b70d8f510065fcce9e7/blueprints/collectibles/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/collectibles/screenshot.jpg" alt="Collectibles screenshot" width="400"></p>
 <br clear="all">
 

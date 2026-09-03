@@ -508,8 +508,8 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>WordPress Debug & Performance Lab</h2>
 <p>Custom sandbox blueprint for real-time PHP diagnostics, database stress testing, hooks inspection, and memory limit analysis.</p>
-<p><small>By <a href="https://github.com/Damianponte">@Damianponte</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wp-debug-lab/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b3e429d014eee5c60ebe29741a1d5d5a42a99f27/blueprints/wp-debug-lab/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/b3e429d014eee5c60ebe29741a1d5d5a42a99f27/blueprints/wp-debug-lab/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/Damianponte">@Damianponte</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wp-debug-lab/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/0f11812f72a6c20c5937c7b77412543c7eb1d194/blueprints/wp-debug-lab/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/0f11812f72a6c20c5937c7b77412543c7eb1d194/blueprints/wp-debug-lab/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/wp-debug-lab/screenshot.jpg" alt="WordPress Debug & Performance Lab screenshot" width="400"></p>
 <br clear="all">
 

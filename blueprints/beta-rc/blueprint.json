@@ -20,19 +20,19 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/wpaccessibility/a11y-theme-unit-test/master/a11y-theme-unit-test-data.xml"
+				"url": "https://raw.githubusercontent.com/WordPress/blueprints/fix/blueprint-validation-failures/blueprints/beta-rc/a11y-theme-unit-test-data.xml"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/themeunittestdata.wordpress.xml"
+				"url": "https://raw.githubusercontent.com/WordPress/blueprints/fix/blueprint-validation-failures/blueprints/beta-rc/themeunittestdata.wordpress.xml"
 			}
 		},
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
+			"pluginData": {
 				"resource": "wordpress.org/plugins",
 				"slug": "query-monitor"
 			},
@@ -45,7 +45,7 @@
 		},
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
+			"pluginData": {
 				"resource": "wordpress.org/plugins",
 				"slug": "create-block-theme"
 			},
@@ -55,7 +55,7 @@
 		},
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
+			"pluginData": {
 				"resource": "wordpress.org/plugins",
 				"slug": "debug-bar"
 			},
@@ -65,7 +65,7 @@
 		},
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
+			"pluginData": {
 				"resource": "wordpress.org/plugins",
 				"slug": "health-check"
 			},
@@ -75,7 +75,7 @@
 		},
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
+			"pluginData": {
 				"resource": "wordpress.org/plugins",
 				"slug": "test-reports"
 			},
@@ -85,7 +85,7 @@
 		},
 		{
 			"step": "installPlugin",
-			"pluginZipFile": {
+			"pluginData": {
 				"resource": "wordpress.org/plugins",
 				"slug": "user-switching"
 			},

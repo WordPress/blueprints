@@ -437,6 +437,50 @@
 			}
 		]
 	},
+	"move-to-hosting": {
+		"title": "Make this a hosted WordPress",
+		"tagline": "Take what you built here anywhere",
+		"description": "Your my.wordpress.net site lives in this browser's storage — private, but bound to one device. When you want to reach it from your phone, share it publicly, or invite others, download a full backup and restore it on a WordPress host. Because this site is built on WordPress Playground, the backup is the whole site: database, media, plugins, themes and settings, not just an export of your posts. Along the way you'll pick the web address your site will live at.",
+		"icon": "🚀",
+		"gradient": "linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%)",
+		"context": "my-wordpress-net",
+		"steps": [
+			{
+				"type": "note",
+				"title": "Download a full backup of this site",
+				"description": "Start the download right here. The backup is a Playground site ZIP containing every file and the database, so nothing needs to be re-exported or reinstalled on the other side. Building it takes a moment on a large site, and the file then lands in your browser's downloads. Keep it somewhere safe — it is also the right thing to do before trying anything risky here. The same download is always available from the Site Tools icon in the bottom-left corner.",
+				"action": "backup-site"
+			},
+			{
+				"type": "note",
+				"title": "Restore it on a host that accepts site backups",
+				"description": "WordPress.com imports Playground ZIP files directly: start a new site through its migration flow, upload the backup, and it restores content, media, plugins and themes (a full-site import needs a paid plan; content-only import works on free sites). Other hosts often have a similar \"migrate\" or \"restore from backup\" option in their control panel.",
+				"url": "https://wordpress.com/setup/migration-signup",
+				"url_label": "Migrate to WordPress.com"
+			},
+			{
+				"type": "note",
+				"title": "Decide on a web address",
+				"description": "Here your site only has the address in this browser; a hosted site needs one everyone can use. The host offers a free address on its own domain (like yoursite.wordpress.com) that works immediately, or you can register a domain of your own (like yourname.com) — usually the choice you keep for years, so it is worth a moment's thought. Pick a name that fits what the site is about, and be aware that a custom domain costs a small yearly fee and can be changed later; links people already saved will need updating if you do."
+			},
+			{
+				"type": "note",
+				"title": "Check the new site, then let this one go",
+				"description": "Open a few posts on the new host, confirm images load and that Settings → General shows the new address. Once everything is there, the hosted site is the one to keep updating — this browser copy won't sync with it.",
+				"url": "/wp-admin/options-general.php",
+				"url_label": "Open Settings"
+			},
+			{
+				"type": "note",
+				"title": "Prefer a content-only move?",
+				"description": "If your host can't take a full site backup, Tools → Export still gives you a WordPress export file (WXR) with all posts and pages that any WordPress can import. Media and plugins then need to be carried over separately, so use the backup route whenever you can.",
+				"url": "/wp-admin/export.php",
+				"url_label": "Open Export",
+				"optional": true
+			}
+		],
+		"learn_more": "https://wordpress.com/support/import/#import-from-wordpress-playground"
+	},
 	"stay-in-touch": {
 		"title": "Stay in Touch",
 		"tagline": "A private contact directory with reminders",

@@ -1,0 +1,43 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "PostsForge",
+		"description": "An editorial calendar for your posts. See your publishing month at a glance, quick-add draft ideas on any day, and drag posts between days to reschedule.",
+		"author": "muryamsultana",
+		"categories": [
+			"Apps",
+			"Productivity"
+		]
+	},
+	"landingPage": "/calendar/",
+	"preferredVersions": {
+		"php": "8.2",
+		"wp": "latest"
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/postsforge"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/postsforge/postsforge.php",
+			"data": {
+				"resource": "bundled",
+				"path": "/plugin/postsforge.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "postsforge/postsforge.php"
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "PostsForge",
+				"blogdescription": "Plan your publishing month"
+			}
+		}
+	]
+}

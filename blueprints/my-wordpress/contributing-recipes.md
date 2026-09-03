@@ -84,6 +84,23 @@ Use a `note` step for instructions or admin screens:
 }
 ```
 
+Add an `action` to a step when the app can perform it for the reader instead of
+describing where to click. Actions only run inside WordPress Playground, so the
+`description` must still make sense on its own for anyone reading elsewhere:
+
+```json
+{
+	"type": "note",
+	"title": "Download a full backup of this site",
+	"description": "Start the download right here. The same download is always available from the Site Tools icon in the bottom-left corner.",
+	"action": "backup-site"
+}
+```
+
+The only action today is `backup-site`, which asks Playground to zip the whole
+site — files and database — and hand the ZIP to the browser's downloader. An
+optional `action_label` overrides the button label.
+
 Use a `plugin` step for an entry from [blueprints/my-wordpress/plugins.json](https://github.com/WordPress/blueprints/blob/trunk/blueprints/my-wordpress/plugins.json):
 
 ```json

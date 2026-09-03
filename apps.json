@@ -78,7 +78,7 @@
 	},
 	"blueprints/households/blueprint.json": {
 		"title": "Households",
-		"description": "A WordPress app for running a household, or several. A home is a place with its own address: its people, the facts the house needs you to know, the things kept there and what needs doing. People who log in get an account; people who do not — a toddler, a relative you only keep notes about — still get a record, and what travels with them reads the same in every home they belong to.",
+		"description": "A WordPress app for running a household, or several. A home is a place with its own address: its people, the facts the house needs you to know, the things kept there and what needs doing.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],
 		"icon": "dashicons-admin-home",

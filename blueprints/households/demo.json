@@ -2,7 +2,7 @@
 	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
 	"meta": {
 		"title": "Households (Demo)",
-		"description": "A WordPress app for running a household, or several. A home is a place with its own address: its people, the facts the house needs you to know, the things kept there and what needs doing. People who log in get an account; people who do not — a toddler, a relative you only keep notes about — still get a record, and what travels with them reads the same in every home they belong to. Pre-loaded with three homes — two separated parents and a grandparent — and three children who belong to all of them, rotating week on and week off between the parents with a one-off day at the grandparent's. The youngest has no account at all. Member accounts use the password \"demo\".",
+		"description": "A WordPress app for running a household, or several. A home is a place with its own address: its people, the facts the house needs you to know, the things kept there and what needs doing. Pre-loaded with three homes — two separated parents and a grandparent — and three children who belong to all of them, rotating week on and week off between the parents with a one-off day at the grandparent's. The youngest has no account at all. Member accounts use the password \"demo\".",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"]
 	},

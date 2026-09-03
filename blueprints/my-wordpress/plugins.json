@@ -98,6 +98,14 @@
 		"categories": ["Productivity"],
 		"landing_page": "/memex/"
 	},
+	"webmcp-abilities": {
+		"github": "akirk/webmcp-abilities",
+		"title": "WebMCP Abilities",
+		"author": "Code Atlantic",
+		"note": "Offers the Abilities your site has registered to an AI agent running in the browser, so Chrome 146+ can discover and invoke them on the page you are on.",
+		"categories": ["AI"],
+		"landing_page": "/wp-admin/options-general.php?page=webmcp-abilities"
+	},
 	"my-apps": {
 		"note": "A home-screen-style launcher for the apps and admin links you actually use — drag-to-reorder, a built-in app store for one-click blueprint installs, and a mobile-friendly layout.",
 		"categories": ["Productivity"],

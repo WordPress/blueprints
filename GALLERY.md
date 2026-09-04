@@ -378,6 +378,14 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <br clear="all">
 
 
+<h2>Session Planner for WordCamps</h2>
+<p>Plan the WordCamp you are attending: save sessions from the schedule, follow a live timeline through your day, and export your notes.</p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/session-planner-for-wordcamps/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/709f29b9dd21402d11eb61e299d027f376d29063/blueprints/session-planner-for-wordcamps/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/709f29b9dd21402d11eb61e299d027f376d29063/blueprints/session-planner-for-wordcamps/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/session-planner-for-wordcamps/screenshot.jpg" alt="Session Planner for WordCamps screenshot" width="400"></p>
+<br clear="all">
+
+
 <h2>Set the admin color scheme</h2>
 <p>Set the admin color scheme to Modern using the updateUserMeta step.</p>
 <p><small>By <a href="https://github.com/ndiego">@ndiego</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/set-admin-color-scheme/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/set-admin-color-scheme/blueprint.json">Edit</a></small></p>
@@ -487,14 +495,6 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <p><small>By <a href="https://github.com/mujuonly">@mujuonly</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/woocommerce-product-feed/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/woocommerce-product-feed/blueprint.json">Edit</a></small></p>
 <p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/woocommerce-product-feed/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/woocommerce-product-feed/screenshot.jpg" alt="WooCommerce product feed screenshot" width="400"></p>
-<br clear="all">
-
-
-<h2>WordCamp Companion</h2>
-<p>A tool to help you plan your WordCamp attendance.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wordcamp-companion/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/33d0f14c1c330d5e9571081fc160b39362204117/blueprints/wordcamp-companion/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/33d0f14c1c330d5e9571081fc160b39362204117/blueprints/wordcamp-companion/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
-<p align="left"><img src="blueprints/wordcamp-companion/screenshot.jpg" alt="WordCamp Companion screenshot" width="400"></p>
 <br clear="all">
 
 

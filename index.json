@@ -559,6 +559,18 @@
     "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/redirect-upload-requests/screenshot-mobile.jpg",
     "featured": false
   },
+  "blueprints/session-planner-for-wordcamps/blueprint.json": {
+    "title": "Session Planner for WordCamps",
+    "description": "Plan the WordCamp you are attending: save sessions from the schedule, follow a live timeline through your day, and export your notes.",
+    "author": "Alex Kirk",
+    "categories": [
+      "Apps",
+      "WordPress"
+    ],
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/709f29b9dd21402d11eb61e299d027f376d29063/blueprints/session-planner-for-wordcamps/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/709f29b9dd21402d11eb61e299d027f376d29063/blueprints/session-planner-for-wordcamps/screenshot-mobile.jpg",
+    "featured": false
+  },
   "blueprints/set-admin-color-scheme/blueprint.json": {
     "title": "Set the admin color scheme",
     "description": "Set the admin color scheme to Modern using the updateUserMeta step.",
@@ -722,18 +734,6 @@
     ],
     "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/woocommerce-product-feed/screenshot.jpg",
     "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/woocommerce-product-feed/screenshot-mobile.jpg",
-    "featured": false
-  },
-  "blueprints/wordcamp-companion/blueprint.json": {
-    "title": "WordCamp Companion",
-    "description": "A tool to help you plan your WordCamp attendance.",
-    "author": "Alex Kirk",
-    "categories": [
-      "Apps",
-      "WordPress"
-    ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/26507076d7a5042627d039fc2a10af8332295413/blueprints/wordcamp-companion/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/wordcamp-companion/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/beta-rc/blueprint.json": {

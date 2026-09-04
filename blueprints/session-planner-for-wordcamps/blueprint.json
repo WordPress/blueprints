@@ -1,0 +1,29 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Session Planner for WordCamps",
+		"description": "Plan the WordCamp you are attending: save sessions from the schedule, follow a live timeline through your day, and export your notes.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "WordPress"]
+	},
+	"landingPage": "/session-planner-for-wordcamps/",
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/akirk/session-planner-for-wordcamps",
+				"ref": "dist/main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "session-planner-for-wordcamps"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/plugin.php'; $old = 'wordcamp-companion/wordcamp-companion.php'; if ( file_exists( WP_PLUGIN_DIR . '/' . $old ) ) { deactivate_plugins( $old ); $it = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( WP_PLUGIN_DIR . '/wordcamp-companion', FilesystemIterator::SKIP_DOTS ), RecursiveIteratorIterator::CHILD_FIRST ); foreach ( $it as $f ) { $f->isDir() ? rmdir( $f ) : unlink( $f ); } rmdir( WP_PLUGIN_DIR . '/wordcamp-companion' ); }"
+		}
+	]
+}

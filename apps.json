@@ -124,6 +124,17 @@
 		"categories": ["Apps", "Social"],
 		"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/rss-reader/icon.png"
 	},
+	"blueprints/session-planner-for-wordcamps/blueprint.json": {
+		"title": "Session Planner for WordCamps",
+		"description": "Plan the WordCamp you are attending: save sessions from the schedule, follow a live timeline through your day, and export your notes.",
+		"author": "Alex Kirk",
+		"categories": ["Apps", "WordPress"],
+		"icon": "dashicons-schedule",
+		"replaces": ["wordcamp-companion"],
+		"icon_background": "linear-gradient(135deg, #0073aa, #00a0d2)",
+		"icon_color": "#fff",
+		"icon_shadow": true
+	},
 	"blueprints/traveler/blueprint.json": {
 		"title": "Traveler",
 		"description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
@@ -132,16 +143,6 @@
 		"icon": "dashicons-location-alt",
 		"replaces": ["travel-app"],
 		"icon_background": "linear-gradient(135deg, #ee0979, #ff6a00)",
-		"icon_color": "#fff",
-		"icon_shadow": true
-	},
-	"blueprints/wordcamp-companion/blueprint.json": {
-		"title": "WordCamp Companion",
-		"description": "A tool to help you plan your WordCamp attendance.",
-		"author": "Alex Kirk",
-		"categories": ["Apps", "WordPress"],
-		"icon": "dashicons-schedule",
-		"icon_background": "linear-gradient(135deg, #0073aa, #00a0d2)",
 		"icon_color": "#fff",
 		"icon_shadow": true
 	},

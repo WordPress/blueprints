@@ -1,8 +1,8 @@
 {
 	"meta": {
-		"title": "Install plugin from a gist",
+		"title": "Install plugin from a PHP file",
 		"author": "zieladam",
-		"description": "Install and activate a WordPress plugin from a .php file stored in a gist.",
+		"description": "Install and activate a WordPress plugin from a single .php file downloaded over the network.",
 		"categories": ["plugins"]
 	},
 	"landingPage": "/wp-admin/plugins.php",
@@ -17,7 +17,7 @@
 			"path": "/wordpress/wp-content/plugins/0-plugin.php",
 			"data": {
 				"resource": "url",
-				"url": "https://gist.githubusercontent.com/ndiego/456b74b243d86c97cda89264c68cbdee/raw/ff00cf25e6eebe4f5a4eaecff10286f71e65340b/block-hooks-demo.php"
+				"url": "https://raw.githubusercontent.com/WordPress/blueprints/fix/blueprint-validation-failures/blueprints/install-plugin-from-gist/block-hooks-demo.php"
 			}
 		},
 		{

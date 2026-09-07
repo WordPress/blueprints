@@ -17,14 +17,14 @@
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://github.com/wpaccessibility/a11y-theme-unit-test/blob/master/a11y-theme-unit-test-data.xml"
+				"url": "https://raw.githubusercontent.com/WordPress/blueprints/fix/blueprint-validation-failures/blueprints/theme-a11y-test/a11y-theme-unit-test-data.xml"
 			}
 		},
 		{
 			"step": "importWxr",
 			"file": {
 				"resource": "url",
-				"url": "https://github.com/WordPress/theme-test-data/blob/master/themeunittestdata.wordpress.xml"
+				"url": "https://raw.githubusercontent.com/WordPress/blueprints/fix/blueprint-validation-failures/blueprints/theme-a11y-test/themeunittestdata.wordpress.xml"
 			}
 		},
 		{

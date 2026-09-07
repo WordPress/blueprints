@@ -52,7 +52,7 @@
 			"path": "/wordpress/wp-content/plugins/my_custom_plugin/custom.php",
 			"data": {
 				"resource": "url",
-				"url": "https://github.com/muryamsultana/playground/blob/main/custom.php"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/fancy-dashboard_widget/custom.php"
 			}
 		},
 		{

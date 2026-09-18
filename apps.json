@@ -135,13 +135,13 @@
 		"icon_color": "#fff",
 		"icon_shadow": true
 	},
-	"blueprints/traveler/blueprint.json": {
-		"title": "Traveler",
+	"blueprints/travel-app/blueprint.json": {
+		"title": "Travel App",
 		"description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Travel"],
 		"icon": "dashicons-location-alt",
-		"replaces": ["travel-app"],
+		"replaces": ["traveler"],
 		"icon_background": "linear-gradient(135deg, #ee0979, #ff6a00)",
 		"icon_color": "#fff",
 		"icon_shadow": true

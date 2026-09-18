@@ -194,7 +194,7 @@ When an app moves to a new plugin directory name, list the former slugs in the B
 ```json
 {
 	"icon": "dashicons-location-alt",
-	"replaces": ["travel-app"]
+	"replaces": ["traveler"]
 }
 ```
 
@@ -203,7 +203,7 @@ My Apps then treats an installed plugin under an old name as an outdated copy: t
 ```json
 {
 	"step": "runPHP",
-	"code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/plugin.php'; $old = 'travel-app/travel-app.php'; if ( file_exists( WP_PLUGIN_DIR . '/' . $old ) ) { deactivate_plugins( $old ); $it = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( WP_PLUGIN_DIR . '/travel-app', FilesystemIterator::SKIP_DOTS ), RecursiveIteratorIterator::CHILD_FIRST ); foreach ( $it as $f ) { $f->isDir() ? rmdir( $f ) : unlink( $f ); } rmdir( WP_PLUGIN_DIR . '/travel-app' ); }"
+	"code": "<?php require '/wordpress/wp-load.php'; require_once ABSPATH . 'wp-admin/includes/plugin.php'; $old = 'traveler/traveler.php'; if ( file_exists( WP_PLUGIN_DIR . '/' . $old ) ) { deactivate_plugins( $old ); $it = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( WP_PLUGIN_DIR . '/traveler', FilesystemIterator::SKIP_DOTS ), RecursiveIteratorIterator::CHILD_FIRST ); foreach ( $it as $f ) { $f->isDir() ? rmdir( $f ) : unlink( $f ); } rmdir( WP_PLUGIN_DIR . '/traveler' ); }"
 }
 ```
 

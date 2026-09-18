@@ -644,16 +644,16 @@
     "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/theme-a11y-test/screenshot-mobile.jpg",
     "featured": false
   },
-  "blueprints/traveler/blueprint.json": {
-    "title": "Traveler",
+  "blueprints/travel-app/blueprint.json": {
+    "title": "Travel App",
     "description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
     "author": "Alex Kirk",
     "categories": [
       "Apps",
       "Travel"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/d23da0be5f573a6fc96f3aff6ff794bf23b5c3be/blueprints/traveler/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/traveler/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/travel-app/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/travel-app/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {

@@ -4,10 +4,7 @@
 		"title": "Travel App",
 		"description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
 		"author": "Alex Kirk",
-		"categories": [
-			"Apps",
-			"Travel"
-		]
+		"categories": ["Apps", "Travel"]
 	},
 	"landingPage": "/travel-app/",
 	"steps": [

@@ -131,8 +131,8 @@
       "Apps",
       "AI"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/d23da0be5f573a6fc96f3aff6ff794bf23b5c3be/blueprints/ai-assistant/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/ai-assistant/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a80e5a747a57502dcf7832e263b38c4d104ba9a8/blueprints/ai-assistant/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/a80e5a747a57502dcf7832e263b38c4d104ba9a8/blueprints/ai-assistant/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/apiary-press/blueprint.json": {
@@ -652,8 +652,8 @@
       "Apps",
       "Travel"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/travel-app/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/travel-app/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a80e5a747a57502dcf7832e263b38c4d104ba9a8/blueprints/travel-app/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/a80e5a747a57502dcf7832e263b38c4d104ba9a8/blueprints/travel-app/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/wpgraphql/blueprint.json": {

@@ -10,11 +10,24 @@
 		"php": "8.3",
 		"wp": "beta"
 	},
+	"login":true,
+	"plugins":[
+			"create-block-theme",
+			"debug-bar",
+			"health-check",
+			"test-reports",
+			"user-switching"
+			],
 	"steps": [
-		{
-			"step": "login",
-			"username": "admin",
-			"password": "password"
+		{	
+			"step":"installPlugin",
+				"pluginData": {
+				  "resource": "wordpress.org/plugins",
+				  "slug": "query-monitor"
+				},
+				"options": {
+				  "activate": false
+			}
 		},
 		{
 			"step": "importWxr",
@@ -28,69 +41,6 @@
 			"file": {
 				"resource": "url",
 				"url": "https://raw.githubusercontent.com/WordPress/theme-test-data/master/themeunittestdata.wordpress.xml"
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "query-monitor"
-			},
-			"options": {
-				"activate": false
-			},
-			"progress": {
-				"weight": 2
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "create-block-theme"
-			},
-			"progress": {
-				"weight": 2
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "debug-bar"
-			},
-			"progress": {
-				"weight": 2
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "health-check"
-			},
-			"progress": {
-				"weight": 2
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "test-reports"
-			},
-			"progress": {
-				"weight": 2
-			}
-		},
-		{
-			"step": "installPlugin",
-			"pluginZipFile": {
-				"resource": "wordpress.org/plugins",
-				"slug": "user-switching"
-			},
-			"progress": {
-				"weight": 2
 			}
 		}
 	]

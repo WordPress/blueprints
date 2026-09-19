@@ -1,0 +1,26 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Visual Edit Lite: click-to-edit for block themes",
+		"description": "Installs the free Visual Edit Lite plugin and opens its editor. Click any text, image or section of a block theme and change it in place, inside the native block editor.",
+		"author": "iOSDevSK",
+		"categories": ["block-editor", "Themes", "plugins"]
+	},
+	"landingPage": "/wp-admin/admin.php?page=visual-edit",
+	"login": true,
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "git:directory",
+				"url": "https://github.com/iOSDevSK/visual-edit-lite",
+				"ref": "main",
+				"refType": "branch"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "visual-edit-lite"
+			}
+		}
+	]
+}

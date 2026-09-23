@@ -1,0 +1,58 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Export/Import ACF Data",
+		"description": "Sets up an environment for exporting and importing Advanced Custom Fields (ACF) data with the Custom Fields Snapshots plugin.",
+		"author": "alex02",
+		"categories": ["Content", "CPT"]
+	},
+	"landingPage": "/wp-admin/tools.php?page=custom-fields-snapshots",
+	"steps": [
+		{
+			"step": "login"
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "advanced-custom-fields"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "custom-fields-snapshots"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/example-custom-post-types"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/example-custom-post-types/example-custom-post-types.php",
+			"data": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-fields-snapshots/example-custom-post-types.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "example-custom-post-types/example-custom-post-types.php"
+		},
+		{
+			"step": "importWxr",
+			"file": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-fields-snapshots/content-export.xml"
+			}
+		}
+	]
+}

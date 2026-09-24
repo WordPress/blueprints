@@ -11,10 +11,8 @@
 		{
 			"step": "installPlugin",
 			"pluginData": {
-				"resource": "git:directory",
-				"url": "https://github.com/akirk/travel-app",
-				"ref": "dist/main",
-				"refType": "branch"
+				"resource": "wordpress.org/plugins",
+				"slug": "travel-app"
 			},
 			"options": {
 				"activate": true,

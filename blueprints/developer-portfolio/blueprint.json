@@ -1,0 +1,105 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Developer Portfolio & SaaS Showcase",
+    "description": "Minimalist, high-performance portfolio and project gallery for developers.",
+    "author": "Iker Santos Insua",
+    "categories": [
+      "portfolio",
+      "developer-tools",
+      "showcase"
+    ]
+  },
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "steps": [
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "Portfolio2026!Lab"
+    },
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "twentytwentyfour"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "DevShowcase — Alex Rivera",
+        "blogdescription": "Full-Stack Engineer & Open Source Contributor"
+      }
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/uploads"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/01-project-analytics.webp",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/01-project-analytics.webp"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/02-project-saas.webp",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/02-project-saas.webp"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/03-project-api.webp",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/03-project-api.webp"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/04-project-design.webp",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/04-project-design.webp"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/05-project-cli.webp",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/05-project-cli.webp"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/uploads/06-project-docs.webp",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/images/06-project-docs.webp"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/portfolio-lab.php",
+      "data": {
+        "resource": "bundled",
+        "path": "assets/portfolio-lab.php"
+      }
+    }
+  ]
+}

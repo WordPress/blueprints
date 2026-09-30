@@ -142,7 +142,7 @@
 		"categories": ["Apps", "Travel"],
 		"icon": "dashicons-location-alt",
 		"replaces": ["traveler"],
-		"icon_background": "linear-gradient(135deg, #ee0979, #ff6a00)",
+		"icon_background": "linear-gradient(135deg, #38bdf8, #0369a1)",
 		"icon_color": "#fff",
 		"icon_shadow": true
 	},

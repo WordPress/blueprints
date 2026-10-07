@@ -43,8 +43,8 @@
 		"categories": ["Apps", "Productivity"],
 		"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/collectibles/icon.svg"
 	},
-	"blueprints/cookbook/blueprint.json": {
-		"title": "Cookbook",
+	"blueprints/cook-app/blueprint.json": {
+		"title": "Cook App",
 		"description": "Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.",
 		"author": "Alex Kirk",
 		"categories": ["Apps", "Productivity"],

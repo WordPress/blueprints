@@ -2,29 +2,29 @@
 	"personal-cookbook": {
 		"title": "Build a Personal Cookbook",
 		"tagline": "Keep the recipes you actually cook",
-		"description": "Turn your WordPress into a recipe box for weeknight staples, family favorites, and dishes you want to repeat. Cookbook stores ingredients, steps, prep and cook times, and can pull a recipe in from a URL so you can keep the good version on your own site.",
+		"description": "Turn your WordPress into a recipe box for weeknight staples, family favorites, and dishes you want to repeat. Cook App stores ingredients, steps, prep and cook times, and can pull a recipe in from a URL so you can keep the good version on your own site.",
 		"icon": "🍳",
 		"gradient": "linear-gradient(135deg, #f6d365 0%, #fda085 100%)",
 		"learn_more": "https://alex.kirk.at/2026/04/14/why-my-wordpress/",
 		"steps": [
 			{
 				"type": "app",
-				"path": "apps/cookbook.json",
-				"title": "Install Cookbook",
-				"description": "Cookbook adds a dedicated recipe app to your WordPress with fields for ingredients, instructions, and timing."
+				"path": "apps/cook-app.json",
+				"title": "Install Cook App",
+				"description": "Cook App adds a dedicated recipe app to your WordPress with fields for ingredients, instructions, and timing."
 			},
 			{
 				"type": "note",
 				"title": "Add one trusted recipe",
 				"description": "Start with something you already cook from memory. Writing down the ingredients, steps, prep time, and cook time gives the rest of your cookbook a useful template.",
-				"url": "/cookbook/",
-				"url_label": "Open Cookbook"
+				"url": "/cook-app/",
+				"url_label": "Open Cook App"
 			},
 			{
 				"type": "note",
 				"title": "Import the recipes you keep searching for",
-				"description": "Paste a recipe URL into Cookbook to bring it into your WordPress. Once it's saved, you can adjust the wording, timing, and ingredients to match how you actually make it.",
-				"url": "/cookbook/",
+				"description": "Paste a recipe URL into Cook App to bring it into your WordPress. Once it's saved, you can adjust the wording, timing, and ingredients to match how you actually make it.",
+				"url": "/cook-app/",
 				"url_label": "Import Recipe"
 			},
 			{
@@ -149,7 +149,7 @@
 			},
 			{
 				"known": ["Paprika", "Mela", "Recipe Keeper"],
-				"app": "apps/cookbook.json"
+				"app": "apps/cook-app.json"
 			},
 			{
 				"known": ["TripIt", "TripCase", "Tripsy"],

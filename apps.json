@@ -44,6 +44,7 @@
 		"icon": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/collectibles/icon.svg"
 	},
 	"blueprints/cook-app/blueprint.json": {
+		"source_url": "https://github.com/akirk/cook-app",
 		"title": "Cook App",
 		"description": "Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.",
 		"author": "Alex Kirk",
@@ -137,6 +138,7 @@
 		"icon_shadow": true
 	},
 	"blueprints/travel-app/blueprint.json": {
+		"source_url": "https://github.com/akirk/travel-app",
 		"title": "Travel App",
 		"description": "A private travel organizer for WordPress: turn booking confirmations into itineraries, follow them on a day-by-day timeline, and keep a travel journal.",
 		"author": "Alex Kirk",

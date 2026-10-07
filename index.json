@@ -131,8 +131,8 @@
       "Apps",
       "AI"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/96c9e021783cfc0aec8b3aa7267a26a971e0ffae/blueprints/ai-assistant/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/96c9e021783cfc0aec8b3aa7267a26a971e0ffae/blueprints/ai-assistant/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/ai-assistant/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/ai-assistant/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/apiary-press/blueprint.json": {
@@ -191,8 +191,8 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/3785c998bdd25c08f3de30b2a37d0b7e799663ef/blueprints/cook-app/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/3785c998bdd25c08f3de30b2a37d0b7e799663ef/blueprints/cook-app/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/cook-app/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/cook-app/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/create-block-theme/blueprint.json": {

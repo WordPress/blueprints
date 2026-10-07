@@ -124,8 +124,8 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Cook App</h2>
 <p>Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.</p>
-<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/cook-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/cook-app/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/cook-app/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/Alex Kirk">@Alex Kirk</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/cook-app/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/cook-app/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/cook-app/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/cook-app/screenshot.jpg" alt="Cook App screenshot" width="400"></p>
 <br clear="all">
 

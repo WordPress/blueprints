@@ -131,8 +131,8 @@
       "Apps",
       "AI"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a80e5a747a57502dcf7832e263b38c4d104ba9a8/blueprints/ai-assistant/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/a80e5a747a57502dcf7832e263b38c4d104ba9a8/blueprints/ai-assistant/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/96c9e021783cfc0aec8b3aa7267a26a971e0ffae/blueprints/ai-assistant/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/96c9e021783cfc0aec8b3aa7267a26a971e0ffae/blueprints/ai-assistant/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/apiary-press/blueprint.json": {
@@ -183,16 +183,16 @@
     "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/collectibles/screenshot-mobile.jpg",
     "featured": false
   },
-  "blueprints/cookbook/blueprint.json": {
-    "title": "Cookbook",
+  "blueprints/cook-app/blueprint.json": {
+    "title": "Cook App",
     "description": "Store your recipes in your WordPress. All the basics like ingredients, step, portion calculator. Paste a URL to pull a recipe in from the web. AI enabled so that you can get help with adapting and creating new recipes.",
     "author": "Alex Kirk",
     "categories": [
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/cookbook/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/cookbook/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/3785c998bdd25c08f3de30b2a37d0b7e799663ef/blueprints/cook-app/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/3785c998bdd25c08f3de30b2a37d0b7e799663ef/blueprints/cook-app/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/create-block-theme/blueprint.json": {

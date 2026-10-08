@@ -505,8 +505,8 @@
     "categories": [
       "meta"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/c399585e8578db32a8706af8cfe25caf760c56cc/blueprints/welcome/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/welcome/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/6136d0c14d4f5fbce54f226188839f5fe2c525ab/blueprints/welcome/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/6136d0c14d4f5fbce54f226188839f5fe2c525ab/blueprints/welcome/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/use-pretty-permalinks/blueprint.json": {

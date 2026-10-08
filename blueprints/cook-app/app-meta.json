@@ -1,4 +1,5 @@
 {
+	"source_url": "https://github.com/akirk/cook-app",
 	"icon": "dashicons-food",
 	"replaces": ["cookbook"],
 	"icon_background": "linear-gradient(135deg, #f7971e, #ffd200)",

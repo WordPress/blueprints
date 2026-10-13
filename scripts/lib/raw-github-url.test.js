@@ -23,6 +23,47 @@ const allowedSources = [
 	},
 ];
 
+test('accepts tagged and latest GitHub release assets from upstream repositories', () => {
+	for (const releasePath of ['download/v0.3.0', 'latest/download']) {
+		assert.equal(
+			isAllowedBlueprintResourceUrl(
+				`https://github.com/donnchawp/travel-steps/releases/${releasePath}/travel-steps.zip`,
+				allowedSources,
+				'blueprints/example',
+				() => false
+			),
+			true
+		);
+	}
+});
+
+test('rejects release pages, archives, and noncanonical release asset URLs', () => {
+	for (const url of [
+		'https://github.com/donnchawp/travel-steps/releases/latest',
+		'https://github.com/donnchawp/travel-steps/releases/tag/v0.3.0',
+		'https://github.com/donnchawp/travel-steps/archive/refs/heads/master.zip',
+		'https://github.com/donnchawp/travel-steps/releases/latest/download/',
+		'https://github.com/donnchawp/travel-steps/releases/download/v0.3.0/file.zip/extra',
+		'http://github.com/donnchawp/travel-steps/releases/latest/download/file.zip',
+		'https://github.com.example.com/donnchawp/travel-steps/releases/latest/download/file.zip',
+		'https://user@github.com/donnchawp/travel-steps/releases/latest/download/file.zip',
+		'https://github.com:8443/donnchawp/travel-steps/releases/latest/download/file.zip',
+		'https://github.com/donnchawp/travel-steps/releases/latest/download/file.zip?download=1',
+		'https://github.com/donnchawp/travel-steps/releases/latest/download/file.zip#download',
+	]) {
+		assert.equal(
+			isAllowedBlueprintResourceUrl(
+				url,
+				allowedSources,
+				'blueprints/example',
+				() => false
+			),
+			false,
+			url
+		);
+	}
+});
+
 test('accepts repository names with different capitalization', () => {
 	assert.equal(
 		isAllowedRawGitHubUrl(

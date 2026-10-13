@@ -139,6 +139,10 @@ export function isAllowedBlueprintResourceUrl(
 	blueprintDir,
 	isLocalFile
 ) {
+	if (isGitHubReleaseAssetUrl(rawUrl)) {
+		return true;
+	}
+
 	const match = matchAllowedRawGitHubUrl(rawUrl, allowedSources);
 	if (!match) {
 		return false;
@@ -148,5 +152,27 @@ export function isAllowedBlueprintResourceUrl(
 		match.source.kind !== 'head' ||
 		(isBlueprintAttachmentPath(match.resourcePath, blueprintDir) &&
 			isLocalFile(match.resourcePath))
+	);
+}
+
+export function isGitHubReleaseAssetUrl(rawUrl) {
+	let url;
+	try {
+		url = new URL(rawUrl);
+	} catch {
+		return false;
+	}
+
+	return (
+		url.protocol === 'https:' &&
+		url.hostname.toLowerCase() === 'github.com' &&
+		!url.username &&
+		!url.password &&
+		!url.port &&
+		!url.search &&
+		!url.hash &&
+		/^\/[^/]+\/[^/]+\/releases\/(?:download\/[^/]+|latest\/download)\/[^/]+$/.test(
+			url.pathname
+		)
 	);
 }

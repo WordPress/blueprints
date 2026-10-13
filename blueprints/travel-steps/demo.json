@@ -1,0 +1,57 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Travel Steps demo",
+		"description": "A week in the west of Ireland, synced from stand-in Immich and Dawarich servers, with photos from Unsplash.",
+		"author": "Donncha O Caoimh",
+		"categories": [
+			"Travel"
+		]
+	},
+	"landingPage": "/travel-steps/trip/west-of-ireland/",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://github.com/donnchawp/travel-steps/releases/latest/download/travel-steps.zip"
+			},
+			"options": {
+				"activate": true,
+				"targetFolderName": "travel-steps"
+			}
+		},
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/mu-plugins"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/mu-plugins/travel-steps-demo.php",
+			"data": {
+				"resource": "url",
+				"url": "https://github.com/donnchawp/travel-steps/releases/latest/download/demo-fake-services.php"
+			}
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/travel-steps-demo-setup.php",
+			"data": {
+				"resource": "url",
+				"url": "https://github.com/donnchawp/travel-steps/releases/latest/download/demo-setup.php"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require '/wordpress/wp-load.php'; require '/wordpress/travel-steps-demo-setup.php';"
+		}
+	]
+}

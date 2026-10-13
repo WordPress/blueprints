@@ -34,6 +34,16 @@
 			"step": "installPlugin",
 			"pluginZipFile": {
 				"resource": "wordpress.org/plugins",
+				"slug": "wordpress-beta-tester"
+			},
+			"progress": {
+				"weight": 2
+			}
+		},
+		{
+			"step": "installPlugin",
+			"pluginZipFile": {
+				"resource": "wordpress.org/plugins",
 				"slug": "query-monitor"
 			},
 			"options": {

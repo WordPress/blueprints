@@ -16,7 +16,7 @@
 			}
 		},
 		{
-			"step": "setUserMeta",
+			"step": "updateUserMeta",
 			"meta": {
 				"wp_persisted_preferences": {
 					"core/edit-post": {
@@ -26,7 +26,8 @@
 						"welcomeGuide": false
 					}
 				}
-			}
+			},
+			"userId": 1
 		},
 		{
 			"step": "installPlugin",

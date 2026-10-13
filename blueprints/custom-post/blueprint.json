@@ -18,7 +18,7 @@
 			"path": "/wordpress/wp-content/plugins/books/books.php",
 			"data": {
 				"resource": "url",
-				"url": "https://github.com/WordPress/blueprints/blob/trunk/blueprints/custom-post/books.php"
+				"url": "https://raw.githubusercontent.com/wordpress/blueprints/trunk/blueprints/custom-post/books.php"
 			}
 		},
 		{

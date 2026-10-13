@@ -111,12 +111,12 @@
 		"categories": ["Productivity"],
 		"landing_page": "/my-apps/"
 	},
-	"desktop-mode": {
-		"url": "https://github.com/WordPress/desktop-mode/releases/latest/download/desktop-mode.zip",
-		"title": "Desktop Mode",
+	"openstation": {
+		"url": "https://github.com/WordPress/openstation/releases/latest/download/openstation.zip",
+		"title": "Open Station",
 		"author": "WordPress",
 		"note": "Reimagines /wp-admin as a desktop OS — admin screens open as draggable, resizable windows on a wallpaper, with a dock built from the admin menu. Per-user opt-in, fully reverts on deactivation.",
 		"categories": ["Productivity"],
-		"landing_page": "/desktop-mode/"
+		"landing_page": "/wp-admin/"
 	}
 }

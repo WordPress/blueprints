@@ -149,6 +149,16 @@
 		"icon_color": "#fff",
 		"icon_shadow": true
 	},
+	"blueprints/travel-steps/blueprint.json": {
+		"title": "Travel Steps",
+		"description": "Create a travel journal with photos, maps, and daily stories. Upload photos directly or connect Immich, with optional routes from Dawarich. Maps use OpenStreetMap tiles.",
+		"author": "Donncha",
+		"categories": ["Apps", "Travel"],
+		"source_url": "https://github.com/donnchawp/travel-steps",
+		"icon": "dashicons-location-alt",
+		"icon_background": "linear-gradient(135deg, #11998e, #38ef7d)",
+		"icon_color": "#fff"
+	},
 	"blueprints/wordopedia/blueprint.json": {
 		"title": "Wordopedia",
 		"description": "Search, browse, and save Wikipedia articles and snippets.",

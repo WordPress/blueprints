@@ -1,0 +1,34 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Yard Material Calculator",
+		"description": "Try a privacy-friendly landscape material calculator as a Gutenberg block and shortcode, with imperial and metric examples.",
+		"author": "demi-valerith",
+		"categories": ["Apps", "Gutenberg", "Utilities"]
+	},
+	"landingPage": "/",
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"login": true,
+	"siteOptions": {
+		"blogname": "Yard Material Calculator Demo"
+	},
+	"steps": [
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "url",
+				"url": "https://raw.githubusercontent.com/demi-valerith/blueprints/codex/yard-material-calculator/blueprints/yard-material-calculator/yard-material-calculator.zip"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php require_once '/wordpress/wp-load.php'; $content = '<!-- wp:yard-material-tools/yard-material-calculator {\"material\":\"River rock\",\"unit\":\"metric\",\"area\":50,\"depth\":7.5,\"accent\":\"#176b58\",\"showAttribution\":true} /--><hr><!-- wp:heading {\"level\":2} --><h2 class=\"wp-block-heading\">Shortcode example</h2><!-- /wp:heading --><!-- wp:shortcode -->[yard_material_calculator material=\"Mulch\" materials=\"Mulch,Compost,Topsoil\" area=\"500\" depth=\"3\" unit=\"imperial\" accent=\"#ab4c29\" attribution=\"false\"]<!-- /wp:shortcode -->'; $id = wp_insert_post(array('post_title' => 'Yard Material Calculator Demo', 'post_content' => $content, 'post_status' => 'publish', 'post_type' => 'page')); update_option('show_on_front', 'page'); update_option('page_on_front', $id); ?>"
+		}
+	]
+}

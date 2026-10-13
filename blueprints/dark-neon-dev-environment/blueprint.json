@@ -1,0 +1,109 @@
+{
+  "landingPage": "/wp-admin",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  },
+  "meta": {
+    "title": "Dark Neon Developer Playground",
+    "author": "MaksimDev",
+    "description": "A dark neon WordPress development environment with full admin dashboard theming, debugging tools, and developer plugins preconfigured."
+  },
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/query-monitor.latest-stable.zip"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/health-check.latest-stable.zip"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/code-snippets.latest-stable.zip"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/user-switching.latest-stable.zip"
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "url",
+        "url": "https://downloads.wordpress.org/plugin/wp-crontrol.latest-stable.zip"
+      }
+    },
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "wordpress.org/themes",
+        "slug": "twentytwentyfour"
+      }
+    },
+    {
+      "step": "activateTheme",
+      "themeFolderName": "twentytwentyfour"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "query-monitor/query-monitor.php"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "health-check/health-check.php"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "code-snippets/code-snippets.php"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "wp-crontrol/wp-crontrol.php"
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/plugins/dark-neon-customizer"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/plugins/dark-neon-customizer/dark-neon-customizer.php",
+      "data": "<?php\n/**\n * Plugin Name: Dark Neon Customizer\n * Description: Dark neon full admin + frontend styling for WordPress Playground.\n * Version: 1.3\n * Author: MaksimDev\n */\n\nfunction dark_neon_enqueue() {\n    wp_enqueue_style(\n        'dark-neon-style',\n        plugin_dir_url(__FILE__) . 'dark-neon.css',\n        [],\n        '1.3'\n    );\n}\n\nfunction dark_neon_admin_body_class($classes) {\n    return $classes . ' dark-neon-admin';\n}\n\nadd_action('wp_enqueue_scripts', 'dark_neon_enqueue');\nadd_action('admin_enqueue_scripts', 'dark_neon_enqueue');\nadd_action('login_enqueue_scripts', 'dark_neon_enqueue');\nadd_filter('admin_body_class', 'dark_neon_admin_body_class');\n\n/* =========================\n   CUSTOM DASHBOARD WIDGET\n========================= */\n\nfunction dark_neon_dashboard_widget() {\n    wp_add_dashboard_widget(\n        'dark_neon_dev_widget',\n        '⚡ Dark Neon Dev Panel',\n        'dark_neon_dashboard_widget_content'\n    );\n}\n\nadd_action('wp_dashboard_setup', 'dark_neon_dashboard_widget');\n\nfunction dark_neon_dashboard_widget_content() {\n    echo '<div style=\"padding:10px;\">';\n    echo '<h2 style=\"color:#bb86fc;\">Developer Environment Active</h2>';\n    echo '<p>Dark Neon Playground is running correctly.</p>';\n    echo '<ul>';\n    echo '<li><strong>PHP Version:</strong> ' . phpversion() . '</li>';\n    echo '<li><strong>WP_DEBUG:</strong> ' . (defined('WP_DEBUG') && WP_DEBUG ? 'Enabled' : 'Disabled') . '</li>';\n    echo '<li><strong>Theme:</strong> Twenty Twenty-Four</li>';\n    echo '</ul>';\n    echo '<p style=\"margin-top:10px;color:#9d4edd;\">Ready for development, testing, and debugging ⚡</p>';\n    echo '</div>';\n}\n"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/plugins/dark-neon-customizer/dark-neon.css",
+      "data": ":root {\n  --bg: #0b0b0f;\n  --panel: #12121a;\n  --panel-2: #161625;\n  --text: #e0e0e0;\n  --primary: #bb86fc;\n  --accent: #9d4edd;\n  --border: #2a2a3a;\n}\n\nhtml, body {\n  background: var(--bg) !important;\n  color: var(--text) !important;\n  font-family: Arial, sans-serif;\n}\n\nbody.wp-admin {\n  background: var(--bg) !important;\n}\n\n#wpwrap,\n#wpcontent,\n#wpbody,\n#wpbody-content {\n  background: var(--bg) !important;\n}\n\n#adminmenu,\n#adminmenuwrap {\n  background-color: #0a0a10 !important;\n  border-right: 1px solid var(--border);\n}\n\n#adminmenu a {\n  color: var(--text) !important;\n}\n\n#adminmenu .wp-has-current-submenu a.wp-has-current-submenu {\n  background: var(--panel-2) !important;\n  color: var(--primary) !important;\n  box-shadow: inset 0 0 10px var(--primary);\n}\n\n#wpadminbar {\n  background: #0a0a10 !important;\n  border-bottom: 1px solid var(--border);\n}\n\n.postbox,\n.wrap,\n.notice,\n.wp-block,\n.components-panel {\n  background: var(--panel) !important;\n  border: 1px solid var(--border) !important;\n  border-radius: 10px;\n}\n\nh1, h2, h3 {\n  color: var(--primary) !important;\n  text-shadow: 0 0 10px var(--primary);\n}\n\nbutton,\n.button,\n.wp-element-button,\n.wp-block-button__link {\n  background: var(--accent) !important;\n  color: white !important;\n  border-radius: 8px !important;\n  border: none !important;\n}\n\nbutton:hover,\n.button:hover {\n  background: #7b2cbf !important;\n  box-shadow: 0 0 12px var(--accent);\n}\n\ninput,\ntextarea,\nselect {\n  background: #1a1a1a !important;\n  color: white !important;\n  border: 1px solid var(--accent) !important;\n}\n\nbody.login {\n  background: var(--bg) !important;\n}\n\n.login form {\n  background: var(--panel) !important;\n  border: 1px solid var(--border);\n  box-shadow: 0 0 20px rgba(187,134,252,0.2);\n}\n\n::selection {\n  background: var(--accent);\n  color: white;\n}\n\n/* =========================\n   REMOVE ALL WHITE AREAS\n========================= */\n\n.dashboard-widget-wrap,\n.dashboard-widget,\n.inside,\n.postbox .inside,\n.metabox-holder,\n.meta-box-sortables,\n.activity-block,\n.draft-comment,\n.comment-item,\n.community-events-footer,\n.community-events,\n.rss-widget,\n.welcome-panel,\n.widefat,\n.striped > tbody > :nth-child(odd),\n.plugins tr,\n.theme-browser .theme,\n.card,\n.notice,\n.update-nag {\n  background: #12121a !important;\n  color: #e0e0e0 !important;\n  border-color: #2a2a3a !important;\n}\n\n.widefat td,\n.widefat th {\n  background: #12121a !important;\n  color: #e0e0e0 !important;\n  border-color: #2a2a3a !important;\n}\n\n.activity-block {\n  background: #12121a !important;\n}\n\n#dashboard_quick_press form,\n#dashboard_quick_press .drafts {\n  background: #12121a !important;\n}\n\n.comment-item,\n.comment-item p,\n.comment-meta,\n.dashboard-comment-wrap {\n  background: #12121a !important;\n  color: #e0e0e0 !important;\n}\n\na {\n  color: #bb86fc !important;\n}\n\n.description,\n.community-events-footer,\n.tablenav,\n.subsubsub {\n  color: #b8b8b8 !important;\n}\n\n::placeholder {\n  color: #888 !important;\n}\n\n.postbox-header,\n.handle-order-higher,\n.handle-order-lower,\n.postbox .hndle {\n  background: #0f0f15 !important;\n  color: #bb86fc !important;\n  border-bottom: 1px solid #2a2a3a !important;\n}\n\n.plugins .active td,\n.plugins .active th {\n  background: #181825 !important;\n}\n\n::-webkit-scrollbar {\n  width: 10px;\n}\n\n::-webkit-scrollbar-track {\n  background: #0b0b0f;\n}\n\n::-webkit-scrollbar-thumb {\n  background: #9d4edd;\n  border-radius: 10px;\n}\n\n.postbox {\n  box-shadow: 0 0 15px rgba(157, 78, 221, 0.15);\n}\n\n.postbox:hover {\n  box-shadow: 0 0 20px rgba(187, 134, 252, 0.25);\n}\n /* =========================\n   FIX WELCOME PANEL\n========================= */\n\n.welcome-panel,\n.welcome-panel-content,\n.welcome-panel .welcome-panel-column,\n.welcome-panel .welcome-panel-column-container,\n.welcome-panel-header {\n  background: #12121a !important;\n  color: #e0e0e0 !important;\n  border-color: #2a2a3a !important;\n}\n\n.welcome-panel {\n  border: 1px solid #2a2a3a !important;\n  border-radius: 14px !important;\n  box-shadow: 0 0 20px rgba(157,78,221,0.15);\n}\n\n.welcome-panel h2,\n.welcome-panel h3,\n.welcome-panel p,\n.welcome-panel li,\n.welcome-panel a {\n  color: #bb86fc !important;\n}\n\n.welcome-panel a:hover {\n  color: #d0a6ff !important;\n  text-shadow: 0 0 8px #bb86fc;\n}\n"
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "dark-neon-customizer/dark-neon-customizer.php"
+    },
+    {
+      "step": "defineWpConfigConsts",
+      "consts": {
+        "WP_DEBUG": true,
+        "WP_DEBUG_LOG": true,
+        "WP_DEBUG_DISPLAY": true
+      }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Dark Neon Dev Environment",
+        "blogdescription": "Development and testing environment"
+      }
+    }
+  ]
+}

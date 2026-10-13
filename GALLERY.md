@@ -444,8 +444,8 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 
 <h2>Travel Steps</h2>
 <p>Create a travel journal with photos, maps, and daily stories. Upload photos directly or connect Immich, with optional routes from Dawarich. Maps use OpenStreetMap tiles.</p>
-<p><small>By <a href="https://github.com/Donncha O Caoimh">@Donncha O Caoimh</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-steps/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/20c5963f048920d618a0ab1fe8ebfca565e6d62b/blueprints/travel-steps/blueprint.json">Edit</a></small></p>
-<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/20c5963f048920d618a0ab1fe8ebfca565e6d62b/blueprints/travel-steps/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p><small>By <a href="https://github.com/Donncha O Caoimh">@Donncha O Caoimh</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-steps/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/17a797f069b81b3f1531548dcf18aaf7fb0b664a/blueprints/travel-steps/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/17a797f069b81b3f1531548dcf18aaf7fb0b664a/blueprints/travel-steps/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
 <p align="left"><img src="blueprints/travel-steps/screenshot.jpg" alt="Travel Steps screenshot" width="400"></p>
 <br clear="all">
 

@@ -144,7 +144,7 @@ async function main() {
 					blueprintJsonPath,
 					[
 						`URL is not allowed or could not be fetched: ${url}`,
-						'URLs must be fetchable and use the pull request repository and ref, or upstream trunk.',
+						'URLs must be fetchable GitHub release assets, or raw files using the pull request repository and ref or upstream trunk.',
 						'Pull request URLs must point to files inside the current Blueprint directory.',
 						`Expected: ${allowedUrlPrefixes.join(' or ')}`,
 					].join('\n')

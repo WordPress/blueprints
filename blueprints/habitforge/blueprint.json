@@ -1,0 +1,40 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "HabitForge",
+		"description": "A private habit tracker. Daily check-ins, streaks, and GitHub-style heatmaps — all stored locally in your own WordPress.",
+		"author": "muryamsultana",
+		"categories": ["Apps", "Productivity"]
+	},
+	"landingPage": "/habits/",
+	"preferredVersions": {
+		"php": "8.2",
+		"wp": "latest"
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/habitforge"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/habitforge/habitforge.php",
+			"data": {
+				"resource": "bundled",
+				"path": "/plugin/habitforge.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "habitforge/habitforge.php"
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "HabitForge",
+				"blogdescription": "Build habits, one day at a time"
+			}
+		}
+	]
+}

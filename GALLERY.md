@@ -442,6 +442,14 @@ Here's the list of all the community Blueprints submitted to this repository. Se
 <br clear="all">
 
 
+<h2>Travel Steps</h2>
+<p>Create a travel journal with photos, maps, and daily stories. Upload photos directly or connect Immich, with optional routes from Dawarich. Maps use OpenStreetMap tiles.</p>
+<p><small>By <a href="https://github.com/Donncha O Caoimh">@Donncha O Caoimh</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/travel-steps/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/20c5963f048920d618a0ab1fe8ebfca565e6d62b/blueprints/travel-steps/blueprint.json">Edit</a></small></p>
+<p><a href="https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/20c5963f048920d618a0ab1fe8ebfca565e6d62b/blueprints/travel-steps/blueprint.json"><img src="playground-preview-button.svg" alt="Try it in Playground" width="220"></a></p>
+<p align="left"><img src="blueprints/travel-steps/screenshot.jpg" alt="Travel Steps screenshot" width="400"></p>
+<br clear="all">
+
+
 <h2>Use WPGraphQL to query WordPress</h2>
 <p>Example that loads WordPress with WPGraphQL active and defaults to the WPGraphQL IDE page to allow users to test GraphQL queries and explore the GraphQL Schema.</p>
 <p><small>By <a href="https://github.com/jasonbahl">@jasonbahl</a> • <a href="https://github.com/wordpress/blueprints/blob/trunk/blueprints/wpgraphql/blueprint.json">View source</a> • <a href="https://playground.wordpress.net/builder/builder.html?blueprint-url=https://raw.githubusercontent.com/wordpress/blueprints/d17b1bb6a5f6b2b3293625804a4f2a73284052f3/blueprints/wpgraphql/blueprint.json">Edit</a></small></p>

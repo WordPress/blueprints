@@ -1,0 +1,33 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "RTL Testing Site",
+		"description": "A right-to-left test site: WordPress in Arabic with a mixed-direction post (Arabic, Urdu and English with numbers, a link, a quote, a list and code) and debug logging turned on, for checking RTL layouts, mixed-direction text and translated admin screens.",
+		"author": "softglazee",
+		"categories": ["Themes", "Testing", "Content"]
+	},
+	"preferredVersions": {
+		"php": "8.3",
+		"wp": "latest"
+	},
+	"landingPage": "/?name=rtl-mixed-direction-test",
+	"login": true,
+	"steps": [
+		{
+			"step": "defineWpConfigConsts",
+			"consts": {
+				"WP_DEBUG": true,
+				"WP_DEBUG_LOG": true,
+				"WP_DEBUG_DISPLAY": false
+			}
+		},
+		{
+			"step": "setSiteLanguage",
+			"language": "ar"
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php\nrequire_once '/wordpress/wp-load.php';\n$content = <<<'HTML'\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">عنوان: A heading with mixed text</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>هذه فقرة باللغة العربية لاختبار اتجاه النص من اليمين إلى اليسار.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>یہ اردو کا ایک پیراگراف ہے جو دائیں سے بائیں سمت کی جانچ کے لیے ہے۔</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>رقم الطلب 12345 بتاريخ 2026-10-23 في WordPress.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>An English paragraph inside an RTL site, with a <a href=\"https://wordpress.org\">link</a>, numbers (1, 2, 3) and punctuation.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:quote -->\n<blockquote class=\"wp-block-quote\"><!-- wp:paragraph -->\n<p>اقتباس: a quote block in a right-to-left site.</p>\n<!-- /wp:paragraph --></blockquote>\n<!-- /wp:quote -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>العنصر الأول</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>دوسرا آئٹم</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Third item</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:code -->\n<pre class=\"wp-block-code\"><code>echo get_bloginfo( 'language' );</code></pre>\n<!-- /wp:code -->\nHTML;\nwp_insert_post( array(\n\t'post_name'    => 'rtl-mixed-direction-test',\n\t'post_status'  => 'publish',\n\t'post_title'   => 'اختبار الاتجاه: Mixed direction text',\n\t'post_content' => $content,\n) );\n"
+		}
+	]
+}

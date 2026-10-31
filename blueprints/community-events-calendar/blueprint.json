@@ -1,0 +1,48 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "Community Center Events Calendar",
+		"description": "A community center's events calendar built with the free Beacon Events plugin: classes that repeat every Tuesday and Thursday, a monthly first-Wednesday meeting, an every-other-Friday open mic, an online talk and a ticketed concert, shown as a month calendar with filters and a week timetable.",
+		"author": "inmanjeffrey89-cell",
+		"categories": [
+			"Website",
+			"Organization"
+		]
+	},
+	"landingPage": "/calendar/",
+	"preferredVersions": {
+		"php": "8.2",
+		"wp": "latest"
+	},
+	"features": {
+		"networking": true
+	},
+	"steps": [
+		{
+			"step": "login",
+			"username": "admin",
+			"password": "password"
+		},
+		{
+			"step": "installPlugin",
+			"pluginData": {
+				"resource": "wordpress.org/plugins",
+				"slug": "beacon-events"
+			},
+			"options": {
+				"activate": true
+			}
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"permalink_structure": "/%postname%/",
+				"blogname": "Riverside Community Center"
+			}
+		},
+		{
+			"step": "runPHP",
+			"code": "<?php\n// Seeds a small community center calendar with Beacon Events' own data model (run by the gallery blueprint after the plugin).\nrequire_once '/wordpress/wp-load.php';\nuse Beacon\\Events;\n\n$tz  = wp_timezone();\n$cat = function ( $name, $slug, $color ) {\n\t$t = wp_insert_term( $name, 'beacon_category', array( 'slug' => $slug ) );\n\tif ( ! is_wp_error( $t ) ) {\n\t\tupdate_term_meta( $t['term_id'], 'beacon_color', $color ); }\n};\n$cat( 'Classes', 'classes', '#2e86de' );\n$cat( 'Family', 'family', '#e67e22' );\n$cat( 'Meetings', 'meetings', '#8e44ad' );\n$cat( 'Music', 'music', '#27ae60' );\n$hall = wp_insert_term( 'Main Hall', 'beacon_venue', array( 'slug' => 'main-hall' ) );\nif ( ! is_wp_error( $hall ) ) {\n\tupdate_term_meta( $hall['term_id'], 'beacon_address', '210 River Road, Springfield' ); }\nwp_insert_term( 'Garden Room', 'beacon_venue', array( 'slug' => 'garden-room' ) );\n\n$event = function ( $title, $start, $minutes, $cat, $venue, $rule = '', $text = '', $meta = array() ) use ( $tz ) {\n\t$s  = new DateTimeImmutable( $start, $tz );\n\t$id = wp_insert_post( array( 'post_type' => Events::CPT, 'post_status' => 'draft', 'post_title' => $title, 'post_content' => $text ) );\n\tupdate_post_meta( $id, Events::META['start'], $s->format( 'Y-m-d H:i' ) );\n\tupdate_post_meta( $id, Events::META['end'], $s->modify( \"+$minutes minutes\" )->format( 'Y-m-d H:i' ) );\n\tupdate_post_meta( $id, Events::META['tz'], wp_timezone_string() );\n\tupdate_post_meta( $id, Events::META['rrule'], $rule );\n\tforeach ( $meta as $k => $v ) {\n\t\tupdate_post_meta( $id, $k, $v ); }\n\twp_set_object_terms( $id, array( $cat ), 'beacon_category' );\n\tif ( $venue ) {\n\t\twp_set_object_terms( $id, array( $venue ), 'beacon_venue' ); }\n\twp_update_post( array( 'ID' => $id, 'post_status' => 'publish' ) );\n\tEvents::materialize( $id );\n};\n$yoga = min( new DateTimeImmutable( 'first tuesday of this month 09:30', $tz ), new DateTimeImmutable( 'first thursday of this month 09:30', $tz ) ); // a weekly rule starts on its first real date\n$event( 'Gentle Yoga', $yoga->format( 'Y-m-d H:i' ), 60, 'classes', 'garden-room', 'FREQ=WEEKLY;INTERVAL=1;BYDAY=TU,TH', 'Mats provided. All levels welcome.' );\n$event( 'Family Story Time', 'first saturday of this month 10:30', 45, 'family', 'main-hall', 'FREQ=WEEKLY;INTERVAL=1;BYDAY=SA', 'Stories and songs for ages 2 to 6.' );\n$event( 'Community Board Meeting', 'first wednesday of this month 19:00', 90, 'meetings', 'main-hall', 'FREQ=MONTHLY;INTERVAL=1;BYDAY=1WE', 'Open to all residents. Agenda posted the week before.' );\n$event( 'Open Mic Night', 'first friday of this month 19:00', 120, 'music', 'main-hall', 'FREQ=WEEKLY;INTERVAL=2;BYDAY=FR', 'Sign up at the door from 6:30.' );\n$event( 'River City Brass in Concert', 'today +12 days 19:30', 120, 'music', 'main-hall', '', 'An evening of marches, film music and big band.', array( Events::META['link'] => 'https://example.org/tickets', Events::META['link_label'] => 'Buy tickets' ) );\n$event( 'Seed Swap', 'today +9 days 11:00', 180, 'family', 'garden-room', '', 'Bring seeds, take seeds.' );\n$event( 'Online Talk: Composting 101', 'today +5 days 18:00', 60, 'classes', '', '', 'A short talk with time for questions.', array( Events::META['online'] => '1', Events::META['online_url'] => 'https://example.org/join' ) );\n\n$page = function ( $title, $slug, $blocks ) {\n\t$own = (bool) get_block_template( get_stylesheet() . '//page-no-title' );\n\t$h   = $own ? '<!-- wp:heading {\"level\":1} --><h1 class=\"wp-block-heading\">' . esc_html( $title ) . '</h1><!-- /wp:heading -->' . \"\\n\\n\" : '';\n\t$id  = wp_insert_post( array( 'post_type' => 'page', 'post_status' => 'publish', 'post_title' => $title, 'post_name' => $slug, 'post_content' => '<!-- wp:group {\"align\":\"wide\",\"layout\":{\"type\":\"constrained\",\"contentSize\":\"1100px\"}} --><div class=\"wp-block-group alignwide\">' . $h . $blocks . '</div><!-- /wp:group -->' ) );\n\tif ( $own ) {\n\t\tupdate_post_meta( $id, '_wp_page_template', 'page-no-title' ); }\n\treturn $id;\n};\n$cal = $page( 'Calendar', 'calendar', '<!-- wp:beacon/events {\"view\":\"month\",\"filters\":true} /-->' . \"\\n\\n\" . '<!-- wp:heading {\"level\":3} --><h3 class=\"wp-block-heading\">Coming up</h3><!-- /wp:heading -->' . \"\\n\\n\" . '<!-- wp:beacon/events {\"view\":\"list\",\"layout\":\"compact\",\"limit\":5,\"once\":true} /-->' );\n$page( 'This week', 'this-week', '<!-- wp:beacon/events {\"view\":\"week\",\"align\":\"wide\"} /-->' );\nupdate_option( 'beacon_calendar_page', (int) $cal, false );\n$sample = get_page_by_path( 'sample-page' );\nif ( $sample ) {\n\twp_delete_post( $sample->ID, true ); }\nflush_rewrite_rules();\n"
+		}
+	]
+}

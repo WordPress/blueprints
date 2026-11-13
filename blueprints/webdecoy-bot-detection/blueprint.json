@@ -38,16 +38,33 @@
 			"data": "<?php\n/** Plugin Name: WebDecoy Playground guide */\nadd_action('admin_notices', static function () {\n    if (!current_user_can('manage_options')) { return; }\n    echo '<div class=\"notice notice-info\"><p><strong>WebDecoy browser trial — one controlled setup test.</strong> This disposable WordPress site installed the public plugin and ran its reserved WebDecoy-Test user agent. The test row below is not real crawler traffic or a detection-accuracy result. Playground startup requests may also appear in the log; none of these rows are visitors to your own site. No WebDecoy account or API key is configured. Explore Detections, Statistics and Settings, then <a href=\"https://wordpress.org/plugins/webdecoy/\" target=\"_blank\" rel=\"noopener noreferrer\">install WebDecoy on your own site</a>. Playground runs in your browser; it does not receive your website traffic.</p></div>';\n});\n"
 		},
 		{
-			"step": "runPHP",
-			"code": "<?php define('WEBDECOY_DISABLE', true); require '/wordpress/wp-load.php'; $o=get_option('webdecoy_options', []); $o['api_key']=''; $o['monitor_mode']=true; update_option('webdecoy_options',$o); update_option('blogname','WebDecoy — controlled plugin trial');"
+			"step": "runPHPWithOptions",
+			"options": {
+				"code": "<?php define('WEBDECOY_DISABLE', true); require '/wordpress/wp-load.php'; $o=get_option('webdecoy_options', []); $o['api_key']=''; $o['monitor_mode']=true; update_option('webdecoy_options',$o); update_option('blogname','WebDecoy — controlled plugin trial');",
+				"usePrimaryPhp": true
+			}
 		},
 		{
-			"step": "runPHP",
-			"code": "<?php $_SERVER['HTTP_USER_AGENT']='WebDecoy-Test/1.0 Playground'; $_SERVER['REMOTE_ADDR']='192.0.2.42'; $_SERVER['REQUEST_URI']='/webdecoy-playground-test/'; require '/wordpress/wp-load.php';"
+			"step": "runPHPWithOptions",
+			"options": {
+				"code": "<?php require '/wordpress/wp-load.php';",
+				"usePrimaryPhp": true,
+				"relativeUri": "/webdecoy-playground-test/",
+				"headers": {
+					"User-Agent": "WebDecoy-Test/1.0 Playground"
+				},
+				"$_SERVER": {
+					"REMOTE_ADDR": "192.0.2.42",
+					"REQUEST_URI": "/webdecoy-playground-test/"
+				}
+			}
 		},
 		{
-			"step": "runPHP",
-			"code": "<?php define('WEBDECOY_DISABLE', true); require '/wordpress/wp-load.php'; global $wpdb; $n=(int)$wpdb->get_var(\"SELECT COUNT(*) FROM {$wpdb->prefix}webdecoy_detections WHERE user_agent = 'WebDecoy-Test/1.0 Playground'\"); if ($n !== 1) { throw new Exception('Expected exactly one setup-test record, got '.$n); } if (!empty(get_option('webdecoy_options')['api_key'])) { throw new Exception('Unexpected reporting credential'); } echo json_encode(['webdecoy_playground_verified'=>true,'controlled_test_records'=>$n,'cloud_key_configured'=>false]);"
+			"step": "runPHPWithOptions",
+			"options": {
+				"code": "<?php define('WEBDECOY_DISABLE', true); require '/wordpress/wp-load.php'; global $wpdb; $n=(int)$wpdb->get_var(\"SELECT COUNT(*) FROM {$wpdb->prefix}webdecoy_detections WHERE user_agent = 'WebDecoy-Test/1.0 Playground'\"); if ($n !== 1) { throw new Exception('Expected exactly one setup-test record, got '.$n); } if (!empty(get_option('webdecoy_options')['api_key'])) { throw new Exception('Unexpected reporting credential'); } echo json_encode(['webdecoy_playground_verified'=>true,'controlled_test_records'=>$n,'cloud_key_configured'=>false]);",
+				"usePrimaryPhp": true
+			}
 		},
 		{
 			"step": "login",

@@ -47,7 +47,7 @@
 		{
 			"step": "runPHPWithOptions",
 			"options": {
-				"code": "<?php require '/wordpress/wp-load.php';",
+				"code": "<?php\nregister_shutdown_function(static function () {\n    $d = ['stage'=>'reserved-test','ua'=>$_SERVER['HTTP_USER_AGENT'] ?? null,'disabled'=>defined('WEBDECOY_DISABLE') ? WEBDECOY_DISABLE : null,'admin'=>function_exists('is_admin') ? is_admin() : null,'ajax'=>function_exists('wp_doing_ajax') ? wp_doing_ajax() : null,'enabled'=>function_exists('get_option') ? (get_option('webdecoy_options',[])['enabled'] ?? null) : null,'init_count'=>function_exists('did_action') ? did_action('init') : null];\n    error_log('WebDecoy Playground diagnostic: '.json_encode($d));\n});\nrequire '/wordpress/wp-load.php';",
 				"usePrimaryPhp": true,
 				"relativeUri": "/webdecoy-playground-test/",
 				"headers": {

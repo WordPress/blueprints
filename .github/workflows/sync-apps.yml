@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
     schedule:
         - cron: "0 5 * * 1"
-    pull_request_target:
+    pull_request:
         types: [opened, synchronize, reopened]
         paths:
             - "blueprints/**/app-meta.json"
@@ -25,7 +25,7 @@ jobs:
         runs-on: ubuntu-latest
         # Only run for PRs from the same repository (not forks)
         if: |
-            github.event_name == 'pull_request_target' &&
+            github.event_name == 'pull_request' &&
             github.event.pull_request.head.repo.full_name == github.repository
         env:
             GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
@@ -88,7 +88,7 @@ jobs:
     # keep apps.json in sync with any direct-to-trunk changes.
     sync_trunk:
         runs-on: ubuntu-latest
-        if: github.event_name != 'pull_request_target'
+        if: github.event_name != 'pull_request'
         steps:
             - uses: actions/checkout@v4
 

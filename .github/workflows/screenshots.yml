@@ -2,7 +2,7 @@ name: Update Gallery Screenshots
 
 on:
     workflow_dispatch:
-    pull_request_target:
+    pull_request:
         types: [opened, synchronize, reopened]
         paths:
             - "blueprints/**/blueprint.json"
@@ -21,25 +21,24 @@ jobs:
         if: |
             github.event_name == 'workflow_dispatch' ||
             github.event_name == 'schedule' ||
-            github.event_name == 'pull_request' ||
-            (github.event_name == 'pull_request_target' && github.event.pull_request.head.repo.full_name == github.repository)
+            (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)
         steps:
             - name: Checkout PR branch
               uses: actions/checkout@v4
               with:
-                  ref: ${{ (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.head.ref || github.ref }}
+                  ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref }}
                   token: ${{ secrets.GITHUB_TOKEN }}
                   fetch-depth: 0
 
             - name: Fetch base branch
-              if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
+              if: github.event_name == 'pull_request'
               run: |
                   git fetch origin "${GITHUB_BASE_REF}:refs/remotes/origin/${GITHUB_BASE_REF}"
               env:
                   GITHUB_BASE_REF: ${{ github.event.pull_request.base.ref }}
 
             - name: Collect changed files
-              if: github.event_name == 'pull_request' || github.event_name == 'pull_request_target'
+              if: github.event_name == 'pull_request'
               run: |
                   set -euo pipefail
                   merge_base="$(git merge-base "origin/${GITHUB_BASE_REF}" HEAD)"
@@ -57,8 +56,8 @@ jobs:
 
             - name: Take screenshots
               env:
-                  BLUEPRINTS_RAW_REPO: ${{ (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.head.repo.full_name || github.repository }}
-                  BLUEPRINTS_RAW_REF: ${{ (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && github.event.pull_request.head.sha || github.sha }}
+                  BLUEPRINTS_RAW_REPO: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name || github.repository }}
+                  BLUEPRINTS_RAW_REF: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
               run: npm run shots
 
             - name: Check for changes
@@ -72,7 +71,7 @@ jobs:
                   fi
 
             - name: Commit and push to PR
-              if: (github.event_name == 'pull_request' || github.event_name == 'pull_request_target') && steps.check_changes.outputs.has_changes == 'true'
+              if: github.event_name == 'pull_request' && steps.check_changes.outputs.has_changes == 'true'
               run: |
                   git config --global user.name "github-actions[bot]"
                   git config --global user.email "github-actions[bot]@users.noreply.github.com"

@@ -299,6 +299,16 @@ async function shootBlueprint(
       console.log(`WordPress content detection timed out for ${slug}, taking screenshot anyway`);
     }
 
+    if (slug === 'familypedia') {
+      // Require the seeded biography, rather than capturing a Blueprint error.
+      await wpContentFrame.locator('main h1').filter({ hasText: 'Elisabeth von Bayern' }).waitFor({ timeout: 60_000 });
+      const facts = wpContentFrame.locator('.familypedia-infobox');
+      await facts.waitFor({ state: 'visible' });
+      const toggle = facts.locator('[aria-expanded="false"]');
+      if (await toggle.count()) await toggle.click();
+      await facts.locator('img').evaluate((image: HTMLImageElement) => image.decode());
+    }
+
     // Additional wait to ensure visual rendering is complete
     await page.waitForTimeout(2000);
 

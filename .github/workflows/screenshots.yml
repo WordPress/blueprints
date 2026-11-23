@@ -7,6 +7,8 @@ on:
         paths:
             - "blueprints/**/blueprint.json"
             - "blueprints/**/demo.json"
+            - "blueprints/**/screenshot.jpg"
+            - "blueprints/**/screenshot-mobile.jpg"
             - ".github/workflows/screenshots.yml"
             - "scripts/screenshot-blueprints.ts"
 

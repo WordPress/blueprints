@@ -16,7 +16,7 @@
 			"pluginData": {
 				"resource": "git:directory",
 				"url": "https://github.com/akirk/family-wiki",
-				"ref": "dist/move-directory-screenshots",
+				"ref": "dist/main",
 				"refType": "branch"
 			},
 			"options": {

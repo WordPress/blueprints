@@ -249,12 +249,29 @@ async function shootBlueprint(
       return;
     }
 
-    // Wait for the progress bar to NOT exist (not just be hidden) - 5 minute timeout
+    // Wait for the progress bar to NOT exist (not just be hidden) - 5 minute timeout.
+    // Playground tears the bar down and rebuilds it between Blueprint steps, so a
+    // single "detached" wait resolves during the first gap. On a Blueprint that
+    // imports a large WXR that gap comes minutes before the site is ready, and the
+    // screenshot ends up showing the progress bar. Require the bar to stay gone.
     const progressBar = frame.locator('.progress-bar');
+    const readyDeadline = Date.now() + 300_000;
+    const settleMs = 3_000;
+    let goneSince: number | null = null;
     try {
-      await progressBar.waitFor({ state: 'detached', timeout: 300_000 });
-      console.log(`Progress bar disappeared for ${slug}`);
+      while (Date.now() < readyDeadline) {
+        goneSince = (await progressBar.count()) > 0 ? null : (goneSince ?? Date.now());
+        if (goneSince !== null && Date.now() - goneSince >= settleMs) break;
+        await page.waitForTimeout(500);
+      }
     } catch (e) {
+      // The viewport iframe navigated out from under the locator; fall through
+      // to the WordPress content checks below.
+      goneSince = null;
+    }
+    if (goneSince !== null && Date.now() - goneSince >= settleMs) {
+      console.log(`Progress bar disappeared for ${slug}`);
+    } else {
       console.log(`Progress bar wait timed out for ${slug}, continuing anyway`);
     }
 

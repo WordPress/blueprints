@@ -191,8 +191,8 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/cook-app/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/a1ee70103fbdb00db170dccbcda39a0b0419b10d/blueprints/cook-app/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/767364cab04ce006ed1d5e754783a9cc09b083ed/blueprints/cook-app/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/767364cab04ce006ed1d5e754783a9cc09b083ed/blueprints/cook-app/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/create-block-theme/blueprint.json": {
@@ -274,8 +274,8 @@
       "Apps",
       "Productivity"
     ],
-    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/79565317c849887124ea79be74003cdc967239dd/blueprints/familypedia/screenshot.jpg",
-    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/76a9e50a4d5ef1bf06547a73fc772c0c15b104cd/blueprints/familypedia/screenshot-mobile.jpg",
+    "screenshot_url": "https://raw.githubusercontent.com/wordpress/blueprints/767364cab04ce006ed1d5e754783a9cc09b083ed/blueprints/familypedia/screenshot.jpg",
+    "screenshot_mobile_url": "https://raw.githubusercontent.com/wordpress/blueprints/767364cab04ce006ed1d5e754783a9cc09b083ed/blueprints/familypedia/screenshot-mobile.jpg",
     "featured": false
   },
   "blueprints/fancy-dashboard_widget/blueprint.json": {

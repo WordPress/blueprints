@@ -17,7 +17,7 @@ jobs:
               uses: actions/setup-python@v7
               with:
                   python-version: "3.11"
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v7
               with:
                   node-version: 20
             - name: Install dependencies
@@ -41,7 +41,7 @@ jobs:
                       echo 'CHANGES=1' >> $GITHUB_OUTPUT
                   fi
             - name: Setup SSH Keys
-              uses: webfactory/ssh-agent@v0.5.3
+              uses: webfactory/ssh-agent@v0.10.0
               with:
                   ssh-private-key: ${{ secrets.GH_DEPLOY_KEY }}
             - name: Push rebuilt WordPress to GitHub

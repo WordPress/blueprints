@@ -1,0 +1,48 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "Schema and SEO Testing Starter",
+    "description": "A beginner-friendly WordPress Playground setup for testing CSV-based schema import, URL validation, schema output, and generated PHP code.",
+    "author": "snehgohil"
+  },
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "phpExtensionBundles": [
+    "kitchen-sink"
+  ],
+  "features": {
+    "networking": true
+  },
+  "landingPage": "/wp-admin/plugin-install.php?s=schema&tab=search&type=term",
+  "login": true,
+  "steps": [
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Schema and SEO Testing Starter",
+        "blogdescription": "A temporary WordPress site for testing CSV-based schema workflows."
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "plugin-check"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "mkdir",
+      "path": "/wordpress/wp-content/mu-plugins"
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/mu-plugins/schema-seo-guide.php",
+      "data": "<?php\n/**\n * Plugin Name: Schema and SEO Testing Guide\n * Description: Displays beginner-friendly instructions for testing a CSV-based schema plugin in WordPress Playground.\n */\n\nif ( ! defined( 'ABSPATH' ) ) {\n\texit;\n}\n\nadd_action( 'admin_notices', function() {\n\tif ( ! current_user_can( 'manage_options' ) ) {\n\t\treturn;\n\t}\n\t?>\n\t<div class=\"notice notice-info\">\n\t\t<h2>Schema Bulk Import Testing Guide</h2>\n\t\t<p>Use this Playground site to test the complete CSV-based schema workflow.</p>\n\t\t<ol>\n\t\t\t<li><strong>Install and activate a schema bulk import plugin</strong> from this screen.</li>\n\t\t\t<li>Open <strong>Schema Manager &gt; Dashboard</strong> from the WordPress admin menu.</li>\n\t\t\t<li>Click <strong>Download Sample CSV</strong> to download the correctly formatted CSV template.</li>\n\t\t\t<li>In <strong>Column A</strong>, enter the complete page URL, including <code>https://</code> and the domain.</li>\n\t\t\t<li>In <strong>Column B</strong>, paste the complete JSON-LD schema, including the <code>&lt;script&gt;</code> tags.</li>\n\t\t\t<li>Open <strong>Schema Manager &gt; Import CSV</strong> and upload the completed CSV file.</li>\n\t\t\t<li>Review the results. The plugin will show which page URLs were found and which URLs were not found.</li>\n\t\t\t<li>Save the valid schemas and open the related website pages to confirm that the schema is being added correctly.</li>\n\t\t\t<li>Validate the schema output using a structured-data or schema validation service.</li>\n\t\t\t<li>To keep the schema without keeping the importer plugin active, open <strong>Schema Manager &gt; Generate Code</strong>, copy the generated PHP code, review it, and add it to a child theme or custom functionality plugin.</li>\n\t\t</ol>\n\t\t<p><strong>Note:</strong> Review generated PHP code before adding it to a live website. A child theme or custom functionality plugin is safer than editing a parent theme directly.</p>\n\t</div>\n\t<?php\n} );\n"
+    }
+  ]
+}

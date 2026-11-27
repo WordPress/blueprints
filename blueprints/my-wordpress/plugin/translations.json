@@ -8,6 +8,9 @@
 		},
 		"es_ES": {
 			"contentDir": "es"
+		},
+		"pt_BR": {
+			"contentDir": "pt"
 		}
 	},
 	"fallbacks": {
@@ -26,6 +29,10 @@
 		"es_PE": "es_ES",
 		"es_PR": "es_ES",
 		"es_UY": "es_ES",
-		"es_VE": "es_ES"
+		"es_VE": "es_ES",
+
+		"pt_PT": "pt_BR",
+		"pt_AO": "pt_BR",
+		"pt_MZ": "pt_BR"
 	}
 }

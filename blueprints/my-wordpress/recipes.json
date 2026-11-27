@@ -462,5 +462,42 @@
 				"description": "Pick a reminder interval per contact (a month, a quarter, a year). When the date comes around, you'll see them on the dashboard with a nudge to reach out."
 			}
 		]
+	},
+	"job-search": {
+		"title": "Run Your Job Search",
+		"tagline": "Every application, contact, and interview in one private place",
+		"description": "A job search generates dozens of postings, recruiters, follow-ups, and interview notes — usually scattered across tabs, spreadsheets, and someone else's cloud. This workflow keeps the whole hunt on your own WordPress: postings that can't vanish when the listing closes, contacts with follow-up nudges, and research notes you control.",
+		"icon": "💼",
+		"gradient": "linear-gradient(135deg, #1e3a8a 0%, #0d9488 100%)",
+		"steps": [
+			{
+				"type": "app",
+				"path": "apps/post-collection.json",
+				"title": "Save job postings as you find them",
+				"description": "Collect Posts clips listings from job boards into your WordPress. Postings close and disappear — your saved copy keeps the requirements and salary range you'll want before the interview."
+			},
+			{
+				"type": "app",
+				"path": "apps/personal-crm.json",
+				"title": "Track recruiters and referrals",
+				"description": "Add every recruiter, hiring manager, and referral as a contact with notes and a last-contact date. Set a short check-in interval so applications never go quiet on your side."
+			},
+			{
+				"type": "app",
+				"path": "apps/memex.json",
+				"title": "Keep company research and interview notes",
+				"description": "One note per company: what they do, who you spoke to, questions to ask, and how each round went. Bi-directional links tie companies, contacts, and postings together."
+			},
+			{
+				"type": "note",
+				"title": "Log every application the same day",
+				"description": "When you apply, record the date, the role, and where it stands (applied, interview, offer) in the company's note. The log is what turns a scattered hunt into a pipeline you can reason about."
+			},
+			{
+				"type": "note",
+				"title": "Do a weekly review",
+				"description": "Once a week, scan for applications with no reply in over a week (follow up), contacts whose check-in date passed (reach out), and upcoming interviews (open the company note and prepare). Fifteen minutes keeps the whole search moving."
+			}
+		]
 	}
 }

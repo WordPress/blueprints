@@ -1,0 +1,43 @@
+{
+	"$schema": "https://playground.wordpress.net/blueprint-schema.json",
+	"meta": {
+		"title": "ReadForge",
+		"description": "A private reading tracker. Shelves for want-to-read, reading, and finished — with progress bars, star ratings, and a yearly goal. Your books, your data.",
+		"author": "muryamsultana",
+		"categories": [
+			"Apps",
+			"Productivity"
+		]
+	},
+	"landingPage": "/books/",
+	"preferredVersions": {
+		"php": "8.2",
+		"wp": "latest"
+	},
+	"login": true,
+	"steps": [
+		{
+			"step": "mkdir",
+			"path": "/wordpress/wp-content/plugins/readforge"
+		},
+		{
+			"step": "writeFile",
+			"path": "/wordpress/wp-content/plugins/readforge/readforge.php",
+			"data": {
+				"resource": "bundled",
+				"path": "/plugin/readforge.php"
+			}
+		},
+		{
+			"step": "activatePlugin",
+			"pluginPath": "readforge/readforge.php"
+		},
+		{
+			"step": "setSiteOptions",
+			"options": {
+				"blogname": "ReadForge",
+				"blogdescription": "Your shelves, your ratings, your data"
+			}
+		}
+	]
+}
